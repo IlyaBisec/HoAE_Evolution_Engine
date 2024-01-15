@@ -1,0 +1,67 @@
+[OPTIONS]
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=main.html
+Index file=index.hhk
+Language=0x409 English (United States)
+Title=gRenderDX9
+
+[WINDOWS]
+main="gRenderDX9","index.hhc","index.hhk","main.html","main.html",,,,,0x23520,,0x387e,,,,,,,,0
+
+[FILES]
+main.html
+files.html
+d3d9_8h-source.html
+d3d9caps_8h-source.html
+d3d9types_8h-source.html
+d3dAdapt_8cpp-source.html
+d3dAdapt_8h-source.html
+d3dApp_8cpp-source.html
+d3dApp_8h-source.html
+d3dEnumeration_8cpp-source.html
+d3dEnumeration_8h-source.html
+d3dFont_8cpp-source.html
+d3dFont_8h-source.html
+d3dIndexBuffer_8cpp-source.html
+d3dIndexBuffer_8h-source.html
+d3dPicture_8cpp-source.html
+d3dRender_8cpp-source.html
+d3dRender_8h-source.html
+d3dRes_8h-source.html
+d3dSettings_8cpp-source.html
+d3dSettings_8h-source.html
+d3dShaderFX_8cpp-source.html
+d3dShaderFX_8h-source.html
+d3dTexture_8cpp-source.html
+d3dTexture_8h-source.html
+d3dUtil_8cpp-source.html
+d3dUtil_8h-source.html
+d3dVertexBuffer_8cpp-source.html
+d3dVertexBuffer_8h-source.html
+d3dx9_8h-source.html
+d3dx9anim_8h-source.html
+d3dx9core_8h-source.html
+d3dx9effect_8h-source.html
+d3dx9math_8h-source.html
+d3dx9math_8inl-source.html
+d3dx9mesh_8h-source.html
+d3dx9shader_8h-source.html
+d3dx9shape_8h-source.html
+d3dx9tex_8h-source.html
+d3dx9xof_8h-source.html
+dxerr9_8h-source.html
+dxUtil_8cpp-source.html
+dxUtil_8h-source.html
+gRenderPch_8cpp-source.html
+gRenderPch_8h-source.html
+resource_8h-source.html
+annotated.html
+classes.html
+hierarchy.html
+unionShaderVarValue.html
+unionShaderVarValue-members.html
+graph_legend.html
+inherits.html

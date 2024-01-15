@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{003d1aa8-5306-401e-a3d3-03ada98dd895}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{91a7cc9a-2fc5-4ad0-ae72-04eb9706f76c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Chat">
+      <UniqueIdentifier>{fa75b471-c149-4fa8-8472-9417fb5d3d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5eeadac2-e45f-4594-8629-24ed01fdd6ed}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cs_chat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GSC_ChatWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IChat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\IntExplorer\ParseRQ.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\chatCallbacks.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\chatChannel.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\chatHandlers.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\chatMain.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat\chatSocket.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="darray.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="hashtable.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="md5c.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+    <ClCompile Include="nonport.c">
+      <Filter>Chat</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cs_chat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\IntExplorer\ParseRQ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\chat.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\chatCallbacks.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\chatChannel.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\chatHandlers.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\chatMain.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat\chatSocket.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="darray.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="hashtable.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+    <ClInclude Include="nonport.h">
+      <Filter>Chat</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

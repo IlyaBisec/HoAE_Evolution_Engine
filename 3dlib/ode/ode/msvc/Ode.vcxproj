@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectName>ode</ProjectName>
+    <ProjectGuid>{AC5E3441-1D88-4E98-8F5D-EB3858E842A8}</ProjectGuid>
+    <SccProjectName>"$/Cossacks II/3dlib/ode", XYNAAAAA</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\..\..\_debug\ode\</OutDir>
+    <IntDir>..\..\..\..\_debug\ode\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\..\..\_release\ode\</OutDir>
+    <IntDir>..\..\..\..\_release\ode\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\include;..\..\OPCODE;..\..\..\opcode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>..\..\..\..\_debug\ode\Ode.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\..\..\_debug\ode\</AssemblerListingLocation>
+      <ObjectFileName>..\..\..\..\_debug\ode\</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\..\..\_debug\ode\</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\..\..\lib\ode.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\include;..\..\OPCODE;..\..\..\opcode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>..\..\..\..\_release\ode\Ode.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\..\..\_release\ode\</AssemblerListingLocation>
+      <ObjectFileName>..\..\..\..\_release\ode\</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\..\..\_release\ode\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Lib>
+      <OutputFile>..\..\..\..\lib_release\odeR.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\array.cpp" />
+    <ClCompile Include="..\src\collision_kernel.cpp" />
+    <ClCompile Include="..\src\collision_quadtreespace.cpp" />
+    <ClCompile Include="..\src\collision_space.cpp" />
+    <ClCompile Include="..\src\collision_std.cpp" />
+    <ClCompile Include="..\src\collision_transform.cpp" />
+    <ClCompile Include="..\src\collision_trimesh.cpp" />
+    <ClCompile Include="..\src\collision_trimesh_box.cpp" />
+    <ClCompile Include="..\src\collision_trimesh_ccylinder.cpp" />
+    <ClCompile Include="..\src\collision_trimesh_distance.cpp" />
+    <ClCompile Include="..\src\collision_trimesh_ray.cpp" />
+    <ClCompile Include="..\src\collision_trimesh_sphere.cpp" />
+    <ClCompile Include="..\src\collision_trimesh_trimesh.cpp" />
+    <ClCompile Include="..\src\collision_util.cpp" />
+    <ClCompile Include="..\src\dCylinder.cpp" />
+    <ClCompile Include="..\src\error.cpp" />
+    <ClCompile Include="..\src\export-dif.cpp" />
+    <ClCompile Include="..\src\fastdot.c" />
+    <ClCompile Include="..\src\fastldlt.c" />
+    <ClCompile Include="..\src\fastlsolve.c" />
+    <ClCompile Include="..\src\fastltsolve.c" />
+    <ClCompile Include="..\src\joint.cpp" />
+    <ClCompile Include="..\src\lcp.cpp" />
+    <ClCompile Include="..\src\mass.cpp" />
+    <ClCompile Include="..\src\mat.cpp" />
+    <ClCompile Include="..\src\matrix.cpp" />
+    <ClCompile Include="..\src\memory.cpp" />
+    <ClCompile Include="..\src\misc.cpp" />
+    <ClCompile Include="..\src\obstack.cpp" />
+    <ClCompile Include="..\src\ode.cpp" />
+    <ClCompile Include="..\src\odemath.cpp" />
+    <ClCompile Include="..\src\quickstep.cpp" />
+    <ClCompile Include="..\src\rotation.cpp" />
+    <ClCompile Include="..\src\step.cpp" />
+    <ClCompile Include="..\src\stepfast.cpp" />
+    <ClCompile Include="..\src\timer.cpp" />
+    <ClCompile Include="..\src\util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\ode\collision.h" />
+    <ClInclude Include="..\..\include\ode\collision_space.h" />
+    <ClInclude Include="..\..\include\ode\collision_trimesh.h" />
+    <ClInclude Include="..\..\include\ode\common.h" />
+    <ClInclude Include="..\..\include\ode\compatibility.h" />
+    <ClInclude Include="..\..\include\ode\config.h" />
+    <ClInclude Include="..\..\include\ode\contact.h" />
+    <ClInclude Include="..\..\include\ode\dCylinder.h" />
+    <ClInclude Include="..\..\include\ode\error.h" />
+    <ClInclude Include="..\..\include\ode\export-dif.h" />
+    <ClInclude Include="..\..\include\ode\geom.h" />
+    <ClInclude Include="..\..\include\ode\mass.h" />
+    <ClInclude Include="..\..\include\ode\matrix.h" />
+    <ClInclude Include="..\..\include\ode\memory.h" />
+    <ClInclude Include="..\..\include\ode\misc.h" />
+    <ClInclude Include="..\..\include\ode\objects.h" />
+    <ClInclude Include="..\..\include\ode\ode.h" />
+    <ClInclude Include="..\..\include\ode\odecpp.h" />
+    <ClInclude Include="..\..\include\ode\odecpp_collision.h" />
+    <ClInclude Include="..\..\include\ode\odecpp_old.h" />
+    <ClInclude Include="..\..\include\ode\odecpp_old_collision.h" />
+    <ClInclude Include="..\..\include\ode\odemath.h" />
+    <ClInclude Include="..\..\include\ode\rotation.h" />
+    <ClInclude Include="..\..\include\ode\space.h" />
+    <ClInclude Include="..\..\include\ode\timer.h" />
+    <ClInclude Include="..\src\array.h" />
+    <ClInclude Include="..\src\collision_kernel.h" />
+    <ClInclude Include="..\src\collision_space_internal.h" />
+    <ClInclude Include="..\src\collision_std.h" />
+    <ClInclude Include="..\src\collision_transform.h" />
+    <ClInclude Include="..\src\collision_trimesh_internal.h" />
+    <ClInclude Include="..\src\collision_util.h" />
+    <ClInclude Include="..\src\dxRay.h" />
+    <ClInclude Include="..\src\geom_internal.h" />
+    <ClInclude Include="..\src\joint.h" />
+    <ClInclude Include="..\src\lcp.h" />
+    <ClInclude Include="..\src\mat.h" />
+    <ClInclude Include="..\src\objects.h" />
+    <ClInclude Include="..\src\obstack.h" />
+    <ClInclude Include="..\src\quickstep.h" />
+    <ClInclude Include="..\src\stack.h" />
+    <ClInclude Include="..\src\step.h" />
+    <ClInclude Include="..\src\testing.h" />
+    <ClInclude Include="..\src\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\ode-latest-userguide.pdf" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

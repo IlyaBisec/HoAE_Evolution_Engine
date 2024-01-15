@@ -1,0 +1,1820 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{eadce8b6-3c0f-4866-946b-63b4914b5f19}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{9ed046b9-ad55-42c7-bec7-3601d2a7a0a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Kernel">
+      <UniqueIdentifier>{096f2f92-e55e-4e6b-8b48-ae976e449b15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Render">
+      <UniqueIdentifier>{0d4c7f02-ddd7-498e-b040-cbaed8d588ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Gui">
+      <UniqueIdentifier>{9b7d3f10-18df-4fa3-ad4d-31ccf5cbd1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SceneGraph">
+      <UniqueIdentifier>{02ce4192-7cd1-46e2-8d65-565dc9e1962b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{37baf93c-c629-4b23-a10c-f67ba50c33b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files">
+      <UniqueIdentifier>{b3eb0ccb-4f40-4380-beff-17601a9dffbd}</UniqueIdentifier>
+      <Extensions>inl</Extensions>
+    </Filter>
+    <Filter Include="Inline Files\Math">
+      <UniqueIdentifier>{2e18e127-5841-4c85-8b72-53b899c80954}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Kernel">
+      <UniqueIdentifier>{f28ab5e9-ac18-4553-8994-9130852c1abb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\SceneGraph">
+      <UniqueIdentifier>{8af89955-74bb-4178-a1d9-48a58490055c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Graphics">
+      <UniqueIdentifier>{a166427a-66e2-4e95-9786-9c4c1ca9edfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Pack">
+      <UniqueIdentifier>{8438622d-61fb-4f57-96e5-1f83532a56cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Pack\bz2">
+      <UniqueIdentifier>{1937320a-39a4-4f8e-87a4-02d1f5a8e25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Pack\lzo">
+      <UniqueIdentifier>{4ffe9dd3-cd9d-404d-a9cf-9d0e41520001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Pack\lzo\Headers">
+      <UniqueIdentifier>{00660af5-38c8-422f-84b2-d4f30234d82d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inline Files\Pack\lzo\Source">
+      <UniqueIdentifier>{decec2b6-534c-432d-87ef-0601235325c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dox Files">
+      <UniqueIdentifier>{146ecdc9-8bef-4cc0-ab00-81b61f2dff63}</UniqueIdentifier>
+      <Extensions>txt</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{55cd749b-8016-4bf1-bcb8-f9e7c24474b9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{ee65cbd2-5624-4c90-9758-772453b5d7b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Kernel">
+      <UniqueIdentifier>{cc0b1ab0-d0c6-4b07-aedd-506b9d4f8e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SceneGraph">
+      <UniqueIdentifier>{1937511e-3817-4674-91a5-98a705e111fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gui">
+      <UniqueIdentifier>{df2129e4-2860-49d3-b4ce-26b8da3c2cc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Render">
+      <UniqueIdentifier>{1917c913-fc7d-4028-bfb4-c03bed024452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{515e932e-9e73-4538-bfbe-9e5ad45e6437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pack">
+      <UniqueIdentifier>{96780ca1-7cbd-46c7-8b30-0db6230a61d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Pack\bz2">
+      <UniqueIdentifier>{e013247c-5694-46d3-be17-bab3a08a9945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interfaces">
+      <UniqueIdentifier>{c5d5b7fe-0b13-481a-afee-072adabbcc03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mAlgo.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mColorCurve.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mConstants.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mFilter.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mFloatCurve.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mGeom3D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mHeightmap.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mIntersect.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mKDTree.hpp">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mLine.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mLodder.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mMath2D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mMath3D.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mMonteCarlo.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mNoise.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mOctree.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mPlane.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mQuadric.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mQuatCurve.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mQuaternion.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mRandom.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mSegmentSet.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mShapes.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mSkin.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mSpatial.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mSphere.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mSphericalHarmonics.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mSplines.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mTransform.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mTriangle.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mUtil.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mVector.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="kAssert.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kBmptool.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kCache.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kColorTraits.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kColorValue.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kCommand.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kContext.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kDirIterator.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kEnumTraits.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kFileMapping.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kFilePath.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kHistory.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kHose.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kIO.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kIOHelpers.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kLog.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kMathTypeTraits.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kMemorySpy.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kObjectFactory.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kPoolAllocator.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kPropertyMap.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kQuadLayout.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kResfile.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kResource.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kScriptManager.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kSignal.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kSSEUtils.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kStatistics.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kString.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kStrUtil.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kSystemDialogs.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kThread.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kTimer.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kTypeTraits.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kUtilities.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kUuid.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kXMLParser.h">
+      <Filter>Header Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="rsRenderPool.h">
+      <Filter>Header Files\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="rsRenderSystem.h">
+      <Filter>Header Files\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="rsSettings.h">
+      <Filter>Header Files\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="rsVertex.h">
+      <Filter>Header Files\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="uiAlgoDebugger.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiButton.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiCameraTrack.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiCheckBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiColorPicker.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiComboBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiControl.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiEditBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiEffectEditor.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiExtendedEdit.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiFloatEditBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiFrameWindow.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiIntEditBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiKangaroo.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiLabel.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiListBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiMainFrame.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiManipulator.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiMayaController.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiModelEditor.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiModelView.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiNodeTree.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiNoisePanel.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiObjectInspector.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiPalette.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiPhysicsEditor.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiPicture.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiProgress.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiPropEditors.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiRampEdit.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiRatchet.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiRenderFarm.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiResourceBrowser.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiRTSController.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiSceneEditor.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiScrollBox.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiSlider.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiSystemExplorer.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiTrackEdit.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiTransformTools.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiWeightEdit.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiWidget.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiWidgetEditor.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiWindow.h">
+      <Filter>Header Files\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="sg.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgAnimation.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgAnimationBlock.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgAttachedEffect.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgConst.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgController.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgCursor.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgDeviceSettings.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgDummy.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgEffect.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgFog.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgG17.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgG18.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgG2D.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGeometry.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGizmo.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGN16.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGP2.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGQuad.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGU15.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgGU16.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgHardwareCaps.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgLensFlare.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgLight.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgModel.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgMorphedGeometry.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgNode.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgNodePool.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgPRSAnimation.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgReflection.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgRoot.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgShader.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgSprite.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgSpriteManager.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgStatistics.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgSurfaceCache.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgTexture.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgTextureMatrix.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgTransform.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgTransformNode.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="sgUVAnimation.h">
+      <Filter>Header Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="gmDefines.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="gMotorRC.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vCamera.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vField.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vFontManager.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vMesh.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vModelInstance.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vShadowManager.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vSkin.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vStaticTerrain.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vTerrainRenderer.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vTreesRenderer.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="vVertexIterator.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="mAnimCurve.hpp">
+      <Filter>Inline Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mFilter.hpp">
+      <Filter>Inline Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="mOctree.hpp">
+      <Filter>Inline Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="kArray.hpp">
+      <Filter>Inline Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kBlockCache.hpp">
+      <Filter>Inline Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kHash.hpp">
+      <Filter>Inline Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kNAryIterator.hpp">
+      <Filter>Inline Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kStaticArray.hpp">
+      <Filter>Inline Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="kTemplates.hpp">
+      <Filter>Inline Files\Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="sgNodeResMgr.hpp">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </ClInclude>
+    <ClInclude Include="FBaseStream.h">
+      <Filter>Inline Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="FCompressor.h">
+      <Filter>Inline Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="FG16Common.h">
+      <Filter>Inline Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="FPack.h">
+      <Filter>Inline Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="bz2\bzlib.h">
+      <Filter>Inline Files\Pack\bz2</Filter>
+    </ClInclude>
+    <ClInclude Include="bz2\bzlib_private.h">
+      <Filter>Inline Files\Pack\bz2</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\compr1b.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\compr1c.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1a.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1b.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1c.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1f.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1x.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1y.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config1z.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\config2a.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1a.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo1a_de.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1b.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo1b_cc.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo1b_de.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1c.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo1c_cc.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1f.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1x.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1y.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo1z.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo2a.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzo_asm.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo_conf.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo_dict.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo_ptr.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzoconf.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzodefs.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzodefs.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\lzo\lzoutil.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\miniacc.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\stats1a.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\stats1b.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo\stats1c.h">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FLZCommon.h">
+      <Filter>Source Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="FStream.hpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="lzo1x.h">
+      <Filter>Source Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="lzoconf.h">
+      <Filter>Source Files\Pack</Filter>
+    </ClInclude>
+    <ClInclude Include="ICamera.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IEffectManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFont.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IFontManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IHardwareCaps.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IImpostorCache.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IIndexBuffer.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IInput.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ILight.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ILightManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IMediaManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IMesh.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IModel.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IModelManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IPictureManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IReflected.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderable.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderSystem.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IResourceManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ISceneEditor.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IScriptManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IShader.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IShadowManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ISkinCache.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ISkyRenderer.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ISoundSystem.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ISpriteManager.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ITerrain.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ITexture.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IVertexBuffer.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IWater.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mGeom3D.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mHeightmap.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mMath2D.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mNoise.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mOctree.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mPlane.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mQuaternion.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mRandom.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mSegmentSet.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mSphere.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mSplines.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mTransform.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mTriangle.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mUtil.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="mVector.inl">
+      <Filter>Inline Files\Math</Filter>
+    </None>
+    <None Include="kCache.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kColorValue.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kIO.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kIOHelpers.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kResource.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kString.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kStrUtil.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="kUtilities.inl">
+      <Filter>Inline Files\Kernel</Filter>
+    </None>
+    <None Include="sgController.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgDummy.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgEffect.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgGeometry.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgGN16.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgGQuad.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgGU15.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgGU16.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgLight.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgNode.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgPRSAnimation.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgShader.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgSprite.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgSpriteManager.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgSurfaceCache.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgTexture.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="sgTransformNode.inl">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </None>
+    <None Include="vField.inl">
+      <Filter>Inline Files\Graphics</Filter>
+    </None>
+    <None Include="vMesh.inl">
+      <Filter>Inline Files\Graphics</Filter>
+    </None>
+    <None Include="vTerrainRenderer.inl">
+      <Filter>Inline Files\Graphics</Filter>
+    </None>
+    <None Include="lzo\lzo1_cm.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1_d.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1a_cm.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1a_cr.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_c.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_cm.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_cr.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_d.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_r.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_sm.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1b_tm.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1f_d.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1x_c.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1x_d.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo1x_oo.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo2a_d.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo_dll.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo_mchw.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+    <None Include="lzo\lzo_swd.ch">
+      <Filter>Inline Files\Pack\lzo\Headers</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sgG18.cpp">
+      <Filter>Inline Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1_99.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1a.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1a_99.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_3.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_4.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_5.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_6.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_7.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_8.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_9.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_99.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_cc.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_rr.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_xx.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_3.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_4.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_5.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_6.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_7.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_8.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_9.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_99.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_cc.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_rr.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_xx.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1k.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1l.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1o.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_d3.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_o.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_d3.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_o.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_d3.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo2a_9x.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo2a_d1.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo2a_d2.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_crc.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_init.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_ptr.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_str.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_util.c">
+      <Filter>Inline Files\Pack\lzo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mAlgo.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mFilter.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mFloatCurve.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mGeom3D.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mHeightmap.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mIntersect.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mLine.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mLodder.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mMath2D.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mMonteCarlo.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mNoise.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mOctree.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mPlane.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mQuatCurve.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mQuaternion.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mRandom.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mSegmentSet.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mShapes.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mSkin.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mSkinSSE.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mSpatial.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mSphere.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mSplines.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mTransform.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mTriangle.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mUtil.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="mVector.cpp">
+      <Filter>Source Files\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="kAssert.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kBmptool.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kCache.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kColorValue.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kContext.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kDirIterator.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kFileMapping.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kFilePath.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kHistory.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kIO.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kIOHelpers.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kLog.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kMemorySpy.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kObjectFactory.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kPoolAllocator.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kPropertyMap.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kResfile.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kResource.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kResourceManager.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kScriptManager.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kStatistics.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kString.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kStrUtil.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kSystemDialogs.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kThread.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kTypeTraits.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kUtilities.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kUuid.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kXMLGrammar.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="kXMLParser.cpp">
+      <Filter>Source Files\Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="sgAnimation.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgAnimationBlock.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgAttachedEffect.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgConst.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgController.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgCursor.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgDummy.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgEffect.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgFog.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgG17.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgG2D.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGeometry.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGizmo.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGN16.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGP2.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGQuad.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGU15.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgGU16.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgLensFlare.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgLight.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgModel.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgMorphedGeometry.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgNode.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgNodeMaker.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgNodePool.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgPRSAnimation.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgReflection.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgRoot.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgShader.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgSprite.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgSpriteManager.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgStatistics.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgSurfaceCache.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgTexture.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgTextureMatrix.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgTransform.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgTransformNode.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="sgUVAnimation.cpp">
+      <Filter>Source Files\SceneGraph</Filter>
+    </ClCompile>
+    <ClCompile Include="uiAlgoDebugger.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiButton.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiCameraTrack.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiCheckBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiColorPicker.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiComboBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiControl.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiEditBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiEffectEditor.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiExtendedEdit.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiFloatEditBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiFrameWindow.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiIntEditBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiKangaroo.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiLabel.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiListBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiMainFrame.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiManipulator.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiMayaController.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiModelEditor.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiModelView.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiNodeTree.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiNoisePanel.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiObjectInspector.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiPalette.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiPhysicsEditor.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiPicture.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiProgress.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiPropEditors.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiRampEdit.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiRatchet.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiRenderFarm.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiResourceBrowser.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiRTSController.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiSceneEditor.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiScrollBox.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiSlider.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiSystemExplorer.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiTrackEdit.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiTransformTools.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiWeightEdit.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiWidget.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiWidgetEditor.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiWindow.cpp">
+      <Filter>Source Files\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="rsRenderPool.cpp">
+      <Filter>Source Files\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="rsRenderSystem.cpp">
+      <Filter>Source Files\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="rsSettings.cpp">
+      <Filter>Source Files\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="rsVertex.cpp">
+      <Filter>Source Files\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="vBone.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vCamera.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vCollider.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vField.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vFontManager.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vImpostorCache.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vMediaManager.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vMesh.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vModelInstance.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vShadowManager.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vSkin.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vSkinCache.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vSkyRenderer.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vStaticTerrain.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vTerrainRenderer.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vTreesRenderer.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="vWater.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="FCompressor.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="FG16RealTime.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="FG18G15.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="FGANationMMX.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="FLZDecoder.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="FLzoDecompress.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="FUclDecompress.cpp">
+      <Filter>Source Files\Pack</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\blocksort.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\bzlib.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\compress.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\crctable.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\decompress.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\huffman.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+    <ClCompile Include="bz2\randtable.cpp">
+      <Filter>Source Files\Pack\bz2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="FormatGP2.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="FormatGU15.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="FormatGU2D.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="FormatInfo.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="FormatNonUniform.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="FormatPalette.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="FormatUniform.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="gMotor.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+    <Text Include="PSEffect.txt">
+      <Filter>Dox Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

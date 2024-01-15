@@ -1,0 +1,57 @@
+﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+  stdafx.cpp
+D:\SrcRep\0000NEO\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\0000NEO\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\0000NEO\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\0000NEO\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+D:\SrcRep\0000NEO\Cossacks2\GameInterface.h(1097,47): warning C4275: class "BaseFunction", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "AnswerFn"
+D:\SrcRep\0000NEO\ClassEngine\ClassEngine.h(2130): message : см. объявление "BaseFunction"
+D:\SrcRep\0000NEO\Cossacks2\GameInterface.h(1097): message : см. объявление "AnswerFn"
+cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+  fsm_States.cpp
+  fsm_Saboteur.cpp
+  fsm_Produce.cpp
+  fsm_Guard.cpp
+  fsm_Dialog.cpp
+  fsm_Attack.cpp
+  expFN_Text.cpp
+  expFN_Set.cpp
+  expFN_Node.cpp
+  expFN_Mission.cpp
+  expFN_Group.cpp
+  expFN_Get.cpp
+  expFN_Ability.cpp
+  Helper.cpp
+  BattleEditor.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка ..\..\..\data\Plugins\BattleEditor.dll при последней инкрементной компоновке; выполняется полная компоновка
+BattleEditor.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
+     Создается библиотека ..\..\..\data\Plugins\BattleEditor.lib и объект ..\..\..\data\Plugins\BattleEditor.exp
+  BattleEditor.vcxproj -> D:\SrcRep\data\Plugins\BattleEditor.dll

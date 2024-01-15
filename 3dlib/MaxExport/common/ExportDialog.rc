@@ -1,0 +1,160 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Ukrainian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_UKR)
+#ifdef _WIN32
+LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ANIMSEQ DIALOG  0, 0, 252, 174
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,73,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,153,50,14
+    LISTBOX         IDC_LIST1,7,7,238,143,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_MULTICOLUMN | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ANIMSEQ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Ukrainian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_C2MPANEL DIALOGEX 0, 0, 392, 271
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Cossacks model exporter"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Export to c2m format...",IDEXPORT,290,124,100,14,
+                    BS_FLAT
+    LISTBOX         IDC_LOG,0,141,392,119,LBS_NOINTEGRALHEIGHT | 
+                    LBS_DISABLENOSCROLL | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    CONTROL         "Export Vertex Colors",IDCCOLORS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,87,59,76,9
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,0,
+                    262,392,9
+    LTEXT           "Copy textures to:",IDCCOPYTCAP,87,2,53,9
+    PUSHBUTTON      "...",IDC_TEXPATH,376,11,14,11,BS_FLAT
+    CONTROL         "Do not copy textures",IDC_COPYTEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,87,28,80,9
+    CONTROL         "Export Normals",IDCNORMALS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,69,76,10
+    CONTROL         "Export Animation",IDCEXPORTANIM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,176,34,73,11
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,1,1,83,137
+    GROUPBOX        "Animation",IDCANGROUP,171,25,117,113
+    CONTROL         "Ignore Smoothing",IDCSMOOTH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,78,76,11
+    PUSHBUTTON      "Animation sequences...",IDANIMSEQ,290,108,100,14,
+                    BS_FLAT | WS_DISABLED
+    CONTROL         "No Texturing",IDCNOTEX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,88,76,11
+    CONTROL         "Suppress Log",IDCSUPPRESSLOG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,87,127,76,11
+    EDITTEXT        IDCTEXPATH,87,11,283,11,ES_AUTOHSCROLL
+    CONTROL         "Overwrite textures",IDC_OVERWRITEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,87,37,80,9
+    CONTROL         "Animation Only",IDCANIMONLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,176,43,73,11
+    CONTROL         "Reduce Keyframes",IDCREDUCEKEYS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,176,126,73,11
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

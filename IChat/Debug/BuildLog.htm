@@ -1,0 +1,168 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: IChat, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\cossacks2_project\Cossacks II\IChat\Debug\RSP000022.rsp" with contents
+[
+/Od /I "../3dlib/gMotor" /I "InetRaiting" /I "../ClassEngine" /D "_USE3D" /D "_COSSACKS2" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "ICHAT_EXPORTS" /D "_WINDLL" /D "_MBCS" /FD /EHsc /RTC1 /MT /GR /YX"stdafx.h" /Fp".\../_debug/IChat.pch" /Fo".\../_debug/" /Fd".\../_debug/" /W3 /c /ZI /TC
+".\nonport.c"
+".\md5c.c"
+".\hashtable.c"
+".\darray.c"
+".\chat\chatSocket.c"
+".\chat\chatMain.c"
+".\chat\chatHandlers.c"
+".\chat\chatChannel.c"
+".\chat\chatCallbacks.c"
+]
+Creating command line "cl.exe @"d:\cossacks2_project\Cossacks II\IChat\Debug\RSP000022.rsp" /nologo"
+Creating temporary file "d:\cossacks2_project\Cossacks II\IChat\Debug\RSP000023.rsp" with contents
+[
+/Od /I "../3dlib/gMotor" /I "InetRaiting" /I "../ClassEngine" /D "_USE3D" /D "_COSSACKS2" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "ICHAT_EXPORTS" /D "_WINDLL" /D "_MBCS" /FD /EHsc /RTC1 /MT /GR /YX"stdafx.h" /Fp".\../_debug/IChat.pch" /Fo".\../_debug/" /Fd".\../_debug/" /W3 /c /ZI /TP
+".\IChat.cpp"
+".\GSC_ChatWindow.cpp"
+".\cs_chat.cpp"
+]
+Creating command line "cl.exe @"d:\cossacks2_project\Cossacks II\IChat\Debug\RSP000023.rsp" /nologo"
+Creating temporary file "d:\cossacks2_project\Cossacks II\IChat\Debug\RSP000024.rsp" with contents
+[
+/OUT:"q:\iChat.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"../lib" /DLL /DEBUG /PDB:".\../_debug/iChat.pdb" /MAP:".\../_debug/iChat.map" /IMPLIB:".\../_debug/iChat.lib" /MACHINE:I386 ..\lib\engine.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "\cossacks2_project\Cossacks II\lib\engine.lib"
+"\cossacks2_project\Cossacks II\_debug\cs_chat.obj"
+"\cossacks2_project\Cossacks II\_debug\GSC_ChatWindow.obj"
+"\cossacks2_project\Cossacks II\_debug\IChat.obj"
+"\cossacks2_project\Cossacks II\_debug\ParseRQ.obj"
+"\cossacks2_project\Cossacks II\_debug\StdAfx.obj"
+"\cossacks2_project\Cossacks II\_debug\chatCallbacks.obj"
+"\cossacks2_project\Cossacks II\_debug\chatChannel.obj"
+"\cossacks2_project\Cossacks II\_debug\chatHandlers.obj"
+"\cossacks2_project\Cossacks II\_debug\chatMain.obj"
+"\cossacks2_project\Cossacks II\_debug\chatSocket.obj"
+"\cossacks2_project\Cossacks II\_debug\darray.obj"
+"\cossacks2_project\Cossacks II\_debug\hashtable.obj"
+"\cossacks2_project\Cossacks II\_debug\md5c.obj"
+"\cossacks2_project\Cossacks II\_debug\nonport.obj"
+]
+Creating command line "link.exe @"d:\cossacks2_project\Cossacks II\IChat\Debug\RSP000024.rsp""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+nonport.c
+md5c.c
+hashtable.c
+darray.c
+chatSocket.c
+chatMain.c
+chatHandlers.c
+chatChannel.c
+chatCallbacks.c
+Compiling...
+IChat.cpp
+GSC_ChatWindow.cpp
+d:\cossacks2_project\Cossacks II\COSSACKS2\GP_Draw.h(251) : warning C4161: #pragma pack(pop...) : more pops than pushes
+d:\cossacks2_project\Cossacks II\ClassEngine\pool.h(10) : warning C4251: 'std_OnePoolType::Pool' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'std_OnePoolType'
+        with
+        [
+            Elem=BYTE *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\pool.h(11) : warning C4251: 'std_OnePoolType::FreeList' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'std_OnePoolType'
+        with
+        [
+            Elem=BYTE *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\pool.h(71) : warning C4522: 'set_of_int' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\ClassEngine\DString.h(150) : warning C4522: 'DString' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\ClassEngine\xmlQuote.h(66) : warning C4251: 'xmlQuote::SubQuotes' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'xmlQuote'
+        with
+        [
+            Elem=xmlQuote *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\xmlQuote.h(69) : warning C4251: 'xmlQuote::m_attribute' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'xmlQuote'
+        with
+        [
+            Elem=CAttribute *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(663) : warning C4522: 'BaseClass' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(750) : warning C4521: '_str' : multiple copy constructors specified
+d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(750) : warning C4522: '_str' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\COSSACKS2\vui_Action.h(55) : warning C4193: #pragma warning(pop) : no matching '#pragma warning(push)'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(238) : warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+        d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(796) : see declaration of 'ReferableBaseClassWithSource'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(238) : see declaration of 'ParentFrame'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1234) : warning C4273: 'DrawFilledRect3' : inconsistent dll linkage
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1988) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1988) : see declaration of 'TabDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2011) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2011) : see declaration of 'ListDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2133) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2133) : see declaration of 'ClassDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2216) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2216) : see declaration of 'ChatDesk'
+d:\cossacks2_project\Cossacks II\IChat\GSC_ChatWindow.cpp(448) : warning C4273: 'DrawStdBar2' : inconsistent dll linkage
+d:\cossacks2_project\Cossacks II\IChat\GSC_ChatWindow.cpp(706) : warning C4273: 'SetCurPtr' : inconsistent dll linkage
+d:\cossacks2_project\Cossacks II\IChat\GSC_ChatWindow.cpp(927) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+d:\cossacks2_project\Cossacks II\IChat\GSC_ChatWindow.cpp(1902) : warning C4101: 'DATA' : unreferenced local variable
+cs_chat.cpp
+d:\cossacks2_project\Cossacks II\COSSACKS2\GP_Draw.h(251) : warning C4161: #pragma pack(pop...) : more pops than pushes
+d:\cossacks2_project\Cossacks II\ClassEngine\pool.h(10) : warning C4251: 'std_OnePoolType::Pool' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'std_OnePoolType'
+        with
+        [
+            Elem=BYTE *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\pool.h(11) : warning C4251: 'std_OnePoolType::FreeList' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'std_OnePoolType'
+        with
+        [
+            Elem=BYTE *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\pool.h(71) : warning C4522: 'set_of_int' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\ClassEngine\DString.h(150) : warning C4522: 'DString' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\ClassEngine\xmlQuote.h(66) : warning C4251: 'xmlQuote::SubQuotes' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'xmlQuote'
+        with
+        [
+            Elem=xmlQuote *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\xmlQuote.h(69) : warning C4251: 'xmlQuote::m_attribute' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'xmlQuote'
+        with
+        [
+            Elem=CAttribute *
+        ]
+d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(663) : warning C4522: 'BaseClass' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(750) : warning C4521: '_str' : multiple copy constructors specified
+d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(750) : warning C4522: '_str' : multiple assignment operators specified
+d:\cossacks2_project\Cossacks II\COSSACKS2\vui_Action.h(55) : warning C4193: #pragma warning(pop) : no matching '#pragma warning(push)'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(238) : warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+        d:\cossacks2_project\Cossacks II\ClassEngine\ClassEngine.h(796) : see declaration of 'ReferableBaseClassWithSource'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(238) : see declaration of 'ParentFrame'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1234) : warning C4273: 'DrawFilledRect3' : inconsistent dll linkage
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1988) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1988) : see declaration of 'TabDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2011) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2011) : see declaration of 'ListDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2133) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2133) : see declaration of 'ClassDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2216) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\Dialogs.h(2216) : see declaration of 'ChatDesk'
+Linking...
+LINK : fatal error LNK1104: cannot open file 'q:\iChat.dll'
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\cossacks2_project\Cossacks II\IChat\Debug\BuildLog.htm"
+IChat - 1 error(s), 38 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

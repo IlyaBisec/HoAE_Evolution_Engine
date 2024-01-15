@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="dx9_sdk">
+      <UniqueIdentifier>{125ae9b6-35a5-46e3-b86a-fb83b8db3e19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dx9_sdk\lib">
+      <UniqueIdentifier>{af335171-981d-407d-9518-306370e2726c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="d3dAdapt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dEnumeration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dFont.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dIndexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dPicture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dRender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dShaderFX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dTexture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="d3dVertexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dxUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gRenderPch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="d3dAdapt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dEnumeration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dFont.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dIndexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dRender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dRes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dShaderFX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="d3dVertexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dxUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gRenderPch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3d9.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3d9caps.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3d9types.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9anim.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9core.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9effect.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9math.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9mesh.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9shader.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9shape.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9tex.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\d3dx9xof.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="dx9_sdk\dxerr9.h">
+      <Filter>dx9_sdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dx9_sdk\d3dx9math.inl">
+      <Filter>dx9_sdk</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gRenderDX9.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MicroBuzator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="dx9_sdk\d3d9.lib">
+      <Filter>dx9_sdk\lib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dx9_sdk\d3dx9.lib">
+      <Filter>dx9_sdk\lib</Filter>
+    </CustomBuild>
+    <CustomBuild Include="dx9_sdk\DxErr9.lib">
+      <Filter>dx9_sdk\lib</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

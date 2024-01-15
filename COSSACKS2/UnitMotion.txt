@@ -1,0 +1,34 @@
+
+//===================================================================//
+// Использование выделенных юнитов.									 //
+//===================================================================//
+// Global variables
+byte	MyNation			- текушая нация игрока.
+word	ImNSL[Nation]		- кол-во выделенных юнитов нации Nation
+word*	ImSelm[Nation]		- указатель на массив индексов выделенных юнитов
+word*	ImSerN[Nation]		- указатель на массив серийных номеров выделенных юнитов
+
+word ImSelm[Nation][i]		- индекс i-го выделенного юнита нации Nation
+word ImSerN[Nation][i]		- серийный номер i-го выделенного юнита нации Nation
+///////////////////////////////////////////////////////////////////////
+
+//===================================================================//
+// Рисование на мини карте											 //
+//===================================================================//
+int GetXOnMiniMap(int x,int y);
+int GetYOnMiniMap(int x,int y);
+void DrawFillRectOnMiniMap(int x,int y,int x1,int y1,DWORD Color);
+void DrawFillRectOnMiniMap(int x,int y,int x1,int y1,DWORD Color1,DWORD Color2,DWORD Color3,DWORD Color4);
+void DrawRectOnMiniMap(int x,int y,int x1,int y1,DWORD Color);
+void DrawLineOnMiniMap(int x,int y,int x1,int y1,DWORD Color);
+void DrawCircleOnMiniMap(int x,int y,int R,DWORD Color);
+
+Из них не реализована только последняя. Если рисуешь на мини карте, используй их.
+Все координаты - мировые на карте.
+///////////////////////////////////////////////////////////////////////
+
+
+// For create any animation for units on map //////////////////////////
+if(OB->FrameFinished){
+OB->NewAnm=OB->newMons->GetAnimation(anm_....);
+OB->SetZeroFrame();

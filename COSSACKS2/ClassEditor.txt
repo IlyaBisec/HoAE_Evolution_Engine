@@ -1,0 +1,274 @@
+
+//===================================================================//
+// Форматирование и спецификации отображаемой строки.				 //
+//===================================================================//
+"Dialogs.cpp"
+//commands list
+//text...{command}text...
+//{command}:
+//{C XXXXXXXX} - draw colored
+//{CR} FFB83B3F
+//{CN} FF502515
+//{CW} FFFFFFFF
+//{CY} FFFFFF00
+//{CG} FF60A05A
+//{F} - set to default font
+//{F???} - different fonts, ???-name of the font
+//{P filename spridx dx dy lx ly}
+//{G gpID sprID dx dy lx ly}
+//{I???} - show icon, ???-picture name
+//{R XXXXXXXX reference} - add ref string, XXXXXXXX - color
+//{R XXXXXXXX $HINT HintName} - add hinted string, returns y-size of text
+
+//===================================================================//
+// {R XXXXXXXX reference} - add ref string, XXXXXXXX - color		 //
+//===================================================================//
+reference - записывается в глобальную пременную char GlobalTextMouseOverCommand[256];
+void AddStdEditor(	char* Name,
+					BaseClass* BC,
+					const char* XmlName,
+					DWORD Options,
+					rce_ProcessClassCallback* Process,
+					rce_InputCallback* Input,
+					word HotKey);
+Name		- Название редактора класса
+BC			- Указатель на редактируеммый класс
+XmlName		- Имя файла для записи AutoSave
+Options		-	RCE_SHOW_GAME_BACKGROUND				- Прорисовывать задний план
+				RCE_ALLOW_GAME_PROCESSING				- Продолжать игру
+				RCE_ALLOW_GAME_INPUT					- Не работает
+				RCE_CLEAR_UNITS_SELECTION_BEFORE_RUN	- Снять сделланые в игре выделения
+				RCE_CENTRAL_POSITION					- Отображать по центру экрана
+				RCE_RIGHT_POSITION						- Отображать в правой части экрана
+				RCE_FULLSCREEN							- Отображать на весь экран
+				RCE_AUTOPOSITION						- 
+				RCE_BOTTOM								- Отображать в нижней части экрана
+				RCE_AUTOSAVE							- Переодически сохранять
+				RCE_AUTOSIZE							- 
+				RCE_EXITONESCAPE						- Закрывать при нажатии Esc
+				RCE_EXITONENTER							- Закрывать при нажатии Enter
+				RCE_DOUBLEPANEL11						- Отбражать две панели (дерево,значение) одинакового размера
+				RCE_DOUBLEPANEL12						- Отбражать две панели (дерево,значение) нинюю больше
+				RCE_DOUBLEPANEL21						- Отбражать две панели (дерево,значение) верхнюю больше
+				RCE_HIDEOKCANCEL						- Скрыть кнопки "OK", "Cancel"
+				RCE_HIDEHEADER							- Скрывать название редактора
+Process		- Указатьль на функцию обратного вызова типа 	
+			  typedef bool rce_ProcessClassCallback(ClassEditor* CE,
+													BaseClass* BC,
+													int Options);
+				Options=1-init, 2-process, 3-ok pressed, 4-cancel pressed 
+			  Она вызывается когда ClassEditor активен, с тазными значениями Options 
+Input		- 
+HotKey		- Индекс клавиши быстрого вызова редактора
+
+
+
+
+
+
+                            Class Editor
+
+   CE предназначен для того, чтобы дать графическое представление класса - наследника 
+Base Class, а также, чтобы дать возможность визуального редактирования полей класса.
+   Потому встает задача о написании редакторов для базовых классов.
+   Итак, начнем с того, что опишем базовый класс для всех редакторов.
+
+class OneElementEditor {
+public:
+   const char* GetClassID ( );
+   ...
+   ...
+   bool CheckClass ( BaseClass* BC );
+   ...
+   ...
+   void CreateControl ( ParentFrame* Base, int x0, int y0, int x1, int y1, BaseClass* BC,
+                        void* DataPtr, void* ExtraPtr, ControlParams* CParam );
+   
+   DWORD GetHashValue ( BaseClass* BC, void* DataPtr, void* ExtraPtr );
+
+   void Assign ( BaseClass* BC, void* DataPtr, void* ExtraPtr );
+
+   int Get ( BaseClass* BC, void* DataPtr, void* ExtraPtr );
+
+   OneElementEditor* _new ( );
+}
+
+   Если вы хотите научить систему редактировать, например, целые числа, то должны написать
+класс - наследник от OneElementEditor:
+   class _int_editor : public OneElementEditor
+и переопределить в нем некоторые виртуальные функции (далее пойдет речь о том, что значит
+каждая из них). Далее, в системе есть список всех редакторов, это глобальная переменная
+type_list.
+
+   Вы должны зарегистрировать свой редактор где - нибудь в секции инициализации:
+type_list.Add ( new _int_editor )
+
+   С этого момента движок знает о том, как редактировать целые числа.
+   Теперь речь пойдет о том, что значат отдельные виртуальные функции в классе
+OneElementEditor.
+
+                                1. Идентификация класса.
+
+   Во - первых, система должна знать, за редактирование какого класса отвечает данный 
+класс. Для этого есть 2 функции.
+
+                             1а. const char* GetClassID ( )
+
+   Если вы явно знаете имя редактируемого класса, то просто возвращаете это имя.
+Для _int это выглядит так
+   const char* GetClassID ( ) {
+      return "_int";
+   }
+Движок пройдется по списку редакторов и выберет подходящий.
+
+   Однако возможна ситуация, когда класс использует template, как, например, 
+ClassArray < > или ClassRef < >. В этом случае функцию GetClassID не нужно переопределять
+(по умолчанию она возвращает NULL). Для классов с нефиксированным именем нужно применять 
+другой механизм.
+
+                           1b. bool Check ... ( BaseClass* BC ) 
+
+   Эта функция должна возвращать true, если данный класс способен редактировать BC.
+Такой метод следует применять для классов, использующих template.
+
+                           2. Создание графического интерфейса.
+
+   Для этого служит функция
+int CreateControl ( ParentFrame* Base, int x0, int y0, int x1, int y1, BaseClass* BC,
+                    void* DataPtr, void* ExtraPtr, ControlParams* CParam )
+
+                                  Описание параметров:
+
+ParentFrame* Base - вы можете использовать Base, чтобы добавлять графические элементы,
+                    такие как текст, картинка, кнопка и т. д. Посмотрите определение
+                    класса ParentFrame, там есть множество функций типа добавить текст
+                    ( AddTextButton ), картинку ( AddGPPicture ), кнопку ( AddGPButton ),
+                    строку ввода  ( AddInputBox );
+
+x0, y0, x1, y1  -   координаты окна, внутри которого вы можете добавлять графические 
+                    элементы. Это окно - правая часть в строке редактирования ClassEditor.
+
+                 ( x0, y0 )             ( x1, y1 )
+_____________________________________________
+|    ElementName      |                      |
+_____________________________________________
+|<- LeftColumnWidth ->|<- RightColumnWidth ->|
+
+                     Если этого окна недостаточно, вы можете расширить его. Во - первых -
+                     вниз, возвратив значение, большее y1, во - вторых - влево,
+                     используя CParam. Например, в CParam есть поля LeftColumnWidth,
+                     RightColumnWidth. Модифицируя их, вы можете изменять ширину поля 
+                     редактирования;
+
+BaseClass* BC, void* DataPtr, void* ExtraPtr - эти параметры целиком характеризуют 
+                     редактируемый элемент. BC - характеризует тип элемента, DataPtr -
+                     указатель на данные, соответствующие классу BC. Если класс
+                     самоспряженный, то DataPtr и BC совпадают. ExtraPtr служит для
+                     передачи дополнительных параметров, связанных с классом. Например,
+                     для энумераторов это указатель на энумератор.
+
+ControlParam* CParam - это набор параметров, характеризующих размеры и другие параметры
+                     поля редактирования.
+
+|<-           LeftColumnWidth        ->|<-  RightColumnWidth     ->|
+___________________________________________________________________
+|       |-+           |      Name      |                           |
+___________________________________________________________________
+|<- AbsMinLeftWidth ->| 
+|<-             MinLeftWidth         ->| 
+    
+                      По умолчанию LeftColumnWidth = RightColumnWidth.
+
+                              3.Процесс редактирования класса.
+
+   При редактировании элемента может возникнуть одна интересная проблема. Преположим,
+что редактируемый класс был модифицирован за пределами редактора. Для решения этой 
+проблемы вводится 3 функции, связанные с редактированием элемента.
+   
+   DWORD GetHashValue ( BaseClass* BC, void* DataPtr, void* ExtraPtr )
+
+   void Assign ( BaseClass* BC, void* DataPtr, void* ExtraPtr )
+
+   int Get ( BaseClass* BC, void* DataPtr, void* ExtraPtr )
+
+   Эти три функции имеют одинаковые параметры (о них шла речь, когда описывалась
+функция CreateControl).
+   Функция GetHashValue должна возвращать значение, идентифицирующее содержимое класса.
+Например, если это _int, то значение - просто это число:
+
+DWORD GetHashValue ( BaseClass* BC, void* Data, void* Extra ) {
+   int* V = ( int* ) Data;
+   return *V;
+}
+
+   Если это строка, то хэш - значение можно составить из символов строки.
+   Хэш - значение необходимо, чтобы отследить, изменилось ли содержимое класса за 
+пределами редактора. В том случае, если содержимое класса изменилось (хэш - значение
+изменилось) движок вызовет функцию Assign. Эта функция преобразовывает содержимое класса
+во внутренние структуры редактора. Это легко понять на примере редактора целого числа.  
+
+class _int_editor : public OneElementEditor {
+public:
+   char s[64];
+   
+   int CreateControl ( ParentFrame* Base, int x0, int y0, int x1, int y1, BaseClass* BC,
+                        void* Data, void* Extra, ControlParams* CParam )
+      int* V = ( int* ) Data;
+      sprintf ( s, "%d", *V );
+      InputBox* IB = Base->AddInputBox (..., s, ...);
+      return y1;
+   }
+
+   DWORD GetHashValue ( BaseClass* BC, void* Data, void* Extra ) {
+      int* V = ( int* ) Data;
+      return *V;
+   }
+
+   void Assign ( BaseClass* BC, void* Data, void* Extra ) {
+      sprintf ( s, "%d", *( ( int* ) Data ) );
+   }
+
+   int Get ( BaseClass* BC, void* Data, void* Extra ) {
+      *( ( int* ) Data ) = atoi ( s );
+      return 0;
+   }
+  
+   OneElementEditor* _new ( ) {
+      return new _int_editor;
+   }
+}
+
+   Процесс взаимодействия движка и _int_editor - а выглядит примерно так.
+
+   Сначала вызывается CreateControl,  затем с помощью GetHashValue запоминается 
+хэш - значение, затем на каждом шаге сравнивается предыдущее значение GetHashValue 
+с текущим. Если есть отличия, то вызывается Assign. После вызывается функция Get,
+потом опять GetHashValue, и результат запоминается.
+
+   Функция Get предназначена для того, чтобы модифицировать содержимое редактируемого
+класса исходя из внутренних структур редактора. В случае _int_editor такой внутренней
+промежуточной структурой была строка s[64].
+
+                        4. Размножение объекта редактора.
+
+   Любой редактор должен уметь порождать самого себя. Для этого необходимо перегрузить 
+функцию 
+
+virtual OneElementEditor* _new()
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

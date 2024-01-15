@@ -1,0 +1,178 @@
+﻿  StdAfx.cpp
+  ParseRQ.cpp
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+  cs_chat.cpp
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+  GSC_ChatWindow.cpp
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\NEW ENGINE — копия — копия\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\GSC_ChatWindow.cpp(448,53): warning C4273: DrawStdBar2: несовместимое связывание dll
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\DrawForm.h(46,6): message : см. предыдущее определение "DrawStdBar2"
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\GSC_ChatWindow.cpp(706,30): warning C4273: SetCurPtr: несовместимое связывание dll
+D:\SrcRep\NEW ENGINE — копия — копия\Cossacks2\vui_Action.h(6,14): message : см. предыдущее определение "SetCurPtr"
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\GSC_ChatWindow.cpp(1902,7): warning C4101: DATA: неиспользованная локальная переменная
+  IChat.cpp
+  Создание кода...
+  chatCallbacks.c
+  chatChannel.c
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(145,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(274,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(323,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(329,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(360,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(639,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(697,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(701,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(703,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(739,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(787,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(836,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(892,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(899,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(932,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(950,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(1022,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(1024,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(1038,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatChannel.c(1096,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  chatHandlers.c
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(851,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(1645,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(2328,9): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(2400,10): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3470,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3767,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3774,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3781,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3837,9): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3855,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(3868,10): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatHandlers.c(4016,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  chatMain.c
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(254,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(256,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(257,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(258,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(432,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(813,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(846,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1398,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1407,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1418,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1445,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1525,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1527,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1533,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1562,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1564,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatMain.c(1607,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  chatSocket.c
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(76,8): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(80,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(206,2): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(574,8): warning C4996: 'vsprintf': This function or variable may be unsafe. Consider using vsprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(692,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(712,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(731,8): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\Chat\chatSocket.c(744,9): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  darray.c
+  hashtable.c
+  md5c.c
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\md5c.c(345,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  nonport.c
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\nonport.c(246,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\NEW ENGINE — копия — копия\IChat\nonport.c(591,51): warning C4244: функция: преобразование "time_t" в "unsigned long", возможна потеря данных
+  Создание кода...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(D:\SrcRep\NEW ENGINE — копия — копия\IChat\Debug\IChat.dll) не соответствует значению свойства выходного файла (D:\SrcRep\NEW ENGINE — копия — копия\data\iChat.dll) для Linker. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Link.OutputFile).
+ParseRQ.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+     Создается библиотека .\../_debug/iChat.lib и объект .\../_debug/iChat.exp
+  IChat.vcxproj -> D:\SrcRep\NEW ENGINE — копия — копия\IChat\Debug\IChat.dll

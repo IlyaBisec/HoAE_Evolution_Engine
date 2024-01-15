@@ -1,0 +1,200 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "CommCore"=.\CommCore\CommCore.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/CommCore", JWBAAAAA
+    .\commcore
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DipServer"=.\DipServer\DipServer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/DipServer", RKCAAAAA
+    .\dipserver
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IChat"=.\IChat\IChat.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/IChat", TRBAAAAA
+    .\ichat
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IntExplorer"=.\IntExplorer\IntExplorer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/IntExplorer", ZQBAAAAA
+    .\intexplorer
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "LF_Server"=.\LF_Server\LF_Server.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/LF_Server", YQBAAAAA
+    .\lf_server
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MaxExport"=.\export\max\MaxExport.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/export/max", BTDAAAAA
+    .\export\max
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MayaExport"=.\export\maya\MayaExport.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/export/maya", CTDAAAAA
+    .\export\maya
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ModelMgr"=.\ModelMgr\ModelMgr.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/ModelMgr", YBDAAAAA
+    .\modelmgr
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name gMotor
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "cossacks2"=.\Cossacks2_Project\cossacks2.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/cossacks2", TXBAAAAA
+    .\cossacks2_project
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "gMotor"=.\3DLIB\gMotor\gMotor.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/3dlib/gMotor", GIDAAAAA
+    .\3dlib\gmotor
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "shaders"=..\..\COSSACKS2\shaders\shaders.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/shaders", BADAAAAA
+    ..\..\cossacks2\shaders
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Cossacks II/cossacks2", TXBAAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

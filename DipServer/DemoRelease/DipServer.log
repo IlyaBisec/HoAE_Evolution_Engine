@@ -1,0 +1,389 @@
+﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+  StdAfx.cpp
+  Settlement.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  Script.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  ParseRQ.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(112,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(112,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(112,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(113,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(116,23): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(116,33): error C2660: memcpy: функция не принимает 2 аргументов
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_string.h(43,15): message : см. объявление "memcpy"
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(118,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(122,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(125,24): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(125,39): error C2660: memcpy: функция не принимает 2 аргументов
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\vcruntime_string.h(43,15): message : см. объявление "memcpy"
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(179,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(179,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(179,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(182,19): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(182,27): error C2660: strcat: функция не принимает 1 аргументов
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\string.h(91,1): message : см. объявление "strcat"
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(183,19): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(184,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(188,20): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\ParseRQ.cpp(189,15): error C2065: i: необъявленный идентификатор
+  Mind.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(639,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(639,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(639,22): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(644,22): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(649,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(650,25): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(657,29): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(658,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1062,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1062,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1062,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1063,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1066,25): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1071,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1071,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1071,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1072,25): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1084,25): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1085,22): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1215,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1215,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1215,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1216,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1217,9): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1217,20): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1219,9): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1225,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1225,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1225,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1227,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1231,27): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1238,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1238,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1238,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1239,22): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1253,27): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1258,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1258,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1258,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1258,31): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1258,39): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1296,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1296,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1296,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1297,24): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1338,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1338,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1338,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1339,32): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1340,30): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1370,9): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1370,13): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1370,21): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1371,32): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1422,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1422,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1422,20): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1423,31): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1424,29): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1447,9): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1447,13): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1447,21): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1448,32): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1546,9): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1546,13): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1546,21): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1547,32): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1691,4): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1694,36): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1709,5): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1775,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1775,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1775,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1775,30): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1775,38): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1959,7): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1959,11): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1959,21): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1960,22): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1963,29): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1967,28): error C2065: s: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\Mind.cpp(1970,36): error C2065: s: необъявленный идентификатор
+  DIP_SimpleBuilding.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(229,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(229,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(229,19): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(452,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(452,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(452,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(452,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(452,60): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(452,81): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(483,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(483,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(483,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(483,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(483,60): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(483,81): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(515,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(515,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(515,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(515,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(515,60): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(515,81): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(547,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(547,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(547,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(547,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(547,60): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(547,81): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(579,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(579,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(579,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(579,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(579,60): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(579,81): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(611,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(611,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(611,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(611,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(611,60): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(611,81): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(671,9): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(671,13): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(671,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(672,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(672,38): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(672,52): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(673,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(978,8): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(978,12): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(978,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(979,12): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(981,19): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1005,13): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1862,9): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1862,13): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1862,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1863,26): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1865,42): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1865,50): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(1865,63): error C2660: OBJ_SendTo: функция не принимает 3 аргументов
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(557,6): message : см. объявление "OBJ_SendTo"
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2013,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2013,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2013,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2392,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2392,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2392,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2393,29): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2393,38): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2394,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2395,41): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2395,49): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2598,10): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2646,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2646,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2646,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2646,37): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2646,50): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2647,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2647,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2647,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2647,41): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2647,52): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2650,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2650,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2650,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2650,37): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2650,56): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2652,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2652,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2652,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2654,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2800,6): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2800,10): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2800,14): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DIP_SimpleBuilding.cpp(2800,31): error C2065: j: необъявленный идентификатор
+  DipServer.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\Import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\Import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\Import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  DipMain.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  DiplomacySystem.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\rsRenderSystem.h(44,10): error C2039: "string": не является членом "std".
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\typeinfo(25): message : см. объявление "std"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\rsRenderSystem.h(44,24): error C3646: devDriver: неизвестный спецификатор переопределения
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\rsRenderSystem.h(44,33): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\rsRenderSystem.h(45,10): error C2039: "string": не является членом "std".
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\typeinfo(25): message : см. объявление "std"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\rsRenderSystem.h(45,24): error C3646: devDescr: неизвестный спецификатор переопределения
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\rsRenderSystem.h(45,32): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IResourceManager.h(70,61): error C2039: "string": не является членом "std".
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\typeinfo(25): message : см. объявление "std"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IResourceManager.h(70,67): error C2061: синтаксическая ошибка: идентификатор "string"
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(239,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(239,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(239,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(241,24): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(245,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(245,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(245,17): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(245,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(246,19): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(247,23): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(247,42): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(438,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(438,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(438,20): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(442,26): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(779,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(779,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(779,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(780,28): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(797,40): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(910,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(910,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(910,20): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(910,46): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(911,27): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(961,26): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1079,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1079,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1079,21): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1082,29): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1086,53): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1094,29): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1104,25): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1174,42): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1181,61): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1182,44): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1224,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1224,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1224,23): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1226,32): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1273,11): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1273,15): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1273,29): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1273,37): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1273,45): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1545,6): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1545,10): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1545,14): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(1545,32): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2025,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2025,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2025,18): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2119,14): error C2065: p: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2119,18): error C2065: p: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2119,22): error C2065: p: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\DiplomacySystem.cpp(2120,37): error C2065: p: необъявленный идентификатор
+  DipInit.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  CityPopulation.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  BattleDialogs.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(59,11): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(237,12): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(237,16): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(237,20): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(237,41): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(237,49): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(462,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(462,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(462,15): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(462,31): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(462,48): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(463,12): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(677,7): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(677,11): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(677,27): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(678,27): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(680,13): error C2065: i: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(968,14): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1179,15): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1241,9): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1241,15): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1241,24): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1241,37): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1243,91): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1244,18): error C2065: j: необъявленный идентификатор
+D:\SrcRep\HOAER — копия (2)\DipServer\BattleDialogs.cpp(1246,13): error C2065: j: необъявленный идентификатор
+  BasicDiploRelation.cpp
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): error C2664: "double modf(double,double *)": невозможно преобразовать аргумент 2 из "float *" в "double *"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\mUtil.h(130,13): message : Типы, на которые указывают указатели, не связаны; для преобразования требуется reinterpret_cast, приведение в стиле С или приведение в стиле функции в круглых скобках
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(529,44): message : см. объявление "modf"
+D:\SrcRep\HOAER — копия (2)\3dLIB\gMotor\IRenderSystem.h(558,80): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(779,75): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(782,30): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\SrcRep\HOAER — копия (2)\DipServer\import.h(794,42): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  AForm.cpp
+  Создание кода...
