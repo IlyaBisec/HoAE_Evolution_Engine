@@ -1,0 +1,72 @@
+/--------------------------------------------------------------------------------------------------
+// GP2 file format specification
+//--------------------------------------------------------------------------------------------------
+File {
+	DWORD			Magic;				// "GP2D"
+	DWORD			FileSize;			// - размер файла(0)
+	DWORD			FramesNumber;		// - количество кадров
+	DWORD			VerticesOffset;	    // - смещение внутри файла к вертексному буферу
+	DWORD			VerticesNumber;	    // - количество вершин для всего файла
+	DWORD			IndicesOffset;		// - смещение внутри файла к индексному буферу
+	DWORD			IndicesNumber;		// - количество индексов для всего файла
+	DWORD			MeshesOffset;		// - смещение внутри файла к мешам
+	DWORD			MeshesNumber;		// - количество мешей для всего файла
+	DWORD			TexturesInfoOffset;	// - смещение внутри файла к описаниям текстур
+	DWORD			TexturesOffset;	    // - смещение внутри файла к данным текстур
+	DWORD			TexturesNumber;	    // - количество текстур для всего файла
+
+	DWORD			InfoLen;			// - длина дополнительного блока данных
+	Info {
+		WORD		Width;				// - ширина
+		WORD		Height;				// - высота
+		BYTE		Directions;			// - количество направлений
+		BYTE		VertexFormat;		// - формат вершины
+		...								// - дополнительная информация
+	};
+
+	FrameInfo {
+		WORD		MeshesOffset;		// - смещение внутри буфера мешей к первому мешу кадра (номер первого меша)
+		WORD		MeshesNumber;		// - количество мешей в кадре
+		WORD        FrameX0;
+		WORD        FrameY0;
+		WORD        FrameWidth;
+		WORD        FrameHeight;
+	} FramesInfos[FramesNumber];
+
+	TextureInfo {
+		WORD		Width;				// - ширина текстуры
+		WORD		Height;				// - высота текстуры
+		WORD		Flags;				// - различные флаги
+		WORD		Reserved;
+		DWORD		TextureOffset;		// - смещение относительно TexturesOffset внутри файла к текстуре		
+		DWORD		TextureSize;		// - размер блока, содержащего текстуру, в байтах
+		DWORD		VerticesOffset;	    // - смещение внутри буфера вершин к первому вертексу
+		DWORD		VerticesNumbert;	// - число вершин на данной текстуре
+		DWORD		IndicesOffset;		// - смещение внутри буфера индексов к первому индексу
+		DWORD		IndicesNumbert;	    // - число индексов на данной текстуре
+	} TexturesInfos[TexturesNumber];
+
+	Vertex {
+		WORD		x;						// - координаты вершины
+		WORD		y;
+		WORD		tx;					// - текстурные координаты вершины
+		WORD		ty;
+	} Vertices[VerticesNumber];
+
+	Index {
+		WORD 		Idx;					// - индекс внутри массива вершин 
+	} Indices[IndicesNumber];
+
+	Mesh {
+		WORD		TextureIdx;			// - индекс текстуры
+		DWORD		VerticesOffset;	// - смещение внутри буфера вершин к первому вертексу
+		DWORD		VerticesNumbert;	// - число вершин в данном меше
+		DWORD		TrianglesOffset;	// - смещение внутри индексного буфера к индексам меша
+		DWORD		TrianglesNumber;	// - количество треугольников в меше	
+	} Meshes[MeshesNumber];
+
+	Texture {
+		VOID Data[];					// - данные текстуры (возможно упакованные)
+	} Textures[TexturesNumber];
+}
+//--------------------------------------------------------------------------------------------------

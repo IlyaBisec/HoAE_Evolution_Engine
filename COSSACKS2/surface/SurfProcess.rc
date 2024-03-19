@@ -1,0 +1,119 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "SurfProcessResource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Ukrainian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_UKR)
+#ifdef _WIN32
+LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SURF DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP |
+	WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "Fixedsys", 400, 0, 0xCC
+BEGIN
+	GROUPBOX        "",IDC_INPUTGROUP,6,24,36,36,BS_FLAT
+    GROUPBOX        "",IDC_OUTPUTGROUP,48,24,36,36,BS_FLAT
+    PUSHBUTTON      "INPUT",IDC_INPUTBUTTON,6,6,30,12
+    PUSHBUTTON      "OUTPUT",IDC_OUTPUTBUTTON,42,6,30,12
+    LTEXT           "",IDC_INPUTLABEL,84,6,54,12
+    LTEXT           "",IDC_OUTPUTLABEL,90,18,60,18
+    COMBOBOX        IDC_TOOLCOMBO,6,66,78,156,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "START",IDC_STARTBUTTON,96,66,36,12
+	PUSHBUTTON		"»",IDC_COPYBUTTON,0,0,0,0
+    CONTROL         "",IDC_CONSOLE,"RichEdit20A",ES_MULTILINE | ES_READONLY | 
+                    ES_NUMBER | WS_BORDER | WS_VSCROLL | WS_HSCROLL,114,6,35,
+                    174
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SURF, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Ukrainian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "SurfProcessResource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
