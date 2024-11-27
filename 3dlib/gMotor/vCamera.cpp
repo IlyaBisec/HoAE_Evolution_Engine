@@ -305,7 +305,12 @@ Vector3D Camera::GetLookAt() const
 /*****************************************************************************/
 OrthoCamera::OrthoCamera()
 {
-    SetViewVolume( 1000.0f, 10.0f, 10000.0f, c_DefViewAspect );
+    // ilya_sadochkov, 
+    // width,   zn   , zf,       defAspect(4f/3f)
+    // 1000.0f, 10.0f, 10000.0f, c_DefViewAspect
+    // I changed the fov width of the camera so that 
+    // the shadows of objects are not cut off, 2000 min
+    SetViewVolume( 2000.0f, 10.0f, 10000.0f, c_DefViewAspect );
     SetOrientation( Vector3D::oX, Vector3D::oZ, Vector3D::oY );
 }
 
