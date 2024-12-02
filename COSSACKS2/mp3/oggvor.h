@@ -2,7 +2,7 @@
 #define _ogg_vor_h_included_
 
 #include <windows.h>
-#include "../theovorb/theovorb.h"
+#include "../TVPlugin/TVPlugin.h"
 
 void ov_Play( LPCSTR pcszFileName , BYTE ucStream = 0 );
 __declspec( dllexport )
