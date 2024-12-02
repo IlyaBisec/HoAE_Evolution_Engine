@@ -38,7 +38,8 @@
 #include "gamesettings.h"
 #include "mp3\oggvor.h"
 #include "vital\vital_def.h"
-#include "theovorb\theovorb.h"
+//#include "theovorb\theovorb.h"
+#include "TVPlugin\TVPlugin.h"
 #include "MassivePlayer.h"
 bool UseSysMouse=0;
 #ifdef _USE3D
@@ -1378,7 +1379,7 @@ long FAR PASCAL WindowProc( HWND hWnd, UINT message,
 		return true;
     case WM_DESTROY:
 		
-        // ManOwaR :: Destroying theovorb helper thread
+        // ManOwaR :: Destroying TVPlugin helper thread
         tv_Done();
 
         finiObjects();
@@ -3798,7 +3799,7 @@ void PreDrawGameProcess(){
 			for(int j=0;j<8;j++){
 				addrand(j);
 				int R=NT->ResRem[j];
-				R+=NT->ResSpeed[j]*10*256/*GameSpeed*//25;
+				R+=NT->ResSpeed[j]*10*256/*GameSpeed*//25; //TBH food fix,
 				div_t dd=div(R,mult);
 				R=dd.rem;
 				addrand(XRESRC(i,j));
@@ -4520,9 +4521,9 @@ void RegArgs::ReadWrite(bool ToRead, const char *RegCompany, const char *RegGame
 int PASCAL WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
                         LPSTR lpCmdLine, int nCmdShow)
 {	
-    // ManOwaR :: Initializing theovorb helper thread
-    if ( tv_Init() != TV_OK ) {
-        MessageBox( NULL , "Cannot start theovorb helper thread", "Media Thread Initialization Error" , MB_ICONERROR | MB_OK );
+    // ManOwaR :: Initializing TVPlugin helper thread
+	if ( tv_Init(hwnd) != TV_OK ) {
+        MessageBox( NULL , "Cannot start TVPlugin helper thread", "Media Thread Initialization Error" , MB_ICONERROR | MB_OK );
         return 1;
     };
 
