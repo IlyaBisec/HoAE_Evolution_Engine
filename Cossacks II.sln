@@ -51,6 +51,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleEditor", "Plugins\Bat
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TVPlugin", "Plugins\TVPlugin\TVPlugin.vcproj", "{34F7C96D-7DF6-465F-B4E2-89610427A6BD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		CarcassD = CarcassD
@@ -62,6 +66,7 @@ Global
 		FastDebug = FastDebug
 		FastDebug CheckSync = FastDebug CheckSync
 		FastDebug_CheckSync = FastDebug_CheckSync
+		FastDebugHoae = FastDebugHoae
 		Intel = Intel
 		Profile = Profile
 		Release = Release
@@ -89,6 +94,8 @@ Global
 		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.FastDebugHoae.Build.0 = Debug|Win32
 		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.Intel.ActiveCfg = Release|Win32
 		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.Intel.Build.0 = Release|Win32
 		{EC5CB78C-8886-458D-A1BB-9BAC67F58E49}.Profile.ActiveCfg = Release|Win32
@@ -121,6 +128,8 @@ Global
 		{0A91D231-279B-4AD3-8E28-6439791D52B9}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{0A91D231-279B-4AD3-8E28-6439791D52B9}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{0A91D231-279B-4AD3-8E28-6439791D52B9}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{0A91D231-279B-4AD3-8E28-6439791D52B9}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{0A91D231-279B-4AD3-8E28-6439791D52B9}.FastDebugHoae.Build.0 = Debug|Win32
 		{0A91D231-279B-4AD3-8E28-6439791D52B9}.Intel.ActiveCfg = Release|Win32
 		{0A91D231-279B-4AD3-8E28-6439791D52B9}.Intel.Build.0 = Release|Win32
 		{0A91D231-279B-4AD3-8E28-6439791D52B9}.Profile.ActiveCfg = Release|Win32
@@ -153,6 +162,8 @@ Global
 		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.FastDebugHoae.Build.0 = Debug|Win32
 		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.Intel.ActiveCfg = DemoRelease|Win32
 		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.Intel.Build.0 = DemoRelease|Win32
 		{DD9E2B2C-58BF-49FE-A539-BCF16BB67B30}.Profile.ActiveCfg = DemoRelease|Win32
@@ -185,6 +196,8 @@ Global
 		{7DE0E239-E541-497A-A43D-402CB677B37A}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{7DE0E239-E541-497A-A43D-402CB677B37A}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{7DE0E239-E541-497A-A43D-402CB677B37A}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{7DE0E239-E541-497A-A43D-402CB677B37A}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{7DE0E239-E541-497A-A43D-402CB677B37A}.FastDebugHoae.Build.0 = Debug|Win32
 		{7DE0E239-E541-497A-A43D-402CB677B37A}.Intel.ActiveCfg = Release|Win32
 		{7DE0E239-E541-497A-A43D-402CB677B37A}.Intel.Build.0 = Release|Win32
 		{7DE0E239-E541-497A-A43D-402CB677B37A}.Profile.ActiveCfg = Release|Win32
@@ -217,6 +230,8 @@ Global
 		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.FastDebug CheckSync.Build.0 = FastDebug CheckSync|Win32
 		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.FastDebug_CheckSync.ActiveCfg = FastDebug_CheckSync|Win32
 		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.FastDebug_CheckSync.Build.0 = FastDebug_CheckSync|Win32
+		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.FastDebugHoae.ActiveCfg = FastDebug CheckSync|Win32
+		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.FastDebugHoae.Build.0 = FastDebug CheckSync|Win32
 		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.Intel.ActiveCfg = FastDebug CheckSync|Win32
 		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.Intel.Build.0 = FastDebug CheckSync|Win32
 		{60D954A2-8B83-46E3-9BCF-B614117E2F7D}.Profile.ActiveCfg = FastDebug CheckSync|Win32
@@ -249,6 +264,8 @@ Global
 		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.FastDebugHoae.Build.0 = Debug|Win32
 		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.Intel.ActiveCfg = Release|Win32
 		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.Intel.Build.0 = Release|Win32
 		{299B164A-2EF8-43FD-94AE-F74AAA62A3B2}.Profile.ActiveCfg = Release|Win32
@@ -281,6 +298,8 @@ Global
 		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.FastDebugHoae.Build.0 = Debug|Win32
 		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.Intel.ActiveCfg = DemoRelease|Win32
 		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.Intel.Build.0 = DemoRelease|Win32
 		{A431504D-AC75-4DD4-BAD0-4C754F19C7DF}.Profile.ActiveCfg = DemoRelease|Win32
@@ -313,6 +332,8 @@ Global
 		{4FDABBCF-F95C-45E4-A860-99969316F319}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{4FDABBCF-F95C-45E4-A860-99969316F319}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{4FDABBCF-F95C-45E4-A860-99969316F319}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{4FDABBCF-F95C-45E4-A860-99969316F319}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{4FDABBCF-F95C-45E4-A860-99969316F319}.FastDebugHoae.Build.0 = Debug|Win32
 		{4FDABBCF-F95C-45E4-A860-99969316F319}.Intel.ActiveCfg = DemoRelease|Win32
 		{4FDABBCF-F95C-45E4-A860-99969316F319}.Intel.Build.0 = DemoRelease|Win32
 		{4FDABBCF-F95C-45E4-A860-99969316F319}.Profile.ActiveCfg = DemoRelease|Win32
@@ -345,6 +366,8 @@ Global
 		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.FastDebug CheckSync.Build.0 = FastDebug CheckSync|Win32
 		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.FastDebug_CheckSync.ActiveCfg = FastDebug CheckSync|Win32
 		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.FastDebug_CheckSync.Build.0 = FastDebug CheckSync|Win32
+		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.FastDebugHoae.ActiveCfg = FastDebug CheckSync|Win32
+		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.FastDebugHoae.Build.0 = FastDebug CheckSync|Win32
 		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.Intel.ActiveCfg = FastDebug CheckSync|Win32
 		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.Intel.Build.0 = FastDebug CheckSync|Win32
 		{234939FB-CDCA-4C95-BEC4-D6B98DC4E24A}.Profile.ActiveCfg = FastDebug CheckSync|Win32
@@ -377,6 +400,8 @@ Global
 		{00E442FD-AD7F-4341-9114-70888528F53F}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{00E442FD-AD7F-4341-9114-70888528F53F}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{00E442FD-AD7F-4341-9114-70888528F53F}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{00E442FD-AD7F-4341-9114-70888528F53F}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{00E442FD-AD7F-4341-9114-70888528F53F}.FastDebugHoae.Build.0 = Debug|Win32
 		{00E442FD-AD7F-4341-9114-70888528F53F}.Intel.ActiveCfg = DemoRelease|Win32
 		{00E442FD-AD7F-4341-9114-70888528F53F}.Intel.Build.0 = DemoRelease|Win32
 		{00E442FD-AD7F-4341-9114-70888528F53F}.Profile.ActiveCfg = DemoRelease|Win32
@@ -409,6 +434,8 @@ Global
 		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.FastDebugHoae.Build.0 = Debug|Win32
 		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.Intel.ActiveCfg = DemoRelease|Win32
 		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.Intel.Build.0 = DemoRelease|Win32
 		{6462D7B5-AFAD-4EFC-8E12-F28F4C9301B1}.Profile.ActiveCfg = DemoRelease|Win32
@@ -441,6 +468,8 @@ Global
 		{84FAD02B-1578-4151-8712-CC34C80A045D}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{84FAD02B-1578-4151-8712-CC34C80A045D}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{84FAD02B-1578-4151-8712-CC34C80A045D}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{84FAD02B-1578-4151-8712-CC34C80A045D}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{84FAD02B-1578-4151-8712-CC34C80A045D}.FastDebugHoae.Build.0 = Debug|Win32
 		{84FAD02B-1578-4151-8712-CC34C80A045D}.Intel.ActiveCfg = Release|Win32
 		{84FAD02B-1578-4151-8712-CC34C80A045D}.Intel.Build.0 = Release|Win32
 		{84FAD02B-1578-4151-8712-CC34C80A045D}.Profile.ActiveCfg = Release|Win32
@@ -473,6 +502,8 @@ Global
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.FastDebug CheckSync.Build.0 = Debug|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.FastDebug_CheckSync.ActiveCfg = Debug|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.FastDebug_CheckSync.Build.0 = Debug|Win32
+		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.FastDebugHoae.ActiveCfg = Debug|Win32
+		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.FastDebugHoae.Build.0 = Debug|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.Intel.ActiveCfg = Release|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.Intel.Build.0 = Release|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.Profile.ActiveCfg = Release|Win32
@@ -487,6 +518,40 @@ Global
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.RemoteDebug.Build.0 = Debug|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.RemoteDebugger.ActiveCfg = Debug|Win32
 		{DCCFEBA8-32F5-4B9C-1239-C149EA56746F}.RemoteDebugger.Build.0 = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.CarcassD.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.CarcassD.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Debug.ActiveCfg = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Debug.Build.0 = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Debug_CII.ActiveCfg = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Debug_CII.Build.0 = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Debug9.ActiveCfg = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Debug9.Build.0 = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.DebugMtd.ActiveCfg = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.DebugMtd.Build.0 = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.DemoRelease.ActiveCfg = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.DemoRelease.Build.0 = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebug.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebug.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebug CheckSync.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebug CheckSync.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebug_CheckSync.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebug_CheckSync.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebugHoae.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.FastDebugHoae.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Intel.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Intel.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Profile.ActiveCfg = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Profile.Build.0 = FastDebugHoae|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Release.ActiveCfg = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Release.Build.0 = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Release3D_fastDebug.ActiveCfg = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Release3D_fastDebug.Build.0 = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Release9.ActiveCfg = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.Release9.Build.0 = Release|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.RemoteDebug.ActiveCfg = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.RemoteDebug.Build.0 = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.RemoteDebugger.ActiveCfg = Debug|Win32
+		{34F7C96D-7DF6-465F-B4E2-89610427A6BD}.RemoteDebugger.Build.0 = Debug|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 	EndGlobalSection

@@ -286,7 +286,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
 				FavorSizeOrSpeed="0"
 				OmitFramePointers="FALSE"
 				OptimizeForProcessor="3"
-				AdditionalIncludeDirectories="../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface"
+				AdditionalIncludeDirectories="../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;..\3dlib\libogg\include;..\3dlib\libtheora\include;..\3dlib\libvorbis\include;../3dlib\libogg\include;../3dlib\libtheora\include;../3dlib\libvorbis\include;..\3dlib\gRenderDX9\dx9_sdk"
 				PreprocessorDefinitions="NOBOIDS;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;_INLINES;_NOSTAT"
 				StringPooling="TRUE"
 				MinimalRebuild="FALSE"
@@ -310,11 +310,11 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/MACHINE:I386 /FIXED:NO ..\lib\diaguids.lib ..\lib\diaguidsd.lib"
-				AdditionalDependencies="psapi.lib gMotorR.lib gRenderDX9R.lib boostR.lib atls.lib ../lib/ichat.lib ../lib/dipserver.lib ../lib_release/gMotorR.lib ddraw.lib commcore.lib odbc32.lib odbccp32.lib ws2_32.lib oldnames.lib dsound.lib dxguid.lib dplayx.lib strmiids.lib d3d9.lib d3dx9.lib dxerr9.lib libcmt.lib libcpmt.lib luaR.lib luabindR.lib gPhysicsR.lib ode.lib opcode.lib comctl32.lib"
+				AdditionalDependencies="psapi.lib gMotorR.lib gRenderDX9R.lib boostR.lib atls.lib ../lib/ichat.lib ../lib/dipserver.lib ../lib_release/gMotorR.lib ddraw.lib commcore.lib odbc32.lib odbccp32.lib ws2_32.lib oldnames.lib dsound.lib dxguid.lib dplayx.lib strmiids.lib d3d9.lib d3dx9.lib dxerr9.lib libcmt.lib libcpmt.lib luaR.lib luabindR.lib gPhysicsR.lib ode.lib opcode.lib comctl32.lib TVPlugin.lib libogg.lib libtheora.lib libvorbis.lib libvorbisfile.lib"
 				OutputFile="..\..\data\engine.exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="TRUE"
-				AdditionalLibraryDirectories="../3dlib\gRenderDX9\dx9_sdk;../lib_release;../lib"
+				AdditionalLibraryDirectories="../3dlib\gRenderDX9\dx9_sdk;../lib_release;../lib;..\3dlib\libogg\lib;..\3dlib\libtheora\lib;..\3dlib\libvorbis\lib;..\lib;..\3dlib\libogg\dll;..\3dlib\libtheora\dll;..\3dlib\libvorbis\dll"
 				IgnoreAllDefaultLibraries="TRUE"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="TRUE"
@@ -3841,6 +3841,16 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
 				</File>
 				<File
 					RelativePath=".\theovorb\theovorb.lib">
+				</File>
+			</Filter>
+			<Filter
+				Name="TVPlugin"
+				Filter="">
+				<File
+					RelativePath=".\TVPlugin\TVPlugin.h">
+				</File>
+				<File
+					RelativePath="..\lib\TVPlugin.lib">
 				</File>
 			</Filter>
 		</Filter>
