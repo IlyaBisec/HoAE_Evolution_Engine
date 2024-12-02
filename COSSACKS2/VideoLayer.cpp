@@ -1,6 +1,7 @@
 #include "stdheader.h"
 //#include "VideoLayer.h"
-#include "theovorb\theovorb.h"
+//#include "theovorb\theovorb.h"
+#include "TVPlugin\TVPlugin.h"
 #define NCOLR 4
 VideoLayer::VideoLayer(){
 	Texture=0;
