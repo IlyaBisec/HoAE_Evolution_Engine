@@ -1,0 +1,3457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="signals">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="filesystem">
+      <UniqueIdentifier>{825142ae-74d1-4e90-bf7a-1871d31b9043}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="type_traits">
+      <UniqueIdentifier>{50030afc-9310-4a0e-9bc7-e5f019bfafa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="config">
+      <UniqueIdentifier>{cee7a4d9-eafb-443a-857e-59c0795b691c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{efa9d421-9a2f-4a0b-bb42-b9fc9e402cdd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="detail">
+      <UniqueIdentifier>{a5414dac-959c-4127-a27e-06842fc3ac0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mpl">
+      <UniqueIdentifier>{0fe5478f-1428-46dc-b4d2-c487edac4bd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mpl\limits">
+      <UniqueIdentifier>{1b6872e2-ad8f-4ce1-845f-843e60f972f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mpl\aux_">
+      <UniqueIdentifier>{0d7fcaa5-5bbd-4c87-bf53-c85ff107aca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mpl\common">
+      <UniqueIdentifier>{7defa8b6-fb48-453a-8c59-f79739dd0fff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mpl\vector">
+      <UniqueIdentifier>{0f37df17-175c-47d8-b5a3-f785d14448cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mpl\list">
+      <UniqueIdentifier>{8aa3012e-667f-475c-8196-5403b31af664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{525fec94-3364-4892-ac3f-cf8ba8ab2075}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor">
+      <UniqueIdentifier>{1b0e3611-3cda-4ccd-b8b2-6d204b1bbb4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\config">
+      <UniqueIdentifier>{1ef30ee9-803a-45f0-a274-8b34c86fa678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\punctuation">
+      <UniqueIdentifier>{843ea9c8-b3a1-4641-9b72-9db66c84d317}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\control">
+      <UniqueIdentifier>{2ff6403d-73a0-4e20-8550-398b3237982a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\logical">
+      <UniqueIdentifier>{e158c75d-2286-408e-ba5d-fe8486206a46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\iteration">
+      <UniqueIdentifier>{cd5fd820-37ec-4831-b600-9c757043308c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\tuple">
+      <UniqueIdentifier>{dad60498-cdd7-473c-bab5-a01ccb6aab2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\arithmetic">
+      <UniqueIdentifier>{51b6c11d-e228-49b6-9f66-81890a407a4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\facilities">
+      <UniqueIdentifier>{2c5b84e0-24f7-4144-be53-e2e83d77ec05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\list">
+      <UniqueIdentifier>{0fe6bdd4-6772-428b-ae9d-c9036e4fc4cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\repetition">
+      <UniqueIdentifier>{9feca0d3-f56a-41c3-9162-19a46c742dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\array">
+      <UniqueIdentifier>{808a9ccf-ff33-4c6a-82df-7e63f33dc7d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\comparison">
+      <UniqueIdentifier>{28c0ebb5-a33e-4bbc-b355-73b6fc703334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\selection">
+      <UniqueIdentifier>{964b38c6-af44-43c4-9e16-c5cf0573227d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\detail">
+      <UniqueIdentifier>{259c158c-56b0-4614-85e9-0e941fe86719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\debug">
+      <UniqueIdentifier>{616c1bcd-d99a-45dd-9447-4681a17a99e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="preprocessor\slot">
+      <UniqueIdentifier>{8215cc09-a1e1-4ec5-aa6a-be95df898c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="function">
+      <UniqueIdentifier>{462befee-925b-4029-bfb4-375dbbce3460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pending">
+      <UniqueIdentifier>{f81a1309-8fdb-425f-b64b-c7ea27573578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bind">
+      <UniqueIdentifier>{33d2bbdd-a113-4ddd-a131-0732b750ffde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iterator">
+      <UniqueIdentifier>{5bbe2484-9d0d-4521-bb59-e4c1d8d2c666}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tuple">
+      <UniqueIdentifier>{1c898c22-d254-4c41-a03c-be45b46a9646}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boost\signals\detail\config.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\connection.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\detail\named_slot_map.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signal.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal0.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal1.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal10.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal2.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal3.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal4.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal5.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal6.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal7.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal8.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal9.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\detail\signal_base.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\signal_template.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\detail\signals_common.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\slot.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\detail\slot_call_iterator.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\signals\trackable.hpp">
+      <Filter>signals</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\filesystem\config.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\filesystem\convenience.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\filesystem\exception.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\filesystem\fstream.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\filesystem\operations.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\filesystem\path.hpp">
+      <Filter>filesystem</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\add_const.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\add_cv.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\add_pointer.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\add_reference.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\add_volatile.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\alignment_of.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\alignment_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\arithmetic_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\array_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\bool_trait_def.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\bool_trait_undef.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\broken_compiler_spec.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\composite_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\config.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\conversion_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\cv_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\cv_traits_impl.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\false_result.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\function_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_nothrow_assign.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_nothrow_constructor.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_nothrow_copy.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_nothrow_destructor.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_trivial_assign.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_trivial_constructor.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_trivial_copy.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\has_trivial_destructor.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\ice.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\ice_and.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\ice_eq.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\ice_not.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\ice_or.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\intrinsics.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_abstract.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_arithmetic.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_array.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_base_and_derived.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_class.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_compound.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_const.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_convertible.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_empty.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_enum.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_float.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_function.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\is_function_ptr_helper.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\is_function_ptr_tester.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\is_function_type_tester.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_fundamental.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_integral.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\is_mem_fun_pointer_impl.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\is_mem_fun_pointer_tester.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_member_function_pointer.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_member_pointer.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_object.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_pod.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_pointer.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_polymorphic.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_reference.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_same.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_scalar.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_stateless.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_union.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_void.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\is_volatile.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\object_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\reference_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\remove_bounds.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\remove_const.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\remove_cv.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\remove_pointer.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\remove_reference.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\remove_volatile.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\same_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\size_t_trait_def.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\size_t_trait_undef.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\template_arity_spec.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\transform_traits.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\transform_traits_spec.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\type_trait_def.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\type_trait_undef.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\type_traits_test.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\type_with_alignment.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\wrap.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits\detail\yes_no_type.hpp">
+      <Filter>type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi_prefix.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\abi_suffix.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\auto_link.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\dinkumware.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\libcomo.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\libstdcpp3.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\modena.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\msl.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\posix_features.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\requires_threads.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\roguewave.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\select_compiler_config.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\select_platform_config.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\select_stdlib_config.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\sgi.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\stlport.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\suffix.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\user.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\stdlib\vacpp.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\compiler\visualc.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config\platform\win32.hpp">
+      <Filter>config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\addressof.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\base_from_member.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\compare_pointees.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\enable_if.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\in_place_factory_prefix.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\in_place_factory_suffix.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\result_of.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\detail\result_of_iterate.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility\value_init.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\algorithm.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\allocator.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\allocator_utilities.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\atomic_count.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\atomic_count_gcc.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\atomic_count_linux.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\atomic_count_pthreads.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\atomic_count_win32.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\binary_search.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\call_traits.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\catch_exceptions.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\compressed_pair.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\dynamic_bitset.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\in_place_factory.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\in_place_factory_prefix.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\in_place_factory_suffix.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\indirect_traits.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\is_function_ref_tester.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\is_incrementable.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\iterator.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lightweight_mutex.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lightweight_test.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\limits.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_gcc.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_irix.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_linux.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_nop.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_pthreads.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_win32.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_win32_cs.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\lwm_win32_nt.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\named_template_params.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\no_exceptions_support.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\none.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\none_t.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\numeric_traits.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\ob_call_traits.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\ob_compressed_pair.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\quick_allocator.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\reference_content.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\select_type.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\shared_array_nmt.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\shared_count.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\shared_ptr_nmt.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\templated_streams.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\typed_in_place_factory.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\detail\workaround.hpp">
+      <Filter>detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\limits\arity.hpp">
+      <Filter>mpl\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\limits\list.hpp">
+      <Filter>mpl\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\limits\map.hpp">
+      <Filter>mpl\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\limits\set.hpp">
+      <Filter>mpl\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\limits\unrolling.hpp">
+      <Filter>mpl\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\limits\vector.hpp">
+      <Filter>mpl\limits</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\add.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\adl_barrier.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\advance_backward.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\advance_backward.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\advance_forward.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\advance_forward.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\algorithm_namespace.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\and.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\apply.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\apply.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\apply_1st.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\apply_fwd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\apply_wrap.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\arg.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\arg_typedef.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\arithmetic_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\arity.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\arity_spec.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\arrays.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\at_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\back.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\back_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\basic_bind.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\basic_bind.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\begin_end.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\begin_end_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\bind.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\bind.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\bind_fwd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\bitand.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\bitor.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\bitxor.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\bool_value_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\clear_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\common_name_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\comparison_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\compiler.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\contains_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\copy_if_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\copy_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\count_args.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\count_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\ctps.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\debug_print.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\def_params_tail.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\default_params.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\dependent_nttp.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\deref_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\divides.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\dmc_ambiguous_ctps.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\dtp.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\empty.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\empty_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\enum.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\equal_to.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\erase_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\erase_key_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\eti.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\ext_params.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\filter_iter.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\filter_params.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\find_if_pred.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\fold_backward_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\fold_backward_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\fold_backward_impl_body.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\fold_impl_body.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\fold_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\fold_pred.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\forwarding.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\front.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\front_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\full_lambda.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\full_lambda.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\gcc.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\greater.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\greater_equal.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\has_apply.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_apply.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_begin.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_key_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_rebind.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_size.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_tag.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_type.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\has_xxx.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\has_xxx.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\ice_cast.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\include_preprocessed.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\inherit.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\insert_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\insert_range_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\inserter_algorithm.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\integral.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\integral_wrapper.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\intel.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\internals.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\is_msvc_eti_arg.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\is_seq.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iter_apply.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iter_distance.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\iter_fold_backward_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iter_fold_backward_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\iter_fold_if_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iter_fold_if_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iter_fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\iter_fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iter_push_front.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\iterator.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iterator_category.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\iterator_names.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\joint_iter.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\lambda.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\lambda_arity_param.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\lambda_expr.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\lambda_helper.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\lambda_no_ctps.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\lambda_no_ctps.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\lambda_spec.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\lambda_support.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\largest_int.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\less.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\less_equal.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\list.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\list_c.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\logical_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\map.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\metafunction.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\minus.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\modulus.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\msvc.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\msvc_dtw.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\msvc_eti_base.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\msvc_is_class.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\msvc_never_true.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\msvc_type.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\msvc_typename.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\na.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\na_spec.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\nested_type_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\next.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\not_equal_to.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\nttp.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\nttp_decl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\numeric_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\O1_size.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\O1_size_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\operators.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\or.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\order_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\overload_names.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\overload_resolution.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\params.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\partial_spec_params.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\partition_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\placeholders.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\plus.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\pop_back_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\pop_front_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\pred.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\preprocessor.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\prior.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\ptr_to_ref.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\push_back_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\push_front_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\quote.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\range.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\repeat.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\reverse_fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\reverse_fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\reverse_fold_impl_body.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\reverse_iter_fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\reverse_iter_fold_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\select1st_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\select2nd_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\sequence_tag.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\sequence_wrapper.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\set.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\shift_left.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\shift_op.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\shift_right.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\single_element_iter.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\size.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\size_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\sort_impl.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\static_cast.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\static_constant.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\sub.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\range_c\tag.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\tag_protocol.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\template_arity.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\template_arity.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\template_arity_fwd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\test.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\times.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\token_equal.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\traits_lambda_spec.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\transform_iter.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\ttp.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessor\tuple.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\type_wrapper.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\typeof.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\typeof.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\unpack_args.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\unwrap.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\use_preprocessed.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\value_wknd.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\vector.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\vector.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\msvc70\vector_c.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\void_spec.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\config\workaround.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\yes_no.hpp">
+      <Filter>mpl\aux_</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\advance.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\advance_backward.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\advance_forward.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\advance_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\alias.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\always.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\and.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\and.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\apply.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\apply.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\apply_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\apply_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\apply_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\apply_wrap.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\apply_wrap.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\arg.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\arg.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\arg_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\arithmetic.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\as_sequence.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\assert.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\assert_is_same.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\at.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\at_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\back.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\back_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\back_inserter.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\base.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\basic_bind.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\begin.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\begin_end.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\begin_end_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\bind.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bind.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bind_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\bind_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\bitand.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bitand.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bitor.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\bitor.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bitwise.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\bitxor.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bitxor.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bool.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\bool_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\clear.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\clear_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\comparison.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\contains.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\contains_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\copy.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\copy_backward.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\copy_backward_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\copy_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\count.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\count_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\count_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\deref.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\distance.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\distance_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\divides.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\divides.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\empty.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\empty_base.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\empty_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\end.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\equal.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\equal_to.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\equal_to.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\erase.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\erase_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\erase_key.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\erase_key_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\eval_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\filter_view.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\find.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\find_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\fold.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\fold_backward.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\fold_backward_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\fold_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\for_each.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\front.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\front_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\front_inserter.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\full_lambda.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\greater.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\greater.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\greater_equal.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\greater_equal.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\has_key.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\has_key_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\has_xxx.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\identity.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\index_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\index_of.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\inherit.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\inherit.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\inherit_linearly.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\insert.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\insert_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\insert_range.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\insert_range_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\inserter.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\int.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\int_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\integral_c.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\integral_c_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\integral_c_tag.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\is_placeholder.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\is_sequence.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iter_fold.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iter_fold_backward.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\iter_fold_backward_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iter_fold_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\iter_fold_if_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\iter_fold_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iterator_category.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iterator_range.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iterator_tag.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\iterator_tags.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\joint_view.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\key_type.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\key_type_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\lambda.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\lambda_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\lambda_helper.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\lambda_helper.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\lambda_no_ctps.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\less.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\less.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\less_equal.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\less_equal.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\list.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\list_c.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list_c.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\logical.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\long.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\long_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\lower_bound.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\map.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\map.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\max_element.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\min_element.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\min_max.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\minus.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\minus.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\modulus.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\modulus.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\multiplies.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\negate.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\next.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\next_prior.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\not.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\not_equal_to.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\not_equal_to.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\numeric_cast.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\O1_size.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\O1_size_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\or.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\or.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\order.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\order_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\pair.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\pair_view.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\partition.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\placeholders.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\placeholders.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\plus.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\plus.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\pop_back.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\pop_back_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\pop_front.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\pop_front_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\prev.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\print.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\prior.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\project1st.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\project2nd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\protect.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\push_back.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\push_back_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\push_front.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\push_front_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\quote.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\quote.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\range_c.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\remove.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\remove_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\replace.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\replace_if.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\reverse.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\reverse_fold.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\reverse_fold_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\reverse_iter_fold.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\reverse_iter_fold_impl.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\same_as.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\select1st.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\select2nd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\sequence_tag.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\sequence_tag_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\set.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\set.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\shift_left.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\shift_left.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\shift_right.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\shift_right.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\single_view.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\size.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\size_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\size_t.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\size_t_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\sizeof.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\sort.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\sort_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\stable_partition.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\switch.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\tag.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\template_arity.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\times.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\times.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\transform.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\transform_view.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\unique.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\unpack_args.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\unpack_args.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\upper_bound.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\value_type.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\value_type_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\vector.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector_c.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\aux_\preprocessed\plain\vector_c.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\void.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\void_fwd.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\zip_view.hpp">
+      <Filter>mpl\common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\at.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\back.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\begin_end.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\clear.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\empty.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\front.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\include_preprocessed.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\item.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\iterator.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\node.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\numbered.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\numbered_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\O1_size.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\pop_back.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\pop_front.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\push_back.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\push_front.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\size.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\tag.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector0.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\vector0.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector0_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector10.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector10.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector10_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector10_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector20.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector20.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector20_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector20_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector30.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector30.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector30_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector30_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector40.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector40.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector40_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector40_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector50.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector50.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\aux_\preprocessed\plain\vector50_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\vector\vector50_c.hpp">
+      <Filter>mpl\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\begin_end.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\clear.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\empty.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\front.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\include_preprocessed.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\item.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\iterator.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list0.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list0_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list10.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list10.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list10_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list10_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list20.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list20.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list20_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list20_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list30.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list30.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list30_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list30_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list40.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list40.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list40_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list40_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list50.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list50.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\preprocessed\plain\list50_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\list50_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\node.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\numbered.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\numbered_c.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\O1_size.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\pop_front.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\push_back.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\push_front.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\size.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mpl\list\aux_\tag.hpp">
+      <Filter>mpl\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\aligned_storage.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\any.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\array.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\assert.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\assign.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\blank.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\blank_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\call_traits.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cast.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\checked_delete.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\compose.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\compressed_pair.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_archetype.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\concept_check.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\config.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\counting_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\crc.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cregex.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cstdint.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\cstdlib.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\current_function.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\dynamic_bitset.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\dynamic_bitset_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\enable_shared_from_this.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\format.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function_equal.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function_output_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\functional.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\generator_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\get_pointer.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\half_open_range.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\implicit_cast.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\indirect_reference.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\integer_traits.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\intrusive_ptr.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\io_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator_adaptors.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\last_value.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\lexical_cast.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\limits.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\math_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\mem_fn.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\min_rand.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\multi_array.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\multi_index_container.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\multi_index_container_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\next_prior.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\non_type.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\noncopyable.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\nondet_random.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\none.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\operators.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\optional.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\permutation_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pfto.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pointee.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\program_options.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\progress.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\property_map.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\property_map_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\python.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\random.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\range.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\rational.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\ref.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\regex_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\scoped_array.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\scoped_ptr.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\shared_array.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\shared_container_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\shared_ptr.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_cast.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\smart_ptr.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\spirit.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\state_saver.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\static_assert.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\static_warning.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\strong_typedef.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\thread.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\throw_exception.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\timer.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\token_functions.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\token_iterator.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\tokenizer.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\type_traits.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utf8_codecvt_facet.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\utility_fwd.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\variant.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\vector_property_map.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\version.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\visit_each.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\weak_ptr.hpp">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\assert_msg.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\cat.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comma.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comma_if.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\debug.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\dec.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\empty.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\enum.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\enum_params.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\enum_params_with_a_default.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\enum_params_with_defaults.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\enum_shifted.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\enum_shifted_params.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\expand.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\expr_if.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\for.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\identity.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\if.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\inc.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iterate.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\library.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\limits.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\max.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\min.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\punctuation.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repeat.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repeat_2nd.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repeat_3rd.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repeat_from_to.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repeat_from_to_2nd.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repeat_from_to_3rd.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\selection.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\seq.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\stringize.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\while.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\wstringize.hpp">
+      <Filter>preprocessor</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\config\config.hpp">
+      <Filter>preprocessor\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\config\limits.hpp">
+      <Filter>preprocessor\config</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\punctuation\comma.hpp">
+      <Filter>preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\punctuation\comma_if.hpp">
+      <Filter>preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\punctuation\paren.hpp">
+      <Filter>preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\punctuation\paren_if.hpp">
+      <Filter>preprocessor\punctuation</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\deduce_d.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\expr_if.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\expr_iif.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\if.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\iif.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\while.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\control\detail\msvc\while.hpp">
+      <Filter>preprocessor\control</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\and.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\bitand.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\bitnor.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\bitor.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\bitxor.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\bool.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\compl.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\nor.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\not.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\or.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\logical\xor.hpp">
+      <Filter>preprocessor\logical</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\finish.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward1.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward2.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward3.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward4.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\forward5.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\iterate.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\local.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\local.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower1.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower2.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower3.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower4.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\lower5.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse1.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse2.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse3.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse4.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\iter\reverse5.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\rlocal.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\self.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\self.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\start.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper1.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper2.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper3.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper4.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\iteration\detail\bounds\upper5.hpp">
+      <Filter>preprocessor\iteration</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple\eat.hpp">
+      <Filter>preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple\elem.hpp">
+      <Filter>preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple\rem.hpp">
+      <Filter>preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple\reverse.hpp">
+      <Filter>preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple\to_list.hpp">
+      <Filter>preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\tuple\to_seq.hpp">
+      <Filter>preprocessor\tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\add.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\dec.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\div.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\detail\div_base.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\inc.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\mod.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\mul.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\arithmetic\sub.hpp">
+      <Filter>preprocessor\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\apply.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\empty.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\expand.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\identity.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\intercept.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\is_1.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\is_empty.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\facilities\is_empty_or_1.hpp">
+      <Filter>preprocessor\facilities</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\adt.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\append.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\at.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\cat.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\enum.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\filter.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\first_n.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\detail\dmc\fold_left.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\fold_left.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\detail\edg\fold_left.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\detail\fold_left.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\detail\edg\fold_right.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\fold_right.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\detail\fold_right.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\for_each.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\for_each_i.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\for_each_product.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\rest_n.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\reverse.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\size.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\to_tuple.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\list\transform.hpp">
+      <Filter>preprocessor\list</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\deduce_r.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\deduce_z.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_binary_params.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_params.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_params_with_a_default.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_params_with_defaults.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_shifted.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_shifted_params.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_trailing.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_trailing_binary_params.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\enum_trailing_params.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\for.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\detail\msvc\for.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\repeat.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\repetition\repeat_from_to.hpp">
+      <Filter>preprocessor\repetition</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\data.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\elem.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\insert.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\pop_back.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\pop_front.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\push_back.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\push_front.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\remove.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\replace.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\reverse.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\array\size.hpp">
+      <Filter>preprocessor\array</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison\equal.hpp">
+      <Filter>preprocessor\comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison\greater.hpp">
+      <Filter>preprocessor\comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison\greater_equal.hpp">
+      <Filter>preprocessor\comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison\less.hpp">
+      <Filter>preprocessor\comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison\less_equal.hpp">
+      <Filter>preprocessor\comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\comparison\not_equal.hpp">
+      <Filter>preprocessor\comparison</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\selection\max.hpp">
+      <Filter>preprocessor\selection</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\selection\min.hpp">
+      <Filter>preprocessor\selection</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\auto_rec.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\dmc\auto_rec.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\check.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\is_binary.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\is_nullary.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\is_unary.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\null.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\detail\split.hpp">
+      <Filter>preprocessor\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\debug\assert.hpp">
+      <Filter>preprocessor\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\debug\error.hpp">
+      <Filter>preprocessor\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\debug\line.hpp">
+      <Filter>preprocessor\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\def.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\shared.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\slot.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot1.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot2.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot3.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot4.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\preprocessor\slot\detail\slot5.hpp">
+      <Filter>preprocessor\slot</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function0.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function1.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function10.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function2.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function3.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function4.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function5.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function6.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function7.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function8.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function9.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function_base.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\detail\function_iterate.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\function_template.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\detail\maybe_include.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\function\detail\prologue.hpp">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\bucket_sorter.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\container_traits.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\cstddef.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\ct_if.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\disjoint_sets.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\detail\disjoint_sets.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\fenced_priority_queue.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\fibonacci_heap.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\indirect_cmp.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\detail\int_iterator.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\integer_log2.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\integer_range.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\is_heap.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\iterator_adaptors.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\iterator_tests.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\lowest_bit.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\mutable_heap.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\mutable_queue.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\property.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\detail\property.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\queue.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\pending\stringtok.hpp">
+      <Filter>pending</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\apply.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\arg.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_cc.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_mf_cc.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\bind_template.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\make_adaptable.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn_cc.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn_template.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\mem_fn_vw.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\placeholders.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\bind\protect.hpp">
+      <Filter>bind</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\any_conversion_eater.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\categories.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\config_def.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\config_undef.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\counting_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\enable_if.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\facade_iterator_category.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\filter_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\indirect_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\interoperable.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\is_lvalue_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\is_readable_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_adaptor.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_archetypes.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_categories.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_concepts.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_facade.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\iterator_traits.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\detail\minimum_category.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\new_iterator_tests.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\permutation_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\reverse_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\transform_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\iterator\zip_iterator.hpp">
+      <Filter>iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\tuple\tuple.hpp">
+      <Filter>tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\tuple\detail\tuple_basic.hpp">
+      <Filter>tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\tuple\detail\tuple_basic_no_partial_spec.hpp">
+      <Filter>tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\tuple\tuple_comparison.hpp">
+      <Filter>tuple</Filter>
+    </ClInclude>
+    <ClInclude Include="boost\tuple\tuple_io.hpp">
+      <Filter>tuple</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libs\signals\src\connection.cpp">
+      <Filter>signals</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\signals\src\named_slot_map.cpp">
+      <Filter>signals</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\signals\src\signal_base.cpp">
+      <Filter>signals</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\signals\src\slot.cpp">
+      <Filter>signals</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\signals\src\trackable.cpp">
+      <Filter>signals</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\filesystem\src\convenience.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\filesystem\src\exception.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\filesystem\src\operations_posix_windows.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+    <ClCompile Include="libs\filesystem\src\path_posix_windows.cpp">
+      <Filter>filesystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
