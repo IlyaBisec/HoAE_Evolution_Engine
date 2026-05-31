@@ -1,9 +1,9 @@
-#include "windows.h"
 #include "stdheader.h"
 // DeviceCD.cpp : implementation file
 //
 
 //#include "stdafx.h"
+#include "windows.h"
 #pragma pack(1)
 #include "DeviceCD.h"
 #include "TMixer.h"

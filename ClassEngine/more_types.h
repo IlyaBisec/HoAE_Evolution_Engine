@@ -34,7 +34,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((DWORD*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}
@@ -145,7 +145,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((WORD*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((word*)DestData)=*((word*)SrcData);
 		return true;
 	}
@@ -164,7 +164,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((short*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((word*)DestData)=*((word*)SrcData);
 		return true;
 	}
@@ -183,7 +183,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((char*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((char*)DestData)=*((char*)SrcData);
 		return true;
 	}
@@ -202,7 +202,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((BYTE*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((byte*)DestData)=*((byte*)SrcData);
 		return true;
 	}
@@ -231,7 +231,7 @@ public:
 	virtual void Save(xmlQuote& xml,void* ClassPtr,void* Extra=NULL);
 	virtual bool Load(xmlQuote& xml,void* ClassPtr,ErrorPager* Error,void* Extra=NULL);
 	virtual const char* GetClassName();    	
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		_gframe* dst=(_gframe*)DestData;
 		dst->FileID=FileID;
 		dst->SpriteID=SpriteID;
@@ -251,7 +251,7 @@ public:
 	virtual void Save(xmlQuote& xml,void* ClassPtr,void* Extra=NULL);
 	virtual bool Load(xmlQuote& xml,void* ClassPtr,ErrorPager* Error,void* Extra=NULL);
 	virtual const char* GetClassName();    	
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((short*)DestData)=*((short*)SrcData);
 		return true;
 	}
@@ -280,7 +280,7 @@ public:
 	virtual void Save(xmlQuote& xml,void* ClassPtr,void* Extra=NULL);
 	virtual bool Load(xmlQuote& xml,void* ClassPtr,ErrorPager* Error,void* Extra=NULL);
 	virtual const char* GetClassName();  
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}
@@ -298,7 +298,7 @@ public:
 	virtual void Save(xmlQuote& xml,void* ClassPtr,void* Extra=NULL);
 	virtual bool Load(xmlQuote& xml,void* ClassPtr,ErrorPager* Error,void* Extra=NULL);
 	virtual const char* GetClassName();    	
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}
@@ -317,7 +317,7 @@ public:
 	virtual bool Load(xmlQuote& xml,void* ClassPtr,ErrorPager* Error,void* Extra=NULL);
 	virtual const char* GetClassName();
 	virtual void reset_class(void* ptr);
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}

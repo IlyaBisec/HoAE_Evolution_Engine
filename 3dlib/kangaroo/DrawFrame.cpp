@@ -1,4 +1,5 @@
-#include "common.h"
+
+#include "StdAfx.h" #include "common.h" 
 #include "DrawFrame.h"
 
 class TexFrame:public BaseClass{

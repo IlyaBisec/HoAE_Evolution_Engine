@@ -520,7 +520,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 		
 	ComboBox* CMGRP1[20];
 	TextButton* TGRP1[20];
-	for(int i=0; i<20; i++){
+	for(i=0; i<20; i++){
 		CMGRP1[i]=NULL;
 		TGRP1[i]=NULL;
 	}
@@ -574,7 +574,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 	};
 	if(CMGRP1[1]->CurLine>=CMGRP1[1]->NLines)CMGRP1[1]->CurLine=0;
 #else
-	for(int p=0;p<RMP.NRelief;p++){
+	for(p=0;p<RMP.NRelief;p++){
 		CMGRP1[1]->AddLine(RMP.Relief[p]);
 	};
 	CMGRP1[1]->AddLine(rtxt);
@@ -585,7 +585,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 	int RRESID=RMP.NRES;
 	
 	CMGRP1[3]->CurLine=RMP.RES_DEF;
-	for(int p=0;p<RMP.NRES;p++){
+	for(p=0;p<RMP.NRES;p++){
 		CMGRP1[3]->AddLine(RMP.RES[p].Name);
 	};
 	CMGRP1[3]->AddLine(rtxt);
@@ -594,7 +594,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 	
 	CMGRP1[4]->CurLine=RMP.MINES_DEF;
 	int RMINEID=RMP.NMINES;
-	for(int p=0;p<RMP.NMINES;p++){
+	for(p=0;p<RMP.NMINES;p++){
 		CMGRP1[4]->AddLine(RMP.MINES[p].Name);
 	};
 	CMGRP1[4]->AddLine(rtxt);
@@ -636,7 +636,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 		};
 		CMGRP1[a+FAO]->CurLine=0;
 #else
-		for(int i=0;i<10;i++){
+		for(i=0;i<10;i++){
 			char ccc[128];
 			sprintf(ccc,"@GMTP_TP%d_0%d",a+1,i);
 			char* text=GetTextByID(ccc);
@@ -693,7 +693,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 
 	int VicGpLx = GPS.GetGPWidth(CMB.GPID,0);
 
-	for(int i=0;i<NGRP1+2;i++){
+	for(i=0;i<NGRP1+2;i++){
 		CMGRP1[i]->Center-=5;
 		CMGRP1[i]->FontDy-=1;
 		CMGRP1[i]->OneDy-=0;
@@ -746,7 +746,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 	GPP->CurPage=1;
 
 	// Options of game
-	for(int i=0;i<=9;i++){
+	for(i=0;i<=9;i++){
 		char ccx[32];
 		sprintf(ccx,"VICOND%d",i);
 		char* cc2=GetTextByID(ccx);
@@ -758,7 +758,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 	//VICT->Visible=0;
 	//VICT->Enabled=0;
 ffe1:;
-	for(int i=0;i<=9;i++){
+	for(i=0;i<=9;i++){
 		char ccx[32];
 		sprintf(ccx,"TIME%d",i);
 		char* cc2=GetTextByID(ccx);
@@ -809,7 +809,7 @@ ffe2:;
 	//
 	ItemChoose=-1;
 	memset(GSets.CGame.PL_INFO,0,sizeof GSets.CGame.PL_INFO);
-	for(int i=0;i<8;i++)GSets.CGame.PL_INFO[i].Version=dwVersion;
+	for(i=0;i<8;i++)GSets.CGame.PL_INFO[i].Version=dwVersion;
 	if(SINGLE){
 		NPlayers=1;
 		memset(&GSets.CGame.PL_INFO[0],0,sizeof GSets.CGame.PL_INFO[0]);
@@ -822,7 +822,7 @@ ffe2:;
 	if(NPlayers>7)NPlayers=7;
 	
 	byte CUSED=0;
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID!=MyDPID){
 			CUSED|=(1<<GSets.CGame.PL_INFO[i].ColorID);
 		};
@@ -836,7 +836,7 @@ ffe2:;
 	GameInProgress=0;
 	if(!SINGLE)PIEnumeratePlayers(GSets.CGame.PL_INFO,false);
 	if(NPlayers>7)NPlayers=7;
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 			GSets.CGame.PL_INFO[i].ColorID=cc1;
 			ColorBack[i]->Nation=cc1;
@@ -994,7 +994,7 @@ ffe2:;
 			ADD_OPT_VAL->Enabled=Host;
 		};
 		int a=AOScr->GetPos();
-		for(int i=0; i<NGRP1; i++){
+		for(i=0; i<NGRP1; i++){
 			int y = y2+(i-a)*26;
 			int y1 = y+CMGRP1[i]->y1-CMGRP1[i]->y;
 			if(CMGRP1[i]){
@@ -1004,7 +1004,7 @@ ffe2:;
 			if(TGRP1[i]) TGRP1[i]->y=y;
 		};
 		FAO=6;
-		for(int i=0; i<5;i++){
+		for(i=0; i<5;i++){
 			CUROPTVAL[i]=CMGRP1[i+6]->CurLine;
 		};
 		CUROPTVAL[6]=CMGRP1[1]->CurLine;
@@ -1044,7 +1044,7 @@ ffe2:;
 			PrevCOMBO=aocl;
 		};
 		*/
-		for(int i=0;i<NPlayers;i++){
+		for(i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 				if(Host)GSets.CGame.PL_INFO[i].Ready=1;
 				GSets.CGame.PL_INFO[i].Host=Host;
@@ -1129,7 +1129,7 @@ ffe2:;
 		VSB->Visible=P1E;
 		LBMaps->Visible=P1E;
 		AOScr->Visible=P2E;
-		for(int p=0;p<NGRP1;p++){
+		for(p=0;p<NGRP1;p++){
 			CMGRP1[p]->Visible=P2E;
 			if(TGRP1[p]) TGRP1[p]->Visible=P2E;
 			CMGRP1[p]->Enabled=P2E&&Host;
@@ -1174,7 +1174,7 @@ ffe2:;
 		if(MyOldVers)GPPB->Hint=OLDV;
 		else GPPB->Hint=NULL;
 		//processing optoons
-		for(int i=0;i<NPlayers;i++){
+		for(i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 				if(DefaultTeam!=-1){
 					AliasBack[i]->Enabled=0;
@@ -1298,7 +1298,7 @@ ffe2:;
 		if(GameInProgress)goto FinCLC;
 		//tmm3=GetRealTime();
 		char ccc[128];
-		for(int p=NPlayers;p<8;p++)CurrentMaxPing[p]=-1;
+		for(p=NPlayers;p<8;p++)CurrentMaxPing[p]=-1;
 		if(PSUMM.NPL&&PSUMM.PSET[0].NPings){
 			int png=GetMaxRealPing();			
 			if(GetRealTime()-PPTIME>1000){
@@ -1308,9 +1308,9 @@ ffe2:;
 				lpp[2]=lpp[0]+lpp[1];
 				SendToAllPlayers(12,lpp);
 				PPTIME=GetRealTime();
-				for(int p=0;p<NPlayers;p++)if(GSets.CGame.PL_INFO[p].PlayerID==MyDPID)CurrentMaxPing[p]=png;
+				for(p=0;p<NPlayers;p++)if(GSets.CGame.PL_INFO[p].PlayerID==MyDPID)CurrentMaxPing[p]=png;
 			};
-			for(int p=0;p<NPlayers;p++)if(CurrentMaxPing[p]>png)png=CurrentMaxPing[p];
+			for(p=0;p<NPlayers;p++)if(CurrentMaxPing[p]>png)png=CurrentMaxPing[p];
 			MaxPingTime=png;
 			if(png<MinPing0)MaxPingTime=0;
 			if(png>=MinPing0&&png<300)MaxPingTime=300;
@@ -1326,7 +1326,7 @@ ffe2:;
 		MENU.RefreshView();
 
 		if(GameInProgress)goto FinCLC;
-		for(int i=NPlayers;i<NPlayers+NComp;i++){
+		for(i=NPlayers;i<NPlayers+NComp;i++){
 			COMALLY[i-NPlayers]=AliasBack[i]->Nation;
 			COMNATION[i-NPlayers]=MNATION[i]->CurLine;
 		};
@@ -1335,7 +1335,7 @@ ffe2:;
 		
 		//TIME->Enabled=TIME->Visible;
 		NOMREADY=-1;
-		if(!SINGLE)for(int i=0;i<8;i++)ReadyFlow[i]->Visible=0;
+		if(!SINGLE)for(i=0;i<8;i++)ReadyFlow[i]->Visible=0;
 		if(Host){
 			int HostID=-1;
 			byte CMask=0;
@@ -1348,12 +1348,12 @@ ffe2:;
 				CMask|=1<<GSets.CGame.PL_INFO[q].ColorID;
 			};
 			int NN=0;
-			for(int q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
+			for(q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
 				word W=GSets.CGame.PL_INFO[HostID].COMPINFO[q];
 				int Color=W&15;
 				CMask|=1<<Color;
 			};
-			for(int q=0;q<8;q++)if(CMask&(1<<q))NN++;
+			for(q=0;q<8;q++)if(CMask&(1<<q))NN++;
 			/*
 			if(NN>4){
 				CMGRP1[0]->Enabled=0;
@@ -1407,7 +1407,7 @@ ffe2:;
 						Nats[7-GSets.CGame.PL_INFO[q].ColorID]=NTCHAR[MNATION[q]->CurLine+1];
 						//Nats1[7-GSets.CGame.PL_INFO[q].ColorID]='1';
 					};
-					for(int q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
+					for(q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
 						word W=GSets.CGame.PL_INFO[HostID].COMPINFO[q];
 						int Nat=W>>11;
 						int Color=W&15;
@@ -1429,11 +1429,11 @@ ffe2:;
 					int res=CMGRP1[3]->CurLine==RRESID?rand()%RRESID:CMGRP1[3]->CurLine;
 					int min=CMGRP1[4]->CurLine==RMINEID?rand()%RMINEID:CMGRP1[4]->CurLine;
 					strcpy(Nats,"00000000");
-					for(int q=0;q<NPlayers;q++){
+					for(q=0;q<NPlayers;q++){
 						Nats[7-GSets.CGame.PL_INFO[q].ColorID]=MNATION[q]->CurLine==RNATID?
 							NTCHAR[1+(rand()%RNATID)]:NTCHAR[MNATION[q]->CurLine+1];
 					};
-					for(int q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
+					for(q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
 						word W=GSets.CGame.PL_INFO[HostID].COMPINFO[q];
 						int Nat=W>>11;
 						int Color=W&15;
@@ -1485,7 +1485,7 @@ ffe2:;
 				};
 				if(!SINGLE)ReadyFlow[i]->Visible=0;
 			};
-			for(int i=0;i<NGRP1;i++)CMGRP1[i]->Enabled=0;
+			for(i=0;i<NGRP1;i++)CMGRP1[i]->Enabled=0;
 			VICT->Enabled=0;
 			TIME->Enabled=0;
 			NOMREADY=-1;
@@ -1516,7 +1516,7 @@ ffe2:;
 				Nats[7-GSets.CGame.PL_INFO[q].ColorID]=NTCHAR[MNATION[q]->CurLine+1];
 				//Nats1[7-GSets.CGame.PL_INFO[q].ColorID]='1';
 			};
-			for(int q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
+			for(q=NPlayers;q<7;q++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[q]){
 				word W=GSets.CGame.PL_INFO[HostID].COMPINFO[q];
 				int Nat=W>>11;
 				int Color=W&15;
@@ -1555,10 +1555,10 @@ ffe2:;
 			};
 		};
 		MaxVers=0;
-		for(int i=0;i<NPlayers;i++){
+		for(i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].Version>MaxVers)MaxVers=GSets.CGame.PL_INFO[i].Version;
 		};
-		for(int i=0;i<8;i++){
+		for(i=0;i<8;i++){
 			if(i<NPlayers){
 				if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 					GSets.CGame.PL_INFO[i].NationID=MNATION[i]->CurLine;
@@ -1805,7 +1805,7 @@ ffe2:;
 					CMGRP1[2]->CurLine=GSets.CGame.PL_INFO[HostID].CD;
 					CMGRP1[3]->CurLine=GSets.CGame.PL_INFO[HostID].StartRes;
 					CMGRP1[4]->CurLine=GSets.CGame.PL_INFO[HostID].ResOnMap;
-					for(int i=0;i<7;i++){
+					for(i=0;i<7;i++){
 						int v=GSets.CGame.PL_INFO[HostID].UserParam[i];
 						if(v!=CUROPTVAL[i]){
 							CUROPTVAL[i]=v;
@@ -1836,25 +1836,25 @@ ffe2:;
 				CMGRP1[1]->CurLine=CUROPTVAL[6];
 			};
 		};
-		for(int i=0;i<8;i++){
+		for(i=0;i<8;i++){
 			if(i<NPlayers){
 				MNATION[i]->CurLine=GSets.CGame.PL_INFO[i].NationID;
 				ColorBack[i]->Nation=GSets.CGame.PL_INFO[i].ColorID;
 				AliasBack[i]->Nation=GSets.CGame.PL_INFO[i].GroupID;
 			};
 		};
-		for(int i=0;i<NPlayers;i++){
+		for(i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID&&ItemChoose==mcmOk&&!Host){
 				GSets.CGame.PL_INFO[i].Ready=1;
 			};
 		};
 		HostID=-1;
-		for(int i=0;i<NPlayers;i++){
+		for(i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].Host)HostID=i;
 		};
 		if(HostID!=-1){
 			if(Host){
-				for(int i=0;i<7;i++){
+				for(i=0;i<7;i++){
 #ifndef AC_DEMO					
 					COMPS[i]->Visible=(i>=NPlayers);
 #endif
@@ -1864,13 +1864,13 @@ ffe2:;
 						if(!COMPPREV[i]){
 							byte msk=0;
 							for(int j=0;j<NPlayers;j++)msk|=1<<ColorBack[j]->Nation;
-							for(int j=NPlayers;j<7;j++){
+							for(j=NPlayers;j<7;j++){
 								if(COMPS[j]->Visible&&COMPS[j]->CurLine){
 									msk|=1<<ColorBack[j]->Nation;
 								};
 							};
 							int defc=-1;
-							for(int j=0;j<7&&defc==-1;j++){
+							for(j=0;j<7&&defc==-1;j++){
 								if(!(msk&(1<<j)))defc=j;
 							};
 							if(defc==-1)defc=0;
@@ -1923,7 +1923,7 @@ ffe2:;
 					COMPPREV[i]=COMPS[i]->Visible&&COMPS[i]->CurLine;
 				};
 			}else{
-				for(int i=0;i<7;i++){
+				for(i=0;i<7;i++){
 					if(i>=NPlayers){
 						word W=GSets.CGame.PL_INFO[HostID].COMPINFO[i];
 						if(W){
@@ -1987,7 +1987,7 @@ ffe2:;
 			};
 		};
 		GMREADY=true;
-		for(int i=0;i<NPlayers;i++){
+		for(i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID!=MyDPID&&!GSets.CGame.PL_INFO[i].Ready)GMREADY=false;
 		};
 		MSS1=0;
@@ -1999,7 +1999,7 @@ ffe2:;
 			if(!GSets.CGame.PL_INFO[i].Ready)GMREADY=false;
 		};
 		*/
-		for(int i=0;i<7;i++){
+		for(i=0;i<7;i++){
 			if(COMPS[i]->Visible&&COMPS[i]->CurLine){
 				byte MSS2=1<<ColorBack[i]->Nation;
 				if(MSS1&MSS2&&Host)GMREADY=false;
@@ -2018,7 +2018,7 @@ ffe2:;
 					bs|=1;
 					if(bs==2||bs==4||bs==8||bs==16||bs==32||bs==64||bs==128)GMREADY=false;
 				};
-				for(int i=0;i<NPlayers;i++)if(CurrentMaxPing[i]==-1)GMREADY=0;
+				for(i=0;i<NPlayers;i++)if(CurrentMaxPing[i]==-1)GMREADY=0;
 				if(PresOldVers)GMREADY=0;
 			};
 
@@ -2146,8 +2146,7 @@ FinCLC:;
 		};
 	};
 	if(Host&&PlayerMenuMode!=-1){
-		int i;
-		for(i=0;i<8;i++)MPL_NatRefTBL[i]=0xFF;
+		for(int i=0;i<8;i++)MPL_NatRefTBL[i]=0xFF;
 		int NN[8]={0,0,0,0,0,0,0,0};
 		for(i=NPlayers;i<7;i++)if(GSets.CGame.PL_INFO[HostID].COMPINFO[i]){
 			word W=GSets.CGame.PL_INFO[HostID].COMPINFO[i];

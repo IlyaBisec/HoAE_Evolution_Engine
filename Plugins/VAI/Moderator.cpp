@@ -101,7 +101,7 @@ void Squad::Process(){
 			int maxdang;
 			word DST;
 
-			if(IDS[top]==0xFFFF){
+			if((IDS)&&(top&&top!=65535)&&(IDS[top]==0xFFFF)){
 
 				int zf=FindNextZoneOnTheSafeWayToObject(top,Dang,IDS,&maxdang,100,&DST);
 				if( zf<0xFFFE ){
@@ -1021,7 +1021,7 @@ void Moderator::ProcessResearch(){
 		for(int top=0;top<ntop;top++){
 			PBM[top]=ProtectBaseMap[top];
 		}
-		for(int top=0;top<ntop;top++){
+		for(top=0;top<ntop;top++){
 			if(PBM[top]){
 				int n=GameInterface::GetTZoneNLinks(0,top);
 				for(int i=0;i<n;i++){
@@ -1281,8 +1281,7 @@ void Moderator::ProcessReinforce(Squad* SQ){
 					int d=GameInterface::NORMA(0,Top,Sqd->Top)/a;
 					if( d<3600 ){
 						int nid=Index.GetAmount();
-						int id;
-						for(id=0;id<nid;id++){
+						for(int id=0;id<nid;id++){
 							if( Dist[id]>d ){
 								break;
 							}
@@ -1312,9 +1311,8 @@ void Moderator::ProcessReinforce(Squad* SQ){
 			//	if( zf<0xFFFE ){
 			//		Squad* Sqd=Squads[DST];
 			//		int nu=TS->SquadStrengthMax-(Sqd->Body.GetAmount()+Sqd->Reinforce.GetAmount());
-			ForEachUnit(SQ->Body,
-				int i;
-						for(i=0;i<n;i++){
+					ForEachUnit(SQ->Body, 
+						for(int i=0;i<n;i++){
 							if( Amount[i]>0 ){
 								break;
 							}
@@ -1388,7 +1386,6 @@ bool Moderator::AddGrp(GAMEOBJ* Group){
 				Grp->Shepherd.Set(this);
 			}
 			int a=TL->SquadStrengthMax;
-			int i;
 			for(i=0;i<UG->N;i++){
 				pUnit unit(UG->IDS[i],UG->SNS[i]);
 				if( unit.Valid() && !unit.object()->UnlimitedMotion ){
@@ -1556,7 +1553,7 @@ void Squadron::Process(){
 			Moderator* Com=Commander.Get();
 			if(Com){
 				n=Com->Squads.GetAmount();
-				for(int i=0;i<n;i++){
+				for(i=0;i<n;i++){
 					Squad* Sq=Com->Squads[i];
 					Squadron* Chi=Sq->Deacon.Get();
 					if(!Chi){
@@ -1577,7 +1574,7 @@ void Squadron::Process(){
 
 		// заполняем карту целей
 		n=Staff.GetAmount();
-		for(int i=0;i<n;i++){
+		for(i=0;i<n;i++){
 			Squad* Sq=Staff[i]->Get();
 			if(Sq){
 				Sq->TargetMap.Fill(0xFFFF);

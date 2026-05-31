@@ -28,8 +28,8 @@ int FEX_GetCallStackEBP(unsigned* CallStack, int MaxDepth)
 		int tt=0;
 	}
 	unsigned tempstack[256];
-	int i;
-	for(i = 0; i < 128/* && currEBP <= FEX_end_esp*/; i++)
+
+	for(int i = 0; i < 128/* && currEBP <= FEX_end_esp*/; i++)
 	{
 		unsigned retAddr;
 		if(IsBadReadPtr((unsigned*)currEBP + 1,4))break;
@@ -50,8 +50,8 @@ int FEX_GetCallStackEBP_Ex(unsigned currEBP,unsigned* CallStack, int MaxDepth)
 	if(FEX_end_esp){
 		int tt=0;
 	}
-	int i;
-	for(i = 0; i < MaxDepth/* && currEBP <= FEX_end_esp*/; i++)
+
+	for(int i = 0; i < MaxDepth/* && currEBP <= FEX_end_esp*/; i++)
 	{
 		unsigned retAddr;
 		if(IsBadReadPtr((unsigned*)currEBP + 1,4))break;

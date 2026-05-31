@@ -80,7 +80,7 @@ int cHashIndex::CalcSpread() const {
 		return 100;
 	}
 	int Average = TotalItems / m_nHashSize, Err = 0;
-	for(int i = 0; i < m_nHashSize; i++) {
+	for(i = 0; i < m_nHashSize; i++) {
 		int d = abs(pChainLengths[i] - Average);
 		if(d > 1) Err += d - 1;
 	}

@@ -619,8 +619,8 @@ void cva_Mission::SetFrameState(SimpleDialog* SD){
 					static float dirHero=dir;
 					//
 					int nG=GPS.GPNFrames(vmCamp->heroGP)/16;
-					static int timeRun=0;
-					static int fRun=0;
+					static timeRun=0;
+					static fRun=0;
 					int fL=GPS.GPNFrames(vmCamp->heroGP_Left)*byte(64-dir)/256;
 					int cL=fL%nG;
 					int fR=GPS.GPNFrames(vmCamp->heroGP_Right)*byte(dir-64)/256;
@@ -1434,7 +1434,7 @@ bool cva_RC_Ability::LeftClick(SimpleDialog* SD){
 					break;
 				}
 			}			
-			for(int i=0;i<n;i++){
+			for(i=0;i<n;i++){
 				LeveledActiveUnitAbility* Lv = dynamic_cast<LeveledActiveUnitAbility*> (OB->ActiveAbility->ActiveAbilities[i]);
 				if(Lv){				
 					if(AbilityID==id&&Hr&&Lv->UpLevel()){

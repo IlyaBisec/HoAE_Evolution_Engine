@@ -154,7 +154,7 @@ HHH1:
 			MMenu.ProcessDialogs();
 			ProcessMixing();
 			MMenu.RefreshView();
-			for(int i=0;i<NCAM;i++){
+			for(i=0;i<NCAM;i++){
 				TV[i]->Enabled=false;
 				TV[i]->Visible=false;
 				TV[i]->Active=false;

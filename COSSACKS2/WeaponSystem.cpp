@@ -4,7 +4,7 @@
 #include "HeroAbility.h"
 #include "UF_NumericalReturner.h"
 #include "Extensions.h"
-#include "..\ClassEngine\ClassSolution.h"
+#include "ClassSolution.h"
 #include ".\cvi_HeroButtons.h"
 #include "ua_Ability.h"
 void SetActiveProducer();
@@ -360,7 +360,7 @@ void WeaponSystem::RefreshEnumerator()
 		}
 	}
 	n = ActiveWeapons.GetAmount();
-	for(int i=0;i<n;i++)
+	for(i=0;i<n;i++)
 	{
 		ActiveWeapons[i]->WeaponModificatorP=NULL;
 	}
@@ -1819,11 +1819,10 @@ int mmc_Resurrect::Collect(OneObject* From){
 	}
 	return 0;
 };
-
 void mmd_TakeResource::Distribute(WeaponParams* WP, OneObject* To, int Amount){
 	if(To){
 		Operand.Calculate(Amount,Amount);
-		AddXRESRC(To->NNUM,GoldID,Amount);
+		AddXRESRC(To->NNUM,ResType,Amount);
 	}
 };
 void mmd_TakeLife::Distribute(WeaponParams* WP, OneObject* To, int Amount){
@@ -2282,10 +2281,8 @@ bool pm_StealResourceFromBuildings::MakeOneStep(WeaponParams* WP){
 	if (WP->From.UnitIndex==0xFFFF) {
 		return false;
 	}
-	
 	int Amount=0;
 	int A=AmountFromEachBuilding;
-
 	int x=WP->x>>ToPixelCoord;
 	int y=WP->y>>ToPixelCoord;
 	int r=R;
@@ -2293,12 +2290,12 @@ bool pm_StealResourceFromBuildings::MakeOneStep(WeaponParams* WP){
 	while(OneObject* OB=itr_GetBuildingsInRadius.Next()){
 		if(!OB->Sdoxlo){
 			Amount+=A;
-			AddXRESRC(OB->NNUM,MoneyID,-A);
-			if(XRESRC(OB->NNUM,MoneyID)<0)SetXRESRC(OB->NNUM,MoneyID,0);
+			AddXRESRC(OB->NNUM, ResType,-A);
+			if(XRESRC(OB->NNUM, ResType)<0)SetXRESRC(OB->NNUM, ResType,0);
 		}
 	}
 
-	AddXRESRC(Caster->NNUM,MoneyID,Amount);
+	AddXRESRC(Caster->NNUM, ResType,Amount);
 }
 //==================================================================================================================//
 void ApplyLandType(char* From,char* To,int xc,int yc,int R1,int R2);

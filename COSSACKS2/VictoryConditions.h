@@ -1,7 +1,7 @@
 #ifndef __VICTORYCONDITIONS_H__
 #define __VICTORYCONDITIONS_H__
 //#include "stdheader.h"
-#include "..\ClassEngine\more_types.h"
+#include <more_types.h>
 #include "LoadSave.h"
 #include "ActiveZone.h"
 

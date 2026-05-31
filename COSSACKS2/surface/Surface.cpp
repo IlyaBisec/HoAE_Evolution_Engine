@@ -1,5 +1,5 @@
 #include "stdheader.h"
-#include "..\Surface\Surface.h"
+#include "Surface.h"
 #include "ITerrain.h"
 #include "..\Camera\Navigator.h"
 #include "SurfaceGenerator.h"
@@ -12,13 +12,13 @@
 #include "Layer.h"
 extern short* DeepMap;
 extern bool g_bPerspCamera;
-#include "..\Surface\CollidingCamera.h"
-#include "..\Surface\Messager.h"
+#include "CollidingCamera.h"
+#include "Messager.h"
 
-#include "..\unichash.h"
-#include "..\iVector.h"
-#include "..\MeshOper.h"
-extern Vector3D g_LightDir;
+#include "..\..\mesh\UniHash.h"
+#include "..\..\mesh\iVector.h"
+#include "..\..\mesh\MeshOperations.h"
+
 bool FastBool=false;
 float minans=0.2;
 float maxans=5;
@@ -555,7 +555,7 @@ void SurfEditor::CmdShift::EvaluateFunction() {
 			SurfVertex &r = g_UniversalMap.VERTS[i];
 			r.z += Delta;
 		}
-		for(int i = 0; i < MOptions.Archways.NValues; i++) {
+		for(i = 0; i < MOptions.Archways.NValues; i++) {
 			SurfArchway *pWay = MOptions.Archways[i];
 			pWay->h += Delta;
 		}
@@ -1161,8 +1161,7 @@ void SurfMesh::GenRound(const SurfVertex &Centre, int Radius, int dAngle) {
 	SurfVertex c = Centre;
 	c.nx = c.ny = 0, c.nz = SurfVertex::NormalLen;
 	VERTS.Add(c);
-	int i;
-	for(i = 0; i < 360 / dAngle; i++) {
+	for(int i = 0; i < 360 / dAngle; i++) {
 		dVector u = dVector::Cartesian(Radius, cMath::Rad(i * dAngle));
 		VERTS.Add(c);
 		VERTS[i + 1].x += u.x;
@@ -1854,7 +1853,7 @@ DWORD SurfVertex::CalcDiffuseColor() const {
 
 // SurfVertex::CalcSpecularColor
 
-
+extern Vector3D g_LightDir;
 DWORD SurfVertex::CalcSpecularColor() const
 {	
 	return 0xFFFFFFFF;//temp to speed up
@@ -3472,8 +3471,7 @@ void SurfMap::QueryRef(SurfRef &Ref, QueryRefArgs Args, DWORD What) {
 		for(int iTri = 0; iTri < q.idTris.Count();) {
 			int nTri = q.idTris[iTri];
 			GetTri(nTri, oi);
-			int k;
-			for(k = 0; k < 3; k++) {
+			for(int k = 0; k < 3; k++) {
 				if(Ref.idVerts.IndexOf(oi[k]) != -1) {
 					Ref.idTris.Add(nTri);
 					break;
@@ -3702,8 +3700,7 @@ void Degrade3Lods(DWORDS *pLODS, const SurfMesh &Src) {
 	}
 	// Adding tris:
 	int i0, i1, i2;
-	int nTri = 0;
-	for(nTri = 0; nTri < Src.NTris(); nTri++) {
+	for(int nTri = 0; nTri < Src.NTris(); nTri++) {
 		Src.GetTri(nTri, i0, i1, i2);
 		Lodder.AddFace(i0, i1, i2);
 	}
@@ -3944,7 +3941,7 @@ bool SurfMesh::ToRawMesh(cRawMesh &rm) const {
 		Tris.Add(index);
 	}
 
-	for(int i = 0; i < Tris.Count(); i += 3) {
+	for(i = 0; i < Tris.Count(); i += 3) {
 		cMath::Swap(Tris[i + 1], Tris[i + 2]);
 	}
 
@@ -3956,7 +3953,7 @@ bool SurfMesh::ToRawMesh(cRawMesh &rm) const {
 		rm.GetRaw().Add(cVec3i(Tri[2], 0, 0));
 	}
 
-	for(int i = 0; i < VERTS.Count(); i++) {
+	for(i = 0; i < VERTS.Count(); i++) {
 		const SurfVertex &r = VERTS[i];
 		rm.GetPositions().Add(cVec3((float)r.x, (float)r.z, (float)r.y));
 	}
@@ -4004,7 +4001,7 @@ bool SurfMesh::CopyFromRawMesh(const cRawMesh &rm) {
 		index += Deg + 1;
 	}
 
-	for(int i = 0; i < Tris.Count(); i += 3) {
+	for(i = 0; i < Tris.Count(); i += 3) {
 		cMath::Swap(Tris[i + 1], Tris[i + 2]);
 	}
 

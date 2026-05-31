@@ -99,7 +99,7 @@ DWORD SXP_DevScope::SendRequest(sicExplorer* SXP,ParsedRQ* P1,bool AllowNewWindo
 		P1->DelComm(i);
 		i--;
 	};
-	for(int i=0;i<NDEVS;i++)if(!strcmp(DEVS[i].Name,P1->DevName)){
+	for(i=0;i<NDEVS;i++)if(!strcmp(DEVS[i].Name,P1->DevName)){
 		int sz=P1->Compact(NULL,0);
 		char* data=(char*)malloc(sz);
 		P1->Compact(data,sz);
@@ -1250,8 +1250,7 @@ void exec_LW_decompress(int Np,char** par,int* size){
 			if(!CreateDirectory("Upload\\",NULL))
 				sprintf(fnm, "%u",GetLastError());
 			while(dLen>=128){
-				int i;
-				for(i=0;i<128;i++){
+				for(int i=0;i<128;i++){
 					if(dd[0]>0){
 						fnm[i]=dd[0];
 						dd++;
@@ -1267,8 +1266,7 @@ void exec_LW_decompress(int Np,char** par,int* size){
 					fnm[i]=0;
 				}
 				dd++;
-				int j;
-				for(j=0;j<128-i;j++){
+				for(int j=0;j<128-i;j++){
 					if(dd[0]>0){
 						fsz[j]=dd[0];
 						dd++;
@@ -1808,7 +1806,7 @@ void FilterRQ2Send(sicExplorer* SXP,ParsedRQ* RQ,bool AllowNew){
 			if(del)RQ->Comm[i].ComID[0]=0;
 		};
 	};
-	for(int i=0;i<RQ->NComm;i++)if(RQ->Comm[i].ComID[0]){
+	for(i=0;i<RQ->NComm;i++)if(RQ->Comm[i].ComID[0]){
 		RQ->AddParamToCom(i,GID,strlen(GID)+1);
 		RQ->AddParamToCom(i,SXP->ACCESSKEY,strlen(SXP->ACCESSKEY)+1);
 	};

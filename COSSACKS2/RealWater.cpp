@@ -441,21 +441,21 @@ void ProcessWaveFrame(short* Wave,int x,int y,int x1,int y1){
 	};
 	pos1=x+y1*WaveLx;
 	dh=0;
-	for(int i=x;i<=x1;i++){
+	for(i=x;i<=x1;i++){
 		dh=((dh+dh+dh)>>2)+(rand()&63)-31;
 		Wave[pos1]=Wave[pos1-WaveLx]+dh;
 		pos1++;
 	};
 	pos1=x+y*WaveLx+WaveLx;
 	dh=0;
-	for(int i=y+1;i<=y1-1;i++){
+	for(i=y+1;i<=y1-1;i++){
 		dh=((dh+dh+dh)>>2)+(rand()&63)-31;
 		Wave[pos1]=Wave[pos1+1]+dh;
 		pos1+=WaveLx;
 	};
 	pos1=x1+y*WaveLx+WaveLx;
 	dh=0;
-	for(int i=y+1;i<=y1-1;i++){
+	for(i=y+1;i<=y1-1;i++){
 		dh=((dh+dh+dh)>>2)+(rand()&63)-31;
 		Wave[pos1]=Wave[pos1-1]+dh;
 		pos1+=WaveLx;
@@ -1536,7 +1536,7 @@ TTT2:	mov  al,[w_clr+eax]
 	for(int i=0;i<128;i++){
 		memcpy(FlowTex+32768+(i<<8),FlowTex+(i<<8),256);
 	};
-	for(int i=0;i<20;i++){
+	for(i=0;i<20;i++){
 		memcpy(FlowTex+65536+(i<<8),FlowTex+(i<<8),256);
 	};
 };

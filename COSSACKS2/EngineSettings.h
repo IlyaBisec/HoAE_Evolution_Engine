@@ -118,8 +118,11 @@ public:
 	bool ShowPreCampMessage;
 
 	int MagicCardsVisibleAmount;
+	int NumOfRaceStyles;
 
 	SAVE(engInterface){
+		REG_MEMBER(_int,MagicCardsVisibleAmount);
+		REG_MEMBER(_int,NumOfRaceStyles);
 		REG_MEMBER(_int,VolumeFullScreenBik);
 		REG_MEMBER(_int,VolumeSoundEvents);
 		REG_MEMBER(_int,VolumeMissDialogs);
@@ -533,7 +536,7 @@ public:
 			void EvaluateFunction();
 			SAVE(LimitCamArgsDefaults);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Defaults;
 
 		const RECT GetRect() const;
@@ -562,7 +565,7 @@ public:
 			REG_MEMBER(_int, MaxMapYGame);
 			REG_AUTO(Separator);
 			REG_AUTO(Defaults);
-		ENDSAVE;
+		ENDSAVE();
 	} LimitCamArgs;
 
 	//*************************************************************************
@@ -576,7 +579,7 @@ public:
 			void EvaluateFunction();
 			SAVE(CamArgsDefaults);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Defaults;
 		
 		float GetYFovDeg() const;
@@ -629,13 +632,13 @@ public:
 				REG_ISLIDER(ZFarFogFarDelta, 0, 2000, EngineSettingsCamArgs_DefZFarFogFarDelta);
 				REG_AUTO(Separator);
 				REG_FSLIDER(FacturesScale, 0.01f, 2.0f, EngineSettingsCamArgs_DefFacturesScale);
-			ENDSAVE;
+			ENDSAVE();
 		} Args;
 
 		SAVE(EngineSettingsCamArgs);
 			REG_AUTO(Args);
 			REG_AUTO(Defaults);
-		ENDSAVE;
+		ENDSAVE();
 		private:
 			cList<EngineSettingsCamArgsStruct> m_Stack;
 	} CamArgs;
@@ -651,7 +654,7 @@ public:
 			void EvaluateFunction();
 			SAVE(FogArgsDefaults);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Defaults;
 		
 		int FogType;	
@@ -713,7 +716,7 @@ public:
 			REG_MEMBER(_float, final_FogFarPlane);
 			REG_AUTO(Separator);
 			REG_AUTO(Defaults);
-		ENDSAVE;
+		ENDSAVE();
 	} FogArgs;
 
 	// CollidingCamera:
@@ -730,7 +733,7 @@ public:
 			void EvaluateFunction();
 			SAVE(CollidingCameraReset);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Reset;
 
 		// Params:
@@ -790,7 +793,7 @@ public:
 
 		REG_AUTO(D);
 		REG_AUTO(Reset);
-		ENDSAVE;
+		ENDSAVE();
 	} CollidingCamera;
 
 	// ThirdPersonCamera:
@@ -807,7 +810,7 @@ public:
 			void EvaluateFunction();
 			SAVE(ThirdPersonCameraReset);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Reset;
 
 		bool ForceCameraParams;
@@ -840,7 +843,7 @@ public:
 		REG_MEMBER(_bool, ESDF);
 		REG_AUTO(D);
 		REG_AUTO(Reset);
-		ENDSAVE;
+		ENDSAVE();
 	} ThirdPersonCamera;
 
 	//*************************************************************************
@@ -860,7 +863,7 @@ public:
 			void EvaluateFunction();
 			SAVE(RTSModeCameraArgsReset);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Reset;
 
 		Delimiter D;
@@ -917,7 +920,7 @@ public:
 		REG_ENUM(_index, OnPageUpPageDown, RTSMODECAMERACONTROLS);
 		REG_AUTO(D);
 		REG_AUTO(Reset);
-		ENDSAVE;
+		ENDSAVE();
 
 		static const int ROTATE = 0;
 		static const int DOLLY = 1;
@@ -941,7 +944,7 @@ public:
 			void EvaluateFunction();
 			SAVE(TankControllerArgsReset);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} Reset;
 
 		Delimiter D;
@@ -963,7 +966,7 @@ public:
 		
 		REG_AUTO(D);
 		REG_AUTO(Reset);
-		ENDSAVE;
+		ENDSAVE();
 	} TankController;
 
 	SubSection		RoadsSettings;

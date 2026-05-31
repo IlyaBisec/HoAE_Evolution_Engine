@@ -2,7 +2,7 @@
 #define ADDStruct_header
 
 #include "..\cossacks2\resfile.h"
-#include "..\ClassEngine\DString.h"
+#include <DString.h>
 #include "maptemplates.h"
 //#include "stdheader.h"
 

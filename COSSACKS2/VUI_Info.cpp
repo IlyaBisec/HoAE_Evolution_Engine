@@ -634,7 +634,7 @@ int vgf_UI_Process(){
 void vdf_BGI_Draw(){
 	if(!(GSets.CGame.ViewMask&4))return;
 	static DialogsSystem* DS=NULL;
-	static bool init=false;
+	static init=false;
 	// init
 	if(!DS&&!init){
 		init=true;

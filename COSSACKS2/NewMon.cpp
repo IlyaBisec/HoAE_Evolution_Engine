@@ -3,7 +3,7 @@
 #include "GameInterface.h"
 #include "CurrentMapOptions.h"
 #include ".\cvi_InGamePanel.h"
-#include "unichash.h"
+#include "Mesh\UniHash.h"
 #include "QuadsRender.h"
 #include "MapSprites.h"
 //
@@ -11,7 +11,7 @@ int GetUnitModifiedBySprite(int _MineID,OneSprite* OS);
 void UnLockComplexObject(OneObject* OB);
 void LockComplexObject(OneObject* OB);
 bool FindBestPositionOLD(OneObject* OB,int* xd,int* yd,int R0);
-
+bool NationEcoUnderstand(GFILE* f, NewMonster* NM);
 void KeyTestMem();
 void ErrMS(char* s);
 bool CheckShooterAbilityToRecharge(OneObject* OBJ);
@@ -564,7 +564,7 @@ void LoadNewAimations(){
 						NANM->Frames.Clear();
 						//for(i=0;i<nz;i++)NANM->Frames.Add(new NewFrame());
 						NANM->AllocFrames(nz);
-						for(int i=0;i<nz;i++){
+						for(i=0;i<nz;i++){
 							NewFrame* NF=NANM->Frames[i];
 							NF->FileID=p1;
 							NF->SpriteID=z3;
@@ -671,7 +671,7 @@ void LoadNewAimations(){
 						NANM->Frames.Clear();
 						//for(i=0;i<nz;i++)NANM->Frames.Add(new NewFrame());
 						NANM->AllocFrames(nz);
-						for(int i=0;i<nz;i++){
+						for(i=0;i<nz;i++){
 							NewFrame* NF=NANM->Frames[i];
 							NF->FileID=p1;
 							NF->SpriteID=z3;
@@ -713,7 +713,7 @@ void LoadNewAimations(){
 					NANM->Frames.Clear();
 					//for(i=0;i<z2;i++)NANM->Frames.Add(new NewFrame());
 					NANM->AllocFrames(z2);
-					for(int i=0;i<z2;i++){
+					for(i=0;i<z2;i++){
 						z=Gscanf(f1,"%d%d",&z1,&z3);
 						if(z!=2)IncPar("weapon.ads",Line,gx);
 						if(z1>MaxRLC){
@@ -762,7 +762,7 @@ void LoadNewAimations(){
 					NANM->Frames.Clear();
 					//for(i=0;i<z2;i++)NANM->Frames.Add(new NewFrame());
 					NANM->AllocFrames(z2);
-					for(int i=0;i<z2;i++){
+					for(i=0;i<z2;i++){
 						z=Gscanf(f1,"%d%d",&z1,&z3);
 						if(z!=2)IncPar("weapon.ads",Line,gx);
 						if(z1>MaxRLC){
@@ -799,15 +799,15 @@ void LoadNewAimations(){
 					if(!strcmp(gx,"SOUND")){
 						z=Gscanf(f1,"%d%s%s",&p1,gy,Fn);
 						if(z!=3)IncPar("Weapon.ads",Line,gx);
-						NewAnimation* NA=GetNewAnimationByName(gy);
-						if(NA){
-							NA->SoundID=SearchStrBack(SoundID,Fn,NSounds);
-							if(NA->SoundID==-1){
+						NewAnimation* NAN=GetNewAnimationByName(gy);
+						if(NAN){
+							NAN->SoundID=SearchStrBack(SoundID,Fn,NSounds);
+							if(NAN->SoundID==-1){
 								sprintf(gz,"%s,line %d :%s: Unknown sound:%s","Weapon.ads",Line,gx,Fn);
 								ErrMS(gz);
 							};
-							NA->HotFrame=p1;
-							NA->SoundProbability=32767;
+							NAN->HotFrame=p1;
+							NAN->SoundProbability=32767;
 						}else{
 							sprintf(gz,"%s,line %d :%s: Unknown animation:%s","Weapon.ads",Line,gx,gy);
 							ErrM(gz);
@@ -1558,7 +1558,7 @@ bool NewMonster::CreateFromFile(char* name){
 						//NANM->Frames=new NewFrame[z2];
 						//for(i=0;i<z2;i++)NANM->Frames.Add(new NewFrame());
 						NANM->AllocFrames(z2);
-						for(int i=0;i<z2;i++){
+						for(i=0;i<z2;i++){
 							z=Gscanf(f1,"%d%d",&z1,&z3);
 							if(z!=2)IncPar(name,Line,gx);
 							if(z1>MaxRLC){
@@ -1637,7 +1637,7 @@ bool NewMonster::CreateFromFile(char* name){
 						NANM->Frames.Clear();
 						//for(i=0;i<nz;i++)NANM->Frames.Add(new NewFrame());
 						NANM->AllocFrames(nz);
-						for(int i=0;i<nz;i++){
+						for(i=0;i<nz;i++){
 							NewFrame* NF=NANM->Frames[i];
 							NF->FileID=p1;
 							NF->SpriteID=z3;
@@ -1694,7 +1694,7 @@ bool NewMonster::CreateFromFile(char* name){
 						//NANM->ActivePtX=znew(short,z1+z1+z1);
 						//NANM->ActivePtY=znew(short,z1+z1+z1);
 						NANM->LineInfo=NULL;
-						for(int i=0;i<z1+z1+z1;i++){
+						for(i=0;i<z1+z1+z1;i++){
 							NANM->ActivePt[i]->x=0;
 							NANM->ActivePt[i]->y=0;
 						};
@@ -1705,7 +1705,7 @@ bool NewMonster::CreateFromFile(char* name){
 						//for(i=0;i<NF;i++)NANM->Frames.Add(new NewFrame());
 						NANM->AllocFrames(NF);
 						int p=0;
-						for(int i=0;i<NP;i++){
+						for(i=0;i<NP;i++){
 							int s=P_Start[i]>P_End[i]?-1:1;
 							int fn=P_End[i]+s;
 							for(int sp=P_Start[i];sp!=fn;sp+=s){
@@ -1739,7 +1739,7 @@ bool NewMonster::CreateFromFile(char* name){
 							char  dest[1024];
 							if(ec){								
 								ReadWinString(f1,dest,1023);
-								const char* curr=dest;
+								char* curr=dest;
 								xmlQuote root;
                                 OneClassStorage* OCS=CGARB.GetClass(ec);
 								if(ec){
@@ -1776,7 +1776,7 @@ bool NewMonster::CreateFromFile(char* name){
 							}else
 							if(OCMS->Member->GetAmountOfElements()>1){
 								ReadWinString(f1,dest,1023);
-								const char* curr=dest;
+								char* curr=dest;
 								xmlQuote root;
 								OneClassStorage* OCS=CGARB.GetClass(ec);
 								if(ec){
@@ -2675,6 +2675,12 @@ bool NewMonster::CreateFromFile(char* name){
 							//for(i=0;i<NAttTypes;i++){
 							//	AttackMask[i]=KillMask;
 							//};
+							if  ((KillMask&&!AttackMask[0])){
+							AttackMask[0]=KillMask;
+							}	// 27.07.2023 TBH ATTMASK/CANKILL Fix
+							if  ((KillMask&&!AttackMask[1])){
+							AttackMask[1]=KillMask;
+							}	// 27.07.2023 TBH ATTMASK/CANKILL Fix
 							NLine(f1);
 							Line++;
 	                    }else
@@ -2717,7 +2723,7 @@ bool NewMonster::CreateFromFile(char* name){
 						    //1. center mass
 					        int xc=0;
 				            int yc=0;
-			                for(int i=0;i<p1;i++){
+			                for(i=0;i<p1;i++){
 		                        xc+=CheckX[i];
 	                            yc+=CheckY[i];
 						    };
@@ -2725,7 +2731,7 @@ bool NewMonster::CreateFromFile(char* name){
 				            yc=div(yc,p1).quot;
 			                int maxd=0;
 		                    int r;
-	                        for(int i=0;i<p1;i++){
+	                        for(i=0;i<p1;i++){
 							    r=Norma(int(CheckX[i])-xc,int(CheckY[i])-yc);
 						        if(r>maxd)maxd=r;
 					        };
@@ -3059,6 +3065,15 @@ bool NewMonster::CreateFromFile(char* name){
 							NLine(f1);
 							Line++;
 						}else
+						if (!strcmp(gx, "ECONOMY")) {
+								char cc[128];
+								if (!NationEcoUnderstand(f1,this)) {
+									sprintf(gy, "Incorrect economy.");
+								};
+								NLine(f1);
+								Line++;
+							}
+						else
 						if(!strcmp(gx,"EXTRALOCK")){
                             //adding extra lockpoints on the edge of the building
 							bool ExtraLock(word& NLockPt,char*& LockX,char*& LockY);
@@ -3978,7 +3993,7 @@ bool NewMonster::CreateFromFile(char* name){
 									if(NLo){
 										MinY=-10;
 										int avx=(MinX+MaxX)>>1;
-										for(int i=0;i<NLo;i++){
+										for(i=0;i<NLo;i++){
 											int idx=LoIdx[i]<<2;
 	#ifdef _USE3D
 											if(LINF[idx  ]!=-10000)LINF[idx  ]=avx;
@@ -4996,6 +5011,14 @@ bool NewMonster::CreateFromFile(char* name){
 							NLine(f1);
 							Line++;
 						}else
+						if(!strcmp(gx,"SCALE")){
+							float fl1;
+							z=Gscanf(f1,"%g",&fl1);
+							if(z!=1)IncPar(name,Line,gx);
+							StartScale=floorf(fl1*256.0f+0.5);
+							NLine(f1);
+							Line++;
+						}else
 						if(!strcmp(gx,"SPEEDSCALE")){
 							z=Gscanf(f1,"%d",&p1);
 							if(z!=1)IncPar(name,Line,gx);
@@ -5353,15 +5376,15 @@ bool NewMonster::CreateFromFile(char* name){
 							z=Gscanf(f1,"%d%s%s",&p1,gy,Fn);
 							if(z!=3)IncPar(name,Line,gx);
 							{
-								NewAnimation* NA=LoadNewAnimationByName(gy,-1);
-								if(NA){
-									NA->SoundID=SearchStrBack(SoundID,Fn,NSounds);
-									if(NA->SoundID==-1){
+								NewAnimation* NAN=LoadNewAnimationByName(gy,-1);
+								if(NAN){
+									NAN->SoundID=SearchStrBack(SoundID,Fn,NSounds);
+									if(NAN->SoundID==-1){
 										sprintf(gz,"%s,line %d :%s: Unknown sound:%s",name,Line,gx,Fn);
 										ErrMS(gz);
 									};
-									NA->HotFrame=p1;
-									NA->SoundProbability=32767;
+									NAN->HotFrame=p1;
+									NAN->SoundProbability=32767;
 								}
 							}
 						}else
@@ -5370,15 +5393,15 @@ bool NewMonster::CreateFromFile(char* name){
 							z=Gscanf(f1,"%d%s%s%f",&p1,gy,Fn,&pr);
 							if(z!=4)IncPar(name,Line,gx);
 							{
-								NewAnimation* NA=LoadNewAnimationByName(gy,-1);
-								if(NA){
-									NA->SoundID=SearchStr(SoundID,Fn,NSounds);
-									NA->SoundProbability=pr*32767/100;
-									if(NA->SoundID==-1){
+								NewAnimation* NAN=LoadNewAnimationByName(gy,-1);
+								if(NAN){
+									NAN->SoundID=SearchStr(SoundID,Fn,NSounds);
+									NAN->SoundProbability=pr*32767/100;
+									if(NAN->SoundID==-1){
 										sprintf(gz,"%s,line %d :%s: Unknown sound:%s",name,Line,gx,Fn);
 										ErrMS(gz);
 									};
-									NA->HotFrame=p1;
+									NAN->HotFrame=p1;
 								}
 							}
 						}else
@@ -5561,11 +5584,11 @@ bool NewMonster::CreateFromFile(char* name){
 								ErrMS(gz);
 							}
 							{
-								NewAnimation* NA=LoadNewAnimationByName(gy,-1);
-								if(NA){
-									NA->TimeAnimationID=mod;
-									NA->TimeAnimationFrames=fr;
-									NA->TimeAnimationVariation=vr;									
+								NewAnimation* NAN=LoadNewAnimationByName(gy,-1);
+								if(NAN){
+									NAN->TimeAnimationID=mod;
+									NAN->TimeAnimationFrames=fr;
+									NAN->TimeAnimationVariation=vr;									
 								}
 							}
 						}else
@@ -6424,7 +6447,7 @@ void SprGroup::LoadSprites(char* fname){
     		    	OBC->Name=gx;
 		        	OBC->ResType=0xFF;
 					OBC->WorkRadius=32;
-		        	OBC->WorkAmount=0;
+		        	OBC->WorkAmount=7;
 					OBC->ResPerWork=0;
 		    	    OBC->WNextObj=i;
     		    	OBC->DNextObj=i;
@@ -6470,7 +6493,7 @@ void SprGroup::LoadSprites(char* fname){
     		FileID=nr;
 			int spidx=0;
 			int gpidx=0;
-	    	for(int i=0;i<nl;i++){
+	    	for(i=0;i<nl;i++){
                 z=Gscanf(f1,"%s",gx);
                 if(gx[0]!=0&&gx[0]!='/'){
 					if(gx[0]=='#'){
@@ -6506,7 +6529,7 @@ void SprGroup::LoadSprites(char* fname){
 											sprintf(cc3,"%s%dF",cc,j);
 		 		    						OBCF->Name=cc3;
 			        						OBCF->ResType=0xFF;
-			        						OBCF->WorkAmount=0;
+			        						OBCF->WorkAmount=7;
 											OBCF->WorkRadius=32;
 											OBCF->ResPerWork=0;
 			    	    					OBCF->WNextObj=i;
@@ -6529,7 +6552,7 @@ void SprGroup::LoadSprites(char* fname){
 											gpidx++;
 										};
 										gpidx-=N2-N1+1;
-										for(int j=N1;j<=N2;j++){
+										for(j=N1;j<=N2;j++){
 											Dx[spidx]=dx;
 		        							Dy[spidx]=dy;
 											Radius[spidx]=rr;
@@ -6539,7 +6562,7 @@ void SprGroup::LoadSprites(char* fname){
 											sprintf(cc3,"%s%dB",cc,j);
 		 		    						OBCF->Name=cc3;
 			        						OBCF->ResType=0xFF;
-			        						OBCF->WorkAmount=0;
+			        						OBCF->WorkAmount=7;
 											OBCF->WorkRadius=32;
 											OBCF->ResPerWork=0;
 			    	    					OBCF->WNextObj=i;
@@ -6582,7 +6605,7 @@ void SprGroup::LoadSprites(char* fname){
 											OBC->SpriteIndex=gpidx;
 		 		    						OBC->Name=gx;
 			        						OBC->ResType=0xFF;
-			        						OBC->WorkAmount=0;
+			        						OBC->WorkAmount=7;
 											OBC->WorkRadius=32;
 											OBC->ResPerWork=0;
 			    	    					OBC->WNextObj=i;
@@ -6642,8 +6665,8 @@ void SprGroup::LoadSprites(char* fname){
 			        	OBCF->ResType=0xFF;
 						OBCB->ResType=0xFF;
 
-			        	OBCF->WorkAmount=0;
-						OBCB->WorkAmount=0;
+			        	OBCF->WorkAmount=7;
+						OBCB->WorkAmount=7;
 
 						OBCF->WorkRadius=32;
 						OBCB->WorkRadius=32;
@@ -6713,7 +6736,7 @@ void SprGroup::LoadSprites(char* fname){
 						OBC->SpriteIndex=gpidx;
 		 		    	OBC->Name=gx;
 			        	OBC->ResType=0xFF;
-			        	OBC->WorkAmount=0;
+			        	OBC->WorkAmount=7;
 						OBC->WorkRadius=32;
 						OBC->ResPerWork=0;
 			    	    OBC->WNextObj=i;
@@ -6955,7 +6978,7 @@ void SprGroup::LoadSprites(char* fname){
 						z=Gscanf(f1,"%d",&parm1);
 						if(z!=1)IncPar(fn,0,"[ANIMATE]");
 						nl=z1;
-						for(int i=0;i<parm1;i++){
+						for(i=0;i<parm1;i++){
 							z=Gscanf(f1,"%s",gy);
 							if(z==1){
 								int z2=GetIndexByNameOLD(gy);
@@ -6983,7 +7006,7 @@ void SprGroup::LoadSprites(char* fname){
 						z=Gscanf(f1,"%d",&parm1);
 						if(z!=1)IncPar(fn,0,"[AUTOANIMATE]");
 						nl=z1;
-						for(int i=0;i<parm1;i++){
+						for(i=0;i<parm1;i++){
 							ObjChar[nl+i]->TimeAmount=1;
 							ObjChar[nl+i]->TNextObj=nl+((i+1)%parm1);
 						};
@@ -8022,8 +8045,7 @@ void SetMonstersInCells(){
 				if(ofst>=0&&ofst<VAL_MAXCIOFS){
 					if(BLDList[ofst]){
 						word* P=BLDList[ofst]+1;
-						int q;
-						for(q=1;q<7&&P[0]!=0xFFFF;q++,P++);
+						for(int q=1;q<7&&P[0]!=0xFFFF;q++,P++);
 						if(q<7){
 							BLDList[ofst][q]=OB->Index;
 							BLDList[ofst][q+1]=0xFFFF;
@@ -10212,7 +10234,7 @@ int Nation::CreateNewMonsterAt(int rx,int ry,int n,bool Anyway,short Dir){
 	if(NM->Building&&!Anyway){
 		ApplyCost(NNUM,n,rx>>4,ry>>4);
 	};
-	for(int j=0;j<6;j++)R1[j]=XRESRC(NNUM,j);
+	for(j=0;j<6;j++)R1[j]=XRESRC(NNUM,j);
 	if(NM->PieceName&&!NoGround){
 		int xx,yy;
 		RM_GetObjVector(NM->PieceName,&xx,&yy);
@@ -12181,7 +12203,7 @@ bool OneObject::AttackObj(word OID,int Prio1,byte OrdType,word NTimes){
 		//DeleteLastOrder();
 		return 0;
 	};
-	if( EOB->Sdoxlo || EOB->newMons->Immortal ){
+	if( EOB->Sdoxlo || EOB->newMons->Immortal){
 		//DeleteLastOrder();
 		return 0;
 	};
@@ -14925,7 +14947,7 @@ void OneObject::NextStage(){
 				for(int i=0;i<NM->NBLockPt;i++){
 					BClrPt(xx+NM->BLockX[i],yy+NM->BLockY[i]);
 				};
-				for(int i=0;i<NM->NLockPt;i++){
+				for(i=0;i<NM->NLockPt;i++){
 					BSetPt(xx+NM->LockX[i],yy+NM->LockY[i]);
 				};
 			};
@@ -15094,7 +15116,7 @@ void InvitePeasant(OneObject* Mine){
 	};
 	addrand(NN);
 	UNISORT.CheckSize(NN);
-	for(int i=0;i<NN;i++){
+	for(i=0;i<NN;i++){
 		UNISORT.Parms[i]=Ri[i];
 		UNISORT.Uids[i]=PLIST[i];
 		addrand(Ri[i]);
@@ -15102,7 +15124,7 @@ void InvitePeasant(OneObject* Mine){
 	};
 	UNISORT.NUids=NN;
 	UNISORT.Sort();
-	for(int i=0;i<NN&&i<NP;i++)Group[UNISORT.Uids[i]]->GoToMine(Mine->Index,128+16);
+	for(i=0;i<NN&&i<NP;i++)Group[UNISORT.Uids[i]]->GoToMine(Mine->Index,128+16);
 };
 void TakeResLink(OneObject* OBJ);
 void InviteAI_Peasants(OneObject* Mine){
@@ -15133,7 +15155,7 @@ void InviteAI_Peasants(OneObject* Mine){
 	};
 	addrand(NN);
 	UNISORT.CheckSize(NN);
-	for(int i=0;i<NN;i++){
+	for(i=0;i<NN;i++){
 		UNISORT.Parms[i]=Ri[i];
 		UNISORT.Uids[i]=PLIST[i];
 		addrand(Ri[i]);
@@ -15141,7 +15163,7 @@ void InviteAI_Peasants(OneObject* Mine){
 	};
 	UNISORT.NUids=NN;
 	UNISORT.Sort();
-	for(int i=0;i<NN&&i<NP;i++){
+	for(i=0;i<NN&&i<NP;i++){
 		//Group[UNISORT.Uids[i]]->Serial+=35;
 		OneObject* PS=Group[UNISORT.Uids[i]];
 		if(PS){
@@ -16202,7 +16224,7 @@ void OneObject::SearchVictim(){
 			itr_UnitsInRadiusFromOtherNations.Create(NNUM,RealX>>4,RealY>>4,rr>>4);
 			int R=10000;
 			while(OneObject* OB=itr_UnitsInRadiusFromOtherNations.Next()){
-				if(CheckPossibilityToAttackEnemy(this,OB)){
+				if(CheckPossibilityToAttackEnemy(this,OB)&&!(((ArmAttack&&!RifleAttack)&&(ATTLIST.GetLifeAfterNextShot(OB)<(-(MoreCharacter->MaxDamage[0]))))||((!ArmAttack&&RifleAttack)&&(ATTLIST.GetLifeAfterNextShot(OB)<(-(MoreCharacter->MaxDamage[1])))))){//10.10.2024 TBH VictSearch Fix
 					if(OB->AI_Guard==false || OB->Attack){
 						int r=Norma(OB->RealX-RealX,OB->RealY-RealY)>>4;
 						if(r<minR)r+=4000;
@@ -17076,7 +17098,7 @@ void CheckCapture(OneObject* OBJ){
 		stcell=CELL0-rx1-(rx1<<VAL_SHFCX);
 		//checking help
 		bpt=NPresence+stcell;
-		for(int nx=0;nx<rx2;nx++){
+		for(nx=0;nx<rx2;nx++){
 			for(int ny=0;ny<rx2;ny++){
 				if(stcell>=0&&stcell<VAL_MAXCX*VAL_MAXCX){
 					if(bpt[0]&NMASK){
@@ -17561,8 +17583,7 @@ bool BlockBars::Delete(word x,word y){
 	if(NBars){
 		DWORD DT=x+(y<<16);
 		DWORD* SDAT=(DWORD*)BC;
-		int i;
-		for(i=0;i<NBars&&SDAT[i]!=DT;i++);
+		for(int i=0;i<NBars&&SDAT[i]!=DT;i++);
 		if(i>=NBars)return false;
 		if(i<NBars-1){
 			memcpy(SDAT+i,SDAT+i+1,(NBars-i-1)<<2);
@@ -17764,8 +17785,7 @@ bool TopFindBestPosition(OneObject* OB,int* xd,int* yd,int R0,int Top,byte LTP){
 	int x=OB->x;
 	int y=OB->y;
 	while(R1){
-		int i;
-		for(i=0;i<=LL;i++)if(!MFI->CheckBar(xxx+i-1,yyy-1,Lx,Lx)){
+		for(int i=0;i<=LL;i++)if(!MFI->CheckBar(xxx+i-1,yyy-1,Lx,Lx)){
 			bx1=xxx+i;
 			by1=yyy;
 			dstn=Norma(bx1-x,by1-y);
@@ -17851,8 +17871,7 @@ int FindSuperSmartBestPosition(OneObject* OB,int* cx,int* cy,int dx,int dy,word 
 	int DY=(dy<<8)/N;
 	int mx=msx>>1;
 	if(LTP!=1){
-		int i;
-		for(i=0;i<N;i++){
+		for(int i=0;i<N;i++){
 			x0+=DX;
 			y0+=DY;
 			int tx=x0>>(8+6);
@@ -18651,7 +18670,7 @@ void ActInSector(int x,int y,WeaponInSector* WS,byte Angle,AnglActor* ANGA,int p
 		};
 	};
 	ofs=0;
-	for(int iy=0;iy<RM2;iy++){
+	for(iy=0;iy<RM2;iy++){
 		for(int ix=0;ix<RM2;ix++){
 			if(DamBuff[ofs]||DamBuff[ofs+1]||DamBuff[ofs+LRM]||DamBuff[ofs+LRM+1]){
 				int cx=X0+ix+1;

@@ -1,5 +1,6 @@
 #include "stdheader.h"
 #include <malloc.h>
+#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "mgraph.h"
@@ -33,7 +34,6 @@
 #include "IWater.h"
 #include "ITerrain.h"
 #include "CurrentMapOptions.h"
-#include "ddini.h"
 void CheckGP();
 extern BlockBars LockBars;
 extern BlockBars UnLockBars;
@@ -1285,17 +1285,17 @@ void CreateLandLocking(int TAlp,bool ForVision){
 	};
 	int N=UnLockBars.NBars;
 	BlockCell* BC=UnLockBars.BC;
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		BClrBar(int(BC[i].x)<<2,int(BC[i].y)<<2,4);
 	};
 	N=LockBars.NBars;
 	BC=LockBars.BC;
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		BSetBar(int(BC[i].x)<<2,int(BC[i].y)<<2,4);
 	};
 	N=HorceLockBars.NBars;
 	BC=HorceLockBars.BC;
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		MFIELDS[3].BSetBar(int(BC[i].x)<<2,int(BC[i].y)<<2,4);
 	};/*
 	for(ix=1;ix<mxx;ix++)
@@ -1318,7 +1318,7 @@ void CreateLandLocking(int TAlp,bool ForVision){
 	//memcpy(TMF->MapH,MFIELDS->MapH,MAPSY*BMSX);
 	memcpy(TMF->MapV,MFIELDS->MapV,MAPSY*BMSX);
 	
-	for(int ix=1;ix<mxx;ix++)
+	for(ix=1;ix<mxx;ix++)
 		for(int iy=1;iy<myy;iy++){
 			int ppx=ix<<2;
 			int ppy=iy<<2;
@@ -1353,7 +1353,7 @@ void CreateLandLocking(int TAlp,bool ForVision){
 	//memcpy(TMF,MFIELDS,sizeof MotionField);
 	//memcpy(TMF->MapH,MFIELDS->MapH,MAPSY*BMSX);
 	memcpy(TMF->MapV,MFIELDS->MapV,MAPSY*BMSX);
-	for(int ix=1;ix<mxx;ix++)
+	for(ix=1;ix<mxx;ix++)
 		for(int iy=1;iy<myy;iy++){
 			int ppx=ix<<2;
 			int ppy=iy<<2;
@@ -2182,14 +2182,14 @@ void SoftRegion(){
 			//assert(hav>=0);
 			//VertHi[i]=hav;
 		};
-		for(int i=0;i<NVert;i++){
+		for(i=0;i<NVert;i++){
 			int DH=abs(VertHi[i]-THMap[Vert[i]]);
 			if(DH>maxdif)maxdif=DH;
 			THMap[Vert[i]]=VertHi[i];
 		};
 		NC++;
 	}while(NC<80);
-	for(int i=0;i<NVert;i++){
+	for(i=0;i<NVert;i++){
 		MarkPointToDraw(Vert[i]);
 	};
 	if(NVert){
@@ -2233,7 +2233,7 @@ void InterpolateCurve(){
 		CurX[i]=CurveX[i];
 		CurY[i]=CurveY[i];
 	};
-	for(int i=1;i<NCur;i++){
+	for(i=1;i<NCur;i++){
 		double px0=CurX[i-1];
 		double py0=CurY[i-1];
 		double px3=CurX[i];
@@ -2424,7 +2424,7 @@ void SoftRegion(short* MpVertHi){
 			//assert(hav>=0);
 			//VertHi[i]=hav;
 		};
-		for(int i=0;i<NVert;i++){
+		for(i=0;i<NVert;i++){
 			int DH=abs(VertHi[i]-THMap[Vert[i]]);
 			if(DH>maxdif)maxdif=DH;
 			THMap[Vert[i]]=VertHi[i];
@@ -2432,7 +2432,7 @@ void SoftRegion(short* MpVertHi){
 		};
 		NC++;
 	}while(NC<80);
-	for(int i=0;i<NVert;i++){
+	for(i=0;i<NVert;i++){
 		MarkPointToDraw(Vert[i]);
 	};
 	if(NVert){
@@ -2813,7 +2813,7 @@ void DrawHeightRect(int xc,int yc,int r,int H){
 			}
 		}
 	}
-	for(int dx=xx-n;dx<=xx+n;dx++){
+	for(dx=xx-n;dx<=xx+n;dx++){
 		for(int dy=yy-n;dy<=yy+n;dy++){
 			if(dx>=0&&dx<VertInLine){
 				if(dy>=0&&dy<VertInLine){
@@ -2899,7 +2899,7 @@ void DrawHeightRect1(int xc,int yc,int r,int H){
 			}
 		}
 	}
-	for(int dx=xx-n;dx<=xx+n;dx++){
+	for(dx=xx-n;dx<=xx+n;dx++){
 		for(int dy=yy-n;dy<=yy+n;dy++){
 			if(dx>=0&&dx<VertInLine){
 				if(dy>=0&&dy<VertInLine){

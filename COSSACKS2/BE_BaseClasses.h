@@ -66,7 +66,7 @@ inline	ExperienceManager* gExpMan(){
 //////////////////////////////////////////////////////////////////////////
 
 // PRESENTATION //////////////////////////////////////////////////////////
-#include "..\ClassEngine\ClassPresentation.h"
+#include "ClassPresentation.h"
 class WCP_MASK_FILE : public BaseClass
 {
 public:

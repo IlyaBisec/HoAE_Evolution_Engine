@@ -39,8 +39,7 @@ struct OneGModel3D{
 OneGModel3D* GModels[MAXGMODELS];
 int NGModels=0;
 int AddGModel(float x,float y,float z,float Angle,int MIndex,int SubIndex){
-	int i;
-	for(i=0;i<NGModels;i++)if(!GModels[i])break;
+	for(int i=0;i<NGModels;i++)if(!GModels[i])break;
 	if(i==NGModels){
 		if(NGModels>=MAXGMODELS)return -1;
 		i=NGModels;
@@ -175,7 +174,7 @@ void CreatePlatformsSystem(){
 			PD++;			
 		};
 	};
-	for(int iy=0;iy<MaxTH;iy++){
+	for(iy=0;iy<MaxTH;iy++){
 		for(int ix=0;ix<VertInLine;ix++){
 			int x=ix<<5;
 			int y=iy<<5;

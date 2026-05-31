@@ -104,7 +104,7 @@ namespace BOOST_SIGNALS_NAMESPACE {
       {
         // Take the address of this object, because the object itself may be
         // trackable
-        add_if_trackable(addressofff(t));
+        add_if_trackable(addressof(t));
       }
 
       // add_if_trackable() adds trackable objects to the list of bound objects

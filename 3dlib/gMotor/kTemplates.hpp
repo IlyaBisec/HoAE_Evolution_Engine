@@ -223,7 +223,7 @@ protected:
 			Singleton(){}
 	virtual ~Singleton(){}
 
-	friend T;
+	friend class T;
 }; // class Singleton
 
 /*****************************************************************************/
@@ -244,7 +244,7 @@ protected:
 	PSingleton(){}
 	virtual ~PSingleton(){}
 
-	friend T;
+	friend class T;
 }; // class PSingleton
 
 /*****************************************************************************/

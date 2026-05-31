@@ -7,7 +7,7 @@
 #include "TreesMesh.h"
 #include ".\cvi_MainMenu.h"
 #include "CurrentMapOptions.h"
-#include "unichash.h"
+#include "mesh\unihash.h"
 
 float BlendingTime = 0;//1.5f;
 
@@ -507,7 +507,7 @@ void GenerateMiniMapSquare(int x0,int y0,int nx,int ny){
 	int ofs0=0;
 	int ofs1=MM_Y0*MM_Lx;
 	int NN1=MM_Lx*20;
-	for(int iy=0;iy<MM_Ly;iy++){
+	for(iy=0;iy<MM_Ly;iy++){
 		for(int ix=0;ix<MM_Lx;ix++){
 			byte c=MiniMap[ofs1];
 			if(c)MiniMap[ofs0]=c;
@@ -526,7 +526,7 @@ void GenerateMiniMapSquare(int x0,int y0,int nx,int ny){
 	//render add-details level
 	int NDX=MM_Lx>>3;
 	int NDY=MM_Ly>>3;
-	for(int iy=0;iy<NDY;iy++){
+	for(iy=0;iy<NDY;iy++){
 		for(int ix=0;ix<NDX;ix++){
 			DrawMiniMaskOnScreen(MiniMap,ix<<3,iy<<3,ix+(x0<<1),iy+(y0>>1),MM_Lx);
 			DrawMiniSubWaterSquare(MiniMap,ix<<3,iy<<3,ix+(x0<<1),iy+(y0>>1),MM_Lx);
@@ -1386,7 +1386,7 @@ int GetObjectVisibilityValueInFogForSprites(int x,int y,int z,OneObject* OB){
 	bool usefog=FogMode&&BaloonState!=1&&(!NATIONS[GSets.CGame.cgi_NatRefTBL[MyNation]].Vision);
 	int OK=255;
 	if(usefog){
-		const int dp_trees=100;
+		const dp_trees=100;
 		int dp=GetInterpFOW(x,y);		
 		if(dp<500)OK=0;
 		else if(dp>1100)return 255;
@@ -2008,7 +2008,7 @@ void ShowFiresNearBuilding(OneObject* OB,Matrix4D& M4, float planefactor)
 	}
 }
 
-const int c_NormalStep = 32.0f;
+const c_NormalStep = 32.0f;
 Vector3D GetTotalNormal( int x, int y )
 {
     float ndenom = 0.5f / c_NormalStep;
@@ -2710,6 +2710,7 @@ void NewAnimation::DrawSpriteUnit( OneObject* OB, const Vector3D& pos, int frame
     }
 } // DrawSpriteUnit
 
+extern Vector3D g_LightDir;
 void NewAnimation::DrawShadowedSpriteUnit( OneObject* OB, const Vector3D& pos, int frame, float Dir, byte NI, float Scale )
 {
 	bool nm_deadbody=OB ? OB->newMons->NewParams.DeadBody : false;
@@ -3302,8 +3303,7 @@ void NewAnimation::DrawAt(	int	frame,					//  animation frame
 			int df=0;
 			int as_nf=AnimSet3D.GetAmount();
 			int nf=0;
-			int i;
-			for(i=0;i<as_nf&&cf>=(nf=AnimSet3D[i]->NFrames);i++){				
+			for(int i=0;i<as_nf&&cf>=(nf=AnimSet3D[i]->NFrames);i++){				
 				cf-=nf;
 				df+=nf;
 			}
@@ -3607,26 +3607,6 @@ void NewAnimation::DrawAt(	int	frame,					//  animation frame
 //		if(Rotations==9)DrawSpriteUnit( OB, pos, frame, Dir, NI, Scale*NewAnimation::Scale);
   //      else DrawShadowedSpriteUnit( OB, pos, frame, Dir, NI, Scale*NewAnimation::Scale);
 	//}
-	
-	//  draw health for units
-	extern byte PlayGameMode;
-	extern word DrawHealthID;
-	extern int DrawHealthCount;
-
-	extern word Att;
-	extern word Friend;
-	
-	if( OB && v_ISys.AltDrawHealth && ( OB->Index==DrawHealthID || v_ISys.AltDrawHealth&&(GetKeyState(VK_MENU)&0x8000) || OB->Index==Att || OB->Index==Friend ) && PlayGameMode==0 ){
-        if(GSets.CGame.ViewMask==255){
-    		DrawHealthCount--;
-		    if(DrawHealthCount<0){
-			    DrawHealthID=0xFFFF;
-		    }
-		    void DrawHealth(OneObject* OB);
-		    DrawHealth(OB);
-			ext_OnDrawOnMapOverAll();
-        }
-	}
 
 	//dust&water
 	extern int LastFlipTime;

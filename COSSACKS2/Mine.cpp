@@ -472,7 +472,7 @@ void LeaveMineLink(OneObject* OBJ){
 	//int nb=MiNM->NBornPt;
 	OB->UnlimitedMotion=0;
 	OB->SetOrderedUnlimitedMotion(0);
-	for(int i=nc-1;i>=0;i--){
+	for(i=nc-1;i>=0;i--){
 		int x2=((xx<<4)+ptX(min(nc-1,nc-i-1)))*16;
 		int y2=((yy<<4)+ptY(min(nc-1,nc-i-1)))*16;
 		if(i==nc-1){
@@ -834,8 +834,7 @@ bool CreateInsideList(IconSet* IS,byte NI){
 					bool AtLeastOne=0;
 					for(int j=0;j<SDS->NUnits;j++){
 						int NNear=EnumUnitsInRound(OB->RealX,OB->RealY,MobilR*16,SDS->Units[j],GSets.CGame.cgi_NatRefTBL[MyNation]);
-						int p;
-						for(p=0;p<SDS->NAmount&&SDS->Amount[p]<=NNear;p++);
+						for(int p=0;p<SDS->NAmount&&SDS->Amount[p]<=NNear;p++);
 						OneIcon* OI=IS->AddIconFixed(0,NATIONS[MyNation].Mon[SDS->Units[j]]->newMons->IconID,OrderDesc[SDS->ID].IconPos+j+1);
 						p-=DD;
 						if(p>0){
@@ -900,7 +899,7 @@ bool CreateInsideList(IconSet* IS,byte NI){
 		int cidx=-1;
 		IS->Page=0;
 		//if(OWNM->CurrPage==2){
-			for(int i=0;i<1024;i++){
+			for(i=0;i<1024;i++){
 				if(Nmons[i]){
 					Page3HaveItems=1;
 					if(OWNM->CurrPage==2){
@@ -917,7 +916,7 @@ bool CreateInsideList(IconSet* IS,byte NI){
 			};
 		//};
 	}else{
-		for(int i=0;i<1024;i++){
+		for(i=0;i<1024;i++){
 			if(Nmons[i]){
 				GeneralObject* GO=NT->Mon[i];
 				NewMonster* NM=GO->newMons;

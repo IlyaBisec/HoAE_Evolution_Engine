@@ -1,5 +1,5 @@
-#include <windows.h>
 #include "stdheader.h"
+//#include <windows.h>
 //#include <stdlib.h>
 //#include <stdio.h>
 //#include "PeerClass.h";
@@ -232,7 +232,63 @@ void PEER_DisconnectCallback(
 	//TPE->Connect(TPE->MyNick);
 };
 
-;
+// Called when a message is sent to a room the local player is in.
+//////////////////////////////////////////////////////////////////
+void PEER_RoomMessageCallback(
+		PEER peer,  // The peer object.
+		RoomType roomType,  // The type of room that the message was in.
+		const char * nick,  // The nick of the player who sent the message.
+		const char * message,  // The text of the message.
+		void * param  // User-data.
+	){
+	TotalPeerEngine* TPE=(TotalPeerEngine*)param;
+	if(roomType==TitleRoom){
+		if(strstr(message,"@@@[ADM@XYL]")){
+			TPE->AddRoomInGame((char*)message);
+		}else{
+			if(message[0]=='@'&&message[1]=='@'&&message[2]=='@'){
+				char* cc=strstr(message,"@@@NFO \\$flags$\\");
+				if(cc){
+					cc+=16;
+					if(strchr(cc,'g')){
+						TPE->ABPL.AddPlayer((char*)nick);
+					};
+				};
+				cc=strstr(message,"@@@ADDABPL ");
+				if(cc){
+					cc+=11;
+					do{
+						char cc3[128];
+						char* cc1=strstr(cc," ");
+						if(cc1){
+							int L=cc1-cc;
+							memcpy(cc3,cc,L);
+							cc3[L]=0;
+							cc=cc1+1;
+						}else{
+							strcpy(cc3,cc);
+							cc=NULL;
+						};
+						bool PRESENT=0;
+						for(int i=0;i<TPE->NPlayers;i++)if(!strcmp(TPE->Players[i].Name,cc3))PRESENT=1;
+						for(i=0;i<TPE->ABPL.NPlayers;i++)if(!strcmp(TPE->ABPL.Names[i],cc3))PRESENT=1;
+						if(!PRESENT)TPE->ABPL.AddPlayer(cc3);
+					}while(cc);
+				};
+			}else{
+				for(int i=0;i<TPE->NPlayers;i++){
+					if((!strcmp(TPE->Players[i].Name,nick))&&TPE->Players[i].Muted)return;
+				};
+				TPE->GlobalChat.Add((char*)nick,(char*)message);
+				TPE->ChangeChat=1;
+			};
+		};
+	}else{
+		if(TPE->MyRoom&&TPE->MyRoom->RoomConnected)
+			TPE->LocalChat.Add((char*)nick,(char*)message);
+		TPE->ChangeLocalChat=1;
+	};
+};
 
 // Called when the name of a room the player is in changes.
 // The new name can be checked with peerGetRoomName.
@@ -267,7 +323,7 @@ void PEER_PlayerMessageCallback(
 	TotalPeerEngine* TPE=(TotalPeerEngine*)param;
 	if(!_stricmp(nick,"spybot")){
 		if(strstr(message,"\\llist\\")){
-			const char* cc=strstr(message,"\\cossacks\\");
+			char* cc=strstr(message,"\\cossacks\\");
 			if(cc){
 				cc+=strlen("\\cossacks\\");
 				int NP=0;
@@ -318,7 +374,7 @@ void PEER_PlayerMessageCallback(
 			if(z==5){
 				if(ver==dwVersion){
 					RESPOND=2;
-					const char* s=strstr(message,"#");
+					char* s=strstr(message,"#");
 					if(s)strcpy(TPEN.HostMessage,s+1);
 					else RESPOND=3;
 				}else RESPOND=3;
@@ -333,7 +389,7 @@ void PEER_PlayerMessageCallback(
 			if(z==4){
 				if(ver==dwVersion){
 					RESPOND=1;
-					const char* s=strstr(message,"#");
+					char* s=strstr(message,"#");
 					if(s)strcpy(TPEN.HostMessage,s+1);
 					else RESPOND=3;
 				}else RESPOND=3;
@@ -495,7 +551,7 @@ void PEER_CrossPingCallback(
 };
 extern unsigned short dwVersion;
 __declspec(dllexport)
-char LobbyVersion[32]="NEO4.02";
+char LobbyVersion[32]="1.1R[NP03]";
 // Type used for the GOA callbacks (basic, info, rules, players).
 /////////////////////////////////////////////////////////////////
 bool BasicCalled=0;
@@ -796,7 +852,7 @@ void TotalPeerEngine::Connect(char* Nick){
 	PCB.playerLeft=&PEER_PlayerJoinedCallback;
 	PCB.playerMessage=&PEER_PlayerMessageCallback;
 	PCB.readyChanged=&PEER_ReadyChangedCallback;
-	//PCB.roomMessage=&PEER_RoomMessageCallback;
+	PCB.roomMessage=&PEER_RoomMessageCallback;
 	PCB.roomNameChanged=&PEER_RoomNameChangedCallback;
 	PCB.GOABasic=&PEER_GOABasic;
 	PCB.GOAInfo=&PEER_GOAInfo;
@@ -823,7 +879,7 @@ void TotalPeerEngine::RefreshPlayers(){
 		Players[i].Status|=1024;
 	};
 	peerEnumPlayers(Peer,TitleRoom,&PEER_EnumPlayersCallback,this);
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		if(Players[i].Status&1024){
 			char cc2[64];
 			strcpy(cc2,Players[i].Name);
@@ -831,7 +887,7 @@ void TotalPeerEngine::RefreshPlayers(){
 		};
 	};
 	int S1=0;
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		int L=strlen(Players[i].Name);
 		char* c=Players[i].Name;
 		for(int j=0;j<L;j++)S1+=c[j]+(int(c[j+1])<<8);
@@ -1101,7 +1157,7 @@ void TPE_MyRoom::Refresh(){
 		Players[i].Status|=1024;
 	};
 	peerEnumPlayers(Peer,StagingRoom,&PEER_EnumPlayersCallback3,this);
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		if(Players[i].Status&1024){
 			char cc[128];
 			strcpy(cc,Players[i].Name);
@@ -1110,7 +1166,7 @@ void TPE_MyRoom::Refresh(){
 	};
 	bool PRHOST=0;
 	int S1=0;
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		int L=strlen(Players[i].Name);
 		char* c=Players[i].Name;
 		for(int j=0;j<L;j++)S1+=c[j]+(int(c[j+1])<<8);
@@ -1228,7 +1284,7 @@ void TotalPeerEngine::ProcessFilter(){
 				NFRooms++;
 			};
 		};
-		for(int i=0;i<NRInGame;i++){
+		for(i=0;i<NRInGame;i++){
 			if(CheckGInFilter(RInGame+i)){
 				if(NFRooms>=MaxFRooms){
 					MaxFRooms+=32;
@@ -1526,7 +1582,7 @@ void TotalPeerEngine::AddRoomInGame(char* s){
 				//if(!cc1)return;
 			};
 		};
-		for(int i=0;i<NRInGame;i++){
+		for(i=0;i<NRInGame;i++){
 			if(!strcmp(RInGame[i].Name,ccc1))return;
 		};
 		if(NRInGame>=MaxRInGame){
@@ -1542,7 +1598,7 @@ void TotalPeerEngine::AddRoomInGame(char* s){
 		RIG->StartTime=GetTickCount();
 		RIG->MaxTime=GT;
 		RIG->NPlayers=NP;
-		for(int i=0;i<NP;i++){
+		for(i=0;i<NP;i++){
 			RIG->Players[i]=znew(char,strlen(NAMES[i])+1);
 			strcpy(RIG->Players[i],NAMES[i]);
 		};

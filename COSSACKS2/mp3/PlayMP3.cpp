@@ -15,7 +15,7 @@ bool RndFilesPresent=1;
 int CurVolume0=-1;
 extern int MidiSound;
 //
-const int mMusicChanel=0;
+const mMusicChanel=0;
 //
 void SetMP3Volume(int vol){
 	ov_SetVolume(vol,mMusicChanel);

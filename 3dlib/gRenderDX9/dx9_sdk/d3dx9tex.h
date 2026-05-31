@@ -81,17 +81,6 @@
 #define D3DX_FILTER_SRGB             (3 << 21)
 
 
-//-----------------------------------------------------------------------------
-// D3DX_SKIP_DDS_MIP_LEVELS is used to skip mip levels when loading a DDS file:
-//-----------------------------------------------------------------------------
-
-#define D3DX_SKIP_DDS_MIP_LEVELS_MASK   0x1F
-#define D3DX_SKIP_DDS_MIP_LEVELS_SHIFT  26
-#define D3DX_SKIP_DDS_MIP_LEVELS(levels, filter) ((((levels) & D3DX_SKIP_DDS_MIP_LEVELS_MASK) << D3DX_SKIP_DDS_MIP_LEVELS_SHIFT) | ((filter) == D3DX_DEFAULT ? D3DX_FILTER_BOX : (filter)))
-
-
-
-
 //----------------------------------------------------------------------------
 // D3DX_NORMALMAP flags:
 // ---------------------
@@ -1046,9 +1035,7 @@ HRESULT WINAPI
 //      Or D3DX_DEFAULT for D3DX_FILTER_TRIANGLE.
 //  MipFilter
 //      D3DX_FILTER flags controlling how each miplevel is filtered.
-//      Or D3DX_DEFAULT for D3DX_FILTER_BOX.
-//      Use the D3DX_SKIP_DDS_MIP_LEVELS macro to specify both a filter and the
-//      number of mip levels to skip when loading DDS files.
+//      Or D3DX_DEFAULT for D3DX_FILTER_BOX,
 //  ColorKey
 //      Color to replace with transparent black, or 0 to disable colorkey.
 //      This is always a 32-bit ARGB color, independent of the source image
@@ -1063,6 +1050,7 @@ HRESULT WINAPI
 //      The texture object that will be created
 //
 //----------------------------------------------------------------------------
+
 
 // FromFile
 

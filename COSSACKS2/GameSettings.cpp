@@ -179,9 +179,9 @@ void CurrentGameInfo::ProcessRoom(){
 			lpp[2]=lpp[0]+lpp[1];
 			SendToAllPlayers(12,lpp);
 			PPTIME=GetRealTime();
-			for(int p=0;p<NPlayers;p++)if(GSets.CGame.PL_INFO[p].PlayerID==MyDPID)CurrentMaxPing[p]=png;
+			for(p=0;p<NPlayers;p++)if(GSets.CGame.PL_INFO[p].PlayerID==MyDPID)CurrentMaxPing[p]=png;
 		};
-		for(int p=0;p<NPlayers;p++)if(CurrentMaxPing[p]>png)png=CurrentMaxPing[p];
+		for(p=0;p<NPlayers;p++)if(CurrentMaxPing[p]>png)png=CurrentMaxPing[p];
 		MaxPingTime=png;
 		if(png<MinPing0)MaxPingTime=0;
 		if(png>=MinPing0&&png<200)MaxPingTime=200;
@@ -414,16 +414,25 @@ void CommonRoomParams::Init(){
 void CommonRoomParams::InitBeforeGame(){
 	switch(GameSpeed){
 		case 0://Slow
-			GSets.SVOpt.RequiredMsPerFrame=30;
+			GSets.SVOpt.RequiredMsPerFrame=40;
 			break;
 		case 1://Normal
-			GSets.SVOpt.RequiredMsPerFrame=40;
+			GSets.SVOpt.RequiredMsPerFrame=30;
 			break;
 		case 2://Fast
 			GSets.SVOpt.RequiredMsPerFrame=60;
 			break;
+		case 3://Very fast
+			GSets.SVOpt.RequiredMsPerFrame=20;
+			break;
+		case 4://Very very fast
+			GSets.SVOpt.RequiredMsPerFrame=10;
+			break;
+		case 5://Marvellous fast
+			GSets.SVOpt.RequiredMsPerFrame=5;
+			break;
 		default:
-			GSets.SVOpt.RequiredMsPerFrame=30/GameSpeed;
+			GSets.SVOpt.RequiredMsPerFrame=40/GameSpeed;
 			break;
 	}
 
@@ -471,8 +480,8 @@ void CommonRoomParams::InitBeforeGame(){
 		}
 	}
 
-	if (MOptions.RPGOnly) GSets.RoomParams.RTS_mode = 2;
-	else if (MOptions.RTSOnly) GSets.RoomParams.RTS_mode = 1;
+	//if (MOptions.RPGOnly) GSets.RoomParams.RTS_mode = 2; //TBH Why commented?????
+	//else if (MOptions.RTSOnly) GSets.RoomParams.RTS_mode = 1;
 
 	if (MOptions.ThirdPersonGame) g_Navigator.LinkToUnitToggle();
 }
@@ -756,8 +765,8 @@ void SoundAndVideoOptions::SafeRefreshRateArgs::EvaluateFunction() {
 //---------------------------------------------------------------------
 /*#ifndef __LANGUAGE_SETTINGS_H__
 #define __LANGUAGE_SETTINGS_H__
-#include "..\ClassEngine\ClassEngine.h"
-#include "..\ClassEngine\more_types.h"
+#include <ClassEngine.h>
+#include <more_types.h>
 #pragma pack( push )
 #pragma pack( 1 )
 #include "EngineSettings.h"

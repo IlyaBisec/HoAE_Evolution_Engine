@@ -140,19 +140,19 @@ float PRSAnimation::CalculateMaxTime() const
 void PRSAnimation::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PRSAnimation", this );
-    pm.p( "BaseAnimationName", &PRSAnimation::GetBaseAnimationName, &PRSAnimation::SetBaseAnimationName );
+    pm.p( "BaseAnimationName", GetBaseAnimationName, SetBaseAnimationName );
 
-    pm.p( "ScaleX", &PRSAnimation::GetScaleX, &PRSAnimation::SetScaleXAnimation, "floatAnimCurve" );
-    pm.p( "ScaleY", &PRSAnimation::GetScaleY, &PRSAnimation::SetScaleYAnimation, "floatAnimCurve" );
-    pm.p( "ScaleZ", &PRSAnimation::GetScaleZ, &PRSAnimation::SetScaleZAnimation, "floatAnimCurve" );
-    pm.p( "PosX", &PRSAnimation::GetPosX, &PRSAnimation::SetPosXAnimation, "floatAnimCurve" );
-    pm.p( "PosY", &PRSAnimation::GetPosY, &PRSAnimation::SetPosYAnimation, "floatAnimCurve" );
-    pm.p( "PosZ", &PRSAnimation::GetPosZ, &PRSAnimation::SetPosZAnimation, "floatAnimCurve" );
-    pm.p( "Rotation", &PRSAnimation::GetRot, &PRSAnimation::SetRotAnimation, "quatAnimCurve" );
+    pm.p( "ScaleX", GetScaleX, SetScaleXAnimation, "floatAnimCurve" );
+    pm.p( "ScaleY", GetScaleY, SetScaleYAnimation, "floatAnimCurve" );
+    pm.p( "ScaleZ", GetScaleZ, SetScaleZAnimation, "floatAnimCurve" );
+    pm.p( "PosX", GetPosX, SetPosXAnimation, "floatAnimCurve" );
+    pm.p( "PosY", GetPosY, SetPosYAnimation, "floatAnimCurve" );
+    pm.p( "PosZ", GetPosZ, SetPosZAnimation, "floatAnimCurve" );
+    pm.p( "Rotation", GetRot, SetRotAnimation, "quatAnimCurve" );
 
-    pm.m( "FlipXAxis", &PRSAnimation::FlipXAxis );
-    pm.m( "FlipYAxis", &PRSAnimation::FlipYAxis );
-    pm.m( "FlipZAxis", &PRSAnimation::FlipZAxis );
+    pm.m( "FlipXAxis", FlipXAxis );
+    pm.m( "FlipYAxis", FlipYAxis );
+    pm.m( "FlipZAxis", FlipZAxis );
 } // PRSAnimation::Expose
 
 void PRSAnimation::FlipXAxis()

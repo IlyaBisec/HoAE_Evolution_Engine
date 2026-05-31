@@ -18,7 +18,7 @@
 
 #define BOOST_SIGNALS_MAX_ARGS 10
 
-#include <../boost/boost/config.hpp>
+#include <boost/config.hpp>
 #include <boost/type_traits/function_traits.hpp>
 #include <boost/signals/signal0.hpp>
 #include <boost/signals/signal1.hpp>

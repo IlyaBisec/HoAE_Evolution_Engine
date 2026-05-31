@@ -1,5 +1,5 @@
 #pragma once
-#include "..\ClassEngine\more_types.h"
+#include <more_types.h>
 #include "MapTemplates.h"
 #include "vui_Action.h"
 //////////////////////////////////////////////////////////////////////////

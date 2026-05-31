@@ -36,7 +36,7 @@ bool AIScripsEditorProcess(ClassEditor* CE,BaseClass* BC,int Options){
 		//ReplaceEditor("Started AI script",GScripts.Scripts+MyNation);
 		//
 		Enumerator* EU=ENUM.Get("UNITS_SHORTCUTS");
-		static int RefTime=GetTickCount();
+		static RefTime=GetTickCount();
 		if(GetTickCount()>RefTime){
 			RefTime=GetTickCount()+1200;
 			EU->Clear();

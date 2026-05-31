@@ -8,8 +8,8 @@
 #include "UF_NumericalReturner.h"
 #include "TestEditor.h"
 #include "FileDialog.h"
-#include "..\ClassEngine\ClassPresentation.h"
-#include "SurfaceGenerator.h"
+#include "ClassPresentation.h"
+#include "Surface\SurfaceGenerator.h"
 
 void KeyTestMem();
 void TestDynMem();
@@ -1582,7 +1582,7 @@ void ClassEditor::ClearAll(){
 		ElParams[i]=NULL;
 	}
 	ElParams.Clear();
-	for(int i=0;i<ElementEditors.GetAmount();i++)if(ElementEditors[i]){
+	for(i=0;i<ElementEditors.GetAmount();i++)if(ElementEditors[i]){
 		delete ElementEditors[i];
 		ElementEditors[i]=NULL;
 	}
@@ -3414,7 +3414,7 @@ bool _util_LoadClassLikeFolder(BaseClass* BC,const char* xmlName,const char* Fie
 		char fn[256];
 		char* field=FL[i]->pchar();
 		sprintf(fn,"%s%s",name,field);
-		xmlQuote* x=new_xmlQuota();
+		xmlQuote* x=new_xmlQuote();
 		if(x->ReadFromFile(fn)){
 			//xmlQuote* n=x->GetSubQuote((char*)FieldName);
 			//if (n) n->Assign_string(field);

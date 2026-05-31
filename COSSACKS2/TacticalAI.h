@@ -3,9 +3,9 @@
 //------------------------------------------------------------------------------------------------------------------//
 #include "stdheader.h"
 //#include <xmlQuote.h>
-//#include "..\ClassEngine\ClassEngine.h"
+//#include <ClassEngine.h>
 //#include <typeinfo.h>
-//#include "..\ClassEngine\more_types.h"
+//#include <more_types.h>
 #include "ZonesAndGroupsExtraInfo.h"
 #include "BrigadeAI.h"
 //------------------------------------------------------------------------------------------------------------------//

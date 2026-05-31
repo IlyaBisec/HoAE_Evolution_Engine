@@ -61,7 +61,7 @@ bool TVE_FacturePreview::Assign(char* TextCommand){
 	return false;
 };
 void TVE_FacturePreview::Draw(int x,int y,int Lx,int Ly,DWORD Color){
-	static int sh=IRS->GetShaderID("hud");
+	static sh=IRS->GetShaderID("hud");
 	DrawTexturedBar(x,y,Lx,Ly-8,0,0,1,1,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,texid,sh);
 };
 void TVE_FacturePreview::GetBestSize(int FontSizeY,int& Lx,int& Ly,int& LowMarkPos){
@@ -78,7 +78,7 @@ bool TVE_StdTexturePreview::Assign(char* TextCommand){
 	return false;
 };
 void TVE_StdTexturePreview::Draw(int x,int y,int Lx,int Ly,DWORD Color){
-	static int sh=IRS->GetShaderID("hud");
+	static sh=IRS->GetShaderID("hud");
 	float tu=float(texid%8)/8.0f;
 	float tv=float(texid/8)/8.0f;
 	static int tex=IRS->GetTextureID("Textures\\GroundTex.bmp");

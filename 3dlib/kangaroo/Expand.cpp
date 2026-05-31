@@ -1,4 +1,5 @@
-#include "common.h"
+#include "StdAfx.h" 
+#include "common.h" 
 #include "Expand.h"
 
 DynArray<SurfPix>   ExpandSurface::Stack1;

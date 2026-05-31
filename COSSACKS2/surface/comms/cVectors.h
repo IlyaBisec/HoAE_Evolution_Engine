@@ -113,7 +113,6 @@ inline int dVectors::Dim(int n) {
 // dVectors::Normalize
 inline void dVectors::Normalize() {
 	assert(m_nUsed > 0);
-	int i;
-	for(i = 1; i < m_nUsed; i++) m_pList[i].Normalize();
+	for(int i = 1; i < m_nUsed; i++) m_pList[i].Normalize();
 	m_pList[i].Normalize();
 }

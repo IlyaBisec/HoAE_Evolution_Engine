@@ -32,7 +32,7 @@ template <typename T> typename add_pointer<T>::type
 # else
 template <typename T> T*
 # endif
-addressofff(T& v)
+addressof(T& v)
 {
   return reinterpret_cast<T*>(
        &const_cast<char&>(reinterpret_cast<const volatile char &>(v)));

@@ -1448,8 +1448,8 @@ void CreateAdvCharacter(AdvCharacter* AC,NewMonster* NM){
 		AC->Rate[i]=NM->Rate[i];
 		AC->WeaponKind[i]=NM->WeaponKind[i];
 	};
-	for(int i=0;i<16;i++)AC->Protection[i]=byte(NM->Protection[i]);
-	for(int i=0;i<8;i++)AC->NeedRes[i]=NM->NeedRes[i];
+	for(i=0;i<16;i++)AC->Protection[i]=byte(NM->Protection[i]);
+	for(i=0;i<8;i++)AC->NeedRes[i]=NM->NeedRes[i];
 	AC->Life=NM->Life;
 	AC->BirthLife=NM->Life;
 	AC->MaxMana=NM->MaxMana;
@@ -1489,8 +1489,8 @@ void CreateNewMonster(NewMonster* NM,AdvCharacter* AC){
 		NM->Rate[i]=AC->Rate[i];
 		NM->WeaponKind[i]=AC->WeaponKind[i];
 	};
-	for(int i=0;i<16;i++)NM->Protection[i]=byte(AC->Protection[i]);
-	for(int i=0;i<8;i++)NM->NeedRes[i]=AC->NeedRes[i];
+	for(i=0;i<16;i++)NM->Protection[i]=byte(AC->Protection[i]);
+	for(i=0;i<8;i++)NM->NeedRes[i]=AC->NeedRes[i];
 
 	NM->Life=AC->Life;
 	NM->Life=AC->BirthLife;

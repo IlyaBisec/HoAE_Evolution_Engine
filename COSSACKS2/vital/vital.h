@@ -341,7 +341,7 @@ bool Attack5(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 	int NVictim=UG->N>>5;
 	if(NVictim>NVICTIM) NVictim=NVICTIM;*/
 
-	for(int i=0;i<UG->N;i++){
+	for(i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -751,14 +751,14 @@ bool Attack7(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm, int Force){ // same 
 	if(!NEN || Force<Frc)return false;
 	UnitsGroup* UG=&SCENINF.UGRP[Grp->Index];
 	
-	const int NVICTIM=128;
+	const NVICTIM=128;
 	int Victim[NVICTIM];
 	int VicTarg[NVICTIM];
 	memset(Victim,0xFFFF,sizeof(Victim));
 	int NVictim=0;
 	int NVicInArmy=0;
 
-	for(int i=0;i<UG->N;i++){
+	for(i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -869,7 +869,7 @@ bool Attack7(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm, int Force){ // same 
 		};
 	};
 	int TotalVictim = UG->N>>5;
-	for(int i=0;i<NVictim;i++){
+	for(i=0;i<NVictim;i++){
 		OneObject* OB = Group[Victim[i]];		
 		if(OB->AttackObj(VicTarg[i],128+16,0,0)){
 			if(NVicInArmy<TotalVictim){
@@ -942,7 +942,7 @@ void MakeEnemyAgrTopGrp(byte NI, GAMEOBJ* EATG, word* BaseTop){
 	byte NMask=NATIONS[NI].NMask;
 	int NA=GetNAreas();
 	for(int i=0;i<NA;i++) ClearGroup(EATG+i);	
-	for(int i=0;i<MAXOBJECT;i++){
+	for(i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB&&!(OB->Sdoxlo||(OB->NMask&NMask))&&OB->newMons->MeatTransformIndex==0xFF){
 			int top=GetTopZone(OB->RealX>>4,OB->RealY>>4);			
@@ -1084,7 +1084,7 @@ DLLEXPORT word MakeOneShotToBuild(GAMEOBJ* Zone,GAMEOBJ* Grp,byte NI){
 	UnitsGroup* UG=&SCENINF.UGRP[Grp->Index];
 
 	word BID=0xFFFF;	
-	for(int i=0;i<UG->N;i++){
+	for(i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -1253,7 +1253,7 @@ bool AttackByTomahawks(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 	int NVicInArmy=0;
 	*/
 
-	for(int i=0;i<UG->N;i++){
+	for(i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -1569,7 +1569,7 @@ bool GetBrGroup(byte Owner, int BrigID, int* N, word** ID, word** SN){
 	return true;
 }
 //
-const int GlRadius=1500;
+const GlRadius=1500;
 //
 CEXPORT void DrawColoredCircle(int xc,int yc,int R0,int R1,DWORD LineColor1,DWORD LineColor2,DWORD FillColor1,DWORD FillColor2);
 DynArray<int> GlBarracksX;
@@ -1661,7 +1661,7 @@ CEXPORT int GetGlobalCreateBrigList(byte NI, byte MaxCen, word* CID, byte MaxOf,
 	byte no=0;
 	int NM=NATIONS[NI].NMon;
 	GeneralObject** GGO=NATIONS[NI].Mon;
-	for(int i=0;i<NM;i++){
+	for(i=0;i<NM;i++){
 		GeneralObject* GO=GGO[i];
 		if(GO->OFCR){
 			if(no<MaxOf){
@@ -1691,7 +1691,7 @@ CEXPORT int GetGlobalCreateBrigList(byte NI, byte MaxCen, word* CID, byte MaxOf,
 	//static byte* MapTyp=(byte*)malloc(NATIONS->NMon+128);
 	//memset(MapTyp,0xFF,NATIONS->NMon);	
 	word* type=NIndex;
-	for(int i=0;i<MaxOf;i++){
+	for(i=0;i<MaxOf;i++){
 		//word oficer=type[0];
 		for(int j=0;j<MaxType;j++){			
 			if(*type!=0xFFFF){
@@ -1706,7 +1706,7 @@ CEXPORT int GetGlobalCreateBrigList(byte NI, byte MaxCen, word* CID, byte MaxOf,
 		}
 	}	
 	// 2 - проход
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		OneObject* OB=Group[List[i]];
 		if(OB&&!(OB->Sdoxlo||OB->InArmy||OB->NotSelectable)&&(EnableGlobalCreateBrig||OB->Mobilised)){
 			byte of=MapOf[OB->NIndex];

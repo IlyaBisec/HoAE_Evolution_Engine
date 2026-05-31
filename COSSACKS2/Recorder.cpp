@@ -781,11 +781,11 @@ void GetFHashName(char* pass,char* Dst){
 	int L=strlen(pass);
 	DWORD S=0;
 	for(int i=0;i<L;i++)S+=pass[i];
-	for(int i=0;i<L-1;i++)S+=pass[i]*pass[i+1];
-	for(int i=0;i<L-2;i++)S+=pass[i]*pass[i+1]*pass[i+2];
-	for(int i=0;i<L-3;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3];
-	for(int i=0;i<L-4;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3]*pass[i+4];
-	for(int i=0;i<L-5;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3]*pass[i+4]*pass[i+5];
+	for(i=0;i<L-1;i++)S+=pass[i]*pass[i+1];
+	for(i=0;i<L-2;i++)S+=pass[i]*pass[i+1]*pass[i+2];
+	for(i=0;i<L-3;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3];
+	for(i=0;i<L-4;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3]*pass[i+4];
+	for(i=0;i<L-5;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3]*pass[i+4]*pass[i+5];
 	sprintf(Dst,"%X",S);
 };
 

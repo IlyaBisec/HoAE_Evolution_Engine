@@ -760,7 +760,7 @@ void cDib24::DrawPolygonFlat(const cVec3 *pVerts, const int Num, const cDib24::P
 	float x[4], z[4];
 	for(int y = yMin; y <= yMax; y++) {
 		int nhor = 0;
-		for(int i = 0; i < Num; i++) {
+		for(i = 0; i < Num; i++) {
 			int st = i;
 			int en = i + 1;
 			if(en >= Num) {
@@ -834,7 +834,7 @@ void cDib24::DrawPolygonGouraud(const cVec3 *pVerts, const float *pDots, const i
 	float x[4], z[4], d[4];
 	for(int y = yMin; y <= yMax; y++) {
 		int nhor = 0;
-		for(int i = 0; i < Num; i++) {
+		for(i = 0; i < Num; i++) {
 			int st = i;
 			int en = i + 1;
 			if(en >= Num) {

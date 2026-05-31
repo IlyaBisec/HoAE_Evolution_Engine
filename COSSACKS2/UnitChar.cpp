@@ -833,8 +833,9 @@ void LoadAllUnitsFromXML(){
 	}
 }
 void AddAllCharsEditor(){
-	//AddStdEditor("UnitsParams",&AllUnitsChars,"",RCE_DEFAULT,rce_CharsCallback); TBH Blocking
+	//AddStdEditor("UnitsParams",&AllUnitsChars,"",RCE_DEFAULT,rce_CharsCallback);
 }
+
 //////////////////////////////////////////////////////////////////////////
 ///////////////////          NATIONS PARSING      ////////////////////////
 //////////////////////////////////////////////////////////////////////////
@@ -865,7 +866,7 @@ bool RemoveXmlDefaults(xmlQuote& XML,xmlQuote& Default){
 	byte* delit=new byte[n];
 	memset(delit,0,n);
 	char* SameName=NULL;
-	for(int i=0,j=0;i<n && j<nd;i++,j++){
+	for(int i=0,int j=0;i<n && j<nd;i++,j++){
 		xmlQuote* x=XML.GetSubQuote(i);
 		xmlQuote* xd=Default.GetSubQuote(j);
 		bool del=false;
@@ -895,9 +896,7 @@ bool RemoveXmlDefaults(xmlQuote& XML,xmlQuote& Default){
 	}
 	if(n!=nd)delall=false;
 	if(!(delall==false && SameName && SameName[0]!=0)){
-		int i;
-		int j;
-		for(i=0,j=0;i<n;i++,j++)if(delit[j]){
+		for(int i=0,int j=0;i<n;i++,j++)if(delit[j]){
 			XML.DelSubQuote(i);
 			i--;n--;
 		}
@@ -986,7 +985,7 @@ void SaveAllChangedCharactersToXml(xmlQuote& xml){
 	for(int i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB && OB->newMons->CharacterWasModified){
-            xmlQuote* XML=new_xmlQuota();
+            xmlQuote* XML=new_xmlQuote();
 			SaveCharacterChangeToXml(OB,*XML);
 			char cc[32];
 			sprintf(cc,"%d %s",OB->UniqID,XML->GetQuoteName());
@@ -1046,7 +1045,7 @@ void LoadCharacterFromXml(OneObject* OB,xmlQuote& xml){
 	NM->MyIndex=id;
 	assert(id<NNewMon);
     const char* clname=xml.GetQuoteName();
-	const char* nn=strstr(clname," ");
+	char* nn=strstr(clname," ");
 	if(nn)clname=nn+1;
 	OneClassStorage* OCS=CGARB.GetClass(clname);
 	if(OCS && OCS->OneMemb){
@@ -1275,7 +1274,7 @@ void EnableCapturability(OneObject* OB){
 }
 //----modified unit interface----//
 void CreateObjectXmlImage(OneObject* OB,xmlQuote* xml){
-	xmlQuote* x=new_xmlQuota();
+	xmlQuote* x=new_xmlQuote();
 	xml->SetQuoteName(OB->Ref.General->MonsterID);
 	SaveCharacterChangeToXml(OB,*x);
 	xml->AddSubQuote(x);    

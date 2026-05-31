@@ -164,8 +164,8 @@ void Illustrator::Add(int x,int y,int val,RLCFont* Font,byte Type,DWORD Color){
 extern int RealLx;
 extern int RealLy;
 
-const int IllustratorBeatAmount=128;
-const int IllustratorZSpeed=1;
+const IllustratorBeatAmount=128;
+const IllustratorZSpeed=1;
 
 void Illustrator::Draw(){
 	if(LMode)return;
@@ -216,8 +216,8 @@ void ViewDamage(OneObject* OBJ,int value){
 		return;
 	
 	// by vital
-	const int MinNILS=5;
-	const int MaxNILS=21;
+	const MinNILS=5;
+	const MaxNILS=21;
 	int N=0;
 	for(int i=0;i<ILSTR.NILS;i++){
 		if(ILSTR.ILS[i].Value==value)
@@ -1988,8 +1988,7 @@ void RemakeMaxMorale(){
 						ptime[cv]=tc;
 						BR->PrevMorale=BR->Morale;
 						if(M0!=BM1&&BR->Morale/MR_ONE<500){
-							int xc;
-							int yc;
+							int xc,int yc;
 							bool GetBrCenter(Brigade* BR,int* x,int* y);
 							BR->GetCenter(&xc,&yc);
 							char cc[32];
@@ -2004,7 +2003,7 @@ void RemakeMaxMorale(){
 			TestUnitToEscape(OB);
 		};
 	};
-	for(int i=0;i<NB;i++){
+	for(i=0;i<NB;i++){
 		Brigade* BR=CITY[NATS[i]].Brigs+BMIDS[i];
 		BR->SN=BMSN[i];
 	};

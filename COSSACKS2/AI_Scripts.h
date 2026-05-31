@@ -815,7 +815,7 @@ public:
 	int ResType;
 	int OpType;
 	int Value;
-	TotalResource(){
+	CurResources(){
 		ResType=0;
 		OpType=0;
 		Value=0;

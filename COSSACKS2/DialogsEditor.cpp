@@ -26,7 +26,7 @@ void ProcessDialogsEditor(){
 
 	do{
 		Patient.Dialog.SetEditMode(true);
-		if((GetKeyState(VK_NUMLOCK )&0x7FFF)){
+		if((GetKeyState(VK_HOME )&0x7FFF)){
 			/*
 			if(PanelL){
 				if(mouseX<=FloatStage){

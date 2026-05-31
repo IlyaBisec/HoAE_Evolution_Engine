@@ -387,8 +387,7 @@ bool be_CParamList::CreateCopyFrom(const be_CParamList& paramList){
 		};
 	};
 	be_CBasePrametr* pBP = NULL;
-	int i;
-	for (i=0; i<paramList.GetAmount(); i++){
+	for (int i=0; i<paramList.GetAmount(); i++){
 		if (i<GetAmount()) pBP = (be_CBasePrametr*)((*this)[i]);
 		if ( pBP==NULL || pBP->ParamName!=paramList[i]->ParamName || pBP->ParamType!=paramList[i]->ParamType ){
 			pBP = new be_CBasePrametr;
@@ -399,7 +398,7 @@ bool be_CParamList::CreateCopyFrom(const be_CParamList& paramList){
 		};
 		pBP=NULL;
 	};
-	return (i == paramList.GetAmount() );
+	return ( i == paramList.GetAmount() );
 };
 bool be_CParamList::SetParamData(be_CParamList& ParamList){
 	bool OK = true;	

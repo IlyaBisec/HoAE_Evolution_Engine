@@ -385,8 +385,7 @@ unsigned int MCTris[256][16] = {
 // cIsoSurface::Update
 //-----------------------------------------------------------------------------
 void cIsoSurface::Update(FieldFunc pFn) {
-	int i;
-	for(i = 0; i < m_Nodes.Count(); i++) {
+	for(int i = 0; i < m_Nodes.Count(); i++) {
 		Node &n = m_Nodes[i];
 		n.f = pFn(n.p);
 	}

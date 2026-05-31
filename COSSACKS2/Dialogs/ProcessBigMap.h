@@ -430,7 +430,7 @@ bool	ProcessBigMap(int campainID)
 	LocalGP		a_lgpSec("Interf3\\TotalWarGraph\\lva_Sectors");			//Sectors
 	GPPicture*	a_pgppSec = NULL;
 	a_dsMenu.addClipper(a_inMX0,a_inMY0,a_inMX1,a_inMY1);
-	for (int i=0; i<sdSecDat.GetSectorsNum(); i++) {	//Загрузка кусков карты в a_dsMenw.
+	for (i=0; i<sdSecDat.GetSectorsNum(); i++) {	//Загрузка кусков карты в a_dsMenw.
 		a_pgppSec = a_dsMenu.addGPPicture(NULL,0,0,a_lgpSec.GPID,i);
 		
 		a_pgppSec->Diffuse = 0x55000000 + 0x00FFFFFF;
@@ -644,7 +644,7 @@ bool	ProcessBigMap(int campainID)
 	PLAYERS[3]->SetPlayerName( GetTextByID( "#PRUSSIA" ) );
 	PLAYERS[4]->SetPlayerName( GetTextByID( "#RUSSIA"  ) );
 	PLAYERS[5]->SetPlayerName( GetTextByID( "#EGYPT"   ) );
-	for(int i=0; i < MAX_PLAYERS; i++) {
+	for(i=0; i < MAX_PLAYERS; i++) {
 		PLAYERS[i]->SetSetcData(&sdSecDat);
 		PLAYERS[i]->AddPortH();//TEMP!!! //Old Vic Ver.
 	}
@@ -881,7 +881,7 @@ BMlabel:
 
 	dxi += 10;
 	dty0 = dty0 + 20;
-	for (int i=0; i<5; i++) {
+	for (i=0; i<5; i++) {
 		a_ptb  = a_dsMenu.addTextButton(NULL,0,0, "_" , a_prlcfPgPas,a_prlcfPgPas,a_prlcfPgPas, 0);
 		a_ptb2 = a_dsMenu.addTextButton(NULL,0,0, "_" , a_prlcfPgPas,a_prlcfPgPas,a_prlcfPgPas, 0); 
 		
@@ -922,7 +922,7 @@ BMlabel:
 	strcpy(a_chButtName[4],GetTextByID("#CDB_Button5"));	strcpy(a_chButtName[5],GetTextByID("#CDB_Button6"));
 
 	a_pgptbWM = NULL; 
-	for (int i=0; i < dmbNUM ; i++) {
+	for (i=0; i < dmbNUM ; i++) {
 		a_pgptbWM = a_dsMenu.addGP_TextButton(NULL,0,0,a_chButtName[i],a_lgpTextButton.GPID,0,&RedFont,&OrangeFont);//NEED NEW FONTS 
 		
 		a_pgptbWM->AssignID(0xFF1000 + i);			// --- Смещение по карте 0xFF1000 ---		
@@ -1012,7 +1012,7 @@ BMlabel:
 	//ROOT_SCENARIO += &a_InfoMessages;
 	//ROOT_SCENARIO += &a_Market; 
 
-	for(int i=0; i < MAX_PLAYERS ; i++) { ROOT_SCENARIO += PLAYERS[i];   a_DiplMenu += PLAYERS[i]; }
+	for(i=0; i < MAX_PLAYERS ; i++) { ROOT_SCENARIO += PLAYERS[i];   a_DiplMenu += PLAYERS[i]; }
 
 	//Set main player, hero visible. 
 	pAtackerHero = &(PLAYERS[sp]->m_phrHero[0]);

@@ -59,7 +59,7 @@ void ShowPF(){
 	int DX=100;
 	int DY=60;
 	GPS.DrawFillRect(RealLx-DX-160,DY-10,90+160,max*15+20+20,0x60000000);
-	for(int i=0;i<max;i++){
+	for(i=0;i<max;i++){
 		LARGE_INTEGER DD;
 		if(PF_Finish[i].HighPart||PF_Finish[i].LowPart){
 			PF_Dump[i]=PF_Finish[i];
@@ -91,7 +91,7 @@ void ShowPF(){
 		PF_Finish[i].LowPart=0;
 	};
 	if(GetTickCount()-PF_PrevTime>4000){
-		for(int i=0;i<max;i++){
+		for(i=0;i<max;i++){
 			PF_Prev[i]=(PF_Average[i]*130)/100;
 		};
 		PF_PrevTime=GetTickCount();

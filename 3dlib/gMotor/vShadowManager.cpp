@@ -354,10 +354,10 @@ void ShadowManager::BlurShadowMap()
     v[3].u = 1.0f;
     v[3].v = 1.0f;
 
-    static int shID = IRS->GetShaderID( "shadow_map_filter" );
+    static shID = IRS->GetShaderID( "shadow_map_filter" );
     bm.setShader( shID );
 
-    static int t = IRS->GetTextureID( "env.jpg" );
+    static t = IRS->GetTextureID( "env.jpg" );
     bm.setTexture( m_ShadowMapID, 0 );
     bm.setTexture( m_ShadowMapID, 1 );
 

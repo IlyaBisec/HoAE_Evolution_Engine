@@ -87,8 +87,7 @@ GreenPulse::GreenPulse(){
 	memset(GreenTime,0,512);
 };
 void GreenPulse::AddObj(word ID,byte Color){
-	int i;
-	for(i=0;i<256&&GreenObjs[i]!=0xFFFF;i++){}
+	for(int i=0;i<256&&GreenObjs[i]!=0xFFFF;i++);
 	if(i<256){
 		GreenObjs[i]=ID;
 		GreenTime[i]=24;
@@ -97,8 +96,7 @@ void GreenPulse::AddObj(word ID,byte Color){
 	};
 };
 void GreenPulse::AddXY(int x,int y){
-	int i;
-	for(i=0;i<256&&GreenObjs[i]!=0xFFFF;i++);
+	for(int i=0;i<256&&GreenObjs[i]!=0xFFFF;i++);
 	if(i<256){
 		GreenObjs[i]=x;
 		GreenTime[i]=y;

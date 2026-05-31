@@ -105,7 +105,7 @@ void Switch::Unserialize( InStream& is )
 void Switch::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Switch", this );
-    pm.p( "ActiveChild", &Switch::GetActive, &Switch::SwitchTo );
+    pm.p( "ActiveChild", GetActive, SwitchTo );
 } // Switch::Expose
 
 void Switch::SwitchTo( int nodeIdx )
@@ -256,9 +256,9 @@ void Background::Expose( PropertyMap& pm )
     pm.f( "Width",            m_Extents.w    );
     pm.f( "Height",            m_Extents.h    );
     pm.f( "Back Color",        m_Color, "color" );
-    pm.p( "Clear Color", &Background::GetClearColor, &Background::SetClearColor    );
-    pm.p( "Clear Depth", &Background::GetClearDepth, &Background::SetClearDepth    );
-    pm.p( "Clear Stencil", &Background::GetClearStencil, &Background::SetClearStencil );
+    pm.p( "Clear Color",    GetClearColor,    SetClearColor    );
+    pm.p( "Clear Depth",    GetClearDepth,    SetClearDepth    );
+    pm.p( "Clear Stencil",    GetClearStencil,SetClearStencil );
 } // Background::Expose
 
 void Group::AttachEffect(){
@@ -269,5 +269,5 @@ void Group::AttachEffect(){
 void Group::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Group", this );
-    pm.m( "AttachEffect", &Group::AttachEffect );
+    pm.m( "AttachEffect",AttachEffect );
 } // Background::Expose

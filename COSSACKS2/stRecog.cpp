@@ -330,7 +330,7 @@ void LoadWeapon(){
 				};
 				NLine(f);
 				line++;
-				for(int i=0;i<p1;i++){
+				for(i=0;i<p1;i++){
 					z=Gscanf(f,"%s",gy);
 					FiresAnm[0][i]=GetNewAnimationByName(gy);
 					if(!FiresAnm[0][i]){
@@ -340,7 +340,7 @@ void LoadWeapon(){
 				};
 				NLine(f);
 				line++;
-				for(int i=0;i<p1;i++){
+				for(i=0;i<p1;i++){
 					z=Gscanf(f,"%s",gy);
 					PostFires[0][i]=GetNewAnimationByName(gy);
 					if(!PostFires[0][i]){
@@ -355,7 +355,7 @@ void LoadWeapon(){
 				FiresAnm[1]=znew(lpNewAnimation,p1);
 				PreFires[1]=znew(lpNewAnimation,p1);
 				PostFires[1]=znew(lpNewAnimation,p1);
-				for(int i=0;i<p1;i++){
+				for(i=0;i<p1;i++){
 					z=Gscanf(f,"%s",gy);
 					PreFires[1][i]=GetNewAnimationByName(gy);
 					if(!PreFires[1][i]){
@@ -365,7 +365,7 @@ void LoadWeapon(){
 				};
 				NLine(f);
 				line++;
-				for(int i=0;i<p1;i++){
+				for(i=0;i<p1;i++){
 					z=Gscanf(f,"%s",gy);
 					FiresAnm[1][i]=GetNewAnimationByName(gy);
 					if(!FiresAnm[1][i]){
@@ -375,7 +375,7 @@ void LoadWeapon(){
 				};
 				NLine(f);
 				line++;
-				for(int i=0;i<p1;i++){
+				for(i=0;i<p1;i++){
 					z=Gscanf(f,"%s",gy);
 					PostFires[1][i]=GetNewAnimationByName(gy);
 					if(!PostFires[1][i]){
@@ -872,7 +872,7 @@ void InitFlags(GeneralObject* GO){
 	GO->canNucAttack=false;
 	GO->UFO=false;
 	GO->UFOTrans=false;
-	for(int i=0;i<12;i++){
+	for(i=0;i<12;i++){
 		GO->MWeap[i]=NULL;
 		GO->SWPIndex[i]=255;
 	};
@@ -953,7 +953,7 @@ void ListAllUnits(){
 	};
 	fclose(f);
 	f=fopen("upglist.dat","w");
-	for(int i=0;i<NATIONS->NUpgrades;i++){
+	for(i=0;i<NATIONS->NUpgrades;i++){
 		fprintf(f,"%s %s %s\n",NatNames[NATIONS->UPGRADE[i]->NatID],NATIONS->UPGRADE[i]->Name,NATIONS->UPGRADE[i]->Message);
 	};
 	fclose(f);
@@ -1686,8 +1686,7 @@ void LoadNation(char* fn,byte msk,byte NIndex,byte NatID){
 					//StroiDescription* SDI=GO->OFCR->SDES+j;
 					int na;
 					z=Gscanf(f1,"%s%d",gy,&na);
-					int zn;
-					for(zn=0;zn<NOClasses&&strcmp(gy,OrderDesc[zn].ID);zn++);
+					for(int zn=0;zn<NOClasses&&strcmp(gy,OrderDesc[zn].ID);zn++);
 					if(zn<NOClasses){
 						for(cp=0;cp<8;cp++){
 							StroiDescription* SDI=nat[cp].Mon[zz1]->OFCR->SDES+j;
@@ -1707,8 +1706,7 @@ void LoadNation(char* fn,byte msk,byte NIndex,byte NatID){
 						//int am;
 						char cc1[128];
 						z=Gscanf(f1,"%s",cc1);
-						int t;
-						for(t=0;t<NEOrders&&strcmp(ElementaryOrders[t].ID,cc1);t++);
+						for(int t=0;t<NEOrders&&strcmp(ElementaryOrders[t].ID,cc1);t++);
 						if(t>=NEOrders){
 							Log.Error( "( %s ) %d :[OFFICERS]->%s->%s Invalid oder ID: %s.",fn,line,gg,gy,cc1);
 						};
@@ -1727,7 +1725,7 @@ void LoadNation(char* fn,byte msk,byte NIndex,byte NatID){
 						SDI->NUnits=na;
 						SDI->Units=znew(word,na);
 					};
-					for(int p=0;p<na;p++){
+					for(p=0;p<na;p++){
 						z=Gscanf(f1,"%s",gx);
 						int ui=mnm.SearchString(gx);
 						if(ui==-1){
@@ -2019,8 +2017,7 @@ int Get_UID(Nation* NT,char* gg,char* fn,int line){
 	int N=NT->NMon;
 	char gx[128];
 	GeneralObject** GOG=NT->Mon;
-	int k;
-	for(k=0;k<N&&strcmp(GOG[k]->MonsterID,gg);k++);
+	for(int k=0;k<N&&strcmp(GOG[k]->MonsterID,gg);k++);
 	if(k>=N){
 		NewUpgrade** NUG=NT->UPGRADE;
 		N=NT->NUpgrades;
@@ -2138,8 +2135,7 @@ void LoadAI(char* fn,Nation* NT){
 							int kind=0;
 							int N=NT->NMon;
 							GeneralObject** GOG=NT->Mon;
-							int k;
-							for(k=0;k<N&&strcmp(GOG[k]->MonsterID,gg);k++);
+							for(int k=0;k<N&&strcmp(GOG[k]->MonsterID,gg);k++);
 							if(k>=N){
 								NewUpgrade** NUG=NT->UPGRADE;
 								N=NT->NUpgrades;
@@ -2232,8 +2228,7 @@ void LoadAI(char* fn,Nation* NT){
 								int kind=0;
 								int N=NT->NMon;
 								GeneralObject** GOG=NT->Mon;
-								int k;
-								for(k=0;k<N&&strcmp(GOG[k]->MonsterID,gg);k++);
+								for(int k=0;k<N&&strcmp(GOG[k]->MonsterID,gg);k++);
 								if(k>=N){
 									NewUpgrade** NUG=NT->UPGRADE;
 									N=NT->NUpgrades;

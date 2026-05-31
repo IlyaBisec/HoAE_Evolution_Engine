@@ -1,23 +1,21 @@
+
 #ifndef __AlertOnMiniMap__
 #define __AlertOnMiniMap__
-class AlertEditor;
-#include "stdheader.h"
 
-#include "TestEditor.h"
-#include "GameExtension.h"
-#include "ClassEditorsRegistration.h"
+class AlertEditor;
 
 #define	 AL_NULL	0
 #define	 AL_VIEW	1
 #define	 AL_HIDE	2
 #define	 AL_DELETE	3
-typedef	 int AL_FUNC (void* param);
+typedef	 AL_FUNC(void* param);
 
 bool	g_AddAlert(char* Name,int x,int y,AL_FUNC* pAL_FUNC=NULL,void* param=NULL,char* MyFullName=NULL);
 bool	g_AddAlert(_str  Name,int x,int y,AL_FUNC* pAL_FUNC=NULL,void* param=NULL,char* MyFullName=NULL);
 bool	g_SetNewAlertCoord(char* FullName,int x,int y);
 void	g_UpdateAlertXY();
 void	g_DeleteAllAlert();
+
 // BaseShape /////////////////////////////////////////////////////////////
 class Param_BS : public BaseClass{
 public:
@@ -28,7 +26,6 @@ public:
 	SAVE(Param_BS);
 	ENDSAVE;
 };
-
 class BaseShape : public BaseClass
 {
 public:
@@ -309,10 +306,10 @@ public:
 	class Add_Alert : public BaseFunction
 	{
 	public:
+		Add_Alert(){ x=y=5000; AlertName="NoName"; };
 		int x,y;
 		_str AlertName;
 		void EvaluateFunction();
-		Add_Alert() { x = y = 5000; AlertName = "NoName"; };
 		SAVE(Add_Alert);
 			REG_PARENT(BaseFunction);
 			REG_AUTO(AlertName);
@@ -339,6 +336,16 @@ public:
 extern	AlertEditor gAlertEditor;
 
 // Alert_HANDLER /////////////////////////////////////////////////////////
+class Alert_HANDLER : public GameExtension
+{
+public:
+	virtual void OnClassRegistration();
+	virtual void OnEditorStart();
+	virtual void OnGameStart();
+	virtual bool OnMapUnLoading();
+	virtual void ProcessingGame();
+	virtual void OnDrawOnMiniMap(int x,int y,int Lx,int Ly);
+};
 
 void	Alert_InstallExtension();
 // ClassRegisteration ////////////////////////////////////////////////////

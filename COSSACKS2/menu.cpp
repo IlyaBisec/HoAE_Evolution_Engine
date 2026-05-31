@@ -82,8 +82,7 @@ LPCSTR Menu::GetNstr(int n){
 		if(items[i]=='|')j++;
 	};
 	if(j!=n)return LPCSTR(&tmpstr);
-	int k;
-	for(k=0;items[i]!=0&&items[i]!='|';i++,k++)
+	for(int k=0;items[i]!=0&&items[i]!='|';i++,k++)
 		tmpstr[k]=items[i];
 	tmpstr[k]=0;
 	return LPCSTR(&tmpstr);

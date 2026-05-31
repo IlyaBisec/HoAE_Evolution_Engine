@@ -9,7 +9,7 @@ BaseTriplet VariableExchangeReference::FindClass(){
 	if(B){
 		const char* rstr=VariableReferenceName.pchar();
 		if(rstr[0]=='$'){
-			const char* s0=strchr(rstr,'.');
+			char* s0=strchr(rstr,'.');
 			if(s0){
 				s0++;
 				T.ClassPtr=B;
@@ -53,7 +53,7 @@ BaseTriplet VariableExchangeReference::FindClass(){
 							if(s0[0]=='.')s0++;
 						}else{
 							int idx=atoi(s0+1);
-							const char* s1=strchr(s0,']');
+							char* s1=strchr(s0,']');
 							if(s1){
 								s0=s1+1;
 								if(s0[0]=='.')s0++;
@@ -77,9 +77,9 @@ BaseTriplet VariableExchangeReference::FindClass(){
 							*/
 						}
 					}else{
-						const char* s1=strchr(s0,'[');
-						const char* s2=strchr(s0,'.');
-						const char* s3=s0+strlen(s0);
+						char* s1=strchr(s0,'[');
+						char* s2=strchr(s0,'.');
+						char* s3=s0+strlen(s0);
 
                         if(s1 && s2 && s2-s1 < 0)s1=s2;
 						if(!s1)s1=s2;

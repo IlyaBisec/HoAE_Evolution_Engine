@@ -465,7 +465,7 @@ void VC_CaptureZonesDestroyBrigades::CheckVictoryAndDefeat(){
 						NMask|=1<<a;
 					}
 				}					
-				for(int a=0;a<2;a++){
+				for(a=0;a<2;a++){
 					if(MOptions.Players.Player[c].Team==MOptions.Players.Player[a].Team){
 						VC_CZDB_Player* ap=Player+a;
 						Team[a].Add(c); //ap->ColorID

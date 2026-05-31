@@ -28,7 +28,7 @@ void Button::Expose( PropertyMap& pm )
 {
     pm.start<Widget>( "Button", this );
     pm.f( "Down", m_bDown );
-    pm.p( "SpritePack", &Button::GetSpritePack, &Button::SetSpritePack );
+    pm.p( "SpritePack", GetSpritePack, SetSpritePack );
     pm.f( "SpriteID",   m_SpriteID );
     pm.f( "DrawBorder", m_bDrawBorder );
     pm.s( "pressed",    sigPressed );

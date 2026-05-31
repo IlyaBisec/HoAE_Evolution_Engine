@@ -186,6 +186,19 @@ public:
 	int ItemDrop;
 	int ShopPrice;
 	float SellMultiplier;
+	bool EnableCustomReward;
+	int  FoodReward;
+	int  WoodReward;
+	int  StoneReward;
+	int  IronReward;
+	int  GoldReward;
+	int  CoalReward;
+	int  RandomFoodReward;
+	int  RandomWoodReward;
+	int  RandomStoneReward;
+	int  RandomIronReward;
+	int  RandomGoldReward;
+	int  RandomCoalReward;
 
 	////////////////// States ///////////////////////////
 	BaseClassUnitType GroundMD;
@@ -406,6 +419,7 @@ public:
 			//REG_AUTO(State);
 			REG_MEMBER(_int,ShopPrice);
 			REG_MEMBER(_float,SellMultiplier);
+		SAVE_SECTION(1);
 			REG_MEMBER(_int,ManaValue);
 			REG_MEMBER(_int,MoneyValue);
 			REG_AUTO(CoolDownDuration); //REG_MEMBER(_int,CoolDownDuration);
@@ -513,7 +527,20 @@ public:
 			REG_MEMBER(_BYTE,BodyStyleTarget);
 			REG_MEMBER(_bool,SummonTarget);
 			REG_MEMBER(_int,TargetMaxAmount);
-
+		REG_AUTO(D);
+			REG_MEMBER(_bool,EnableCustomReward);
+			REG_MEMBER(_int,FoodReward);
+			REG_MEMBER(_int,WoodReward);
+			REG_MEMBER(_int,StoneReward);
+			REG_MEMBER(_int,IronReward);
+			REG_MEMBER(_int,GoldReward);
+			REG_MEMBER(_int,CoalReward);
+			REG_MEMBER(_int,RandomFoodReward);
+			REG_MEMBER(_int,RandomWoodReward);
+			REG_MEMBER(_int,RandomStoneReward);
+			REG_MEMBER(_int,RandomIronReward);
+			REG_MEMBER(_int,RandomGoldReward);
+			REG_MEMBER(_int,RandomCoalReward);
 		SAVE_SECTION(1);
 			REG_ENUM(_index,CursType,TEXTURE_CURSOR_TYPES);
 			REG_MEMBER(_color,CursColor);
@@ -659,7 +686,7 @@ public:
 
 		BaseUA=NULL;
 
-		//CasterID=0xFFFF;
+		CasterID=0xFFFF;
 		EffectTime=-100000;
 
 		LastImpulseWeaponTime=0;
@@ -912,7 +939,7 @@ public: // BE scripts
 	virtual void modifyDamReduct	     (int Basic, int& Current,int ReductType);
 	virtual void modifyIgnoreProtection	 (int Basic, int& Current);
 	virtual void modifyVampire			 (word Basic,word& Current,int Damage,OneObject* Damager,OneObject* Victim);
-	virtual void modifyThorn			 (word Basic,word& Current,int Damage,OneObject* Damager,OneObject* Victim);
+	virtual void modifyThorn			 (word Basic,word& Current,int Damage,OneObject* Damager,OneObject* Victim,byte AttType);
 	virtual void modifyAlteration		 (int Basic,int& Current,OneObject* Target);
 	virtual void modifyAttackRadiusMax	 (int Basic,int& Current);
 	
@@ -934,6 +961,7 @@ public: // BE scripts
 
 	virtual void modifyLevelForEffects	(int Basic, int& Current);
 	virtual void modifyTradeSkill		(int Basic, int& Current);
+	virtual void modifyNMask			(byte Basic, byte& Current);
 	virtual void modifyLearning			(int Basic, int& Current);
 	virtual void modifyWeaponKind		(int Basic, int& Current, int AttType);
 	virtual void modifyEvasion			(int Basic, int& Current);
@@ -1123,8 +1151,8 @@ public:
 	inline void modifyVampire			(word Basic,word& Current,int Damage,OneObject* Damager,OneObject* Victim){
 		ListWalk(Vampire)(Basic,Current,Damage,Damager,Victim);
 	}
-	inline void modifyThorn				(word Basic,word& Current,int Damage,OneObject* Damager,OneObject* Victim){
-		ListWalk(Thorn)(Basic,Current,Damage,Damager,Victim);
+	inline void modifyThorn				(word Basic,word& Current,int Damage,OneObject* Damager,OneObject* Victim,byte AttType){
+		ListWalk(Thorn)(Basic,Current,Damage,Damager,Victim, AttType);
 	}
     inline void modifyAlteration				(int Basic,int& Current, OneObject* Target){
 		ListWalk(Alteration)(Basic,Current,Target);
@@ -1245,6 +1273,9 @@ public:
 	inline void modifyLockType			(byte Basic, byte& Current){
 		ListWalk(LockType)(Basic,Current);
 	}
+	inline void modifyNMask				(byte Basic, byte& Current){
+		ListWalk(NMask)(Basic,Current);
+	}
 	inline bool isCenterScreen(){
 		bool Current=false;
 		ListBool(CenterScreen)();
@@ -1312,6 +1343,9 @@ public:
 	mod_ModelAnimation* ModelAnimation;
 	word TargetModelAnimationUnitType;
 	byte ControlNI;
+	byte NewNMask;
+	bool MaskWasEdited;
+	//bool NMaskBeginProcess;
 	int NMask;
 	byte CurKillMask;
 	short FlyHeight;

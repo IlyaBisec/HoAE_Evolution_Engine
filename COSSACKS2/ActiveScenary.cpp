@@ -1463,7 +1463,7 @@ int GetBrigadsAmount(GAMEOBJ* pGrp){
 	int	  SQNUM=0;
 	int	  SQID[256];
     for (int i=0;i<256;i++)	SQID[i]=-1;
-	for (int i=0; i<NU; i++){
+	for (i=0; i<NU; i++){
 		word MID=UIDS[i];
 		if (MID!=0xFFFF) {
 			OneObject* OB=Group[MID];
@@ -2118,7 +2118,7 @@ void SendUnitsToTransport(byte Nat){
 			};
 		};
 		if(TransID!=0xFFFF){
-			for(int i=0;i<N;i++){
+			for(i=0;i<N;i++){
 				word MID=Selm[Nat][i];
 				if(MID!=0xFFFF){
 					OneObject* OB=Group[MID];
@@ -2669,7 +2669,7 @@ DLLEXPORT void SelChangeNation(byte SrcNat,byte DstNat){
 		};
 	};
 	ClearSelection(SrcNat);
-	for(int i=0;i<NBr;i++){
+	for(i=0;i<NBr;i++){
 		ChangeBrigNation(BrID[i],SrcNat,DstNat);
 	}
 };
@@ -2980,7 +2980,7 @@ DLLEXPORT int AskComplexQuestion(int Nx,char* Name1,byte or1,char* Name2,byte or
 	};
 	IntErr("AskComplexQuestion : Unknown page : %s",Name1);
 qq1:
-	for(int i=0;i<SCENINF.NPages;i++){
+	for(i=0;i<SCENINF.NPages;i++){
 		if(!strcmp(Name2,SCENINF.PageID[i])){
 			q2=i;
 			goto qq2;
@@ -3184,7 +3184,7 @@ void RunAI(byte Nat){
 			};
 		};
 RegUni:;
-		for(int i=0;i<MAXOBJECT;i++){
+		for(i=0;i<MAXOBJECT;i++){
 			OneObject* OB=Group[i];
 			if(OB&&OB->NNUM==Nat&&OB->BrigadeID==0xFFFF){
 				NT->CITY->RegisterNewUnit(OB);
@@ -3943,7 +3943,7 @@ void StartAI(byte Nat,char* Name,int Land,int Money,int ResOnMap,int Difficulty)
 	};
 	GNFO.Clear();
 	GNFO.Setup();
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		NATIONS[i].NMask=MSKS[i];
 	};
 	StartAIEx(Nat,Name,Land,Money,ResOnMap,Difficulty);
@@ -3982,7 +3982,7 @@ void StartAIEx(byte Nat,char* Name,int Land,int Money,int ResOnMap,int Difficult
 	int NML=0;
 	int cxi[4];
 	int cyi[4];
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		OneObject* OB=Group[Units[i]];
 		if(OB){
 			byte Usage=OB->newMons->Usage;
@@ -4018,7 +4018,7 @@ void StartAIEx(byte Nat,char* Name,int Land,int Money,int ResOnMap,int Difficult
 	if(NML){
 		int NF=0;
 		OneSprite* OS=Sprites;
-		for(int i=0;i<MaxSprt&&NF<512;i++){
+		for(i=0;i<MaxSprt&&NF<512;i++){
 			if(OS->Enabled&&OS->SG==&COMPLEX){
 				int cx=OS->x;
 				int cy=OS->y;
@@ -4854,7 +4854,7 @@ CEXPORT word GetPortBranch(OneObject* OB){
 extern byte CannonState;
 int TryToStandBuildingAnywhere(int x,int y,byte NI,int Type,BuildRequirements* Req);
 
-#include "unichash.h"
+#include "mesh\unihash.h"
 uni_hash<DWORD,bi_DWORD> TryUnitLastTime;
 
 void ResetTryUnitLastTime(){
@@ -5127,8 +5127,7 @@ bool AssignMineUpgrade(word U,char* Str,word val){
 		if(U<CNAT->UGRP_MINEUP.N){
 			NewUpgrade** NUG=CNAT->UPGRADE;
 			int N=CNAT->NUpgrades;
-			int k;
-			for(k=0;k<N&&strcmp(NUG[k]->Name,Str);k++);
+			for(int k=0;k<N&&strcmp(NUG[k]->Name,Str);k++);
 			if(k>=N){
 				char cc[128];
 				sprintf(cc,"AssignMineUpgrade : Invalid upgrade name:%s",Str);
@@ -5151,8 +5150,7 @@ bool AssignMineUpgrade(word U,char* Str,word val){
 int GETUID(char* Name){
 	GeneralObject** GOG=NATIONS[CurAINation].Mon;
 	int N=NATIONS[CurAINation].NMon;
-	int k;
-	for(k=0;k<N&&strcmp(GOG[k]->MonsterID,Name);k++);
+	for(int k=0;k<N&&strcmp(GOG[k]->MonsterID,Name);k++);
 	if(k>=N)return -1;
 	return k;
 };
@@ -5947,7 +5945,7 @@ void SavePlayerData(char* Name){
 		// Save single battle score
 		if(!strstr(Name,"standart player info")){
 //			Gprintf(F,"%d ",NSinBattle);
-			for(int i=0;i<GetNSBattle();i++){
+			for(i=0;i<GetNSBattle();i++){
 				Gprintf(F,"%d ",SBDScore[i]);
 				Gprintf(F,"%d ",SBTScore[i]);
 			}
@@ -5990,7 +5988,7 @@ void LoadPDATA(char* Name){
 //		if(!Gscanf(F,"%d ",&NSinBattle)||NSinBattle<1||NSinBattle>GetNSBattle())
 //			NSinBattle=1;
 		int pts;
-		for(int i=0;i<GetNSBattle();i++){
+		for(i=0;i<GetNSBattle();i++){
 			if(Gscanf(F,"%d ",&pts)) SBDScore[i]=pts;
 				else SBDScore[i]=0;
 			if(Gscanf(F,"%d ",&pts)) SBTScore[i]=pts;
@@ -7046,7 +7044,7 @@ int StormSimulator(GAMEOBJ* StormGroup,GAMEOBJ* AddDefenders,word BldIndex){
 		word* S_IDS=SGRP->IDS;
 		word* S_SNS=SGRP->SNS;
 		int NSTORM=SGRP->N;
-		for(int i=0;i<NSTORM;i++){
+		for(i=0;i<NSTORM;i++){
 			if(!NINS)return NSTORM-i;
 			word SMID=S_IDS[i];
 			if(SMID!=0xFFFF){
@@ -7700,28 +7698,28 @@ void SetInterfaceCallback(SubstInterfFunc* F){
 	CheckInterface=F;
 };
 
-typedef int tpDeathCallback(int KilledIndex,int VictimIndex);
+typedef tpDeathCallback(int KilledIndex,int VictimIndex);
 DynArray<tpDeathCallback*> daDeathCallback;
 CEXPORT tpDeathCallback* SetDeathCallback(tpDeathCallback* dc){
 	if(daDeathCallback.find(dc)==-1)daDeathCallback.Add(dc);
 	return NULL;
 }
 
-typedef int tpBirthCallback(int NewbornIndex);
+typedef tpBirthCallback(int NewbornIndex);
 DynArray<tpBirthCallback*> daBirthCallback;
 CEXPORT tpBirthCallback* SetBirthCallback(tpBirthCallback* dc){
 	if(daBirthCallback.find(dc)==-1)daBirthCallback.Add(dc);
 	return NULL;
 }
 
-typedef int tpDamageCallback(int KillerIndex,int VictimIndex,int Value);
+typedef tpDamageCallback(int KillerIndex,int VictimIndex,int Value);
 DynArray<tpDamageCallback*> daDamageCallback;
 CEXPORT tpDamageCallback* SetDamageCallback(tpDamageCallback* dc){
 	if(daDamageCallback.find(dc)==-1)daDamageCallback.Add(dc);
 	return NULL;
 };
 
-int SetFillDelay(int KillerID, int VictimID, int Damage){
+SetFillDelay(int KillerID, int VictimID, int Damage){
 	if(VictimID>=0&&VictimID<MAXOBJECT){
 		OneObject* VOB=Group[VictimID];
 		if(VOB&&!VOB->Sdoxlo&&VOB->BrigadeID!=0xFFFF){
@@ -7743,14 +7741,14 @@ void SetBrigFillDelay(OneObject* Victim){
 	}
 }
 
-typedef int tpCaptureCallback(int VictimIndex,byte SrcNation,byte DstNation,int CapturerIndex);
+typedef tpCaptureCallback(int VictimIndex,byte SrcNation,byte DstNation,int CapturerIndex);
 DynArray<tpCaptureCallback*> daCaptureCallback;
 CEXPORT tpCaptureCallback* SetCaptureCallback(tpCaptureCallback* dc){
 	if(daCaptureCallback.find(dc)==-1)daCaptureCallback.Add(dc);
 	return NULL;
 };
 
-typedef int tpDrawOnMiniMapCallback(int x,int y,int Lx,int Ly,int mx0,int my0);
+typedef tpDrawOnMiniMapCallback(int x,int y,int Lx,int Ly,int mx0,int my0);
 DynArray<tpDrawOnMiniMapCallback*> daDrawOnMiniMapCallback;
 CEXPORT tpDrawOnMiniMapCallback* SetDrawOnMiniMapCallback(tpDrawOnMiniMapCallback* dc){
 	if(daDrawOnMiniMapCallback.find(dc)==-1)daDrawOnMiniMapCallback.Add(dc);
@@ -7891,7 +7889,7 @@ void xLine(int x,int y,int x1,int y1,byte c);
 
 void GetUnitsSelGroups(byte NI);
 void CreateSelInterface();
-//void CreateUnitInterface();
+void CreateUnitInterface();
 int CreateStandartUnitsInterface();
 extern int NSelWay;
 void PrepareDrawObjWay(OneObject* OB);
@@ -7941,7 +7939,7 @@ int DrawUnitsInterface(){
 		if(OIS.NSelObj==1){
 			NewMonster* NM=NATIONS[NI].Mon[OIS.SelObj[0]]->newMons;
 			if(NM->VUI!=0xFFFF){
-				//CreateUnitInterface();
+				CreateUnitInterface();
 				StopPF((5<<8)+1);
 				return 4;
 			}
@@ -7957,7 +7955,7 @@ int DrawUnitsInterface(){
 		if(OIS.NSelObj>0){
 			NewMonster* NM=NATIONS[NI].Mon[OIS.SelObj[0]]->newMons;
 			if(NM->VUI!=0xFFFF){
-				//CreateUnitInterface();			
+				CreateUnitInterface();			
 				StopPF((5<<8)+1);
 				return 4;
 			}
@@ -8678,7 +8676,7 @@ void FillFormation(Brigade* BR){
 	if(N1){
 		int N=FindUnits(xx,yy,MobilR*16,BR->MembID,BR->CT->NI,N1,ULOCAL);
 		N2=0;
-		for(int i=NBPERSONAL;i<NN&&N;i++){
+		for(i=NBPERSONAL;i<NN&&N;i++){
 			bool INS=0;
 			if(BR->Memb[i]==0xFFFF)INS=1;
 			else{
@@ -8825,7 +8823,7 @@ void DoFillFormation(byte NI,word BrigadeID){
 DLLEXPORT
 bool FillFormationFromGroup(byte BrigNI, word BrigID, GAMEOBJ* Source, GAMEOBJ* Dest=NULL){
 	
-	const int RB=120;
+	const RB=120;
 	word bNIndex=0xFFFF;
 	UnitsGroup* RG=GetUnitsGroup(Source);
 	int nrg=RG->N;
@@ -9600,7 +9598,7 @@ CEXPORT int CreateBrigInZone(byte NI, int x, int y, word OfType, word SlType, by
 
 	// Alexander correction
 	N=0;
-	for(int i=0;i<2;i++){
+	for(i=0;i<2;i++){
 		if(UG.IDS[i]==0xFFFF){
 			if(i==0&&OfType==0xFFFF) continue;
 			N++;
@@ -9612,7 +9610,7 @@ CEXPORT int CreateBrigInZone(byte NI, int x, int y, word OfType, word SlType, by
 		}
 	}
 	if(N){
-		for(int i=2-N;i<2;i++){
+		for(i=2-N;i<2;i++){
 			UG.IDS[i]=UG.IDS[UG.N+i-3];
 			UG.SNS[i]=UG.SNS[UG.N+i-3];
 		}

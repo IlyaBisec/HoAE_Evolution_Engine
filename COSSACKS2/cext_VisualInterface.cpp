@@ -35,7 +35,7 @@ public:
 };
 
 ClassArray<Voice> VoiceQueue;
-const int VoiceQueueChanel=1;
+const VoiceQueueChanel=1;
 
 void AddVoiceToQueue(char* FileName){
 	Voice* V = new Voice;
@@ -166,8 +166,7 @@ void cext_VisualInterface::OnDrawOnMapAfterTransparentEffects(){
 	GetDipSimpleBuildings(NDips,SBs);
 	if(NDips){
 		static DialogsSystem* dsSettl=new DialogsSystem;	
-		int i = 0;
-		for(i;i<NDips;i++){
+		for(int i=0;i<NDips;i++){
 			GPPicture* GP=NULL;
 			if(i>=dsSettl->DSS.GetAmount()){
 				GP=new GPPicture;
@@ -682,7 +681,7 @@ CEXPORT void AddPulseSquare(int x, int y){
 	Pulse->ID=x;
 	Pulse->UserParam=y;
 	n=Pulse->v_Actions.GetAmount();
-	for(int i=0;i<n;i++){
+	for(i=0;i<n;i++){
 		vui_BasicEffect* BE=dynamic_cast<vui_BasicEffect*>(Pulse->v_Actions[i]);
 		if(BE){
             BE->StartEffect();			
@@ -809,7 +808,7 @@ CEXPORT void Add_VI_Zone(int x, int y, DWORD color){
 	Pulse->Diffuse=color;
 	Pulse->Visible=true;
 	n=Pulse->v_Actions.GetAmount();
-	for(int i=0;i<n;i++){
+	for(i=0;i<n;i++){
 		vui_BasicEffect* BE=dynamic_cast<vui_BasicEffect*>(Pulse->v_Actions[i]);
 		if(BE){
             BE->StartEffect();			
@@ -860,7 +859,7 @@ void cext_VisualInterface::OnDrawOnMiniMap(int x,int y,int Lx,int Ly){
 	//
 	DS=&cext_VisualInterface::VI_Zone;
 	n=DS->DSS.GetAmount();
-	for(int i=0;i<n;i++){
+	for(i=0;i<n;i++){
 		GPPicture* GP=dynamic_cast<GPPicture*>(DS->DSS[i]);
 		if(GP){ //!GP->Visible
 			int px=GetXOnMiniMap(GP->ID,GP->UserParam);
@@ -1089,7 +1088,7 @@ bool cext_VisualInterface::OnCheatEntering(const char* Cheat){
 		AssignHint1(Com,100);
 		return true;
 	}
-	if(strstr(Cheat,"Expaplease")){
+	if(strstr(Cheat,"GiveExpa")){
 		int Expa=0;
 		if(sscanf(Cheat,"%s%d",Com,&Expa)>1){
 			void GiveExpa(int Expa);
@@ -1097,7 +1096,7 @@ bool cext_VisualInterface::OnCheatEntering(const char* Cheat){
 		}
 		return true;;
 	}else
-	if(strstr(Cheat,"Ineedmoney")){
+	if(strstr(Cheat,"GiveMoney")){
 		int M=0;
 		if(sscanf(Cheat,"%s%d",Com,&M)>1){
 			AddXRESRC(MyNation,MoneyID,M);

@@ -85,7 +85,7 @@ public:
 			Mesh->setNVert(NV);
 			int NIDX=Mesh->getNInd();
 			word* idxs=Mesh->getIndices()+NIDX;
-			for(int j=0;j<6;j++){
+			for(j=0;j<6;j++){
 				int idx1=indices[j];
 				int idx2=indices[(j+1)%6];
 				/*Vertex* V0=Ventry+idx0;
@@ -162,7 +162,7 @@ public:
 			Mesh->setNVert(NV);
 			int NIDX=Mesh->getNInd();
 			word* idxs=Mesh->getIndices()+NIDX;
-			for(int j=0;j<6;j++){
+			for(j=0;j<6;j++){
 				int idx1=indices[j];
 				int idx2=indices[(j+1)%6];
 				Vertex* V0=Ventry+idx0;
@@ -534,7 +534,7 @@ GW4_2:
 			pop		edi
 			pop		esi
 		}
-		for(int i=0;i<128;i++){
+		for(i=0;i<128;i++){
 			memcpy(Tbits+128*512+i*512,Tbits+i*512,512);
 		}
 		IRS->UnlockTexBits(WaterTexSysPS);

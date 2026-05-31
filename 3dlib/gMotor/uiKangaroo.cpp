@@ -18,18 +18,19 @@
 
 #include "sg.h"
 #include "sgRoot.h"
-#include "gmDefines.h"
 
 //  this is the root of the interface system
 IInputDispatcher*   IInput = &MainFrame::instance();
+
 void RenderUI()
 {
     BEGIN_ONCE
-        MainFrame::instance().AddChild(Kangaroo::instance());
-    MainFrame::instance().Init();
+        MainFrame::instance().AddChild( Kangaroo::instance() );
+        MainFrame::instance().Init();
     END_ONCE
-        MainFrame::instance().Draw();
+    MainFrame::instance().Draw();
 }
+
 /*****************************************************************************/
 /*  Kangaroo implementation
 /*****************************************************************************/
@@ -95,20 +96,20 @@ void Kangaroo::Expose( PropertyMap& pm )
 {
     pm.start( "Kangaroo", this );
 
-    pm.p( "FPS", &Kangaroo::GetFPS );
-    pm.m( "ActivateModelEditor", &Kangaroo::ActivateModelEditor     );
-    pm.m( "ActivateEffectEditor", &Kangaroo::ActivateEffectEditor    );
-    pm.m( "ActivateWidgetEditor", &Kangaroo::ActivateWidgetEditor    );
-    pm.m( "ActivateSceneEditor", &Kangaroo::ActivateSceneEditor     );
-    pm.m( "ActivateSystemExplorer", &Kangaroo::ActivateSystemExplorer  );
-    pm.m( "ActivateDebugger", &Kangaroo::ActivateDebugger        );
-    pm.m( "ActivateCharEditor", &Kangaroo::ActivateCharEditor      );
-	pm.m( "ActivatePhysics", &Kangaroo::ActivatePhysics			);
+    pm.p( "FPS", GetFPS );	
+    pm.m( "ActivateModelEditor",    ActivateModelEditor     );
+    pm.m( "ActivateEffectEditor",   ActivateEffectEditor    );
+    pm.m( "ActivateWidgetEditor",   ActivateWidgetEditor    );
+    pm.m( "ActivateSceneEditor",    ActivateSceneEditor     );
+    pm.m( "ActivateSystemExplorer", ActivateSystemExplorer  );
+    pm.m( "ActivateDebugger",       ActivateDebugger        );
+    pm.m( "ActivateCharEditor",     ActivateCharEditor      );
+	pm.m( "ActivatePhysics",		ActivatePhysics			);
     
-    pm.m( "ReloadResources", &Kangaroo::ReloadResources         );
-    pm.m( "EditOptions", &Kangaroo::EditOptions             );
+    pm.m( "ReloadResources",        ReloadResources         );
+    pm.m( "EditOptions",            EditOptions             );
 
-    pm.m( "Exit", &Kangaroo::Exit );
+    pm.m( "Exit", Exit );
 
 } // Kangaroo::Expose
 

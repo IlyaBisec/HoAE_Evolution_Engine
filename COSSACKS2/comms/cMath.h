@@ -286,7 +286,7 @@ inline float cMath::Abs(float f) {
 
 // cMath::Abs : double(double)
 inline double cMath::Abs(double d) {
-	return fabs(d);
+	return abs(d);
 }
 
 // cMath::Round : float(float)

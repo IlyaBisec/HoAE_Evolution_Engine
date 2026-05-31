@@ -22,8 +22,7 @@ int OneObject::CheckAbility(word ID){
 	Nation* NT=Nat;
 	word NInd=NIndex;
 	int p=NT->PACount[NInd];
-	int i;
-	for(i=0;i<p;i++){
+	for(int i=0;i<p;i++){
 		if(NT->PAble[NInd][i]==ID)break;
 	};
 	if(i>=p)return 0;
@@ -585,8 +584,7 @@ void ProduceObjLink(OneObject* OBJ){
 		XC=OBJ->RealX;
 		YC=OBJ->RealY;
 		int Y0=YC;
-		int i;
-		for(i=0;i<50;i++){
+		for(int i=0;i<50;i++){
 			if(!CheckBar( (XC>>8)-3,(YC>>8)-3,6,6) ){
 				break;
 			}
@@ -885,11 +883,11 @@ bool AddUnitsToCash(byte NI,word ID){
 	int CMON[8];
 	GetUnitCost(NI,ID&8191,COST,0,0);
 	GetCorrectMoney(NI,CMON);
-	for(int i=0;i<6;i++)if(CMON[i]<COST[i]){
+	for(i=0;i<6;i++)if(CMON[i]<COST[i]){
 		CSSIZE-=addc;
 		return false;
 	};
-	for(int i=0;i<6;i++)UNICASH[cps].SubMoney[i]=COST[i];
+	for(i=0;i<6;i++)UNICASH[cps].SubMoney[i]=COST[i];
 	UNICASH[cps].ID=ID;
 	UNICASH[cps].NI=NI;
 	UNICASH[cps].Amount++;
@@ -900,7 +898,7 @@ void ClearUniCash(){
 };
 void GetCorrectMoney(byte NI,int* MONEY){
 	for(int i=0;i<8;i++)MONEY[i]=XRESRC(NI,i);
-	for(int i=0;i<CSSIZE;i++){
+	for(i=0;i<CSSIZE;i++){
 		if(UNICASH[i].NI==NI){
 			for(int j=0;j<6;j++){
 				MONEY[j]-=UNICASH[i].SubMoney[j];
@@ -931,7 +929,7 @@ int GetAmount(word ID){
 			};
 		};
 	};
-	for(int i=0;i<CSSIZE;i++)if(UNICASH[i].NI==MyNation&&UNICASH[i].ID==ID)CID+=UNICASH[i].Amount;
+	for(i=0;i<CSSIZE;i++)if(UNICASH[i].NI==MyNation&&UNICASH[i].ID==ID)CID+=UNICASH[i].Amount;
 	//StopPF(29);
 	return CID;
 };

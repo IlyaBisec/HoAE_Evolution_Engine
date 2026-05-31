@@ -7,7 +7,8 @@
 #include <memory.h>
 #include <time.h>
 #include <string.h>
-
+#define CEXPORT __declspec(dllexport)
+#define CIMPORT __declspec(dllimport)
 typedef unsigned short word;
 
 #define free _ExFree
@@ -33,9 +34,6 @@ inline void __cdecl operator delete(void *ptr)
 #define FASTDRAW_USER
 #define FONTS_USER
 #define GFILE_USER
-
-#define CEXPORT __declspec(dllexport)
-#define CIMPORT __declspec(dllimport)
 
 #include "..\Cossacks2\fastdraw.h"
 #pragma pack(1)

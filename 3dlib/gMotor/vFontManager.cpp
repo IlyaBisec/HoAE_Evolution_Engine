@@ -78,7 +78,7 @@ void BitmapFont::Flush()
 {
     if (m_NCharInst == 0) return;
     static BaseMesh        s_BM;
-    static int shID    = IRS->GetShaderID( "text" );
+    static shID    = IRS->GetShaderID( "text" );
     if (s_BM.getNVert() == 0)
     {
         s_BM.create( c_MaxCharInst*4, c_MaxCharInst*6, vfVertexTnL );

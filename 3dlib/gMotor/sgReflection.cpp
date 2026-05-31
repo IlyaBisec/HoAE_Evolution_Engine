@@ -192,7 +192,7 @@ void ReflectionMap::Expose( PropertyMap& pm )
     pm.f( "RenderReflection",   m_bRenderReflection );
     pm.f( "RenderBackdrop",     m_bRenderBackdrop   );
     pm.f( "DebugInfo",          m_bDrawDebugInfo    );
-    pm.m( "ChangeStructure", &ReflectionMap::Init                );
+    pm.m( "ChangeStructure",    Init                );
 } // ReflectionMap::Expose
 
 void ReflectionMap::Init()

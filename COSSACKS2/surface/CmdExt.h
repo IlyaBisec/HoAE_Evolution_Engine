@@ -2,7 +2,7 @@
 #define __CmdExt__
 
 #include "..\GameExtension.h"
-#include "..\surface\Surface.h"
+#include "Surface.h"
 
 namespace Surface {
 

@@ -555,7 +555,7 @@ public:
 	virtual bool				RefreshRateOverrideIsEnabled	(int *pHz = NULL) = 0;
 	virtual HWND				GetHWND							() = 0;
 
-	virtual void				AddScreenResolution		(const int XRes, const int YRes, const int RR) = 0;
+	virtual void				AddScreenResolution		(const int XRes, const int YRes, const RR) = 0;
 
 }; // class IRenderSystem
 

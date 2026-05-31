@@ -6,11 +6,12 @@
 //#include "GSCarch.h"
 
 #include <stdio.h>
+#include "..\ddini.h"
 #include "GSCtypes.h"
 #include "GSCarch.h"
 #include "GSCset.h"
 #include "isiMasks.h"
-#include "..\ddini.h"
+
 ;
 
 //////////////////////////////////////////////////////////////////////

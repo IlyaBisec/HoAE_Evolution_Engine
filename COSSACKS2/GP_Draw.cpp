@@ -1,6 +1,7 @@
 #define _WINSOCKAPI_
 #include "stdheader.h"
 #include <malloc.h>
+#include "ddini.h"
 #include "ResFile.h"
 #include "mode.h" 
 #include "fastdraw.h"
@@ -24,7 +25,6 @@
 #include "kStaticArray.hpp"
 #include "rsRenderSystem.h"
 #include <vector>
-#include "ddini.h"
 
 #define FASTLOAD
 bool CheckIfFileExists(char* Name); 
@@ -491,7 +491,7 @@ void UNIFONTS::LoadFonts(){
 		z=Gscanf(F,"%d",&N);
 		int v;
 		char ccc[64];
-		for(int i=0;i<N;i++){
+		for(i=0;i<N;i++){
 			z=Gscanf(F,"%s%d",ccc,&v);
 			if(z==2){
 				if(!strcmp(ccc,"UNI_LINEDLY1")){

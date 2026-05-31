@@ -294,7 +294,7 @@ void PrepareSpellLink(OneObject* OB){
 	addrand(x);
 	addrand(y);
 	addrand(d);
-
+	int distancia;
 	word dir=0xFFFF;
 	if(d>0){
 		int dx=x-OB->RealX/16;
@@ -302,8 +302,8 @@ void PrepareSpellLink(OneObject* OB){
 		int dist=Norma(dx,dy);
 
 		addrand(dist);
-		
-		if(dist>d){
+		distancia = dist;
+		if(dist>d&&!OB->NewBuilding){
 			OB->CreatePath(x>>4,y>>4);
 			return;
 		}
@@ -326,7 +326,9 @@ void PrepareSpellLink(OneObject* OB){
 
 		if(dir!=0xFFFF) RotUnit(OB,dir,1,128+16);
 	}
-
+	if (distancia > d&&OB->NewBuilding) {
+		OB->DeleteLastOrder();
+	}
 }
 bool PrepareSpell(OneObject* OB, byte OrdType, DWORD AblSerial, OneObject* Target, int Tx, int Ty, int Dist, int Radius, int CursorID){ //OneAbility* AA
 	if( OB && !OB->UnlimitedMotion ){

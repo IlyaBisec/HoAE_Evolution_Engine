@@ -1029,7 +1029,7 @@ void CreateAveragePlane(int x,int y,int r){
 		};
 	if(!np)return;
 	h=div(h,np).quot;
-	for(int tx=-r1;tx<r1;tx++)
+	for(tx=-r1;tx<r1;tx++)
 		for(int ty=-r1;ty<r1;ty++){
 			int vx=utx+tx;
 			int vy=uty+ty;
@@ -1154,7 +1154,7 @@ void Loadtextures(){
 		Gclose(FF);
 		FF=Gopen("fract_set.txt","r");
 		if(FF){
-			for(int i=0;i<8;i++){
+			for(i=0;i<8;i++){
 				int n;
 				Gscanf(FF,"%d",&n);
 				TEXARR[i]=n;
@@ -1371,7 +1371,7 @@ void OverTriangle::Clear(){
 		TRIANG[i]=NULL;
 		NTRIANG[i]=0;
 	};
-	for(int i=0;i<CurElm;i++)delete(Buffer[i]);
+	for(i=0;i<CurElm;i++)delete(Buffer[i]);
 	if(MaxElm)delete(Buffer);
 	Buffer=NULL;
 	MaxElm=0;

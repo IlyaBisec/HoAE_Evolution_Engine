@@ -123,7 +123,7 @@ bool SelectSingleMission(){
 		};
 	};
 	int N0=MISSLIST.MSMiss;
-	for(int i=0;i<AMSP.NMiss;i++){
+	for(i=0;i<AMSP.NMiss;i++){
 		LB->AddItem(AMSP.Pack[i].Title,0);
 		TV[N0+i]=MMenu.addTextViewer(NULL,TextX,TextY,TextLx,TextLy,AMSP.Pack[i].Preview,FMissText);
 		TV[N0+i]->SymSize=21;

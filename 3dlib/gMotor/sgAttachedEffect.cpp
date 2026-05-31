@@ -89,7 +89,7 @@ void AttachedEffect::Unserialize( InStream& is ){
 }
 void AttachedEffect::Expose( PropertyMap& pm ){
     pm.start<Parent>( "AttachedEffect", this );    
-    pm.p( "Effect", &AttachedEffect::GetEffectName, &AttachedEffect::SetEffectName, "#model" );
+    pm.p( "Effect", GetEffectName, SetEffectName, "#model" );    
     pm.f( "EffectMask", m_EffectMask );
     pm.f( "EffectScale", m_EffectScale );
 

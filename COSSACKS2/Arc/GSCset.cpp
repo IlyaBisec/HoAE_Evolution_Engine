@@ -6,10 +6,11 @@
 //#include "GSCset.h"
 
 #include <stdio.h>
+#include "..\ddini.h"
 #include "GSCtypes.h"
 #include "GSCarch.h"
 #include "GSCset.h"
-#include "..\ddini.h"
+
 //#include <smart_assert.h>
 //#include <DString.h>
 

@@ -1,9 +1,6 @@
-//#include ".\cossacks2\stdheader.h"
-#include "..\stdheader.h"
 #include "stdheader.h"
 #define _WINSOCKAPI_
 #include <malloc.h>
-#include "..\stdheader.h"
 #include "..\ddini.h"
 #include "..\ResFile.h"
 #include "..\FastDraw.h"
@@ -46,7 +43,6 @@
 #include "stats\gstats.h"
 #include "stats\gpersist.h"
 #include "..\GameSettings.h"
-#include "..\ddini.h"
 
 void CheckExistingSaves();
 #pragma pack(4)
@@ -222,7 +218,7 @@ void EncodePassword(char* Pass,char* result){
 	int L=strlen(pass);
 	for(int i=0;i<L;i++)pass[i]=(pass[i]+CODESTR1[i&15])^CODESTR2[i&15];
 	sprintf(result,"{PS}");
-	for(int i=0;i<L;i++)printhex(result+strlen(result),pass[i]);
+	for(i=0;i<L;i++)printhex(result+strlen(result),pass[i]);
 };
 byte GetHByChar(byte v){
 	if(v>='0'&&v<='9')return v-'0';
@@ -1243,7 +1239,7 @@ bool ProcessPlayerForm(GPGetInfoResponseArg* INFO){
 	ComboBox* MONTH=DSS.addGP_ComboBoxDLX(NULL,328,320,96,BTNS.GPID,0,9,0,&WhiteFont,&YellowFont,NULL);
 	VScrollBar* VS3;
 	MONTH->AssignScroll(&DSS,&VS3,SCROL.GPID,0,12);
-	for(int i=0;i<12;i++){
+	for(i=0;i<12;i++){
 		char cc[12];
 		sprintf(cc,"MONTH_%d",i);
 		MONTH->AddLine(GetTextByID(cc));
@@ -1251,7 +1247,7 @@ bool ProcessPlayerForm(GPGetInfoResponseArg* INFO){
 	ComboBox* YEAR=DSS.addGP_ComboBoxDLX(NULL,429,320,77,BTNS.GPID,0,9,0,&WhiteFont,&YellowFont,NULL);
 	VScrollBar* VS4;
 	YEAR->AssignScroll(&DSS,&VS4,SCROL.GPID,0,12);
-	for(int i=1900;i<2100;i++){
+	for(i=1900;i<2100;i++){
 		char cc[12];
 		sprintf(cc,"%d",i);
 		YEAR->AddLine(cc);
@@ -1751,7 +1747,7 @@ void CurrentGame::UpdateGame(){
 						int v=NATIONS[c].Account[i];
 						if(v>MaxP)MaxP=v;
 					};
-					for(int i=0;i<32;i++){
+					for(i=0;i<32;i++){
 						PLAYERS[q].ScoreG[i]=(NATIONS[c].Account[(NN*i)/31]*100)/MaxP;
 					};
 					PLAYERS[q].MaxScore=MaxP;
@@ -1763,7 +1759,7 @@ void CurrentGame::UpdateGame(){
 						int v=NATIONS[c].Popul[i];
 						if(v>MaxP)MaxP=v;
 					};
-					for(int i=0;i<32;i++){
+					for(i=0;i<32;i++){
 						PLAYERS[q].Popul[i]=(NATIONS[c].Popul[(NN*i)/31]*100)/MaxP;
 					};
 					PLAYERS[q].MaxPopul=MaxP;
@@ -1780,7 +1776,7 @@ void CurrentGame::AssignVictory(char* Nick){
 		PLAYERS[i].State=0;
 		MyMask=PLAYERS[i].Mask;
 	};
-	for(int i=0;i<NPL;i++)if(PLAYERS[i].State!=1&&PLAYERS[i].Mask&MyMask){
+	for(i=0;i<NPL;i++)if(PLAYERS[i].State!=1&&PLAYERS[i].Mask&MyMask){
 		PLAYERS[i].State=0;
 	}else{
 		PLAYERS[i].State=1;
@@ -1839,7 +1835,7 @@ void CurrentGame::SaveGameToFile(){
 	for(int i=0;i<sizeof XXX;i++)DATA[i]^=Key[i];
 	RBlockWrite(F1,&XXX,sizeof XXX);
 	int S=0;
-	for(int i=0;i<sizeof CurrentGame;i++)S+=DATA[i];
+	for(i=0;i<sizeof CurrentGame;i++)S+=DATA[i];
 	RBlockWrite(F1,&S,4);
 	RClose(F1);
 	SetNormAttr();
@@ -2062,11 +2058,11 @@ void InternetStatsChunks::ProcessUpload(){
 			GData[2]='R';
 				GData[3]='S';
 			int pos=4;
-			for(int j=0;j<N;j++){
+			for(j=0;j<N;j++){
 				memcpy(GData+pos,Chunks[j],5+Chunks[j]->size);
 				pos+=5+Chunks[j]->size;
 			};
-			for(int j=4;j<GL;j++)GData[j]^=randoma[(j+255)&8191];
+			for(j=4;j<GL;j++)GData[j]^=randoma[(j+255)&8191];
 				SetPersistData(0,CUPLD.CurProfile,pd_public_rw,CUPLD.CurPage,(char*)GData,GL,PersDataSaveCallback2,this);
 			free(GData);
 			CUPLD.DataSent=1;
@@ -2127,11 +2123,11 @@ bool InternetStatsChunks::Upload(int ProfileID,char* Password,int Page){
 		GData[2]='R';
 		GData[3]='S';
 		int pos=4;
-		for(int j=0;j<N;j++){
+		for(j=0;j<N;j++){
 			memcpy(GData+pos,Chunks[j],5+Chunks[j]->size);
 			pos+=5+Chunks[j]->size;
 		};
-		for(int j=4;j<GL;j++)GData[j]^=randoma[(j+255)&8191];
+		for(j=4;j<GL;j++)GData[j]^=randoma[(j+255)&8191];
 		SetPersistData(0,ProfileID,pd_public_rw,Page,(char*)GData,GL,PersDataSaveCallback,&res);
 		free(GData);
 
@@ -2527,7 +2523,7 @@ int CurrentGame::GetAddScore(){
 	int SummOpRank=0;
 	int SummFrRank=0;
 	int ADDSCO=0;
-	for(int i=0;i<NPL;i++){
+	for(i=0;i<NPL;i++){
 		if(PLAYERS[i].Mask&MyMask){
 			NFriends++;
 			SummFrRank+=PLAYERS[i].Rank;
@@ -2694,7 +2690,7 @@ void GetTop100_callback(int localid, int profileid, persisttype_t type,
 				//CHECKPLINF();
 			};
 			//CHECKPLINF();
-			for(int j=0;j<100;j++){
+			for(j=0;j<100;j++){
 				int prof=*((int*)(data+4+6*j));
 				int score=*((word*)(data+8+6*j));
 				memset(&T100->CLIENT[j],0,sizeof OneTopClient);
@@ -2713,7 +2709,7 @@ void GetTop100_callback(int localid, int profileid, persisttype_t type,
 				};
 			};
 		};
-		for(int u=0;u<100;u++)if(PLINF[u])free(PLINF[u]);
+		for(u=0;u<100;u++)if(PLINF[u])free(PLINF[u]);
 	}else T100->Error=1;
 };
 int TopProfile=5358612;
@@ -2881,7 +2877,7 @@ void RewriteTop100(int ProfileID,int Score){
 	if(T100.Ready){
 		for(int i=0;i<100;i++)if(!T100.CLIENT[i].ProfileID)T100.CLIENT[i].Score=0;
 		//1. removing
-		for(int i=0;i<100;i++)if(T100.CLIENT[i].ProfileID==ProfileID){
+		for(i=0;i<100;i++)if(T100.CLIENT[i].ProfileID==ProfileID){
 			if(i<99){
 				memcpy(T100.CLIENT+i,T100.CLIENT+i+1,(99-i)*sizeof OneTopClient);
 				T100.CLIENT[99].ProfileID=0;
@@ -2892,7 +2888,7 @@ void RewriteTop100(int ProfileID,int Score){
 			};
 		};
 		//2.Inserting
-		for(int i=0;i<100;i++)if(Score>=T100.CLIENT[i].Score){
+		for(i=0;i<100;i++)if(Score>=T100.CLIENT[i].Score){
 			for(int j=98;j>=i;j--)T100.CLIENT[j+1]=T100.CLIENT[j];
 			T100.CLIENT[i].ProfileID=ProfileID;
 			T100.CLIENT[i].Score=Score;
@@ -2908,7 +2904,7 @@ void RewriteTop100(int ProfileID,int Score){
 
 		byte DATA[604];
 		DATA[0]='T';DATA[1]='1';DATA[2]='0';DATA[3]='0';
-		for(int i=0;i<100;i++){
+		for(i=0;i<100;i++){
 			*((int*)(DATA+4+i*6))=T100.CLIENT[i].ProfileID;
 			*((word*)(DATA+8+i*6))=T100.CLIENT[i].Score;
 		};
@@ -3012,19 +3008,19 @@ void SendPHPString(CurrentGame* CGM){
 		SECCOD2+=ABBREV[i]*3;
 		SECCOD3+=ABBREV[i]*4;
 	};
-	for(int i=0;i<L-1;i++){
+	for(i=0;i<L-1;i++){
 		SECCOD0+=ABBREV[i]*ABBREV[i+1]*4;
 		SECCOD1+=ABBREV[i]*ABBREV[i+1]*3;
 		SECCOD2+=ABBREV[i]*ABBREV[i+1]*2;
 		SECCOD3+=ABBREV[i]*ABBREV[i+1];
 	};
-	for(int i=0;i<L-2;i++){
+	for(i=0;i<L-2;i++){
 		SECCOD0+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*17;
 		SECCOD1+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*13;
 		SECCOD2+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*11;
 		SECCOD3+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2];
 	};
-	for(int i=0;i<L-3;i++){
+	for(i=0;i<L-3;i++){
 		SECCOD0+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*ABBREV[i+3]*11;
 		SECCOD1+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*ABBREV[i+3]*21;
 		SECCOD2+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*ABBREV[i+3]*3;
@@ -3056,7 +3052,7 @@ void SendPHPString(CurrentGame* CGM){
 	AddIntToURL(ccc,"NPLR",CGM->NPL,&HASH);
 	int NTM=0;
 	byte TML[8];
-	for(int i=0;i<CGM->NPL;i++){
+	for(i=0;i<CGM->NPL;i++){
 		AddStrIdxToURL(ccc,"PL",CGM->PLAYERS[i].Nick,&HASH,i);
 		AddIntIdxToURL(ccc,"CL",CGM->PLAYERS[i].Color,&HASH,i);
 		AddIntIdxToURL(ccc,"NT",CGM->PLAYERS[i].NationID,&HASH,i);
@@ -3095,7 +3091,7 @@ void SendPHPString(CurrentGame* CGM){
 			//score
 			AddIntIdxToURL(ccc,"MXS",CGM->PLAYERS[i].MaxScore,&HASH,i);
 			cc6[0]=0;
-			for(int p=0;p<32;p++){
+			for(p=0;p<32;p++){
 				cc6[p]=GETCOD(CGM->PLAYERS[i].ScoreG[p]);
 			};
 			cc6[32]=0;
@@ -3187,7 +3183,7 @@ bool CurrentGame::UpdateGlobalInfo(){
 			if(T100.Ready){
 				for(int i=0;i<100;i++)if(!T100.CLIENT[i].ProfileID)T100.CLIENT[i].Score=0;
 				//1. removing
-				for(int i=0;i<100;i++)if(T100.CLIENT[i].ProfileID==ProfileID){
+				for(i=0;i<100;i++)if(T100.CLIENT[i].ProfileID==ProfileID){
 					if(i<99){
 						memcpy(T100.CLIENT+i,T100.CLIENT+i+1,(99-i)*sizeof OneTopClient);
 						T100.CLIENT[99].ProfileID=0;
@@ -3198,7 +3194,7 @@ bool CurrentGame::UpdateGlobalInfo(){
 					};
 				};
 				//2.Inserting
-				for(int i=0;i<100;i++)if(CURSCORE+1>=T100.CLIENT[i].Score){
+				for(i=0;i<100;i++)if(CURSCORE+1>=T100.CLIENT[i].Score){
 					for(int j=98;j>=i;j--)T100.CLIENT[j+1]=T100.CLIENT[j];
 					T100.CLIENT[i].ProfileID=ProfileID;
 					T100.CLIENT[i].Score=CURSCORE+1;
@@ -3213,7 +3209,7 @@ bool CurrentGame::UpdateGlobalInfo(){
 				NC[8]='3';NC[9]='7';NC[10]='4';NC[11]='2';NC[12]='B';NC[13]=0;	
 
 				DATA[0]='T';DATA[1]='1';DATA[2]='0';DATA[3]='0';
-				for(int i=0;i<100;i++){
+				for(i=0;i<100;i++){
 					*((int*)(DATA+4+i*6))=T100.CLIENT[i].ProfileID;
 					*((word*)(DATA+8+i*6))=T100.CLIENT[i].Score;
 				};
@@ -3256,7 +3252,7 @@ SAVEGAME:
 				WRDT(byte,strlen(ccc7));
 				memcpy(BUFF+bps,ccc7,strlen(ccc7));
 				bps+=strlen(ccc7);
-				for(int i=0;i<NPL;i++){
+				for(i=0;i<NPL;i++){
 					WRDT(byte,PLAYERS[i].Rank);
 					WRDT(byte,PLAYERS[i].State);
 					WRDT(DWORD,PLAYERS[i].Score);
@@ -3313,7 +3309,7 @@ SAVEGAME:
 				};
 				if(!Finished){
 					if(MyScore<((MaxScore*3)/4)){
-						for(int p=0;p<NPL;p++){
+						for(p=0;p<NPL;p++){
 							if(!strcmp(Nick,PLAYERS[p].Nick)){
 								if(PLAYERS[p].State!=0)PLAYERS[p].State=1;
 								Finished=1;
@@ -3327,7 +3323,7 @@ SAVEGAME:
 						if(PLAYERS[p].State!=1)ms|=PLAYERS[p].Mask;
 					};
 					if(ms==1||ms==2||ms==4||ms==8||ms==16||ms==32||ms==64||ms==128){
-						for(int p=0;p<NPL;p++){
+						for(p=0;p<NPL;p++){
 							if(PLAYERS[p].State!=1)PLAYERS[p].State=0;
 						};
 					};
@@ -3453,19 +3449,19 @@ void TestHash(){
 		SECCOD2+=ABBREV[i]*3;
 		SECCOD3+=ABBREV[i]*4;
 	};
-	for(int i=0;i<L-1;i++){
+	for(i=0;i<L-1;i++){
 		SECCOD0+=ABBREV[i]*ABBREV[i+1]*4;
 		SECCOD1+=ABBREV[i]*ABBREV[i+1]*3;
 		SECCOD2+=ABBREV[i]*ABBREV[i+1]*2;
 		SECCOD3+=ABBREV[i]*ABBREV[i+1];
 	};
-	for(int i=0;i<L-2;i++){
+	for(i=0;i<L-2;i++){
 		SECCOD0+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*17;
 		SECCOD1+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*13;
 		SECCOD2+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*11;
 		SECCOD3+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2];
 	};
-	for(int i=0;i<L-3;i++){
+	for(i=0;i<L-3;i++){
 		SECCOD0+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*ABBREV[i+3]*11;
 		SECCOD1+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*ABBREV[i+3]*21;
 		SECCOD2+=ABBREV[i]*ABBREV[i+1]*ABBREV[i+2]*ABBREV[i+3]*3;
@@ -3586,8 +3582,7 @@ DWORD SendOneRequest(char* serv,char* param){
 int GetStrHASH1(char* s){
 	int L=strlen(s);
 	DWORD S=0;
-	int i;
-	for(i=0;i<L;i++){
+	for(int i=0;i<L;i++){
 		S+=s[i];
 	};
 	for(i=0;i<L-1;i++){
@@ -3668,8 +3663,7 @@ void WaitWithMessage(char* Message);
 int GetStrHASH(char* s){
 	int L=strlen(s);
 	DWORD S=0;
-	int i;
-	for(i=0;i<L;i++){
+	for(int i=0;i<L;i++){
 		S+=s[i];
 	};
 	for(i=0;i<L-1;i++){

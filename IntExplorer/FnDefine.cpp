@@ -589,7 +589,7 @@ bool ADI_Combo2(sicExplorer* SXP,DialogsSystem* DSS,int* x,int* y,int* x1,int* y
 	};
 	int cl=0;
 	if(VAR[0]){
-		for(int i=0;i<NN;i++)if(!strcmp(ADCD->IDS[i],VAR))ADCD->CBB->CurLine=i;
+		for(i=0;i<NN;i++)if(!strcmp(ADCD->IDS[i],VAR))ADCD->CBB->CurLine=i;
 	}else{
 		if(ADCD->CBB->NLines&&NParam>1){
 			ADCD->CBB->CurLine=atoi(Param[NParam-1]);
@@ -1018,7 +1018,7 @@ void LimitString(char* str,lpRLCFont FONT,int L){
 	}while(L0>L);
 };
 ///////////////// new ///////////////////////////
-int DrawMultilineText(int x,int y,char* s,RLCFont* DefaultFont,int& MaxLx,int MaxLy,byte CenterX,bool Draw);
+DrawMultilineText(int x,int y,char* s,RLCFont* DefaultFont,int& MaxLx,int MaxLy,byte CenterX,bool Draw);
 bool ADI_Table(sicExplorer* SXP,DialogsSystem* DSS,int* x,int* y,int* x1,int* y1,
 			 int NActive,char** Active,int NParam,char** Param,char* param){
 	if(NParam<1)return false;
@@ -1857,7 +1857,7 @@ void Process_DBTBL(sicExplorer* SXP,void* PData,int size){
 	int nl=TBL->TBL->NLines;
 	int ncl=TBL->NColumns;
 	TBL->TBL->NRefs=0;
-	for(int i=0;i<nl;i++){
+	for(i=0;i<nl;i++){
 		bool good=1;
 		for(int j=0;j<ncl&&good;j++){
 			int fcl=0;
@@ -2070,7 +2070,7 @@ bool ADI_AddDBTBL(sicExplorer* SXP,DialogsSystem* DSS,int* x,int* y,int* x1,int*
 	CBX->x1=(*x1)-OSW->sb_DxR+OSW->b_DxR;
 	CBX->N=40;
 	//CBX->VS=VS;
-	for(int i=0;i<ADI->NColumns;i++)if(ADI->COLM[i].Width){
+	for(i=0;i<ADI->NColumns;i++)if(ADI->COLM[i].Width){
 		int BORX[8];
 		int dw=0;
 		if(LastColumn!=i){
@@ -2131,7 +2131,7 @@ bool ADI_AddDBTBL(sicExplorer* SXP,DialogsSystem* DSS,int* x,int* y,int* x1,int*
 	ADI->TBL=SXP->GetTable(ADI->DB_REQID);
 	ADI->SXP=SXP;
 	if(!ADI->TBL)ADI->TBL=SXP->CreateTable(ADI->DB_REQID);
-	for(int i=0;i<ADI->NColumns;i++)if(ADI->COLM[i].ID[1]=='%')ADI->TBL->COLMOPT[i]=1;
+	for(i=0;i<ADI->NColumns;i++)if(ADI->COLM[i].ID[1]=='%')ADI->TBL->COLMOPT[i]=1;
 	ADI->TBL->NCol=ADI->NColumns;
 	CBX->param=int(data);
 	return true;
@@ -2556,7 +2556,7 @@ void EnumFilesInDirectory(char* Dir,char** Mask,int NMasks,char* FrameID,char* B
 		ADDFL("|Internet/Cash/folder.gp,0,0,1,1|..                                                                       ","updir");
 		cstr++;
 	};
-	for(int i=0;i<NDirs;i++){
+	for(i=0;i<NDirs;i++){
 		char cd[256];
 		sprintf(cd,"chdir&%s",Dirs[i]);
 		char cc[256];
@@ -2564,7 +2564,7 @@ void EnumFilesInDirectory(char* Dir,char** Mask,int NMasks,char* FrameID,char* B
 		ADDFL(cc,cd);
 		cstr++;
 	};
-	for(int i=0;i<NFiles;i++){
+	for(i=0;i<NFiles;i++){
 		char cd[256];
 		sprintf(cd,"file&%s",Files[i]);
 		ADDFL(Files[i],cd);
@@ -2732,7 +2732,7 @@ bool ADI_Label(sicExplorer* SXP,DialogsSystem* DSS,int* x,int* y,int* x1,int* y1
 	strcpy(LV->Mask,Param[0]);
 	strcpy(LV->VarName,cc);
 	LV->NAddr=0;
-	for(int i=1;i<NParam;i++){
+	for(i=1;i<NParam;i++){
 		int v=sscanf(Param[i],"%X",&LV->Addr[i-1]);
 		if(v!=1)sprintf(LV->Mask,"InvHexValue%d:%s",i-1,Param[i]);
 		LV->NAddr++;

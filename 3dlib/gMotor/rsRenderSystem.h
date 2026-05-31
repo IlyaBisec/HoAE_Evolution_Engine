@@ -9,7 +9,6 @@
 #pragma once
 
 #include <vector>
-#include <xstring>
 
 #include "IRenderSystem.h"
 

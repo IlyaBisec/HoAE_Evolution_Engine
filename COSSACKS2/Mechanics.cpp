@@ -390,8 +390,8 @@ public:
 	};
 	~ComplexObjDesc(){
 		for(int i=0;i<N_OPANM;i++)delete(OPANM[i]);
-		for(int i=0;i<N_OMQD;i++)delete(OMQD[i]);
-		for(int i=0;i<NUnits;i++)delete(UnitDesc[i]);
+		for(i=0;i<N_OMQD;i++)delete(OMQD[i]);
+		for(i=0;i<NUnits;i++)delete(UnitDesc[i]);
 		memset(this,0,sizeof *this);
 	};
 };
@@ -1815,7 +1815,7 @@ int CreateComplexObjectAt(int x,int y,word Type,byte NI,word Owner,byte StartDir
 	COB->CDIndex=Type;
 	COB->NI=NI;
 	COB->ObjIndex=Owner;
-	for(int i=0;i<COD->NQuants;i++)COB->MQ[i]=new SingleAxeQuant;
+	for(i=0;i<COD->NQuants;i++)COB->MQ[i]=new SingleAxeQuant;
 	COB->NQuants=COD->NQuants;
 	SetStartConditionsForComplexObject(COB,COD,x,y,StartDir);
 	COB->Lx=Group[Owner]->Lx;
@@ -3225,8 +3225,7 @@ void SaveComplexObjects(SaveBuf* SB){
 		xBlockWrite(SB,&i,4);
         OneComplexObject* COB=CGroup[i];
 		int n=0;
-		int j;
-		for(j=0;j<8&&COB->MQ[j];j++);
+		for(int j=0;j<8&&COB->MQ[j];j++);
 		xBlockWrite(SB,&j,4);
 		for(int j=0;j<8;j++){
 			SingleAxeQuant* SA=COB->MQ[j];

@@ -1,4 +1,4 @@
-#include "common.h"
+#include "StdAfx.h" #include "common.h" 
 
 ClonesArray<TextItem> TextManager::Text;
 

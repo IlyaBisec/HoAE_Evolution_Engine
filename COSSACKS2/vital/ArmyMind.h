@@ -281,7 +281,7 @@ void CreateDangerMapBattle(byte NI,int* DangMap,int MaxSize,int* FearArray,int I
 	*/
 		
 	int Dang[2048];
-	for(int i=0;i<MaxSize;i++) Dang[i]=DangMap[i];
+	for(i=0;i<MaxSize;i++) Dang[i]=DangMap[i];
 	SetDangerMap(Dang);
 };
 
@@ -417,7 +417,7 @@ void CreateTopListEnArmyBtl(word* IDS,byte NI,int MinPS){
 			};
 		};
 	};
-	for(int i=0;i<NA;i++)if(NPS[i]<MinPS){
+	for(i=0;i<NA;i++)if(NPS[i]<MinPS){
 		IDS[i]=0xFFFF;
 	}
 };
@@ -456,7 +456,7 @@ void GetEnemyTopInfo(byte NI, int* N, int *xc, int *yc){
 		}
 	}
 
-	for(int i=0;i<NZ;i++){
+	for(i=0;i<NZ;i++){
 		int ni=N[i];
 		if(ni){
 			xc[i]/=ni;

@@ -882,11 +882,11 @@ bool FMManager::SelfTest(void)
 	}
 
 	// - обнулим признаки вхождения
-	for(int i = 0; i < handlers; i++)
+	for(i = 0; i < handlers; i++)
 		Handlers[i].r2 = 0;
 
 	// - проверка цепочек размеров
-	for(int i = 0; i < FMM_MAXHASHITEMS; i++)
+	for(i = 0; i < FMM_MAXHASHITEMS; i++)
 	{
 		h1 = HashTableS[i];
 		while(h1)
@@ -911,7 +911,7 @@ bool FMManager::SelfTest(void)
 		}
 	}
 	// - проверка цепочек адресов
-	for(int i = 0; i < FMM_MAXHASHITEMS; i++)
+	for(i = 0; i < FMM_MAXHASHITEMS; i++)
 	{
 		h1 = HashTableA[i];
 		while(h1)

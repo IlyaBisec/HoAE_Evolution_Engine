@@ -60,7 +60,7 @@ void PaletteSample::Render()
 void PaletteSample::Expose( PropertyMap& pm )
 {
     pm.start<Widget>( "Palette", this );
-    pm.p( "SampleClass", &PaletteSample::GetSampleClass, &PaletteSample::SetSampleClass );
+    pm.p( "SampleClass", GetSampleClass, SetSampleClass );
 
 } // Palette::Expose
 

@@ -174,8 +174,8 @@ extern bool ProtectionMode;
 extern int TreeHeight;
 void FreeRDS(){
 	for(int i=0;i<NWeaponIDS;i++)free(WeaponIDS[i]);
-	for(int i=0;i<NUnitKinds;i++)free(UnitKindID[i]);
-	for(int i=0;i<NMedias;i++)free(MediaID[i]);
+	for(i=0;i<NUnitKinds;i++)free(UnitKindID[i]);
+	for(i=0;i<NMedias;i++)free(MediaID[i]);
 };
 int DamFall[32]={
 	100,100,100,100,100,100,100,100,
@@ -835,7 +835,7 @@ void FormGroupDescription::Load(GFILE* f){
 		if(cidx==-1)FGError();
 		Grp[j].ClassIndex=cidx;
 		Grp[j].IDX=znew(byte,Grp[j].NCommon);
-		for(int q=0;q<Grp[j].NCommon;q++){
+		for(q=0;q<Grp[j].NCommon;q++){
 			z=Gscanf(f,"%d",&x);
 			if(z!=1)FGError();
 			Grp[j].IDX[q]=x;
@@ -843,7 +843,7 @@ void FormGroupDescription::Load(GFILE* f){
 		z=Gscanf(f,"%d",&Grp[j].NForms);
 		if(z!=1)FGError();
 		Grp[j].Forms=znew(word,Grp[j].NForms);
-		for(int q=0;q<Grp[j].NForms;q++){
+		for(q=0;q<Grp[j].NForms;q++){
 			z=Gscanf(f,"%s",cc);
 			if(z!=1)FGError();
 			cidx=-1;
@@ -1003,7 +1003,7 @@ void LoadOrders(){
 											NN++;
 											int x1=MaxLx-x-1;
 											bool FOUND=0;
-											for(int z=MaxLy-1;z>=0&&NN;z--)if(Idc[z][x1]!=0xFFFF){
+											for(z=MaxLy-1;z>=0&&NN;z--)if(Idc[z][x1]!=0xFFFF){
 												NN--;
 												if(!NN){
 													ODE->SymInv[id]=Idc[z][x1];
@@ -1182,7 +1182,7 @@ void LoadOrders(){
 						if(nz){
 							ODE->Lines[nL]=new short[nz];
 							nz=0;
-							for(int p=0;p<L;p++){
+							for(p=0;p<L;p++){
 								if(str[p]=='*'){
 									ODE->Lines[nL][nz]=p*2;
 									nz++;
@@ -1202,7 +1202,7 @@ void LoadOrders(){
 							ODE->ComY=(short*)realloc(ODE->ComY,(ODE->NCom+nc)*2);
 							int nc0=ODE->NCom;
 							ODE->NCom+=nc;
-							for(int p=0;p<L;p++){
+							for(p=0;p<L;p++){
 								if(str[p]=='C'){
 									ODE->ComX[nc0]=p*2;
 									ODE->ComY[nc0]=nL*2;
@@ -1335,7 +1335,7 @@ AI_Description::~AI_Description(){
 	if(!NAi)return;
 	for(int i=0;i<NAi;i++){
 		for(int j=0;j<Ai[i].NLandAI;j++)free(Ai[i].LandAI[j]);
-		for(int j=0;j<Ai[i].NWaterAI;j++)free(Ai[i].WaterAI[j]);
+		for(j=0;j<Ai[i].NWaterAI;j++)free(Ai[i].WaterAI[j]);
 		free(Ai[i].LandAI);
 		free(Ai[i].WaterAI);
 		free(Ai[i].Message);

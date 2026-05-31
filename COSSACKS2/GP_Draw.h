@@ -26,22 +26,22 @@ void	ErrM(char* s);
 
 #pragma pack (push)
 //#pragma pack (8)
-#include "..\3dlib\gMotor\gmDefines.h"
-#include "..\3dlib\gMotor\mMath2D.h"
-#include "..\3dlib\gMotor\mMath3D.h"
-#include "..\3dlib\gMotor\mTransform.h"
-#include "..\3dlib\gMotor\mQuaternion.h"
-#include "..\3dlib\gMotor\mTriangle.h"
-#include "..\3dlib\gMotor\mGeom3D.h"
-#include "..\3dlib\gMotor\mAlgo.h"
-#include "..\3dlib\gMotor\kColorValue.h"
-#include "..\3dlib\gMotor\kLog.h"
-#include "..\3dlib\gMotor\IRenderSystem.h"
-#include "..\3dlib\gMotor\ISpriteManager.h"
-#include "..\3dlib\gMotor\IPictureManager.h"
-#include "..\3dlib\gMotor\IMediaManager.h"
-#include "..\3dlib\gMotor\IEffectManager.h"
-#include "..\3dlib\gMotor\vMesh.h"
+#include "gmDefines.h"
+#include "mMath2D.h"
+#include "mMath3D.h"
+#include "mTransform.h"
+#include "mQuaternion.h"
+#include "mTriangle.h"
+#include "mGeom3D.h"
+#include "mAlgo.h"
+#include "kColorValue.h"
+#include "kLog.h"
+#include "IRenderSystem.h"
+#include "ISpriteManager.h"
+#include "IPictureManager.h"
+#include "IMediaManager.h"
+#include "IEffectManager.h"
+#include "vMesh.h"
 #pragma pack (pop)
 
 struct OneUnicodeSet

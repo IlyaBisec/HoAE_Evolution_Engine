@@ -1,5 +1,5 @@
-#include "..\ClassEngine\ClassEngine.h"
-#include "..\ClassEngine\more_types.h"
+#include <ClassEngine.h>
+#include <more_types.h>
 #include "GameSettings.h"
 #pragma pack( push )
 #pragma pack( 1 )

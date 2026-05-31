@@ -15,8 +15,8 @@ IMPLEMENT_CLASS(IntEditBox);
 IntEditBox::IntEditBox() : m_Value(0)
 {
      AddChild( m_Ratchet );
-     m_Ratchet.sigChanged.Connect( this, &IntEditBox::ChangeValue );
-     sigTextChanged.Connect( this, &IntEditBox::ChangeText );
+     m_Ratchet.sigChanged.Connect( this, ChangeValue );
+     sigTextChanged.Connect( this, ChangeText );
 } // IntEditBox::IntEditBox
 
 void IntEditBox::OnInit()

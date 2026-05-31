@@ -168,8 +168,8 @@ void fes_Init(){
 #define alstr(s,x) if(s==NULL){s=(char*)malloc(strlen(x)+1); strcpy(s,x);}
 void engInterface::Init(){
 
-	MagicCardsVisibleAmount=15;//15 for Reborn
-
+	MagicCardsVisibleAmount=9;//15 for Reborn; 9 for 1.1
+	//NumOfRaceStyles=2;//2 for 1.1
 	VolumeFullScreenBik=100;
 	VolumeSoundEvents=100;
 	VolumeMissDialogs=100;

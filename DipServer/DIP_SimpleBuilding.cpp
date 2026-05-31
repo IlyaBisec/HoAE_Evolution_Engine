@@ -226,7 +226,7 @@ void DIP_SimpleBuilding::InitThisTribe(char* Preffix,char* FirstGroupName,char* 
 							}
 						}
 						SetlOneBrigAbilka* BA=BrigAbilka;
-						for(int i=0;i<9;i++,BA++) BA->Init(Index);
+						for(i=0;i<9;i++,BA++) BA->Init(Index);
 					}else
 					if(!strcmp(com,"$PSB")){
 						DipComParams DPP;
@@ -449,7 +449,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 						if(Owner==GetMyNation())ShowNoMoney();
 						return;
 					};
-					for(int i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
+					for(i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
 					RegisterUnitType(&info.Prod.UnitType,ID);
 					info.Prod.Amount=N;
 					info.Prod.Stage=0;
@@ -480,7 +480,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 						if(Owner==GetMyNation())ShowNoMoney();
 						return;
 					};
-					for(int i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
+					for(i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
 					RegisterUnitType(&info.Prod.UnitType,ID);
 					info.Prod.Amount=N;
 					info.Prod.Stage=0;
@@ -512,7 +512,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 						if(Owner==GetMyNation())ShowNoMoney();
 						return;
 					};
-					for(int i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
+					for(i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
 					RegisterUnitType(&info.Prod.UnitType,ID);
 					info.Prod.Amount=N;
 					info.Prod.Stage=0;
@@ -544,7 +544,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 						if(Owner==GetMyNation())ShowNoMoney();
 						return;
 					};
-					for(int i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
+					for(i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
 					RegisterUnitType(&info.Prod.UnitType,ID);
 					info.Prod.Amount=N;
 					info.Prod.Stage=0;
@@ -576,7 +576,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 						if(Owner==GetMyNation())ShowNoMoney();
 						return;
 					};
-					for(int i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
+					for(i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
 					RegisterUnitType(&info.Prod.UnitType,ID);
 					info.Prod.Amount=N;
 					info.Prod.Stage=0;
@@ -608,7 +608,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 						if(Owner==GetMyNation())ShowNoMoney();
 						return;
 					};
-					for(int i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
+					for(i=0;i<6;i++)SetResource(Owner,i,GetResource(Owner,i)-DIPPAR[Code].Cost[i]);
 					RegisterUnitType(&info.Prod.UnitType,ID);
 					info.Prod.Amount=N;
 					info.Prod.Stage=0;
@@ -668,7 +668,7 @@ void DIP_SimpleBuilding::PerformCommand(char* Data,int size){
 					if(Owner==GetMyNation())ShowNoMoney();
 				};
 			}else{
-				for(int i=0;i<6;i++){
+				for(i=0;i<6;i++){
 					SetResource(NI,i,GetResource(NI,i)-ReSellCost[i]);
 					ReSellCost[i]<<=1;
 				};
@@ -975,7 +975,7 @@ void DIP_SimpleBuilding::ProcessTribe(){
 					Select|=OB->Selected;					
 				}
 			}
-			for(int i=0;i<8;i++){
+			for(i=0;i<8;i++){
 				if((1<<i)&Select){
 					//ClearSelection(i);
 					SelectUnits1(i,&CentralGroup,false);
@@ -1002,7 +1002,7 @@ void DIP_SimpleBuilding::ProcessTribe(){
 
 		// Reinforsment variables
 		int bn=0;
-		const int bmax=40;
+		const bmax=40;
 		word bid[bmax];
 		word bNIndex[bmax];
 		int bfree[bmax];				// free places
@@ -1859,7 +1859,7 @@ void DIP_SimpleBuilding::ProcessDance(){
 					};
 				};
 				CreateRadialPosition(xi,yi,N,r1,r2,p1,p2);
-				for(int i=0;i<N;i++){
+				for(i=0;i<N;i++){
 					GetUnitInfo(&Actors,i,&OU);
 					if(OU.Index!=0xFFFF){
 						if(!OU.Busy)OBJ_SendTo(OU.Index,xi[i]+x,yi[i]+y,128+16,0);
@@ -2010,7 +2010,7 @@ void DIP_SimpleBuilding::DrawSettlementInterface(int x0,int y0,int Lx0,int Ly0,i
 
 		// brigade abilki
 		SetlOneBrigAbilka* BA=BrigAbilka;
-		for(int i=0;i<9;i++,BA++) BA->Draw();
+		for(i=0;i<9;i++,BA++) BA->Draw();
 	}
 };
 
@@ -2389,7 +2389,7 @@ bool SetlUpgrade::Run(){
 	isRun=true;
 	RunTime=GetGlobalTime();
 	Duration*=8;
-	for(int i=0;i<6;i++){
+	for(i=0;i<6;i++){
 		int res=GetResource(Owner,i)-Price[i];
 		SetResource(Owner,i,res);
 		PlayerStatistic_AddOnUpgradeRes(Owner,i,Price[i]);
@@ -2595,7 +2595,7 @@ bool DIP_SimpleBuilding::setlAddWorkerIntrf(byte resID, OneObject* OB){
 	// need detect in PeasGrp and PeasReinfGrp (not dublicate)
 	if(PeasReinfGrp[resID].FindUnits(OB->Index,OB->Serial)==0xFFFF){
 		AddOneUnitToGroup(PeasReinfGrp+resID,OB);
-		const int N=5;
+		const N=5;
 		word Data[N];
 		Data[0]=3005;
 		Data[1]=Index;
@@ -2643,13 +2643,13 @@ void DIP_SimpleBuilding::Save(SettlementInfo* si){
 	//if(PeasantNIndex!=0xFFFF) 
 	si->PeonID=GetMonsterID(PeasantNIndex);
 	si->PeonBuidTime=PeasantBuild;
-	for(int i=0;i<6;i++) si->PeonMaxAmount[i]=NPeasants[i];
-	for(int i=0;i<6;i++) si->PeonTimeOnProduce[i]=Produce[i];
+	for(i=0;i<6;i++) si->PeonMaxAmount[i]=NPeasants[i];
+	for(i=0;i<6;i++) si->PeonTimeOnProduce[i]=Produce[i];
 	//if(CaravanNIndex!=0xFFFF) 
 	si->ObozID=GetMonsterID(CaravanNIndex);
-	for(int i=0;i<6;i++) si->ObozResAmount[i]=CaravanCapacity[i];
+	for(i=0;i<6;i++) si->ObozResAmount[i]=CaravanCapacity[i];
 	int n=SetlUpg.GetAmount();
-	for(int i=0;i<n;i++){
+	for(i=0;i<n;i++){
 		SetlUpgrade* NewUpg=new SetlUpgrade;
 		*NewUpg=*(SetlUpg[i]);
 		si->Upgrades.Add(NewUpg);
@@ -2797,7 +2797,7 @@ void DIP_SimpleBuilding::SetUp(){
 
 	for(int j=0;j<MaxCaravan;j++) Caravan[j].Init(Index);
 	int time=GetGlobalTime();
-	for(int j=0;j<6;j++) LastProduce[j]=time;
+	for(j=0;j<6;j++) LastProduce[j]=time;
 	RegisterDynGroup(&NewUnits);
 	
 #ifdef AC_ADDON

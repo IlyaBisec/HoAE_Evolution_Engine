@@ -204,19 +204,19 @@ bool Texture::Save( const char* fname )
 void Texture::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Texture", this );
-    pm.p( "TexID", &Texture::GetTexID, &Texture::SetTexID                  );
-    pm.p( "Stage", &Texture::GetStage, &Texture::SetStage                  );
-    pm.p( "Width", &Texture::GetWidth                            );
-    pm.p( "Height", &Texture::GetHeight                           );
-    pm.p( "ColorFormat", &Texture::GetColorFormat                      );
-    pm.p( "DepthStencil", &Texture::GetDepthStencilFormat               );
-    pm.p( "Procedural", &Texture::IsProcedural                        );
-    pm.p( "RenderTarget", &Texture::IsRT                                );
-    pm.p( "MemoryPool", &Texture::GetMemoryPool                       );
-    pm.p( "Usage", &Texture::GetUsage                            );
-    pm.p( "NMips", &Texture::GetNMips                            );
-    pm.p( "Pixels", &Texture::GetTexID, &Texture::SetTexID, "texture"       );
-    pm.p( "File", &Texture::GetTextureFile, &Texture::SetTextureFile, "#texture" );
+    pm.p( "TexID",              GetTexID, SetTexID                  );
+    pm.p( "Stage",              GetStage, SetStage                  );
+    pm.p( "Width",              GetWidth                            );
+    pm.p( "Height",             GetHeight                           );
+    pm.p( "ColorFormat",        GetColorFormat                      );
+    pm.p( "DepthStencil",       GetDepthStencilFormat               );
+    pm.p( "Procedural",         IsProcedural                        );
+    pm.p( "RenderTarget",       IsRT                                );
+    pm.p( "MemoryPool",         GetMemoryPool                       );
+    pm.p( "Usage",              GetUsage                            );
+    pm.p( "NMips",              GetNMips                            );
+    pm.p( "Pixels",             GetTexID, SetTexID, "texture"       );
+    pm.p( "File",               GetTextureFile, SetTextureFile, "#texture" );
 } // Texture::Expose
 
 void Texture::SetTextureFile( const char* file )

@@ -246,7 +246,7 @@ void LensFlare::Expose( PropertyMap& pm )
     pm.f( "Sun Distance",   m_SunDistance   );
     pm.f( "Sun Radius",     m_SunRadius     );
     pm.f( "Scale",          m_Scale         );
-    pm.m( "CreateSample", &LensFlare::CreateSample    );
+    pm.m( "CreateSample",   CreateSample    );
 } // LensFlare::Expose
 
 void LensFlare::Serialize( OutStream& os ) const

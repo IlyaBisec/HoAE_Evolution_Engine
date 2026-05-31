@@ -2,7 +2,7 @@
 #define __SelExt__
 
 #include "..\GameExtension.h"
-#include "..\surface\Surface.h"
+#include "Surface.h"
 #include "ITerrain.h"
 #include "..\UndoMaster.h"
 

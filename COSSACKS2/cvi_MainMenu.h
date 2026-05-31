@@ -88,9 +88,9 @@ public:
 		//REG_MEMBER(_int,HeroID);
 		REG_ENUM(_index,HeroID,AllHeroEnum);
 		REG_AUTO(Map);
-		REG_METHOD(&MassiveRTS::OnMapListClick);
-		REG_METHOD(&MassiveRTS::StartGame);
-		REG_METHOD(&MassiveRTS::OnEnter);
+		REG_METHOD(OnMapListClick);
+		REG_METHOD(StartGame);
+		REG_METHOD(OnEnter);
 	}ENDSAVE;
 };
 class cvi_MainMenuInterface : public ReferableBaseClass {

@@ -56,7 +56,7 @@ public:
 
 CBattle Battle;
 
-const int STMR=30000;
+const STMR=30000;
 
 CEXPORT void StartBattle(){
 	Battle.Init();
@@ -234,7 +234,7 @@ void PerformBattleCommads(char* Data,int size){
 							break;
 						}
 						if(deal){
-							for(int i=0;i<6;i++) AddResource(nat,i,-Cost[i]);
+							for(i=0;i<6;i++) AddResource(nat,i,-Cost[i]);
 							change=true;
 						}
 					}
@@ -459,7 +459,7 @@ void CBattle::Process(){
 			}
 		}
 		
-		for(int i=0;i<8;i++) if(PScript[i].Enable&&!prim[i]){
+		for(i=0;i<8;i++) if(PScript[i].Enable&&!prim[i]){
 			PScript[i].Defeat=1;
 			//if(i==NI) NI=0xFF;
 		}
@@ -674,7 +674,7 @@ void CBattle::MakeDialog(bool frame){
 		int nn=0;
 		int yp=y;
 		n=0;
-		for(int i=0;i<UT->NAttTypes;i++){
+		for(i=0;i<UT->NAttTypes;i++){
 			byte pr=UT->CurProtect[i];
 			if(pr){
 				byte wk=i;//UT->WeaponKind[i];				
@@ -965,7 +965,7 @@ void CPlayerInfo::AddNewMon(byte NI, word NIndex){
 	NewUT->NIndex=NIndex;
 
 	// создать список апгрейдов
-	const int MaxUpg=50;
+	const MaxUpg=50;
 	word Upg[MaxUpg];
 	//memset(Upg,0xFF,sizeof(Upg));
 	int NUpg=0;
@@ -1176,7 +1176,7 @@ CEXPORT void RunProtectUpg(byte NI, int Level){
 	
 	for(int i=0;i<NMon;i++)if(NIndex[i]){
 		// создать список апгрейдов
-		const int MaxUpg=50;
+		const MaxUpg=50;
 		word Upg[MaxUpg];
 		int NUpg=0;
 
@@ -1238,7 +1238,7 @@ CUpgCategory::CUpgCategory( word _Index, char* _Message, word* UList, int NUList
 
 				// добавляем хвост
 				NUID=NewLink->back();
-				for(int j=i+1;j<NUList;j++)if(UList[j]!=0xFFFF){
+				for(j=i+1;j<NUList;j++)if(UList[j]!=0xFFFF){
 					NU=GetNewUpg(0,NUID);
 					if((NU->CtgUpgrade==Index||Index==0xFFFF)&&NU->NAutoEnable&&NU->AutoEnable[0]==UList[j]){
 						NUID=UList[j];

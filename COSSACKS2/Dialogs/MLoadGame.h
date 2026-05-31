@@ -45,15 +45,14 @@ void AC_InstallName(ListBox* LB,ListBox* DT,WIN32_FIND_DATA* FD,char* StartDir){
 
 void CreateGamesList(ListBox* LB, ListBox* DT){	
 	WIN32_FIND_DATA FD;
-	const int NList = 100;
+	const NList = 100;
 	WIN32_FIND_DATA FDL[NList];
 	int i;
 	HANDLE HF=FindFirstFile("Save\\*.sav",&FD);
 	if(HF!=INVALID_HANDLE_VALUE){
 		i=0;
 		do{
-			int j;
-			for(j=0;j<i;j++) if(CompareFileTime(&FD.ftLastWriteTime,&FDL[j].ftLastWriteTime)==-1){
+			for(int j=0;j<i;j++) if(CompareFileTime(&FD.ftLastWriteTime,&FDL[j].ftLastWriteTime)==-1){
 				memcpy(&FDL[i],&FDL[j],sizeof FD);
 				memcpy(&FDL[j],&FD,sizeof FD);
 				break;

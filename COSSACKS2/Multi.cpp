@@ -1002,8 +1002,7 @@ void ComRotateFormations(byte NI,byte Dir){
 			if(OB&&OB->Serial==SNS[i]){
 				int BID=OB->BrigadeID;
 				if(BID!=0xFFFF){
-					int j;
-					for(j=0;j<NBR&&BRIDS[j]!=BID;j++);
+					for(int j=0;j<NBR&&BRIDS[j]!=BID;j++);
 					if(j>=NBR){
 						BRIDS[NBR]=BID;
 						NBR++;
@@ -1047,13 +1046,13 @@ void CmdThrowGrenade(byte NI,int i){
 	EBPos+=4;
 	ECMD;
 };
-__forceinline int decch(char& c,char v){
+__forceinline decch(char& c,char v){
 	if(c>-120)c-=v;
 #ifdef _INLINES
 	return 0;
 #endif
 };
-__forceinline int incch(char& c,char v){
+__forceinline incch(char& c,char v){
 	if(c<120)c+=v;
 #ifdef _INLINES
 	return 0;
@@ -1108,7 +1107,7 @@ void ComThrowGrenade(byte NI,int ID){
 				//int idxs[64];
 				//int vals[64];
 				int NVals=0;
-				for(int i=0;i<FSIZE-2&&NVals<64;i++){
+				for(i=0;i<FSIZE-2&&NVals<64;i++){
 					char* xi=Rarr[i].xi;
 					char* yi=Rarr[i].yi;
 					int N=Rarr[i].N;
@@ -1365,8 +1364,7 @@ void ComMakeOneStep(byte NI,char Dir){
 			if(OB&&OB->Serial==SNS[i]){
 				int BID=OB->BrigadeID;
 				if(BID!=0xFFFF){
-					int j;
-					for(j=0;j<NBR&&BRIDS[j]!=BID;j++);
+					for(int j=0;j<NBR&&BRIDS[j]!=BID;j++);
 					if(j>=NBR){
 						BRIDS[NBR]=BID;
 						NBR++;
@@ -1589,13 +1587,13 @@ void CmdMoney(byte NI){
 	ECMD;
 };
 void DoCmdMoney(byte NI){
-	for(int i=0;i<6;i++)AddXRESRC(NI,i,50000);
+	for(int i=0;i<6;i++)AddXRESRC(NI,i,150000);
 };
 void DoCmdAddMoney(byte NI,int Value){
 	int MAX=0;
 	for(int i=0;i<6;i++)if(XRESRC(NI,i)>MAX)MAX=XRESRC(NI,i);
 	MAX=(MAX*(Value-100))/100;
-	for(int i=0;i<6;i++)AddXRESRC(NI,i,MAX);
+	for(i=0;i<6;i++)AddXRESRC(NI,i,MAX);
 };
 void CmdGiveMoney(byte SrcNI,byte DstNI,byte Res,int Amount){
 	if(Amount<0)return;
@@ -1926,7 +1924,7 @@ void ProcessVotingView(){
 			int yt=y0+16;
 			char TempStr[128];
 			char TempPos=0;
-			for(int i=0;i<L;i++){
+			for(i=0;i<L;i++){
 				if(VotingText[i]=='\\'||i==L-1){
 					if(VotingText[i]!='\\'){
 						TempStr[TempPos]=VotingText[i];
@@ -1944,7 +1942,7 @@ void ProcessVotingView(){
 				};
 			};
 			y0+=32;
-			for(int i=0;i<NPlayers;i++){
+			for(i=0;i<NPlayers;i++){
 				char ccx[65];
 				switch(VotingResult[i]){
 				case 1:
@@ -2100,7 +2098,7 @@ void __EndGame(byte NI,byte state){
 		PreNoPause=1;
 		if(NPlayers>1)FogMode=0;
 		WaitState=1;
-		for(int i=0;i<NPlayers;i++)if(GSets.CGame.PL_INFO[i].ColorID==NI){
+		for(i=0;i<NPlayers;i++)if(GSets.CGame.PL_INFO[i].ColorID==NI){
 			if(state==1)LOOSEIGAME(GSets.CGame.PL_INFO[i].name);
 			else if(state==2)WINIGAME(GSets.CGame.PL_INFO[i].name);
 		};
@@ -2462,7 +2460,7 @@ void CreateGoodSelection(byte NI,int xx,int yy,int xx1,int yy1,CHOBJ* FN,int NN,
 
 	word nnm=GoodSelectNewMonsters(NI,xx,yy,xx1,yy1,NULL,NULL,false,FN,NN,ULIMIT,InForm,NotInForm);
 
-	if( nnm==0 && Nsel!=0 && (!EditMapMode||!InfoMode) )
+	if( nnm==0 && Nsel!=0 && (!InfoMode) )
 		Addon=true;
 
 	if(!Addon&&Nsel){
@@ -2579,7 +2577,7 @@ void RefreshSelected(byte NI){
 	Nsel=ImNSL[NI];
 	SMon=ImSelm[NI];
 	ser= ImSerN[NI];
-	for(int k=0;k<Nsel;k++){
+	for(k=0;k<Nsel;k++){
 		MID=SMon[k];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -3959,7 +3957,7 @@ void LoadNetworkGame(byte NI,int ID,char* NAME){
 				}
 			};
 		}
-		for(int i=NPlayers;i<PL_NPlayers;i++){
+		for(i=NPlayers;i<PL_NPlayers;i++){
 			char* S=PL_Names[i];
 			if(!(strcmp(S,"Very hard")&&strcmp(S,"Hard")&&strcmp(S,"Normal")&&strcmp(S,"Easy"))){
 				strcpy(GSets.CGame.PL_INFO[i].name,PL_Names[i]);
@@ -4336,7 +4334,7 @@ void TakeRes(byte NI,int x,int y,byte ResID){
 		};
 	};
 	OneSprite* OS=Sprites;
-	for(int i=0;i<MaxSprt;i++){
+	for(i=0;i<MaxSprt;i++){
 		OS->Surrounded=false;
 		OS++;
 	};
@@ -4379,7 +4377,7 @@ void SelectAllBuildings(byte NI){
 	N=0;
 	word* SMN=Selm[NI];
 	word* SRN=SerN[NI];
-	for(int i=0;i<MAXOBJECT;i++){
+	for(i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB&&OB->NNUM==GSets.CGame.cgi_NatRefTBL[NI]&&OB->NewBuilding){
 			SMN[N]=OB->Index;
@@ -4422,7 +4420,7 @@ void ImSelectAllBuildings(byte NI){
 	N=0;
 	word* SMN=ImSelm[NI];
 	word* SRN=ImSerN[NI];
-	for(int i=0;i<MAXOBJECT;i++){
+	for(i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB&&OB->NNUM==GSets.CGame.cgi_NatRefTBL[NI]&&OB->NewBuilding&&!(OB->Sdoxlo||OB->notSelectable()||OB->newMons->NewParams.PortretDisable)){
 			SMN[N]=OB->Index;
@@ -4523,7 +4521,7 @@ void SelectUnitsTypes(byte NI,bool Re, byte Type){
 	N=0;
 	word* SMN=UNI[0];
 	word* SRN=USN[0];
-	for(int i=0;i<MAXOBJECT;i++){
+	for(i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		//All Units - 0, Warriors - 1, Shooters - 2, Ships - 3, Fly - 4 
 	switch (Type){
@@ -4650,7 +4648,7 @@ void SelectAllPeasants(byte NI,bool Re){
 	N=0;
 	word* SMN=UNI[0];
 	word* SRN=USN[0];
-	for(int i=0;i<MAXOBJECT;i++){
+	for(i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB&&OB->NNUM==GSets.CGame.cgi_NatRefTBL[NI]&&!(OB->Sdoxlo||OB->MotionStyle==8||OB->MotionStyle==5||OB->notSelectable())){
 //			byte Usage=OB->newMons->Usage;
@@ -4795,7 +4793,7 @@ void MakeStandGroundTemp(Brigade* BR){
 		BR->AddDamage=addD;
 		BR->AddShield=addS;
 		BR->InStandGround=0;
-		for(int i=0;i<N;i++){
+		for(i=0;i<N;i++){
 			word MID=Memb[i];
 			if(MID!=0xFFFF){
 				OneObject* OB=Group[MID];
@@ -5642,8 +5640,7 @@ void MakeReformation(Brigade* BR,byte FormType){
 		};
 		//search for appropriate formation
 		SingleGroup* SG=FormGrp.Grp+FormType;
-		int j;
-		for(j=0;j<SG->NForms&&RealNM>ElementaryOrders[SG->Forms[j]].NUnits;j++);
+		for(int j=0;j<SG->NForms&&RealNM>ElementaryOrders[SG->Forms[j]].NUnits;j++);
 		if(j<SG->NForms){
 			int WT=SG->Forms[j]+1;
 			OrderDescription* ODE=ElementaryOrders+SG->Forms[j];
@@ -5682,7 +5679,7 @@ void MakeReformation(Brigade* BR,byte FormType){
 				BR->MembSN=(word*)realloc(BR->MembSN,BR->MaxMemb*2);
 			};
 			memcpy(BR->Memb+NBPERSONAL,TMP,ODE->NUnits*2);
-			for(int q=NBPERSONAL;q<RealNM;q++)BR->MembSN[q]=Group[BR->Memb[q]]->Serial;
+			for(q=NBPERSONAL;q<RealNM;q++)BR->MembSN[q]=Group[BR->Memb[q]]->Serial;
 			BR->WarType=WT;
 			//word LT=GetBrigLockType(BR);
 			//if(BR->BOrder&&BR->BOrder->BLink==&B_GoOnRoadLink)
@@ -6441,7 +6438,7 @@ void ExecuteBuffer(){
 //	};
 //	StopPF(18);
 	NeedCurrentTime+=MaxDCT;
-	for(int i=0;i<MaxDCT;i++)rando();
+	for(i=0;i<MaxDCT;i++)rando();
 
 	//ADDGR(6,GetTickCount(),GetTickCount()-NeedCurrentTime,0xD4);
 	extern bool HideBorderMode;
@@ -6514,7 +6511,7 @@ int _implSelBrigade(byte* Ptr){
 	Selm[NI]=(word*)realloc(Selm[NI],(NAdd+NSL[NI])<<1);
 	SerN[NI]=(word*)realloc(Selm[NI],(NAdd+NSL[NI])<<1);
 	int NS=NSL[NI];
-	for(int i=NBPERSONAL;i<N;i++){
+	for(i=NBPERSONAL;i<N;i++){
 		word MID=MEM[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -6569,7 +6566,7 @@ int _implUnSelBrigade(byte* Ptr){
 	SU=BR->Memb;
 	SN=BR->MembSN;
 	N=BR->NMemb;
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		word MID=SU[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -6604,7 +6601,7 @@ int _implUnSelUnitsSet(byte* Ptr){
 	word* SN=SerN[NI];
 	int N2=NSL[NI];
 	int N1=0;
-	for(int i=0;i<N2;i++){
+	for(i=0;i<N2;i++){
 		word MID=SU[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -6624,7 +6621,7 @@ int _implUnSelUnitsSet(byte* Ptr){
 		if(SerN[NI])free(SerN[NI]);
 		SerN[NI]=NULL;
 	}
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		word MID=Units[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -6647,7 +6644,7 @@ int PACKSET(word* Set,int N,byte* outbuf,bool Write){
 	byte LEVEL2[128*8];
 	memset(LEVEL2,0,128*8);
 	int N2=0;
-	for(int i=0;i<1024*8;i++){
+	for(i=0;i<1024*8;i++){
 		if(BASESET[i]){
 			LEVEL2[i>>3]|=1<<(i&7);
 			N2++;
@@ -6656,7 +6653,7 @@ int PACKSET(word* Set,int N,byte* outbuf,bool Write){
 	byte LEVEL1[16*8];
 	memset(LEVEL1,0,16*8);
 	int N1=0;
-	for(int i=0;i<128*8;i++){
+	for(i=0;i<128*8;i++){
 		if(LEVEL2[i]){
 			LEVEL1[i>>3]|=1<<(i&7);
 			N1++;
@@ -6665,7 +6662,7 @@ int PACKSET(word* Set,int N,byte* outbuf,bool Write){
 	byte LEVEL0[16];
 	memset(LEVEL0,0,16);
 	int N0=0;
-	for(int i=0;i<16*8;i++){
+	for(i=0;i<16*8;i++){
 		if(LEVEL1[i]){
 			LEVEL0[i>>3]|=1<<(i&7);
 			N0++;
@@ -6673,7 +6670,7 @@ int PACKSET(word* Set,int N,byte* outbuf,bool Write){
 	};
 	word LEVELX=0;
 	int NX=0;
-	for(int i=0;i<16;i++){
+	for(i=0;i<16;i++){
 		if(LEVEL0[i]){
 			LEVELX|=1<<i;
 			NX++;
@@ -6682,25 +6679,25 @@ int PACKSET(word* Set,int N,byte* outbuf,bool Write){
 	if(!Write)return 2+NX+N0+N1+N2;
 	memcpy(outbuf,&LEVELX,2);
 	int pos=2;
-	for(int i=0;i<16;i++){
+	for(i=0;i<16;i++){
 		if(LEVEL0[i]){
 			outbuf[pos]=LEVEL0[i];
 			pos++;
 		};
 	};
-	for(int i=0;i<16*8;i++){
+	for(i=0;i<16*8;i++){
 		if(LEVEL1[i]){
 			outbuf[pos]=LEVEL1[i];
 			pos++;
 		};
 	};
-	for(int i=0;i<128*8;i++){
+	for(i=0;i<128*8;i++){
 		if(LEVEL2[i]){
 			outbuf[pos]=LEVEL2[i];
 			pos++;
 		};
 	};
-	for(int i=0;i<1024*8;i++){
+	for(i=0;i<1024*8;i++){
 		if(BASESET[i]){
 			outbuf[pos]=BASESET[i];
 			pos++;
@@ -6732,7 +6729,7 @@ int UNPACKSET(byte* Data,int* L,word* Out,bool Write){
 		if(LEVELX&msk)N0++;
 		msk<<=1;
 	};
-	for(int i=0;i<N0;i++){
+	for(i=0;i<N0;i++){
 		byte ms=1;
 		byte cb=CBF[i];
 		for(int j=0;j<8;j++){
@@ -6741,7 +6738,7 @@ int UNPACKSET(byte* Data,int* L,word* Out,bool Write){
 		};
 	};
 	CBF+=N0;
-	for(int i=0;i<N1;i++){
+	for(i=0;i<N1;i++){
 		byte ms=1;
 		byte cb=CBF[i];
 		for(int j=0;j<8;j++){
@@ -6750,7 +6747,7 @@ int UNPACKSET(byte* Data,int* L,word* Out,bool Write){
 		};
 	};
 	CBF+=N1;
-	for(int i=0;i<N2;i++){
+	for(i=0;i<N2;i++){
 		byte ms=1;
 		byte cb=CBF[i];
 		for(int j=0;j<8;j++){
@@ -6763,7 +6760,7 @@ int UNPACKSET(byte* Data,int* L,word* Out,bool Write){
 	byte* L2BUF=Data+2+N0+N1;
 	byte* L3BUF=Data+2+N0+N1+N2;
 	msk=1;
-	for(int i=0;i<16;i++){
+	for(i=0;i<16;i++){
 		if(LEVELX&msk){
 			byte b0=LEVEL0[i]=L0BUF[L0pos];
 			L0pos++;
@@ -6795,7 +6792,7 @@ int UNPACKSET(byte* Data,int* L,word* Out,bool Write){
 		msk<<=1;
 	};
 	int sz=0;
-	for(int i=0;i<1024*8;i++){
+	for(i=0;i<1024*8;i++){
 		if(BASESET[i]){
 			msk=1;
 			byte b=BASESET[i];
@@ -6874,7 +6871,7 @@ int _implSelUnitsSet(byte* Ptr){
 	Selm[NI]=(word*)realloc(Selm[NI],(N0+N1)*2);
 	SerN[NI]=(word*)realloc(SerN[NI],(N0+N1)*2);
 	N1=N0;
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		OneObject* OB=Group[Units[i]];
 		if(OB/*&&OB->NNUM==GSets.CGame.cgi_NatRefTBL[NI]*/){
 			OB->Illusion=0;
@@ -6982,7 +6979,7 @@ void SmartSelectionCorrector(byte NI,word* M0,word* SN0,int N0){
 			if(OB&&!(OB->Sdoxlo||OB->notSelectable()))OB->NNUM|=32;
 		};
 	};
-	for(int i=0;i<N1;i++){
+	for(i=0;i<N1;i++){
 		word MID=M1[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -6995,7 +6992,7 @@ void SmartSelectionCorrector(byte NI,word* M0,word* SN0,int N0){
 			};
 		};
 	};
-	for(int i=0;i<N0;i++){
+	for(i=0;i<N0;i++){
 		word MID=M0[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -7018,14 +7015,14 @@ void SmartSelectionCorrector(byte NI,word* M0,word* SN0,int N0){
 	};
 	//if(NADD>COUNTER)COUNTER=NADD;
 	//if(NSUB>COUNTER)COUNTER=NSUB;
-	for(int i=0;i<N0;i++){
+	for(i=0;i<N0;i++){
 		word MID=M0[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
 			if(OB&&!(OB->Sdoxlo||OB->notSelectable()))OB->NNUM&=15;
 		};
 	};
-	for(int i=0;i<N1;i++){
+	for(i=0;i<N1;i++){
 		word MID=M1[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -7054,7 +7051,7 @@ int UNPACKSET_OLD(byte* Data,int* L,word* Out,bool Write){
 		if(LEVEL0&msk)N1++;
 		msk<<=1;
 	};
-	for(int i=0;i<N1;i++){
+	for(i=0;i<N1;i++){
 		byte ms=1;
 		byte cb=CBF[i];
 		for(int j=0;j<8;j++){
@@ -7063,7 +7060,7 @@ int UNPACKSET_OLD(byte* Data,int* L,word* Out,bool Write){
 		};
 	};
 	CBF+=N1;
-	for(int i=0;i<N2;i++){
+	for(i=0;i<N2;i++){
 		byte ms=1;
 		byte cb=CBF[i];
 		for(int j=0;j<8;j++){
@@ -7075,7 +7072,7 @@ int UNPACKSET_OLD(byte* Data,int* L,word* Out,bool Write){
 	byte* L2BUF=Data+2+N1;
 	byte* L3BUF=Data+2+N1+N2;
 	msk=1;
-	for(int i=0;i<16;i++){
+	for(i=0;i<16;i++){
 		if(LEVEL0&msk){
 			byte b=LEVEL1[i]=L1BUF[L1pos];
 			L1pos++;
@@ -7099,7 +7096,7 @@ int UNPACKSET_OLD(byte* Data,int* L,word* Out,bool Write){
 		msk<<=1;
 	};
 	int sz=0;
-	for(int i=0;i<1024;i++){
+	for(i=0;i<1024;i++){
 		if(BASESET[i]){
 			msk=1;
 			byte b=BASESET[i];
@@ -7142,7 +7139,7 @@ int _implSelUnitsSet_OLD(byte* Ptr){
 	Selm[NI]=(word*)realloc(Selm[NI],(N0+N1)*2);
 	SerN[NI]=(word*)realloc(SerN[NI],(N0+N1)*2);
 	N1=N0;
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		OneObject* OB=Group[Units[i]];
 		if(OB/*&&OB->NNUM==GSets.CGame.cgi_NatRefTBL[NI]*/){
 			Selm[NI][N1]=OB->Index;

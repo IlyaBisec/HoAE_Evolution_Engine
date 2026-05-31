@@ -116,8 +116,8 @@ void SystemCursor::SetFileName( const char* val )
 void SystemCursor::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "SystemCursor", this );
-    pm.m( "Activate", &SystemCursor::Activate );
-    pm.p( "FileName", &SystemCursor::GetFileName, &SystemCursor::SetFileName, "file" );
+    pm.m( "Activate", Activate );
+    pm.p( "FileName", GetFileName, SetFileName, "file" );
 } // SystemCursor::Expose
 
 void SystemCursor::Serialize( OutStream& os ) const
@@ -155,7 +155,7 @@ void TexturedCursor::Unserialize( InStream& is )
 void TexturedCursor::Expose( PropertyMap& pm )
 {    
     pm.start<Parent>( "TexturedCursor", this );
-    pm.p ( "TexName", &TexturedCursor::GetTextureName, &TexturedCursor::SetTextureName, "#texture" );
+    pm.p ( "TexName", GetTextureName, SetTextureName, "#texture" );
     pm.f( "Left",        m_TexRct.x );
     pm.f( "Top",        m_TexRct.y );
     pm.f( "Width",    m_TexRct.w );

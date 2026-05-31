@@ -30,7 +30,7 @@
 //--------------------
 
 // Lua ///////////////////////////////////////////////////////////////////
-#include	"..\COSSACKS2\LUA\lua_define.hpp"
+#include	<lua_define.hpp>
 #ifdef  __LUA__ 
 	#include <lua_header.h>
 	#ifdef  __LUA_DEBUGGER__ 

@@ -46,7 +46,7 @@ bool CSum::ChkSum(){
 //-------------------USING THIS CLASS----------------//
 static int NSum=0;
 CSum SMS[64];
-//BigSum();
+BigSum();
 void ADDSUMM(void* lp,int n);
 void GETALL();
 void CHKALL();
@@ -71,7 +71,7 @@ void CheckAsks(){
 		//assert(OB&&OB->x==Ask[i].x&&Ask[i].y==OB->y);
 	};
 };
-static int dd=0;
+static dd=0;
 int CheckSum;
 void AddCS(void* Src,int sz){
     int cc=int(Src);

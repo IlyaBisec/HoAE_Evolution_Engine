@@ -402,7 +402,7 @@ void UnitAbilityExtension::OnUnloading()
 	}
 
 	ActiveUnitAbility::CurSerial=0;
-	for(int i=0;i<MAXOBJECT;i++)
+	for(i=0;i<MAXOBJECT;i++)
 	{
 		OneObject* OB=Group[i];
 		if(OB)
@@ -463,7 +463,7 @@ bool SaveActiveAbilitiesToXml(OneObject* OB,xmlQuote& xml){
 			AdvCharacter* cAC=OB->MoreCharacter;
 			OB->newMons=OB->ActiveAbility->BornNM;
 			OB->MoreCharacter=OB->ActiveAbility->BornAC;
-            xmlQuote* mci=new_xmlQuota();
+            xmlQuote* mci=new_xmlQuote();
 
 			//SaveCharacterChangeToXml(OB,*mci);			
 			BasicObjectChars* BOC=CreateCharacterFromNewMonster(OB->newMons);
@@ -886,9 +886,7 @@ bool UnitAbilityExtension::OnUnitDamage(OneObject* DamagedUnit,OneObject* Damage
 	if( DamagedUnit->ActiveAbility 
 				&& DamagedUnit->ActiveAbility->ActiveAbilities.InfluenceMask.check_bit(ABL_Thorn) ){
 				if (Damager){
-				int AttRadius=Damager->GetMaxAttackRadius(AttType);
-				if( AttRadius<150 )
-					DamagedUnit->ActiveAbility->ActiveAbilities.modifyThorn(Damager->Life,Damager->Life,Damage,Damager,DamagedUnit);
+					DamagedUnit->ActiveAbility->ActiveAbilities.modifyThorn(Damager->Life,Damager->Life,Damage,Damager,DamagedUnit,AttType);
 				}
 				}//Thorn, fixed, TheBlackHunter, 1.07.22
 	// Stop invisibility if not dead
@@ -1123,6 +1121,38 @@ bool UnitAbilityExtension::OnUnitDie(OneObject* Dead,OneObject* Killer){
 			UnitAbility* UA=AA->GetA();
 			if(UA){
 				int price = UA->ShopPrice/4;
+				int price2 = price*2;
+
+				CommonParameters* CP=&AA->OB->newMons->NewParams;
+			if (!UA->EnableCustomReward){
+				if( CP->PickUp_KillingAward_Gold ){
+					AddXRESRC(Killer->NNUM,GoldID,CP->PickUp_KillingAward_Gold);
+				}else
+					AddXRESRC(Killer->NNUM,GoldID,price+GetRND(price2));
+				if( CP->PickUp_KillingAward_Iron ){
+					AddXRESRC(Killer->NNUM,IronID,CP->PickUp_KillingAward_Iron);
+				}else
+					AddXRESRC(Killer->NNUM,IronID,price+GetRND(price2));
+				if( CP->PickUp_KillingAward_Coal ){
+					AddXRESRC(Killer->NNUM,CoalID,CP->PickUp_KillingAward_Coal);
+				}else
+					AddXRESRC(Killer->NNUM,CoalID,price+GetRND(price2));
+			}else{
+				if(UA->FoodReward)AddXRESRC(Killer->NNUM,FoodID,UA->FoodReward+GetRND(UA->RandomFoodReward));
+				if(UA->WoodReward)AddXRESRC(Killer->NNUM,TreeID,UA->WoodReward+GetRND(UA->RandomWoodReward));
+				if(UA->StoneReward)AddXRESRC(Killer->NNUM,StoneID,UA->StoneReward+GetRND(UA->RandomStoneReward));
+				if(UA->GoldReward)AddXRESRC(Killer->NNUM,GoldID,UA->IronReward+GetRND(UA->RandomGoldReward));
+				if(UA->IronReward)AddXRESRC(Killer->NNUM,IronID,UA->GoldReward+GetRND(UA->RandomIronReward));
+				if(UA->CoalReward)AddXRESRC(Killer->NNUM,CoalID,UA->CoalReward+GetRND(UA->RandomCoalReward));
+
+			}
+				EraseObject(Dead);
+			}
+		}
+		/*	if(AA){
+			UnitAbility* UA=AA->GetA();
+			if(UA){
+				int price = UA->ShopPrice/4;
 				CommonParameters* CP=&AA->OB->newMons->NewParams;
 				if( CP->PickUp_KillingAward_Gold ){
 					AddXRESRC(Killer->NNUM,GoldID,CP->PickUp_KillingAward_Gold);
@@ -1138,8 +1168,8 @@ bool UnitAbilityExtension::OnUnitDie(OneObject* Dead,OneObject* Killer){
 					AddXRESRC(Killer->NNUM,CoalID,price);
 				EraseObject(Dead);
 			}
-		}
-
+		}*/
+//For Reborn
 		// давать награду только если киллер той же национальности что и игрок
 		//bool PassKillerNat=false;
 		//for(int i=0;i<NPlayers||COMPSTART[i];i++){
@@ -1209,7 +1239,7 @@ bool UnitAbilityExtension::OnUnitDie(OneObject* Dead,OneObject* Killer){
 				if(WM){
 					word FromID=UnitIndex;
 					OneObject* CastOB=Group[AA->CasterID];
-					if(CastOB&&(int)CastOB!=65536&&(CastOB->Serial==AA->CasterSN)){
+					if(CastOB&&CastOB->Serial==AA->CasterSN){
 						FromID=AA->CasterID;
 					}
 
@@ -1230,7 +1260,7 @@ void UnitAbilityExtension::OnUnitWasProduced(OneObject* Producer,OneObject* NewO
 	//if(Producer->NNUM==7){
 	if(Producer->NMask&256){
 		static UnitAbility* UA=NULL;
-		static bool init=false;
+		static init=false;
 		//UnitAbility* UA=EngSettings.SettlementUnitProduceAbility.Get();
 		if( !(init||UA) ){
 			init=true;

@@ -776,10 +776,10 @@ CIMPORT bool GetBrGroup(byte Owner, int BrigID, int* N, word** ID, word** SN);
 CIMPORT word FindNearestSklad(byte NI, byte ResID, int x, int y);
 CIMPORT word FindNearestSklad(byte NI, byte ResID);
 
-typedef int tpDrawOnMiniMapCallback(int x,int y,int Lx,int Ly,int mx0,int my0);
+typedef tpDrawOnMiniMapCallback(int x,int y,int Lx,int Ly,int mx0,int my0);
 CIMPORT tpDrawOnMiniMapCallback* SetDrawOnMiniMapCallback(tpDrawOnMiniMapCallback* dc);
 
-typedef int tpDrawOnMapCallback();
+typedef tpDrawOnMapCallback();
 CIMPORT tpDrawOnMapCallback* SetDrawOnMapCallback(tpDrawOnMapCallback* dc);
 
 CIMPORT void SetDrawScale(float scale);
@@ -791,7 +791,7 @@ CIMPORT DWORD GetNatColor(int i);
 
 DLLIMPORT bool GetFogSpotVisibility(int x,int y);
 
-typedef int tpBirthCallback(int NewbornIndex);
+typedef tpBirthCallback(int NewbornIndex);
 CIMPORT tpBirthCallback* SetBirthCallback(tpBirthCallback* dc);
 DLLIMPORT void DeleteDynGroup(GAMEOBJ* Units);
 DLLIMPORT void AddOneUnitToGroup(GAMEOBJ* Units,OneObject* OB);

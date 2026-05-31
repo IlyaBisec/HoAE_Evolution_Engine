@@ -1,7 +1,7 @@
 #ifndef __CmdCallbacks__
 #define __CmdCallbacks__
 
-#include "..\surface\Surface.h"
+#include "Surface.h"
 
 namespace Surface {
 	bool SimplifyCallback(cStr &Msg);

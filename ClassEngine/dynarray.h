@@ -2,7 +2,7 @@
 #define __DYNARRAY_H__
 
 #ifndef __STDAPPLICATION__
-#include "..\COSSACKS2\smart_assert.h"
+#include "smart_assert.h"
 #else //__STDAPPLICATION__
 #include "assert.h"
 #endif //__STDAPPLICATION__
@@ -157,12 +157,10 @@ public:
 			return Values[0];//DlaBitja;
 #endif
 		}
-		return Values[NValues];
+		return Values[NValues-1];
 	}	
 	inline Elem pop_back(){
-		bool proverka = 0;
 		if(NValues>0){
-			proverka = 1;
 			return Values[--NValues];
 		}else return Values[0];
 	}

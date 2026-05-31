@@ -354,7 +354,7 @@ int		ST_IDLE_00			( pSMARTOBJECT& C_OBJ, pMSG& msg ){
 							iNode node=arrGrpPos.getNODE(i);
 							Types.Add(node.getR());
 						}
-						for(int i=0;i<NU;i++){
+						for(i=0;i<NU;i++){
 							int Type=pUnitType(_group[i]).GetType();
 							for(int t=0;t<NP;t++){
 								if( Type==Types[t] ){
@@ -364,7 +364,7 @@ int		ST_IDLE_00			( pSMARTOBJECT& C_OBJ, pMSG& msg ){
 							}
 						}
 						//int	n=_group.getUN();
-						for(int i=NU;i<NP;i++){
+						for(i=NU;i<NP;i++){
 							//pUnit U=_group[i];
 							//if( !U.Valid() || U.GetLiveStatus()==0 ){
 							iNode node=arrGrpPos.getNODE(i);

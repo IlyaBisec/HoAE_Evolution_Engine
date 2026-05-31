@@ -438,7 +438,7 @@ loop1:
 			dx=SDX/n;
 			dy=SDY/n;
 		
-			for(int i=0; i<n; i++){
+			for(i=0; i<n; i++){
 				Single->xc+=dx; Single->x+=dx; Single->x1+=dx; Single->y+=dy; Single->y1+=dy;
 				Multi->xc+=dx; Multi->x+=dx; Multi->x1+=dx; Multi->y+=dy; Multi->y1+=dy;
 				Load->xc+=dx; Load->x+=dx; Load->x1+=dx; Load->y+=dy; Load->y1+=dy;
@@ -505,7 +505,7 @@ loop1:
 			dx=MDX/n;
 			dy=MDY/n;
 		
-			for(int i=0; i<n; i++){
+			for(i=0; i<n; i++){
 				Single->xc+=dx; Single->x+=dx; Single->x1+=dx; Single->y+=dy; Single->y1+=dy;
 				Multi->xc+=dx; Multi->x+=dx; Multi->x1+=dx; Multi->y+=dy; Multi->y1+=dy;
 				Load->xc+=dx; Load->x+=dx; Load->x1+=dx; Load->y+=dy; Load->y1+=dy;

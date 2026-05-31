@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "..\ClassEngine\DynArray.h"
+#include "DynArray.h"
 #include "sg.h"
 #include "sgNodePool.h"
 #include "kHash.hpp"

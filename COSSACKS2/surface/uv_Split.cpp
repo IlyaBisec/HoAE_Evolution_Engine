@@ -1,6 +1,6 @@
 #include "stdheader.h"
 #include "mLodder.h"
-#include "..\Surface\Surface.h"
+#include "Surface.h"
 #include "ITerrain.h"
 #include "SurfSplit.h"
 

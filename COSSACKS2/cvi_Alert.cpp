@@ -75,7 +75,7 @@ bool AddArrayAlert(cvi_AlertBase* AB){
 		Vector4D V=SkewPt(x,y,H);
 		WorldToScreenSpace(V);
 		//
-		const int border=200;
+		const border=200;
 		bool screen=V.x>-border&&V.y>-border&&V.x<RealLx+border&&V.y<RealLy+border;
 		bool fow=CheckScrollLimitations(x,y);
 		if(!fow){
@@ -416,7 +416,7 @@ void AlertBrigProcess(){
 					Vector4D V=SkewPt(x,y,H);
 					WorldToScreenSpace(V);
 					//
-					const int border=200;
+					const border=200;
 					bool screen=V.x>-border&&V.y>-border&&V.x<RealLx+border&&V.y<RealLy+border;
 					bool fow=CheckScrollLimitations(x,y);
 					if(!fow){

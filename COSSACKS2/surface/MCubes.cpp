@@ -581,9 +581,7 @@ void CubeTriangulator::GetFullTriangilationRecursive(int x,int y,int z,int x0,in
 					D=0xFFFF;
 				}
 				change=true;
-				int p = 0;
-				int q = 0;
-				for(p=0,q=0;p<18;p+=3,q++)if( D & (1<<q) ){
+				for(int p=0,int q=0;p<18;p+=3,q++)if( D & (1<<q) ){
 					int xx=x+ExpFacesDir[p  ];
 					int yy=y+ExpFacesDir[p+1];
 					int zz=z+ExpFacesDir[p+2];
@@ -676,8 +674,7 @@ void WholeTriangulation::NormalSmooth(int ntimes){
 	}
 
 	for(int q=0;q<ntimes;q++){
-		int i;
-		for(i=0;i<NVert;i++){
+		for(int i=0;i<NVert;i++){
 			vert2[i].x=0;
 			vert2[i].y=0;
 			vert2[i].z=0;
@@ -755,8 +752,7 @@ void WholeTriangulation::SmartSmooth(){
 	}
 
 	for(int q=0;q<3;q++){
-		int i;
-		for(i=0;i<NVert;i++){
+		for(int i=0;i<NVert;i++){
 			vert2[i].x=0;
 			vert2[i].y=0;
 			vert2[i].z=0;

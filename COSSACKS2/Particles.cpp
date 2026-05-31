@@ -167,7 +167,7 @@ void ParticlesContainer::Process(){
 			}
 		}
 	}
-	for(int i=0;i<Particles.GetAmount();i++){
+	for(i=0;i<Particles.GetAmount();i++){
 		if(!Particles[i]->ProcessVertices()){
 			delete(Particles[i]);
 			Particles.Del(i,1);

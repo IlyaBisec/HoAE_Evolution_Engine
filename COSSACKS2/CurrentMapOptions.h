@@ -1,6 +1,6 @@
 #pragma once
 //////////////////////////////////////////////////////////////////////////
-#include "..\ClassEngine\more_types.h"
+#include <more_types.h>
 #include "VictoryConditions.h"
 #include "IWater.h"
 //
@@ -328,7 +328,7 @@ public:
 			void EvaluateFunction();
 			SAVE(LimitCamArgsCopy);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} CopyFromEngineSettings;
 
 		SAVE(MapOptionsLimitCamArgs);
@@ -342,7 +342,7 @@ public:
 			REG_MEMBER(_int, MaxMapY);
 			REG_AUTO(Separator);
 			REG_AUTO(CopyFromEngineSettings);
-		ENDSAVE;
+		ENDSAVE();
 	} LimitCamArgs;
 
 	//*************************************************************************
@@ -362,7 +362,7 @@ public:
 			void EvaluateFunction();
 			SAVE(FogArgsCopy);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} CopyFromEngineSettings;
 
 		SAVE(MapOptionsFogArgs);
@@ -371,7 +371,7 @@ public:
 			REG_AUTO(Separator);
 			REG_PARENT(EngineSettings::EngineSettingsFogArgs);
 			REG_AUTO(CopyFromEngineSettings);
-		ENDSAVE;
+		ENDSAVE();
 	} FogArgs;
 
 	//*************************************************************************
@@ -391,7 +391,7 @@ public:
 			void EvaluateFunction();
 			SAVE(CamArgsCopy);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} CopyFromEngineSettings;
 
 		SAVE(MapOptionsCamArgs);
@@ -400,7 +400,7 @@ public:
 			REG_AUTO(Separator);
 			REG_PARENT(EngineSettings::EngineSettingsCamArgs);
 			REG_AUTO(CopyFromEngineSettings);
-		ENDSAVE;
+		ENDSAVE();
 	} CamArgs;
 	
 	be_CARRAY LimitUnitsInSettlement;

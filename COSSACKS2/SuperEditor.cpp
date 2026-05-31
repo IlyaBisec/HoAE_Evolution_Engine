@@ -610,7 +610,7 @@ void VariablesList::RefreshEnumerator()
 			}
 		}
 	}
-	for(int i=0;i<n;i++)
+	for(i=0;i<n;i++)
 	{
 		if(Variables[i]->Name.L)
 		{

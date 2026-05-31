@@ -56,80 +56,82 @@ SimpleDialog* cvi_Market::Init(){
 };
 
 void cvi_Market::Load(){
-	GFILE* F=Gopen("economy.txt","r");
-	if(F){
-		char cc[128];
-		int z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		ClearIcn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		ChertaIcn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		BuyIcn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		P10Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		M10Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		P100Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		M100Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		P1000Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		M1000Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		P10000Icn=GetIconByName(cc);
-		z=Gscanf(F,"%s",cc);
-		if(z!=1)EERR();
-		M10000Icn=GetIconByName(cc);
-		for(int i=0;i<6;i++){
-			z=Gscanf(F,"%s",cc);
-			if(z!=1)EERR();
-			float v1,v2;
-			EcResID[i]=GetResID(cc);
-			EcResIcn[i]=GetIconByName(cc);
-			float x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
-			z=Gscanf(F,"%s%g%g%g%s%g%g%s%g%s%g%g%g%s%g%g%s%g",
-				cc,&x1,&x2,&x3,
-				cc,&v1,&x4,cc,&x5,
-				cc,&x6,&x7,&x8,
-				cc,&v2,&x9,cc,&x10);
-			if(z!=18)EERR();
-			ResCostBuy0[i]=x1;
-			ResCostBuy1[i]=x2;
-			ResCostBuy2[i]=x3;
-			ExpBUY[i]=x4;
-			TimeBUY[i]=x5;
-			ResCostSell0[i]=x6;
-			ResCostSell1[i]=x7;
-			ResCostSell2[i]=x8;
-			ExpSELL[i]=x9;
-			TimeSELL[i]=x10;
-			ResCostBuy[i]=ResCostBuy1[i];
-			ResCostSell[i]=ResCostSell1[i];
-			ExpBUY[i]/=v1*100;
-			ExpSELL[i]/=v2*100;
-		};
-		Gclose(F);
-	}else{
-		ErrM("Could not open ECONOMY.TXT");
-	};
 	if(ResBuy==ResSell) ResBuy=-1;
+}
+bool NationEcoUnderstand(GFILE* f, NewMonster* NM) {
+	int z;
+	char cc[128];
+	for (int i = 0; i < 6; i++) {
+			z = Gscanf(f, "%s", cc);
+			if (z != 1)EERR();
+		float v1, v2;
+		NM->EcResID[i] = GetResID(cc);
+		NM->EcResIcn[i] = GetIconByName(cc);
+		float x1, x2, x3, x4, x5, x6, x7, x8, x9, x10;
+		float n1;
+		z = Gscanf(f, "%s%g%g%g%s%g%g%s%g%s%g%g%g%s%g%g%s%g",
+			cc, &x1, &x2, &x3,
+			cc, &v1, &x4, cc, &x5,
+			cc, &x6, &x7, &x8,
+			cc, &v2, &x9, cc, &x10);
+		if (z != 18) {
+			sprintf(cc, "Not enough information: %s", cc);
+			ErrM(cc);
+		};
+		NM->ResCostBuy0[i] = x1;
+		NM->ResCostBuy1[i] = x2;
+		NM->ResCostBuy2[i] = x3;
+		NM->ExpBUY[i] = x4;
+		NM->TimeBUY[i] = x5;
+		NM->ResCostSell0[i] = x6;
+		NM->ResCostSell1[i] = x7;
+		NM->ResCostSell2[i] = x8;
+		NM->ExpSELL[i] = x9;
+		NM->TimeSELL[i] = x10;
+		NM->ResCostBuy[i] = NM->ResCostBuy1[i];
+		NM->ResCostSell[i] = NM->ResCostSell1[i];
+		NM->ExpBUY[i] /= v1 * 100;
+		NM->ExpSELL[i] /= v2 * 100;
+		z = Gscanf(f, "%s%s%g",
+			cc,cc,&n1);
+		NM->NalogResID[i] = GetResID(cc);
+		NM->Nalog[i] = n1;
+	};
+	return true; 
 }
 void cvi_Market::Process(){
 	if(mDialog){ // &&NOPAUSE
 		// limit sell amount
 		byte NI=GSets.CGame.cgi_NatRefTBL[MyNation];
+		Nation* NT = &NATIONS[NI];
+		vui_SelPoint* SP = OIS.GetLastSelPoint();
+		if (SP) {
+			if (SP->OB) {
+				
+				for (int i = 0; i < 6; i++) {
+					EcResID[i] = SP->OB->newMons->EcResID[i];
+					EcResIcn[i] = SP->OB->newMons->EcResIcn[i];
+					ResCostBuy0[i] = SP->OB->newMons->ResCostBuy0[i];
+					ResCostBuy1[i] = SP->OB->newMons->ResCostBuy1[i];
+					ResCostBuy2[i] = SP->OB->newMons->ResCostBuy2[i];
+					ExpBUY[i] = SP->OB->newMons->ExpBUY[i];
+					TimeBUY[i] = SP->OB->newMons->TimeBUY[i];
+					ResCostSell0[i] = SP->OB->newMons->ResCostSell0[i];
+					ResCostSell1[i] = SP->OB->newMons->ResCostSell1[i];
+					ResCostSell2[i] = SP->OB->newMons->ResCostSell2[i];
+					ExpSELL[i] = SP->OB->newMons->ExpSELL[i];
+					TimeSELL[i] = SP->OB->newMons->TimeSELL[i];
+					NalogResID[i] = SP->OB->newMons->NalogResID[i];
+					Nalog[i] = SP->OB->newMons->Nalog[i];
+					//if ((ResCostSell[i] == ResCostSell1[i]) && (ResCostBuy[i] == ResCostBuy1[i])) {
+					if(!(this->init[i])) {
+					ResCostBuy[i] = SP->OB->newMons->ResCostBuy[i];
+					ResCostSell[i] = SP->OB->newMons->ResCostSell[i];
+					this->init[i] = true;
+					}
+				}
+			}
+		}
 		if(ResSell!=-1){
 			int SellID=EcResID[ResSell];
 			if(mGet){
@@ -143,12 +145,12 @@ void cvi_Market::Process(){
 			}
 		}
 		// balancing cost
-		/*for(int i=0;i<6;i++){
+		for(int i=0;i<6;i++){
 			if(ResCostSell[i]>ResCostSell1[i])ResCostSell[i]-=TimeSELL[i];
 			if(ResCostBuy[i]>ResCostBuy1[i])ResCostBuy[i]-=TimeBUY[i];
 			if(ResCostSell[i]<ResCostSell1[i])ResCostSell[i]+=TimeSELL[i];
 			if(ResCostBuy[i]<ResCostBuy1[i])ResCostBuy[i]+=TimeBUY[i];
-		};*/
+		};
 	}
 };
 void cvi_Market::SetResSell(byte ResID){
@@ -194,6 +196,10 @@ void cvi_Market::PerformOperation(byte Nation,byte SellRes,byte BuyRes,int SellA
 		AddXRESRC(Nation,BuyID,BuyAmount);
 		NATIONS[Nation].ResBuy[BuyID]+=BuyAmount;
 		NATIONS[Nation].ResSell[SellID]+=SellAmount;
+		if (Nalog[SellRes] != 0) {
+			int Nalogi = int(SellAmount*Nalog[SellRes]);
+			AddXRESRC(Nation, NalogResID[SellRes], -Nalogi);
+		}
 	}
 	double Ves=double(BuyAmount)*ExpBUY[BuyRes];
 	ResCostBuy[BuyRes]=(ResCostBuy[BuyRes]+ResCostBuy2[BuyRes]*Ves)/(1+Ves);
@@ -365,7 +371,6 @@ bool cvi_M_SellSelect::LeftClick(SimpleDialog* SD){
 //
 void cvi_M_BuySelect::SetFrameState(SimpleDialog* SD){
 	//SD->Visible=false;
-	SD->DeepColor=true;
 	if(vMarket->mDialog){
 		int ResID=GetResID(SD->Name.pchar());
 		if(ResID>=0){

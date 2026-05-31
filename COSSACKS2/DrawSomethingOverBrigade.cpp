@@ -99,7 +99,7 @@ public:
 			}			
 			BrigAbl.ProcessDialogs();
 			//
-			for(int i=aL;i<BrigLAbl.DSS.GetAmount();i++){
+			for(i=aL;i<BrigLAbl.DSS.GetAmount();i++){
 				if(BrigLAbl.DSS[i]){
 					BrigLAbl.DSS[i]->Visible=false;
 				}

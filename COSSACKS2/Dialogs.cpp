@@ -290,40 +290,43 @@ bool ReadStdElement(BaseClass* Element){
 	return false;
 }
 void ParentFrame::Init(){
-	ShiftX=0;
-	ShiftY=0;
-	x=0;y=0;x1=0;y1=0;
-	BaseX=0;BaseY=0;
-	//ActiveX=0;ActiveY=0;
-	//ActiveX1=0;ActiveY1=0;
-	ActiveID=0;
-	ParentDS=NULL;
-	//ActiveParent=NULL;
-	EditMode=0;
-	Selected=0;
-	DeepColor=0;
-	Diffuse=0xFFFFFFFF;
-	//
-	LeftAlign=0;
-	RightAlign=0;
-	HorizontalCenterAlign=0;
-	TopAlign=0;
-	BottomAlign=0;
-	VerticalCenterAlign=0;
-	//
-	LA_param=0;
-	RA_param=0;
-	HCA_param=0;
-	TA_param=0;
-	BA_param=0;
-	VCA_param=0;
-	EnableTransform=0;
-	Angle=0;
-	ScaleX=1.0f;
-	ScaleY=1.0f;
-	PivotDx=0.0f;
-	PivotDy=0.0f;
-	Visible=true;
+    ShiftX=0;
+    ShiftY=0;
+    x=0;y=0;x1=0;y1=0;
+    BaseX=0;BaseY=0;
+    //ActiveX=0;ActiveY=0;
+    //ActiveX1=0;ActiveY1=0;
+    ActiveID=0;
+    ParentDS=NULL;
+    //ActiveParent=NULL;
+    EditMode=0;
+    Selected=0;
+    DeepColor=0;
+    Diffuse=0xFFFFFFFF;
+    //
+    LeftAlign=0;
+    RightAlign=0;
+    HorizontalCenterAlign=0;
+    TopAlign=0;
+    BottomAlign=0;
+    VerticalCenterAlign=0;
+    //
+    LA_param=0;
+    RA_param=0;
+    HCA_param=0;
+    TA_param=0;
+    BA_param=0;
+    VCA_param=0;
+    EnableTransform=0;
+    EnableDynScale=0;
+    EnableDynPos=0;
+    Angle=0;
+    ScaleX=1.0f;
+    ScaleY=1.0f;
+    PivotDx=0.0f;
+    PivotDy=0.0f;
+    Visible=true;
+
 }
 ParentFrame::ParentFrame(){	
 	Init();
@@ -336,8 +339,14 @@ ParentFrame::ParentFrame(){
 //}
 void ParentFrame::GetMatrix(Matrix4D& M){
 	M=Matrix4D::identity;
-	float sgx=FlipX?-ScaleX:ScaleX;
-	float sgy=FlipY?-ScaleY:ScaleY;
+    float ResPropX=RealLx/1920.0;//Переменные для пропорции
+	float ResPropY=RealLy/1080.0;
+	float NewScaleX=0.0f;
+    float NewScaleY=0.0f;
+	NewScaleX=ScaleX*ResPropX;
+	NewScaleY=ScaleY*ResPropY;
+	float sgx=FlipX?-NewScaleX:NewScaleX;
+	float sgy=FlipY?-NewScaleY:NewScaleY;
 	float ang=Angle*3.1415926/180.0f;
 	float _cos=cos(ang);
 	float _sin=sin(ang);
@@ -2966,8 +2975,7 @@ bool InputBoxOld_OnClick(SimpleDialog* SD){
 		int xxx=mouseX-IB->LastDrawX+IB->totdx;
 		int xx1=0;
 		int L=IB->Str?strlen(IB->Str):strlen(IB->_Str->pchar());
-		int j;
-		for(j=0;j<L;j++){
+		for(int j=0;j<L;j++){
 			if(IB->Anonim)xx1+=GetRLCWidth(IB->Font->RLC,'*');
 			else xx1+=GetRLCWidth(IB->Font->RLC,IB->Str?IB->Str[j]:(*IB->_Str)[j]);
 			if(xx1>=xxx){
@@ -4289,7 +4297,6 @@ bool ComboBox_OnDrawActiveRuler(SimpleDialog* SD){
 		IntersectWindows(CB->DropX,CB->DropY+CB->UpLy-4,CB->DropX+164,CB->DropY+CB->OneLy*CB->MaxLY+12);
 		int x0=CB->DropX+16;
 		char cc[128];
-		int i;
 		for(i=StartDeal;i<FinDeal;i++){
 			if(i>=MinDeal&&i<=MaxDeal){
 				int yy=(i-CB->YPos-CB->MinDeal)*PTPERDEAL+CB->DropY+CB->UpLy+realots;
@@ -6369,7 +6376,7 @@ int DrawMultilineText(int x,int y,char* s,RLCFont* DefaultFont,int& MaxLx,int Ma
     MaxLx=MaxW;
 	if(Draw){
 		strcpy(ActiveRefCom,T2.ActiveRefCommand);
-		static int T0=0;
+		static T0=0;
 		if(!T2.RefActivated){			
 			if(T0==0)T0=GetTickCount();
 			else{
@@ -8108,10 +8115,39 @@ void ParentFrame::vm_ActionsAccept(){
 		int N=DSS.GetAmount();
 		for(int i=0;i<N;i++){
 			SimpleDialog* SD=DSS[i];
-			if(SD) SD->vm_ActionsAccept();		
+			if(SD) SD->vm_ActionsAccept();
 		}
 	}
 };
+void ParentFrame::DynamicScale(int Lx, int Ly)
+{
+    if (EnableDynPos==1) {
+            double oldpropX=(Lx*100.0)/1920.0;
+            double oldpropY=(Ly*100.0)/1080.0;
+            double propX=(RealLx*100.0)/1920.0;
+            double propY=(RealLy*100.0)/1080.0;
+            if (oldpropX!=propX){
+                double Mult=propX/oldpropX;
+                int xx=(GetWidth()*Mult);
+                SetWidthS(xx);
+            }
+            if (oldpropY!=propY){
+                double Mult=propY/oldpropY;
+                int yy=(GetHeight()*Mult);
+                SetHeightS(yy);
+            }
+    }
+}
+void ParentFrame::DynamicScaleGlobal(int Lx, int Ly){
+	int N=DSS.GetAmount();
+		for(int i=0;i<N;i++){
+			SimpleDialog* SD=DSS[i];
+			if(SD) {
+				SD->DynamicScale(Lx,Ly);	
+				SD->DynamicScaleGlobal(Lx,Ly);
+			}
+		}
+}
 void ParentFrame::vm_ActionsCancel(){
 	if(!EditMode){
 		SimpleDialog* sd=dynamic_cast<SimpleDialog*>(this);
@@ -9656,15 +9692,36 @@ void ParentFrame::Sety(int _y){
 int ParentFrame::GetWidth(){
 	return x1-x;//+1;
 }
-void ParentFrame::SetWidth(int w){
+void ParentFrame::SetWidthS(int w){
 	int xx1=x+w;//-1; 
 	if(xx1<x)xx1=x;
 	ResizeDialog(xx1-x1,0);
 }
-void ParentFrame::SetHeight(int h){
+void ParentFrame::SetHeightS(int h){
 	int yy1=y+h-1;
 	if(yy1<y)yy1=y;
 	ResizeDialog(0,yy1-y1);
+}
+void ParentFrame::SetWidth(int w){
+    int xx1=x+w;//-1; 
+    if(xx1<x)xx1=x;
+     if ((EnableDynPos==1)&&!(InEdit)) {
+        if (RealLx!=1920||RealLy!=1080){
+      xx1=xx1*(RealLx/1920.0);
+        }
+    }
+    ResizeDialog(xx1-x1,0);
+}
+
+void ParentFrame::SetHeight(int h){
+    int yy1=y+h-1;
+    if(yy1<y)yy1=y;
+     if ((EnableDynPos==1)&&!(InEdit)) {
+        if (RealLx!=1920||RealLy!=1080){
+      yy1=yy1*(RealLy/1080.0);
+        }
+    }
+    ResizeDialog(0,yy1-y1);
 }
 void ParentFrame::Setxy(int _x, int _y){
 	int dx=_x-x;
@@ -9851,7 +9908,7 @@ BaseTriplet ControlToClassConnector::GetClass(){
 	if(B){
 		const char* rstr=ClassFieldPath.pchar();
 		if(rstr[0]=='$'){
-			const char* s0=strchr(rstr,'.');
+			char* s0=strchr(rstr,'.');
 			if(s0){
 				s0++;
 				T.ClassPtr=B;
@@ -9895,7 +9952,7 @@ BaseTriplet ControlToClassConnector::GetClass(){
 							if(s0[0]=='.')s0++;
 						}else{
 							int idx=atoi(s0+1);
-							const char* s1=strchr(s0,']');
+							char* s1=strchr(s0,']');
 							if(s1){
 								s0=s1+1;
 								if(s0[0]=='.')s0++;
@@ -9919,9 +9976,9 @@ BaseTriplet ControlToClassConnector::GetClass(){
 							*/
 						}
 					}else{
-						const char* s1=strchr(s0,'[');
-						const char* s2=strchr(s0,'.');
-						const char* s3=s0+strlen(s0);
+						char* s1=strchr(s0,'[');
+						char* s2=strchr(s0,'.');
+						char* s3=s0+strlen(s0);
 
                         if(s1 && s2 && s2-s1 < 0)s1=s2;
 						if(!s1)s1=s2;
@@ -10391,10 +10448,10 @@ public:
 
 	SAVE(TestConnClass);
 
-        REG_FN_CHAR  (&TestConnClass::_charFN  );
-        REG_FN_FLOAT (&TestConnClass::_floatFN );
-        REG_FN_BOOL  (&TestConnClass::_boolFN  );
-        REG_FN_INT   (&TestConnClass::_intFN   );
+        REG_FN_CHAR  ( _charFN  );
+        REG_FN_FLOAT ( _floatFN );
+        REG_FN_BOOL  ( _boolFN  );
+        REG_FN_INT   ( _intFN   );
         
 		REG_CLASS(TestConnClass1);
 		REG_AUTO(cc);

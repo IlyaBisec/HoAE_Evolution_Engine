@@ -109,7 +109,7 @@ int ParsedRQ::Compact(char* dst,int size){
 	//2.compactification
 	((short*)(dst+pos))[0]=NComm;
 	pos+=2;
-	for(int i=0;i<NComm;i++){
+	for(i=0;i<NComm;i++){
 		int L=strlen(Comm[i].ComID);
 		dst[pos]=L;
 		pos++;
@@ -176,7 +176,7 @@ int ParsedRQ::UnParse(char* dst,int size){
 	if(size<sz&&!dst)return sz+1;
 	strcpy(dst,DevName);
 	sz=strlen(DevName);
-	for(int i=0;i<NComm;i++){
+	for(i=0;i<NComm;i++){
 		strcat(dst,"|");
 		sz++;
 		strcat(dst,Comm[i].ComID);

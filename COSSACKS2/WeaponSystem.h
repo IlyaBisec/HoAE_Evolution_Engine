@@ -1295,8 +1295,9 @@ public:
 };
 class mmd_TakeResource: public MassModifyDistribute {
 public:
-
+	int ResType;
 	SAVE(mmd_TakeResource){
+		REG_ENUM(_index, ResType, RESTYPE);
 		REG_PARENT(MassModifyDistribute);
 	}ENDSAVE;
 
@@ -1687,10 +1688,11 @@ class pm_StealResourceFromBuildings : public PointModificator{
 public:
 	UserFriendlyNumericalReturner R;
 	UserFriendlyNumericalReturner AmountFromEachBuilding;
-	
+	int ResType;
 	SAVE(pm_StealResourceFromBuildings){
 		REG_AUTO(R);
 		REG_AUTO(AmountFromEachBuilding);
+		REG_ENUM(_index, ResType, RESTYPE);
 		REG_PARENT(PointModificator);
 	}ENDSAVE;
 

@@ -53,7 +53,7 @@ void cRender::DrawCube(const cVec3 &Center, const float Side, const cColor &Colo
 	cVertex::PositionColored u;
 
 	u.Color = Color.ToRgba();
-	for(int i = 0; i < 8; i++) {
+	for(i = 0; i < 8; i++) {
 		u.Pos = Center + Offsets[i];
 		vb.Add(u);
 	}
@@ -166,7 +166,7 @@ void cRender::DrawCone(const cVec3 &Apex, const cVec3 &Axis, const float Radius,
 
 	// Indexes:
 	cList<int> ib;
-	for(int i = 0; i < SubDivs; i++) {
+	for(i = 0; i < SubDivs; i++) {
 		// Cap:
 		ib.Add(0);
 		const int Next = (i + 1) % OnBorderVertsCount + 2;

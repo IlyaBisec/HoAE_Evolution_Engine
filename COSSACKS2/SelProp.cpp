@@ -542,7 +542,7 @@ void ShowTextDiscription(){
 			x1=Zone1X+4;
 			NN=0;
 			if(!NM->Building){
-				for(int i=0;i<16;i++){
+				for(i=0;i<16;i++){
 					if(ADC->Protection[i]&&NN<6){
 						int ix=x1+(NN>>1)*IC_DISTX;
 						int iy=y1+(NN&1)*IC_DISTY;

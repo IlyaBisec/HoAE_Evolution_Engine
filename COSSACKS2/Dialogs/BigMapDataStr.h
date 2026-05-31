@@ -415,7 +415,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 		NSP += (Pehota[i])->N;
 	}
 	int NSK=0;	//Кол-во отрядов КАВАЛЕРИИ.
-	for (int i=0; i<Kavalr.GetAmount(); i++ ){
+	for ( i=0; i<Kavalr.GetAmount(); i++ ){
 		NSK += (Kavalr[i])->N;
 	}
 	int	N_SQARD = NSK+NSP;
@@ -435,7 +435,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 
 		//Выделить память для армии.
 		pPEH = new int*[YNP];		//ПЕХОТА.
-		for (int i=0; i<YNP; i++ )	{
+		for ( i=0; i<YNP; i++ )	{ 
 			pPEH[i] = new int[XNP+1]; 
 			for (int ii=0; ii<XNP+1; ii++){ pPEH[i][ii]=-1; }
 			pPEH[i][0]=0;
@@ -446,7 +446,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 			for (int j=0; j<YNP; j++){
 				int delta = 0;
 				int curID = -1;
-				for (int i=0;i<Pehota.GetAmount();i++){
+				for (i=0;i<Pehota.GetAmount();i++){
 					if ( (Pehota[i])->N > 0 && (abs(XNP-pPEH[j][0]-(Pehota[i])->N)<=delta||curID==-1) ){
 						delta = abs(XNP-pPEH[j][0]-(Pehota[i])->N);
 						curID = i;
@@ -464,7 +464,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 		}
 		
 		//Растосовка внутри одного строя по типам для красаты. ПЕХОТА.
-		for (int i=0;i<YNP;i++){
+		for (i=0;i<YNP;i++){
 			sortSQUARD_LINE(pPEH[i],XNP);
 		}
 	}
@@ -485,7 +485,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 		
 		//Выделить память для армии.
 		pKAV = new int*[YNK];		//КАВАЛЕРИЯ.
-		for (int i=0; i<YNK; i++ )	{
+		for ( i=0; i<YNK; i++ )	{
 			pKAV[i] = new int[XNK+1];
 			for ( int ii=0; ii<XNK+1; ii++ ){ pKAV[i][ii]=-1; }
 			pKAV[i][0]=0;
@@ -496,7 +496,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 			for (int j=0; j<YNK; j++){
 				int delta = 0;
 				int curID = -1;
-				for (int i=0;i<Kavalr.GetAmount();i++){
+				for (i=0;i<Kavalr.GetAmount();i++){
 					if ( (Kavalr[i])->N > 0 && (abs(XNK-pKAV[j][0]-(Kavalr[i])->N)<=delta||curID==-1) ){
 						delta = abs(XNK-pKAV[j][0]-(Kavalr[i])->N);
 						curID = i;
@@ -514,7 +514,7 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 		}
 
 		//Растосовка внутри одного строя по типам для красаты. КАВАЛЕРИЯ.
-		for (int i=0;i<YNK;i++){
+		for (i=0;i<YNK;i++){
 			sortSQUARD_LINE(pKAV[i],XNK);
 		}
 	}
@@ -593,12 +593,12 @@ void	CreateHeroArmy1(GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 	Kavalr.Clear();
 	if (bP){
 		//Очистка памяти.
-		for (int i=0; i<YNP; i++ )	{ delete[](pPEH[i]); }
+		for ( i=0; i<YNP; i++ )	{ delete[](pPEH[i]); }	
 		delete[]pPEH;
 	}
 	if (bK) {
 		//Очистка памяти.
-		for (int i=0; i<YNK; i++ ) { delete[](pKAV[i]); }
+		for ( i=0; i<YNK; i++ ) { delete[](pKAV[i]); }
 		delete[]pKAV;
 	}
 }
@@ -629,7 +629,7 @@ void	CreateHeroArmy( GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 	ArmyN = ArmyXY.GetAmount();
 
 	//	1 - Сортируем по кол-ву отрядов.
-	for (int i=0; i<ArmyN-1; i++ ){
+	for ( i=0; i<ArmyN-1; i++ ){
 		if ( (ArmyXY[i])->N < (ArmyXY[i+1])->N  ) {
 			pAXY = ArmyXY[i];
 			ArmyXY[i]	= ArmyXY[i+1];
@@ -641,7 +641,7 @@ void	CreateHeroArmy( GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 	int fid = 0;
 	int	MAX_W = 0;
 	int	N_SQARD = 0;
-	for (int i=0; i<ArmyN; i++ ){
+	for ( i=0; i<ArmyN; i++ ){
 		N_SQARD += (ArmyXY[i])->N;
 
 		fid = GetFormationIndexBySizeIndex( NI,(ArmyXY[i])->Type,0);
@@ -679,7 +679,7 @@ void	CreateHeroArmy( GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 	
 	//	3 - Подшитуем X для первого отряда каждого типа.
 	int MAX_H = 0;
-	for (int i=0; i<ArmyN; i++ ){
+	for ( i=0; i<ArmyN; i++ ){
 		(ArmyXY[i])->X = ((ArmyXY[i])->aW) + ((ArmyXY[i])->W)/2 + MAX_W/2 - ((ArmyXY[i])->maxW)/2;
 		MAX_H += (ArmyXY[i])->H + 2*((ArmyXY[i])->aH);
 	}
@@ -692,7 +692,7 @@ void	CreateHeroArmy( GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 	double	rFi = (((double)Fi)/256.0)*3.1415*2.0 - (64.0/256.0)*3.1415*2.0;
 	int	n_STAGE = 0;
 	int BID = -1;
-	for (int i=0; i<ArmyN; i++ ){
+	for ( i=0; i<ArmyN; i++ ){
 		Y	= (ArmyXY[i])->Y;
 		dX	= (ArmyXY[i])->W + 2*((ArmyXY[i])->aW);
 		for ( int ii=0; ii<(ArmyXY[i])->N; ii++ ){
@@ -719,7 +719,7 @@ void	CreateHeroArmy( GAMEOBJ* pGroup, int NI, ClassArray<CTYPENUM>* pArmy, int X
 	}
 
 	//	5 - Убираем мусор.
-	for (int i=0; i<ArmyN; i++ ){
+	for ( i=0; i<ArmyN; i++ ){
 		pAXY = ArmyXY[i];
 		if (pAXY) { delete	pAXY; }
 		ArmyXY[i]=NULL;
@@ -1906,7 +1906,7 @@ void	CSectData::AddNewArrowPictures(LocalGP* pPic,int n )
 	}
 
 	int curOffset = 0;
-	for	(int i=0; i<m_inNOS; i++){
+	for	(i=0; i<m_inNOS; i++){
 		m_pssdDT[i]->SetNewArrowOffset(curOffset);
 		curOffset += m_pssdDT[i]->GetNNeighbor();
 	}	
@@ -5419,7 +5419,7 @@ void	SRank::SCUType::DeleteZeroTYPE(){
 	if (rTN==0)	return;
 	SSquardData* tempSD = new SSquardData[rTN];
 	int ci = 0;
-	for (int i=0; i<TN; i++){
+	for (i=0; i<TN; i++){
 		if (TYPES[i].maxSquards>0) {
 			tempSD[ci] = TYPES[i];
 			ci++;
@@ -5428,7 +5428,7 @@ void	SRank::SCUType::DeleteZeroTYPE(){
 	DeleteTYPES();
 	TN=rTN;
 	TYPES = new SSquardData[rTN];
-	for (int i=0; i<rTN; i++)	TYPES[i]=tempSD[i];
+	for (i=0; i<rTN; i++)	TYPES[i]=tempSD[i];
 	delete[]tempSD;
 }//void	SRank::SCUType::DeleteZeroTYPE();
 //----------------------------------------------
@@ -7896,8 +7896,7 @@ bool	CROOTDRIVER::PROCESS_UpgradeDefence( int AI_NI, int PL_NI, int SecID, int S
 	int  RiseList[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 }, max=-1;
 	for(int i=0; i < 10 ; i++) {
 		max = -1;
-		int m;
-		for(m=0; m < m_pSect->GetSectorsNum(); m++)
+		for(int m=0; m < m_pSect->GetSectorsNum(); m++)
 			if( DANGER_ARR[ m ] > 0 ) {
 				max = m;
 				break;
@@ -8839,7 +8838,6 @@ int		CROOTDRIVER::MakePathSectorToSector( int AI_NI , int secID , int secID2 , i
 						}
 						else {
 							bool  find = false;
-							int ca;
 							for( ca=i; ca < MaxPath && !find ; ca++ )		// check array
 								if( Path[ca][0] == -1 )  { find = true; break; }
 							if( find ) 
@@ -9966,14 +9964,14 @@ void	CPERSONAL::UpdateCoord()
 		}
 	}
 
-	for(int i=0; i < m_nTXT ; i++)
+	for(i=0; i < m_nTXT ; i++) 
 		if( m_ptbHeroPar[i] ) {
 			setCoordSD(dynamic_cast<SimpleDialog*>(m_ptbHeroPar[i]), 706 , 270 + 20*(i+1) );
 			//setCoordSD(dynamic_cast<SimpleDialog*>(m_ptbHeroPar[i]), 390 , 320 + 25*(i+1) );
 		}
 	int xP = 632 , yP = 510 ;
 	if( m_pgppFrameH[3] ) { xP = m_pgppFrameH[3]->x1 ; yP = m_pgppFrameH[3]->y ; }
-	for(int i=0; i < m_nPgs ; i++) {
+	for(i=0; i < m_nPgs ; i++) {
 		if( m_pgpbPages[i] && m_pgpbPagBak[i] )
 		{
 			if(i!=0) {  if( m_pgpbPages[i] )	{ yP = m_pgpbPages[i-1]->y1+2; } 
@@ -10037,8 +10035,7 @@ void	CPERSONAL::UpdateInfo( CHero* pH )
 bool	CPERSONAL::CheckUnitsPages()
 {
 	bool  find = false;
-	int i;
-	for(i=0; i < m_nPgs; i++) 
+	for(int i=0; i < m_nPgs; i++) 
 		if( m_pgpbPagBak[i]->UserParam == 1 ) { find = true; break; }
 
 	if( find ) 

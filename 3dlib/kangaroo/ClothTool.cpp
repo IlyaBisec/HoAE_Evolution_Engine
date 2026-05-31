@@ -1,4 +1,4 @@
-#include "common.h"
+#include "StdAfx.h" #include "common.h" 
 #include "comms\comms.h"
 #include "comms\csplinebezier.h"
 #include "UndoMaster.h"

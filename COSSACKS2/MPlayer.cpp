@@ -4,6 +4,7 @@
 #define IN_MPLAYER_H
 #include "..\CommCore\CommCore.h"
 #include <malloc.h>
+#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "mgraph.h"
@@ -38,8 +39,6 @@
 #include "GameSettings.h"
 #include "Globals.h"
 #include "BE_HEADERS.h"
-#include "ddini.h"
-
 #define NOMPINFO
 #define SINGLETESTNETWORK
 void StartPing(DWORD DPID,int ID);
@@ -261,7 +260,7 @@ void MPL_CheckExistingPlayers(){
 		};
 		lpDirectPlay3A->EnumPlayers((GUID*)&DPCHAT_GUID,
 			MPL_EnumPlayersCallback2,NULL,0);
-		for(int i=0;i<MaxPL;i++){
+		for(i=0;i<MaxPL;i++){
 			if(StartEBF[i]&&!EBufs[i].Enabled){
 				if(i==MyNation){
 					AssignHint1(GetTextByID("PLALONE"),300,32);
@@ -312,7 +311,7 @@ void SortPLIDS(){
 			plidx[i]=j;
 		};
 		if(pinfn){
-			for(int j=0;j<10&&pinfn;j++)if(!PLIDS[j]){
+			for(j=0;j<10&&pinfn;j++)if(!PLIDS[j]){
 				PLFRQ[j]=1;
 				pinfn=0;
 				plprs[j]=1;
@@ -321,14 +320,14 @@ void SortPLIDS(){
 			};
 		};
 	};
-	for(int i=0;i<8;i++)if(!plprs[i]){
+	for(i=0;i<8;i++)if(!plprs[i]){
 		PLFRQ[i]=0;
 		PLIDS[i]=0;
 	};
 	SortClass SC;
 	SC.CheckSize(NPlayers);
 	SC.NUids=NPlayers;
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		SC.Uids[i]=i;
 		SC.Parms[i]=-PLFRQ[plidx[i]];
 	};
@@ -336,7 +335,7 @@ void SortPLIDS(){
 	PlayerInfo TPI[8];
 	memcpy(TPI,GSets.CGame.PL_INFO,sizeof TPI);
 	memset(GSets.CGame.PL_INFO,0,sizeof(GSets.CGame.PL_INFO[0])*NPlayers);
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		memcpy(&GSets.CGame.PL_INFO[i],&TPI[SC.Uids[i]],sizeof(PlayerInfo));
 		PlayersID[i]=GSets.CGame.PL_INFO[i].PlayerID;
 	};
@@ -536,7 +535,7 @@ STAGENEXT:
 				};
 				word s=((word*)(BUF+1))[0];
 				word s1=0xAE;
-				for(int j=3;j<dwMsgSize;j++)s1+=BUF[j];
+				for(j=3;j<dwMsgSize;j++)s1+=BUF[j];
 				
 			}else
 			if((BUF[0]==0xAE||BUF[0]==0xBF)&&dwMsgSize<2048){
@@ -549,7 +548,7 @@ STAGENEXT:
 				//assert(mycl!=7);
 				word s=((word*)(BUF+1))[0];
 				word s1=0xAE;
-				for(int j=3;j<dwMsgSize;j++)s1+=BUF[j];
+				for(j=3;j<dwMsgSize;j++)s1+=BUF[j];
 				byte rtx=RealTime;
 				if(rtx==BUF[3])NFROMID1[ii]++;
 				rtx++;
@@ -1874,7 +1873,7 @@ void ComeInGame(){
 	
 	int myid=0;
 	for(int i=0;i<NPlayers;i++)if(MyDPID==PlayersID[i])myid=i;
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		PLNAT[i]=-1;
 	};
 	int x=0;
@@ -1917,7 +1916,7 @@ void ComeInGame(){
 	*((int*)(BUF+8))=VV;
 
 	word s=0;
-	for(int i=0;i<12;i++)s+=BUF[i];
+	for(i=0;i<12;i++)s+=BUF[i];
 	((word*)(BUF+1))[0]=s;
 	rpos=Start_rpos;
 	if(lpDirectPlay3A)SendToAllPlayers(12,ExBuf1,1);
@@ -1996,7 +1995,7 @@ void ReCreateStartTime(){
 			ST0=StartTime[i];//!!!CHANGED!!!
 		};
 	};
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		DWORD DPID=GSets.CGame.PL_INFO[i].PlayerID;
 		//int c=GSets.CGame.PL_INFO[i].ColorID;
 		int c=i;//!!!CHANGED!!!
@@ -2161,7 +2160,7 @@ void AnalyseMessages(){
 							id=0;
 						};
 					};
-					for(int j=0;j<8;j++){
+					for(j=0;j<8;j++){
 						GSets.CGame.PL_INFO[j].ColorID=NSP->Players[j].ColorID;
 						GSets.CGame.PL_INFO[j].GroupID=NSP->Players[j].GroupID;
 						GSets.CGame.PL_INFO[j].NationID=NSP->Players[j].NationID;
@@ -2466,7 +2465,7 @@ void HandleMultiplayer(){
 					GETIN[1]=mask;
 					GETIN[2]=mask;
 					*((DWORD*)(GETIN+3))=RealTime;
-					for(int i=0;i<NPlayers;i++){
+					for(i=0;i<NPlayers;i++){
 						if(EBufs[i].Enabled&&EBufs[i].RealTime!=NON){
 							SendToPlayer(7,GETIN,PlayersID[i]);
 						};
@@ -2589,12 +2588,12 @@ void HandleMultiplayer(){
 	}					
 	if(PStart)PINGS.DoneNetwork();
 	int MyColor=7;
-	for(int i=0;i<NPlayers;i++){
+	for(i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID)MyColor=i;
 			//GSets.CGame.PL_INFO[i].ColorID;//!!!CHANGED!!!
 	};
 	int MaxDiff=0;
-	for(int i=0;i<NPlayers;i++)if(EBufs[i].Enabled){
+	for(i=0;i<NPlayers;i++)if(EBufs[i].Enabled){
 		int c=i;//GSets.CGame.PL_INFO[i].ColorID;//!!!CHANGED!!!
 		int d=CurrentStartTime[c];//-GameLength[c];
 		if(d>MaxDiff)MaxDiff=d;
@@ -2628,13 +2627,22 @@ void HandleMultiplayer(){
 			if(vGameMode!=gmCamp/*NPlayers>1*/){
 				switch(GSets.RoomParams.GameSpeed){
 				case 1:
-					spd=40;
+					spd=30;//Fast
 					break;
 				case 2:
-					spd=60;
+					spd=60;//Slow
+					break;
+				case 3:
+					spd=20;//Very fast
+					break;
+				case 4:
+					spd=10;//Very very fast
+					break;
+				case 5:
+					spd=5;//Marvellous fast
 					break;
 				default:
-					spd=30;
+					spd=40;//Normal
 					break;
 				}
 			}
@@ -2686,7 +2694,7 @@ void HandleMultiplayer(){
 	memcpy(BUF+7,ExBuf,EBPos1);
 	word s=0;
 	int szz1=7+EBPos1;
-	for(int i=0;i<szz1;i++)s+=BUF[i];
+	for(i=0;i<szz1;i++)s+=BUF[i];
 	((word*)(BUF+1))[0]=s;
 	PrevRpos=rpos;
 	/*
@@ -2878,7 +2886,7 @@ bool ProcessSyncroMain(SaveBuf* SB){
 		};
 		ShowProgressBar("Connecting...",0,100);
 		
-		for(int i=0;i<NPlayers;i++)if(EBufs[i].Enabled&&!PlReady[i])Ready=false;
+		for(i=0;i<NPlayers;i++)if(EBufs[i].Enabled&&!PlReady[i])Ready=false;
 		/*
 		CBar(0,0,512,512,0x62);
 		ShowString(1,10,"Waiting IRDY",&fn10);
@@ -2921,7 +2929,7 @@ bool ProcessSyncroMain(SaveBuf* SB){
 		for(int j=0;j<xsz;j++){
 			TMP[1]+=(TMP[j+2]);
 		};
-		for(int j=0;j<NPlayers;j++)PlReady[j]=0;
+		for(j=0;j<NPlayers;j++)PlReady[j]=0;
 		PlReady[MYIND]=2;
 		SendToAllPlayers(32+8+16384,&TMP[0]);
 		time=GetRealTime();
@@ -3648,7 +3656,7 @@ void LoosedPack::Add(DWORD DPID,int ID){
 		};
 	};
 	if(idx==-1){
-		for(int i=0;i<16;i++)if(!OLID[i].LastAccessTime){
+		for(i=0;i<16;i++)if(!OLID[i].LastAccessTime){
 			idx=i;
 			i=16;
 		};

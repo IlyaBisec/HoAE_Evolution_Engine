@@ -2,7 +2,7 @@
 #define __TankController__
 
 #include "..\GameExtension.h"
-#include "..\Surface\Surface.h"
+#include "Surface.h"
 
 namespace Surface {
 

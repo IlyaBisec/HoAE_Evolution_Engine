@@ -307,7 +307,7 @@ void ModelEditor::SetCurAnimTimeRatio( float t )
 void ModelEditor::Expose( PropertyMap& pm )
 {    
     pm.start<FrameWindow>( "ModelEditor", this );
-    pm.p( "ShowCameras", &ModelEditor::GetShowCameras, &ModelEditor::ShowCameras );
+    pm.p( "ShowCameras",        GetShowCameras, ShowCameras );
     pm.f( "ShowLights",            m_bShowLights                );
     pm.f( "ShowLocators",        m_bShowLocators                );
     pm.f( "ShowBones",            m_bShowBones                );
@@ -318,23 +318,23 @@ void ModelEditor::Expose( PropertyMap& pm )
     pm.f( "ShowModelStats",     m_bShowModelStats           );
     pm.f( "ActiveCamera",        m_ActiveCamera                );
     pm.f( "AnimSpeed",          m_AnimSpeed                 );
-    pm.p( "CurAnimTimeRatio", &ModelEditor::GetCurAnimTimeRatio, &ModelEditor::SetCurAnimTimeRatio );
-    pm.p( "ModelLoaded", &ModelEditor::IsModelLoaded               );
-    pm.p( "AnimLoaded", &ModelEditor::IsAnimLoaded                );
+    pm.p( "CurAnimTimeRatio",   GetCurAnimTimeRatio, SetCurAnimTimeRatio );
+    pm.p( "ModelLoaded",        IsModelLoaded               );
+    pm.p( "AnimLoaded",         IsAnimLoaded                );
     pm.f( "AnimPlayed",         m_bPlayAnim                 );
     pm.f( "AnimPaused",         m_bPauseAnim                );
     pm.f( "ModelTransparency",  m_ModelTransparency         );
     pm.f( "ModelColor",         m_ModelColor                );
 
-    pm.m( "Play", &ModelEditor::Play                        );
-    pm.m( "Pause", &ModelEditor::Pause                      );
-    pm.m( "Stop", &ModelEditor::Stop                        );
+    pm.m( "Play",                Play                        );
+    pm.m( "Pause",                Pause                      );
+    pm.m( "Stop",                Stop                        );
 
-    pm.m( "ResetModel", &ModelEditor::ResetModel                 );
-    pm.m( "LoadModel", &ModelEditor::LoadModel                   );
-    pm.m( "SaveModel", &ModelEditor::SaveModel                   );
-    pm.m( "LoadAnimation", &ModelEditor::LoadAnimation               );
-	pm.m( "ConvertSkin2GPU", &ModelEditor::ConvertSkin2GPU             );
+    pm.m( "ResetModel",            ResetModel                 );
+    pm.m( "LoadModel",            LoadModel                   );
+    pm.m( "SaveModel",            SaveModel                   );
+    pm.m( "LoadAnimation",        LoadAnimation               );
+	pm.m( "ConvertSkin2GPU",      ConvertSkin2GPU             );
 } // ModelEditor::Expose
 
 void ModelEditor::Pause()
@@ -713,7 +713,7 @@ void TestVertex2F()
     bm.setNVert( 3 );
     bm.setNPri( 1 );
 
-    static int shID = IRS->GetShaderID( "test2f" );
+    static shID = IRS->GetShaderID( "test2f" );
     IRS->SetShader( shID );
     DrawPrimBM( bm );
 } // TestVertex2F

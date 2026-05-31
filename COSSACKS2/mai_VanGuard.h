@@ -33,7 +33,7 @@ public:
 			for(int i=0;i<NAttTypes;i++){
 				A.Add(Adv->MaxDamage[i]/N);				
 			}
-			for(int i=0;i<16;i++){				
+			for(i=0;i<16;i++){				
 				P.Add(Adv->Protection[i]/N);
 			}
 			return true;

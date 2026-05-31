@@ -185,7 +185,7 @@ int ShowUnitsList(int x,int y,int Lx,word* Value){
 		y0+=17;
 		Hline(x-2,y0,x0+5,BarInfColor);
 		int N=UNITS.NHash;
-		for(int i=0;i<N;i++){
+		for(i=0;i<N;i++){
 			sprintf(cc,"%d",UNITS.HASH[i].Param1);
 			ShowString(x+5,y0+1+DDY,UNITS.HASH[i].Message,&SmallYellowFont);
 			ShowString(x0-GetRLCStrWidth(cc,&SmallYellowFont),y0+1+DDY,cc,&SmallYellowFont);
@@ -202,7 +202,7 @@ int ShowUnitsList(int x,int y,int Lx,word* Value){
 		y0+=17;
 		Hline(x-2,y0,x0+5,BarInfColor);
 		int N=BUILDINGS.NHash;
-		for(int i=0;i<N;i++){
+		for(i=0;i<N;i++){
 			sprintf(cc,"%d",BUILDINGS.HASH[i].Param1);
 			ShowString(x+5,y0+1+DDY,BUILDINGS.HASH[i].Message,&SmallYellowFont);
 			ShowString(x0-GetRLCStrWidth(cc,&SmallYellowFont),y0+1+DDY,cc,&SmallYellowFont);
@@ -406,7 +406,7 @@ int ShowDoxod(int x,int y,bool Header1){
 			ShowString(x,y0,GI_UNITS,&SmallWhiteFont);
 			y0+=DY+1;
 			Hline(x-5,y0,x0+5,BarInfColor);
-			for(int i=0;i<N;i++){
+			for(i=0;i<N;i++){
 				ShowString(x,y0+1+DDY,RASXODU.HASH[i].Message,&SmallYellowFont);
 				sprintf(cc,"%d",RASXODU.HASH[i].Param2);
 				ShowString(x+160+1-GetRLCStrWidth(cc,&SmallYellowFont)/2,y0+1+DDY,cc,&SmallYellowFont);
@@ -431,7 +431,7 @@ int ShowDoxod(int x,int y,bool Header1){
 			ShowString(x,y0,GI_BLD,&SmallWhiteFont);
 			y0+=16;
 			Hline(x-5,y0,x0+5,BarInfColor);
-			for(int i=0;i<N;i++){
+			for(i=0;i<N;i++){
 				ShowString(x,y0+1+DDY,RASXODB.HASH[i].Message,&SmallYellowFont);
 				sprintf(cc,"%d",RASXODB.HASH[i].Param2);
 				ShowString(x+160+1-GetRLCStrWidth(cc,&SmallYellowFont)/2,y0+1+DDY,cc,&SmallYellowFont);

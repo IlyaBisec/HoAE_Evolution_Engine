@@ -188,7 +188,7 @@ void	lvCShapes::SetNewR(float _R){
 		// 6D
 		assert(regular_polygon_6D.GetAmount());
 			  dF = (2.f*3.1415) / regular_polygon_6D.GetAmount();
-		for (int n=0; n<regular_polygon_6D.GetAmount(); n++){
+		for (    n=0; n<regular_polygon_6D.GetAmount(); n++){
 			GetNextXY(regular_polygon_6D[n]->x,regular_polygon_6D[n]->y,dF,n);
 		};
 	};
@@ -201,7 +201,7 @@ void	lvCShapes::CreateEdge(){
 		regular_polygon_4D.Add(pP3D);
 		pP3D=NULL;
 	};
-	for (int n=0; n<6; n++){
+	for (    n=0; n<6; n++){
 		pP3D = new lvCPoint3D;
 		regular_polygon_6D.Add(pP3D);
 		pP3D=NULL;
@@ -2075,7 +2075,7 @@ int 	CSkirmishTASK::delTASK(const char* name){
 //////////////////////////////////////////////////////////////////////////
 
 
-int BattlePainter(){
+BattlePainter(){
 	if (DriveMode()->NodeView==1/* VIEW ALL */||DriveMode()->NodeView==2/* FOR GROUP */) {
 		
 		if (DriveMode()->NodeView==1){	
@@ -2104,7 +2104,6 @@ int BattlePainter(){
 			break;
 		};
 	};
-	return true;
 };
 
 void	SET_BE_DrawOnMapCallback(){

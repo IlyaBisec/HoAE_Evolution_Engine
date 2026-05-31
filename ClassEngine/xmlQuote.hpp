@@ -65,14 +65,14 @@ int xmlQuote::Load(char* XML)
 	{
 		int pos=0;
 		QuoteName.Clear();
-		char* fr=strstr(XML,"<");//Текст после <
+		char* fr=strstr(XML,"<");
 		char* en=NULL;
 		if(fr&&*(fr+1)!='/')
 		{
-			en=strstr(fr,">");//Текст после >
+			en=strstr(fr,">");
 			if(en)
 			{
-				int sz=en-fr;//Текст в <>
+				int sz=en-fr;
 				QuoteName.Allocate(sz);
 				memmove(QuoteName.pchar(),fr+1,sz-1);
 				QuoteName.pchar()[sz-1]='\0';
@@ -80,8 +80,8 @@ int xmlQuote::Load(char* XML)
 				while(true)
 				{
 					//en=strstr(fr+pos,">");
-					char* nm = strstr(en+1+pos,"<");//Следующее имя? Подзаголовок то есть
-					if(nm)//Если такой подзаголовок есть, продолжаем
+					char* nm = strstr(en+1+pos,"<");
+					if(nm)
 					{
 						int ds=nm-en-pos+1;
 						bool havedata=false;
@@ -128,8 +128,8 @@ int xmlQuote::Load(char* XML)
 								return -1;
 						}
 						else
-						{   
-							xmlQuote* tmp=new_xmlQuota();
+						{
+							xmlQuote* tmp=new_xmlQuote();
 							SubQuotes.Add(tmp);
 							int p=tmp->Load(en+1+pos);
 							if(p==-1){
@@ -184,7 +184,6 @@ int xmlQuote::GetXMLSource(DString* Source,int shift)
 bool xmlQuote::ReadFromFile(char* FilePath)
 {
 	XMLSource.ReadFromFile(FilePath);
-	//Log.Warning("File path: %s", FilePath);
 	if(XMLSource.pchar()[0]==0)
 		return false;
 	int l=Load(XMLSource.pchar());

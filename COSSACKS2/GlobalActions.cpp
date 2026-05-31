@@ -5,7 +5,7 @@
 
 //////////////////////////////////////////////////////////////////////////
 int SetFillDelay(int KillerID, int VictimID, int Damage);
-typedef int tpDamageCallback(int KillerIndex,int VictimIndex,int Value);
+typedef tpDamageCallback(int KillerIndex,int VictimIndex,int Value);
 CEXPORT tpDamageCallback* SetDamageCallback(tpDamageCallback* dc);
 bool GetGlobalBrigProp(byte NI);
 DLLEXPORT int GetRND(int);

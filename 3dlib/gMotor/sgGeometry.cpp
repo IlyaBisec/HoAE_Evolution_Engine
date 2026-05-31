@@ -71,7 +71,7 @@ void Geometry::PostRender()
 
     if (DoDrawGizmo())
     {
-        static int shWire = IRS->GetShaderID( "wire" );
+        static shWire = IRS->GetShaderID( "wire" );
         IRS->SetShader( shWire );
         DrawPrimBM( m_Mesh );
         IRS->Flush();
@@ -179,21 +179,21 @@ void Geometry::SetDiffuse( DWORD color )
 void Geometry::Expose( PropertyMap&  pm )
 {
     pm.start<Parent>( "Geometry", this );
-    pm.p( "Polygons", &Geometry::GetNPoly );
-    pm.p( "Vertices", &Geometry::GetNVert );
-    pm.p( "Diffuse", &Geometry::GetDiffuse, &Geometry::SetDiffuse, "color" );
-    pm.p( "Static", &Geometry::IsStatic, &Geometry::SetIsStatic );
-    pm.p( "PrimitiveType", &Geometry::GetPriType        );
-    pm.p( "VertexFormat", &Geometry::GetVertexFormat    );
+    pm.p( "Polygons",        GetNPoly );
+    pm.p( "Vertices",        GetNVert );
+    pm.p( "Diffuse",        GetDiffuse, SetDiffuse, "color" );
+    pm.p( "Static",        IsStatic,    SetIsStatic );
+    pm.p( "PrimitiveType",    GetPriType        );
+    pm.p( "VertexFormat",    GetVertexFormat    );
     pm.f( "AABB xyz",        m_AABB.minv, "direction", true );
     pm.f( "AABB XYZ",        m_AABB.maxv, "direction", true );
 
     pm.f( "ShowMeshNormals",m_bShowMeshNormals    );
     pm.f( "MeshNormalLen",    m_NormalLen            );
-    pm.m( "CalculateNormals", &Geometry::CalculateNormals );
-    pm.m( "FlipNormals", &Geometry::FlipNormals );
-    pm.m( "DumpToCPP", &Geometry::DumpToCPP );
-    pm.m( "AttachEffect", &Geometry::AttachEffect );
+    pm.m( "CalculateNormals", CalculateNormals );
+    pm.m( "FlipNormals",    FlipNormals );
+    pm.m( "DumpToCPP",        DumpToCPP );
+    pm.m( "AttachEffect",   AttachEffect );
 } // Geometry::Expose
 
 void Geometry::CalculateNormals()

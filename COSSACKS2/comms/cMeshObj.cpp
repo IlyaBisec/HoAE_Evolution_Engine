@@ -153,7 +153,7 @@ bool cMeshObj::DecodeObj(const cData &Src, cRawMesh &Mesh) {
 						}
 					}
 					if(!IsFound) {
-						const int N = sizeof(DefMtls) / sizeof(DefMtls[0]);
+						const N = sizeof(DefMtls) / sizeof(DefMtls[0]);
 						idCurMtl = Mesh.GetMaterials().Count();
 						Mesh.GetMaterials().Add(*DefMtls[idCurMtl % N]);
 						Mesh.GetMaterials().GetBack().Name = m_Tokens[1];

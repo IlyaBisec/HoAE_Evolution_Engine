@@ -25,7 +25,7 @@ void Progress::Expose( PropertyMap& pm )
 {
     pm.start<Widget>( "Progress", this );
     pm.f( "DrawText",       m_bDrawText                 );
-    pm.p( "Progress", &Progress::GetProgress, &Progress::SetProgress    );
+    pm.p( "Progress",       GetProgress, SetProgress    );
     pm.f( "BarColor",       m_BarColor, "color"         );
     pm.f( "TickWidth",      m_TickWidth                 );
     pm.f( "TickSpacing",    m_TickSpacing               );

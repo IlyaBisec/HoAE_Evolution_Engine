@@ -153,8 +153,7 @@ int SimpClassList::ExpandWith(const char* ElmName,void* base){
 		if(!strncmp(ElmName,"new:",4)){
 			//new element
             char* clname=(char*)ElmName+4;
-			int idx;
-			for(idx=0;idx<CS->ClassNameList.GetAmount();idx++){
+			for(int idx=0;idx<CS->ClassNameList.GetAmount();idx++){
 				if(!strcmp(clname,CS->ClassNameList[idx]->pchar()))break;
 			}
 			if(idx>=CS->ClassNameList.GetAmount())return -1;
@@ -183,11 +182,11 @@ int SimpClassList::ExpandWith(const char* ElmName,void* base){
 				if(!strncmp(CS->ClassNameList[i]->pchar(),ElmName,N)){
 					OneClassItem* OCI=new OneClassItem;
 					xmlQuote xml;
-					xmlQuote* x1=new_xmlQuota();
+					xmlQuote* x1=new_xmlQuote();
 					x1->SetQuoteName("RefName");
-					x1->Assign_string((char*)(strstr(ElmName,":")+1));
+					x1->Assign_string(strstr(ElmName,":")+1);
 					xml.AddSubQuote(x1);
-					x1=new_xmlQuota();
+					x1=new_xmlQuote();
 					x1->SetQuoteName("ClassName");
 					x1->Assign_string(CS->ClassNameList[i]->pchar());
 					xml.AddSubQuote(x1);					

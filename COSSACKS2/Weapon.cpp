@@ -287,14 +287,14 @@ void ShowExpl(){
 			int DZ=AO->GraphDZ;
 			int xs1=xs;
 			xs=xs1;
-			NewAnimation* NA=Weap->NewAnm;
+			NewAnimation* NAN=Weap->NewAnm;
 			//Visualization
 			if(xs>=ScrX&&ys>=ScrY&&xs<=ScrX1&&ys<=ScrY1){
 				//determining the direction
-				if(AO->Frame>NA->NFrames-1)AO->Frame=NA->NFrames-1;
-				NewFrame* NF=NA->Frames[AO->Frame];
-				PlayAnimation(NA,int(AO->Frame)<<8,xs,ys);
-				int NDir=((NA->Rotations-1)<<1);
+				if(AO->Frame>NAN->NFrames-1)AO->Frame=NAN->NFrames-1;
+				NewFrame* NF=NAN->Frames[AO->Frame];
+				PlayAnimation(NAN,int(AO->Frame)<<8,xs,ys);
+				int NDir=((NAN->Rotations-1)<<1);
 				int spr;
 				xs-=ScrX-smapx;
 				ys-=ScrY-smapy;
@@ -330,7 +330,7 @@ void ShowExpl(){
 				int zz=GetHeight(AO->x>>WEPSH,AO->y>>WEPSH);
 				int zz1=(AO->z>>WEPSH)-zz;
 				ys+=NF->dy;
-				spr+=NF->SpriteID*NA->Rotations;
+				spr+=NF->SpriteID*NAN->Rotations;
 				if(Weap->HiLayer)ys0+=300;
 				//it is visible!
 				switch(Weap->Transparency){
@@ -441,7 +441,7 @@ void ProcessExpl(){
 				};
 			};
 #endif
-			NewAnimation* NA=Weap->NewAnm;
+			NewAnimation* NAN=Weap->NewAnm;
 			if(Weap->NTileWeapon){
 				int tpp=Weap->TileProbability;
 				int vdx=div(AO->vx,tpp).quot;
@@ -567,7 +567,7 @@ UUU1:/*
 					if(AO->NTimes==1&&AO->LongFrame>=Hf&&AO->PrevLongFrame<Hf&&Weap->HotFrame!=254){
 						ExplodeAnmObject(AO);
 					};					
-					if(NA&&AO->Frame>=NA->NFrames-1){
+					if(NAN&&AO->Frame>=NAN->NFrames-1){
 						if(AO->NTimes==1){
 							if(Weap->HotFrame==254)ExplodeAnmObject(AO);
 							CloseExu(i);
@@ -944,7 +944,7 @@ Weapon* ReturnFlyChild(Weapon* Weap){
 		Weapon* CW=CWP->Child[i];
 		if(CheckWpn(CW))return CW;
 	};
-	for(int i=0;i<Weap->NSyncWeapon;i++){
+	for(i=0;i<Weap->NSyncWeapon;i++){
 		Weapon* SW=Weap->SyncWeapon[i];
 		if(CheckWpn(SW))return SW;
 	};
@@ -1285,14 +1285,14 @@ void MiniShowExpl(){
 			int DZ=AO->GraphDZ>>2;
 			int xs1=xs;
 			xs=xs1;
-			NewAnimation* NA=Weap->NewAnm;
+			NewAnimation* NAN=Weap->NewAnm;
 			//Visualization
 			if(xs>=ScrX&&ys>=ScrY&&xs<=ScrX1&&ys<=ScrY1){
 				//determining the direction
-				if(AO->Frame>NA->NFrames-1)AO->Frame=NA->NFrames-1;
-				NewFrame* NF=NA->Frames[AO->Frame];
-				PlayAnimation(NA,int(AO->Frame)<<8,xs,ys);
-				int NDir=((NA->Rotations-1)<<1);
+				if(AO->Frame>NAN->NFrames-1)AO->Frame=NAN->NFrames-1;
+				NewFrame* NF=NAN->Frames[AO->Frame];
+				PlayAnimation(NAN,int(AO->Frame)<<8,xs,ys);
+				int NDir=((NAN->Rotations-1)<<1);
 				int spr;
 				xs-=ScrX-smapx;
 				ys-=ScrY-smapy;
@@ -1333,7 +1333,7 @@ void MiniShowExpl(){
 				int zz=GetHeight(AO->x>>WEPSH,AO->y>>WEPSH);
 				int zz1=((AO->z>>WEPSH)-zz)>>2;
 				ys+=NF->dy>>2;
-				spr+=NF->SpriteID*NA->Rotations;
+				spr+=NF->SpriteID*NAN->Rotations;
 				if(Weap->HiLayer)ys0+=300;
 				//it is visible!
 				switch(Weap->Transparency){
@@ -1563,18 +1563,18 @@ void DrawWeaponUsing3D(byte Pass)
         int zr=AO->z>>WEPSH;
         Vector3D wPos = SkewPt( xr, yr, zr );
 
-		NewAnimation* NA=Weap->NewAnm;
-		if(!NA) continue;
+		NewAnimation* NAN=Weap->NewAnm;
+		if(!NAN) continue;
 
         const float c_EffectBoundRadius = 256.0f;
 		if (!frustum.Overlap( Sphere( wPos, c_EffectBoundRadius ) )) continue;            
         PushEntityContext( i+i*(AO->xd+AO->yd+AO->zd) );
 
 		//determining the direction
-		if(AO->Frame>NA->NFrames-1)AO->Frame=NA->NFrames-1;
-		NewFrame* NF=AO->Frame<NA->Frames.GetAmount()?NA->Frames[AO->Frame]:NULL;
-		PlayAnimation(NA,int(AO->Frame)<<8,xs,ys);
-		if(NA->Rotations==255&&NA->AnimationType==0)
+		if(AO->Frame>NAN->NFrames-1)AO->Frame=NAN->NFrames-1;
+		NewFrame* NF=AO->Frame<NAN->Frames.GetAmount()?NAN->Frames[AO->Frame]:NULL;
+		PlayAnimation(NAN,int(AO->Frame)<<8,xs,ys);
+		if(NAN->Rotations==255&&NAN->AnimationType==0)
         {
 			double angl;
 			bool inv=0;
@@ -1582,7 +1582,7 @@ void DrawWeaponUsing3D(byte Pass)
 			int dx=-NF->dx;
 			int dy=-NF->dy;
 
-			if(NA->Rotations==1){
+			if(NAN->Rotations==1){
 				if(Weap->Projection==1){
 					float da=GetHeight(xr+16,yr)-GetHeight(xr-16,yr);
 					angl=atan2(-da,float(32));
@@ -1692,7 +1692,7 @@ void DrawWeaponUsing3D(byte Pass)
 			byte angl=GetDir(dx,dy);
 			float yB=0;
 			float zB=0;
-            NA->DrawAt(AO->Frame<<8,0,AO->x>>WEPSH,(AO->y>>WEPSH),(AO->z>>WEPSH),angl,1.0f,0xFFFFFFFF,0,0,NULL);
+            NAN->DrawAt(AO->Frame<<8,0,AO->x>>WEPSH,(AO->y>>WEPSH),(AO->z>>WEPSH),angl,1.0f,0xFFFFFFFF,0,0,NULL);
 		}
 		PopEntityContext();
 	};
@@ -1709,8 +1709,7 @@ void DrawWeaponUsing3D(byte Pass)
 			if(!MB->Drawn){
 				int x0=MB->x0;
 				int y0=MB->y0;
-				int j;
-				for(j=0;j<ndrawn;j++){
+				for(int j=0;j<ndrawn;j++){
 					if(Norma(x0-xdrawn[j],y0-ydrawn[j])<80)break;
 				};
 				if(j==ndrawn&&ndrawn<64){

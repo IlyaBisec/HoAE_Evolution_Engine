@@ -7,7 +7,7 @@
 #ifndef __KSIGNAL_H__
 #define __KSIGNAL_H__
 
-#include "..\boost\boost\signal.hpp"
+#include "boost\signal.hpp"
 #include <functional>
 
 class BaseFunctor

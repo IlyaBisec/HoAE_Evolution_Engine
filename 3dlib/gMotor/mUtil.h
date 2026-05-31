@@ -126,7 +126,7 @@ inline float DegToRad( float deg )
 
 inline float roundf( float val )
 {
-    double intP;
+    float intP;
     return (fabs( modf( val, &intP ) ) < 0.5f) ? intP : intP + 1.0f;
 }
 

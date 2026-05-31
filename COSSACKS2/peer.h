@@ -28,7 +28,7 @@ extern "C" {
 	#include "::queryreporting:gqueryreporting.h"
 	#include "::CEngine:goaceng.h"
 #else
-	#include "..\IChat\nonport.h"
+	#include "nonport.h"
 	#include "Chat/chat.h"
 	#include "queryreporting/gqueryreporting.h"
 	#include "CEngine/goaceng.h"

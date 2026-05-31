@@ -1,7 +1,7 @@
 #ifndef __ZonesAndGroupsExtraInfo_h__
 #define __ZonesAndGroupsExtraInfo_h__
-#include "..\ClassEngine\ClassEngine.h"
-#include "..\ClassEngine\more_types.h"
+#include <ClassEngine.h>
+#include <more_types.h>
 // vital
 #define		_ZONE_EX_INFO_CAPTURABLE_ 20
 //VITYA

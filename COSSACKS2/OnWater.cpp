@@ -35,8 +35,7 @@ bool FindPortPlace(NewMonster* NM,int x,int y,int* BuiX,int* BuiY){
 		int L=(r<<1)+1;
 		int xx=mx+r;
 		int yy=my-r;
-		int t;
-		for(t=0;t<L;t++){
+		for(int t=0;t<L;t++){
 			if(CheckPortPlace(NM,xx,yy)){
 				int dst=Norma(xx-mx,yy-my);
 				if(dst<MinDist){

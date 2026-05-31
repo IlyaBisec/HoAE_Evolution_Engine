@@ -243,8 +243,8 @@ bool OneAbility::Process(){
 							y += dy;
 						}
 					}
-					addrand(Tx);
-					addrand(Ty);
+					addrand(tx);
+					addrand(ty);
 					ChangeUnitCoor(OB,x,y);
 					//OB->ClearOrders();
 					//OB->DestX=-1;
@@ -252,17 +252,43 @@ bool OneAbility::Process(){
 					OB->RealDirPrecise=dir<<8;
 				}
 
-				// Добавить жизнь
-				//if(UA->HeroLife){
-				//	HeroVariableStorage* HVS=DetectHero(OB);
-				//	if( HVS ){
-				//		HVS->Lives++;
-				//	}
-				//}
+				 // Добавить жизнь
+                //if(UA->HeroLife){
+                //    HeroVariableStorage* HVS=DetectHero(OB);
+                //    if( HVS ){
+                //        HVS->Lives++;
+                //    }
+                //}
 
 
-				return false;
-			}
+                return false;
+            }
+            if( DeleteTime<TrueTime && UA->Permanent&&UA->EndEffectIfEnemyNear ){
+                eLiveState LS=OB->GetLiveState();
+                if (LS==ls_LiveBody || LS<ls_Erased&&UA->OnEndEffectErase) {
+                    WeaponModificator* WM=UA->OnEndEffectCreateWeapon.Get();
+                    if(WM){
+                        word UnitIndex=OB->Index;
+                        int x=OB->RealX>>4;
+                        int y=OB->RealY>>4;
+                        int z=OB->RZ+OB->OverEarth;
+
+                        addrand(CasterID);
+
+                        AdditionalWeaponParams* AWP = new AdditionalWeaponParams();
+                        AWP->Radius=UA->Radius;
+                        CreateNewActiveWeapon(WM->Name.pchar(),CasterID,x,y,z,UnitIndex,x,y,z,AWP);
+                    }
+                    int sc=CITY[OB->NNUM].Account;
+                    if(UA->OnEndEffectErase){
+                        EraseObjectWithoutAbilities(OB);
+                    }else
+                        if(UA->OnEndEffectDie&&OB->Ready){//TheBlackHunter, ??.09.22. Mines deletes without OB->Ready
+                            OB->Die();
+                        }
+                        CITY[OB->NNUM].Account=sc;
+                }
+            }
 
 			if( OB->GetLiveState()!=ls_LiveBody ){
 				if(UA->OnDieDeleteEffect){

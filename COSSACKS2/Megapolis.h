@@ -562,6 +562,12 @@ public:
 	byte StartRes;
 	byte ResOnMap;
 	byte Difficulty;
+
+
+	byte NewDiffKostil;
+
+
+
 	byte LandType;
 	word TransportID;
 	word TransportSN;

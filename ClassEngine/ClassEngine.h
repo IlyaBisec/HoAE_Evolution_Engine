@@ -2,11 +2,11 @@
 #define __CLASSENGINE_H__
 #pragma pack(push)
 #pragma pack(1)
-#include "..\ClassEngine\dynarray.h"
-#include "..\ClassEngine\DString.h"
-#include "..\ClassEngine\xmlQuote.h"
-#include "..\ClassEngine\StrHash.h"
-#include <typeinfo>
+#include <DynArray.h>
+#include <DString.h>
+#include <xmlQuote.h>
+#include <StrHash.h>
+#include <typeinfo.h>
 #define IMMEDIATE_ERROR
 #define SAFETYPE
 
@@ -487,9 +487,9 @@ public:
 };
 extern DIALOGS_API ClassPointersGarbage CPGARB;
 class _str;
-class CopyContex{
+class CopyContext{
 public:
-	CopyContex(){
+	CopyContext(){
 		LARGE_INTEGER L;
 		QueryPerformanceCounter(&L);
 		CopyGlobalID=L.LowPart;
@@ -600,7 +600,7 @@ public:
 	virtual bool AskParentForUsingExpansionClass(char* MemberName,char* ClassName){return true;}
 	//  added by Silver, 21.08.2003
 	bool		HasParentClass(const char* ParentClassName);	
-	virtual     bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DstDataExtra,CopyContex* C);
+	virtual     bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DstDataExtra,CopyContext* C);
 	virtual     void SaveBin(void* Data,void* Extra,BinStream* Out,Enumerator* ExDictionary,Enumerator* SkipList);
 	virtual		void LoadBin(void* Data,void* Extra,BinStream* In,Enumerator* ExDictionary);
 	//-by Drew-
@@ -737,7 +737,7 @@ public:
 		_str* s=dynamic_cast<_str*>((BaseClass*)ptr);
 		if(s)s->Clear();
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((_str*)DestData)=((_str*)SrcData)->pchar();
 		return true;
 	}
@@ -790,7 +790,7 @@ public:
 	virtual BaseClass* GetParent(){return ParentBC;}
 	virtual void SetParent(BaseClass* Parent){ParentBC=Parent;}
 	virtual _str* GetObjectNamePointer(){return &Name;}	
-	bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C);		
+	bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C);		
 	AUTONEW(ReferableBaseClass);
 };
 class ReferableBaseClassWithSource:public ReferableBaseClass{
@@ -851,7 +851,7 @@ public:
 	virtual bool CheckCompartabilityWith(const char* TypeName,int TypeSize){
 		return TypeSize==4;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}
@@ -871,7 +871,7 @@ public:
 	virtual bool CheckCompartabilityWith(const char* TypeName,int TypeSize){
 		return TypeSize==4;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}
@@ -891,7 +891,7 @@ public:
 	virtual bool CheckCompartabilityWith(const char* TypeName,int TypeSize){
 		return !strcmp(TypeName,"float");
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		return true;
 	}
@@ -955,7 +955,7 @@ public:
 	virtual bool CheckCompartabilityWith(const char* TypeName,int TypeSize){
 		return TypeSize==1;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((byte*)DestData)=*((byte*)SrcData);
 		return true;
 	}
@@ -1002,7 +1002,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((int*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		DestExtraPtr=SrcDataExtra;
 		return true;
@@ -1042,7 +1042,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((byte*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((byte*)DestData)=*((byte*)SrcData);
 		DestExtraPtr=SrcDataExtra;
 		return true;
@@ -1082,7 +1082,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((word*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((word*)DestData)=*((word*)SrcData);
 		DestExtraPtr=SrcDataExtra;
 		return true;
@@ -1124,7 +1124,7 @@ public:
 	virtual void reset_class(void* ptr){
 		*((int*)ptr)=0;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		*((int*)DestData)=*((int*)SrcData);
 		DestExtraPtr=SrcDataExtra;
 		return true;
@@ -1238,7 +1238,7 @@ public:
 	virtual bool CheckDirectCasting(){
 		return true;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		ClassArray<X>* SA=(ClassArray<X>*)SrcData;
 		ClassArray<X>* DA=(ClassArray<X>*)DestData;
 		for(int i=0;i<SA->GetAmount();i++)if((*SA)[i]){
@@ -1404,7 +1404,7 @@ public:
 	virtual bool CheckDirectCasting(){
 		return true;
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		LinearClonesArray* SA=(LinearClonesArray*)SrcData;
 		LinearClonesArray* DA=(LinearClonesArray*)DestData;
 		X* E=NULL;
@@ -1445,7 +1445,7 @@ public:
 template <class X> class ClassPtr:public BaseClass{
 	X* ptr;
 public:
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		if(ptr){
 			X* x=(X*)ptr->new_element();
 			x->SetParent(Dest);
@@ -1575,7 +1575,7 @@ template <class X> class AllPtr:public ClassPtr<X>{
 template <class X> class ClassRef:public BaseClass{
 public:
 	DWORD CPG_Index;	
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		ClassRef<X>* D=((ClassRef<X>*)Dest);
 		CPGARB.DelRef(D->CPG_Index);
 		if(CPG_Index!=0xFFFFFFFF){
@@ -2169,7 +2169,7 @@ public:
 		return true;
 	}
 	AUTONEW(SubSection);
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		return true;
 	}
 	virtual void SaveBin(void* Data,void* Extra,BinStream* Out,Enumerator* ExDictionary,Enumerator* SkipList){}
@@ -2183,7 +2183,7 @@ public:
 	const char* GetClassName(){
 		return "Delimiter";
 	}
-	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
+	virtual bool FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
 		return true;
 	}
 	virtual void SaveBin(void* Data,void* Extra,BinStream* Out,Enumerator* ExDictionary,Enumerator* SkipList){}

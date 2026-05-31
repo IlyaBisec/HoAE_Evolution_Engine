@@ -1,5 +1,6 @@
 #include "stdheader.h"
 #include <malloc.h>
+#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "mgraph.h"
@@ -38,7 +39,7 @@
 #include "activezone.h"
 #include "Globals.h"
 #include "Surface\SurfPiece.h"
-#include "ddini.h"
+
 int MinLinkDist=9;
 int StartHillHeight=90;
 int MaxHillHeight=110;
@@ -206,7 +207,7 @@ void GenMap::CreateNet(){
 	bool Change=false;
 	//word TempTop[TopLx*TopLy];
 	Change=true;
-	for(int i=1;i<RRad&&Change;i++){
+	for(i=1;i<RRad&&Change;i++){
 		//memcpy(TempTop,GetTopRef,sizeof(GetTopRef));
 		Change=false;
 		char* xi=Rarr[i].xi;
@@ -260,7 +261,7 @@ void GenMap::CreateNet(){
 	};
 	CheckNet(this);
 	//sorting links
-	for(int i=0;i<NGAreas;i++){
+	for(i=0;i<NGAreas;i++){
 		GenArea* GA=GTopMap+i;
 		int x0=GA->x;
 		int y0=GA->y;
@@ -287,7 +288,7 @@ void GenMap::CreateNet(){
 		UNISORT.NUids=Nga;
 		UNISORT.Sort();
 		byte CDr=0;
-		for(int p=0;p<Nga;p++){
+		for(p=0;p<Nga;p++){
 			word LI=UNISORT.Uids[p];
 			GenArea* GA2=GTopMap+LI;
 			GA->Link[p+p]=LI;
@@ -673,7 +674,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 	for(int i=0;i<GA1->NLinks;i++){
 		if(GA1->Link[i+i]==N2)CL1=i;
 	};
-	for(int i=0;i<GA2->NLinks;i++){
+	for(i=0;i<GA2->NLinks;i++){
 		if(GA2->Link[i+i]==N1)CL2=i;
 	};
 	if(CL1==-1||CL2==-1)return;
@@ -685,7 +686,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 	int y0=GA1->y;
 	GA1->State=2;
 	GA2->State=2;
-	for(int i=0;i<GA1->NLinks;i++){
+	for(i=0;i<GA1->NLinks;i++){
 		if(i!=CL1){
 			word LI=GA1->Link[i+i];
 			GenArea* GA3=GTopMap+LI;
@@ -698,7 +699,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 	};
 	x0=GA2->x;
 	y0=GA2->y;
-	for(int i=0;i<GA2->NLinks;i++){
+	for(i=0;i<GA2->NLinks;i++){
 		if(i!=CL2){
 			word LI=GA2->Link[i+i];
 			GenArea* GA3=GTopMap+LI;
@@ -713,7 +714,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 	x0=(GA1->x+GA2->x)>>1;
 	y0=(GA1->y+GA2->y)>>1;
 	UNISORT.CheckSize(NKeys);
-	for(int i=0;i<NKeys;i++){
+	for(i=0;i<NKeys;i++){
 		UNISORT.Uids[i]=i;
 		UNISORT.Parms[i]=GetDir(KeyX[i]-x0,KeyY[i]-y0);
 	};
@@ -723,7 +724,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 	x0=GA1->x;
 	y0=GA1->y;
 	NKeys=0;
-	for(int i=0;i<GA1->NLinks;i++){
+	for(i=0;i<GA1->NLinks;i++){
 		if(i!=CL1){
 			word LI=GA1->Link[i+i];
 			GenArea* GA3=GTopMap+LI;
@@ -736,7 +737,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 	};
 	x0=GA2->x;
 	y0=GA2->y;
-	for(int i=0;i<GA2->NLinks;i++){
+	for(i=0;i<GA2->NLinks;i++){
 		if(i!=CL2){
 			word LI=GA2->Link[i+i];
 			GenArea* GA3=GTopMap+LI;
@@ -747,7 +748,7 @@ void GenMap::MakeSoftArea(int N1,int N2){
 			NKeys++;
 		};
 	};
-	for(int i=0;i<NKeys;i++){
+	for(i=0;i<NKeys;i++){
 		int idx=UNISORT.Uids[i];
 		AddPointToCurve(KeyX[idx]<<6,KeyY[idx]<<6,false,0);
 	};
@@ -818,7 +819,7 @@ void GenMap::MakeLinearHill(int N1,int N2){
 	for(int i=0;i<GA1->NLinks;i++){
 		if(GA1->Link[i+i]==N2)CL1=i;
 	};
-	for(int i=0;i<GA2->NLinks;i++){
+	for(i=0;i<GA2->NLinks;i++){
 		if(GA2->Link[i+i]==N1)CL2=i;
 	};
 	if(CL1==-1||CL2==-1)return;
@@ -829,7 +830,7 @@ void GenMap::MakeLinearHill(int N1,int N2){
 		MinR+=r;
 		NS++;
 	};
-	for(int p=0;p<GA2->NLinks;p++){
+	for(p=0;p<GA2->NLinks;p++){
 		int r=GA2->Link[p+p+1];
 		MinR+=r;
 		NS++;
@@ -1027,7 +1028,7 @@ bool GenMap::GenerateHillLink(int N,int Thick){
 					};
 					NAttm++;
 				}while(NAttm<15&&NextLink==-1);
-				for(int p=0;p<NHills-1;p++){
+				for(p=0;p<NHills-1;p++){
 					GTopMap[Hills[p]].State-=16;
 				};
 				if(NextLink!=-1){
@@ -1036,7 +1037,7 @@ bool GenMap::GenerateHillLink(int N,int Thick){
 					idx=NextLink;
 				}else return false;
 			};
-			for(int k=1;k<NHills;k++){
+			for(k=1;k<NHills;k++){
 				PlatoHi=StartHillHeight+((int(mrand())*(MaxHillHeight-StartHillHeight))>>15);
 				MakeLinearHill(Hills[k],Hills[k-1]);
 				ShowProcessInfo();
@@ -1044,7 +1045,7 @@ bool GenMap::GenerateHillLink(int N,int Thick){
 			int np=4;
 			if(Thick)np=7;
 			//expanding Hills
-			for(int k=0;k<NHills;k++){
+			for(k=0;k<NHills;k++){
 				GTopMap[Hills[k]].State=1;
 			};
 			for(int p=0;p<Thick;p++){
@@ -1069,11 +1070,11 @@ bool GenMap::GenerateHillLink(int N,int Thick){
 				//MakeSoftArea(Hills[k],Hills[k-1]);
 				//ShowProcessInfo();
 			//};
-			for(int k=0;k<NHills;k++){
+			for(k=0;k<NHills;k++){
 				GTopMap[Hills[k]].State=2;
 			};
 			if(!UseFractal){
-				for(int k=0;k<np;k++){
+				for(k=0;k<np;k++){
 					int hil=(int(mrand())*NHills)>>15;
 					int nattm=0;
 					int aidx=Hills[hil];
@@ -1101,7 +1102,7 @@ bool GenMap::GenerateHillLink(int N,int Thick){
 					}while(nattm<1000);
 				};
 			};
-			for(int k=0;k<NHills;k++){
+			for(k=0;k<NHills;k++){
 				SetStateAround(Hills[k],2);
 			};
 			
@@ -1133,7 +1134,7 @@ void InitHillAmp(){
 	double smin=0;
 	double smaxw=0;
 	double sminw=0;
-	for(int i=0;i<256;i++){
+	for(i=0;i<256;i++){
 		double Ang=(PI*i)/128;
 		double s=0;
 		for(int j=0;j<NFUR;j++)s+=sin((j+4)*Ang+PH[j])*HR[j];
@@ -1141,7 +1142,7 @@ void InitHillAmp(){
 		if(s<smin)smin=s;
 		HillR[i]=s;
 		s=0;
-		for(int j=0;j<NFUR;j++)s+=sin((j+4)*Ang+PH[j])*HR[j];
+		for(j=0;j<NFUR;j++)s+=sin((j+4)*Ang+PH[j])*HR[j];
 		if(s>smaxw)smaxw=s;
 		if(s<sminw)sminw=s;
 		HillW[i]=s;
@@ -1149,7 +1150,7 @@ void InitHillAmp(){
 	if(smax!=smin){
 		double amp=smax-smin;
 		double ampw=smaxw-sminw;
-		for(int i=0;i<256;i++){
+		for(i=0;i<256;i++){
 			HillR[i]=(HillR[i]-smin)/amp;
 			HillW[i]=0.8+((HillW[i]-sminw)*0.4/ampw);
 		};
@@ -1171,7 +1172,7 @@ void InitHillAmp1(){
 	double smin=0;
 	double smaxw=0;
 	double sminw=0;
-	for(int i=0;i<256;i++){
+	for(i=0;i<256;i++){
 		double Ang=(PI*i)/128;
 		double s=0;
 		for(int j=0;j<NFR;j++)s+=sin((j+2)*Ang+PH[j])*HR[j];
@@ -1179,7 +1180,7 @@ void InitHillAmp1(){
 		if(s<smin)smin=s;
 		HillR[i]=s;
 		s=0;
-		for(int j=0;j<NFR;j++)s+=sin((j+2)*Ang+PH[j])*HR[j];
+		for(j=0;j<NFR;j++)s+=sin((j+2)*Ang+PH[j])*HR[j];
 		if(s>smaxw)smaxw=s;
 		if(s<sminw)sminw=s;
 		HillW[i]=s;
@@ -1187,7 +1188,7 @@ void InitHillAmp1(){
 	if(smax!=smin){
 		double amp=smax-smin;
 		double ampw=smaxw-sminw;
-		for(int i=0;i<256;i++){
+		for(i=0;i<256;i++){
 			HillR[i]=(1+(HillR[i]-smin)/amp)/2;
 			HillW[i]=0.6+((HillW[i]-sminw)*0.4/ampw);
 		};
@@ -1291,8 +1292,7 @@ void CreateMapByName(char* Name){
 			char* pname=GlobalAI.Ai[id].Peasant_ID;
 			int nu=NATIONS[i].NMon;
 			GeneralObject** GOS=NATIONS[i].Mon; 
-			int k;
-			for(k=0;k<nu&&strcmp(GOS[k]->MonsterID,pname);k++);
+			for(int k=0;k<nu&&strcmp(GOS[k]->MonsterID,pname);k++);
 			if(k<nu)NatUnit[i]=k;
 			else{
 				NatUnit[k]=0;
@@ -1312,7 +1312,7 @@ void CreateMapByName(char* Name){
 	int Resst=(x2>>12)&15;
 	int Resmn=(x2>>16)&15;
 	int ClmZone=(x2>>20)&15;
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		for(int p=0;p<8;p++)RES[i][p]=RD.RES[Resst].RES[p];
 	};
 	RM_LandType=Style;
@@ -1324,7 +1324,7 @@ void CreateMapByName(char* Name){
 	sprintf(FRAC,"Terrain\\fract_set%d.txt",ClmZone);
 	GFILE* FF=Gopen(FRAC,"r");
 	if(FF){
-		for(int i=0;i<8;i++){
+		for(i=0;i<8;i++){
 			int n;
 			Gscanf(FF,"%d",&n);
 			TEXARR[i]=n;
@@ -1363,7 +1363,7 @@ void CreateMapByName(char* Name){
 	};
 	//CreateRandomTerrain(cc1,RD.STY[Style].Players[Play].NPlayers,Mount,RD.MINES[Resmn].Ng,RD.MINES[Resmn].Ni,RD.MINES[Resmn].Nc,NatUnit,ADD_PARAM,ClmZone);
 	//if(Mount==RD.NRelief-1)MakeDesert();
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		for(int p=0;p<8;p++)RES[i][p]+=ADDRES[p];
 	};
 };
@@ -1643,8 +1643,7 @@ void RM_SaveSprites(ResFile F,int x0,int y0,int Lx,int Ly,int xc,int yc){
 	int sign='TRPS';
 	RBlockWrite(F,&sign,4);
 	int ns=0;
-	int i;
-	for(i=0;i<MaxSprt;i++){
+	for(int i=0;i<MaxSprt;i++){
 		OneSprite* OS=Sprites+i;
 		if(OS->Enabled){
 			int x=OS->x;
@@ -1657,7 +1656,7 @@ void RM_SaveSprites(ResFile F,int x0,int y0,int Lx,int Ly,int xc,int yc){
 	RBlockWrite(F,&ns,4);
 
 	word j='GA';
-	for(int i=0;i<MaxSprt;i++){
+	for(i=0;i<MaxSprt;i++){
 		OneSprite* OS=&Sprites[i];
 		if(OS->Enabled){
 			int x=OS->x;
@@ -1734,8 +1733,7 @@ void RM_SaveObj(ResFile F,int x0,int y0,int Lx,int Ly,int xc,int yc){
 	int sign='SJBO';
 	RBlockWrite(F,&sign,4);
 	int ns=0;
-	int i;
-	for(i=0;i<MAXOBJECT;i++){
+	for(int i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB&&!OB->Sdoxlo){
 			int x=OB->RealX>>4;
@@ -1747,7 +1745,7 @@ void RM_SaveObj(ResFile F,int x0,int y0,int Lx,int Ly,int xc,int yc){
 	i=ns*(32+4+4)+12;
 	RBlockWrite(F,&i,4);
 	RBlockWrite(F,&ns,4);
-	for(int i=0;i<MAXOBJECT;i++){
+	for(i=0;i<MAXOBJECT;i++){
 		OneSprite* OS=&Sprites[i];
 		OneObject* OB=Group[i];
 		if(OB&&!OB->Sdoxlo){
@@ -2121,8 +2119,7 @@ void RM_SaveLock(ResFile F,int x0,int y0,int Lx,int Ly,int xc,int yc){
 	return;
 	int NL=0;
 	int NU=0;
-	int i;
-	for(i=0;i<LockBars.NBars;i++){
+	for(int i=0;i<LockBars.NBars;i++){
 		int x=(int(LockBars.BC[i].x)<<6)+32;
 		int y=(int(LockBars.BC[i].y)<<5)+16;
 		if(x>x0&&y>y0&&x<x0+Lx&&y<y0+Ly){
@@ -2179,7 +2176,7 @@ void RM_LoadLock(ResFile F,int xc,int yc){
 		y+=yc;
 		if(!AllowUndo)AddLockBar(x,y);
 	};
-	for(int i=0;i<NU;i++){
+	for(i=0;i<NU;i++){
 		short x,y;
 		RBlockRead(F,&x,2);
 		RBlockRead(F,&y,2);
@@ -2199,7 +2196,7 @@ void RM_LoadLockEmpty(ResFile F,int xc,int yc){
 		x+=xc;
 		y+=yc;
 	};
-	for(int i=0;i<NU;i++){
+	for(i=0;i<NU;i++){
 		short x,y;
 		RBlockRead(F,&x,2);
 		RBlockRead(F,&y,2);
@@ -2616,7 +2613,7 @@ void GenerateByStyle(char* Style,bool LIMIT){
 							ProcessMessages();
 							//if(LIMIT&&LastAddSpr>50000)j=N;
 						};
-						for(int j=0;j<NNames;j++)delete(Names[j]);
+						for(j=0;j<NNames;j++)delete(Names[j]);
 						delete(Names);
 					};
 				};
@@ -2659,7 +2656,7 @@ void GenerateInPoints(char* Piece,int* ObjX,int* ObjY,int NObj,int NATT){
 			memset(Used,0,sizeof Used);
 			for(int j=0;j<NATT;j++)
 				SetPieceInPoints(Names[(int(rand())*NNamesXX)>>15],ObjX,ObjY,NObj,Used,200);
-			for(int j=0;j<NNamesXX;j++)delete(Names[j]);
+			for(j=0;j<NNamesXX;j++)delete(Names[j]);
 			delete(Names);
 		};
 	};
@@ -2712,7 +2709,7 @@ void DeleteInArea(int x0,int y0,int x1,int y1){
 		};
 	};
 	//erasing locking
-	for(int i=0;i<LockBars.NBars;i++){
+	for(i=0;i<LockBars.NBars;i++){
 		int xb=LockBars.BC[i].x;
 		int yb=LockBars.BC[i].y;
 		int x=(int(xb)<<6)+32;
@@ -2722,7 +2719,7 @@ void DeleteInArea(int x0,int y0,int x1,int y1){
 			AddDefaultBar(xb,yb);
 		};
 	};
-	for(int i=0;i<UnLockBars.NBars;i++){
+	for(i=0;i<UnLockBars.NBars;i++){
 		int xb=UnLockBars.BC[i].x;
 		int yb=UnLockBars.BC[i].y;
 		int x=(int(xb)<<6)+32;
@@ -3482,7 +3479,7 @@ void RandomMapDesc::Load(char* name){
 		z=Gscanf(F,"%d%d",&NRES,&RES_DEF);
 		if(z!=2)ERRMP(name,"STARTRES");
 		RES=new ResRec[NRES];
-		for(int p=0;p<NRES;p++){
+		for(p=0;p<NRES;p++){
 			int Nr;
 			z=Gscanf(F,"%s%d",cc,&Nr);
 			char* ust=GetTextByID(cc);
@@ -3500,7 +3497,7 @@ void RandomMapDesc::Load(char* name){
 		z=Gscanf(F,"%d%d",&NRelief,&Relief_DEF);
 		if(z!=2)ERRMP(name,"RELIEF");
 		Relief=(char**)malloc(NRelief*4);
-		for(int p=0;p<NRelief;p++){
+		for(p=0;p<NRelief;p++){
 			z=Gscanf(F,"%s",cc);
 			char* ust=GetTextByID(cc);
 			//normstr(cc);
@@ -3511,7 +3508,7 @@ void RandomMapDesc::Load(char* name){
 		z=Gscanf(F,"%d%d",&NSTY,&STY_DEF);
 		if(z!=2)ERRMP(name,"STYLES");
 		STY=new StyleRec[NSTY];
-		for(int p=0;p<NSTY;p++){
+		for(p=0;p<NSTY;p++){
 			StyleRec* SR=STY+p;
 			Gscanf(F,"%s",cc);
 			//normstr(cc);
@@ -3654,7 +3651,7 @@ void SoftZones(char* Name,short* VHI){
 					};
 				};
 			};
-			for(int i=0;i<NVert;i++){
+			for(i=0;i<NVert;i++){
 				int vi=Vertices[i];
 				THMap[vi]=VertHi[i];
 				VHI[vi]=VHIT[i];
@@ -3863,7 +3860,7 @@ void SamplesSet::Draw(){
 			if(CURR)Xbar((x0>>shf)+1,(y0>>shf)+1,(256>>shf)-2,(128>>shf)-2,0xFF);
 			ShowString((x0>>shf)+4,(y0>>shf)+4,SS->Name,&SmallWhiteFont);
 		};
-		for(int j=0;j<SS->NRoots;j++){
+		for(j=0;j<SS->NRoots;j++){
 			int x0=(SS->ROOT[j].x<<8)-dx;
 			int y0=(SS->ROOT[j].y<<7)-dy;
 			DWORD MSK=SS->ROOT[j].AttachMask;
@@ -3969,11 +3966,9 @@ void DrawSMS(){
 void SaveSMSInPieces(ResFile F,int keyX,int keyY,int x0,int y0,int x1,int y1){
 	int Nsq=0;
 	int Nrt=0;
-	int i;
-	for(i=0;i<SAMSET.NSmp;i++){
+	for(int i=0;i<SAMSET.NSmp;i++){
 		SampleSrc* SS=SAMSET.SSET+i;
-		int j;
-		for(j=0;j<SS->Npt;j++){
+		for(int j=0;j<SS->Npt;j++){
 			int xx=(SS->xi[j]<<8)+128;
 			int yy=(SS->yi[j]<<7)+64;
 			if(xx>x0&&yy>y0&&xx<x1&&yy<y1){
@@ -4000,7 +3995,7 @@ void SaveSMSInPieces(ResFile F,int keyX,int keyY,int x0,int y0,int x1,int y1){
 	RBlockWrite(F,&dy,2);
 	keyX=(keyX-dx)>>8;
 	keyY=(keyY-dy)>>8;
-	for(int i=0;i<SAMSET.NSmp;i++){
+	for(i=0;i<SAMSET.NSmp;i++){
 		SampleSrc* SS=SAMSET.SSET+i;
 		for(int j=0;j<SS->Npt;j++){
 			int xx=(SS->xi[j]<<8)+128;
@@ -4013,7 +4008,7 @@ void SaveSMSInPieces(ResFile F,int keyX,int keyY,int x0,int y0,int x1,int y1){
 			};
 		};
 	};
-	for(int i=0;i<SAMSET.NSmp;i++){
+	for(i=0;i<SAMSET.NSmp;i++){
 		SampleSrc* SS=SAMSET.SSET+i;
 		for(int j=0;j<SS->NRoots;j++){
 			int xx=(SS->ROOT[j].x<<8)+128;
@@ -4029,8 +4024,7 @@ void SaveSMSInPieces(ResFile F,int keyX,int keyY,int x0,int y0,int x1,int y1){
 };
 void SaveSMSInMap(ResFile F){
 	int sz=4+4;
-	int i;
-	for(i=0;i<SAMSET.NSmp;i++){
+	for(int i=0;i<SAMSET.NSmp;i++){
 		SampleSrc* SS=SAMSET.SSET+i;
 		sz+=32+4+4+4*SS->Npt+SS->NRoots*sizeof(SampleRoot);
 	};
@@ -4038,7 +4032,7 @@ void SaveSMSInMap(ResFile F){
 	RBlockWrite(F,&i,4);
 	RBlockWrite(F,&sz,4);
 	RBlockWrite(F,&SAMSET.NSmp,4);
-	for(int i=0;i<SAMSET.NSmp;i++){
+	for(i=0;i<SAMSET.NSmp;i++){
 		RBlockWrite(F,SAMSET.SSET[i].Name,32);
 		RBlockWrite(F,&SAMSET.SSET[i].Npt,4);
 		RBlockWrite(F,&SAMSET.SSET[i].NRoots,4);
@@ -4046,7 +4040,7 @@ void SaveSMSInMap(ResFile F){
 			RBlockWrite(F,&SAMSET.SSET[i].xi[j],2);
 			RBlockWrite(F,&SAMSET.SSET[i].yi[j],2);
 		};
-		for(int j=0;j<SAMSET.SSET[i].NRoots;j++){
+		for(j=0;j<SAMSET.SSET[i].NRoots;j++){
 			RBlockWrite(F,SAMSET.SSET[i].ROOT+j,sizeof SampleRoot);
 		};
 	};
@@ -4077,7 +4071,7 @@ void LoadSMSInMap(ResFile F){
 			RBlockRead(F,&SAMSET.SSET[i].xi[j],2);
 			RBlockRead(F,&SAMSET.SSET[i].yi[j],2);
 		};
-		for(int j=0;j<SAMSET.SSET[i].NRoots;j++){
+		for(j=0;j<SAMSET.SSET[i].NRoots;j++){
 			RBlockRead(F,SAMSET.SSET[i].ROOT+j,sizeof SampleRoot);
 		};
 	};
@@ -4197,7 +4191,7 @@ void  LinkSys::LoadOneLink(char* Name){
 			RBlockRead(F,&xx,1);
 			SS->yi[j]=xx;
 		};
-		for(int j=0;j<Nrt;j++){
+		for(j=0;j<Nrt;j++){
 			RBlockRead(F,SS->ROOT+j,sizeof SampleRoot);
 			int rt=SS->ROOT[j].RootType;
 			int k=SS->ROOT[j].Direction;
@@ -4470,8 +4464,7 @@ bool LinkSys::GenerateLink(int x0,int y0,DWORD Mask,byte Type,int rr){
 							}else{
 								//search for ifin!=idx<16
 								ifin=-1;
-								int t;
-								for(t=0;t<nr&&ifin==-1;t++){
+								for(int t=0;t<nr&&ifin==-1;t++){
 									if(t!=idx&&LINKS.SSET[tt].ROOT[t].RootType<15){
 										ifin=t;
 									};
@@ -4555,7 +4548,7 @@ bool LinkSys::GenerateLink(int x0,int y0,DWORD Mask,byte Type,int rr){
 			AddStamp(SMP_Name[i],SMP_VX[i],SMP_VY[i]);
 			SetLockInMap(SMP_X0[i],SMP_Y0[i],SMP_TT[i],SMP_IDX[i]);
 		};
-		for(int i=0;i<N_ALS;i++){
+		for(i=0;i<N_ALS;i++){
 			AddLinkStart(ALS_X0[i],ALS_Y0[i],ALS_MASK[i],ALS_RT[i]);
 		};
 	};
@@ -4638,7 +4631,7 @@ void GenerateWithStyle(char* terr){
 	//1.
 	int vrt=0;
 	for(int j=0;j<MaxTH;j++){
-		for(int i=0;i<VertInLine;i++){
+		for(i=0;i<VertInLine;i++){
 			byte tex=TexMap[vrt];
 			if(tex>127){
 				LSS.SetLockPt(i>>3,j>>3,1);
@@ -4662,7 +4655,7 @@ void GenerateWithStyle(char* terr){
 				for(int i=0;i<N;i++){
 					LSS.GenerateRandomLink(10);
 				};
-				for(int i=0;i<LSS.NLis;i++){
+				for(i=0;i<LSS.NLis;i++){
 					LSS.GenerateLink(LSS.LIS[i].x,LSS.LIS[i].y,LSS.LIS[i].Mask,LSS.LIS[i].Type,50);
 				};
 				//LSS.LINKS.ClearAll();
@@ -4706,9 +4699,9 @@ void LinkSys::ClearStamps(){
 	if(LIS)free(LIS);
 	NLis=0;
 	MaxLis=0;
-	for(int i=0;i<MaxType;i++){
+	for(i=0;i<MaxType;i++){
 		for(int j=0;j<8;j++)if(SMP[i][j])free(SMP[i][j]);
-		for(int j=0;j<8;j++)if(SMIDX[i][j])free(SMIDX[i][j]);
+		for(j=0;j<8;j++)if(SMIDX[i][j])free(SMIDX[i][j]);
 	};
 	memset(&NSMP,0,sizeof NSMP);
 	memset(&SMP,0,sizeof SMP);
@@ -4742,7 +4735,7 @@ void LinkSys::ExecuteStamps(){
 	};
 	ClearStamps();
 	//checking sprite objects
-	for(int i=0;i<MaxSprt;i++){
+	for(i=0;i<MaxSprt;i++){
 		OneSprite* OS=Sprites+i;
 		if(OS->Enabled){
 			if(OS->z<GetHeight(OS->x,OS->y))EraseSprite(i);
@@ -4929,7 +4922,7 @@ void FAST_RM_LoadLock(SaveBuf* SB,int xc,int yc){
 		y+=yc;
 		FastAddLockBar(x,y);
 	};
-	for(int i=0;i<NU;i++){
+	for(i=0;i<NU;i++){
 		short x,y;
 		x=GET_SHORT(SB);
 		y=GET_SHORT(SB);
@@ -5008,7 +5001,7 @@ void FAST_RM_Load(SaveBuf* SB,int x,int y){
 				{
 					for(int i=0;i<NVert;i++)THMap[TMP_VERTEX[i]]+=2048;
 					FAST_RM_LoadSprites(SB,(x>>6)<<6,(y>>6)<<6);
-					for(int i=0;i<NVert;i++)THMap[TMP_VERTEX[i]]-=2048;
+					for(i=0;i<NVert;i++)THMap[TMP_VERTEX[i]]-=2048;
 				};
 				tt2=GetTickCount()-tt2;
 				break;
@@ -5113,8 +5106,7 @@ void GlobalProgress::SetCurrentPosition(int Pos){
 };
 int GlobalProgress::GetCurProgress(){
 	int S=0;
-	int i;
-	for(i=0;i<CurStage;i++)S+=StageWeight[i];
+	for(int i=0;i<CurStage;i++)S+=StageWeight[i];
 	S+=(CurPosition*StageWeight[i])/StagePositions[i];
 	if(MaxPosition)return (S*100)/MaxPosition;
 	else return 100;
@@ -5147,7 +5139,7 @@ void MakeDesert(){
 		TexMap[i]=ExchangeTex(TexMap[i]);
 	};
 	int TRDES[8]={79,80,81,82,84,79,80,82};
-	for(int i=0;i<MaxSprt;i++){
+	for(i=0;i<MaxSprt;i++){
 		OneSprite* OS=Sprites+i;
 		if(OS->Enabled&&OS->SG==&TREES){
 			OS->SGIndex=TRDES[mrand()&7];

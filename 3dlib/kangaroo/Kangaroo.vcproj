@@ -35,6 +35,8 @@
 				ForceConformanceInForLoopScope="FALSE"
 				RuntimeTypeInfo="TRUE"
 				UsePrecompiledHeader="3"
+				PrecompiledHeaderThrough="StdAfx.h"
+				PrecompiledHeaderFile="Kangaroo_Debug.pch"
 				WarningLevel="3"
 				Detect64BitPortabilityProblems="TRUE"
 				DebugInformationFormat="4"/>
@@ -211,6 +213,9 @@
 						UsePrecompiledHeader="1"/>
 				</FileConfiguration>
 			</File>
+			<File
+				RelativePath="stdafx.h">
+			</File>
 			<Filter
 				Name="cdt"
 				Filter="">
@@ -282,9 +287,6 @@
 			</File>
 			<File
 				RelativePath="Resource.h">
-			</File>
-			<File
-				RelativePath="stdafx.h">
 			</File>
 			<Filter
 				Name="Debuggers"

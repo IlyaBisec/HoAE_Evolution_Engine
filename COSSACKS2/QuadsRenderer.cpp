@@ -1,5 +1,5 @@
 #include "stdheader.h"
-#include "unichash.h"
+#include "Mesh\UniHash.h"
 #include "QuadsRender.h"
 #include "ITerrain.h"
 
@@ -546,6 +546,6 @@ void OneGrassType::Refresh(){
 }
 void RegGrassEditor(){
 	REG_CLASS(OneGrassType);
-	GrassRenderer::GrassProps.SafeReadFromFile("\grass.xml");
-	AddStdEditor("GrassProperties",&GrassRenderer::GrassProps,"\grass.xml",RCE_DEFAULT3);
+	GrassRenderer::GrassProps.SafeReadFromFile("Surface\\grass.xml");
+	AddStdEditor("GrassProperties",&GrassRenderer::GrassProps,"Surface\\grass.xml",RCE_DEFAULT3);
 }

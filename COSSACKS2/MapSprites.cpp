@@ -1565,16 +1565,16 @@ int FindLimResourceObject(int* xd,int* yd,int xp,int yp,byte RType,word Lim){
 				int nn=rr+rr+1;
 				for(int i=0;i<nn;i++)
 					FindLimResInCell(&CSR1,STCL-subcsr-rr+i,Lim,DstTop);
-				for(int i=0;i<nn;i++)
+				for(i=0;i<nn;i++)
 					FindLimResInCell(&CSR1,STCL+subcsr-rr+i,Lim,DstTop);
 				nn-=2;
 				int subb=VAL_SPRNX-subcsr-rr;
-				for(int i=0;i<nn;i++){
+				for(i=0;i<nn;i++){
 					FindLimResInCell(&CSR1,STCL+subb,Lim,DstTop);
 					subb+=VAL_SPRNX;
 				};
 				subb=VAL_SPRNX-subcsr+rr;
-				for(int i=0;i<nn;i++){
+				for(i=0;i<nn;i++){
 					FindLimResInCell(&CSR1,STCL+subb,Lim,DstTop);
 					subb+=VAL_SPRNX;
 				};
@@ -2294,7 +2294,7 @@ FindNow:
 
 			};
 		}else{
-			if(Rdist<128){
+			if(Rdist<256){
 				//checking for place to stand
 				if(CheckBar((xx>>4)-1,(yy>>4)-1,3,3)){
 					//Place for peasant is oocupied by other!
@@ -2351,7 +2351,7 @@ FindNow:
 	};
 #endif //COSSACKS2
 };
-byte FindAnyResInCell(int x,int y,int cell,int* Dist,byte Res){
+byte FindAnyResInCell(int x, int y, int cell, int* Dist, byte Res, float* Scale){
 	if(cell<0||cell>=VAL_SPRSIZE)return Res;
 	int* CEL=SpRefs[cell];
 	int   NCEL=NSpri[cell];
@@ -2368,6 +2368,7 @@ byte FindAnyResInCell(int x,int y,int cell,int* Dist,byte Res){
 				ObjCharacter* OC=OS->OC;
 				if(OC->ResType<0xFE){
 					dist=dst;
+					*Scale = OC->Scale;
 					rsr=OC->ResType;
 				}
 			}
@@ -2380,12 +2381,13 @@ byte DetermineResource(int x,int y){
 	int cell=(x>>7)+((y>>7)<<SprShf);
 	int DistR=10000;
 	byte res=0xFF;
+	float Scale;
 	for(int dx=-2;dx<=2;dx++){
 		for(int dy=-2;dy<=2;dy++){
-			res=FindAnyResInCell(x,y,cell+dx+dy*VAL_SPRNX,&DistR,res);
+			res=FindAnyResInCell(x,y,cell+dx+dy*VAL_SPRNX,&DistR,res,&Scale);
 		}
 	}
-	if(DistR<160)return res;
+	if(DistR<50)return res;
 	else return 0xFF;
 };
 extern int tmtmt;

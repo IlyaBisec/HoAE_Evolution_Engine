@@ -1,5 +1,5 @@
 #include "stdheader.h"
-#include "..\ClassEngine\pool.h"
+#include "pool.h"
 #include "SimplifyMesh.h"
 #include "Surface\Surface.h"
 
@@ -492,8 +492,7 @@ float Simplified_Mesh::GetCollapseCost(int v1, int v2)
 						//if( V1->m_NearVerts.size()==3 && V2->m_NearVerts.size()==3 ){
 						//	topw=10000000;
 						//}else{
-						int q;
-						for(q=0;q<NNeibPts;q++){
+						for(int q=0;q<NNeibPts;q++){
 							if(i==NearPts[q]){
 								q=-1;
 								break;
@@ -1228,8 +1227,7 @@ void SimplifySurface(SurfMesh &Mesh, float Degree) {
 	DWORD* Encode=new DWORD[Mesh.NVerts()];
 	memset(Encode,0xFF,Mesh.NVerts()*4);
 	int p=0;
-	int i;
-	for(i=0;i<Mesh.NVerts();i++){
+	for(int i=0;i<Mesh.NVerts();i++){
 		if(SM->m_pVerts[i].m_bIsActive) {
 			Encode[i]=p;
 			Mesh.VERTS[p++] = Mesh.VERTS[i];

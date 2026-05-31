@@ -358,7 +358,7 @@ IReflected* NodeTree::PickNode( int mX, int mY ) const
     m_MX = mX + ext.x;
     m_MY = mY + ext.y;
     m_PickResult = NULL;
-    ((NodeTree*)this)->Iterate(&NodeTree::PickNode );
+    ((NodeTree*)this)->Iterate( PickNode );
     return m_PickResult;
 } // NodeTree::PickNode
 
@@ -395,7 +395,7 @@ void NodeTree::Render()
     m_MY = pt.y;
 
     ISM->Flush();
-    Iterate(&NodeTree::DrawNode );
+    Iterate( DrawNode );
     
     if (m_pDragged)
     {

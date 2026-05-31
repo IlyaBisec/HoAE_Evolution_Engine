@@ -90,7 +90,7 @@ void DrawRect(int x0,int y0,int x1,int y1,Corners* CR,int GP_File){
 	PopWindow(&TEMP);
 	IntersectWindows(x0-32,y0,x1+32,y1);
 	N=(y1-y0+1)>>6;
-	for(int i=0;i<=N;i++){
+	for(i=0;i<=N;i++){
 		if(CR->LL!=-1)GPS.ShowGP(x0-32,y0+(i<<6),GP_File,CR->LL,MyNation);
 		if(CR->LR!=-1)GPS.ShowGP(x1-32,y0+(i<<6),GP_File,CR->LR,MyNation);
 	};
@@ -113,7 +113,7 @@ void DrawRect1(int x0,int y0,int x1,int y1,Corners* CR,int GP_File){
 	PopWindow(&TEMP);
 	IntersectWindows(x0-32,y0+32,x1+32,y1-33);
 	N=(y1-y0+1-64)>>6;
-	for(int i=0;i<=N;i++){
+	for(i=0;i<=N;i++){
 		if(CR->LL!=-1)GPS.ShowGP(x0-32,y0+(i<<6)+32,GP_File,CR->LL,MyNation);
 		if(CR->LR!=-1)GPS.ShowGP(x1-32,y0+(i<<6)+32,GP_File,CR->LR,MyNation);
 	};
@@ -139,7 +139,7 @@ void DrawRect3(int x0,int y0,int x1,int y1,Corners* CR,int GP_File){
 	PopWindow(&TEMP);
 	IntersectWindows(x0-32,y0+32,x1+32,y1-33);
 	N=(y1-y0+1-64)>>6;
-	for(int i=0;i<=N;i++){
+	for(i=0;i<=N;i++){
 		if(CR->LL!=-1)GPS.ShowGP(x0-32,y0+(i<<6)+32,GP_File,CR->LL,MyNation);
 		if(CR->LR!=-1)GPS.ShowGP(x1-32,y0+(i<<6)+32,GP_File,CR->LR,MyNation);
 	};
@@ -195,18 +195,18 @@ void DrawRect4(int x0,int y0,int x1,int y1,Corners* CR,int GP_File){
 	PopWindow(&TEMP);
 	IntersectWindows(x0+LX3,(y1+y0)/2+1,x1-LX3-1,y1+LLY3);//LLY2);
 	N=(x1-x0+1-DLLX)/DNLX;
-	for(int i=0;i<=N+2;i++){
+	for(i=0;i<=N+2;i++){
 		if(CR->LD!=-1)GPS.ShowGP(x0+i*DNLX+LX3,y1-LDY2,GP_File,CR->LD,MyNation);
 	};
 	//vertical lines
 	PopWindow(&TEMP);
 	IntersectWindows(x0-LX3,y0+LLY2,x1+LX3,y1-LDY2);
 	N=(y1-y0+1-LLY2-LDY2)/LEFTLY;
-	for(int i=0;i<=N+1;i++){
+	for(i=0;i<=N+1;i++){
 		if(CR->LL!=-1)GPS.ShowGP(x0-LX3,y0+i*LEFTLY+LLY2,GP_File,CR->LL,MyNation);
 	};
 	N=(y1-y0+1-LLY2-LDY2)/RIGHTLY;
-	for(int i=0;i<=N+1;i++){
+	for(i=0;i<=N+1;i++){
 		if(CR->LR!=-1)GPS.ShowGP(x1-LX3,y0+i*RIGHTLY+LLY2,GP_File,CR->LR,MyNation);
 	};
 	//corners

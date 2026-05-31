@@ -1,4 +1,5 @@
 #include "stdheader.h"
+#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "mgraph.h"
@@ -31,8 +32,6 @@
 #include "Nature.h"
 #include "ConstStr.h"
 #include "Globals.h"
-#include "ddini.h"
-
 NetSample::NetSample(){
 	NZ=0;
 	Danger=NULL;
@@ -122,7 +121,7 @@ void NetSample::CreateDiversantMap(byte NI){
 		};
 	};
 	
-	for(int i=0;i<NA;i++){
+	for(i=0;i<NA;i++){		
 		if(Danger[i]>2){
 			Area* AR=GetTopMap(i);
 			int NL=AR->NLinks;
@@ -135,7 +134,7 @@ void NetSample::CreateDiversantMap(byte NI){
 			};
 		};
 	};
-	for(int i=0;i<NA;i++)Danger[i]+=addDam[i];
+	for(i=0;i<NA;i++)Danger[i]+=addDam[i];
 };
 void NetSample::CreateGrenadersMap(byte NI){
 	int NA=GetNAreas();
@@ -221,11 +220,11 @@ word SafeNet::FindNextCell(int F,int Cell,NetSample* Net){
 		};
 		if(AddPrett[Cell])return Cell;
 		byte CantGo[MAXAR];
-		for(int i=0;i<NA;i++){
+		for(i=0;i<NA;i++){
 			word dang=CellDanger[i];
 			CantGo[i]=dang>F1;
 		};		
-		for(int i=0;i<NA;i++){
+		for(i=0;i<NA;i++){
 			if(CantGo[i]==1){
 				Area* AR=GetTopMap(i);
 				int NL=AR->NLinks;
@@ -255,7 +254,7 @@ word SafeNet::FindNextCell(int F,int Cell,NetSample* Net){
 		word LastPrettyID=0xFFFF;
 		do{
 			NNewB=0;
-			for(int i=0;i<NBound;i++)Checked[BoundCells[i]]=1;
+			for(i=0;i<NBound;i++)Checked[BoundCells[i]]=1;
 			for(int i=0;i<NBound;i++){
 				int stp=BoundCells[i];
 				Area* BA=GetTopMap(stp);
@@ -338,7 +337,7 @@ word SafeNet::FindWayTo(int F,int Cell,int Fin,NetSample* Net){
 		word LastPrettyID=0xFFFF;
 		do{
 			NNewB=0;
-			for(int i=0;i<NBound;i++)Checked[BoundCells[i]]=1;
+			for(i=0;i<NBound;i++)Checked[BoundCells[i]]=1;
 			for(int i=0;i<NBound;i++){
 				int stp=BoundCells[i];
 				Area* BA=GetTopMap(stp);

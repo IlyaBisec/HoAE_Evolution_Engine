@@ -4051,12 +4051,12 @@ int				lvCSetGameType::CallFunction(){
 		be_CINT* pType = (be_CINT*)(vType.Get());
 		if (pType!=NULL)
 		{
-				GSets.RoomParams.RTS_mode = pType->Value;
+		//		GSets.RoomParams.RTS_mode = pType->Value;
 		};
 	}
 	else
 	{
-		GSets.RoomParams.RTS_mode = iType;
+		//GSets.RoomParams.RTS_mode = iType;
 	};
 	return 1;
 };

@@ -71,12 +71,12 @@ void ScreenSprite::Unserialize( InStream& is )
 void ScreenSprite::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "ScreenSprite", this );
-    pm.p( "GPName", &ScreenSprite::GetPackageName, &ScreenSprite::SetPackageName, "file" );
+    pm.p( "GPName",            GetPackageName, SetPackageName, "file" );
     pm.f( "FrameIndex",        m_FrameIdx            );
     pm.f( "Color",            m_Color, "color"    );
-    pm.p( "Handle", &ScreenSprite::GetGPHandle            );
-    pm.p( "FrameWidth", &ScreenSprite::GetFrameWidth        );
-    pm.p( "FrameHeight", &ScreenSprite::GetFrameHeight        );
+    pm.p( "Handle",            GetGPHandle            );
+    pm.p( "FrameWidth",        GetFrameWidth        );
+    pm.p( "FrameHeight",    GetFrameHeight        );
 } // ScreenSprite::Expose
 
 Rct    ScreenSprite::GetBounds()
@@ -242,12 +242,12 @@ void WorldSprite::Unserialize    ( InStream&     is )
 void WorldSprite::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "WorldSprite", this );
-    pm.p( "GPName", &WorldSprite::GetPackageName, &WorldSprite::SetPackageName, "file" );
+    pm.p( "GPName",            GetPackageName, SetPackageName, "file" );
     pm.f( "GPHandle",        m_Handle                    );
     pm.f( "RealFrame",        m_RealFrame                    );
-    pm.p( "AnimFrame", &WorldSprite::GetAnimFrame, &WorldSprite::SetAnimFrame    );
-    pm.p( "FrameWidth", &WorldSprite::GetFrameWidth                );
-    pm.p( "FrameHeight", &WorldSprite::GetFrameHeight                );
+    pm.p( "AnimFrame",        GetAnimFrame, SetAnimFrame    );
+    pm.p( "FrameWidth",        GetFrameWidth                );
+    pm.p( "FrameHeight",    GetFrameHeight                );
     pm.f( "NDir",            m_NDirections                );
     pm.f( "HalfCircle",        m_bHalfCircle                );
     pm.f( "Billboard",        m_bBillboard                );
@@ -262,7 +262,7 @@ void WorldSprite::Expose( PropertyMap& pm )
     pm.f( "PlayerColor",    m_PlayerColor, "color"        );
     pm.f( "MaxH",            m_MaxH,        NULL, true        );
     pm.f( "MaxHalfW",        m_MaxHalfW, NULL, true        );
-    pm.p( "Shader", &WorldSprite::GetShaderID, &WorldSprite::SetShaderID, "#shaderscript" );
+    pm.p( "Shader",            GetShaderID, SetShaderID, "#shaderscript" );
 } // WorldSprite::Expose
 
 int    WorldSprite::GetFrameWidth() const

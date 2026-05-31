@@ -9,7 +9,7 @@ void addmr2(int v,char* s,int L);
 int mrand();
 
 extern TreesScope TSC;
-int GetAngleInPoint(int x,int y);
+GetAngleInPoint(int x,int y);
 bool GetGradPoint(int &x,int &y,int r);
 bool GetIsoPoint(int &x,int &y,int r);
 //extern int MinMapX;
@@ -469,8 +469,8 @@ void ExPaintMapWith(){
 	//RegGeneratorClass();
 
 	if(!MLayers->Maps.GetAmount()){
-		if(!LoadMLayersFromFileInCompactForm("\Maps.dat")){
-			if(xml3.ReadFromFile("\Maps.xml")){
+		if(!LoadMLayersFromFileInCompactForm("Surface\\Maps.dat")){
+			if(xml3.ReadFromFile("Surface\\Maps.xml")){
 				ErrorPager Error(0);
 				MLayers->Load(xml3,MLayers,&Error);
 			}else{
@@ -643,7 +643,7 @@ void ExPaintMapWith(){
 			SetCurrentProgress("Saving",5,10);
 			xml4.WriteToFile("Maps.xml");
 			*/
-			SaveMLayersToFileInCompactForm("\Maps.dat");
+			SaveMLayersToFileInCompactForm("Surface\\Maps.dat");
 			SetCurrentProgress("Saving",8,10);			
 			void DeleteAllSprites();
 			DeleteAllSprites();
@@ -2212,7 +2212,7 @@ public:
 };
 class ShowMLayersNotEditable:public vui_Action{
 public:
-	ShowMLayersNotEditable(){
+	ShowMLayers(){
 		MR=NULL;
 	}
 	MapRef_editor* MR;	

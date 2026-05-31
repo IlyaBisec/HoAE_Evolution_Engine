@@ -688,8 +688,7 @@ void MapOptions::LimitUnitsInSettlementRemoveDups() {
 	be_CParamList *pList = LimitUnitsInSettlement.GetParmList();
 	for(int i = 1; i < pList->NValues;) {
 		be_CPrametrBase *pCurElem = pList->Values[i];
-		int j;
-		for(j = 0; j < i; j++) {
+		for(int j = 0; j < i; j++) {
 			be_CPrametrBase *pCmpTo = pList->Values[j];
 			if(pCurElem->ParamName.equal(pCmpTo->ParamName) && pCurElem->ParamType.equal(pCmpTo->ParamType)) { // This is dup:
 				pList->DelElement(i);

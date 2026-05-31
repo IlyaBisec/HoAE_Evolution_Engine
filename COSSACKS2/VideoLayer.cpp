@@ -58,8 +58,8 @@ void VideoLayer::ShowRGB_Buffer(byte* src,int lx,int ly,int x,int y,int SizeX,DW
 		BM->setNVert(4);
 		BM->setTexture(Texture);
         
-        static int shVideo  = IRS->GetShaderID( "video" );
-        static int shHud    = IRS->GetShaderID( "hud" );
+        static shVideo  = IRS->GetShaderID( "video" );
+        static shHud    = IRS->GetShaderID( "hud" );
 		if (sx > 1.05) BM->setShader( shVideo ); else BM->setShader( shHud );
 		
         VertexTnL* V=(VertexTnL*)BM->getVertexData();
@@ -225,7 +225,7 @@ void EstimateFormationSituation(byte NI,word BrigID,FormSituation* S){
 		S->DistToMainTarget=Norma(xx1-xx,yy1-yy);
 	}
 	if(NTotal){
-		for(int i=0;i<maxPar;i++){
+		for(i=0;i<maxPar;i++){
 			S->Direct[i]=(S->Direct[i]*100)/NTotal;
 		}
 		S->Tired/=NTotal;
@@ -447,7 +447,7 @@ bool TryShowBrigBinkFrame(int PlayerID){
 				if(L>level)level=L;
 			}
 			int p=0;
-			for(int i=0;i<N;i++){
+			for(i=0;i<N;i++){
 				char* com=ComList[i];
 				int L=0;
 				char* s=strstr(com,"+level");

@@ -6,7 +6,7 @@
 #ifndef AFX_BRIGADEAI_H__1A25F3B9_A008_46AD_A880_B90797A576B7__INCLUDED_
 #define AFX_BRIGADEAI_H__1A25F3B9_A008_46AD_A880_B90797A576B7__INCLUDED_
 
-#include "..\ClassEngine\ClassEngine.h"
+#include <ClassEngine.h>
 #include "Polk.h"
 
 #define DIALOGS_API __declspec(dllexport)
@@ -17,7 +17,7 @@ word GetDir(int dx,int dy);
 void MakeReformation(byte NI,word BrigadeID,byte FormType);
 class DString;
 
-typedef int tpBirthCallback(int NewbornIndex);
+typedef tpBirthCallback(int NewbornIndex);
 
 class SaveBuf;
 //====================================================================//

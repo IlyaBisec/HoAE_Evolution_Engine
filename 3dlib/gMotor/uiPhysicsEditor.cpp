@@ -80,13 +80,13 @@ void PhysicsEditor::SaveAs()
 void PhysicsEditor::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PhysicsEditor", this );
-    pm.m( "Play", &PhysicsEditor::Play    );
-    pm.m( "Stop", &PhysicsEditor::Stop    );
-    pm.m( "Reset", &PhysicsEditor::Reset    );
-    pm.m( "Load", &PhysicsEditor::Load    );
+    pm.m( "Play",    Play    );
+    pm.m( "Stop",    Stop    );
+    pm.m( "Reset",    Reset    );
+    pm.m( "Load",    Load    );
     //pm.m( "Reload", Reload    );
-    pm.m( "Save", &PhysicsEditor::Save    );
-    pm.m( "SaveAs", &PhysicsEditor::SaveAs    );
+    pm.m( "Save",    Save    );
+    pm.m( "SaveAs", SaveAs    );
 } // PhysicsEditor::Expose
 
 void PhysicsEditor::Render()

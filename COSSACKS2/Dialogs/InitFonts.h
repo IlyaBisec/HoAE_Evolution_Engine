@@ -50,7 +50,7 @@ RLCFont  fonG60w;
 RLCFont  fonG12;
 
 // menu
-const int NColor=7;
+const NColor=7;
 RLCFont fonMenuText[NColor];
 RLCFont fonMenuTitle[NColor];
 RLCFont fonMenuTitle2[NColor];

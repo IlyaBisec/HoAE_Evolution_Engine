@@ -1,7 +1,7 @@
 #ifndef __SURFACEGENERATOR__
 #define	__SURFACEGENERATOR__
 
-#include "..\Surface\Surface.h"
+#include "surface.h"
 #include "..\Extensions.h"
 #include "..\SquareMap.h"
 #define surfScale (1.0f/(240*64))
@@ -589,15 +589,15 @@ public:
 
 	SAVE(SurfaceGenerator);
 		REG_AUTO2(Maps,"-grid 2000 -maxLx 450 -maxLy 450");	
-		REG_METHOD(&SurfaceGenerator::SaveCurrentLayer);
-		REG_METHOD(&SurfaceGenerator::LoadCurrentLayer);
-		REG_METHOD(&SurfaceGenerator::ClearCurrentLayer);
+		REG_METHOD(SaveCurrentLayer);
+		REG_METHOD(LoadCurrentLayer);
+		REG_METHOD(ClearCurrentLayer);
 		REG_AUTO(Separator);
-		REG_METHOD(&SurfaceGenerator::RotateLeft);
-		REG_METHOD(&SurfaceGenerator::RotateRight);
+		REG_METHOD(RotateLeft);
+		REG_METHOD(RotateRight);
 		REG_AUTO(Separator);
-		REG_METHOD(&SurfaceGenerator::ShiftHorizontal);
-		REG_METHOD(&SurfaceGenerator::ShiftVertical);
+		REG_METHOD(ShiftHorizontal);
+		REG_METHOD(ShiftVertical);
 		REG_ISLIDER(CurShift, -200, 200, 0);
 		REG_AUTO(Separator);
 		REG_MEMBER(_int,Size);

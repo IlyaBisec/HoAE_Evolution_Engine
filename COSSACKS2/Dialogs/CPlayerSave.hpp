@@ -14,7 +14,7 @@ class CSectSAVE : public BaseClass
 	public:
 		CSectSAVE()		{ Init(); };
 		~CSectSAVE()	{ Init(); };
-		void Init() {
+		Init() {
 				NI = POP = DEF = REC = SAB = 0;	};
 
 		int		NI;				// Нация.
@@ -42,7 +42,7 @@ class CSquardSAVE : public BaseClass
 		~CSquardSAVE() { 
 			Init(); 
 		};
-		void Init() {
+		Init() { 
 				KILLS.Clear();
 				TypeGlobID = SQ_MAX = SQ_NUM = 0; 
 		};
@@ -71,7 +71,7 @@ class CHeroSAVE : public BaseClass
 		~CHeroSAVE() { 
 			Init(); 
 		};
-		void Init() {
+		Init() {
 				SQUARDS.Clear();
 				mAlive=false;	
 				mHeroID=mSecID=mPrSecID=mExpa=mBatlN=mVictN=mRankID=mStatID=mFuel=mLead=mLuck=mTalant=0; /*mNI=0*/
@@ -129,7 +129,7 @@ class CCountrySAVE : public BaseClass
 		~CCountrySAVE() { 
 			Init(); 
 		};
-		void Init() {
+		Init() {
 				HEROES.Clear();	
 				mRes.Init();	
 				mAlive = false; 
@@ -160,7 +160,7 @@ class CStatsSAVE : public BaseClass
 		~CStatsSAVE() { 
 			Init(); 
 		};
-		void Init() {
+		Init() { 
 			SecNum.Clear();
 			ResSup.Clear();
 			ResAmo.Clear(); 
@@ -240,7 +240,7 @@ class CPlayerSAVE_STRUCT : public BaseClass
 		~CPlayerSAVE_STRUCT() {	
 			Init();	
 		}
-		void Init() {
+		Init() {
 				SECTORA.Clear(); 
 				COUNTRY.Clear(); 
 				CONT.Clear(); 

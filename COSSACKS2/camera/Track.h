@@ -1,5 +1,5 @@
 #pragma once
-#include "..\stdheader.h"
+
 #include "comms\comms.h"
 
 class CameraSpline;
@@ -36,7 +36,7 @@ public:
 		void EvaluateFunction();
 		SAVE(CameraSplineKeySet);
 		REG_PARENT(BaseFunction);
-		ENDSAVE;
+		ENDSAVE();
 	} Set;
 
 	class CameraSplineKeyRemove : public BaseFunction {
@@ -44,7 +44,7 @@ public:
 		void EvaluateFunction();
 		SAVE(CameraSplineKeyRemove);
 		REG_PARENT(BaseFunction);
-		ENDSAVE;
+		ENDSAVE();
 	} Remove;
 
 	void SetToCamera();
@@ -74,7 +74,7 @@ public:
 #define CameraSplineKey_DefBlur		0.0f
 		
 		REG_FSLIDER(Blur, 0.0f, 1.0f, CameraSplineKey_DefBlur);
-		REG_METHOD(&CameraSplineKey::CopyPostFXArgsFromGameSettings);
+		REG_METHOD(CopyPostFXArgsFromGameSettings);
 		REG_AUTO(Separator);
 		REG_MEMBER(_str, VarName);
 		REG_MEMBER(_bool, VarValue);
@@ -165,9 +165,9 @@ public:
 	class CameraSplineCopyIdFromSelUnit : public BaseFunction {
 	public:
 		void EvaluateFunction();
-		SAVE(CameraSplineCopyIdFromSelUnit)
+		SAVE(CameraSplineCopyIdFromSelUnit);
 			REG_PARENT(BaseFunction);
-		ENDSAVE;
+		ENDSAVE();
 	} CopyIdFromSelUnit;
 
 	class CameraSplineShow : public BaseFunction {
@@ -186,7 +186,7 @@ public:
 #define CameraSplineShow_DefDeltaTime	0.05f
 
 			REG_FSLIDER(DeltaTime, 0.01f, 0.2f, CameraSplineShow_DefDeltaTime);
-		ENDSAVE;
+		ENDSAVE();
 	} Show;
 
 	class CameraSplineSetConstantSpeed : public BaseClass {
@@ -216,7 +216,7 @@ public:
 			void EvaluateFunction();
 			SAVE(CameraSplineSetConstantSpeedByPos);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} ByPosition;
 
 		class CameraSplineSetConstantSpeedByRot : public BaseFunction {
@@ -224,7 +224,7 @@ public:
 			void EvaluateFunction();
 			SAVE(CameraSplineSetConstantSpeedByRot);
 			REG_PARENT(BaseFunction);
-			ENDSAVE;
+			ENDSAVE();
 		} ByRotation;
 
 		SAVE(CameraSplineSetConstantSpeed);
@@ -234,7 +234,7 @@ public:
 			REG_FSLIDER(DurationFr, 0.0f, 1.0f, CameraSplineSetConstantSpeed_DefDurationFr);
 			REG_AUTO(ByPosition);
 			REG_AUTO(ByRotation);
-		ENDSAVE;
+		ENDSAVE();
 	} SetConstantSpeed;
 
 	class CameraSplineCopyFogArgsFromEngineSettings : public BaseFunction {
@@ -242,7 +242,7 @@ public:
 		void EvaluateFunction();
 		SAVE(CameraSplineCopyFogArgsFromEngineSettings);
 			REG_PARENT(BaseFunction);
-		ENDSAVE;
+		ENDSAVE();
 	} CopyFogArgsFromEngineSettings;
 
 	SAVE(CameraSpline);
@@ -319,7 +319,7 @@ public:
 		REG_AUTO(Separator);
 		REG_MEMBER(_int, AnimFrameFm);
 		REG_MEMBER(_int, AnimFrameTo);
-	ENDSAVE;
+	ENDSAVE();
 
 	static void PreviewAndEdit(CameraSpline *pSpline);
 }; // CameraSpline
@@ -343,7 +343,7 @@ public:
 		REG_MEMBER(_int, FrameFm);
 		REG_MEMBER(_int, FrameTo);
 		REG_AUTO(Separator);
-		REG_METHOD(&CameraTrackUnitAnimation::CalcFrameRangeFromAnimation);
+		REG_METHOD(CalcFrameRangeFromAnimation);
 	ENDSAVE;
 
 	__constructor(CameraTrackUnitAnimation);
@@ -370,13 +370,13 @@ public:
 	
 	SAVE(CameraTrackUnitModel);
 		REG_MEMBER(_ModelID, idModel);
-		REG_METHOD(&CameraTrackUnitModel::ReloadModel);
+		REG_METHOD(ReloadModel);
 		REG_AUTO(Separator);
 		REG_MEMBER(_float, Position.x);
 		REG_MEMBER(_float, Position.y);
 		REG_MEMBER(_float, Position.z);
 		REG_MEMBER(_bool, OnGround);
-		REG_METHOD(&CameraTrackUnitModel::MoveToScreenCenter);
+		REG_METHOD(MoveToScreenCenter);
 		REG_FSLIDER(Scale, 0.1f, 3.0f, 1.0f);
 		REG_FSLIDER(Angle, 0.0f, 360.0f, 0.0f);
 		REG_AUTO(Separator);
@@ -387,7 +387,7 @@ public:
 		REG_MEMBER(_int, StartFrame);
 		REG_CLASS(CameraTrackUnitAnimation);
 		REG_AUTO(Animations);
-	ENDSAVE;
+	ENDSAVE();
 	__constructor(CameraTrackUnitModel);
 }; // CameraTrackUnitModel
 
@@ -448,7 +448,7 @@ public:
 		void EvaluateFunction();
 		SAVE(CameraTrackPreview);
 		REG_PARENT(BaseFunction);
-		ENDSAVE;
+		ENDSAVE();
 	} Preview;
 	
 	class CameraTrackCapture : public BaseFunction {
@@ -456,7 +456,7 @@ public:
 		void EvaluateFunction();
 		SAVE(CameraTrackCapture);
 		REG_PARENT(BaseFunction);
-		ENDSAVE;
+		ENDSAVE();
 	} Capture;
 	
 	float GetDuration() const;
@@ -483,8 +483,8 @@ public:
 		REG_AUTO(Separator);
 		REG_AUTO(Splines);
 		REG_AUTO(Separator);
-		REG_METHOD(&CameraTrack::SetSkip);
-		REG_METHOD(&CameraTrack::ClearSkip);
+		REG_METHOD(SetSkip);
+		REG_METHOD(ClearSkip);
 		REG_AUTO(Separator);
         REG_AUTO(Animations);
 		REG_AUTO(Separator);
@@ -494,10 +494,10 @@ public:
 		READONLY REG_MEMBER(_int, CurFrame);
 		READONLY REG_MEMBER(_float, CurTime);
 		REG_MEMBER(_bool, FitWithCamera);
-		REG_METHOD(&CameraTrack::AddSpline);
-		REG_METHOD(&CameraTrack::AddKey);
+		REG_METHOD(AddSpline);
+		REG_METHOD(AddKey);
 		REG_AUTO(Separator);
-		REG_METHOD(&CameraTrack::RetimeSpline);
+		REG_METHOD(RetimeSpline);
 		REG_AUTO(Separator);
 		REG_ISLIDER(AnimationsFPS, 1, 50, CameraTrack_AnimationsFPSDef);
 		REG_AUTO(Separator);
@@ -510,5 +510,5 @@ public:
 		REG_ISLIDER(WaterlineTo, 0, 1000, CameraTrack_DefWaterlineTo);
 		REG_AUTO(Separator);
 		REG_AUTO(LoadedResources);
-	ENDSAVE;
+	ENDSAVE();
 }; // CameraTrack

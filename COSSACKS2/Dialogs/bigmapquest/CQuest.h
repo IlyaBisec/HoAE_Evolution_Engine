@@ -28,7 +28,7 @@ class CQuest_STRUCT	: public BaseClass
 	public:
 		CQuest_STRUCT()		{ Init(); }
 		~CQuest_STRUCT()	{ Init(); }
-		void Init()				{ main = 0 ; id = prob = turn_limit = gold = wait = -1 ;
+		Init()				{ main = 0 ; id = prob = turn_limit = gold = wait = -1 ; 
 							  for(int i=0; i < MAX_PLAYERS ;i++) { strcpy(name,"null"); owner[i] = taker[i] = -1 ; }   }
 	public:
 		int		id;										// уникальный номер 

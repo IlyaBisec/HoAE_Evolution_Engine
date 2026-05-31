@@ -502,7 +502,7 @@ bool dMatrix::EigenSolve(doubles &EigenValues, dVectors &EigenVectors) {
 			y[0].Set(0., 0., 1.);
 			y[1] = (*this) * y[0];
 			y[2] = (*this) * y[1];
-			for(int i = 0; i < 3; i++) {
+			for(i = 0; i < 3; i++) {
 				// Horner's method:
 				q[0] = 1.;
 				q[1] = l[i] * q[0] + a;

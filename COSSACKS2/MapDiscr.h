@@ -32,11 +32,11 @@ typedef unsigned short word;
 #include <stdlib.h>
 #include <algorithm>
 #include "smart_assert.h"
-#include "..\ClassEngine\DString.h"
-#include "..\ClassEngine\xmlQuote.h"
-#include "..\ClassEngine\ClassEngine.h"
-#include "..\ClassEngine\more_types.h"
-#include "..\3dlib\gMotor\IMediaManager.h"
+#include <DString.h>
+#include <xmlQuote.h>
+#include <ClassEngine.h>
+#include <more_types.h>
+#include <IMediaManager.h>
 #include "AntiBug.h"
 #include "Icons.h"
 
@@ -794,10 +794,10 @@ _inline char* newstr(char* s){
 	}
 	return NULL;
 }
-_inline int getTimeScaledV(int v){
+_inline getTimeScaledV(int v){
 	return ((v*GameSpeed)>>8)+int((GameSpeed&255)>(rando()&255));
 }
-_inline int getTimeScaled1(){
+_inline getTimeScaled1(){
 	return (GameSpeed>>8)+int((GameSpeed&255)>(rando()&255));
 }
 #endif __MapDiscr__

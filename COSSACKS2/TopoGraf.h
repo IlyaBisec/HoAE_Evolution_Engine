@@ -70,9 +70,9 @@ struct MediaTop{
 
 //extern MediaTop GTOP[2];
 
-extern int TopLx;
-extern int  TopLy;
-extern int  MaxTop;
+extern TopLx;
+extern TopLy;
+extern MaxTop;
 extern int TopSH;
 
 extern word* TopRef;

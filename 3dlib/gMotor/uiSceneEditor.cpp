@@ -65,7 +65,7 @@ SpritePalette::SpritePalette()
 void SpritePalette::Expose( PropertyMap& pm )
 {
     pm.start<Window>( "SpritePalette", this );
-    pm.p( "SpritePackage", &SpritePalette::GetPackage, &SpritePalette::SetPackage );
+    pm.p( "SpritePackage", GetPackage, SetPackage );
 } // SpritePalette::Expose
 
 void SpritePalette::Render()

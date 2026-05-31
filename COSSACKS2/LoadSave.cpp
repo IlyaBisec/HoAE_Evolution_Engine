@@ -71,16 +71,16 @@ int StartSaveT;
 
 void xBlockWrite(SaveBuf* SB,void* Data,int Size){
 	int T=GetTickCount();
-	//int TotalSize = SB->Size + Size;
-	//const int BlockSize = 65536;
-	//if(TotalSize > SB->RealSize) {
-	//	const int nBlocks = (TotalSize + BlockSize - 1) / BlockSize;
-	//	byte *NewBuffer = new byte[BlockSize * nBlocks];
-	//	assert(NewBuffer && "Memory allocation FAILED!");
-	//	CopyMemory(NewBuffer, SB->Buf, SB->Size);
-	//	delete SB->Buf;
-	//	SB->Buf = NewBuffer;
-	//}
+	/*int TotalSize = SB->Size + Size;
+	const int BlockSize = 65536;
+	if(TotalSize > SB->RealSize) {
+		const int nBlocks = (TotalSize + BlockSize - 1) / BlockSize;
+		byte *NewBuffer = new byte[BlockSize * nBlocks];
+		assert(NewBuffer && "Memory allocation FAILED!");
+		CopyMemory(NewBuffer, SB->Buf, SB->Size);
+		delete SB->Buf;
+		SB->Buf = NewBuffer;
+	}*/
 	while(SB->Size+Size>SB->RealSize){
 		SB->RealSize+=65536;
 		SB->Buf=(byte*)realloc(SB->Buf,SB->RealSize);
@@ -90,8 +90,10 @@ void xBlockWrite(SaveBuf* SB,void* Data,int Size){
 	StartSaveT+=GetTickCount()-T;
 };
 void xBlockRead(SaveBuf* SB,void* Data,int Size){
-	//assert(SB->Buf&&SB->Pos+Size<=SB->Size);
-	if(SB->Buf)memcpy(Data,SB->Buf+SB->Pos,Size);
+	assert(SB->Buf&&SB->Pos+Size<=SB->Size);
+	if(SB->Buf){
+		memcpy(Data,SB->Buf+SB->Pos,Size);
+	}
 	SB->Pos+=Size;
 };
 void SAVMES(SaveBuf* ff1,char* mes){
@@ -135,7 +137,7 @@ void SavePackArray(SaveBuf* ff1,word defval,word* dest,int size){
 	for(int i=0;i<size;i++)if(dest[i]!=defval)szs++;
 	xBlockWrite(ff1,&szs,4);
 	xBlockWrite(ff1,&defval,2);
-	for(int i=0;i<size;i++)if(dest[i]!=defval){
+	for(i=0;i<size;i++)if(dest[i]!=defval){
 		xBlockWrite(ff1,&i,3);
 		xBlockWrite(ff1,&dest[i],2);
 	};
@@ -144,7 +146,8 @@ void SaveGameBinaryData(SaveBuf* F){
 	MemoryBinStream M;
 	ext_OnSaveGameBinaryData(&M);
 	DWORD C=M.Size();
-	RBlockWrite(F,&C,4);
+	//RBlockWrite(F,&C,4);
+	xBlockWrite(F,&C,4);
 	if(M.Size()){
 		xBlockWrite(F,M.GetData(),M.Size());
 	}
@@ -169,7 +172,7 @@ void LoadPackArray(SaveBuf* ff1,word* dest,int size){
 	for(int i=0;i<size;i++)dest[i]=defv;
 	int ofst=0;
 	word vall;
-	for(int i=0;i<szs;i++){
+	for(i=0;i<szs;i++){
 		ofst=0;
 		xBlockRead(ff1,&ofst,3);
 		xBlockRead(ff1,&vall,2);
@@ -200,21 +203,21 @@ void Nation::CloseNation(){
 	CentIDS.Clear();
 	CentSNS.Clear();
 	LastCheckTime=0;
-	for(int i=0;i<NHistory;i++){
+	for(i=0;i<NHistory;i++){
 		free(History[i]);
 	};
 	VictState=0;
 	NHistory=0;
 	History=NULL;
 	NMon=0;
-	for(int i=0;i<NCOND;i++){
+	for(i=0;i<NCOND;i++){
 		if(CLSize[i])free(CLRef[i]);
 		CLRef[i]=NULL;
 		CLSize[i]=0;
 	};
 	NGidot=0;
 	NFarms=0;	
-	for(int i=0;i<MaxArtDep;i++){
+	for(i=0;i<MaxArtDep;i++){
 		NArtUnits[i]=0;
 		NArtdep[i]=0;
 	}
@@ -224,14 +227,14 @@ void Nation::CloseNation(){
 	if(NWmenus)free(Wmenus);
 	if(NAmenus)free(Amenus);
 	if(NCmenus)free(Cmenus);
-	for(int i=0;i<NIcons;i++){
+	for(i=0;i<NIcons;i++){
 		WIcon* icc=wIcons[i];
 		if(icc->Message)free(icc->Message);
 		if(icc->SubList)free(icc->SubList);
 		free(wIcons[i]);
 	};
 	if(NUnits){
-		for(int i=0;i<NNations;i++){
+		for(i=0;i<NNations;i++){
 			if(NUnits[i]){
 				for(int j=0;j<NUnits[i];j++){
 					if(UnitNames[i][j])free(UnitNames[i][j]);
@@ -245,7 +248,7 @@ void Nation::CloseNation(){
 		free(NUnits);
 		NUnits=0;
 	};
-	for(int i=0;i<NUpgrades;i++){
+	for(i=0;i<NUpgrades;i++){
 		NewUpgrade* NU=UPGRADE[i];
 		if(NU->AutoEnable)free(NU->AutoEnable);
 		if(NU->AutoPerform)free(NU->AutoPerform);
@@ -771,7 +774,7 @@ void UnLoading(){
 	//assert(_CrtCheckMemory());
 	extern bool InCloseObjects;
     InCloseObjects=true;
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		if(!FastLoad)NATIONS[i].CloseNation();
 		CITY[i].CloseCity();
 		CITY[i].MyIsland=0xFF;
@@ -787,13 +790,13 @@ void UnLoading(){
 	//memset(&OBJECTS,0,sizeof OBJECTS);
 	//assert(_CrtCheckMemory());
 	//closing multiple groups selection information 
-	for(int i=0;i<80;i++){
+	for(i=0;i<80;i++){
 		if(int(SelSet[i].Member))free(SelSet[i].Member);
 		if(int(SelSet[i].SerialN))free(SelSet[i].SerialN);
 		memset(SelSet+i,0,sizeof SelSet[i]);
 	};
 
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		if(int(Selm[i]))free(Selm[i]);
 		if(int(SerN[i]))free(SerN[i]);
 		Selm[i]=NULL;
@@ -1083,7 +1086,7 @@ void SaveNations(SaveBuf* SB){
 		//SAVMES(SB,"UPGRADEINFO");
 		int NUPG=-NT->NUpgrades;
 		xBlockWrite(SB,&NUPG,4);
-		for(int i=0;i<NT->NUpgrades;i++){
+		for(i=0;i<NT->NUpgrades;i++){
 			NewUpgrade* NU=NT->UPGRADE[i];
 			byte x=0;
 			if(NU->Done)x|=1;
@@ -1107,7 +1110,7 @@ void SaveNations(SaveBuf* SB){
 		xBlockWrite(SB,NT->ResOnUnits,32);
 		xBlockWrite(SB,NT->ResOnLife,32);
 		xBlockWrite(SB,&NT->NHistory,4);
-		for(int i=0;i<NT->NHistory;i++){
+		for(i=0;i<NT->NHistory;i++){
 			int L=strlen(NT->History[i])+1;
 			xBlockWrite(SB,&L,4);
 			xBlockWrite(SB,NT->History[i],L);
@@ -1213,7 +1216,7 @@ bool LoadNations(SaveBuf* SB){
 
 		xBlockRead(SB,&NUPG,4);
 		NT->NUpgrades=abs(NUPG);
-		for(int i=0;i<NT->NUpgrades;i++){
+		for(i=0;i<NT->NUpgrades;i++){
 			NewUpgrade* NU=NT->UPGRADE[i];
 			byte x;
 			xBlockRead(SB,&x,1);
@@ -1240,7 +1243,7 @@ bool LoadNations(SaveBuf* SB){
 		xBlockRead(SB,NT->ResOnLife,32);
 		xBlockRead(SB,&NT->NHistory,4);
 		NT->History=(char**)malloc(NT->NHistory*4);
-		for(int i=0;i<NT->NHistory;i++){
+		for(i=0;i<NT->NHistory;i++){
 			int L;
 			xBlockRead(SB,&L,4);
 			NT->History[i]=znew(char,L);
@@ -1644,18 +1647,18 @@ void SaveAnmObj(SaveBuf* SB){
 	int i='OMNA';
 	xBlockWrite(SB,&i,4);
 	int NExplosions=0;
-	for(int i=0;i<MaxExpl;i++){
+	for(i=0;i<MaxExpl;i++){
 		if(EUsage[i])NExplosions++;
 	};
 	xBlockWrite(SB,&NExplosions,4);
-	for(int i=0;i<MaxExpl;i++){
+	for(i=0;i<MaxExpl;i++){
 		if(EUsage[i]){
 			xBlockWrite(SB,&i,2);
-			AnmObject NA=*(GAnm[i]);
-			if(NA.Sender)NA.Sender=(OneObject*)(NA.Sender->Index);
-			else NA.Sender=(OneObject*)0xFFFFFFFF;
-			NA.Weap=(Weapon*)NA.Weap->MyIndex;
-			xBlockWrite(SB,&NA.x,sizeof(AnmObject)-4);
+			AnmObject NAN=*(GAnm[i]);
+			if(NAN.Sender)NAN.Sender=(OneObject*)(NAN.Sender->Index);
+			else NAN.Sender=(OneObject*)0xFFFFFFFF;
+			NAN.Weap=(Weapon*)NAN.Weap->MyIndex;
+			xBlockWrite(SB,&NAN.x,sizeof(AnmObject)-4);
 		};
 	};
 };
@@ -1672,12 +1675,12 @@ void LoadAnmObj(SaveBuf* SB){
 		word ai;
 		xBlockRead(SB,&ai,2);
 		EUsage[ai]=1;
-		AnmObject* NA=GAnm[ai];
-		xBlockRead(SB,&NA->x,sizeof(AnmObject)-4);
-		if(int(NA->Sender)!=-1)NA->Sender=Group[int(NA->Sender)];
-		else NA->Sender=NULL;
-		NA->Weap=WPLIST[int(NA->Weap)];
-		NA->NewAnm=NA->Weap->NewAnm;
+		AnmObject* NAN=GAnm[ai];
+		xBlockRead(SB,&NAN->x,sizeof(AnmObject)-4);
+		if(int(NAN->Sender)!=-1)NAN->Sender=Group[int(NAN->Sender)];
+		else NAN->Sender=NULL;
+		NAN->Weap=WPLIST[int(NAN->Weap)];
+		NAN->NewAnm=NAN->Weap->NewAnm;
 	};
 };
 extern int MAXSPR;
@@ -1994,7 +1997,7 @@ void SaveAI(SaveBuf* SB){
 			if(CT->Brigs[k].Enabled)N++;
 		};
 		xBlockWrite(SB,&N,2);
-		for(int k=0;k<MaxBrig;k++){
+		for(k=0;k<MaxBrig;k++){
 			if(CT->Brigs[k].Enabled){
 				Brigade* BRR=CT->Brigs+k;
 				xBlockWrite(SB,&k,2);
@@ -2035,8 +2038,7 @@ void SaveAI(SaveBuf* SB){
 				chk=1234500;
 				xBlockWrite(SB,&chk,4);
 				if(BRR->CFN){
-					int j;
-					for(j=0;j<NLS_CFN&&BRR->CFN!=LS_CFN[j];j++);
+					for(int j=0;j<NLS_CFN&&BRR->CFN!=LS_CFN[j];j++);
 					//assert(j<NLS_CFN);
 					xBlockWrite(SB,&j,1);
 				}else{
@@ -2107,7 +2109,7 @@ void SaveAI(SaveBuf* SB){
 				if(CT->ARMS[i].Enabled)N++;
 			};
 			xBlockWrite(SB,&N,2);
-			for(int i=0;i<MaxArm;i++){
+			for(i=0;i<MaxArm;i++){
 				if(CT->ARMS[i].Enabled){
 					xBlockWrite(SB,&i,2);
 					AI_Army* AR=CT->ARMS+i;
@@ -2133,8 +2135,7 @@ void SaveAI(SaveBuf* SB){
 							ArmyOrder AO1=*AOR;
 							AO1.Message=NULL;
 							AO1.Next=NULL;
-							int j;
-							for(j=0;j<NAR_ORD&&AOR->ALink!=AR_ORD[j];j++);
+							for(int j=0;j<NAR_ORD&&AOR->ALink!=AR_ORD[j];j++);
 							//assert(j<NAR_ORD);
 							AO1.ALink=(ArmyLink*)j;
 							xBlockWrite(SB,&AO1,sizeof AO1);
@@ -2199,8 +2200,7 @@ void SaveAI(SaveBuf* SB){
 				IDE=CT->IDEA;
 				while(IDE){
 					xBlockWrite(SB,&IDE->DataSize,4);
-					int j;
-					for(j=0;j<N_IBR&&IDE->Brain!=IBR[j];j++);
+					for(int j=0;j<N_IBR&&IDE->Brain!=IBR[j];j++);
 					//assert(j<N_IBR);
 					xBlockWrite(SB,&j,4);
 					if(IDE->DataSize)xBlockWrite(SB,IDE->IdeaData,IDE->DataSize);
@@ -2227,21 +2227,18 @@ void SaveAI(SaveBuf* SB){
 	};
 	//Saving Enemy Info
 	int NSE=0;
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		if(GNFO.EINF[i]){
-			int j;
-			for(j=0;j<i;j++)if(GNFO.EINF[i]==GNFO.EINF[j])j=i+1;
+			for(int j=0;j<i;j++)if(GNFO.EINF[i]==GNFO.EINF[j])j=i+1;
 			if(j==i)NSE++;
 		};
 	};
 	xBlockWrite(SB,&NSE,1);
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		if(GNFO.EINF[i]){
-			int j;
-			for(j=0;j<i;j++)if(GNFO.EINF[i]==GNFO.EINF[j])j=i+1;
+			for(int j=0;j<i;j++)if(GNFO.EINF[i]==GNFO.EINF[j])j=i+1;
 			if(j==i){
-				int k;
-				for(k=0;k<8;k++)if(GNFO.EINF[i]==GNFO.EINF[k])xBlockWrite(SB,&k,1);
+				for(int k=0;k<8;k++)if(GNFO.EINF[i]==GNFO.EINF[k])xBlockWrite(SB,&k,1);
 				k=255;
 				xBlockWrite(SB,&k,1);
 				//essential part
@@ -2271,7 +2268,7 @@ void SaveAI(SaveBuf* SB){
 				N=0;
 				for(int ii=0;ii<SafeLX*SafeLX;ii++)if(EINF->SCINF[ii])N++;
 				xBlockWrite(SB,&N,2);
-				for(int ii=0;ii<SafeLX*SafeLX;ii++)if(EINF->SCINF[ii]){
+				for(ii=0;ii<SafeLX*SafeLX;ii++)if(EINF->SCINF[ii]){
 					xBlockWrite(SB,&ii,4);
 					xBlockWrite(SB,EINF->SCINF[ii],64*sizeof SafeCellInfo);
 				};
@@ -2782,7 +2779,7 @@ void SaveMission(SaveBuf* SB){
 	};
 	int N=SCENINF.UGRP.GetAmount();
 	xBlockWrite(SB,&N,4);
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		UnitsGroup* UG=&SCENINF.UGRP[i];
 		xBlockWrite(SB,&UG->N,4);
 		xBlockWrite(SB,&UG->Index,4);
@@ -2815,7 +2812,7 @@ void SaveMission(SaveBuf* SB){
 	};
 	N=SCENINF.ZGRP.GetAmount();
 	xBlockWrite(SB,&N,4);
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		xBlockWrite(SB,&SCENINF.ZGRP[i].N,4);
 		xBlockWrite(SB,&SCENINF.ZGRP[i].Index,4);
 		xBlockWrite(SB,SCENINF.ZGRP[i].ZoneID,2*SCENINF.ZGRP[i].N);
@@ -2851,7 +2848,7 @@ void LoadMission(SaveBuf* SB){
 		//assert(sz==SCENINF.SaveSize[i]);
 		xBlockRead(SB,SCENINF.SaveZone[i],sz);
 	};
-	for(int i=0;i<SCENINF.UGRP.GetAmount();i++){
+	for(i=0;i<SCENINF.UGRP.GetAmount();i++){
 		UnitsGroup* UG=&SCENINF.UGRP[i];
 		if(UG->N){
 			free(UG->IDS);
@@ -2862,7 +2859,7 @@ void LoadMission(SaveBuf* SB){
 	SCENINF.ZGRP.Clear();
 	int N;
 	xBlockRead(SB,&N,4);
-	for(int i=0;i<N;i++){		
+	for(i=0;i<N;i++){		
 		UnitsGroup* UG=SCENINF.AddNewGroup();
 		xBlockRead(SB,&UG->N,4);
 		xBlockRead(SB,&UG->Index,4);
@@ -2896,7 +2893,7 @@ void LoadMission(SaveBuf* SB){
 		xBlockRead(SB,&UG->NMASK,1);
 	};
 	xBlockRead(SB,&N,4);
-	for(int i=0;i<N;i++){
+	for(i=0;i<N;i++){
 		ZonesGroup* ZG=SCENINF.GetNewZone();
 		xBlockRead(SB,&ZG->N,4);
 		xBlockRead(SB,&ZG->Index,4);
@@ -3039,7 +3036,7 @@ void PreSaveGame(SaveBuf* SB,char* Messtr,int ID){
 	xBlockWrite(SB,&fMapX,4);
 	xBlockWrite(SB,&fMapY,4);
 	//------------------
-	for(int i=0;i<7;i++)if(GSets.CGame.PL_INFO[i].name[0]){
+	for(i=0;i<7;i++)if(GSets.CGame.PL_INFO[i].name[0]){
 		xBlockWrite(SB,GSets.CGame.PL_INFO[i].name,32);
 		xBlockWrite(SB,&GSets.CGame.PL_INFO[i].ColorID,1);
 	};
@@ -3079,7 +3076,9 @@ void PreSaveGame(SaveBuf* SB,char* Messtr,int ID){
 	void SaveBrigadeAI(SaveBuf* SB);
 	SaveBrigadeAI(SB);
 	SaveMission(SB);
+	//????
 	SaveDip(SB);
+	//????
 	void SaveWayPoints(SaveBuf *SB);
 	SaveWayPoints(SB);    	
 	//xBlockWrite(SB,&MyNation,4);
@@ -3098,7 +3097,7 @@ void PreSaveGame(SaveBuf* SB,char* Messtr,int ID){
 	xBlockWrite(SB,&ttt,4);
 	ttt=1;
 	xBlockWrite(SB,&ttt,1);
-	for(int i=0;i<8;i++){
+	for(i=0;i<8;i++){
 		xBlockWrite(SB,&CITY[i].Difficulty,1);
 	};
 	xBlockWrite(SB,&PeaceTimeLeft,4);
@@ -3240,11 +3239,11 @@ void LS_LoadTopology(SaveBuf* SB);
 
 SFLB_DLLEXPORT SFLB_PreLoadGame(SaveBuf* SB,bool LoadNation){
 	ClearLoadMark();
-	//AddLoadMark("SetupArrays",5);	
-	//AddLoadMark("NewMap",10);
-	//AddLoadMark("UnLoading",10);
-	//AddLoadMark("MapUnLoading",5);
+	AddLoadMark("SetupArrays",5);	
+	AddLoadMark("NewMap",10);
 	AddLoadMark("UnLoading",10);
+	AddLoadMark("MapUnLoading",5);
+	//AddLoadMark("UnLoading",10);
 	AddLoadMark("Nations",NNations*10);
 	ShowLoadProgress("UnLoading",0,2);
 	void ClearArrays();

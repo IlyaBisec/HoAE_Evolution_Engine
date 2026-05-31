@@ -106,7 +106,7 @@ bool SquareObject::Create(int gx,int gy,tpGetNetValue* FN,int x0,int y0,QuantTyp
 	ofs=0;
 	int ofs2=0;
 
-	for(int iy=0;iy<NY;iy++){
+	for(iy=0;iy<NY;iy++){
 		for(int ix=0;ix<NX;ix++){
 			int V1=TempBuf[ofs];
 			int V2=TempBuf[ofs+1];
@@ -140,7 +140,7 @@ bool SquareObject::Create(int gx,int gy,tpGetNetValue* FN,int x0,int y0,QuantTyp
 		HaveToDo=0;
 		ofs=0;
 		ofs2=0;
-		for(int iy=0;iy<NY;iy++){
+		for(iy=0;iy<NY;iy++){
 			for(int ix=0;ix<NX;ix++){
 				if(!SqMarker[ofs2]){
 					HaveToDo=1;
@@ -257,7 +257,7 @@ bool SquareObject::CreateRGBA(int gx,int gy,tpGetNetValueRGBA* FN,int x0,int y0,
 	ofs=0;
 	int ofs2=0;
 
-	for(int iy=0;iy<NY;iy++){
+	for(iy=0;iy<NY;iy++){
 		for(int ix=0;ix<NX;ix++){
 			DWORD V1=TempBuf[ofs];
 			DWORD V2=TempBuf[ofs+1];
@@ -300,7 +300,7 @@ bool SquareObject::CreateRGBA(int gx,int gy,tpGetNetValueRGBA* FN,int x0,int y0,
 		HaveToDo=0;
 		ofs=0;
 		ofs2=0;
-		for(int iy=0;iy<NY;iy++){
+		for(iy=0;iy<NY;iy++){
 			for(int ix=0;ix<NX;ix++){
 				if(!SqMarker[ofs2]){
 					HaveToDo=1;
@@ -557,9 +557,9 @@ void CreateWPalette(){
 		};
 	};
 	for(int i=0;i<512-128;i++)WPALETTE[i]=WPALETTE[512-128];
-	for(int i=512+128;i<1024;i++)WPALETTE[i]=WPALETTE[512+128-1];
+	for(i=512+128;i<1024;i++)WPALETTE[i]=WPALETTE[512+128-1];
 	WPDone=1;
-	for(int i=0;i<256;i++){
+	for(i=0;i<256;i++){
 		int j=122+(i-122)*20;
 		if(j<0)j=0;
 		if(j>255)j=255;
@@ -678,7 +678,7 @@ void RenormWater(){
 	int E0=9000;
 	if(E<E0)E=E0-100;
 	if(E>E0)E=E0+100;
-	for(int i=0;i<sz;i++){
+	for(i=0;i<sz;i++){
 		Wave0[i]=W0+int(short(Wave0[i]-W0))*E0/E;
 		Wave1[i]=W01+int(short(Wave1[i]-W01))*E0/E;
 		Wave2[i]=W02+int(short(Wave2[i]-W02))*E0/E;
@@ -907,7 +907,7 @@ void ReflectionImage::CreateImage(int mx,int my){
 		}
 	}
 
-	for(int y=0;y<SkySize;y++){
+	for(y=0;y<SkySize;y++){
 		for(int x=0;x<SkySize;x++){
 			int v0=x+y*(SkySize+1);
             IDX[0]=v0;
@@ -1144,7 +1144,7 @@ GW4_2:
 			pop		edi
 			pop		esi
 		}
-		for(int i=0;i<128;i++){
+		for(i=0;i<128;i++){
 			memcpy(Tbits+128*512+i*512,Tbits+i*512,512);
 		}
 		IRS->UnlockTexBits(WaterTexSysPS);

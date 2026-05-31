@@ -4925,8 +4925,8 @@ void			lvCBattleShema_ST::vUpdateGroups(){
 	int oldN = BattlePlan.GetAmount();
 
 	lvCSquardShema* pBS = NULL;
-	int i;
-	for (i=0; i<newN; i++){
+	
+	for (int i=0; i<newN; i++){
 		pBS = vGetSqShemaCH(AGroups[i]->Name.pchar());
 		if (pBS!=NULL) {
 			pBS->SquardID = i;
@@ -6020,7 +6020,7 @@ void	RegisterBattleEditorSaver(){
 };
 
 inline	void	REG_BE_DataStorageXML_class(){
-	static bool mastREG = true;
+	static mastREG = true;
 	if (mastREG||true) {
 		mastREG = false;
 		
