@@ -1,0 +1,30 @@
+<TestClass2>
+ <V2>SASHA</V2>
+ <V12>123</V12>
+ <CL2>ABC</CL2>
+ <ClassArray.TestClass>
+  <TestClass>
+   <V1>0</V1>
+   <CL>0</CL>
+   <LinearArray.int._accamulator>
+    <e0>12345</e0>
+   </LinearArray.int._accamulator>
+  </TestClass>
+  <TestClass3>
+   <V1>0</V1>
+   <CL>0</CL>
+   <VVV>0</VVV>
+  </TestClass3>
+ </ClassArray.TestClass>
+ <LinearArray.int._accamulator>
+  <e0>DREW</e0>
+  <e1>SASA</e1>
+  <e2>GSC</e2>
+  <e3>GEC</e3>
+ </LinearArray.int._accamulator>
+ <TestClass>
+  <V1>1245104</V1>
+  <CL>707CD4</CL>
+  <LinearArray.int._accamulator></LinearArray.int._accamulator>
+ </TestClass>
+</TestClass2>
