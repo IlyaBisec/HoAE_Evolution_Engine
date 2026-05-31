@@ -1,0 +1,176 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: VUI, Configuration: Release|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\cossacks2_project\Cossacks II\Vui\Release\RSP000014.rsp" with contents
+[
+/O2 /I "..\3dLIB\gMotor" /I "InetRaiting" /I "../ClassEngine" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_USE3D" /D "DIALOGS_DIP_USER" /D "_WINDLL" /D "_MBCS" /FD /EHsc /MT /GS /Yu"stdafx.h" /Fp"Release/VUI.pch" /Fo"Release/" /Fd"Release/vc70.pdb" /W3 /c /Wp64 /TP
+".\Plugin.cpp"
+".\Actions.cpp"
+".\Abilities.cpp"
+]
+Creating command line "cl.exe @"d:\cossacks2_project\Cossacks II\Vui\Release\RSP000014.rsp" /nologo"
+Creating temporary file "d:\cossacks2_project\Cossacks II\Vui\Release\RSP000015.rsp" with contents
+[
+/O2 /I "..\3dLIB\gMotor" /I "InetRaiting" /I "../ClassEngine" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_USE3D" /D "DIALOGS_DIP_USER" /D "_WINDLL" /D "_MBCS" /FD /EHsc /MT /GS /Yc"stdafx.h" /Fp"Release/VUI.pch" /Fo"Release/" /Fd"Release/vc70.pdb" /W3 /c /Wp64 /TP
+".\stdafx.cpp"
+]
+Creating command line "cl.exe @"d:\cossacks2_project\Cossacks II\Vui\Release\RSP000015.rsp" /nologo"
+Creating temporary file "d:\cossacks2_project\Cossacks II\Vui\Release\RSP000016.rsp" with contents
+[
+/OUT:"Release/VUI.dll" /INCREMENTAL:NO /NOLOGO /DLL /DEBUG /PDB:"Release/VUI.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /IMPLIB:"Release/VUI.lib" /MACHINE:X86 ..\lib\engine.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "\cossacks2_project\Cossacks II\lib\engine.lib"
+".\release\Abilities.obj"
+".\release\Actions.obj"
+".\release\Plugin.obj"
+".\release\stdafx.obj"
+]
+Creating command line "link.exe @"d:\cossacks2_project\Cossacks II\Vui\Release\RSP000016.rsp""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+stdafx.cpp
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Fastdraw.h(69) : warning C4311: 'type cast' : pointer truncation from 'RLCTable' to 'int'
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\GP_Draw.h(251) : warning C4161: #pragma pack(pop...) : more pops than pushes
+../ClassEngine\pool.h(10) : warning C4251: 'std_OnePoolType::Pool' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'std_OnePoolType'
+        with
+        [
+            Elem=BYTE *
+        ]
+../ClassEngine\pool.h(11) : warning C4251: 'std_OnePoolType::FreeList' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'std_OnePoolType'
+        with
+        [
+            Elem=BYTE *
+        ]
+../ClassEngine\pool.h(71) : warning C4522: 'set_of_int' : multiple assignment operators specified
+../ClassEngine\DString.h(150) : warning C4522: 'DString' : multiple assignment operators specified
+../ClassEngine\xmlQuote.h(66) : warning C4251: 'xmlQuote::SubQuotes' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'xmlQuote'
+        with
+        [
+            Elem=xmlQuote *
+        ]
+../ClassEngine\xmlQuote.h(69) : warning C4251: 'xmlQuote::m_attribute' : class 'DynArray<Elem>' needs to have dll-interface to be used by clients of class 'xmlQuote'
+        with
+        [
+            Elem=CAttribute *
+        ]
+../ClassEngine\ClassEngine.h(663) : warning C4522: 'BaseClass' : multiple assignment operators specified
+../ClassEngine\ClassEngine.h(750) : warning C4521: '_str' : multiple copy constructors specified
+../ClassEngine\ClassEngine.h(750) : warning C4522: '_str' : multiple assignment operators specified
+../ClassEngine\ClassEngine.h(737) : warning C4541: 'dynamic_cast' used on polymorphic type 'BaseClass' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\TypeExchange.h(40) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\TypeExchange.h(40) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\TypeExchange.h(53) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\TypeExchange.h(53) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\vui_Action.h(55) : warning C4193: #pragma warning(pop) : no matching '#pragma warning(push)'
+d:\cossacks2_project\Cossacks II\COSSACKS2\vui_Action.h(90) : warning C4541: 'dynamic_cast' used on polymorphic type 'vui_Action' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(238) : warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+        ../ClassEngine\ClassEngine.h(796) : see declaration of 'ReferableBaseClassWithSource'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(238) : see declaration of 'ParentFrame'
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(663) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(663) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1234) : warning C4273: 'DrawFilledRect3' : inconsistent dll linkage
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1944) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1944) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1966) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1966) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1988) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1988) : see declaration of 'TabDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2003) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2003) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2011) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2011) : see declaration of 'ListDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2133) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2133) : see declaration of 'ClassDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2216) : warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(1438) : see declaration of 'DialogsDesk'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2216) : see declaration of 'ChatDesk'
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2561) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\..\COSSACKS2\Dialogs.h(2561) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\NewAnimation.h(135) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\NewAnimation.h(135) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\GameExtension.h(16) : warning C4800: 'DWORD' : forcing value to bool 'true' or 'false' (performance warning)
+d:\cossacks2_project\Cossacks II\COSSACKS2\GameInterface.h(1053) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\GameInterface.h(1053) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\GameInterface.h(1097) : warning C4275: non dll-interface class 'BaseFunction' used as base for dll-interface class 'AnswerFn'
+        ../ClassEngine\ClassEngine.h(2130) : see declaration of 'BaseFunction'
+        d:\cossacks2_project\Cossacks II\COSSACKS2\GameInterface.h(1097) : see declaration of 'AnswerFn'
+d:\cossacks2_project\Cossacks II\COSSACKS2\SquareObject.h(1) : warning C4273: 'IRS' : inconsistent dll linkage
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(350) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(350) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(758) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(758) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(816) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(816) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(1624) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(1624) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(1725) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(1725) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(2073) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(2073) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(2074) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(2074) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(131) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(131) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(920) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(920) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1448) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1448) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1520) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1520) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1551) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1551) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\HeroAbility.h(31) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\HeroAbility.h(31) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\HeroAbility.h(259) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\HeroAbility.h(259) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\BrigadeAbility.h(25) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\BrigadeAbility.h(25) : warning C4541: 'typeid' used on polymorphic type '_str' with /GR-; unpredictable behavior may result
+d:\cossacks2_project\Cossacks II\COSSACKS2\bitset.h(16) : warning C4800: 'DWORD' : forcing value to bool 'true' or 'false' (performance warning)
+        d:\cossacks2_project\Cossacks II\COSSACKS2\bitset.h(15) : while compiling class-template member function 'bool bitset<nDwords>::check_bit(int)'
+        with
+        [
+            nDwords=2
+        ]
+        d:\cossacks2_project\Cossacks II\COSSACKS2\UnitAbility.h(853) : see reference to class template instantiation 'bitset<nDwords>' being compiled
+        with
+        [
+            nDwords=2
+        ]
+../ClassEngine\ClassEngine.h(2141) : warning C4541: 'dynamic_cast' used on polymorphic type 'BaseClass' with /GR-; unpredictable behavior may result
+        d:\cossacks2_project\Cossacks II\COSSACKS2\WeaponSystem.h(1151) : see reference to function template instantiation 'Fn *BaseFunction::get_parent<UserDefinedPoints>(void)' being compiled
+        with
+        [
+            Fn=UserDefinedPoints
+        ]
+Compiling...
+Plugin.cpp
+../ClassEngine\ClassEngine.h(2141) : warning C4541: 'dynamic_cast' used on polymorphic type 'BaseClass' with /GR-; unpredictable behavior may result
+        Plugin.cpp(79) : see reference to function template instantiation 'Fn *BaseFunction::get_parent<ObjectInterface>(void)' being compiled
+        with
+        [
+            Fn=ObjectInterface
+        ]
+Actions.cpp
+Abilities.cpp
+Abilities.cpp(57) : warning C4101: 'tz' : unreferenced local variable
+Generating Code...
+Linking...
+   Creating library Release/VUI.lib and object Release/VUI.exp
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\cossacks2_project\Cossacks II\Vui\Release\BuildLog.htm"
+VUI - 0 error(s), 75 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>

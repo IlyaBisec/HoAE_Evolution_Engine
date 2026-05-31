@@ -1,0 +1,42 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+<pre>
+<table width=100% bgcolor=#CFCFE5><tr> <td> <font face=arial size=+3>
+Build Log
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+<h3>------- Build started: Project: VUI, Configuration: Debug|Win32 -------
+</h3>
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Command Lines
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Creating temporary file "d:\Aaaaaaaaaaaaaaaaaaa yourself\Code\SourceCode(src)\Vui\Debug\RSP00000B.rsp" with contents
+[
+/Od /I "..\3dLIB\gMotor" /I "InetRaiting" /I "..\ClassEngine" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_USE3D" /D "DIALOGS_DIP_USER" /D "_WINDLL" /D "_MBCS" /Gm /EHsc /MTd /GR /Yu"stdafx.h" /Fp"Debug/VUI.pch" /Fo"Debug/" /Fd"Debug/vc70.pdb" /W1 /c /Wp64 /ZI /TP
+".\Abilities.cpp"
+]
+Creating command line "cl.exe @"d:\Aaaaaaaaaaaaaaaaaaa yourself\Code\SourceCode(src)\Vui\Debug\RSP00000B.rsp" /nologo"
+Creating temporary file "d:\Aaaaaaaaaaaaaaaaaaa yourself\Code\SourceCode(src)\Vui\Debug\RSP00000C.rsp" with contents
+[
+/OUT:"..\..\data\Plugins\/VUI.dll" /INCREMENTAL /NOLOGO /DLL /DEBUG /PDB:"..\..\data\Plugins\/VUI.pdb" /SUBSYSTEM:WINDOWS /IMPLIB:"..\..\data\Plugins\/VUI.lib" /MACHINE:X86 ..\lib\engine.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "\Aaaaaaaaaaaaaaaaaaa yourself\Code\SourceCode(src)\lib\engine.lib"
+".\Debug\Abilities.obj"
+".\Debug\Actions.obj"
+".\Debug\Plugin.obj"
+".\Debug\stdafx.obj"
+]
+Creating command line "link.exe @"d:\Aaaaaaaaaaaaaaaaaaa yourself\Code\SourceCode(src)\Vui\Debug\RSP00000C.rsp""
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Output Window
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>Compiling...
+Abilities.cpp
+Linking...
+   Creating library ..\..\data\Plugins\/VUI.lib and object ..\..\data\Plugins\/VUI.exp
+Abilities.obj : error LNK2019: unresolved external symbol "class HeroVariableStorage * __cdecl DetectHero(class OneObject *)" (?DetectHero@@YAPAVHeroVariableStorage@@PAVOneObject@@@Z) referenced in function "public: virtual bool __thiscall aa_SingleUnitAI::Process(void)" (?Process@aa_SingleUnitAI@@UAE_NXZ)
+..\..\data\Plugins\/VUI.dll : fatal error LNK1120: 1 unresolved externals
+</pre></table><table width=100% bgcolor=#DFDFE5><tr><td><font face=arial size=+2>
+Results
+</font></table><table width=* cellspacing=0 cellpadding=0><tr><td width=0 bgcolor=#EDEDF5>&nbsp;</td><td width=0 bgcolor=#FFFFFF>&nbsp;</td><td width=*><pre>
+Build log was saved at "file://d:\Aaaaaaaaaaaaaaaaaaa yourself\Code\SourceCode(src)\Vui\Debug\BuildLog.htm"
+VUI - 2 error(s), 0 warning(s)</pre></table><table   width=100% height=20 bgcolor=#CFCFE5><tr><td><font face=arial size=+2>
+</font></table></body></html>
