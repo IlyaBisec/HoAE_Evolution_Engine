@@ -1,0 +1,24 @@
+**********************************************************************************
+*    Logger session start: Mon Nov 14 10:21:30
+**********************************************************************************
+
+10:21:31 | Warning  | Could not load texture <white.bmp>
+10:21:33 | Error    | Unable to open IconList.txt
+10:21:33 | Warning  | Quote name: >
+ <Main>dialogs\v\M_Main.DialogsSystem.xml</Main>
+ <Single>dialogs\v\M_Single.DialogsSystem.xml</Single>
+ <Options>dialogs\v\M_Options.DialogsSystem.xml</Options>
+</>
+
+10:21:33 | Warning  | Quote name: >dialogs\v\M_Main.DialogsSystem.xml</Main>
+ <Single>dialogs\v\M_Single.DialogsSystem.xml</Single>
+ <Options>dialogs\v\M_Options.DialogsSystem.xml</Options>
+</>
+
+10:21:33 | Warning  | Quote name: >dialogs\v\M_Single.DialogsSystem.xml</Single>
+ <Options>dialogs\v\M_Options.DialogsSystem.xml</Options>
+</>
+
+10:21:33 | Warning  | Quote name: >dialogs\v\M_Options.DialogsSystem.xml</Options>
+</>
+

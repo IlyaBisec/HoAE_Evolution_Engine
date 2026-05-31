@@ -1,0 +1,14 @@
+void ACTION_AfterLoadingMapInEditor();
+void ACTION_AfterLoadingMapInGame();
+void ACTION_NewMapInEditor();
+void ACTION_AfterLoadingSaveFile();
+void ACTION_UnLoadingAllGame();
+void ACTION_UnLoadingMap();
+void ACTION_WhenGameStarts();
+void ACTION_WhenGameEnds();
+void ACTION_ProcessingGame();
+void ACTION_HandlingControls();
+bool ACTION_OnUnitDie(OneObject* OB);
+bool ACTION_OnUnitDamage(OneObject* Sender,OneObject* Take,int& Damage);
+void ACTION_OnUnitBirth(OneObject* OB);
+void ACTION_ProcessingDrawing(int stage);

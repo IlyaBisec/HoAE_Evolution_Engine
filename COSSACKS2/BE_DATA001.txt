@@ -1,0 +1,416 @@
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetValue						F_GLOBAL_VALUE				   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetValue::Value				{C ffFF0000}Variable
+@HINT::lvCGetValue::Value			Select {C ff0000FF}variable {C ff000000}from variable list for get it {C ff0000FF}value
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCBool							F_GLOBAL_VALUE				   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCBool::lvB					{C ffFF0000}Constant
+@HINT::lvCBool::lvB					Set value for constatnt: {C ff0000FF}true {C ff000000}or {C ff0000FF}false
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCInt							F_GLOBAL_VALUE				   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCInt::lvI					{C ffFF0000}Constant
+@HINT::lvCInt::lvI					Set value for constatnt: must be {C ff0000FF}integer {C ff000000}type
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetAmount						F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --	
+@ID::lvCGetAmount::parNat			{C ffFF0000}Nation
+@HINT::lvCGetAmount::parNat			Select nation {C ff0000FF}0..7
+@ID::lvCGetAmount::Buildings		{C ffFF0000}Include Buildings
+@HINT::lvCGetAmount::Buildings		Calculate amount of units include buildings
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetUnitsAmount0				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetUnitsAmount0::parNat		{C ffFF0000}Nation
+@HINT::lvCGetUnitsAmount0::parNat	Select nation {C ff0000FF}0..7
+@ID::lvCGetUnitsAmount0::parNode	{C ffFF0000}Node{C FFD4C19C} name
+@HINT::lvCGetUnitsAmount0::parNode	Select {C ff0000FF}Node{C ff000000} from node list.., located on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetUnitsAmount1				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetUnitsAmount1::parNode	{C ffFF0000}Node{C FFD4C19C} name
+@HINT::lvCGetUnitsAmount1::parNode	Select {C ff0000FF}Node{C ff000000} from node list.., located on map
+@ID::lvCGetUnitsAmount1::parGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetUnitsAmount1::parGrp	Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetUnitsAmount2				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetUnitsAmount2::parNat		{C ffFF0000}Nation
+@HINT::lvCGetUnitsAmount2::parNat	Select nation {C ff0000FF}0..7
+@ID::lvCGetUnitsAmount2::parNode	{C ffFF0000}Node{C FFD4C19C} name
+@HINT::lvCGetUnitsAmount2::parNode	Select {C ff0000FF}Node{C ff000000} from node list.., located on map
+@ID::lvCGetUnitsAmount2::UnitType	{C ffFF0000}Unit Type
+@HINT::lvCGetUnitsAmount2::UnitType	Select {C ff0000FF}unit type {C ff000000}from units type list.., present in game
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetUnitsAmount3				F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetUnitsAmount3::parNat		{C ffFF0000}Nation
+@HINT::lvCGetUnitsAmount3::parNat	Select nation {C ff0000FF}0..7
+@ID::lvCGetUnitsAmount3::vGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetUnitsAmount3::vGrp		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+@ID::lvCGetUnitsAmount3::parRad		{C ffFF0000}Radius
+@HINT::lvCGetUnitsAmount3::parRad	Set radius around group for calculate amount of units use given Nation parameter
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetTotalAmount0				F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetTotalAmount0::parGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetTotalAmount0::parGrp	Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetTotalAmount1				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetTotalAmount1::parNat			{C ffFF0000}Nation
+@HINT::lvCGetTotalAmount1::parNat		Select nation {C ff0000FF}0..7
+@ID::lvCGetTotalAmount1::UnitType		{C ffFF0000}Unit Type
+@HINT::lvCGetTotalAmount1::UnitType		Select {C ff0000FF}unit type {C ff000000}from units type list.., present in game
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetTotalAmount2				F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetTotalAmount2::parGrp			{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetTotalAmount2::parGrp		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+@ID::lvCGetTotalAmount2::UnitType		{C ffFF0000}Unit Type
+@HINT::lvCGetTotalAmount2::UnitType		Select {C ff0000FF}unit type {C ff000000}from units type list.., present in game
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetReadyAmount				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetReadyAmount::parNat		{C ffFF0000}Nation
+@HINT::lvCGetReadyAmount::parNat	Select nation {C ff0000FF}0..7
+@ID::lvCGetReadyAmount::UnitType	{C ffFF0000}Unit Type
+@HINT::lvCGetReadyAmount::UnitType	Select {C ff0000FF}unit type {C ff000000}from units type list.., present in game
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetResource					F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetResource::parNat			{C ffFF0000}Nation
+@HINT::lvCGetResource::parNat		Select nation {C ff0000FF}0..7
+@ID::lvCGetResource::parID			{C ffFF0000}Resource Type
+@HINT::lvCGetResource::parID		Select resource type from list...
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetDiff						F_SYSTEM					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetDiff::parNI				{C ffFF0000}Nation
+@HINT::lvCGetDiff::parNI			Select nation {C ff0000FF}0..7
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetUnitState					F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetUnitState::parGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetUnitState::parGrp		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCTrigg							F_GLOBAL_VALUE				   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCTrigg::TID					{C ffFF0000}System Triger Index
+@HINT::lvCTrigg::TID				Set system triger index for check it state 
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// FG_Visible						F_GRAPHIC						//
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::FG_Visible::GraphObj			{C ffFF0000}Graph Object
+@HINT::FG_Visible::GraphObj			Select graph object from list.., present in current map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// FG_InVisible						F_GRAPHIC					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::FG_InVisible::GraphObj			{C ffFF0000}Graph Object
+@HINT::FG_InVisible::GraphObj		Select graph object from list.., present in current map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// ogSTOP							F_SOUND						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::ogSTOP::canal					{C ffFF0000}Sound Stream
+@HINT::ogSTOP::canal				Set sound stream for check it state
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCTimerDone						F_SYSTEM					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCTimerDone::TimerID			{C ffFF0000}Timer Index
+@HINT::lvCTimerDone::TimerID		Set {C ff0000FF}timer index {C ff000000}for check it
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCChekPosition					F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCChekPosition::parGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCChekPosition::parGrp		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+@ID::lvCChekPosition::VVpPos		{C ffFF0000}Position Array
+@HINT::lvCChekPosition::VVpPos		Select position array variable from list.., whitch contain checking positions
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCNationIsErased				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCNationIsErased::Nat			{C ffFF0000}Nation
+@HINT::lvCNationIsErased::Nat		Select nation {C ff0000FF}0..7
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCIsBrigade						F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCIsBrigade::vgGrpID			{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCIsBrigade::vgGrpID		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+@ID::lvCIsBrigade::checkKOM			{C ffFF0000}Include The Officers
+@HINT::lvCIsBrigade::checkKOM		If selected then check group with checking it officers staff
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetFormationType				F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetFormationType::vgGrpID		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetFormationType::vgGrpID		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetNofNewUnitInGrp			F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetNofNewUnitInGrp::vGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetNofNewUnitInGrp::vGrp		Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+@ID::lvCGetNofNewUnitInGrp::ClearNew	{C ffFF0000}Clear New
+@HINT::lvCGetNofNewUnitInGrp::ClearNew	If selected then after call of this function all units in group marked as old
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetNofMyVillage				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetNofMyVillage::Owner		{C ffFF0000}Nation
+@HINT::lvCGetNofMyVillage::Owner	Select nation {C ff0000FF}0..7
+@ID::lvCGetNofMyVillage::ResType	{C ffFF0000}Resource Type
+@HINT::lvCGetNofMyVillage::ResType	Select resource type from list...
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCIsTired						F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCIsTired::vGrp				{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCIsTired::vGrp				Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCBrigadesAmount				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCBrigadesAmount::Nat			{C ffFF0000}Nation
+@HINT::lvCBrigadesAmount::Nat		Select nation {C ff0000FF}0..7
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCTestFillingAbility			F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCTestFillingAbility::vGrp	{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCTestFillingAbility::vGrp	Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCInStandGround					F_GROUP						   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCInStandGround::vGrp				{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCInStandGround::vGrp			Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+@ID::lvCInStandGround::AllBrigades		{C ffFF0000}All Squards
+@HINT::lvCInStandGround::AllBrigades	Select for check {C ff0000FF}all squards {C ff000000}in group
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCVillageOwner					F_SPECIAL					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCVillageOwner::VillageName		{C ffFF0000}Village Name
+@HINT::lvCVillageOwner::VillageName		Set village group name for get it owner nation
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetNofBrigInNode				F_NATION					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetNofBrigInNode::Nat			{C ffFF0000}Nation
+@HINT::lvCGetNofBrigInNode::Nat			Select nation {C ff0000FF}0..7
+@ID::lvCGetNofBrigInNode::parNode		{C ffFF0000}Node{C FFD4C19C} name
+@HINT::lvCGetNofBrigInNode::parNode		Select {C ff0000FF}Node{C ff000000} from node list.., located on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetNInside					F_TRANSPORT					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetNInside::vGrpID			{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetNInside::vGrpID		Select {C ff0000FF}Group{C ff000000} from group list which contain transport units, present on map
+@ID::lvCGetNInside::Max				{C ffFF0000}Get MAX Capacity
+@HINT::lvCGetNInside::Max			If selected then return {C ff0000FF}maximum {C ff000000}transports capacity present in group
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCCheckLeaveAbility				F_TRANSPORT					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCCheckLeaveAbility::vGrpID		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCCheckLeaveAbility::vGrpID		Select {C ff0000FF}Group{C ff000000} from group list which contain transport units, present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCLoadingCoplite				F_TRANSPORT					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCLoadingCoplite::vGrpTransport		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCLoadingCoplite::vGrpTransport		Select {C ff0000FF}Group{C ff000000} from group list which contain transport units, present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetCurGrpORDER				F_SPECIAL					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetCurGrpORDER::vGrp	{C ffFF0000}Group{C FFD4C19C} name	
+@HINT::lvCGetCurGrpORDER::vGrp	Select {C ff0000FF}Group{C ff000000} from group list.., present on map	
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////
+// lvCGetNofBRLoadedGun				F_SPECIAL					   //
+/////////////////////////////////////////////////////////////////////
+-- PARAMETRS LIST --
+@ID::lvCGetNofBRLoadedGun::vGrp		{C ffFF0000}Group{C FFD4C19C} name
+@HINT::lvCGetNofBRLoadedGun::vGrp	Select {C ff0000FF}Group{C ff000000} from group list.., present on map
+--------------------
+/////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+

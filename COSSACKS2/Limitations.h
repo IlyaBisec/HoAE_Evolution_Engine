@@ -1,0 +1,2 @@
+//#define PUBLICDEMO
+//#define LIMITOPTIONS

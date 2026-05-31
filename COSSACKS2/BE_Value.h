@@ -1,0 +1,35 @@
+
+#ifndef __BE_VALUE__
+#define __BE_VALUE__
+
+//////////////////////////////////////////////////////////////////////////
+// Base class for all object in game editor
+//////////////////////////////////////////////////////////////////////////
+class beBaseObject : public ReferableBaseClass
+{
+public:
+};
+
+#endif//__BE_VALUE__
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
