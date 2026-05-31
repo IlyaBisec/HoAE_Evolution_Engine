@@ -1,0 +1,33 @@
+/ ************************************************* **************************** /
+/ * File: Export.txt
+/ * Desc: Recommendations for exports from Max and Maya at. C2m format
+/ * Author: Ruslan Shestopalyuk
+/ * Date: 07-16-2003
+/ ************************************************* **************************** /
+
+A. The following elements are ejected from the hierarchy of transformation for export,
+together with all the child nodes:
+In Max:
+- Biped Footsteps
+In Maya:
+- Standard camera top, persp, left, front
+- GroundPlane_transform
+- All IkHandles, IkEffectors
+
+Two. Static objects (which do not change their position in principle - shrubs, trees)
+better zakombaynit one object - it will significantly speed up export animation scene.
+
+Three. Where this is not particularly affect the quality of the animation, do linear animation
+curves.
+
+4. All objects that are not part of the scene - supporting the camera, light sources,
+curves (including hidden), you must kill, lest they hung a dead weight.
+Hidden object is also exported. In spite of its invisibility.
+
+Five. Try to separate the skin all the polygons have the same material (texture).
+
+6. When you bind skin to the bones (Physique in Max, BindSkin in Maya) first attempt to better
+set a limit on the maximum of two dice on top, and only if it is
+look sverhurodlivo - to increase the maximum number of bindings. Maximally
+possible amount of weight on top - 4, but use a number of
+recommended only in compelling cases, such as detailed facial animation.
