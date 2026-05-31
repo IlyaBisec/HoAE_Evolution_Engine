@@ -1,0 +1,26 @@
+////////////////////////////////////////////////////////////////////////////////
+// Plain uniform file format
+////////////////////////////////////////////////////////////////////////////////
+File {
+	DWORD		Magic;				// "GU15"
+	DWORD		fileSize;			// total size of the file
+	WORD		Frames;				// number of sprites in package
+	WORD		Width;				// width of the sprite, in pixels
+	WORD		Height;				// height of the sprite, in pixels
+	DWORD		InfoLen;			// size of additional info
+	BYTE	    Info[InfoLen];		// additional info
+	
+	FrameInfo {
+		WORD		Squares;		//  number of squares in sprite
+		WORD		Reserved;
+		DWORD		Offset;			//  frame offset
+	} FramesInfos[Frames];
+
+	Square {
+		unsigned int chunkSidePow	:4; 	//  chunk side is 2^chunkSidePow
+		unsigned int chunkConfig	:4; 	//  configuration of the polygon
+		int	       xPos				:12;	//  x-position of the chunk in sprite
+		int	       yPos				:12;	//  y-position of the chunk in sprite
+		DWORD			 reserved;				//  reserved for additional bind pointer 
+	} Squares[];
+}

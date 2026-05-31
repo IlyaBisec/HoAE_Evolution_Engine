@@ -1,0 +1,37 @@
+////////////////////////////////////////////////////////////////////////////////
+// Non-uniform file format
+////////////////////////////////////////////////////////////////////////////////
+Header:
+	DWORD		Magic;				// "GN16"
+	DWORD		FileSize;			// total size of the file
+	WORD		Frames;				// number of frames in package
+	DWORD		MaxWorkbuf;			// maximum workbuf size for unpack
+	WORD		Segments;			// number of packing segments
+
+PackSegmentInfo:
+	unsigned int Offset		:28;	//  offset of the segment
+	unsigned int PackMethod	:4;	//  packing method
+	WORD 		Frames;					//  frames in segment
+
+FrameInfo:
+	WORD		Squares;				// number of squares in frame
+	WORD		Width;				// width of the sprite, in pixels
+	WORD		Height;				// height of the sprite, in pixels
+	WORD		SegmentNumber;		// number of the global packed segment of data
+
+PackedSegment:
+	DWORD		ImgSize;								// size of the unpacked segment
+	BYTE		SegmentData[SizeOfSegment];   // packed segment
+
+////////////////////////////////////////////////////////////////////////////////
+// Unpacked data format
+////////////////////////////////////////////////////////////////////////////////
+SpriteChunk:
+	unsigned int chunkSidePow	:4; 	//  chunk side is 2^chunkSidePow
+	unsigned int chunkConfig	:4; 	//  configuration of the polygon
+	int	       xPos				:12;	//  x-position of the chunk in sprite
+	int	       yPos				:12;	//  y-position of the chunk in sprite
+	DWORD			 reserved;				//  reserved for additional bind pointer 
+OffsetsArray:
+	unsigned int FramesOffsets[FramesPerSegment];	// array of offsets
+////////////////////////////////////////////////////////////////////////////////
