@@ -1,0 +1,15 @@
+1) Copy all HOAE data files to folder "data". But EXE and DLL files from data folder should be preserved, othervice half of the game will not work.
+2) Open Vs 2003. Open solution Cossacks II. "FastDebug" Should be chosen as current configuration.
+3) Go to solution explorer. RMB on cossacks2, properties->Debugging
+4) Set absolute path without quotes where data folder is located (with all HOAE data and engine.exe)
+5) Solution explorer->RMB on cossacks2->Build
+6) After buld succeed press F5 - start debugging session. Answer "No" if you will be asked.
+7) HOAE starts... You may pause it using "||" pause icon. You may set breakpoints "F9" anywhere,
+run again "F5", make step "F10", come into function "F11", go outside the 
+current function "SHIFT F11", watch variables in Wtach page or using CTRL+ALT+Q,
+see stack of calls CTRL+ALT+7 and so on.
+
+
+In addition: 
+
+In this build one important bug fixed - if you v.card has much video ram HOAE was not working properly.
