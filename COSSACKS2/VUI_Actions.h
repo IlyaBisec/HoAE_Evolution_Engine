@@ -1,5 +1,5 @@
 #pragma once
-#include <more_types.h>
+#include "..\ClassEngine\more_types.h"
 #include "MapTemplates.h"
 #include "vui_Action.h"
 //
@@ -589,6 +589,9 @@ regA(cva_BR_PlMapLoading,vfS);
 
 regA(cva_BR_MapPict);
 regAx(cva_BR_MapList,va_ListDesk,vfS,vfI);
+regAx(cva_BR_RankedMapList,va_ListDesk,vfS,vfI); //Folders to lobby
+regAx(cva_BR_CommonMapList,va_ListDesk,vfS,vfI);
+regAx(cva_BR_CustomMapList,va_ListDesk,vfS,vfI);
 regAx(cva_BR_RoSList,va_ListDesk,vfS,vfI);
 regAx(cva_BR_SavList,va_ListDesk,vfS,vfI);
 regA(cva_BR_SetSkirBatl,vfL,vfS);
@@ -677,12 +680,7 @@ regAc(cva_GameMiniMap, vfS
 );
 
 //
-//regAc(cva_Peasant_Idle, vfS vfL vfRt);
-regAc(cva_Peasant_Idle,vfS vfL
-	ClassRef<TextButton> IPeaNumber;	// resource name
-	,
-	REG_AUTO(IPeaNumber);
-);
+regAc(cva_Peasant_Idle, vfS vfL vfRt);
 regAc(cva_Peasant_AutoWork, vfS vfL vfRt);
 //
 regAc(cva_HotKeyButton,vfS vfL vfRt);
@@ -750,7 +748,6 @@ regA(cva_M_ModalDeskBack,vfL);
 regA(cva_M_Accept,vfL);	// not close
 regAx(cva_M_ModDesSetRetChang,cva_M_ModalDeskSet,vfL);
 regA(cva_M_AcceptSettings,vfL);
-regA(cva_M_DynScale,vfS);
 regA(cva_M_Coss2_Relax,vfS);
 regA(cva_GameTime,vfS);
 regA(cva_MM_StartInternet,vfL);

@@ -113,7 +113,7 @@ struct HosedObject
     Hose*               m_pOutputs;     //  head of the output hoses linked list
 
     HosedObject() : m_pObject(NULL), m_pInputs(NULL), m_pOutputs(NULL) {}
-    Reset() { m_pObject = NULL; m_pInputs = NULL; m_pOutputs = NULL; }
+    void Reset() { m_pObject = NULL; m_pInputs = NULL; m_pOutputs = NULL; }
 
     Hose* FindHose( const Hose& hose ) const
     {

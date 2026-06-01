@@ -10,12 +10,13 @@
 //#include "afx.h"
 #include <windows.h>
 #include <windowsx.h>
-#include <ddraw.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include "resource.h"
 #include "lines.h"
 #include "protest.h"
+#include <ddraw.h>
+//#include "..\3dlib\ddraw.h"
 #define CEXPORT __declspec(dllexport)
 #define CIMPORT __declspec(dllimport)
 //#define STARFORCE

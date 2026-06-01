@@ -128,12 +128,12 @@ public:
     static const char*    TypeName()    { return "WORD"; }
     static bool            ToString    ( const T& val, char* str, int maxLen )
     { 
-        sprintf( str, "%X", val );
+        sprintf( str, "%hX", val );
         return true; 
     }
     static bool            FromString    ( T& val, const char* str )
     { 
-        return sscanf( str, "%X", &val ) == 1; 
+        return sscanf( str, "%hX", &val ) == 1; 
     }
 
     static bool            NextValue    ( T& val ) { val++; return true; }
@@ -153,12 +153,12 @@ public:
     static const char*    TypeName()    { return "BYTE"; }
     static bool            ToString    ( const T& val, char* str, int maxLen )
     { 
-        sprintf( str, "%X", val );
+        sprintf( str, "%hhX", val );
         return true; 
     }
     static bool            FromString    ( T& val, const char* str )
     { 
-        return sscanf( str, "%X", &val ) == 1; 
+        return sscanf( str, "%hhX", &val ) == 1; 
     }
 
     static bool            NextValue    ( T& val ) { val++; return true; }
@@ -247,13 +247,13 @@ public:
             return true;
         }
         T cval;
-        int nS = sscanf( str, "%f", &cval );
+        int nS = sscanf( str, "%lf", &cval );
         if (nS == 1) 
         {
             val = cval;
             return true;
         }
-        return sscanf( str, "%f", &val ) == 1; 
+        return sscanf( str, "%lf", &val ) == 1; 
     }
 
     static bool            NextValue    ( T& val ) { val += 1.0; return true; }

@@ -1,4 +1,3 @@
-#include "StdAfx.h"
 #include "..\comms\comms.h"
 #include "bitset.h"
 UnlimitedBitset::~UnlimitedBitset(){

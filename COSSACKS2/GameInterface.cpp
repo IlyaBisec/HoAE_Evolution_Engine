@@ -5,9 +5,9 @@
 #include "GameInterface.h"
 #include "Camera\Navigator.h"
 #include "CurrentMapOptions.h"
-#include "TankController.h"
+#include "Surface\TankController.h"
 #include "MassivePlayer.h"
-#include "Surface\Obj3D.h"
+#include "Obj3D.h"
 
 #include "ua_Item.h"
 
@@ -1607,7 +1607,7 @@ void			pGroup::AddUnitsInZone		(int NI, iNode& ZN, bool add){
 	if ( ZN.Valid() )	AddUnitsInZone(NI,ZN.getX(),ZN.getY(),ZN.getR(),add);
 };
 void				pGroup::AddUnitsInZone		(int NI, int x, int y, int r, bool add){
-	wrapSET( AddUnitsInZone(NI,x,y,r,_add) );
+	wrapSET( AddUnitsInZone(NI,x,y,r,&pGroup::_add) );
 };
 void			pGroup::AddUnitsTypeInZone	(int NI, int UT, iNode& ZN, bool add){
 	if ( ZN.Valid() )	AddUnitsTypeInZone(NI,UT,ZN.getX(),ZN.getY(),ZN.getR(),add);
@@ -2330,7 +2330,7 @@ IUnitsIterator& IUnitsIterator::operator += (IUnitsIterator& op){
 	for(int i=0;i<M;i++){
 		RawUnit r=op._getunit(i);
 		OneObject* OB=r.object();
-		if(!(OB)||(OB&&!OB->TempFlag)){
+		if(!OB->TempFlag){
 			na++;
 		}
 	}
@@ -2340,7 +2340,7 @@ IUnitsIterator& IUnitsIterator::operator += (IUnitsIterator& op){
 	for(int i=0;i<M;i++){
 		RawUnit r=op._getunit(i);
 		OneObject* OB=r.object();
-		if(!(OB) || (OB && !OB->TempFlag)){
+		if(!OB->TempFlag){
 			_setunit(sz+na,r);
 			na++;
 		}
@@ -2364,7 +2364,7 @@ IUnitsIterator& IUnitsIterator::operator -= (IUnitsIterator& op){
 	for(int i=0;i<M;i++){
 		RawUnit r=_getunit(i);
 		OneObject* OB=r.object();
-		if (OB && OB->TempFlag){
+		if(OB->TempFlag){
 			_setunit(i,RawUnit(0xFFFF,0xFFFF));
 		}
 	}
@@ -2387,7 +2387,7 @@ IUnitsIterator& IUnitsIterator::operator &= (IUnitsIterator& op){
 	for(int i=0;i<N;i++){
 		RawUnit r=_getunit(i);
 		OneObject* OB=r.object();
-		if (!(OB) || (OB && !OB->TempFlag)) {
+		if(!OB->TempFlag){
 			_setunit(i,RawUnit(0xFFFF,0xFFFF));
 		}
 	}
@@ -2606,7 +2606,7 @@ void IUnitsIterator::OrderToAttackEnemyUnitsInZone(iZone& Zone,bool AttackBuildi
 				pUnit en;
 				pUnit besten;
 				while(L.NextLive(en)){
-					if((!en.IsBuilding()) && U.CheckAttackPossibility(en)&&(en.GetLifeAfterNextShot()>0)){
+					if((!en.IsBuilding()) && U.CheckAttackPossibility(en)){
 						int r=en.DistTo(U);
 						int cW=0;
 						if(r>=range.Min && r<=range.Max){
@@ -2624,7 +2624,7 @@ void IUnitsIterator::OrderToAttackEnemyUnitsInZone(iZone& Zone,bool AttackBuildi
 					U.AttackUnit(en,0,low_prio);
 				}else{
 					while(L.NextLive(en)){
-						if(en.IsBuilding() && U.CheckAttackPossibility(en)&&(en.GetLifeAfterNextShot()>0)){
+						if(en.IsBuilding() && U.CheckAttackPossibility(en)){
 							int r=en.DistTo(U);
 							int cW=0;
 							if(r>=range.Min && r<=range.Max){
@@ -2638,7 +2638,7 @@ void IUnitsIterator::OrderToAttackEnemyUnitsInZone(iZone& Zone,bool AttackBuildi
 							}
 						}				
 					}
-					if(besten.Valid()&&(besten.GetLifeAfterNextShot()>0)){
+					if(besten.Valid()){
 						U.AttackUnit(en,0,low_prio);
 					}
 				}
@@ -3032,7 +3032,7 @@ bool pTimer::Done(){
 	return (TrueTime-StartTime>DoneTime);
 }
 bool pTimer::DoneOnce(){
-	if(Done){		
+	if(&pTimer::Done){
 		if(!Picked){
 			Picked=true;
 			return true;
@@ -3423,7 +3423,7 @@ void GameInterface::SmoothMap(DynArray<short>& Map, int Iteration){
 				};
 			};
 		};
-		for(j=0;j<NZ;j++){
+		for(int j=0;j<NZ;j++){
 			Map[j]+=DM[j];
 		}
 	};
@@ -3685,7 +3685,7 @@ int		GameInterface::dl_getAdditionalDelay(){
 };
 // SOUND
 bool	GameInterface::ogg_Play(char* pFName){
-	const NStream=4;
+	const int NStream=4;
 	for(int i=0;i<NStream;i++){
 		if(ov_StreamFinished(i)){
 			ov_Play(pFName,i);
@@ -4067,7 +4067,8 @@ int GameInterface::GetTZoneApproxRadius(int Layer,int Index){
 	Area* A=HashTable[Layer].TopMap+Index;
 	int x0=A->x;            
 	int y0=A->y;
-	for(int r=0;r<32;r++){
+	int r;
+	for(r=0;r<32;r++){
 		int nt=0;
 		int N=Rarr[r].N;
 		char* xi=Rarr[r].xi;

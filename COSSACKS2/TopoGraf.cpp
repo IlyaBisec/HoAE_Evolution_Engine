@@ -19,7 +19,7 @@ void CreateRadio(){
 			Rarr[i].N=0;
 		};
 	};
-	for(ix=-RRad;ix<=RRad;ix++){
+	for(int ix=-RRad;ix<=RRad;ix++){
 		for(int iy=-RRad;iy<=RRad;iy++){
 			int r=int(sqrt(ix*ix+iy*iy));
 			if(r<RRad){

@@ -125,9 +125,10 @@ void OneMap::LoadMapData(sicExplorer* SXP){
 		fclose(F);		
 	};
 	//loading set of maps
-	for(int i=0;i<=100;i++){
+	int i;
+	for(i=0;i<=100;i++){
 		sprintf(ccc,"Internet\\Cash\\%s_%d.bmp",Title,i);
-		BMPformat BM;
+		BMFH BM;
 		byte* Data;
 		byte PAL[768];
 		if(ReadBMP8PAL(ccc,&BM,&Data,PAL)){
@@ -147,7 +148,7 @@ void OneMap::LoadMapData(sicExplorer* SXP){
 	sprintf(ccc,"Internet\\Cash\\%s.fonts",Title);
 	F=fopen(ccc,"r");
 	if(F){
-		for(int i=0;i<NScales;i++){
+		for(i=0;i<NScales;i++){
 			int z=fscanf(F,"%s",SCALE[i].FONT);
 			if(z){
 				SCALE[i].Font=NULL;
@@ -157,7 +158,7 @@ void OneMap::LoadMapData(sicExplorer* SXP){
 	};
 	//loading base countries distribution
 	sprintf(ccc,"Internet\\Cash\\%s_nations.bmp",Title,i);
-	BMPformat BM;
+	BMFH BM;
 	byte* Data;
 	memset(XSumm,0,sizeof XSumm);
 	memset(YSumm,0,sizeof YSumm);
@@ -371,7 +372,7 @@ void OneMap::ShowMapPart(){
 	RLCFont* FNT=&BlackFont; //new 8.12
 	if(FNT){
 		int H=GetRLCHeight(FNT->RLC,'W');
-		for(i=0;i<255;i++)if(NPoints[i]&&Names[i]){
+		for(int i=0;i<255;i++)if(NPoints[i]&&Names[i]){
 			int L=GetRLCStrWidth(Names[i],FNT);
 			int x=WX+(XSumm[i]*LX/CountryLx)-CurX;
 			int y=WY+(YSumm[i]*LY/CountryLy)-CurY;
@@ -442,7 +443,7 @@ void OneMap::ClearAll(){
 	if(SCALE)free(SCALE);
 	if(MapPix)free(MapPix);
 	if(CountryMap)free(CountryMap);
-	for(i=0;i<255;i++)if(Names[i])free(Names[i]);
+	for(int i=0;i<255;i++)if(Names[i])free(Names[i]);
 	memset(this,0,sizeof *this);
 };
 OneMap::~OneMap(){
@@ -477,7 +478,8 @@ void OneMap::UpdateMapData(byte* Date){
 			UpdateData=CurrentDate;
 			int NPt=*((DWORD*)Date);
 			Date+=4;
-			for(int i=0;i<NPt;i++){
+			int i;
+			for(i=0;i<NPt;i++){
 				int x=*((word*)Date);
 				Date+=2;
 				int y=*((word*)Date);

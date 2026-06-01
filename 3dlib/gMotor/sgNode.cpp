@@ -118,16 +118,16 @@ bool SNode::WriteToFile( const char* fileName )
 void SNode::Expose( PropertyMap& pm )
 {
     pm.start( "SNode", this );
-    pm.p( "Name",            GetName, SetName    );
-    pm.p( "Class",            GetClassName        );
-    pm.p( "ChildrenNum",    GetNChildren        );
+    pm.p( "Name", &SNode::GetName, &SNode::SetName    );
+    pm.p( "Class", &SNode::GetClassName        );
+    pm.p( "ChildrenNum", &SNode::GetNChildren        );
     //pm.p( "TotalChildren",    CountNChildrenTotal    );
     //pm.p( "ID",                GetID                );
     //pm.p( "NumRef",            GetNRef                );
-    pm.p( "Invisible",        IsInvisible, SetInvisible    );
-    pm.p( "Disabled",        IsDisabled,     SetDisabled    );
-    pm.p( "DrawGizmo",        DoDrawGizmo, SetDrawGizmo    );
-    pm.p( "DrawAABB",        DoDrawAABB,  SetDrawAABB    );
+    pm.p( "Invisible", &SNode::IsInvisible, &SNode::SetInvisible    );
+    pm.p( "Disabled", &SNode::IsDisabled, &SNode::SetDisabled    );
+    pm.p( "DrawGizmo", &SNode::DoDrawGizmo, &SNode::SetDrawGizmo    );
+    pm.p( "DrawAABB", &SNode::DoDrawAABB, &SNode::SetDrawAABB    );
 } // SNode::Expose
 
 void SNode::PreSerialize() const

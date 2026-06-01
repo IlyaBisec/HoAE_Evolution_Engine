@@ -1,9 +1,9 @@
 #include <windows.h>
-#include <ddraw.h>
 
 #include "rad.h"
 #include "bink.h"
-
+#include <ddraw.h>
+//#include "..\3dlib\ddraw.h"
 static void Clear_to_black( HWND window )
 {
   PAINTSTRUCT ps;

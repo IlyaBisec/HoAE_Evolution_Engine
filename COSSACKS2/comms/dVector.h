@@ -428,7 +428,7 @@ inline double dVector::DistToLine(const dVector &p0, const dVector &V) const {
 
 
 inline dVector dVector::Abs() const {
-	dVector r(abs(x), abs(y), abs(z));
+	dVector r(fabs(x), fabs(y), fabs(z));
 	r.m_Dim = m_Dim;
 	return r;
 }

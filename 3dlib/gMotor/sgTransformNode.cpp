@@ -70,20 +70,20 @@ void TransformNode::ResetTMStack( const Matrix4D* pTm )
 void TransformNode::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "TransformNode", this );
-    pm.p( "ScaleX", GetScaleX, SetScaleX );
-    pm.p( "ScaleY", GetScaleY, SetScaleY );
-    pm.p( "ScaleZ", GetScaleZ, SetScaleZ );
+    pm.p( "ScaleX", &TransformNode::GetScaleX, &TransformNode::SetScaleX );
+    pm.p( "ScaleY", &TransformNode::GetScaleY, &TransformNode::SetScaleY );
+    pm.p( "ScaleZ", &TransformNode::GetScaleZ, &TransformNode::SetScaleZ );
 
-    pm.p( "PosX", GetPosX, SetPosX );
-    pm.p( "PosY", GetPosY, SetPosY );
-    pm.p( "PosZ", GetPosZ, SetPosZ );
+    pm.p( "PosX", &TransformNode::GetPosX, &TransformNode::SetPosX );
+    pm.p( "PosY", &TransformNode::GetPosY, &TransformNode::SetPosY );
+    pm.p( "PosZ", &TransformNode::GetPosZ, &TransformNode::SetPosZ );
 
-    pm.m( "Reset", Reset );
-    pm.m( "SetToInitial", SetToInitial );
-    pm.m( "SetSubtreeToInitial", SetSubtreeToInitial );
-    pm.m( "FlipAxis", FlipAxis );
+    pm.m( "Reset", &TransformNode::Reset );
+    pm.m( "SetToInitial", &TransformNode::SetToInitial );
+    pm.m( "SetSubtreeToInitial", &TransformNode::SetSubtreeToInitial );
+    pm.m( "FlipAxis", &TransformNode::FlipAxis );
 
-    pm.m( "AttachEffect",AttachEffect );
+    pm.m( "AttachEffect", &TransformNode::AttachEffect );
 } // TransformNode::Expose
 
 void TransformNode::SetDirX( Vector3D v )
@@ -251,13 +251,13 @@ Rct HudNode::GetBounds()
 void HudNode::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "HudNode", this );
-    pm.p( "PosX",        GetPosX,     SetPosX   );
-    pm.p( "PosY",        GetPosY,     SetPosY   );
-    pm.p( "PosZ",        GetPosZ,     SetPosZ   );
+    pm.p( "PosX", &HudNode::GetPosX, &HudNode::SetPosX   );
+    pm.p( "PosY", &HudNode::GetPosY, &HudNode::SetPosY   );
+    pm.p( "PosZ", &HudNode::GetPosZ, &HudNode::SetPosZ   );
 
-    pm.p( "Width",       GetWidth,    SetWidth  );
-    pm.p( "Height",      GetHeight,   SetHeight );
-    pm.p( "Scale",       GetScale,    SetScale  );    
+    pm.p( "Width", &HudNode::GetWidth, &HudNode::SetWidth  );
+    pm.p( "Height", &HudNode::GetHeight, &HudNode::SetHeight );
+    pm.p( "Scale", &HudNode::GetScale, &HudNode::SetScale  );
 } // HudNode::Expose
 
 /*****************************************************************************/

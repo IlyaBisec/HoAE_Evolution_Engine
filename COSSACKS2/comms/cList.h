@@ -442,7 +442,8 @@ template <class T>
 inline int cList<T>::IndexOf(const T &value) const {
 	if(m_pHash) {
 		int key = m_pHash->GenerateKey(value);
-		for(int index = m_pHash->First(key); index != -1; index = m_pHash->Next(index)) {
+		int index;
+		for(index = m_pHash->First(key); index != -1; index = m_pHash->Next(index)) {
 			if(value == m_pList[index]) break;
 		}
 		return index;
@@ -457,7 +458,8 @@ template <class T>
 inline int cList<T>::IndexOfStr(const T &value, const bool NoCase /*= false*/) const {
 	if(m_pHash) {
 		int key = m_pHash->GenerateKey(value, NoCase);
-		for(int index = m_pHash->First(key); index != -1; index = m_pHash->Next(index)) {
+		int index;
+		for(index = m_pHash->First(key); index != -1; index = m_pHash->Next(index)) {
 			bool r = NoCase ? cStr::EqualsNoCase(value, m_pList[index]) : cStr::Equals(value, m_pList[index]);
 			if(r) {
 				break;
@@ -604,7 +606,7 @@ inline void cList<T>::AppendAt(int index, const cList<T> &src) {
 	m_nUsed += nCount;
 
 	cAssert(index + nCount <= m_nUsed);
-	for(i = 0; i < nCount; i++)
+	for(int i = 0; i < nCount; i++)
 		m_pList[index++] = src.m_pList[i];
 }
 
@@ -631,7 +633,7 @@ inline void cList<Type>::AppendAt(int Index, const Type *Src, int Count) {
 	m_nUsed += Count;
 
 	cAssert(Index + Count <= m_nUsed);
-	for(i = 0; i < Count; i++) {
+	for(int i = 0; i < Count; i++) {
 		m_pList[Index++] = Src[i];
 	}
 } // cList<Type>::AppendAt
@@ -767,7 +769,8 @@ void cList<T>::RemoveDups(cList<DWORD> *pRemap) {
 	for(int i = 0; i < Count(); i++) {
 		T n = m_pList[i];
 		int key = pHash->GenerateKey(n);
-		for(int index = pHash->First(key); index != -1; index = pHash->Next(index)) {
+		int index;
+		for(index = pHash->First(key); index != -1; index = pHash->Next(index)) {
 			if(L[index] == n) break;
 		}
 		if(-1 == index) {

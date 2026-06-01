@@ -506,7 +506,7 @@ inline const typename cSplineBezier<Type>::Place cSplineBezier<Type>::CalcCloses
 	Refs.Sort(cSplineBezierClosestPointRef::Cmp);
 //	cAssert(Refs[0].MinDistance2 <= Refs[1].MinDistance2);
 
-	for(i = 0; i < m_Segments.Count(); i++) {
+	for(int i = 0; i < m_Segments.Count(); i++) {
 		if(Refs[i].MinDistance2 >= CurBestDistance2) {
 			break;
 		}

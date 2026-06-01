@@ -163,7 +163,7 @@ bool ProcessSingleCampagin(int n){
 
 	bool VISMASK[64];
 	memset(VISMASK,0,sizeof VISMASK);
-	for(i=0;i<MaxMiss;i++){
+	for(int i=0;i<MaxMiss;i++){
 		//if(SCM->OpenIndex[i]&255){
 		LB->AddItem(MISSLIST.MISS[SCM->Miss[i]].Name,0);
 		LB->CurItem=LB->NItems-1;

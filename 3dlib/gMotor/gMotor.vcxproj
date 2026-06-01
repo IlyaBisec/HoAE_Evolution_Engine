@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{7DE0E239-E541-497A-A43D-402CB677B37A}</ProjectGuid>
+    <SccProjectName>"$/Cossacks II/3dlib/gMotor", GIDAAAAA</SccProjectName>
+    <SccAuxPath />
+    <SccLocalPath>.</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\../../_debug/gMotor\</OutDir>
+    <IntDir>.\../../_debug/gMotor\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>../../lib_release/</OutDir>
+    <IntDir>../../lib_release/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/GR  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\boost;..\luabind;..\luabind\luabind;..\lua\include;..\gTemp;..\gPhysics;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>8Bytes</StructMemberAlignment>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\../../_debug/gMotor/gMotor.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../_debug/gMotor/</AssemblerListingLocation>
+      <ObjectFileName>.\../../_debug/gMotor/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../_debug/gMotor/</ProgramDataBaseFileName>
+      <BrowseInformation>false</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>../../lib/gMotor.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0422</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Oy-  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+      <AdditionalIncludeDirectories>..\boost;..\luabind;..\luabind\luabind;..\lua\include;..\gTemp;..\gPhysics;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_INLINES;_NOSTAT;_MANOWAR_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\../../_release/gMotor/gMotor.pch</PrecompiledHeaderOutputFile>
+      <AssemblerOutput />
+      <AssemblerListingLocation>$(IntDir)asm/</AssemblerListingLocation>
+      <ObjectFileName>.\../../_release/gMotor/</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../_release/gMotor/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RemoveUnreferencedCodeData>false</RemoveUnreferencedCodeData>
+    </ClCompile>
+    <Lib>
+      <OutputFile>../../lib_release/gMotorR.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0422</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="bz2\bzlib.h" />
+    <ClInclude Include="bz2\bzlib_private.h" />
+    <ClInclude Include="FBaseStream.h" />
+    <ClInclude Include="FCompressor.h" />
+    <ClInclude Include="FG16Common.h" />
+    <ClInclude Include="FLZCommon.h" />
+    <ClInclude Include="FPack.h" />
+    <ClInclude Include="FStream.hpp" />
+    <ClInclude Include="gmDefines.h" />
+    <ClInclude Include="gMotorRC.h" />
+    <ClInclude Include="ICamera.h" />
+    <ClInclude Include="IEffectManager.h" />
+    <ClInclude Include="IFont.h" />
+    <ClInclude Include="IFontManager.h" />
+    <ClInclude Include="IHardwareCaps.h" />
+    <ClInclude Include="IImpostorCache.h" />
+    <ClInclude Include="IIndexBuffer.h" />
+    <ClInclude Include="IInput.h" />
+    <ClInclude Include="ILight.h" />
+    <ClInclude Include="ILightManager.h" />
+    <ClInclude Include="IMediaManager.h" />
+    <ClInclude Include="IMesh.h" />
+    <ClInclude Include="IModel.h" />
+    <ClInclude Include="IModelManager.h" />
+    <ClInclude Include="IPictureManager.h" />
+    <ClInclude Include="IReflected.h" />
+    <ClInclude Include="IRenderable.h" />
+    <ClInclude Include="IRenderSystem.h" />
+    <ClInclude Include="IResourceManager.h" />
+    <ClInclude Include="ISceneEditor.h" />
+    <ClInclude Include="IScriptManager.h" />
+    <ClInclude Include="IShader.h" />
+    <ClInclude Include="IShadowManager.h" />
+    <ClInclude Include="ISkinCache.h" />
+    <ClInclude Include="ISkyRenderer.h" />
+    <ClInclude Include="ISoundSystem.h" />
+    <ClInclude Include="ISpriteManager.h" />
+    <ClInclude Include="ITerrain.h" />
+    <ClInclude Include="ITexture.h" />
+    <ClInclude Include="IVertexBuffer.h" />
+    <ClInclude Include="IWater.h" />
+    <ClInclude Include="kArray.hpp" />
+    <ClInclude Include="kAssert.h" />
+    <ClInclude Include="kBlockCache.hpp" />
+    <ClInclude Include="kBmptool.h" />
+    <ClInclude Include="kCache.h" />
+    <ClInclude Include="kColorTraits.h" />
+    <ClInclude Include="kColorValue.h" />
+    <ClInclude Include="kCommand.h" />
+    <ClInclude Include="kContext.h" />
+    <ClInclude Include="kDirIterator.h" />
+    <ClInclude Include="kEnumTraits.h" />
+    <ClInclude Include="kFileMapping.h" />
+    <ClInclude Include="kFilePath.h" />
+    <ClInclude Include="kHash.hpp" />
+    <ClInclude Include="kHistory.h" />
+    <ClInclude Include="kHose.h" />
+    <ClInclude Include="kIO.h" />
+    <ClInclude Include="kIOHelpers.h" />
+    <ClInclude Include="kLog.h" />
+    <ClInclude Include="kMathTypeTraits.h" />
+    <ClInclude Include="kMemorySpy.h" />
+    <ClInclude Include="kNAryIterator.hpp" />
+    <ClInclude Include="kObjectFactory.h" />
+    <ClInclude Include="kPoolAllocator.h" />
+    <ClInclude Include="kPropertyMap.h" />
+    <ClInclude Include="kQuadLayout.h" />
+    <ClInclude Include="kResfile.h" />
+    <ClInclude Include="kResource.h" />
+    <ClInclude Include="kScriptManager.h" />
+    <ClInclude Include="kSignal.h" />
+    <ClInclude Include="kSSEUtils.h" />
+    <ClInclude Include="kStaticArray.hpp" />
+    <ClInclude Include="kStatistics.h" />
+    <ClInclude Include="kString.h" />
+    <ClInclude Include="kStrUtil.h" />
+    <ClInclude Include="kSystemDialogs.h" />
+    <ClInclude Include="kTemplates.hpp" />
+    <ClInclude Include="kThread.h" />
+    <ClInclude Include="kTimer.h" />
+    <ClInclude Include="kTypeTraits.h" />
+    <ClInclude Include="kUtilities.h" />
+    <ClInclude Include="kUuid.h" />
+    <ClInclude Include="kXMLParser.h" />
+    <ClInclude Include="lzo1x.h" />
+    <ClInclude Include="lzoconf.h" />
+    <ClInclude Include="lzodefs.h" />
+    <ClInclude Include="lzo\compr1b.h" />
+    <ClInclude Include="lzo\compr1c.h" />
+    <ClInclude Include="lzo\config1.h" />
+    <ClInclude Include="lzo\config1a.h" />
+    <ClInclude Include="lzo\config1b.h" />
+    <ClInclude Include="lzo\config1c.h" />
+    <ClInclude Include="lzo\config1f.h" />
+    <ClInclude Include="lzo\config1x.h" />
+    <ClInclude Include="lzo\config1y.h" />
+    <ClInclude Include="lzo\config1z.h" />
+    <ClInclude Include="lzo\config2a.h" />
+    <ClInclude Include="lzo\lzo1a_de.h" />
+    <ClInclude Include="lzo\lzo1b_cc.h" />
+    <ClInclude Include="lzo\lzo1b_de.h" />
+    <ClInclude Include="lzo\lzo1c_cc.h" />
+    <ClInclude Include="lzo\lzo\lzo1.h" />
+    <ClInclude Include="lzo\lzo\lzo1a.h" />
+    <ClInclude Include="lzo\lzo\lzo1b.h" />
+    <ClInclude Include="lzo\lzo\lzo1c.h" />
+    <ClInclude Include="lzo\lzo\lzo1f.h" />
+    <ClInclude Include="lzo\lzo\lzo1x.h" />
+    <ClInclude Include="lzo\lzo\lzo1y.h" />
+    <ClInclude Include="lzo\lzo\lzo1z.h" />
+    <ClInclude Include="lzo\lzo\lzo2a.h" />
+    <ClInclude Include="lzo\lzo\lzoconf.h" />
+    <ClInclude Include="lzo\lzo\lzodefs.h" />
+    <ClInclude Include="lzo\lzo\lzoutil.h" />
+    <ClInclude Include="lzo\lzo\lzo_asm.h" />
+    <ClInclude Include="lzo\lzo_conf.h" />
+    <ClInclude Include="lzo\lzo_dict.h" />
+    <ClInclude Include="lzo\lzo_ptr.h" />
+    <ClInclude Include="lzo\miniacc.h" />
+    <ClInclude Include="lzo\stats1a.h" />
+    <ClInclude Include="lzo\stats1b.h" />
+    <ClInclude Include="lzo\stats1c.h" />
+    <ClInclude Include="mAlgo.h" />
+    <ClInclude Include="mAnimCurve.hpp" />
+    <ClInclude Include="mColorCurve.h" />
+    <ClInclude Include="mConstants.h" />
+    <ClInclude Include="mFilter.h" />
+    <ClInclude Include="mFilter.hpp" />
+    <ClInclude Include="mFloatCurve.h" />
+    <ClInclude Include="mGeom3D.h" />
+    <ClInclude Include="mHeightmap.h" />
+    <ClInclude Include="mIntersect.h" />
+    <ClInclude Include="mKDTree.hpp" />
+    <ClInclude Include="mLine.h" />
+    <ClInclude Include="mLodder.h" />
+    <ClInclude Include="mMath2D.h" />
+    <ClInclude Include="mMath3D.h" />
+    <ClInclude Include="mMonteCarlo.h" />
+    <ClInclude Include="mNoise.h" />
+    <ClInclude Include="mOctree.h" />
+    <ClInclude Include="mOctree.hpp" />
+    <ClInclude Include="mPlane.h" />
+    <ClInclude Include="mQuadric.h" />
+    <ClInclude Include="mQuatCurve.h" />
+    <ClInclude Include="mQuaternion.h" />
+    <ClInclude Include="mRandom.h" />
+    <ClInclude Include="mSegmentSet.h" />
+    <ClInclude Include="mShapes.h" />
+    <ClInclude Include="mSkin.h" />
+    <ClInclude Include="mSpatial.h" />
+    <ClInclude Include="mSphere.h" />
+    <ClInclude Include="mSphericalHarmonics.h" />
+    <ClInclude Include="mSplines.h" />
+    <ClInclude Include="mTransform.h" />
+    <ClInclude Include="mTriangle.h" />
+    <ClInclude Include="mUtil.h" />
+    <ClInclude Include="mVector.h" />
+    <ClInclude Include="rsRenderPool.h" />
+    <ClInclude Include="rsRenderSystem.h" />
+    <ClInclude Include="rsSettings.h" />
+    <ClInclude Include="rsVertex.h" />
+    <ClInclude Include="sg.h" />
+    <ClInclude Include="sgAnimation.h" />
+    <ClInclude Include="sgAnimationBlock.h" />
+    <ClInclude Include="sgAttachedEffect.h" />
+    <ClInclude Include="sgConst.h" />
+    <ClInclude Include="sgController.h" />
+    <ClInclude Include="sgCursor.h" />
+    <ClInclude Include="sgDeviceSettings.h" />
+    <ClInclude Include="sgDummy.h" />
+    <ClInclude Include="sgEffect.h" />
+    <ClInclude Include="sgFog.h" />
+    <ClInclude Include="sgG17.h" />
+    <ClInclude Include="sgG18.h" />
+    <ClInclude Include="sgG2D.h" />
+    <ClInclude Include="sgGeometry.h" />
+    <ClInclude Include="sgGizmo.h" />
+    <ClInclude Include="sgGN16.h" />
+    <ClInclude Include="sgGP2.h" />
+    <ClInclude Include="sgGQuad.h" />
+    <ClInclude Include="sgGU15.h" />
+    <ClInclude Include="sgGU16.h" />
+    <ClInclude Include="sgHardwareCaps.h" />
+    <ClInclude Include="sgLensFlare.h" />
+    <ClInclude Include="sgLight.h" />
+    <ClInclude Include="sgModel.h" />
+    <ClInclude Include="sgMorphedGeometry.h" />
+    <ClInclude Include="sgNode.h" />
+    <ClInclude Include="sgNodePool.h" />
+    <ClInclude Include="sgNodeResMgr.hpp" />
+    <ClInclude Include="sgPRSAnimation.h" />
+    <ClInclude Include="sgReflection.h" />
+    <ClInclude Include="sgRoot.h" />
+    <ClInclude Include="sgShader.h" />
+    <ClInclude Include="sgSprite.h" />
+    <ClInclude Include="sgSpriteManager.h" />
+    <ClInclude Include="sgStatistics.h" />
+    <ClInclude Include="sgSurfaceCache.h" />
+    <ClInclude Include="sgTexture.h" />
+    <ClInclude Include="sgTextureMatrix.h" />
+    <ClInclude Include="sgTransform.h" />
+    <ClInclude Include="sgTransformNode.h" />
+    <ClInclude Include="sgUVAnimation.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="uiAlgoDebugger.h" />
+    <ClInclude Include="uiButton.h" />
+    <ClInclude Include="uiCameraTrack.h" />
+    <ClInclude Include="uiCheckBox.h" />
+    <ClInclude Include="uiColorPicker.h" />
+    <ClInclude Include="uiComboBox.h" />
+    <ClInclude Include="uiControl.h" />
+    <ClInclude Include="uiEditBox.h" />
+    <ClInclude Include="uiEffectEditor.h" />
+    <ClInclude Include="uiExtendedEdit.h" />
+    <ClInclude Include="uiFloatEditBox.h" />
+    <ClInclude Include="uiFrameWindow.h" />
+    <ClInclude Include="uiIntEditBox.h" />
+    <ClInclude Include="uiKangaroo.h" />
+    <ClInclude Include="uiLabel.h" />
+    <ClInclude Include="uiListBox.h" />
+    <ClInclude Include="uiMainFrame.h" />
+    <ClInclude Include="uiManipulator.h" />
+    <ClInclude Include="uiMayaController.h" />
+    <ClInclude Include="uiModelEditor.h" />
+    <ClInclude Include="uiModelView.h" />
+    <ClInclude Include="uiNodeTree.h" />
+    <ClInclude Include="uiNoisePanel.h" />
+    <ClInclude Include="uiObjectInspector.h" />
+    <ClInclude Include="uiPalette.h" />
+    <ClInclude Include="uiPhysicsEditor.h" />
+    <ClInclude Include="uiPicture.h" />
+    <ClInclude Include="uiProgress.h" />
+    <ClInclude Include="uiPropEditors.h" />
+    <ClInclude Include="uiRampEdit.h" />
+    <ClInclude Include="uiRatchet.h" />
+    <ClInclude Include="uiRenderFarm.h" />
+    <ClInclude Include="uiResourceBrowser.h" />
+    <ClInclude Include="uiRTSController.h" />
+    <ClInclude Include="uiSceneEditor.h" />
+    <ClInclude Include="uiScrollBox.h" />
+    <ClInclude Include="uiSlider.h" />
+    <ClInclude Include="uiSystemExplorer.h" />
+    <ClInclude Include="uiTrackEdit.h" />
+    <ClInclude Include="uiTransformTools.h" />
+    <ClInclude Include="uiWeightEdit.h" />
+    <ClInclude Include="uiWidget.h" />
+    <ClInclude Include="uiWidgetEditor.h" />
+    <ClInclude Include="uiWindow.h" />
+    <ClInclude Include="vCamera.h" />
+    <ClInclude Include="vField.h" />
+    <ClInclude Include="vFontManager.h" />
+    <ClInclude Include="vMesh.h" />
+    <ClInclude Include="vModelInstance.h" />
+    <ClInclude Include="vShadowManager.h" />
+    <ClInclude Include="vSkin.h" />
+    <ClInclude Include="vStaticTerrain.h" />
+    <ClInclude Include="vTerrainRenderer.h" />
+    <ClInclude Include="vTreesRenderer.h" />
+    <ClInclude Include="vVertexIterator.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kCache.inl" />
+    <None Include="kColorValue.inl" />
+    <None Include="kIO.inl" />
+    <None Include="kIOHelpers.inl" />
+    <None Include="kResource.inl" />
+    <None Include="kString.inl" />
+    <None Include="kStrUtil.inl" />
+    <None Include="kUtilities.inl" />
+    <None Include="lzo\lzo1a_cm.ch" />
+    <None Include="lzo\lzo1a_cr.ch" />
+    <None Include="lzo\lzo1b_c.ch" />
+    <None Include="lzo\lzo1b_cm.ch" />
+    <None Include="lzo\lzo1b_cr.ch" />
+    <None Include="lzo\lzo1b_d.ch" />
+    <None Include="lzo\lzo1b_r.ch" />
+    <None Include="lzo\lzo1b_sm.ch" />
+    <None Include="lzo\lzo1b_tm.ch" />
+    <None Include="lzo\lzo1f_d.ch" />
+    <None Include="lzo\lzo1x_c.ch" />
+    <None Include="lzo\lzo1x_d.ch" />
+    <None Include="lzo\lzo1x_oo.ch" />
+    <None Include="lzo\lzo1_cm.ch" />
+    <None Include="lzo\lzo1_d.ch" />
+    <None Include="lzo\lzo2a_d.ch" />
+    <None Include="lzo\lzo_dll.ch" />
+    <None Include="lzo\lzo_mchw.ch" />
+    <None Include="lzo\lzo_swd.ch" />
+    <None Include="mGeom3D.inl" />
+    <None Include="mHeightmap.inl" />
+    <None Include="mMath2D.inl" />
+    <None Include="mNoise.inl" />
+    <None Include="mOctree.inl" />
+    <None Include="mPlane.inl" />
+    <None Include="mQuaternion.inl" />
+    <None Include="mRandom.inl" />
+    <None Include="mSegmentSet.inl" />
+    <None Include="mSphere.inl" />
+    <None Include="mSplines.inl" />
+    <None Include="mTransform.inl" />
+    <None Include="mTriangle.inl" />
+    <None Include="mUtil.inl" />
+    <None Include="mVector.inl" />
+    <None Include="sgController.inl" />
+    <None Include="sgDummy.inl" />
+    <None Include="sgEffect.inl" />
+    <None Include="sgGeometry.inl" />
+    <None Include="sgGN16.inl" />
+    <None Include="sgGQuad.inl" />
+    <None Include="sgGU15.inl" />
+    <None Include="sgGU16.inl" />
+    <None Include="sgLight.inl" />
+    <None Include="sgNode.inl" />
+    <None Include="sgPRSAnimation.inl" />
+    <None Include="sgShader.inl" />
+    <None Include="sgSprite.inl" />
+    <None Include="sgSpriteManager.inl" />
+    <None Include="sgSurfaceCache.inl" />
+    <None Include="sgTexture.inl" />
+    <None Include="sgTransformNode.inl" />
+    <None Include="vField.inl" />
+    <None Include="vMesh.inl" />
+    <None Include="vTerrainRenderer.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bz2\blocksort.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bz2\bzlib.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bz2\compress.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bz2\crctable.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bz2\decompress.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bz2\huffman.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="bz2\randtable.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FCompressor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FG16RealTime.cpp" />
+    <ClCompile Include="FG18G15.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FGANationMMX.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FLZDecoder.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="FLzoDecompress.cpp" />
+    <ClCompile Include="FUclDecompress.cpp" />
+    <ClCompile Include="kAssert.cpp" />
+    <ClCompile Include="kBmptool.cpp" />
+    <ClCompile Include="kCache.cpp" />
+    <ClCompile Include="kColorValue.cpp" />
+    <ClCompile Include="kContext.cpp" />
+    <ClCompile Include="kDirIterator.cpp" />
+    <ClCompile Include="kFileMapping.cpp" />
+    <ClCompile Include="kFilePath.cpp" />
+    <ClCompile Include="kHistory.cpp" />
+    <ClCompile Include="kIO.cpp" />
+    <ClCompile Include="kIOHelpers.cpp" />
+    <ClCompile Include="kLog.cpp" />
+    <ClCompile Include="kMemorySpy.cpp" />
+    <ClCompile Include="kObjectFactory.cpp" />
+    <ClCompile Include="kPoolAllocator.cpp" />
+    <ClCompile Include="kPropertyMap.cpp" />
+    <ClCompile Include="kResfile.cpp" />
+    <ClCompile Include="kResource.cpp" />
+    <ClCompile Include="kResourceManager.cpp" />
+    <ClCompile Include="kScriptManager.cpp" />
+    <ClCompile Include="kStatistics.cpp" />
+    <ClCompile Include="kString.cpp" />
+    <ClCompile Include="kStrUtil.cpp" />
+    <ClCompile Include="kSystemDialogs.cpp" />
+    <ClCompile Include="kThread.cpp" />
+    <ClCompile Include="kTypeTraits.cpp" />
+    <ClCompile Include="kUtilities.cpp" />
+    <ClCompile Include="kUuid.cpp" />
+    <ClCompile Include="kXMLGrammar.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="kXMLParser.cpp" />
+    <ClCompile Include="lzo\lzo1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1a.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1a_99.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_4.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_5.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_6.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_7.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_8.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_9.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_99.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_cc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_rr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1b_xx.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_4.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_5.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_6.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_7.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_8.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_9.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_99.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_cc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_rr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1c_xx.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1f_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1k.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1l.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_1o.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_d3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1x_o.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_d3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1y_o.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1z_d3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo1_99.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo2a_9x.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo2a_d1.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo2a_d2.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_crc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_init.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_ptr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_str.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="lzo\lzo_util.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="mAlgo.cpp" />
+    <ClCompile Include="mFilter.cpp" />
+    <ClCompile Include="mFloatCurve.cpp" />
+    <ClCompile Include="mGeom3D.cpp" />
+    <ClCompile Include="mHeightmap.cpp" />
+    <ClCompile Include="mIntersect.cpp">
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="mLine.cpp" />
+    <ClCompile Include="mLodder.cpp" />
+    <ClCompile Include="mMath2D.cpp" />
+    <ClCompile Include="mMonteCarlo.cpp" />
+    <ClCompile Include="mNoise.cpp" />
+    <ClCompile Include="mOctree.cpp" />
+    <ClCompile Include="mPlane.cpp" />
+    <ClCompile Include="mQuatCurve.cpp" />
+    <ClCompile Include="mQuaternion.cpp" />
+    <ClCompile Include="mRandom.cpp" />
+    <ClCompile Include="mSegmentSet.cpp" />
+    <ClCompile Include="mShapes.cpp" />
+    <ClCompile Include="mSkin.cpp" />
+    <ClCompile Include="mSkinSSE.cpp" />
+    <ClCompile Include="mSpatial.cpp" />
+    <ClCompile Include="mSphere.cpp" />
+    <ClCompile Include="mSplines.cpp" />
+    <ClCompile Include="mTransform.cpp" />
+    <ClCompile Include="mTriangle.cpp" />
+    <ClCompile Include="mUtil.cpp" />
+    <ClCompile Include="mVector.cpp" />
+    <ClCompile Include="rsRenderPool.cpp" />
+    <ClCompile Include="rsRenderSystem.cpp" />
+    <ClCompile Include="rsSettings.cpp" />
+    <ClCompile Include="rsVertex.cpp" />
+    <ClCompile Include="sgAnimation.cpp" />
+    <ClCompile Include="sgAnimationBlock.cpp" />
+    <ClCompile Include="sgAttachedEffect.cpp" />
+    <ClCompile Include="sgConst.cpp" />
+    <ClCompile Include="sgController.cpp" />
+    <ClCompile Include="sgCursor.cpp" />
+    <ClCompile Include="sgDummy.cpp" />
+    <ClCompile Include="sgEffect.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IntrinsicFunctions>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableFiberSafeOptimizations>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sgFog.cpp" />
+    <ClCompile Include="sgG17.cpp" />
+    <ClCompile Include="sgG18.cpp" />
+    <ClCompile Include="sgG2D.cpp" />
+    <ClCompile Include="sgGeometry.cpp" />
+    <ClCompile Include="sgGizmo.cpp" />
+    <ClCompile Include="sgGN16.cpp" />
+    <ClCompile Include="sgGP2.cpp" />
+    <ClCompile Include="sgGQuad.cpp" />
+    <ClCompile Include="sgGU15.cpp" />
+    <ClCompile Include="sgGU16.cpp" />
+    <ClCompile Include="sgLensFlare.cpp" />
+    <ClCompile Include="sgLight.cpp" />
+    <ClCompile Include="sgModel.cpp" />
+    <ClCompile Include="sgMorphedGeometry.cpp" />
+    <ClCompile Include="sgNode.cpp" />
+    <ClCompile Include="sgNodeMaker.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="sgNodePool.cpp" />
+    <ClCompile Include="sgPRSAnimation.cpp" />
+    <ClCompile Include="sgReflection.cpp" />
+    <ClCompile Include="sgRoot.cpp" />
+    <ClCompile Include="sgShader.cpp" />
+    <ClCompile Include="sgSprite.cpp" />
+    <ClCompile Include="sgSpriteManager.cpp" />
+    <ClCompile Include="sgStatistics.cpp" />
+    <ClCompile Include="sgSurfaceCache.cpp" />
+    <ClCompile Include="sgTexture.cpp" />
+    <ClCompile Include="sgTextureMatrix.cpp" />
+    <ClCompile Include="sgTransform.cpp" />
+    <ClCompile Include="sgTransformNode.cpp" />
+    <ClCompile Include="sgUVAnimation.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="uiAlgoDebugger.cpp" />
+    <ClCompile Include="uiButton.cpp" />
+    <ClCompile Include="uiCameraTrack.cpp" />
+    <ClCompile Include="uiCheckBox.cpp" />
+    <ClCompile Include="uiColorPicker.cpp" />
+    <ClCompile Include="uiComboBox.cpp" />
+    <ClCompile Include="uiControl.cpp" />
+    <ClCompile Include="uiEditBox.cpp" />
+    <ClCompile Include="uiEffectEditor.cpp" />
+    <ClCompile Include="uiExtendedEdit.cpp" />
+    <ClCompile Include="uiFloatEditBox.cpp" />
+    <ClCompile Include="uiFrameWindow.cpp" />
+    <ClCompile Include="uiIntEditBox.cpp" />
+    <ClCompile Include="uiKangaroo.cpp" />
+    <ClCompile Include="uiLabel.cpp" />
+    <ClCompile Include="uiListBox.cpp" />
+    <ClCompile Include="uiMainFrame.cpp" />
+    <ClCompile Include="uiManipulator.cpp" />
+    <ClCompile Include="uiMayaController.cpp" />
+    <ClCompile Include="uiModelEditor.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="uiModelView.cpp" />
+    <ClCompile Include="uiNodeTree.cpp" />
+    <ClCompile Include="uiNoisePanel.cpp" />
+    <ClCompile Include="uiObjectInspector.cpp" />
+    <ClCompile Include="uiPalette.cpp" />
+    <ClCompile Include="uiPhysicsEditor.cpp" />
+    <ClCompile Include="uiPicture.cpp" />
+    <ClCompile Include="uiProgress.cpp" />
+    <ClCompile Include="uiPropEditors.cpp" />
+    <ClCompile Include="uiRampEdit.cpp" />
+    <ClCompile Include="uiRatchet.cpp" />
+    <ClCompile Include="uiRenderFarm.cpp" />
+    <ClCompile Include="uiResourceBrowser.cpp" />
+    <ClCompile Include="uiRTSController.cpp" />
+    <ClCompile Include="uiSceneEditor.cpp" />
+    <ClCompile Include="uiScrollBox.cpp" />
+    <ClCompile Include="uiSlider.cpp" />
+    <ClCompile Include="uiSystemExplorer.cpp" />
+    <ClCompile Include="uiTrackEdit.cpp" />
+    <ClCompile Include="uiTransformTools.cpp" />
+    <ClCompile Include="uiWeightEdit.cpp" />
+    <ClCompile Include="uiWidget.cpp" />
+    <ClCompile Include="uiWidgetEditor.cpp" />
+    <ClCompile Include="uiWindow.cpp" />
+    <ClCompile Include="vBone.cpp" />
+    <ClCompile Include="vCamera.cpp" />
+    <ClCompile Include="vCollider.cpp" />
+    <ClCompile Include="vField.cpp" />
+    <ClCompile Include="vFontManager.cpp" />
+    <ClCompile Include="vImpostorCache.cpp" />
+    <ClCompile Include="vMediaManager.cpp" />
+    <ClCompile Include="vMesh.cpp" />
+    <ClCompile Include="vModelInstance.cpp" />
+    <ClCompile Include="vShadowManager.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableFiberSafeOptimizations>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vSkin.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableFiberSafeOptimizations>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vSkinCache.cpp" />
+    <ClCompile Include="vSkyRenderer.cpp" />
+    <ClCompile Include="vStaticTerrain.cpp" />
+    <ClCompile Include="vTerrainRenderer.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Neither</FavorSizeOrSpeed>
+      <OmitFramePointers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</OmitFramePointers>
+      <EnableFiberSafeOptimizations Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EnableFiberSafeOptimizations>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vTreesRenderer.cpp" />
+    <ClCompile Include="vWater.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="FormatGP2.txt" />
+    <Text Include="FormatGU15.txt" />
+    <Text Include="FormatGU2D.txt" />
+    <Text Include="FormatInfo.txt" />
+    <Text Include="FormatNonUniform.txt" />
+    <Text Include="FormatPalette.txt" />
+    <Text Include="FormatUniform.txt" />
+    <Text Include="gMotor.txt" />
+    <Text Include="PSEffect.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

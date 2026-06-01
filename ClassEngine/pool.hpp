@@ -4,7 +4,7 @@
 //#include <memory.h>
 //#include <assert.h>
 //#include <vector>
-#include <pool.h>
+#include "..\ClassEngine\pool.h"
 //#define NOPOOL
 //#define STRONGCHECK
 #define oneassert(x) if(!(x)){static bool w=true;if(w){assert(x);w=false;}}
@@ -39,7 +39,11 @@ BYTE* std_OnePoolType::Allocate()
 	if(FreeList.GetAmount()==0){
         BYTE* tmp=new BYTE[SegmentSize*QuantSize];
 		Pool.Add(tmp);
-		for(int i=0;i<SegmentSize;i++)FreeList.Add(tmp+i*QuantSize);
+		for (int i = 0; i < SegmentSize; i++) {
+			DWORD* A = (DWORD*)(tmp + i * QuantSize);
+			*A = 'FOOD';
+			FreeList.Add(tmp + i * QuantSize); 
+		}
 	}	
 	BYTE* e=FreeList.pop_back();
 	DWORD* A=(DWORD*)e;	
@@ -55,7 +59,7 @@ void TotalPool::Free() {
 	pool_08.Free();
 	pool_16.Free();
 	pool_32.Free();
-	pool_64.Free();
+	//pool_64.Free();
 	pool_128.Free();
 }
 
@@ -144,7 +148,7 @@ void std_OnePoolType::KillDirtyGarbage(){
 					}
 				}
 			}
-			oneassert(idx>=0 && idx<Pool.GetAmount());
+			oneassert(idx>=0 && idx<(Pool.GetAmount()));
 			int bpos=idx*SegmentSize+(p0-int(Pool[idx]))/QuantSize;
 			oneassert(!(bits[bpos>>3] & (1<<(bpos&7))));
 			oneassert(bpos<noct*8);
@@ -167,8 +171,12 @@ void std_OnePoolType::KillDirtyGarbage(){
 			ndel++;
 		}else{
             BYTE* p0=Pool[i];
-			for(int j=0;j<SegmentSize;j++)if( (bits[pos+(j>>3)] & (1<<(j&7)))!=0 ){
-                FreeList.Add(p0+j*QuantSize);
+			for (int j = 0; j < SegmentSize; j++) {
+				if ((bits[pos + (j >> 3)] & (1 << (j & 7))) != 0) {
+					DWORD* A = (DWORD*)(p0 + j * QuantSize);
+					*A = 'FOOD';
+					FreeList.Add(p0 + j * QuantSize);
+				}
 			}
 		}
 	}
@@ -200,7 +208,7 @@ void TotalPool::Init(){
 		pool_08.SetQuantSize(8);
 		pool_16.SetQuantSize(16);
 		pool_32.SetQuantSize(32);
-		pool_64.SetQuantSize(64);
+		//pool_64.SetQuantSize(64);
 		pool_128.SetQuantSize(128);
 	}
 }
@@ -215,7 +223,7 @@ std_OnePoolType* TotalPool::GetPoolBySize(int size){
 	if(size<=8)return &pool_08;
 	if(size<=16)return &pool_16;
 	if(size<=32)return &pool_32;
-	if(size<=64)return &pool_64;
+	//if(size<=64)return &pool_64;
 	if(size<=128)return &pool_128;
 	return NULL;
 }

@@ -1850,7 +1850,7 @@ bool BrigadeOrder_HumanEscape::Process(Brigade* BR)
 				};
 			};
 	};
-	for(i=0;i<BR->NMemb;i++){
+	for(int i=0;i<BR->NMemb;i++){
 		word MID=BR->Memb[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];

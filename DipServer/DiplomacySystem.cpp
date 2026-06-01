@@ -236,13 +236,13 @@ void DiplomacySystem::ResearchMap(){
 	UTP.Type='UTYP';
 	UTP.Serial=0;
 	memset(StartPopulation,0,sizeof StartPopulation);
-	for(i=0;i<1024;i++){
+	for(int i=0;i<1024;i++){
 		OneUnit OU;
 		if(GetUnitGlobalInfo(i,&OU)){
 			if(OU.NIndex<2048)StartPopulation[OU.NIndex]++;
 		};
 	};
-	for(i=0;i<2048;i++)if(StartPopulation[i]){
+	for(int i=0;i<2048;i++)if(StartPopulation[i]){
 		StartPopulation[i]>>=2;
 		if(!StartPopulation[i])StartPopulation[i]=1;
 	};
@@ -435,7 +435,7 @@ void DiplomacySystem::Process(){
 	memset(CannonSupport,0,sizeof CannonSupport);
 	//
 	addrand(NStorms);
-	for(i=0;i<NStorms;i++){
+	for(int i=0;i<NStorms;i++){
 		
 		addrand(8);
 
@@ -776,7 +776,7 @@ void DiplomacySystem::Process(){
 		}
 	}
 	// processing cannons
-	for(i=0;i<NCannons;i++){
+	for(int i=0;i<NCannons;i++){
 		CannonGroup* Grp=CANNONS+i;
 		GAMEOBJ* Group=&Grp->Group;
 		int top=0xFFFF;
@@ -907,7 +907,7 @@ void DiplomacySystem::Process(){
 		}		
 	}
 	//
-	for(i=0;i<NFirers;i++)if(CleanGroup(&FIRERS[i].Group)){
+	for(int i=0;i<NFirers;i++)if(CleanGroup(&FIRERS[i].Group)){
 		FiringGroup* Grp=FIRERS+i;
 		GAMEOBJ* Group=&Grp->Group;
 		LimitUnitsMotion(Group);
@@ -1076,7 +1076,7 @@ void DiplomacySystem::Process(){
 			}					
 		}		
 	}
-	for(i=0;i<NKillers;i++){
+	for(int i=0;i<NKillers;i++){
 		int T0=GetGlobalTime();
 		OneUnit OU;		
 		KillersGroup* Grp=KILLERS+i;
@@ -1221,7 +1221,7 @@ void DiplomacySystem::Process(){
 		};
 	};
 	// processing tomahawks
-	for(i=0;i<NTomahawks;i++){
+	for(int i=0;i<NTomahawks;i++){
 		int T0=GetGlobalTime();
 		TomahawkGroup* Grp=TOMAHAWKS+i;
 		int NMen = CleanGroup(&Grp->Group);
@@ -1270,7 +1270,7 @@ void DiplomacySystem::Process(){
 
 						
 						int DD[4096];
-						for(j=0;j<GetNZones();j++) DD[j]=Dang[j];
+						for(int j=0;j<GetNZones();j++) DD[j]=Dang[j];
 						SetDangerMap(DD);
 						
 
@@ -1542,7 +1542,7 @@ void DiplomacySystem::Process(){
 			}
 		}
 	}
-	for(i=0;i<6;i++)SetResource(7,i,1000000);
+	for(int i=0;i<6;i++)SetResource(7,i,1000000);
 	ProcessZoology();
 	StopPF(261);
 };
@@ -2022,7 +2022,7 @@ void DiplomacySystem::ProcessZoology(){
 		};
 		ZG=ZOO;
 		int CTIME=GetGlobalTime();
-		for(i=0;i<NZOO;i++){
+		for(int i=0;i<NZOO;i++){
 			if(CheckIfNotBusy(&ZG->Group)){
 				if(!ZG->Empty){
 					if(ZG->Attract){
@@ -2116,7 +2116,7 @@ void DiplomacySystem::ProcessZoology(){
 									//SGP_MakeOneStepTo(7,&ZG->Group,x,y,GetRND(256),0);
 									int N=GetNUnits(&ZG->Group);
 									OneUnit OU;
-									for(p=0;p<N;p++){
+									for(int p=0;p<N;p++){
 										if(GetUnitInfo(&ZG->Group,p,&OU)){
 											OBJ_SendTo(OU.Index,x+GetRND(400)-200,y+GetRND(400)-200,1+128,0);
 										};

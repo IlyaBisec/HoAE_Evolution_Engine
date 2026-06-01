@@ -6,7 +6,7 @@ void sprintAttack(AdvCharacter* ADC,char* cc){
 	int Na=0;
 	for(int i=0;i<4;i++)if(ADC->MaxDamage[i])Na++;
 	int Nn=0;
-	for(i=0;i<4;i++)if(ADC->MaxDamage[i]){
+	for(int i=0;i<4;i++)if(ADC->MaxDamage[i]){
 		Nn++;
 		if(Nn!=Na)sprintf(cc,"%s:%d (радиус действия %d-%d), ",WPK[ADC->WeaponKind[i]],ADC->MaxDamage[i],ADC->AttackRadius1[i],ADC->AttackRadius2[i]);
 		else sprintf(cc,"%s:%d (радиус действия %d-%d)",WPK[ADC->WeaponKind[i]],ADC->MaxDamage[i],ADC->AttackRadius1[i],ADC->AttackRadius2[i]);
@@ -18,7 +18,7 @@ void sprintAttackInComparison(AdvCharacter* ADC,AdvCharacter* MODIF,char* cc){
 	int Na=0;
 	for(int i=0;i<4;i++)if(ADC->MaxDamage[i]!=MODIF->MaxDamage[i])Na++;
 	int Nn=0;
-	for(i=0;i<4;i++)if(ADC->MaxDamage[i]!=MODIF->MaxDamage[i]){
+	for(int i=0;i<4;i++)if(ADC->MaxDamage[i]!=MODIF->MaxDamage[i]){
 		Nn++;
 		if(Nn!=Na)sprintf(cc,"%s:%d, ",WPK[MODIF->WeaponKind[i]],MODIF->MaxDamage[i]);
 		else sprintf(cc,"%s:%d",WPK[MODIF->WeaponKind[i]],MODIF->MaxDamage[i]);
@@ -32,7 +32,7 @@ void sprintShield(AdvCharacter* ADC,char* cc){
 	if(Ns)sprintf(cc,"Общая защита:%d, защита ",ADC->Shield);
 	else sprintf(cc,"Общая защита:%d",ADC->Shield);
 	cc+=strlen(cc);
-	for(i=0;i<7;i++)if(ADC->Protection[i]){
+	for(int i=0;i<7;i++)if(ADC->Protection[i]){
 		Nn++;
 		if(Nn!=Ns)sprintf(cc,"от %s:%d, ",SHK[i],ADC->Protection[i]);
 		else sprintf(cc,"от %s:%d",SHK[i],ADC->Protection[i]);
@@ -51,7 +51,7 @@ void sprintShieldInComp(AdvCharacter* ADC,AdvCharacter* MODIF,char* cc){
 		if(Ns)sprintf(cc,"Защита ");
 	};
 	cc+=strlen(cc);
-	for(i=0;i<7;i++)if(ADC->Protection[i]!=MODIF->Protection[i]){
+	for(int i=0;i<7;i++)if(ADC->Protection[i]!=MODIF->Protection[i]){
 		Nn++;
 		if(Nn!=Ns)sprintf(cc,"от %s:%d, ",SHK[i],MODIF->Protection[i]);
 		else sprintf(cc,"от %s:%d",SHK[i],MODIF->Protection[i]);
@@ -72,14 +72,14 @@ void PrintAttackUpgrades(Nation* NT,int NIndex,AdvCharacter* START,GFILE* f){
 	if(Present){
 		Gprintf(f,"\nУлучшение атаки:\n");
 	}else return;
-	for(i=0;i<NT->NUpgrades;i++){
+	for(int i=0;i<NT->NUpgrades;i++){
 		NewUpgrade* NU=NT->UPGRADE[i];
 		if(NU->CtgUpgrade==12&&NU->UnitGroup==NULL&&NU->UnitType==0&&NU->UnitValue==NIndex&&NU->CtgGroup==NULL){//Upgrade on attack
 			Gprintf(f,"%s +%d, Цена:",WPK[NU->CtgValue],NU->Value);
 			int Nr=0;
 			for(int j=0;j<8;j++)if(NU->Cost[j])Nr++;
 			int Nn=0;
-			for(j=0;j<8;j++)if(NU->Cost[j]){
+			for(int j=0;j<8;j++)if(NU->Cost[j]){
 				Nn++;
 				if(Nn<Nr)Gprintf(f," %s:%d, ",RDS[j].Name,NU->Cost[j]);
 				else Gprintf(f," %s:%d\n",RDS[j].Name,NU->Cost[j]);
@@ -105,14 +105,14 @@ void PrintShieldUpgrades(Nation* NT,int NIndex,AdvCharacter* START,GFILE* f){
 	if(Present){
 		Gprintf(f,"Улучшение защиты oт меча,стелы,пики:\n");
 	}else return;
-	for(i=0;i<NT->NUpgrades;i++){
+	for(int i=0;i<NT->NUpgrades;i++){
 		NewUpgrade* NU=NT->UPGRADE[i];
 		if(NU->CtgUpgrade==2&&NU->UnitGroup==NULL&&NU->UnitType==0&&NU->UnitValue==NIndex){//Upgrade on attack
 			Gprintf(f,"Защита +%d, Цена:",NU->Value);
 			int Nr=0;
 			for(int j=0;j<8;j++)if(NU->Cost[j])Nr++;
 			int Nn=0;
-			for(j=0;j<8;j++)if(NU->Cost[j]){
+			for(int j=0;j<8;j++)if(NU->Cost[j]){
 				Nn++;
 				if(Nn<Nr)Gprintf(f," %s:%d, ",RDS[j].Name,NU->Cost[j]);
 				else Gprintf(f," %s:%d\n",RDS[j].Name,NU->Cost[j]);
@@ -140,7 +140,7 @@ void MakeReportOnUnit(Nation* NT,int NIndex,GFILE* f){
 	int Nr=0;
 	for(int i=0;i<8;i++)if(NM->NeedRes[i])Nr++;
 	int Nn=0;
-	for(i=0;i<8;i++)if(NM->NeedRes[i]){
+	for(int i=0;i<8;i++)if(NM->NeedRes[i]){
 		Nn++;
 		if(Nn<Nr)Gprintf(f," %s:%d, ",RDS[i].Name,NM->NeedRes[i]);
 		else Gprintf(f," %s:%d\n",RDS[i].Name,NM->NeedRes[i]);
@@ -169,7 +169,7 @@ void sprintBriefAttack(AdvCharacter* ADC,char* cc){
 	int Na=0;
 	for(int i=0;i<4;i++)if(ADC->MaxDamage[i])Na++;
 	int Nn=0;
-	for(i=0;i<4;i++)if(ADC->MaxDamage[i]){
+	for(int i=0;i<4;i++)if(ADC->MaxDamage[i]){
 		Nn++;
 		if(Nn!=Na)sprintf(cc,"%s:%d;",WKN[ADC->WeaponKind[i]],ADC->MaxDamage[i]);
 		else sprintf(cc,"%s:%d",WKN[ADC->WeaponKind[i]],ADC->MaxDamage[i]);
@@ -185,7 +185,7 @@ void sprintBriefAttackInComparison(AdvCharacter* ADC,AdvCharacter* MODIF,char* c
 	int Na=0;
 	for(int i=0;i<4;i++)if(ADC->MaxDamage[i]!=MODIF->MaxDamage[i])Na++;
 	int Nn=0;
-	for(i=0;i<4;i++)if(ADC->MaxDamage[i]!=MODIF->MaxDamage[i]){
+	for(int i=0;i<4;i++)if(ADC->MaxDamage[i]!=MODIF->MaxDamage[i]){
 		Nn++;
 		if(Nn!=Na)sprintf(cc,"%s:%d,",WKN[MODIF->WeaponKind[i]],MODIF->MaxDamage[i]);
 		else sprintf(cc,"%s:%d",WKN[MODIF->WeaponKind[i]],MODIF->MaxDamage[i]);
@@ -199,7 +199,7 @@ void sprintBriefShield(AdvCharacter* ADC,char* cc){
 	if(Ns)sprintf(cc,"%d;",ADC->Shield);
 	else sprintf(cc,"%d",ADC->Shield);
 	cc+=strlen(cc);
-	for(i=0;i<7;i++)if(ADC->Protection[i]){
+	for(int i=0;i<7;i++)if(ADC->Protection[i]){
 		Nn++;
 		if(Nn!=Ns)sprintf(cc,"%s:%d;",WKN[i],ADC->Protection[i]);
 		else sprintf(cc,"%s:%d",WKN[i],ADC->Protection[i]);
@@ -225,14 +225,14 @@ void PrintBriefAttackUpgrades(Nation* NT,int NIndex,AdvCharacter* START,GFILE* f
 		};
 	};
 	int NUP=7;
-	for(i=0;i<NT->NUpgrades;i++){
+	for(int i=0;i<NT->NUpgrades;i++){
 		NewUpgrade* NU=NT->UPGRADE[i];
 		if(NU->CtgUpgrade==12&&NU->UnitGroup==NULL&&NU->UnitType==0&&NU->UnitValue==NIndex&&NU->CtgGroup==NULL){//Upgrade on attack
 			Gprintf(f," +%d;",NU->Value);
 			int Nr=0;
 			for(int j=0;j<8;j++)if(NU->Cost[j])Nr++;
 			int Nn=0;
-			for(j=0;j<8;j++)if(NU->Cost[j]){
+			for(int j=0;j<8;j++)if(NU->Cost[j]){
 				Nn++;
 				if(Nn<Nr)Gprintf(f,"%s:%d,",RSN[j],NU->Cost[j]);
 				else Gprintf(f,"%s:%d",RSN[j],NU->Cost[j]);
@@ -258,14 +258,14 @@ void PrintBriefShieldUpgrades(Nation* NT,int NIndex,AdvCharacter* START,GFILE* f
 		};
 	};
 	int NUP=7;
-	for(i=0;i<NT->NUpgrades;i++){
+	for(int i=0;i<NT->NUpgrades;i++){
 		NewUpgrade* NU=NT->UPGRADE[i];
 		if(NU->CtgUpgrade==2&&NU->UnitGroup==NULL&&NU->UnitType==0&&NU->UnitValue==NIndex){//Upgrade on attack
 			Gprintf(f," +%d;",NU->Value);
 			int Nr=0;
 			for(int j=0;j<8;j++)if(NU->Cost[j])Nr++;
 			int Nn=0;
-			for(j=0;j<8;j++)if(NU->Cost[j]){
+			for(int j=0;j<8;j++)if(NU->Cost[j]){
 				Nn++;
 				if(Nn<Nr)Gprintf(f,"%s:%d,",RSN[j],NU->Cost[j]);
 				else Gprintf(f,"%s:%d",RSN[j],NU->Cost[j]);
@@ -297,7 +297,7 @@ void MakeBriefReport(Nation* NT,int NIndex,GFILE* f){
 	int Nr=0;
 	for(int i=0;i<8;i++)if(NM->NeedRes[i])Nr++;
 	int Nn=0;
-	for(i=0;i<8;i++)if(NM->NeedRes[i]){
+	for(int i=0;i<8;i++)if(NM->NeedRes[i]){
 		Nn++;
 		if(Nn<Nr)Gprintf(f,"%s:%d,",RSN[i],NM->NeedRes[i]);
 		else Gprintf(f,"%s:%d ",RSN[i],NM->NeedRes[i]);

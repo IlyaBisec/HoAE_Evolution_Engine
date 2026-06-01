@@ -16,7 +16,7 @@ void PlaceInAJob::OnGameStart()
 void PlaceInAJob::ProcessingGame()
 {
 	const byte NRes=6;
-	if(GSets.PeasantAutoWork&&(LastProcessTime+30*256)<AnimTime)
+	if(GSets.PeasantAutoWork&&(LastProcessTime+4*25*256)<AnimTime)
 	{
 		for(byte i=0;i<8;i++)
 		{

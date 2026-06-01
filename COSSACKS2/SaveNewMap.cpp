@@ -217,7 +217,8 @@ extern SprGroup WALLS;
 void SaveSprites(ResFile f1){
 	//FILE* F1=fopen("SPR.DAT","w");
 	int ns=0;
-	for(int i=0;i<MaxSprt;i++){
+	int i;
+	for(i=0;i<MaxSprt;i++){
 		if(Sprites[i].Enabled)ns++;
 	};
 	i='1ERT';
@@ -255,7 +256,8 @@ void SaveSprites2(ResFile f1){
 	//FILE* F1=fopen("SPR.DAT","w");
 	int ns=0;
 	int nm=0;
-	for(int i=0;i<MaxSprt;i++){
+	int i;
+	for(i=0;i<MaxSprt;i++){
 		if(Sprites[i].Enabled){
 			ns++;
 			if(Sprites[i].M4)nm++;
@@ -311,7 +313,7 @@ void LoadSprites2(ResFile f1){
 	int x,y;
 	word GSIND,sign,NIND;
 	for(int i=0;i<MaxSprt;i++)Sprites[i].Enabled=false;
-	for(i=0;i<ns;i++){
+	for(int i=0;i<ns;i++){
 		RBlockRead(f1,&sign,2);
 		RBlockRead(f1,&x,4);
 		RBlockRead(f1,&y,4);
@@ -379,7 +381,7 @@ void LoadSprites1(ResFile f1){
 	int x,y;
 	word GSIND,sign,NIND;
 	for(int i=0;i<MaxSprt;i++)Sprites[i].Enabled=false;
-	for(i=0;i<ns;i++){
+	for(int i=0;i<ns;i++){
 		RBlockRead(f1,&sign,2);
 		RBlockRead(f1,&x,4);
 		RBlockRead(f1,&y,4);
@@ -418,7 +420,7 @@ void LoadSprites(ResFile f1){
 	int x,y;
 	word GSIND,sign;
 	for(int i=0;i<MaxSprt;i++)Sprites[i].Enabled=false;
-	for(i=0;i<ns;i++){
+	for(int i=0;i<ns;i++){
 		RBlockRead(f1,&sign,2);
 		RBlockRead(f1,&x,4);
 		RBlockRead(f1,&y,4);
@@ -1416,7 +1418,7 @@ void SaveFormations(ResFile f1){
 				RBlockWrite(f1,&BR->MembID,sizeof BR->MembID);
 				if(BR->NMemb){
 					for(int k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posX[k],2);
-					for(k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posY[k],2);
+					for(int k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posY[k],2);
 					for(int j=0;j<BR->NMemb;j++){
 						word MID=BR->Memb[j];
 						if(MID!=0xFFFF){
@@ -1484,7 +1486,7 @@ void LoadFormations(ResFile f1){
 				BR->posX[k]=0;
 				RBlockRead(f1,&BR->posX[k],2);
 			};
-			for(k=0;k<BR->NMemb;k++){
+			for(int k=0;k<BR->NMemb;k++){
 				BR->posY[k]=0;
 				RBlockRead(f1,&BR->posY[k],2);
 			};
@@ -1528,7 +1530,7 @@ void LoadFormations(ResFile f1){
 		CITY[nat].NBrigs=bid+1;
 	};
 	if(oldvers){
-		for(i=0;i<NB;i++){
+		for(int i=0;i<NB;i++){
 			CITY[tmp1[i]].Brigs[tmp[i]].WarType--;
 		};
 	};
@@ -1581,7 +1583,7 @@ void SaveFormationsNew(ResFile f1){
 				RBlockWrite(f1,&BR->MembID,sizeof BR->MembID);
 				if(BR->NMemb){
 					for(int k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posX[k],2);
-					for( k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posY[k],2);
+					for(int k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posY[k],2);
 					for(int j=0;j<BR->NMemb;j++){
 						word MID=BR->Memb[j];
 						if(MID!=0xFFFF){
@@ -1655,7 +1657,7 @@ void SaveFormationsNewC2(ResFile f1){
 				RBlockWrite(f1,&BR->FlagID,sizeof BR->FlagID);
 				if(BR->NMemb){
 					for(int k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posX[k],2);
-					for( k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posY[k],2);
+					for(int k=0;k<BR->NMemb;k++)RBlockWrite(f1,&BR->posY[k],2);
 					for(int j=0;j<BR->NMemb;j++){
 						word MID=BR->Memb[j];
 						if(MID!=0xFFFF){
@@ -1721,7 +1723,7 @@ void LoadFormationsNew(ResFile f1){
 				BR->posX[k]=0;
 				RBlockRead(f1,&BR->posX[k],2);
 			};
-			for(k=0;k<BR->NMemb;k++){
+			for(int k=0;k<BR->NMemb;k++){
 				BR->posY[k]=0;
 				RBlockRead(f1,&BR->posY[k],2);
 			};
@@ -1820,7 +1822,7 @@ void LoadFormationsNewC2(ResFile f1){
 				BR->posX[k]=0;
 				RBlockRead(f1,&BR->posX[k],2);
 			};
-			for(k=0;k<BR->NMemb;k++){
+			for(int k=0;k<BR->NMemb;k++){
 				BR->posY[k]=0;
 				RBlockRead(f1,&BR->posY[k],2);
 			};
@@ -2236,7 +2238,7 @@ void Save3DMap(char* Map){
 	SaveMod=false;
 	_chdir(IRM->GetHomeDirectory());
 	void SaveMLayersToFileInCompactForm(char* filename);
-	SaveMLayersToFileInCompactForm("Surface\\SurfaceShape.dat");
+	SaveMLayersToFileInCompactForm("\SurfaceShape.dat");
 	MPNAME=Map;
 	//EraseAreas();
 	//ResFile f1=RRewrite(Map);
@@ -2296,7 +2298,7 @@ void Save3DMap(char* Map){
 	//SaveLightHash(f1);
 	//void SaveWaterMaps(ResFile F);
 	//SaveWaterMaps(f1);
-	SaveSomething(f1,"Surface\\SurfaceShape.dat","");
+	SaveSomething(f1,"\SurfaceShape.dat","");
 	void SaveNewTop(ResFile F,int type);
 	void SaveAllXMLSToMap(ResFile f1);
 	SaveAllXMLSToMap(f1);
@@ -2346,7 +2348,7 @@ void ProcessMapAutosave(){
 void FastSave3DMap(char* Map){
 	_chdir(IRM->GetHomeDirectory());
 	void SaveMLayersToFileInCompactForm(char *);
-	SaveMLayersToFileInCompactForm("Surface\\SurfaceShape.dat");
+	SaveMLayersToFileInCompactForm("\SurfaceShape.dat");
 	MPNAME=Map;	
 	ResFile f1=RRewrite(Map);
 	SaveHeader(f1);
@@ -2354,7 +2356,7 @@ void FastSave3DMap(char* Map){
 	bool CheckIfNewTerrain();
 	if(CheckIfNewTerrain()){
 		SaveNewSurface(f1);
-		SaveSomething(f1, "Surface\\SurfaceShape.dat", "");
+		SaveSomething(f1, "\SurfaceShape.dat", "");
 	}else{
 		SaveSurface(f1);
 		SaveTiles(f1);
@@ -3324,6 +3326,6 @@ void CleanPool(){
 	POOL.pool_08.KillDirtyGarbage();
 	POOL.pool_16.KillDirtyGarbage();
 	POOL.pool_32.KillDirtyGarbage();
-	POOL.pool_64.KillDirtyGarbage();
+	//POOL.pool_64.KillDirtyGarbage();
 	POOL.pool_128.KillDirtyGarbage();
 }

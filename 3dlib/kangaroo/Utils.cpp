@@ -1,4 +1,4 @@
-#include "StdAfx.h" #include "common.h" 
+#include "common.h"
 
 int fl_compare( const void *arg1, const void *arg2 ){
 	_str* s1=(_str*)(*(DWORD*)arg1);

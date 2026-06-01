@@ -291,21 +291,21 @@ void PhysicsSystem::Unserialize( InStream& is  )
 void PhysicsSystem::Expose( PropertyMap& pm )
 {
 	pm.start<SNode>( "PhysicsSystem", this );
-	pm.p( "Valid", IsValid );
-	pm.p( "ERP", GetERP, SetERP );
-	pm.p( "CFM", GetCFM, SetCFM );
+	pm.p( "Valid", &PhysicsSystem::IsValid );
+	pm.p( "ERP", &PhysicsSystem::GetERP, &PhysicsSystem::SetERP );
+	pm.p( "CFM", &PhysicsSystem::GetCFM, &PhysicsSystem::SetCFM );
 	pm.f( "StepScale", m_StepScale );
 	pm.f( "MaxTimeStep", m_MaxTimeStep );
-	pm.p( "WorldScale", GetWorldScale, SetWorldScale );
-	pm.p( "GravityX", GetGravityX, SetGravityX );
-	pm.p( "GravityY", GetGravityY, SetGravityY );
-	pm.p( "GravityZ", GetGravityZ, SetGravityZ );
+	pm.p( "WorldScale", &PhysicsSystem::GetWorldScale, &PhysicsSystem::SetWorldScale );
+	pm.p( "GravityX", &PhysicsSystem::GetGravityX, &PhysicsSystem::SetGravityX );
+	pm.p( "GravityY", &PhysicsSystem::GetGravityY, &PhysicsSystem::SetGravityY );
+	pm.p( "GravityZ", &PhysicsSystem::GetGravityZ, &PhysicsSystem::SetGravityZ );
 	pm.f( "FixedStep", m_bFixedStep );
 	pm.f( "FixedStepSize", m_FixedStepSize );
 	pm.f( "StepMode", m_StepMode );
 	pm.f( "MaxStepFastIter", m_MaxStepFastIter );
-	pm.m( "SetEarthGravity", SetEarthGravity );
-	pm.m( "Step", Step );
+	pm.m( "SetEarthGravity", &PhysicsSystem::SetEarthGravity );
+	pm.m( "Step", &PhysicsSystem::Step );
 } // PhysicsSystem::Expose
 
 void PhysicsSystem::SetEarthGravity()
@@ -361,11 +361,11 @@ void PhysicsObject::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "PhysicsObject", this );
    
-	pm.p( "ShowBodies",	IsShowBodies, ShowBodies );
-	pm.p( "ShowJoints",	IsShowJoints, ShowJoints );
-	pm.p( "ShowGeoms",	IsShowGeoms,  ShowGeoms	 );
-    pm.m( "Reset",		Reset		);
-    pm.m( "Init",		Init		);
+	pm.p( "ShowBodies", &PhysicsObject::IsShowBodies, &PhysicsObject::ShowBodies );
+	pm.p( "ShowJoints", &PhysicsObject::IsShowJoints,&PhysicsObject::ShowJoints );
+	pm.p( "ShowGeoms", &PhysicsObject::IsShowGeoms, &PhysicsObject::ShowGeoms	 );
+    pm.m( "Reset", &PhysicsObject::Reset		);
+    pm.m( "Init", &PhysicsObject::Init		);
 } // PhysicsObject::Expose
 
 void PhysicsObject::Init()
@@ -674,16 +674,16 @@ float Body::GetLocalCMZ() const
 void Body::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "Body", this );
-	pm.m( "Rename", Rename );
-	pm.p( "Valid", IsValid );
-	pm.p( "Enabled", IsBodyEnabled, EnableBody );
-	pm.p( "Mass", GetMass, SetMass );
-	pm.p( "DX", GetLocalCMX, SetLocalCMX );
-	pm.p( "DY", GetLocalCMY, SetLocalCMY );
-	pm.p( "DZ", GetLocalCMZ, SetLocalCMZ );
-	pm.p( "RotX", GetLocalCMRotX, SetLocalCMRotX );
-	pm.p( "RotY", GetLocalCMRotY, SetLocalCMRotY );
-	pm.p( "RotZ", GetLocalCMRotZ, SetLocalCMRotZ );
+	pm.m( "Rename", &Body::Rename );
+	pm.p( "Valid", &Body::IsValid );
+	pm.p( "Enabled", &Body::IsBodyEnabled, &Body::EnableBody );
+	pm.p( "Mass", &Body::GetMass, &Body::SetMass );
+	pm.p( "DX", &Body::GetLocalCMX, &Body::SetLocalCMX );
+	pm.p( "DY", &Body::GetLocalCMY, &Body::SetLocalCMY );
+	pm.p( "DZ", &Body::GetLocalCMZ, &Body::SetLocalCMZ );
+	pm.p( "RotX", &Body::GetLocalCMRotX, &Body::SetLocalCMRotX );
+	pm.p( "RotY", &Body::GetLocalCMRotY, &Body::SetLocalCMRotY );
+	pm.p( "RotZ", &Body::GetLocalCMRotZ, &Body::SetLocalCMRotZ );
 
 	pm.f( "VelocityX", m_Velocity.x, NULL, true );
 	pm.f( "VelocityY", m_Velocity.y, NULL, true );
@@ -788,9 +788,9 @@ void Joint::Unserialize( InStream& is  )
 void Joint::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "Joint", this );
-	pm.p( "Valid", IsValid );
-	pm.m( "InitJoint",	InitJoint		);
-	pm.m( "PositionFromBodies", PositionFromBodies );
+	pm.p( "Valid", &Joint::IsValid );
+	pm.m( "InitJoint", &Joint::InitJoint		);
+	pm.m( "PositionFromBodies", &Joint::PositionFromBodies );
 } // Joint::Expose
 
 void Joint::InitJoint()
@@ -910,8 +910,8 @@ void StopMotorJoint::Unserialize( InStream& is  )
 void StopMotorJoint::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "StopMotorJoint", this );
-	pm.p( "Valid", IsValid );
-	pm.m( "InitJoint",	InitJoint		);
+	pm.p( "Valid", &StopMotorJoint::IsValid );
+	pm.m( "InitJoint", &StopMotorJoint::InitJoint		);
 	pm.f( "LoStop",		m_LoStop		);
 	pm.f( "HiStop",		m_HiStop		);
 	pm.f( "StopERP",		m_StopERP		);
@@ -963,9 +963,9 @@ void JointCluster::Unserialize( InStream& is  )
 void JointCluster::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "JointCluster", this );
-	pm.p( "Valid", IsValid );
+	pm.p( "Valid", &JointCluster::IsValid );
 	pm.f( "MaxSize", m_MaxSize );
-	pm.m( "RenameJoints", RenameJoints );
+	pm.m( "RenameJoints", &JointCluster::RenameJoints );
 } // JointCluster::Expose
 
 void JointCluster::RenameJoints()
@@ -1145,8 +1145,8 @@ void SliderJoint::Unserialize( InStream& is  )
 void SliderJoint::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "SliderJoint", this );
-	pm.p( "SliderPosition", GetSliderPosition );
-	pm.p( "SliderPositionRate", GetSliderPositionRate );
+	pm.p( "SliderPosition", &SliderJoint::GetSliderPosition );
+	pm.p( "SliderPositionRate", &SliderJoint::GetSliderPositionRate );
 	pm.f( "AxisX", m_Axis.x );
 	pm.f( "AxisY", m_Axis.y );
 	pm.f( "AxisZ", m_Axis.z );
@@ -1453,9 +1453,9 @@ void Hinge2Joint::Expose( PropertyMap& pm )
 	pm.f( "SuspensionCFM", m_SuspensionCFM );
 	pm.f( "MotorVel2", m_MotorVel2 );
 	pm.f( "FMax2", m_MotorFMax2 );
-	pm.p( "Angle1", GetAngle1 );
-	pm.p( "Angle1Rate", GetAngle1Rate );
-	pm.p( "Angle2Rate", GetAngle2Rate );
+	pm.p( "Angle1", &Hinge2Joint::GetAngle1 );
+	pm.p( "Angle1Rate", &Hinge2Joint::GetAngle1Rate );
+	pm.p( "Angle2Rate", &Hinge2Joint::GetAngle2Rate );
 	pm.f( "AnchorX", m_Anchor.x );
 	pm.f( "AnchorY", m_Anchor.y );
 	pm.f( "AnchorZ", m_Anchor.z );
@@ -2078,7 +2078,7 @@ void CollideGeom::Unserialize( InStream& is  )
 void CollideGeom::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "CollideGeom", this );
-	pm.p( "Valid", IsValid );
+	pm.p( "Valid", &CollideGeom::IsValid );
 }
 
 Matrix4D CollideGeom::GetTransform()
@@ -2525,7 +2525,7 @@ void CollideTriMesh::InitMeshStructure( Primitive& pri, const Matrix4D& tm )
 void CollideTriMesh::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "CollideTriMesh", this );
-	pm.p( "MeshValid", IsTriDataValid );
+	pm.p( "MeshValid", &CollideTriMesh::IsTriDataValid );
 }
 
 OdeID	CollideTriMesh::CreateGeom( OdeID spaceID )
@@ -2587,8 +2587,8 @@ void CollideSpace::Unserialize( InStream& is  )
 void CollideSpace::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "CollideSpace", this );
-	pm.p( "Valid", IsValid );
-	pm.m( "RenameGeoms", RenameGeoms );
+	pm.p( "Valid", &CollideSpace::IsValid );
+	pm.m( "RenameGeoms", &CollideSpace::RenameGeoms );
 	pm.f( "DrawContacts", m_bDrawContacts );
 	pm.f( "MaxPerBodyContacts", m_MaxPerBodyContacts );
 	pm.f( "Mu", 		m_Mu		);		
@@ -2893,7 +2893,7 @@ void PushForce::Expose( PropertyMap& pm )
 	pm.f( "Cone",		m_ForceCone			);
 	pm.f( "Radius",	m_ApplyPointRadius	);
 	pm.f( "BodyRelative", m_bBodyRelative );
-	pm.m( "Apply",	Apply );
+	pm.m( "Apply", &PushForce::Apply );
 }
 
 

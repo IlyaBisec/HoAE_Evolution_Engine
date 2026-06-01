@@ -26,8 +26,8 @@ void ProcessRivEditor(){
 		int Ny=(smaply>>2)+2;
 		for(int ix=0;ix<Nx;ix++)Vline(x0+(ix<<7),0,RealLy,0xFD);
 		for(int iy=0;iy<Ny;iy++)Hline(0,y0+(iy<<6),RealLx,0xFD);
-		for(ix=0;ix<Nx;ix++){
-			for(iy=0;iy<Ny;iy++){
+		for(int ix=0;ix<Nx;ix++){
+			for(int iy=0;iy<Ny;iy++){
 				int ofs=ix+vx0+((iy+vy0)<<RivSH);
 				if(RivVol[ofs]){
 					byte dir=RivDir[ofs];

@@ -4,7 +4,7 @@
 #include "HeroAbility.h"
 #include "UF_NumericalReturner.h"
 #include "Extensions.h"
-#include "ClassSolution.h"
+#include "..\ClassEngine\ClassSolution.h"
 #include ".\cvi_HeroButtons.h"
 #include "ua_Ability.h"
 void SetActiveProducer();
@@ -360,7 +360,7 @@ void WeaponSystem::RefreshEnumerator()
 		}
 	}
 	n = ActiveWeapons.GetAmount();
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		ActiveWeapons[i]->WeaponModificatorP=NULL;
 	}
@@ -1819,6 +1819,7 @@ int mmc_Resurrect::Collect(OneObject* From){
 	}
 	return 0;
 };
+
 void mmd_TakeResource::Distribute(WeaponParams* WP, OneObject* To, int Amount){
 	if(To){
 		Operand.Calculate(Amount,Amount);
@@ -2272,30 +2273,30 @@ bool pm_ApplyStandartChasm::MakeOneStep(WeaponParams* WP){
 	ApplyStandartChasm(x,y,R,Duration);
 	return true;
 }
-pm_StealResourceFromBuildings::pm_StealResourceFromBuildings(){
-	R=200;
-	AmountFromEachBuilding=150;
+pm_StealResourceFromBuildings::pm_StealResourceFromBuildings() {
+	R = 200;
+	AmountFromEachBuilding = 150;
 }
-bool pm_StealResourceFromBuildings::MakeOneStep(WeaponParams* WP){
-	OneObject* Caster=Group[WP->From.UnitIndex];
-	if (WP->From.UnitIndex==0xFFFF) {
+bool pm_StealResourceFromBuildings::MakeOneStep(WeaponParams* WP) {
+	OneObject* Caster = Group[WP->From.UnitIndex];
+	if (WP->From.UnitIndex == 0xFFFF) {
 		return false;
 	}
-	int Amount=0;
-	int A=AmountFromEachBuilding;
-	int x=WP->x>>ToPixelCoord;
-	int y=WP->y>>ToPixelCoord;
-	int r=R;
-	itr_GetBuildingsInRadius.Create(x,y,r);
-	while(OneObject* OB=itr_GetBuildingsInRadius.Next()){
-		if(!OB->Sdoxlo){
-			Amount+=A;
-			AddXRESRC(OB->NNUM, ResType,-A);
-			if(XRESRC(OB->NNUM, ResType)<0)SetXRESRC(OB->NNUM, ResType,0);
+	int Amount = 0;
+	int A = AmountFromEachBuilding;
+	int x = WP->x >> ToPixelCoord;
+	int y = WP->y >> ToPixelCoord;
+	int r = R;
+	itr_GetBuildingsInRadius.Create(x, y, r);
+	while (OneObject* OB = itr_GetBuildingsInRadius.Next()) {
+		if (!OB->Sdoxlo) {
+			Amount += A;
+			AddXRESRC(OB->NNUM, ResType, -A);
+			if (XRESRC(OB->NNUM, ResType) < 0)SetXRESRC(OB->NNUM, ResType, 0);
 		}
 	}
 
-	AddXRESRC(Caster->NNUM, ResType,Amount);
+	AddXRESRC(Caster->NNUM, ResType, Amount);
 }
 //==================================================================================================================//
 void ApplyLandType(char* From,char* To,int xc,int yc,int R1,int R2);

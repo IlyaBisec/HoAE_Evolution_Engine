@@ -1297,8 +1297,8 @@ class mmd_TakeResource: public MassModifyDistribute {
 public:
 	int ResType;
 	SAVE(mmd_TakeResource){
-		REG_ENUM(_index, ResType, RESTYPE);
 		REG_PARENT(MassModifyDistribute);
+		REG_ENUM(_index, ResType, RESTYPE);
 	}ENDSAVE;
 
 	virtual void Distribute(WeaponParams* WP, OneObject* To, int Amount);
@@ -1684,12 +1684,12 @@ public:
 		return true;
 	}
 };
-class pm_StealResourceFromBuildings : public PointModificator{
+class pm_StealResourceFromBuildings : public PointModificator {
 public:
 	UserFriendlyNumericalReturner R;
 	UserFriendlyNumericalReturner AmountFromEachBuilding;
 	int ResType;
-	SAVE(pm_StealResourceFromBuildings){
+	SAVE(pm_StealResourceFromBuildings) {
 		REG_AUTO(R);
 		REG_AUTO(AmountFromEachBuilding);
 		REG_ENUM(_index, ResType, RESTYPE);
@@ -1698,8 +1698,8 @@ public:
 
 	pm_StealResourceFromBuildings();
 	virtual bool MakeOneStep(WeaponParams* WP);
-	virtual bool GetClassPresentationMask(_str& dest,void* DataPtr,void* ExtraPtr,const char* options,DWORD Flags){
-		dest="StealResourceFromBuildings(Amount=%$AmountFromEachBuilding$%)";
+	virtual bool GetClassPresentationMask(_str& dest, void* DataPtr, void* ExtraPtr, const char* options, DWORD Flags) {
+		dest = "StealResourceFromBuildings(Amount=%$AmountFromEachBuilding$%)";
 		return true;
 	}
 };

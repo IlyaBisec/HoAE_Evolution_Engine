@@ -144,46 +144,46 @@ void EffectEditor::Expose( PropertyMap& pm )
     pm.f( "ShotAhgle",          m_ShotAngle         );
     pm.f( "ShotHeight",         m_ShotHeight        );
     pm.f( "ShotGravity",        m_ShotGravity       );
-    pm.p( "FireMode",           GetEffectFireMode, SetEffectFireMode );
-    pm.m( "Fire",               Fire                );
-    pm.m( "ResetCameras",       ResetCameras        );
+    pm.p( "FireMode", &EffectEditor::GetEffectFireMode, &EffectEditor::SetEffectFireMode );
+    pm.m( "Fire", &EffectEditor::Fire                );
+    pm.m( "ResetCameras", &EffectEditor::ResetCameras        );
 
-    pm.p( "ShowBackdrop",       IsShowBackdrop, SetShowBackdrop );
-    pm.p( "ShowGrid",           ShowGrid, ShowGrid         );
-	pm.p("InvertMouse", InvertMouse, InvertMouse);
+    pm.p( "ShowBackdrop", &EffectEditor::IsShowBackdrop, &EffectEditor::SetShowBackdrop );
+    pm.p( "ShowGrid", &EffectEditor::ShowGrid, &EffectEditor::ShowGrid         );
+	pm.p("InvertMouse", &EffectEditor::InvertMouse, &EffectEditor::InvertMouse);
     pm.f( "SaveTextures",       m_bSaveTextures            );
 
-    pm.p( "Camera",             GetCameraMode,    SetCameraMode    );
+    pm.p( "Camera", &EffectEditor::GetCameraMode, &EffectEditor::SetCameraMode    );
 
-    pm.p( "NumEmitters",        GetNEmitters                );
-    pm.p( "NumParticles",       GetNParticles               );
-    pm.p( "ParticleArea",       GetParticleArea             );
-    pm.p( "DangerColor",        GetDangerColor              );
-    pm.p( "IsEffectLoaded",     IsEffectLoaded              );
+    pm.p( "NumEmitters", &EffectEditor::GetNEmitters                );
+    pm.p( "NumParticles", &EffectEditor::GetNParticles               );
+    pm.p( "ParticleArea", &EffectEditor::GetParticleArea             );
+    pm.p( "DangerColor", &EffectEditor::GetDangerColor              );
+    pm.p( "IsEffectLoaded", &EffectEditor::IsEffectLoaded              );
     pm.f( "LowPersp",           m_bLowPersp                 );
     pm.f( "LockFPS",            m_bLockFPS                  );
-    pm.p( "CurEffectTimeRatio", GetTimeRatio, SetTimeRatio  );
+    pm.p( "CurEffectTimeRatio", &EffectEditor::GetTimeRatio, &EffectEditor::SetTimeRatio  );
 
     pm.f( "DumpSide",           m_DumpSide                  );
     pm.f( "DumpFPS",            m_DumpFPS                   );
     pm.f( "DumpSetupMode",      m_bDumpSetupMode            );
-    pm.m( "DumpSequence",       DumpSequence                );
-    pm.m( "KillAutoUpdate",     KillAutoUpdate              );
-    pm.m( "DumpSequence",       DumpSetup                   );
+    pm.m( "DumpSequence", &EffectEditor::DumpSequence                );
+    pm.m( "KillAutoUpdate", &EffectEditor::KillAutoUpdate              );
+    pm.m( "DumpSequence", &EffectEditor::DumpSetup                   );
 
-    pm.p( "TotalTime",          GetTotalTime                );
-    pm.p( "DirAngle",           GetDirAngle, SetDirAngle    );
+    pm.p( "TotalTime", &EffectEditor::GetTotalTime                );
+    pm.p( "DirAngle", &EffectEditor::GetDirAngle, &EffectEditor::SetDirAngle    );
 
-    pm.p( "CurrentTime",        GetCurTime                  );
-    pm.p( "PlayRate",           GetPlayRate, SetPlayRate    );
-    pm.p( "EffectFile",         GetEffectFile               );
-    pm.m( "Reset",              Reset                       );
-    pm.m( "Load",               Load                        );
-    pm.m( "Save",               Save                        );
-    pm.m( "SaveAs",             SaveAs                      );
-    pm.m( "Play",               PlayEffect                  );
-    pm.m( "Pause",              Pause                       );
-    pm.m( "Stop",               StopEffect                  );
+    pm.p( "CurrentTime", &EffectEditor::GetCurTime                  );
+    pm.p( "PlayRate", &EffectEditor::GetPlayRate, &EffectEditor::SetPlayRate    );
+    pm.p( "EffectFile", &EffectEditor::GetEffectFile               );
+    pm.m( "Reset", &EffectEditor::Reset                       );
+    pm.m( "Load", &EffectEditor::Load                        );
+    pm.m( "Save", &EffectEditor::Save                        );
+    pm.m( "SaveAs", &EffectEditor::SaveAs                      );
+    pm.m( "Play", &EffectEditor::PlayEffect                  );
+    pm.m( "Pause", &EffectEditor::Pause                       );
+    pm.m( "Stop", &EffectEditor::StopEffect                  );
 } // EffectEditor::Expose
 
 int EffectEditor::GetNEmitters() const

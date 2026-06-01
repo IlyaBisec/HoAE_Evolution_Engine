@@ -1,7 +1,7 @@
 #include "ddini.h"
+#include <windef.h>
 #include <mmsystem.h>
 #include <digitalv.h>
-#include <windef.h>
 #include <string.h>
 #include <io.h>
 MCIDEVICEID wAVIDeviceID;

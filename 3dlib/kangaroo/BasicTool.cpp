@@ -1,4 +1,4 @@
-#include "StdAfx.h" #include "common.h" 
+#include "common.h"
 #include "BasicTool.h"
 
 BasicPickInfo BasicTool::Pick;

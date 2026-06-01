@@ -1,5 +1,5 @@
 #include "stdheader.h"
-//#include <more_types.h>
+//#include "..\ClassEngine\more_types.h"
 //#include "MapTemplates.h"
 //#include "vui_Action.h"
 #include "vui_Actions.h"
@@ -19,6 +19,7 @@ void cva_DeskArray::SetFrameState(SimpleDialog* SD){
 		uTemp->Copy(uNew);
 		DD->DSS.Add(uNew);
 	}
+	int i;
 	for(i=0;i<uN;i++){
 		SimpleDialog* u=DD->DSS[i];
 		SetUnit(i,u);

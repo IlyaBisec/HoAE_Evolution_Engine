@@ -5,11 +5,12 @@
 //#define _DEMO_
 //#define _PRESSMAN_
 //////////////////////////////////////////////////////////////////////////
-
 #define CEXPORT __declspec(dllexport)
 #define CIMPORT __declspec(dllimport)
-#include "..\CommCore\CommCore.h"
+//#include "..\CommCore\CommCore.h"
 #include "stdafx.h"
+#include "..\CommCore\CommCore.h"
+#include <Shellapi.h>
 #include <malloc.h>
 #include <direct.h>				// Vitya
 #include "Limitations.h"
@@ -17,7 +18,8 @@
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "GP_Draw.h"
-#include <IMediaManager.h>
+#include "..\3dlib\gMotor\IMediaManager.h"
+#pragma comment(lib, "boostr.lib")
 #include "mgraph.h"
 #include "mouse.h"
 #include "menu.h"
@@ -56,16 +58,15 @@
 #include "EinfoClass.h"
 #include "mode.h"
 #include "ClassEditor.h"
-#include <kHash.hpp>
+#include "..\3dlib\gMotor\kHash.hpp"
 #include "MapTemplates.h"
 #include "VideoLayer.h"
 #include "cdirsnd.h"
-#include <typeinfo.h>
+#include <typeinfo>
 #include "GameSettings.h"
 #include "Language.h"
 #pragma pack (push)
 //#pragma pack (8)
-
 #include "Scape3D.h"
 #include "assert.h"
 
@@ -111,6 +112,8 @@
 #include "FastMemPool.h"
 #include "musorozbornik.h"
 #include "GameExtensionInternal.h"
+#include "GameExtension.h"
+
 
 #include "Iterators.h"
 

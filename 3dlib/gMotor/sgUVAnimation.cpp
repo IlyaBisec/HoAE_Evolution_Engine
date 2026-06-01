@@ -86,9 +86,9 @@ void UVAnimation::Unserialize( InStream& is    )
 void UVAnimation::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "UVAnimation", this );
-    pm.p( "ScaleU",        GetScU,        SetScU,  "floatAnimCurve" );
-    pm.p( "ScaleV",        GetScV,        SetScV,  "floatAnimCurve" );
-    pm.p( "PosU",        GetPosU,    SetPosU, "floatAnimCurve" );
-    pm.p( "PosV",        GetPosV,    SetPosV, "floatAnimCurve" );
-    pm.p( "Rotation",    GetRot,        SetRot,  "floatAnimCurve" );
+    pm.p( "ScaleU", &UVAnimation::GetScU, &UVAnimation::SetScU,  "floatAnimCurve" );
+    pm.p( "ScaleV", &UVAnimation::GetScV, &UVAnimation::SetScV,  "floatAnimCurve" );
+    pm.p( "PosU", &UVAnimation::GetPosU, &UVAnimation::SetPosU, "floatAnimCurve" );
+    pm.p( "PosV", &UVAnimation::GetPosV, &UVAnimation::SetPosV, "floatAnimCurve" );
+    pm.p( "Rotation", &UVAnimation::GetRot, &UVAnimation::SetRot,  "floatAnimCurve" );
 } // UVAnimation::Expose

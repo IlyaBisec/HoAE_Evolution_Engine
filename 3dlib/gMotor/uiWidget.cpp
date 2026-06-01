@@ -165,23 +165,23 @@ const char* Widget::GenerateName( const char* cName )
 void Widget::Expose( PropertyMap& pm )
 {
     pm.start( "Widget", this );
-    pm.p( "Class",              ClassName               );
-    pm.p( "Name",               GetName, SetName        );
-    pm.p( "Text",               GetText, SetText        );
-    pm.p( "Script",             GetScriptName           );
+    pm.p( "Class", &Widget::ClassName               );
+    pm.p( "Name", &Widget::GetName, &Widget::SetName        );
+    pm.p( "Text", &Widget::GetText, &Widget::SetText        );
+    pm.p( "Script", &Widget::GetScriptName           );
     pm.f( "TextColor",          m_TextColor,    "color" );
     pm.f( "DisabledTextColor",  m_DisTextColor, "color" );
     pm.f( "BgColor",            m_BgColor,      "color" );
-    pm.p( "RelativeUnits",      IsRelativeUnits );
-    pm.p( "Visible",            IsVisible,      SetVisible      );
-    pm.p( "Draggable",          IsDraggable,    SetDraggable    );
-    pm.p( "Enabled",            IsEnabled,      SetEnabled      );
-    pm.p( "TrackOutside",       IsTrackOutside, SetTrackOutside );
-    pm.p( "ClippedToExt",       IsClippedToExt, SetClippedToExt );
-    pm.p( "KeptAligned",        IsKeptAligned,  SetKeptAligned  );
-    pm.p( "LockWidth",          IsLockWidth,    SetLockWidth    );
-    pm.p( "LockHeight",         IsLockHeight,   SetLockHeight   );
-    pm.p( "Ext",                GetExtents,     SetExtents      );
+    pm.p( "RelativeUnits", &Widget::IsRelativeUnits );
+    pm.p( "Visible", &Widget::IsVisible, &Widget::SetVisible      );
+    pm.p( "Draggable", &Widget::IsDraggable, &Widget::SetDraggable    );
+    pm.p( "Enabled", &Widget::IsEnabled, &Widget::SetEnabled      );
+    pm.p( "TrackOutside", &Widget::IsTrackOutside, &Widget::SetTrackOutside );
+    pm.p( "ClippedToExt", &Widget::IsClippedToExt, &Widget::SetClippedToExt );
+    pm.p( "KeptAligned", &Widget::IsKeptAligned, &Widget::SetKeptAligned  );
+    pm.p( "LockWidth", &Widget::IsLockWidth, &Widget::SetLockWidth    );
+    pm.p( "LockHeight", &Widget::IsLockHeight, &Widget::SetLockHeight   );
+    pm.p( "Ext", &Widget::GetExtents, &Widget::SetExtents      );
     
     pm.f( "Left",               m_Extents.x     );
     pm.f( "Top",                m_Extents.y     );
@@ -191,11 +191,11 @@ void Widget::Expose( PropertyMap& pm )
     pm.f( "HAlign",             m_HAligh );
     pm.f( "VAlign",             m_VAligh );
 
-    pm.m( "ToggleVisible",      ToggleVisible   );
-    pm.m( "ToggleEnabled",      ToggleEnabled   );
+    pm.m( "ToggleVisible", &Widget::ToggleVisible   );
+    pm.m( "ToggleEnabled", &Widget::ToggleEnabled   );
 
-    pm.m( "LoadFromScript",     LoadScript      );
-    pm.m( "SaveToScript",       SaveScript      );
+    pm.m( "LoadFromScript", &Widget::LoadScript      );
+    pm.m( "SaveToScript", &Widget::SaveScript      );
 
     pm.s( "mouse_wheel",        sigMouseWheel   );    
     pm.s( "mouse_move",         sigMouseMove    );    

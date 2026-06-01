@@ -15,8 +15,8 @@ IMPLEMENT_CLASS(FloatEditBox);
 FloatEditBox::FloatEditBox() : m_Value(0.0)
 {
     AddChild( m_Ratchet );
-    m_Ratchet.sigChanged.Connect( this, ChangeValue );
-    sigTextChanged.Connect( this, ChangeText );
+    m_Ratchet.sigChanged.Connect( this, &FloatEditBox::ChangeValue );
+    sigTextChanged.Connect( this, &FloatEditBox::ChangeText );
 } // FloatEditBox::FloatEditBox
 
 void FloatEditBox::OnInit()

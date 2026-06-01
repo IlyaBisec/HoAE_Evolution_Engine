@@ -93,89 +93,89 @@ public:
 
 		REG_AUTO(Basic);
 
-		REG_METHOD(DefaultCursor);
-		REG_METHOD(Peace);
-		REG_METHOD(SaveMap);
-		REG_METHOD(LoadMap);
+		REG_METHOD_EX(&AllTools::DefaultCursor, DefaultCursor);
+		REG_METHOD_EX(&AllTools::Peace, Peace);
+		REG_METHOD_EX(&AllTools::SaveMap, SaveMap);
+		REG_METHOD_EX(&AllTools::LoadMap, LoadMap);
 
 		REG_AUTO(Geometry);
 
 		STATIC REG_MEMBER_EX2(_bool,KeepUV,"    KeepUV");
-		REG_METHOD(Undo);
-		REG_METHOD(Deform);
-		REG_METHOD(Smooth);
-		REG_METHOD(Texture);
-		REG_METHOD(Paint);
-		REG_METHOD(Boolean);
-		REG_METHOD(Chamfer);
-		REG_METHOD(Scissors);	
-		REG_METHOD(Illuminate);
-		REG_METHOD(SetRiver);
-		REG_METHOD(Refresh);
+		REG_METHOD_EX(&AllTools::Undo, Undo);
+		REG_METHOD_EX(&AllTools::Deform, Deform);
+		REG_METHOD_EX(&AllTools::Smooth, Smooth);
+		REG_METHOD_EX(&AllTools::Texture, Texture);
+		REG_METHOD_EX(&AllTools::Paint, Paint);
+		REG_METHOD_EX(&AllTools::Boolean, Boolean);
+		REG_METHOD_EX(&AllTools::Chamfer, Chamfer);
+		REG_METHOD_EX(&AllTools::Scissors, Scissors);
+		REG_METHOD_EX(&AllTools::Illuminate, Illuminate);
+		REG_METHOD_EX(&AllTools::SetRiver, SetRiver);
+		REG_METHOD_EX(&AllTools::Refresh, Refresh);
 
-		REG_AUTO_EX(Layer,Generator);
+		REG_AUTO(Layer);
 
-		REG_METHOD(Race);
-		REG_METHOD(Archway);
-		REG_METHOD(Layers);
-		REG_METHOD(LocalGenerator);
-		REG_METHOD(Generator);				
-		REG_METHOD(Export);		
+		REG_METHOD_EX(&AllTools::Race, Race);
+		REG_METHOD_EX(&AllTools::Archway, Archway);
+		REG_METHOD_EX(&AllTools::Layers, Layers);
+		REG_METHOD_EX(&AllTools::LocalGenerator, LocalGenerator);
+		REG_METHOD_EX(&AllTools::Generator, Generator);
+		REG_METHOD_EX(&AllTools::Export, Export);
 
 		REG_AUTO(Camera);
 
-		REG_METHOD(FreeCamera);
-		REG_METHOD(ToggleHero);
-		REG_METHOD(ToggleTank);
-		REG_METHOD(CollCamera);
+		REG_METHOD_EX(&AllTools::FreeCamera, FreeCamera);
+		REG_METHOD_EX(&AllTools::ToggleHero, ToggleHero);
+		REG_METHOD_EX(&AllTools::ToggleTank, ToggleTank);
+		REG_METHOD_EX(&AllTools::CollCamera, CollCamera);
 
 		REG_AUTO(Objects);
 		
-		REG_METHOD(Trees);    
-		REG_METHOD(Stones);
-		REG_METHOD(Effects);
-		REG_METHOD(KillObjects);
-		REG_METHOD(Units);	
-		REG_METHOD(CustomizeUnit);
-		REG_METHOD(Roads);
-		REG_METHOD(AddModel);
-		REG_METHOD(EditModels);
+		REG_METHOD_EX(&AllTools::Trees, Trees);
+		REG_METHOD_EX(&AllTools::Stones, Stones);
+		REG_METHOD_EX(&AllTools::Effects, Effects);
+		REG_METHOD_EX(&AllTools::KillObjects, KillObjects);
+		REG_METHOD_EX(&AllTools::Units, Units);
+		REG_METHOD_EX(&AllTools::CustomizeUnit, CustomizeUnit);
+		REG_METHOD_EX(&AllTools::Roads, Roads);
+		REG_METHOD_EX(&AllTools::AddModel, AddModel);
+		REG_METHOD_EX(&AllTools::EditModels, EditModels);
 
 		REG_AUTO(Locking);
 		
-		REG_METHOD(SetLock);
-		REG_METHOD(ClearLock);
-		REG_METHOD(DefaultLock);
+		REG_METHOD_EX(&AllTools::SetLock, SetLock);
+		REG_METHOD_EX(&AllTools::ClearLock, ClearLock);
+		REG_METHOD_EX(&AllTools::DefaultLock, DefaultLock);
 		REG_AUTO(D);
-		REG_METHOD(ShowLock);
-		REG_METHOD(ShowTopology);
+		REG_METHOD_EX(&AllTools::ShowLock, ShowLock);
+		REG_METHOD_EX(&AllTools::ShowTopology, ShowTopology);
 		REG_AUTO(D);
-		REG_METHOD(ViewLand);
-		REG_METHOD(ViewWater);
-		REG_METHOD(ViewLowAir);
-		REG_METHOD(ViewHiAir);
+		REG_METHOD_EX(&AllTools::ViewLand, ViewLand);
+		REG_METHOD_EX(&AllTools::ViewWater, ViewWater);
+		REG_METHOD_EX(&AllTools::ViewLowAir, ViewLowAir);
+		REG_METHOD_EX(&AllTools::ViewHiAir, ViewHiAir);
 
 		REG_AUTO(Scripts);
 
-		REG_METHOD(Script);
-		REG_METHOD(Nodes);
-		REG_METHOD(Groups);
-        REG_METHOD(Debug);
+		REG_METHOD_EX(&AllTools::Script, Script);
+		REG_METHOD_EX(&AllTools::Nodes, Nodes);
+		REG_METHOD_EX(&AllTools::Groups, Groups);
+		REG_METHOD_EX(&AllTools::Debug, Debug);
 		REG_AUTO(D);
-        REG_METHOD(ScrollGroups);
-        REG_METHOD(Zones);
+		REG_METHOD_EX(&AllTools::ScrollGroups, ScrollGroups);
+		REG_METHOD_EX(&AllTools::Zones, Zones);
 
 		REG_AUTO(Properties);
 
-		REG_METHOD(MapOptions);
-		//REG_METHOD(EngineSettings);		
-		REG_METHOD(GameSettings);
-		REG_METHOD(DialogsEditor);
-		REG_METHOD(AbilitiesEditor);
-		REG_METHOD(RoadsEditor);
-		REG_METHOD(FacturesProperties);	
-		REG_METHOD(GrassProperties);
-		REG_METHOD(AllEditors);		
+		REG_METHOD_EX(&AllTools::MapOptions, MapOptions);
+		//REG_METHOD_EX(EngineSettings);		
+		REG_METHOD_EX(&AllTools::GameSettings, GameSettings);
+		REG_METHOD_EX(&AllTools::DialogsEditor, DialogsEditor);
+		REG_METHOD_EX(&AllTools::AbilitiesEditor, AbilitiesEditor);
+		REG_METHOD_EX(&AllTools::RoadsEditor,RoadsEditor);
+		REG_METHOD_EX(&AllTools::FacturesProperties,FacturesProperties);
+		REG_METHOD_EX(&AllTools::GrassProperties,GrassProperties);
+		REG_METHOD_EX(&AllTools::AllEditors,AllEditors);
 		
 	}ENDSAVE;
 };

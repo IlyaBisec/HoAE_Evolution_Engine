@@ -40,7 +40,7 @@ void OneObject::PerformUpgrade(word NewU,word MakerID){
 	};
 #endif
 	int Use=newMons->Usage;
-	for(i=0;i<8;i++){
+	for(int i=0;i<8;i++){
 		AddXRESRC(NNUM,i,-NU->Cost[i]);
 		Nat->ControlProduce(NU->Branch,i,-NU->Cost[i]);
 		if(Use==MineID)Nat->ResOnMines[i]+=NU->Cost[i];

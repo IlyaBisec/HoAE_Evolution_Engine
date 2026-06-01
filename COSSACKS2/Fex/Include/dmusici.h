@@ -18,7 +18,7 @@
 #include <mmsystem.h>
 #include <dmusicc.h>
 /* plugin (track and tool) interfaces.  This #include will eventually go away. */
-#include <dmplugin.h>
+//#include <dmplugin.h>
 
 #include <pshpack8.h>
 

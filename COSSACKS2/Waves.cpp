@@ -110,7 +110,7 @@ void ProcessWaveFrames(){
 		NAttempt--;
 	}while(NAttempt&&cfm<MaxWFrames);
 	//Processing motion
-	for(i=0;i<MaxWFrames;i++){
+	for(int i=0;i<MaxWFrames;i++){
 		WaveFrame* WF=&WAVES[i];
 		if(WF->Enabled){
 			WF->x+=WF->vx;

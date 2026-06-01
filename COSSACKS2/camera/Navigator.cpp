@@ -9,8 +9,8 @@
 #include "SelExt.h"
 #include "..\cvi_MainMenu.h"
 #include "CmdExt.h"
-#include "CollidingCamera.h"
-#include "TankController.h"
+#include "..\Surface\CollidingCamera.h"
+#include "..\Surface\TankController.h"
 #include "IWater.h"
 #include "..\Surface\Messager.h"
 
@@ -1526,7 +1526,7 @@ void Navigator::Play(CameraTrack *pTrack, bool fCapture) {
 	bool CullTrack = true;
 	cList<bool> CullSpline;
 	CullSpline.SetCount(SplinesCount, true);
-	for(nSpline = 0; nSpline < SplinesCount; nSpline++) {
+	for(int nSpline = 0; nSpline < SplinesCount; nSpline++) {
 		const CameraSpline *pSpline = m_Track.pSrc->Splines[nSpline];
 		if(pSpline->Skip) {
 			continue;
@@ -1685,7 +1685,7 @@ void Navigator::Play(CameraTrack *pTrack, bool fCapture) {
 	m_Track.TrackName = m_Track.pSrc->GetName();
 	// Precaching resources:
 	int id = -1;
-	for(i = 0; i < m_Track.m_LoadedResources.Count(); i++) {
+	for(int i = 0; i < m_Track.m_LoadedResources.Count(); i++) {
 		cStr FileName = m_Track.m_LoadedResources[i];
 		// Finding extension:
 		cStr Ext;

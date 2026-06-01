@@ -542,7 +542,7 @@ void ShowSurfEditor() {
 	DWORD Flags = RCE_SHOW_GAME_BACKGROUND | RCE_ALLOW_GAME_PROCESSING | RCE_RIGHT_POSITION;// | RCE_CENTRAL_POSITION;
 	EditClass("SurfEditor", (BaseClass*)(&g_SurfEditor), NULL, Flags,
 		&SurfaceEditorProcessClassCallback, NULL);
-	g_SurfEditor.WriteToFile("Surface\\Editor.xml");
+	g_SurfEditor.WriteToFile("\Editor.xml");
 }
 
 //-----------------------------------------------------------------------------------

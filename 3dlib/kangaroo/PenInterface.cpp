@@ -1,4 +1,4 @@
-#include "StdAfx.h" #include "common.h" 
+#include "common.h"
 
 int PenInterface::width;
 int PenInterface::height;

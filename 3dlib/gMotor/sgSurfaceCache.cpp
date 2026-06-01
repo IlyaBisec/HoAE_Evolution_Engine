@@ -54,11 +54,11 @@ void SurfaceCache::Render()
 void SurfaceCache::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "SurfaceCache", this );
-    pm.p( "NumSurfaces",    GetNSurfaces,    SetNSurfaces        );
-    pm.p( "SurfaceSide",    GetSurfaceSide, SetSurfaceSide        );
-    pm.p( "ColorFormat",    GetColorFormat, SetColorFormat        );
-    pm.p( "RenderTarget",    IsRT,            SetIsRT                );
-    pm.p( "MemoryPool",    GetMemoryPool,  SetMemoryPool        );
+    pm.p( "NumSurfaces", &SurfaceCache::GetNSurfaces, &SurfaceCache::SetNSurfaces        );
+    pm.p( "SurfaceSide", &SurfaceCache::GetSurfaceSide, &SurfaceCache::SetSurfaceSide        );
+    pm.p( "ColorFormat", &SurfaceCache::GetColorFormat, &SurfaceCache::SetColorFormat        );
+    pm.p( "RenderTarget", &SurfaceCache::IsRT, &SurfaceCache::SetIsRT                );
+    pm.p( "MemoryPool", &SurfaceCache::GetMemoryPool, &SurfaceCache::SetMemoryPool        );
 }
 
 void SurfaceCache::CreateContents()

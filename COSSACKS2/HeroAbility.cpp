@@ -960,10 +960,10 @@ bool HeroVariableStorage::Process(){
 							AA->OnRightClick();
 							break;
 						}
-						/*if( UA && !UA->Name.isClear() && strstr(UA->Name.pchar(),"MC_aHeroStart") ){
+						if( UA && !UA->Name.isClear() && strstr(UA->Name.pchar(),"MC_aHeroStart") ){
 							AA->OnClick();
 							break;
-						}*/ //For Reborn
+						}
 					}
 				}
 				// RPG + RTS

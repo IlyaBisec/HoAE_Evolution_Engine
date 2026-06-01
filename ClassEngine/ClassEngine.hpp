@@ -726,6 +726,7 @@ bool BaseClass::Load(xmlQuote& xml,void* ClassPtr,ErrorPager* Error,void* Extra)
 bool BaseClass::ReadFromFile(const char* Name){
 	if(!CheckDirectCasting())return false;
 	xmlQuote xml;
+	//Log.Warning("XML created, BC is working!");
 	if(xml.ReadFromFile((char*)Name)){
 		ErrorPager err;
 		CurrentSaveFile=Name;
@@ -758,7 +759,7 @@ bool BaseClass::WriteToFile(const char* Name){
 	CurrentSaveFile=NULL;
 	return true;
 }
-bool BaseClass::FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
+bool BaseClass::FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
 	if(SrcData==DestData)return true;
 	DWORD M=GetClassMask();
 	OneClassStorage* CST=GetClassStorage();	
@@ -800,7 +801,7 @@ bool BaseClass::FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* 
 	return true;
 }
 
-void ScanForRC(BaseClass* BC,CopyContext* C){
+void ScanForRC(BaseClass* BC,CopyContex* C){
 	_str* s=BC->GetObjectNamePointer();
 	if(s && s->pchar()[0])C->LocalClassIDS.Add(BC->GetObjectGlobalID());
     int N=BC->GetAmountOfElements();
@@ -817,11 +818,11 @@ bool BaseClass::Copy(BaseClass* Dest, bool Add){
 	if(!CheckDirectCasting())return false;
 	if(strcmp(GetClassName(),Dest->GetClassName()))return false;
 	if(!Add) Dest->reset_class(Dest);
-	CopyContext C;
+	CopyContex C;
 	ScanForRC(this,&C);
 	return FullCopy(this,NULL,Dest,Dest,NULL,&C);	
 }
-bool ReferableBaseClass::FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContext* C){
+bool ReferableBaseClass::FullCopy(void* SrcData,void* SrcDataExtra,BaseClass* Dest,void* DestData,void* DestExtraPtr,CopyContex* C){
 	BaseClass::FullCopy(SrcData,SrcDataExtra,Dest,DestData,DestExtraPtr,C);
 	_str* s=GetObjectNamePointer();
 	if(s && s->pchar()[0]){
@@ -1623,7 +1624,7 @@ bool BaseClass::SaveInShortForm=false;
 bool BaseClass::NoSaveMode=false;
 bool BaseClass::StaticMode=false;
 BaseClass* BaseClass::CurrentContext=NULL;
-#include <xmlQuote.hpp>
+#include "..\ClassEngine\xmlQuote.hpp"
 
 #ifdef __STDAPPLICATION__
 
@@ -1639,7 +1640,7 @@ void PopSmartLeak(bool& v){
 }
 #endif //__STDAPPLICATION__
 
-#include <pool.hpp>
+#include "..\ClassEngine\pool.hpp"
 
 //_color
 void _color::Save(xmlQuote& xml,void* ClassPtr,void* Extra){

@@ -16,7 +16,7 @@ void ClearObjs3(){
 			OBARS[i]=NULL;
 		};
 	};
-	for(i=0;i<B3SZ;i++){
+	for(int i=0;i<B3SZ;i++){
 		if(Obj3Map[i]){
 			free(Obj3Map[i]);
 		};

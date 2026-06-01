@@ -1,7 +1,6 @@
 //#include "stdafx.h"
 #include <windows.h>
 #include <windowsx.h>
-#include <ddraw.h>
 #include <dinput.h>
 #include <stdio.h>
 #include "Include\\dmusici.h"
@@ -9,7 +8,8 @@
 #include "Include\\multimon.h"
 #include "Include\\basetsd.h"
 #include "FEXModule.h"
-
+//#include <ddraw.h>
+#include "..\..\3dlib\ddraw.h"
 extern char FEX_SystemVersionString[1024];
 
 typedef HRESULT(WINAPI * DIRECTDRAWCREATE)( GUID*, LPDIRECTDRAW*, IUnknown* );
@@ -164,7 +164,7 @@ DWORD FEX_GetDXVersion()
       pDDraw->Release();
       FreeLibrary(hDDrawDLL);
       dwDXVersion = 0;
-      OutputDebugString("Couldn't CreateSurface\r\n");
+      OutputDebugString("Couldn't Creater\n");
       return dwDXVersion;
    }
 

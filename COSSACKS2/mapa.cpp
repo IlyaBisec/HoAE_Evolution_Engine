@@ -269,7 +269,7 @@ void DrawGrids(){
 	};
 	int y0=(mapy-GridY*2)/(2*GridLy);
 	int Ny=2+smaply/(2*GridLy);
-	for(i=0;i<Ny+1;i++){
+	for(int i=0;i<Ny+1;i++){
 		int y=(GridY+(i+y0)*GridLy)<<1;
 		if(y>=mapy&&y<=mapy+smaply){
 			y=smapy+((y-mapy)<<4);
@@ -291,7 +291,7 @@ void DrawGrids(){
 		int y0=(mapy-GridY*2)/(2*GridLy);
 		int Ny=2+smaply/(2*GridLy);
 		int Dy=GridLy*16;
-		for(i=0;i<Ny+2;i++){
+		for(int i=0;i<Ny+2;i++){
 			int y1=(GridY+(i+y0)*GridLy)<<1;
 			int y=smapy+((y1-mapy)<<4);
 			if(y1>=mapy&&y1<=mapy+smaply){
@@ -660,8 +660,8 @@ void NewMap(int szX,int szY)
 	MOptions.reset_class(&MOptions);
 };
 void CreateMiniMap();
-const drx[8]={0,1,1,1,0,-1,-1,-1};
-const dry[8]={-1,-1,0,1,1,1,0,-1};
+const int drx[8]={0,1,1,1,0,-1,-1,-1};
+const int dry[8]={-1,-1,0,1,1,1,0,-1};
 extern bool HealthMode;
 
 void GetRect(OneObject* OB,int* x,int* y,int* Lx,int* Ly)
@@ -821,108 +821,114 @@ void DrawHeroName(OneObject* OB){
 extern	void ShowStringEx(int x, int y, LPCSTR lps, lpRLCFont lpf);
 void DrawHealth(OneObject* OB)
 {
-    if(!OB) return;
-    if(!GSets.CGame.ViewMask) return;
-    if(!OB->WasDrawn || OB->IsInFog) return; 
-    if(LMode || OB->Sdoxlo) return;
-    if(!OB->newMons || OB->newMons->Immortal) return;
-    if(!v_ISys.AltDrawHealth) return;
- 
-    NewMonster* NM = OB->newMons;
-    if(NM->DontShowALT_Info) return;
- 
-    if(OB->ActiveAbility) {
-        bool inv = false;
-        byte detected = 0;
-        bool enable_search = false;
-        OB->ActiveAbility->ActiveAbilities.modifyInvisibility(inv, inv, detected, enable_search); // не рисовать полоску жизни для невидимок
-        if(inv && !((detected & NATIONS[MyNation].NMask) || enable_search))
-            return;
-    }
- 
-    DrawHeroName(OB);
- 
-    int sprW = NM->RectLx;
-    int sprH = NM->RectLy;
- 
-    int width = sprW - 12;
-    int health = width;
-    if(OB->MaxLife > 0) health = width * OB->Life / OB->MaxLife;
- 
-    const DWORD c_EnergyColor = 0xFF0000FF;
-    DWORD clrHealth = 0xFF22FF33; // Здоровье
-    DWORD clrHealthBackground = 0xFF004400; // Фон
-	DWORD clrHealthBorder = 0xFF000000; // Контур
+	if(!OB) return;
+	if(!GSets.CGame.ViewMask)return;
+	if(!OB->WasDrawn||OB->IsInFog) return;	
+	if( LMode || OB->Sdoxlo ) return;
+	if( !OB->newMons || OB->newMons->Immortal ) return;
+	if( !v_ISys.AltDrawHealth ) return;
+
+	NewMonster* NM = OB->newMons;
+	if(NM->DontShowALT_Info)return;
+
+	if(OB->ActiveAbility){
+		bool inv=false;
+		byte detected=0;
+		bool enable_search=false;
+		OB->ActiveAbility->ActiveAbilities.modifyInvisibility(inv,inv,detected,enable_search); // не рисовать полоску жизни для невидимок
+		if( inv && !((detected&NATIONS[MyNation].NMask) || enable_search) )
+			return;
+	}
+
+	DrawHeroName(OB);
+
+	int sprW = NM->RectLx;
+	int sprH = NM->RectLy;
+
+	int width = sprW - 12;
+	int health = width;
+	if(OB->MaxLife > 0) health = width * OB->Life / OB->MaxLife;
+
+	const DWORD c_EnergyColor = 0xFF0000FF;
+	DWORD clrHealth = 0xFF22FF33;
+	if (IsEnemyUnit( OB )) clrHealth = 0xFFFF1122;
+
 	float cx = OB->RealX / 16;
-    float cy = OB->RealY / 16;
- 
-    // main border 
-    Vector3D GetSelectionBarPos(OneObject* OB);
-    Vector3D VP = GetSelectionBarPos(OB);
-    Vector3D lt(VP);
-    lt.z += sprH + OB->OverEarth;
-    WorldToScreenSpace(lt);
-    lt.x = roundf(lt.x - sprW / 2 + 5);
-    lt.y = roundf(lt.y + 5);
-    Vector3D lb(lt); 
- 
-    if(OB->NewBuilding) {
-        // Отрисовка фона для полоски здоровья
-        GPS.DrawFillRect(lt.x, lt.y - 1, width, 4, clrHealthBackground);
- 
-        // Отрисовка контурной полоски (широкая)
-        GPS.DrawFillRect(lt.x - 2, lt.y - 3, width + 4, 8, clrHealthBorder); // Контур под полоской здоровья 
- 
-		// Отрисовка полоски здоровья 
-		GPS.DrawFillRect(lt.x, lt.y - 1, health, 4, clrHealth);
- 
-        // side-frame
-        GPS.DrawLine(lt.x - 1, lt.y - 1, lt.x - 1, lb.y + 1, 0xFFFFFFFF);
-        GPS.DrawLine(lt.x + width, lt.y - 1, lb.x + width, lb.y + 1, 0xFFFFFFFF);
- 
-        int x0 = lt.x;
-        int y0 = lt.y;
-        DWORD GetNatColor(int natIdx);
-        GPS.DrawFillRect(x0, y0 - 12, 8, 8, GetNatColor(OB->NNUM));
-        char cc[128];
-        int adp = 100;
-        bool GetMineProduceBonus(OneObject* Mine, int& Proc);
-        GetMineProduceBonus(OB, adp); if(!IsEnemyUnit(OB) || OB->WatchNInside) {
-            int nn = (adp * OB->NInside) / 100;
-            if(nn > OB->NInside) {
-                sprintf(cc, "%d+%d/%d", OB->NInside, nn - OB->NInside, OB->MoreCharacter->MaxInside + OB->AddInside);
-            } else if(nn < OB->NInside) {
-                sprintf(cc, "%d-%d/%d", OB->NInside, OB->NInside - nn, OB->MoreCharacter->MaxInside + OB->AddInside);
-            } else {
-                sprintf(cc, "%d/%d", OB->NInside, OB->MoreCharacter->MaxInside + OB->AddInside);
-            }
-        } else {
-            sprintf(cc, "?/%d", OB->MoreCharacter->MaxInside + OB->AddInside);
-        }
- 
-        DWORD C = GPS.GetCurrentDiffuse();
-        GPS.SetCurrentDiffuse(SmallWhiteFont.GetColor());
- 
-        int H = GetRLCHeight(SmallWhiteFont.RLC, 'C');
- 
-        ShowString(x0 + 12 + 1, y0 - 14 + 8 - H + 1, cc, &SmallBlackFont);
-        ShowString(x0 + 12, y0 - 14 + 8 - H, cc, &SmallWhiteFont);
- 
-        GPS.SetCurrentDiffuse(C); 
-    } else {
-        // Отрисовка фона для полоски здоровья
-        GPS.DrawFillRect(lt.x, lt.y, width, 2, clrHealthBackground);
- 
-        // Отрисовка контурной полоски (широкая)
-        GPS.DrawFillRect(lt.x - 1, lt.y - 1, width + 2, 4, clrHealthBorder); 
- 
-        // Отрисовка полоски здоровья 
-        GPS.DrawFillRect(lt.x, lt.y, health, 2, clrHealth);
- 
-        // side-frame
-        GPS.DrawLine(lt.x - 1, lt.y, lt.x - 1, lb.y, 0xFFFFFFFF);
-        GPS.DrawLine(lt.x + width, lt.y, lb.x + width, lb.y, 0xFFFFFFFF);        
-    }
+	float cy = OB->RealY / 16;
+
+	//  main border 
+	Vector3D GetSelectionBarPos(OneObject* OB);
+	Vector3D VP=GetSelectionBarPos(OB);
+	Vector3D lt( VP ); //GetSelectionBarPos(OB);
+	lt.z+=sprH+OB->OverEarth;
+	WorldToScreenSpace( lt );
+	lt.x = roundf( lt.x - sprW/2 + 5);
+	lt.y = roundf( lt.y + 5 );
+	Vector3D lb( lt ); 
+	
+	//lb.y += 2;
+
+	//if(OB->newMons->ShowDelay)
+	//{
+	//	int mxd = OB->MaxDelay;
+	//	if (mxd <= 0) mxd=1;
+
+	//	int energy = (width * (mxd - OB->delay))/mxd;
+
+	//	//  energy thermometer
+	//	GPS.DrawFillRect( lt.x, lt.y + 2, energy, 2, c_EnergyColor );
+	//}
+
+	if( OB->NewBuilding ){
+		
+		GPS.DrawFillRect( lt.x, lt.y-1, health, 4, clrHealth );
+		
+		// side-frame
+		GPS.DrawLine( lt.x-1, lt.y-1, lt.x-1, lb.y+1, 0xFFFFFFFF );
+		GPS.DrawLine( lt.x + width, lt.y-1, lb.x + width, lb.y+1, 0xFFFFFFFF );
+
+		int x0=lt.x;
+		int y0=lt.y;
+		DWORD GetNatColor( int natIdx );
+		GPS.DrawFillRect(x0,y0-12,8,8,GetNatColor(OB->NNUM));
+		char cc[128];
+		int adp=100;
+		bool GetMineProduceBonus(OneObject* Mine,int& Proc);
+		GetMineProduceBonus(OB,adp);		
+		if(!IsEnemyUnit( OB ) || OB->WatchNInside)
+		{
+			int nn=(adp*OB->NInside)/100;
+			if(nn>OB->NInside){
+				sprintf(cc,"%d+%d/%d",OB->NInside,nn-OB->NInside,OB->MoreCharacter->MaxInside+OB->AddInside);
+			}else
+			if(nn<OB->NInside){
+				sprintf(cc,"%d-%d/%d",OB->NInside,OB->NInside-nn,OB->MoreCharacter->MaxInside+OB->AddInside);
+			}else{
+				sprintf(cc,"%d/%d",OB->NInside,OB->MoreCharacter->MaxInside+OB->AddInside);
+			}
+		}
+		else
+		{
+			sprintf(cc,"?/%d",OB->MoreCharacter->MaxInside+OB->AddInside);
+		}
+
+		DWORD C=GPS.GetCurrentDiffuse();
+		GPS.SetCurrentDiffuse(SmallWhiteFont.GetColor());
+
+		int H=GetRLCHeight(SmallWhiteFont.RLC,'C');
+		ShowString(x0+12,y0-14+8-H,cc,&SmallWhiteFont);
+
+		GPS.SetCurrentDiffuse(C);
+
+	}else{
+		
+		GPS.DrawFillRect( lt.x, lt.y, health, 2, clrHealth );
+
+		// side-frame
+		GPS.DrawLine( lt.x-1, lt.y, lt.x-1, lb.y, 0xFFFFFFFF );
+		GPS.DrawLine( lt.x + width, lt.y, lb.x + width, lb.y, 0xFFFFFFFF );
+
+	}
 }; // DrawHealth
 
 CEXPORT void DrawHealthEx(OneObject* OB){
@@ -1090,7 +1096,7 @@ int SortPlayers(byte* Res,int* par){
 	word msks[8];
 	SC.Copy(msks);
 	int ps=0;
-	for(q=0;q<np;q++){
+	for(int q=0;q<np;q++){
 		byte msk=byte(msks[q]);
 		int mp=0;
 		byte m0=1;
@@ -2674,7 +2680,7 @@ void GFieldShow(){
 		};
 		yyy0-=20;
 	};
-extern bool InEdit;
+
 	if(tmtmt>20&&!Inform){
 		if(LastTimeStage==-1){
 			LastTimeStage=GetRealTime();
@@ -2719,39 +2725,7 @@ extern bool InEdit;
 			ShowString(minix,miniy-22-4+DY-8,cc1,&SmallWhiteFont);
 			DY=-14;
 			ISM->Flush();
-		}else if (!(InEdit)){//10.10.2024 TBH Timer feature
-			int t=TrueTime/1000;
-			int s=t%60;
-			int m=(t/60)%60;
-			int h=t/3600;
-			if(s<10&&m<10)sprintf(cc1,"%d:0%d:0%d",h,m,s);
-			else if(s<10&&m>=10)sprintf(cc1,"%d:%d:0%d",h,m,s);
-			else if(s>10&&m<10)sprintf(cc1,"%d:0%d:%d",h,m,s);
-			else sprintf(cc1,"%d:%d:%d",h,m,s);		
-			char cc4[400];
-			ShowString(minix+2,miniy-22+2-4+DY-8,cc1,&SmallBlackFont);
-			ISM->Flush();
-			ShowString(minix,miniy-22-4+DY-8,cc1,&SmallWhiteFont);
-			DY=-14;
-			ISM->Flush();
-		}
-		//  draw health for units TBH Health Fix suka blyat 22.10.2024
-		extern byte PlayGameMode;
-		extern word DrawHealthID;
-		extern int DrawHealthCount;
-
-		extern word Att;
-		extern word Friend;
-		word NMask=NATIONS[MyNation].NMask;
-		for(int i=0;i<MAXOBJECT;i++){
-		OneObject* OB=Group[i];
-		if( OB && v_ISys.AltDrawHealth && ( OB->Index==DrawHealthID || v_ISys.AltDrawHealth&&(GetKeyState(VK_MENU)&0x8000) || OB->Index==Att || OB->Index==Friend ) && PlayGameMode==0 ){
-			if(GSets.CGame.ViewMask==255){
-		    void DrawHealth(OneObject* OB);
-		    DrawHealth(OB);
-			}
-		 }
-	}
+		};
 		byte ord[8];
 		int  par[8];
 		int no=SortPlayers(ord,par);
@@ -2798,7 +2772,8 @@ extern bool InEdit;
 						CEXPORT DWORD GetNatColor( int natIdx );
 						DWORD c=GetNatColor(ord[q]);
 						if(!(ms&prevms)){
-							for(int w=q;w<no&&(NATIONS[GSets.CGame.cgi_NatRefTBL[ord[w]]].NMask&ms);w++);
+							int w;
+							for(w=q;w<no&&(NATIONS[GSets.CGame.cgi_NatRefTBL[ord[w]]].NMask&ms);w++);
 							w-=q;
 							if(w>1){
 								int y0=y+1+2;
@@ -2964,8 +2939,8 @@ extern bool InEdit;
 	//ShowString(smapx,ssy,ggg,&SmallWhiteFont);
 	//ssy+=stDY;
 
-	sprintf(ggg,"POOL: [8:%dk] [16:%dk] [32:%dk] [64:%dk] [128:%dk]",POOL.pool_08.GetMemoryUsed()/1000,POOL.pool_16.GetMemoryUsed()/1000,POOL.pool_32.GetMemoryUsed()/1000,POOL.pool_64.GetMemoryUsed()/1000,POOL.pool_128.GetMemoryUsed()/1000);	
-	ShowString(smapx,ssy,ggg,&SmallWhiteFont);
+	//sprintf(ggg,"POOL: [8:%dk] [16:%dk] [32:%dk] [64:%dk] [128:%dk]",POOL.pool_08.GetMemoryUsed()/1000,POOL.pool_16.GetMemoryUsed()/1000,POOL.pool_32.GetMemoryUsed()/1000,POOL.pool_64.GetMemoryUsed()/1000,POOL.pool_128.GetMemoryUsed()/1000);	
+	//ShowString(smapx,ssy,ggg,&SmallWhiteFont);
 	ssy+=stDY;
 
 	int texsz_managed=0;
@@ -3013,6 +2988,7 @@ extern bool InEdit;
 			if(AV&&OB->NNUM==MyNation)val+=AV[OB->NIndex];
 			if(!(OB->NMask&NMask))exp+=OB->newMons->Expa;
 		}
+		
 	}
 	if(val){
 		char Buf[400];
@@ -3185,7 +3161,7 @@ void SaveFogToBmp(char* name){
     int LY=263;
     BYTE* ptr=new BYTE[LX*LY*3];
     int N=LX*LY;
-    for(int i=0,int i3=0;i<N;i++,i3+=3){
+    for(int i=0,i3=0;i<N;i++,i3+=3){
         int c=fmap[i];
         c>>=4;
         if(c>255)c=255;
@@ -3842,10 +3818,6 @@ void GlobalHandleMouse(){
 			ProcessMapInterface();
 		};
 	};
-	if(PlayGameMode==2){
-		if(Inform)OptHidden=1;
-		ProcessMapInterface();
-	}
 	if(DRAWLOCK){		
 		ProcessTexPiece((mapx<<5)+(RealLx>>1),(mapy<<5)+RealLy,0);
 		//ShowRMap();
@@ -4551,9 +4523,9 @@ void HandleMouse(int x,int y)
 	if(cooren){
 		SpotVis=GetObjectVisibilityInFog(xmx,yreal,GetHeight(xmx,yreal),NULL);
 	}
-	static altP=0;
-	static altPx=0;
-	static altPy=0;
+	static int altP=0;
+	static int altPx=0;
+	static int altPy=0;
 	bool ALTP=GetKeyState('X')&0x8000;
 	if(ALTP&!altP){
 		altP=1;
@@ -6444,7 +6416,8 @@ void DrawSmartArrow(int x0,int y0,int x1,int y1,byte StartDirection
 	//drawing
 	int dd=(EndThickness/st)*2+1;
 	if(dd>nw)dd=nw;
-	for(int i=0;i<nw-dd;i++){
+	int i;
+	for(i=0;i<nw-dd;i++){
 		float ZC=z0+(z1-z0)*i/nw;
 		float ZN=z0+(z1-z0)*(i+1)/nw;
 		Vector3D V1=SkewPt(WayXL[i],WayYL[i],ZC);

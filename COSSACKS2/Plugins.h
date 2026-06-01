@@ -17,7 +17,7 @@ typedef unsigned char byte;
 
 class Brigade{
 };
-
+#include "..\CommCore\CommCore.h"
 #include "common.h"
 #include "NewAnimation.h"
 #include "Weapon.h"
@@ -47,11 +47,8 @@ class Brigade{
 #include "supereditor.h"
 #include "UnitAbility.h"
 
-#include "mesh\UniHash.h"
+#include "UnicHash.h"
 
 #include "PluginsInterface.h"
-
-void StartDialogLink(OneObject* OB);
-bool StartDialog(OneObject* OB, byte OrdType, OneObject* DialogOB);
 
 // TODO: reference additional headers your program requires here

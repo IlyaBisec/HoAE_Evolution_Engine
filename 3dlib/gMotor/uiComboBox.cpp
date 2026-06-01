@@ -36,9 +36,9 @@ ComboWidget::ComboWidget()
     m_bDropActive   = false;
     m_ThumbWidth    = 13;
 
-    m_Thumb.sigPressed.Connect( this, OnDropDown );
-    m_DropList.sigSelChanged.Connect( this, OnSelectItem );
-    sigUnfocus.Connect( this, HideDropList );
+    m_Thumb.sigPressed.Connect( this, &ComboWidget::OnDropDown );
+    m_DropList.sigSelChanged.Connect( this, &ComboWidget::OnSelectItem );
+    sigUnfocus.Connect( this, &ComboWidget::HideDropList );
 } // ComboWidget::ComboWidget
 
 void ComboWidget::Render()

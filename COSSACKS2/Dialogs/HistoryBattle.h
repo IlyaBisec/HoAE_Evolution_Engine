@@ -307,7 +307,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 	PIEnumeratePlayers(GSets.CGame.PL_INFO,0);
 	if(NPlayers>2)NPlayers=2;
 	byte CUSED=0;
-	for(i=0;i<NPlayers;i++){
+	for(int i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID!=MyDPID){
 			CUSED|=(1<<GSets.CGame.PL_INFO[i].ColorID);
 		};
@@ -318,7 +318,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 		cc1++;
 		mss1<<=1;
 	};
-	for(i=0;i<NPlayers;i++){
+	for(int i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 			GSets.CGame.PL_INFO[i].ColorID=cc1;
 			ColorBack[i]->Nation=cc1;
@@ -356,7 +356,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 	int NOMREADY=-1;
 	word MaxVers=0;
 	char* OLDV=GetTextByID("OLDVER");
-	for(i=0;i<2;i++)GSets.CGame.PL_INFO[i].MapStyle=BattleID;
+	for(int i=0;i<2;i++)GSets.CGame.PL_INFO[i].MapStyle=BattleID;
 	//if(Host)strcpy(MENU.DefaultHint,GetTextByID("DEVHISUS"));
 	
 	StartMixing();
@@ -380,7 +380,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 			OkBtn->PassiveFrame=2;
 		}
 
-		for(i=0;i<NPlayers;i++){
+		for(int i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 				if(Host)GSets.CGame.PL_INFO[i].Ready=1;
 				GSets.CGame.PL_INFO[i].Host=Host;
@@ -392,7 +392,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 		int NCL=7;
 		bool AddChat=0;
 		HostID=-1;
-		for(i=0;i<NPlayers;i++){
+		for(int i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].Host)HostID=i;
 		};
 		
@@ -544,10 +544,10 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 			};
 		};
 		MaxVers=0;
-		for(i=0;i<NPlayers;i++){
+		for(int i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].Version>MaxVers)MaxVers=GSets.CGame.PL_INFO[i].Version;
 		};
-		for(i=0;i<2;i++){
+		for(int i=0;i<2;i++){
 			if(i<NPlayers){
 				if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 					GSets.CGame.PL_INFO[i].NationID=MNATION[i]->CurLine;
@@ -676,6 +676,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 				strcpy(GSets.CGame.cgi_CurrentMap,GSets.CGame.PL_INFO[HostID].MapName);
 			};
 		};
+		int i;
 		for(i=0;i<NPlayers;i++){
 			MNATION[i]->CurLine=GSets.CGame.PL_INFO[i].NationID;
 			ColorBack[i]->Nation=GSets.CGame.PL_INFO[i].ColorID;
@@ -869,7 +870,7 @@ int ProcessWars(){
 		MMenu.addGPPicture(NULL,68,166+i*26,OCAM.GPID,6);
 
 	GPPicture* ZBTL[5];
-	for(i=0;i<5;i++){
+	for(int i=0;i<5;i++){
 		ZBTL[i]=MMenu.addGPPicture(NULL,444,166+26*i,OCAM.GPID,6);
 		ZBTL[i]->Visible=0;
 	};
@@ -883,7 +884,7 @@ int ProcessWars(){
 	CBat->M_Over=3;
 	TextViewer* TV[32];
 	VScrollBar* VS[32];
-	for(i=0;i<WARS.NWars;i++){
+	for(int i=0;i<WARS.NWars;i++){
 		CWar->AddItem(WARS.Wars[i].Name,0);
 		TV[i]=MMenu.addTextViewer(NULL,78,353,663,275,WARS.Wars[i].Text,&YellowFont);
 		TV[i]->Visible=0;
@@ -916,7 +917,7 @@ WStart:;
 		MMenu.MarkToDraw();
 		MMenu.ProcessDialogs();		
 		MMenu.RefreshView();
-		for(i=0;i<WARS.NWars;i++){
+		for(int i=0;i<WARS.NWars;i++){
 			TV[i]->Enabled=false;
 			TV[i]->Visible=false;
 			TV[i]->Active=false;
@@ -927,7 +928,7 @@ WStart:;
 		TV[CWar->CurItem]->Active=1;
 		VS[CWar->CurItem]->Visible=VS[CWar->CurItem]->SMaxPos>0;
 		int NBTL=WARS.Wars[CWar->CurItem].NBatles;
-		for(i=0;i<5;i++)ZBTL[i]->Visible=i<NBTL;
+		for(int i=0;i<5;i++)ZBTL[i]->Visible=i<NBTL;
 		if(mm){
 			//SlowLoadPalette("2\\agew_1.pal");
 			mm=0;

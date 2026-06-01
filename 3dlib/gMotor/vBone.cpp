@@ -28,9 +28,9 @@ ModelBone::ModelBone()
 void ModelBone::Expose( PropertyMap& pm )
 {
     pm.start( "ModelBone", this );
-    pm.p( "NodeType", ClassName );
-    pm.p( "Name", GetName, SetName );
-    pm.p( "ID", GetID );
+    pm.p( "NodeType", &ModelBone::ClassName );
+    pm.p( "Name", &ModelBone::GetName, &ModelBone::SetName );
+    pm.p( "ID", &ModelBone::GetID );
 } // ModelBone::Expose
 
 IReflected* ModelBone::Child( int idx ) const
@@ -111,8 +111,8 @@ IReflected* Skeleton::Child( int idx ) const
 void Skeleton::Expose( PropertyMap& pm )
 {
     pm.start( "Skeleton", this );
-    pm.p( "NodeType", ClassName );
-    pm.p( "NumBones", GetNBones );
+    pm.p( "NodeType", &Skeleton::ClassName );
+    pm.p( "NumBones", &Skeleton::GetNBones );
     pm.f( "DrawBones", m_bDrawBones );
     pm.f( "DrawLabels", m_bDrawBoneLabels );
 } // Skeleton::Expose

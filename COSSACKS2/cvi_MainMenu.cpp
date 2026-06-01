@@ -57,8 +57,8 @@ bool EnableRestoreMusic=true;
 //
 void cvi_MainMenu::ProcessDSinGame(){
 	if(GameMode&&vDS&&!Exit){
-		vDS->SetWidth(GSets.SVOpt.ScreenSizeX);
-		vDS->SetHeight(GSets.SVOpt.ScreenSizeY);
+		vDS->SetWidth(RealLx);
+		vDS->SetHeight(RealLy);
 		if(Cross==1&&CrossTime==0){
 			Cross=0;						
 		}
@@ -160,8 +160,8 @@ bool cvi_MainMenu::StartDS(char* ID, bool gMode){
 						//void StopLoopSounds();
 						//StopLoopSounds();
 					}
-					DS->SetWidth(GSets.SVOpt.ScreenSizeX);
-					DS->SetHeight(GSets.SVOpt.ScreenSizeY);
+					DS->SetWidth(RealLx);
+					DS->SetHeight(RealLy);
 					if(GameMode){
 						GSets.CGame.ViewMask=0;//251;
 						ProcessScreen();

@@ -1446,7 +1446,7 @@ int Process_GSC_ChatWindow(bool Active,RoomInfo* RIF){
 			for(int i=0;i<CSYS.CCH[CSYS.CurChannel].NPlayers;i++){
 				if(!strcmp(CSYS.CCH[CSYS.CurChannel].Players[i].Nick,CURRPL))PLLIST->CurrentItem=i;
 			};
-			for(i=0;i<CSYS.NAbsPlayers;i++){
+			for(int i=0;i<CSYS.NAbsPlayers;i++){
 				if(!strcmp(CSYS.AbsPlayers[i].Nick,CURRPL))PLLIST->CurrentItem=i+CSYS.CCH[CSYS.CurChannel].NPlayers;
 			};
 		};

@@ -435,8 +435,8 @@ class	CError
 class	CStorageData
 	{
 	public:
-		CStorage();
-		CStorage(char* pchFilePath);
+		void CStorage();
+		void CStorage(char* pchFilePath);
 	private:
 		char	m_chFilePath[256];
 	public:
@@ -1579,7 +1579,7 @@ class	CPicesPict : public CStatusDRV, public CError
 		void	MoveX(int dx);
 		void	MoveY(int dy);
 	public:
-		void	SetScreen(int x0=0,int y0=0,int H=1080, int W=1920); //Установить ширину и высоту экрана.
+		void	SetScreen(int x0=0,int y0=0,int H=768, int W=1024); //Установить ширину и высоту экрана.
 		void	GetMapSize(int &dx,int &dy,int &w,int &h);
 
 		void	ScrollPic(int mx,int my);

@@ -48,7 +48,7 @@ bool EnterName(){
 	UniversalButton* TBS[14];
 	GPPicture* GPP[14];
 	
-	const NPlayers = 10;
+	const int NPlayers = 10;
 	int XL0=446;
 	int YL0=255;
 	for(int i=0;i<NPlayers;i++)TBS[i]=NULL;
@@ -144,7 +144,7 @@ bool EnterName(){
 			int NN=0;
 			fprintf(F,"%s\n",PlName);
 			NN++;
-			for(i=0;i<N;i++){
+			for(int i=0;i<N;i++){
 				if(NN<12&&strcmp(PlName,TBS[i]->Message)){
 					fprintf(F,"%s\n",TBS[i]->Message);
 					NN++;

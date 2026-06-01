@@ -239,17 +239,17 @@ float PEmitter::GetTimeToLive( const PParticle& p )
 void PEmitter::Expose( PropertyMap& pm )
 {
     pm.start( "PEmitter", this );
-    pm.p( "Type",                   ClassName                           );
-    pm.p( "Name",                   GetName, SetName                    );
-    pm.p( "Invisible",                IsInvisible, SetInvisible           );
+    pm.p( "Type", &PEmitter::ClassName                           );
+    pm.p( "Name", &PEmitter::GetName, &PEmitter::SetName                    );
+    pm.p( "Invisible", &PEmitter::IsInvisible, &PEmitter::SetInvisible           );
 
     pm.f( "StartTime",                m_StartTime                         );    
     pm.f( "TotalTime",                m_TotalTime                         );  
     pm.f( "WarmupTime",               m_WarmupTime                          );
-    pm.p( "RandomWarmup",             IsRandomWarmup, SetRandomWarmup);    
-    pm.p( "Looped",                   IsLooped, SetLooped                 );    
-    pm.p( "AutoUpdate",               IsAutoUpdated, SetAutoUpdated       );    
-    pm.p( "PlayForever",              IsPlayedForever, SetPlayedForever   );    
+    pm.p( "RandomWarmup", &PEmitter::IsRandomWarmup, &PEmitter::SetRandomWarmup);
+    pm.p( "Looped", &PEmitter::IsLooped, &PEmitter::SetLooped                 );
+    pm.p( "AutoUpdate", &PEmitter::IsAutoUpdated, &PEmitter::SetAutoUpdated       );
+    pm.p( "PlayForever", &PEmitter::IsPlayedForever, &PEmitter::SetPlayedForever   );
     pm.f( "WorldSpace",               m_bWorldSpace                       );
 
     pm.f( "TimeToLive",               m_TimeToLive                        );    
@@ -377,15 +377,15 @@ PStaticEmitter::PStaticEmitter()
 void PStaticEmitter::Expose( PropertyMap& pm )
 {
     pm.start( "PStaticEmitter", this );
-    pm.p( "Name",             GetName, SetName                       );
-    pm.p( "Invisible",        IsInvisible, SetInvisible              );
+    pm.p( "Name", &PStaticEmitter::GetName, &PStaticEmitter::SetName                       );
+    pm.p( "Invisible", &PStaticEmitter::IsInvisible, &PStaticEmitter::SetInvisible              );
     pm.f( "StartTime",        m_StartTime                            );    
-    pm.p( "TotalTime",        GetStaticTotalTime, SetStaticTotalTime );
+    pm.p( "TotalTime", &PStaticEmitter::GetStaticTotalTime, &PStaticEmitter::SetStaticTotalTime );
     pm.f( "WarmupTime",       m_WarmupTime                           );
-    pm.p( "RandomWarmup",     IsRandomWarmup, SetRandomWarmup        );    
-    pm.p( "Looped",           IsLooped, SetLooped                    );    
-    pm.p( "AutoUpdate",       IsAutoUpdated, SetAutoUpdated          );    
-    pm.p( "PlayForever",      IsPlayedForever, SetPlayedForever      );    
+    pm.p( "RandomWarmup", &PStaticEmitter::IsRandomWarmup, &PStaticEmitter::SetRandomWarmup        );
+    pm.p( "Looped", &PStaticEmitter::IsLooped, &PStaticEmitter::SetLooped                    );
+    pm.p( "AutoUpdate", &PStaticEmitter::IsAutoUpdated, &PStaticEmitter::SetAutoUpdated          );
+    pm.p( "PlayForever", &PStaticEmitter::IsPlayedForever, &PStaticEmitter::SetPlayedForever      );
     pm.f( "WorldSpace",       m_bWorldSpace                          );
 }
 
@@ -460,9 +460,9 @@ void PRampEmitter::Expose( PropertyMap& pm )
     pm.start<Parent>( "PRampEmitter", this );
     pm.f( "MinRate", m_MinRate );
     pm.f( "MaxRate", m_MaxRate );
-    pm.f( "Repeat",  m_NRepeats );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp",    GetRamp, SetRamp );
+    pm.f( "Repeat", m_NRepeats );
+    pm.p( "NumKeys", &PRampEmitter::GetNKeys );
+    pm.p( "Ramp", &PRampEmitter::GetRamp, &PRampEmitter::SetRamp );
 } // PRampEmitter::Expose
 
 void PRampEmitter::Serialize( OutStream& os ) const
@@ -655,7 +655,7 @@ void PModelPlacer::Process( PEmitterInstance* pEmitter )
 void PModelPlacer::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PModelPlacer", this );
-    pm.p( "ModelFile", GetModelFile, SetModelFile, "#model" );
+    pm.p( "ModelFile", &PModelPlacer::GetModelFile, &PModelPlacer::SetModelFile, "#model" );
 }
 
 void PModelPlacer::Serialize( OutStream& os ) const
@@ -1038,8 +1038,8 @@ void PShooter::Process( PEmitterInstance* pEmitter )
         {
             float mag = rndValuef( m_Velocity - m_VelocityD, m_Velocity + m_VelocityD );
             Vector3D vel = GetDirection( *p );
-			//pEmitter->m_WorldTM.transformVec( vel );
-            if (pEmitter->m_pEmitter->IsWorldSpace()) pEmitter->m_WorldTM.transformVec( vel );
+			pEmitter->m_WorldTM.transformVec( vel );
+            //if (pEmitter->m_pEmitter->IsWorldSpace()) pEmitter->m_WorldTM.transformVec( vel );
             vel.normalize();
             vel *= mag*s;
             p->m_Velocity += vel;
@@ -1245,8 +1245,8 @@ void PRampShooter::Expose( PropertyMap& pm )
     pm.start<Parent>( "PRampShooter", this );
     pm.f( "Variation", m_Variation );
     pm.f( "Repeats", m_Repeat );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetRamp, SetRamp );
+    pm.p( "NumKeys", &PRampShooter::GetNKeys );
+    pm.p( "Ramp", &PRampShooter::GetRamp, &PRampShooter::SetRamp );
 }
 
 void PRampShooter::Serialize( OutStream& os ) const
@@ -1336,8 +1336,8 @@ POperator::POperator()
 void POperator::Expose( PropertyMap& pm )
 {
     pm.start( "POperator", this );
-    pm.p( "Invisible",        IsInvisible, SetInvisible );
-    pm.p( "DrawGizmo",        DoDrawGizmo, SetDrawGizmo );
+    pm.p( "Invisible", &POperator::POperator::IsInvisible, &POperator::SetInvisible );
+    pm.p( "DrawGizmo", &POperator::DoDrawGizmo, &POperator::SetDrawGizmo );
 } // POperator::Expose
 
 /*****************************************************************************/
@@ -1607,19 +1607,19 @@ PRenderer::PRenderer()
 void PRenderer::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PRenderer", this );
-    pm.p( "Pixels",            GetTexID,        SetTexID,        "texture"        );
-    pm.p( "Texture",        GetTexName,        SetTexName,        "#texture"      );
-    pm.p( "Pixels2",        GetTexID2,        SetTexID2,        "texture"        );
-    pm.p( "Texture2",        GetTexName2,    SetTexName2,    "#texture"      );
-    pm.p( "BlendMode",      GetBlendMode,   SetBlendMode    );
-    pm.p( "Intensity",      GetIntensity,   SetIntensity    );
-    pm.p( "DoZTest",        IsZTest,        SetZTest        );
-    pm.p( "DoZWrite",       IsZWrite,       SetZWrite        );
-    pm.p( "Dither",         IsDitherEnable, SetDitherEnable );
-    pm.p( "FilterTexture",  IsFilterTexture, SetFilterTexture );
-    pm.p( "HeadMoveDir",    IsHeadMoveDir,  SetHeadMoveDir    );
-    pm.p( "NullLayer",      IsNullLayer,    SetNullLayer    );
-    pm.p( "ZBias",          GetZBias,       SetZBias        );
+    pm.p( "Pixels", &PRenderer::GetTexID, &PRenderer::SetTexID,        "texture"        );
+    pm.p( "Texture", &PRenderer::GetTexName, &PRenderer::SetTexName,        "#texture"      );
+    pm.p( "Pixels2", &PRenderer::GetTexID2, &PRenderer::SetTexID2,        "texture"        );
+    pm.p( "Texture2", &PRenderer::GetTexName2, &PRenderer::SetTexName2,    "#texture"      );
+    pm.p( "BlendMode", &PRenderer::GetBlendMode, &PRenderer::SetBlendMode    );
+    pm.p( "Intensity", &PRenderer::GetIntensity, &PRenderer::SetIntensity    );
+    pm.p( "DoZTest", &PRenderer::IsZTest, &PRenderer::SetZTest        );
+    pm.p( "DoZWrite", &PRenderer::IsZWrite, &PRenderer::SetZWrite        );
+    pm.p( "Dither", &PRenderer::IsDitherEnable, &PRenderer::SetDitherEnable );
+    pm.p( "FilterTexture", &PRenderer::IsFilterTexture, &PRenderer::SetFilterTexture );
+    pm.p( "HeadMoveDir", &PRenderer::IsHeadMoveDir, &PRenderer::SetHeadMoveDir    );
+    pm.p( "NullLayer", &PRenderer::IsNullLayer, &PRenderer::SetNullLayer    );
+    pm.p( "ZBias", &PRenderer::GetZBias, &PRenderer::SetZBias        );
     pm.f( "Tint",           m_Tint, "color" );
 } // PRenderer::Expose
 
@@ -1811,8 +1811,8 @@ void PModelRenderer::RenderGeometry( PEmitterInstance* pEmitter )
 void PModelRenderer::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PModelRenderer", this );
-    pm.p( "ModelObject", GetModelName, SetModelName, "#model" );
-    pm.p( "Animation", GetAnimName, SetAnimName, "#model" );
+    pm.p( "ModelObject", &PModelRenderer::GetModelName, &PModelRenderer::SetModelName, "#model" );
+    pm.p( "Animation", &PModelRenderer::GetAnimName, &PModelRenderer::SetAnimName, "#model" );
 } // PModelRenderer::Expose
 
 void PModelRenderer::Serialize( OutStream& os ) const
@@ -1833,8 +1833,8 @@ void PModelRenderer::Unserialize( InStream& is  )
 void PModelRendererWithStop::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PModelRendererWithStop", this );
-    pm.p( "ModelObject", GetModelName, SetModelName, "#model" );
-    pm.p( "Animation", GetAnimName, SetAnimName, "#model" );
+    pm.p( "ModelObject", &PModelRendererWithStop::GetModelName, &PModelRendererWithStop::SetModelName, "#model" );
+    pm.p( "Animation", &PModelRendererWithStop::GetAnimName, &PModelRendererWithStop::SetAnimName, "#model" );
     pm.f( "FadeOnDeathTime", m_FadeOnDeathTime );
     pm.f( "UseStopFrame", m_UseStopFrame );
     pm.f( "StopFramePercent", m_StopFramePercent );    
@@ -2241,13 +2241,13 @@ void PConeRenderer::RenderGeometry( PEmitterInstance* pEmitter )
 void PConeRenderer::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PConeRenderer", this );
-    pm.p( "HeightSegs",      GetNHSegs,      SetNHSegs       );
-    pm.p( "CircleSegs",      GetNCSegs,      SetNCSegs       );
-    pm.p( "TopRadius",       GetTopR,        SetTopR         );
-    pm.p( "BottomRadius",    GetBotR,        SetBotR         );
-    pm.p( "Height",          GetConeHeight,  SetConeHeight   );
-    pm.p( "TopAlpha",        GetTopAlpha,    SetTopAlpha     );
-    pm.p( "BotAlpha",        GetBotAlpha,    SetBotAlpha     );
+    pm.p( "HeightSegs", &PConeRenderer::GetNHSegs, &PConeRenderer::SetNHSegs       );
+    pm.p( "CircleSegs", &PConeRenderer::GetNCSegs, &PConeRenderer::SetNCSegs       );
+    pm.p( "TopRadius", &PConeRenderer::GetTopR, &PConeRenderer::SetTopR         );
+    pm.p( "BottomRadius", &PConeRenderer::GetBotR, &PConeRenderer::SetBotR         );
+    pm.p( "Height", &PConeRenderer::GetConeHeight, &PConeRenderer::SetConeHeight   );
+    pm.p( "TopAlpha", &PConeRenderer::GetTopAlpha, &PConeRenderer::SetTopAlpha     );
+    pm.p( "BotAlpha", &PConeRenderer::GetBotAlpha, &PConeRenderer::SetBotAlpha     );
 } // PConeRenderer::Expose
 
 /*****************************************************************************/
@@ -2382,12 +2382,12 @@ void PSphereRenderer::Unserialize( InStream& is  )
 void PSphereRenderer::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PSphereRenderer", this );
-    pm.p( "Hemisphere", GetHemisphere, SetHemisphere );
-    pm.p( "HeightSegs", GetNHSegs,      SetNHSegs );
-    pm.p( "CircleSegs", GetNCSegs,      SetNCSegs );
-    pm.p( "TopRadius",  GetRadius,      SetRadius );
-    pm.p( "PolePhi",    GetPolePhi,     SetPolePhi );
-    pm.p( "PoleTheta",  GetPoleTheta,   SetPoleTheta );
+    pm.p( "Hemisphere", &PSphereRenderer::GetHemisphere, &PSphereRenderer::SetHemisphere );
+    pm.p( "HeightSegs", &PSphereRenderer::GetNHSegs, &PSphereRenderer::SetNHSegs );
+    pm.p( "CircleSegs", &PSphereRenderer::GetNCSegs, &PSphereRenderer::SetNCSegs );
+    pm.p( "TopRadius", &PSphereRenderer::GetRadius, &PSphereRenderer::SetRadius );
+    pm.p( "PolePhi", &PSphereRenderer::GetPolePhi, &PSphereRenderer::SetPolePhi );
+    pm.p( "PoleTheta", &PSphereRenderer::GetPoleTheta, &PSphereRenderer::SetPoleTheta );
 } // PSphereRenderer::Expose
 
 /*****************************************************************************/
@@ -2592,8 +2592,8 @@ void PChainRenderer::RenderGeometry( PEmitterInstance* pEmitter )
 void PChainRenderer::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PChainRenderer", this );
-    pm.p( "BindHead", IsBindHead, SetBindHead );
-    pm.p( "AlignGround", IsAlignGround, SetAlignGround );
+    pm.p( "BindHead", &PChainRenderer::IsBindHead, &PChainRenderer::SetBindHead );
+    pm.p( "AlignGround", &PChainRenderer::IsAlignGround, &PChainRenderer::SetAlignGround );
     pm.f( "MaxLength", m_MaxLength );
 } // PChainRenderer::Expose
 
@@ -2824,7 +2824,7 @@ PColorInit::PColorInit()
 void PColorInit::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PColorInit", this );
-    pm.p( "Color", GetAvgColor, SetAvgColor, "color" );
+    pm.p( "Color", &PColorInit::GetAvgColor, &PColorInit::SetAvgColor, "color" );
     pm.f( "dRed",    m_RedV        );
     pm.f( "dGreen", m_GreenV    );
     pm.f( "dBlue",    m_BlueV        );
@@ -2877,8 +2877,8 @@ PColorRampInit::PColorRampInit()
 void PColorRampInit::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PColorRampInit", this );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetColorRamp, SetColorRamp );
+    pm.p( "NumKeys", &PColorRampInit::GetNKeys );
+    pm.p( "Ramp", &PColorRampInit::GetColorRamp, &PColorRampInit::SetColorRamp );
 } // PColorRampInit::Expose
 
 void PColorRampInit::Serialize( OutStream& os ) const
@@ -2989,8 +2989,8 @@ void PFrameInit::Expose( PropertyMap& pm )
     pm.start<Parent>( "PFrameInit", this );
     pm.f( "Columns",        m_NCols );
     pm.f( "Rows",            m_NRows );
-    pm.p( "SecondChannel",  IsSecondChannel, SetIsSecondChannel );
-    pm.p( "SequentialInit", IsSequentialInit, SetIsSequentialInit );
+    pm.p( "SecondChannel", &PFrameInit::IsSecondChannel, &PFrameInit::SetIsSecondChannel );
+    pm.p( "SequentialInit", &PFrameInit::IsSequentialInit, &PFrameInit::SetIsSequentialInit );
 } // PFrameInit::Expose
 
 void PFrameInit::Serialize( OutStream& os ) const
@@ -3375,8 +3375,8 @@ void PAVelRamp::Expose( PropertyMap& pm )
     pm.f( "MaxVel",        m_MaxVel );
     pm.f( "Axis",        m_Axis );
     pm.f( "Repeat",        m_Repeat );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetVelRamp, SetVelRamp );
+    pm.p( "NumKeys", &PAVelRamp::GetNKeys );
+    pm.p( "Ramp", &PAVelRamp::GetVelRamp, &PAVelRamp::SetVelRamp );
 } // PAVelRamp::Expose
 
 void PAVelRamp::Serialize( OutStream& os ) const
@@ -3426,8 +3426,8 @@ void PVelRamp::Expose( PropertyMap& pm )
     pm.f( "MinVel",        m_MinVel );
     pm.f( "MaxVel",        m_MaxVel );
     pm.f( "Repeat",        m_Repeat );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetVelRamp, SetVelRamp );
+    pm.p( "NumKeys", &PVelRamp::GetNKeys );
+    pm.p( "Ramp", &PVelRamp::GetVelRamp, &PVelRamp::SetVelRamp );
 } // PVelRamp::Expose
 
 void PVelRamp::Serialize( OutStream& os ) const
@@ -3526,8 +3526,8 @@ void PAlphaRamp::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PAlphaRamp", this );
     pm.f( "Repeat", m_NRepeats );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetAlphaRamp, SetAlphaRamp );
+    pm.p( "NumKeys", &PAlphaRamp::GetNKeys );
+    pm.p( "Ramp", &PAlphaRamp::GetAlphaRamp, &PAlphaRamp::SetAlphaRamp );
 } // PAlphaRamp::Expose
 
 void PAlphaRamp::Serialize( OutStream& os ) const
@@ -3570,8 +3570,8 @@ void PColorRamp::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PColorRamp", this );
     pm.f( "Repeat", m_NRepeats );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetColorRamp, SetColorRamp );
+    pm.p( "NumKeys", &PColorRamp::GetNKeys );
+    pm.p( "Ramp", &PColorRamp::GetColorRamp, &PColorRamp::SetColorRamp );
 } // PColorRamp::Expose
 
 void PColorRamp::Serialize( OutStream& os ) const
@@ -3732,8 +3732,8 @@ void PSizeRamp::Expose( PropertyMap& pm )
     pm.f( "MaxSize",    m_MaxSize );
     pm.f( "Axis",        m_Axis );
     pm.f( "Repeat",        m_Repeat );
-    pm.p( "NumKeys", GetNKeys );
-    pm.p( "Ramp", GetSizeRamp, SetSizeRamp );
+    pm.p( "NumKeys", &PSizeRamp::GetNKeys );
+    pm.p( "Ramp", &PSizeRamp::GetSizeRamp, &PSizeRamp::SetSizeRamp );
 } // PSizeRamp::Expose
 
 void PSizeRamp::Serialize( OutStream& os ) const
@@ -4054,12 +4054,12 @@ void PDrag::SetToWater()
 void PDrag::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "PDrag", this );
-    pm.p( "FluidDensity",        GetDensity,        SetDensity     );
-    pm.p( "FluidViscosity",    GetViscosity,    SetViscosity );
+    pm.p( "FluidDensity", &PDrag::GetDensity, &PDrag::SetDensity     );
+    pm.p( "FluidViscosity", &PDrag::GetViscosity, &PDrag::SetViscosity );
     pm.f( "OverrideRadius",    m_bOverrideRadius    );
     pm.f( "ParticleRadius",    m_ParticleRadius    );
-    pm.m( "SetToAir",        SetToAir            );
-    pm.m( "SetToWater",        SetToWater            );
+    pm.m( "SetToAir", &PDrag::SetToAir            );
+    pm.m( "SetToWater", &PDrag::SetToWater            );
 } // PDrag::Expose
 
 /*****************************************************************************/
@@ -4536,11 +4536,11 @@ void PEffectManager::Expose( PropertyMap& pm )
     pm.f( "MinTimeDelta",        m_MinDt                    );
     pm.f( "MaxTimeDelta",        m_MaxDt                    );
     pm.f( "InstanceTimeout",    m_InstanceFrameTimeout  );
-    pm.p( "NumEmitterInst",        GetNEmitterInst            );
+    pm.p( "NumEmitterInst", &PEffectManager::GetNEmitterInst            );
     pm.f( "NumParticles",        m_NParticles,        NULL, true );
     pm.f( "LastFreed",            m_LastUsed,        NULL, true );
-    pm.p( "PoolSize", GetParticlePoolSize );
-    pm.m( "Dump", Dump );
+    pm.p( "PoolSize", &PEffectManager::GetParticlePoolSize );
+    pm.m( "Dump", &PEffectManager::Dump );
 } // PEffectManager::Expose
 
 DWORD PEffectManager::GetCurEffInstance() const
@@ -5780,20 +5780,20 @@ void PEffect::Render()
 void PEffect::Expose( PropertyMap& pm )
 {
     pm.start( "PEffect", this );
-    pm.p( "Name",        GetName,        SetName            );
-    pm.p( "Invisible",    IsInvisible,    SetInvisible    );
-    pm.p( "DrawGizmo",    DoDrawGizmo,    SetDrawGizmo    );
-    pm.p( "DrawAABB",    DoDrawAABB,     SetDrawAABB     );
-    pm.p( "Scale",      GetScaleX,      SetScaleX       );
-    pm.p( "PosX",       GetPosX,        SetPosX         );
-    pm.p( "PosY",       GetPosY,        SetPosY         );
-    pm.p( "PosZ",       GetPosZ,        SetPosZ         );
-    pm.p( "RotX",       GetEulerX,      SetEulerX        );
-    pm.p( "RotY",       GetEulerY,      SetEulerY        );
-    pm.p( "RotZ",       GetEulerZ,      SetEulerZ        );
-    pm.p( "Priority",   GetPriority,    SetPriority     );
-    pm.p( "DefaultVisible", IsDefaultVisible, SetDefaultVisible );
-    pm.p( "EffectFile",    GetEffectFile,    SetEffectFile, "#effect" );
+    pm.p( "Name", &PEffect::GetName, &PEffect::SetName            );
+    pm.p( "Invisible", &PEffect::IsInvisible, &PEffect::SetInvisible    );
+    pm.p( "DrawGizmo", &PEffect::DoDrawGizmo, &PEffect::SetDrawGizmo    );
+    pm.p( "DrawAABB", &PEffect::DoDrawAABB, &PEffect::SetDrawAABB     );
+    pm.p( "Scale", &PEffect::GetScaleX, &PEffect::SetScaleX       );
+    pm.p( "PosX", &PEffect::GetPosX, &PEffect::SetPosX         );
+    pm.p( "PosY", &PEffect::GetPosY, &PEffect::SetPosY         );
+    pm.p( "PosZ", &PEffect::GetPosZ, &PEffect::SetPosZ         );
+    pm.p( "RotX", &PEffect::GetEulerX, &PEffect::SetEulerX        );
+    pm.p( "RotY", &PEffect::GetEulerY, &PEffect::SetEulerY        );
+    pm.p( "RotZ", &PEffect::GetEulerZ, &PEffect::SetEulerZ        );
+    pm.p( "Priority", &PEffect::GetPriority, &PEffect::SetPriority     );
+    pm.p( "DefaultVisible", &PEffect::IsDefaultVisible, &PEffect::SetDefaultVisible );
+    pm.p( "EffectFile", &PEffect::GetEffectFile, &PEffect::SetEffectFile, "#effect" );
 } // PEffect::Expose
 
 void PEffect::Serialize( OutStream& os ) const
@@ -5914,8 +5914,8 @@ void Overlay::Expose( PropertyMap& pm )
     pm.f( "du2",        m_UV2.w );
     pm.f( "dv2",        m_UV2.h );
 
-    pm.p( "Animate",    IsAnimated, SetAnimated );
-    pm.p( "ShiftBack",    IsShiftedBack, SetShiftedBack );
+    pm.p( "Animate", &Overlay::IsAnimated, &Overlay::SetAnimated );
+    pm.p( "ShiftBack", &Overlay::IsShiftedBack, &Overlay::SetShiftedBack );
 } // Overlay::Expose
 
 void Overlay::Render()

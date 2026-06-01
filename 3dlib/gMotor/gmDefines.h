@@ -60,6 +60,7 @@ const int    c_NoID  = 0xFFFFFFFF;
 #define BEGIN_NAMESPACE(A)  namespace A{
 #define END_NAMESPACE(A)    }
 
-#define BEGIN_ONCE         {static ___first__ = true; if (___first__) {___first__ = false;  
+#define BEGIN_ONCE         { static bool ___first__ = true; if (___first__) {___first__ = false;
+
 #define END_ONCE           }}
 #endif //__DEFINES_H__

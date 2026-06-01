@@ -1,7 +1,7 @@
 #include "stdheader.h"
-#include "CollidingCamera.h"
+#include "..\surface\CollidingCamera.h"
 #include "vCamera.h"
-#include "TankController.h"
+#include "..\surface\TankController.h"
 #include "..\CurrentMapOptions.h"
 
 Surface::CollidingCamera g_CollidingCamera;

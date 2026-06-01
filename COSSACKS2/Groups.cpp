@@ -450,7 +450,7 @@ word PositionOrder::CreateRotatedPositions(int x,int y,word* IDS,int NIDS,int dx
     OneObject* OB;
 	int TP1=-1;
 	int TP2=-1;
-    for(iy=0;iy<NU;iy++){
+    for(int iy=0;iy<NU;iy++){
         MID=IDE[iy];
         OB=Group[MID];
         if(OB&&OB->NewMonst){
@@ -486,7 +486,7 @@ word PositionOrder::CreateRotatedPositions(int x,int y,word* IDS,int NIDS,int dx
 	int vy=(dy*maxR)/NR;
 	int Dx=(-(Lx-1)*vy+(Ly-1)*vx)>>1;
 	int Dy=((Lx-1)*vx+(Ly-1)*vy)>>1;
-    for(iy=0;iy<Ly;iy++){
+    for(int iy=0;iy<Ly;iy++){
         for(int ix=0;ix<Lx;ix++){
             if(pos<NU){
                 px[pos]=x-ix*vy+iy*vx-Dx;
@@ -571,7 +571,7 @@ word PositionOrder::CreateRotatedPositions2(int x,int y,word* IDS,int NIDS,int d
     word MID;
     int rr;
     OneObject* OB;
-    for(iy=0;iy<NU;iy++){
+    for(int iy=0;iy<NU;iy++){
         MID=IDE[iy];
         OB=Group[MID];
         if(OB&&OB->NewMonst){
@@ -603,7 +603,7 @@ word PositionOrder::CreateRotatedPositions2(int x,int y,word* IDS,int NIDS,int d
 	int vy=(dy*maxR)/NR;
 	int Dx=(-(Lx-1)*vy+(Ly-1)*vx)>>1;
 	int Dy=((Lx-1)*vx+(Ly-1)*vy)>>1;
-    for(iy=0;iy<Ly;iy++){
+    for(int iy=0;iy<Ly;iy++){
         for(int ix=0;ix<Lx;ix++){
             if(pos<NU){
                 px[pos]=x-ix*vy+iy*vx-Dx;
@@ -657,7 +657,7 @@ word PositionOrder::CreatePositions(int x,int y,word* IDS,int NIDS){
     word MID;
     int rr;
     OneObject* OB;
-    for(iy=0;iy<NU;iy++){
+    for(int iy=0;iy<NU;iy++){
         MID=IDE[iy];
         OB=Group[MID];
         if(OB&&OB->NewMonst){
@@ -687,7 +687,7 @@ word PositionOrder::CreatePositions(int x,int y,word* IDS,int NIDS){
     int UX=SX;
     int UY=SY;
     int pos=0;
-    for(iy=0;iy<Ly;iy++){
+    for(int iy=0;iy<Ly;iy++){
         for(int ix=0;ix<Lx;ix++){
             if(pos<NU){
                 px[pos]=UX;
@@ -996,7 +996,7 @@ void GroupAttackSelectedBrigadesTo(byte NI,int x,int y,byte Prio,byte OrdType){
 	};
 	int BCX=0;
 	int BCY=0;
-	for(i=0;i<NBRG;i++){
+	for(int i=0;i<NBRG;i++){
 		Brigade* BR=CITY[NI].Brigs+BRIDX[i];
 		BR->ID-=8192;
 		BR->GetCenter(BRX+i,BRY+i);
@@ -1006,7 +1006,7 @@ void GroupAttackSelectedBrigadesTo(byte NI,int x,int y,byte Prio,byte OrdType){
 	if(NBRG){
 		BCX/=NBRG;
 		BCY/=NBRG;
-		for(i=0;i<NBRG;i++){
+		for(int i=0;i<NBRG;i++){
 			int dx=BRX[i]-BCX;
 			int dy=BRY[i]-BCY;
 			int Nr=Norma(dx,dy);
@@ -1148,7 +1148,7 @@ word PositionOrder::CreateOrdPos(int x,int y,byte dir,int NIDS,word* IDS,OrderDe
 	int vy=(dy*maxR)/NR;
 	int Dy=ODS->YShift;	
 
-    for(iy=0;iy<Ly;iy++){
+    for(int iy=0;iy<Ly;iy++){
 		int Nx=ODS->LineNU[iy];
 		short* shx=ODS->Lines[iy];
         for(int ix=0;ix<Nx;ix++){           

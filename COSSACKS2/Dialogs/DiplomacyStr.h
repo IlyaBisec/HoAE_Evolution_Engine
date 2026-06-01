@@ -518,7 +518,8 @@ int		CDiplomacyData::AddNewContract(int type, int country1, int country2, int ti
 int		CDiplomacyData::DeleteContract(int type, int country1, int country2)
 {
 	//безкомпромисное удаление контракта!
-	for(int i=0; i < GetContNum() ; i+=m_iFields ) 
+	int i;
+	for(i=0; i < GetContNum() ; i+=m_iFields ) 
 		if( LACon[i] == type ) {
 			if( ( LACon[i+1] == country1 && LACon[i+2] == country2 )	||
 				( LACon[i+1] == country2 && LACon[i+2] == country1 && LACon[i] != m_iPassId  ) ) { //new

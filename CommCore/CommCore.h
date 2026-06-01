@@ -31,10 +31,11 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include <Winsock2.h>
+#include <WinSock2.h>
 #include <WS2tcpip.h>
 #include <Windows.h>
 #include <assert.h>
+#include <stdio.h>
 #ifdef CC_DEBUG
 #include <stdio.h>
 #endif //CC_DEBUG

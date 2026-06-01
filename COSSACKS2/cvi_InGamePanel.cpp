@@ -105,12 +105,12 @@ extern bool vCreditsMode;
 void cva_IGP_Credits::SetFrameState(SimpleDialog* SD){
 	SD->Visible=vCreditsMode;
 }
+
 void cvi_InGamePanel::Init(){
 	Name="InGamePanel";
 	GetObjectGlobalID();
 	int t=GetTickCount();
-	EngSettings.ReadFromFile("ENGINESETTINGS.xml");
-	LoadingRace=_str(rand()%(EngSettings.vInterf.NumOfRaceStyles));
+	LoadingRace = rand()%4;
 	FirstLoadingType=(t>>3)&1;
 };
 

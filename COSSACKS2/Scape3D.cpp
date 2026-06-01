@@ -470,7 +470,7 @@ void InitGroundZbuffer()
 	IMM->ShowNode( IMM->GetNodeID( "EditorSetup" ), false );
 	IMM->ShowNode( IMM->GetNodeID( "GameSetup" ), true );
 
-	static terrID = IMM->GetNodeID( "terra" );
+	static int terrID = IMM->GetNodeID( "terra" );
 	if (!ITerra) return;
 
 	SelectSurfaceType(NewSurface);
@@ -1192,7 +1192,7 @@ void SetupCamera() {
         if (g_SwitchLMode == slTo2x) { scale = 1.0f + ratio; dfx = -RLX*0.5f; dfy = -RLY; }
         if (g_SwitchLMode == slTo1x) { scale = 2.0f - ratio; dfx = RLX*0.5f; dfy = RLY; }
         Vector3D moveDir( g_AnimCameraDirection );
-        static s_PrevFrame = curF;
+        static DWORD s_PrevFrame = curF;
         if (curF != s_PrevFrame)
         {
             fMapX += (moveDir.x*g_AnimCameraLen + dfx)/(32.0f*float( g_NAnimLModeFrames ));

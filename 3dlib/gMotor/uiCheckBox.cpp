@@ -25,9 +25,9 @@ void CheckButton::Expose( PropertyMap& pm )
     pm.f( "ThumbW",     m_ThumbWidth    );
     pm.f( "ThumbH",     m_ThumbHeight   );
     pm.f( "ShowText",   m_bShowText     );
-    pm.m( "Toggle",     Toggle          );
-    pm.m( "Check",      Check           );
-    pm.m( "Uncheck",    Uncheck         );
+    pm.m( "Toggle", &CheckButton::Toggle          );
+    pm.m( "Check", &CheckButton::Check           );
+    pm.m( "Uncheck", &CheckButton::Uncheck         );
     pm.s( "checked",    sigChecked      );
     pm.s( "unchecked",  sigUnchecked    );
 } // Widget::Expose

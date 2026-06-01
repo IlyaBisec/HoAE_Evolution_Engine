@@ -2,7 +2,7 @@
 #define __SurfExporter__
 
 #include "..\GameExtension.h"
-#include "Surface.h"
+#include "..\Surface\Surface.h"
 
 namespace Surface {
 

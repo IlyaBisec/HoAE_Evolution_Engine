@@ -1,7 +1,7 @@
 #ifndef __GAME_SETTINGS_H__
 #define __GAME_SETTINGS_H__
-#include <ClassEngine.h>
-#include <more_types.h>
+#include "..\ClassEngine\ClassEngine.h"
+#include "..\ClassEngine\more_types.h"
 #pragma pack( push )
 #pragma pack( 1 )
 #include "EngineSettings.h"
@@ -49,9 +49,8 @@ public:
 class SoundAndVideoOptions:public BaseClass{
 public:
 	void Init(){
-		
-		ScreenSizeX=GetSystemMetrics(SM_CXSCREEN);
-		ScreenSizeY=GetSystemMetrics(SM_CYSCREEN);
+		ScreenSizeX=1024;
+		ScreenSizeY=768;
 		SoundVolume=50;
 		MusicVolume=50;
 		RequiredMsPerFrame=40;
@@ -151,7 +150,7 @@ public:
 		SAVE(AntialiasingArgs);
 			REG_PARENT(BaseFunction);
 			REG_MEMBER(_bool, Enabled);
-		ENDSAVE();
+		ENDSAVE;
 	} Antialiasing;
 	
 	class TrueColorArgs : public BaseFunction {
@@ -175,7 +174,7 @@ public:
 			REG_MEMBER(_bool, Enabled);
 			REG_AUTO(D);
 			REG_MEMBER(_bool, ShowDeviceProperties);
-			ENDSAVE();
+			ENDSAVE;
 	} TrueColor;
 
 /*	class SafeRefreshRateArgs : public BaseFunction {

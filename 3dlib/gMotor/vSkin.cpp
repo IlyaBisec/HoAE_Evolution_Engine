@@ -373,7 +373,7 @@ void Skin::OnProcessGeometry()
 void Skin::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Skin", this );
-    pm.p( "NumBones", GetNBones );
+    pm.p( "NumBones", &Skin::GetNBones );
 } // Skin::Expose
 
 //////////////////////////////////////////////////////////////////////////
@@ -386,7 +386,7 @@ std::vector<Vector3D> B_list;
 void SkinGPU::Expose( PropertyMap& pm )
 {
 	pm.start<Parent>( "SkinGPU", this );
-	pm.p( "NumBones", GetNBones );
+	pm.p( "NumBones", &SkinGPU::GetNBones );
 } // SkinGPU::Expose
 SkinGPU::SkinGPU(){
 	m_MatrixArrayInShader=-1;

@@ -2046,7 +2046,7 @@ DLLEXPORT void CreateTopListEnArmy(word* IDS,byte NI,int MinPS){
 
 		};
 	};
-	for(i=0;i<NA;i++)if(NPS[i]<MinPS){
+	for(int i=0;i<NA;i++)if(NPS[i]<MinPS){
 		IDS[i]=0xFFFF;
 	}
 };
@@ -2074,7 +2074,7 @@ bool CreatePeasantsTopList(word* IDS,byte NI,int MinPS, bool SeakMine=true){
 			}
 		};
 	};
-	for(i=0;i<NA;i++)if(NPS[i]<MinPS)IDS[i]=0xFFFF;
+	for(int i=0;i<NA;i++)if(NPS[i]<MinPS)IDS[i]=0xFFFF;
 	return find;
 };
 DLLEXPORT
@@ -2094,7 +2094,7 @@ void CreateMeatList(word* IDS, byte NI, int MaxOB){
 			};
 		};
 	};
-	for(i=0;i<NA;i++)if(NOB[i]>MaxOB) IDS[i]=0xFFFF;
+	for(int i=0;i<NA;i++)if(NOB[i]>MaxOB) IDS[i]=0xFFFF;
 }
 DLLEXPORT
 void CreateFarmList(word* IDS, byte NI){
@@ -2313,7 +2313,7 @@ void SmoothDangerMap(short* DangMap, int ItrAmount){
 				};
 			};
 		};
-		for(j=0;j<MaxSize;j++){
+		for(int j=0;j<MaxSize;j++){
 			DangMap[j]+=DM[j];
 		}
 	};
@@ -2823,7 +2823,7 @@ DLLEXPORT bool AttackEnemyInZone3(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI){
 		return false;
 	}
 	
-	for(i=0;i<UG->N;i++){
+	for(int i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -3241,14 +3241,14 @@ bool Attack3(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 	if(!NEN)return false;
 	UnitsGroup* UG=SCENINF.UGRP+Grp->Index;
 	
-	const NVICTIM=128;
+	const int NVICTIM=128;
 	int Victim[NVICTIM];
 	int VicTarg[NVICTIM];
 	memset(Victim,0xFFFF,sizeof(Victim));
 	int NVictim=0;
 	int NVicInArmy=0;
 
-	for(i=0;i<UG->N;i++){
+	for(int i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -3361,7 +3361,7 @@ bool Attack3(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 		};
 	};
 	int TotalVictim = UG->N>>5;
-	for(i=0;i<NVictim;i++){
+	for(int i=0;i<NVictim;i++){
 		OneObject* OB = Group[Victim[i]];		
 		if(OB->AttackObj(VicTarg[i],128+16,0,1)){
 			if(NVicInArmy<TotalVictim){
@@ -3445,7 +3445,7 @@ int GetBestVictimForArchers2(byte NI,int x,int y,int R,int MyTop){
 	int BESTENID=0xFFFF;
 	int tx0=x>>6;
 	int ty0=y>>6;
-	for(i=0;i<4096;i++){
+	for(int i=0;i<4096;i++){
 		int V;
 		if(BESTID[i]!=0xFFFF&&(V=ARRAY[i])>0){
 			int ix=(i&63)-32;
@@ -3552,7 +3552,7 @@ bool Attack4(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 	int NVictim=UG->N>>5;
 	if(NVictim>NVICTIM) NVictim=NVICTIM;*/
 
-	for(i=0;i<UG->N;i++){
+	for(int i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -3723,14 +3723,14 @@ bool Attack6(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 	if(!NEN)return false;
 	UnitsGroup* UG=SCENINF.UGRP+Grp->Index;
 	
-	const NVICTIM=128;
+	const int NVICTIM=128;
 	int Victim[NVICTIM];
 	int VicTarg[NVICTIM];
 	memset(Victim,0xFFFF,sizeof(Victim));
 	int NVictim=0;
 	int NVicInArmy=0;
 
-	for(i=0;i<UG->N;i++){
+	for(int i=0;i<UG->N;i++){
 		word MID=UG->IDS[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -3852,7 +3852,7 @@ bool Attack6(GAMEOBJ* Grp,GAMEOBJ* Zone,byte NI, int& NArm){
 		};
 	};
 	int TotalVictim = UG->N>>5;
-	for(i=0;i<NVictim;i++){
+	for(int i=0;i<NVictim;i++){
 		OneObject* OB = Group[Victim[i]];		
 		if(OB->AttackObj(VicTarg[i],128+16,0,0)){
 			if(NVicInArmy<TotalVictim){

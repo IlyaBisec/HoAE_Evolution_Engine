@@ -11,9 +11,9 @@
 #include "BattleShipAI.h"
 #include "PlaceInAJob.h"
 #include "Surface\Surface.h"
-#include "Surface\Grass.h"
-#include "Surface\Obj3D.h"
-#include "Surface\PropertyPanel.h"
+#include "Grass.h"
+#include "Obj3D.h"
+#include "PropertyPanel.h"
 #include "BE_HEADERS.h"
 #include "UndoMaster.h"
 
@@ -106,7 +106,7 @@ void ext_OnGameSaving(xmlQuote& xml){
     xml.ClearAll();
 	ExtRef* ER=&ExtReferences[14];
 	int N=ER->GetAmount();
-	xmlQuote* xTemp=new_xmlQuote();	
+	xmlQuote* xTemp=new_xmlQuota();	
 	for(int i=0;i<N;i++){		
 		if((*ER)[i]->OnGameSaving(*xTemp)){
 			DWORD V=(*ER)[i]->GetCode();
@@ -114,7 +114,7 @@ void ext_OnGameSaving(xmlQuote& xml){
 			sprintf(c,"%X",V);
             xTemp->SetQuoteName(c);
 			xml.AddSubQuote(xTemp);
-			xTemp=new_xmlQuote();
+			xTemp=new_xmlQuota();
 		}
 	}
 	delete_xmlQuote(xTemp);
@@ -157,7 +157,7 @@ void ext_OnMapSaving(xmlQuote& xml){
 	xml.ClearAll();
 	ExtRef* ER=&ExtReferences[12];
 	int N=ER->GetAmount();
-	xmlQuote* xTemp=new_xmlQuote();	
+	xmlQuote* xTemp=new_xmlQuota();	
 	for(int i=0;i<N;i++){		
 		if((*ER)[i]->OnMapSaving(*xTemp)){
 			DWORD V=(*ER)[i]->GetCode();
@@ -165,7 +165,7 @@ void ext_OnMapSaving(xmlQuote& xml){
 			sprintf(c,"%X",V);
 			xTemp->SetQuoteName(c);
 			xml.AddSubQuote(xTemp);
-			xTemp=new_xmlQuote();
+			xTemp=new_xmlQuota();
 		}
 	}
 	delete_xmlQuote(xTemp);

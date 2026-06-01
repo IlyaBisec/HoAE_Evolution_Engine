@@ -2,7 +2,7 @@
 #include "WeaponSystem.h"
 #include "CurrentMapOptions.h"
 #include "SuperEditor.h"
-#include "Surface\surface.h"
+#include "Surface\Surface.h"
 //#include "CUniversalMapClipboard.h"
 #include "ITerrain.h"
 #include ".\cvi_MainMenu.h"
@@ -551,7 +551,7 @@ void DarkScreen(){
 			ofs+=2;
 		};
 		ofs=ScrWidth*(iy*2+1)+1;
-		for(ix=0;ix<RealLx;ix+=2){
+		for(int ix=0;ix<RealLx;ix+=2){
 			sptr[ofs]=0;
 			ofs+=2;
 		};
@@ -607,8 +607,8 @@ void SetGameDisplayModeAnyway(int SizeX,int SizeY)
 	extern IRenderSystem* IRS;
 	IRS->SetScreenProp( prop );
 
-	//SizeX=GetSystemMetrics(SM_CXSCREEN);
-	//SizeY=GetSystemMetrics(SM_CYSCREEN);
+	SizeX=GetSystemMetrics(SM_CXSCREEN);
+	SizeY=GetSystemMetrics(SM_CYSCREEN);
 	RealLx=SizeX;
 	RealLy=SizeY;	
 	RSCRSizeX = SizeX;
@@ -881,12 +881,12 @@ int ProcessResEdit(){
 
 	char ResST[22][16];
 	char PLNAMES[9][64];
-	for(i=0;i<8;i++)strcpy(PLNAMES[i],DEFPLNAMES[i]);
+	for(int i=0;i<8;i++)strcpy(PLNAMES[i],DEFPLNAMES[i]);
 	PLNAMES[8][0]=0;
 	byte RESRID[8];
 	int RESLOC[8];
 	int NRes=0;
-	for(i=0;i<8;i++){
+	for(int i=0;i<8;i++){
 		if(RDS[i].Enabled){
 			int resid=i;
 			if(i==1) resid=3;
@@ -898,7 +898,7 @@ int ProcessResEdit(){
 		};
 	};
 
-	for(i=0;i<NRes;i++){
+	for(int i=0;i<NRes;i++){
 		DSS.addInputBox(NULL,128,139+26*i,ResST[i],12,105,24,&YellowFont,&WhiteFont);
 	};
 	InputBox* IBN=DSS.addInputBox(NULL,336,335,PLNAMES[MyNation],32,270,24,&YellowFont,&WhiteFont);
@@ -920,7 +920,7 @@ int ProcessResEdit(){
 	CBRESST->Center-=5;
 	CBRESST->FontDy-=2;
 	CBRESST->OneDy-=1;
-	for(p=0;p<RMP.NRES;p++){
+	for(int p=0;p<RMP.NRES;p++){
 		CBRESST->AddLine(RMP.RES[p].Name);
 	};
 	CBRESST->CurLine=RM_Resstart;
@@ -928,7 +928,7 @@ int ProcessResEdit(){
 	CBRESTOT->Center-=5;
 	CBRESTOT->FontDy-=2;
 	CBRESTOT->OneDy-=1;
-	for(p=0;p<RMP.NMINES;p++){
+	for(int p=0;p<RMP.NMINES;p++){
 		CBRESTOT->AddLine(RMP.MINES[p].Name);
 	};
 	CBRESTOT->CurLine=RM_Restot;
@@ -951,14 +951,14 @@ int ProcessResEdit(){
 		if(PLAYER->CurLine!=prevNat){
 			prevNat=PLAYER->CurLine;
 			if(prevNat<8){
-				for(i=0;i<NRes;i++){
+				for(int i=0;i<NRes;i++){
 					RESLOC[RESRID[i]]=RES[prevNat][RESRID[i]];
 					sprintf(ResST[i],"%d",RESLOC[RESRID[i]]);
 				};
 			};
 			IBN->Str=PLNAMES[prevNat];
 		};
-		for(i=0;i<NRes;i++){
+		for(int i=0;i<NRes;i++){
 			RESLOC[RESRID[i]]=atoi(ResST[i]);
 		};
 		ProcessMessages();
@@ -967,13 +967,13 @@ int ProcessResEdit(){
 	}while(ItemChoose==-1);
 	if(ItemChoose==mcmOk){
 		if(PLAYER->CurLine==8){
-			for(i=0;i<8;i++){
+			for(int i=0;i<8;i++){
 				for(int j=0;j<NRes;j++){
 					RES[i][RESRID[j]]=RESLOC[RESRID[j]];
 				};
 			};
 		}else{
-			for(i=0;i<NRes;i++){
+			for(int i=0;i<NRes;i++){
 				RES[prevNat][RESRID[i]]=RESLOC[RESRID[i]];
 			};
 		};
@@ -1179,7 +1179,7 @@ int SearchPlayer(char* Nick){
 	for(int i=0;i<TPEN.NPlayers;i++){
 		if(!strcmp(Nick,TPEN.Players[i].Name))return i;
 	};
-	for(i=0;i<TPEN.ABPL.NPlayers;i++){
+	for(int i=0;i<TPEN.ABPL.NPlayers;i++){
 		if(!strcmp(Nick,TPEN.ABPL.Names[i]))return i+TPEN.NPlayers;
 	};
 	return -1;
@@ -1818,7 +1818,7 @@ int DrawGraph(Canvas* CAN,int y0,int Npt,GR_ARR Data,byte* Col,int N,word* Max,c
 	int MaxV=1;
 	for(int i=0;i<N;i++)if(Max[i]>MaxV)MaxV=Max[i];
 	int divisor=100*MaxV;
-	for(i=0;i<N;i++){
+	for(int i=0;i<N;i++){
 		byte C=0xD0+Col[i]*4;
 		byte* data=&Data[i][0];
 		int Maxi=Max[i];
@@ -1848,7 +1848,8 @@ word JP_ver=0;
 DWORD CalcPassHash(char* pass){
 	int L=strlen(pass);
 	DWORD S=0;
-	for(int i=0;i<L;i++)S+=pass[i];
+	int i;
+	for(i=0;i<L;i++)S+=pass[i];
 	for(i=0;i<L-1;i++)S+=pass[i]*pass[i+1];
 	for(i=0;i<L-2;i++)S+=pass[i]*pass[i+1]*pass[i+2];
 	for(i=0;i<L-3;i++)S+=pass[i]*pass[i+1]*pass[i+2]*pass[i+3];
@@ -3840,7 +3841,7 @@ void CreateUnitList(ListBox* LB,int Country){
 				LB->AddItem(NM->Message,i);
 		};
 		LB->AddStaticItem("BUILDINGS:   ",0);
-		for(i=0;i<NT->NMon;i++){
+		for(int i=0;i<NT->NMon;i++){
 			NewMonster* NM=NT->Mon[i]->newMons;
 			if(NM->Building)
 				LB->AddItem(NM->Message,i);
@@ -4654,9 +4655,9 @@ resgame:;
 	//SlowUnLoadPalette("0\\agew_1.pal");
 	int ExRX=RealLx;
 	int ExRY=RealLy;
-	/*if(!GSets.LeibzigDemo.Enabled){
-		SetGameDisplayModeAnyway(GetSystemMetrics(SM_CXSCREEN),GetSystemMetrics(SM_CYSCREEN));
-	}*/
+	if(!GSets.LeibzigDemo.Enabled){
+		if(RealLx!=1024||RealLy!=768)SetGameDisplayModeAnyway(1024,768);
+	}
 	/*
 	if(ShowStat){
 		if(!ShowStatistics()){
@@ -4829,7 +4830,7 @@ void EditGame(){
 	//StopLoopSounds();
 	InEdit=false;
 	IgnoreSlow=true;
-	SetGameDisplayModeAnyway(GSets.SVOpt.ScreenSizeX,GSets.SVOpt.ScreenSizeY);
+	SetGameDisplayModeAnyway(1024,768);
 	IgnoreSlow=false;
 };
 //--------------ALL GAME IS IN THIS PROCEDURE!-------------//
@@ -4885,7 +4886,7 @@ void ShowFailure(int CreateGame){
 					if(LL>L)L=LL;
 				};
 				DrawStdBar(512-32-L/2,380-NS*15-15,512+32+L/2,380+NS*15+15);
-				for(i=0;i<NS;i++)
+				for(int i=0;i<NS;i++)
 					ShowString(512-GetRLCStrWidth(ss[i],&BigWhiteFont)/2,380-NS*15+i*30,ss[i],&BigWhiteFont);
 				FlipPages();
 			};
@@ -4977,8 +4978,8 @@ int CheckLobby(){
 	WindY=0;
 	WindX1=1023;
 	WindY1=767;
-	WindLx=GetSystemMetrics(SM_CXSCREEN);
-	WindLy=GetSystemMetrics(SM_CYSCREEN);
+	WindLx=1024;
+	WindLy=768;
 #else
 	GPS.SetClipArea( 0, 0, 1024, 768 );
 #endif
@@ -5228,7 +5229,7 @@ void PrepareEditMedia(byte myid,byte sh){
 	if(InitDipForThisMap)InitDipForThisMap();
 	
 	// First resource set up 
-	for(i=0;i<8;i++)
+	for(int i=0;i<8;i++)
 		for(int j=0;j<8;j++)SetXRESRC(i,j,3000);
 
 	//for(int p=0;p<MaxPointIndex;p++)THMap[p]=50;
@@ -5994,7 +5995,7 @@ bool WaitingGame(bool Host){
 	OkBtn->OnUserClick=&MMItemChoose;
 	PIEnumeratePlayers(GSets.CGame.PL_INFO,0);
 	byte CUSED=0;
-	for(i=0;i<NPlayers;i++){
+	for(int i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID!=MyDPID){
 			CUSED|=(1<<GSets.CGame.PL_INFO[i].ColorID);
 		};
@@ -6005,7 +6006,7 @@ bool WaitingGame(bool Host){
 		cc1++;
 		mss1<<=1;
 	};
-	for(i=0;i<NPlayers;i++){
+	for(int i=0;i<NPlayers;i++){
 		if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 			GSets.CGame.PL_INFO[i].ColorID=cc1;
 			MCOLOR[i]->color=cc1+0x80;
@@ -6061,23 +6062,23 @@ bool WaitingGame(bool Host){
 			};
 		};
 		PIEnumeratePlayers(GSets.CGame.PL_INFO,0);
-		for(i=0;i<8;i++){
+		for(int i=0;i<8;i++){
 			if(i<NPlayers){
 				MNATION[i]->CurLine=GSets.CGame.PL_INFO[i].NationID;
 				MCOLOR[i]->color=GSets.CGame.PL_INFO[i].ColorID+0x80;
 			};
 		};
-		for(i=0;i<NPlayers;i++){
+		for(int i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID&&ItemChoose==mcmOk&&!Host){
 				GSets.CGame.PL_INFO[i].Ready=1;
 			};
 		};
 		bool GMREADY=true;
-		for(i=0;i<NPlayers;i++){
+		for(int i=0;i<NPlayers;i++){
 			if(GSets.CGame.PL_INFO[i].PlayerID!=MyDPID&&!GSets.CGame.PL_INFO[i].Ready)GMREADY=false;
 		};
 		int MSS1=0;
-		for(i=0;i<NPlayers;i++){
+		for(int i=0;i<NPlayers;i++){
 			byte MSS2=1<<GSets.CGame.PL_INFO[i].ColorID;
 			if(MSS1&MSS2)GMREADY=false;
 			MSS1|=MSS2;
@@ -6191,7 +6192,7 @@ void WriteUpgradeAction(byte NI,NewUpgrade* NU){
 	for(int j=0;j<6;j++)RS[j]=XRESRC(NI,j);
 	WriteResources("",NI,RS);
 	WriteAI_Comment("",NI,"\nPERCENT:");
-	for(j=0;j<6;j++)if(RS[j])RS[j]=NU->Cost[j]*100/RS[j];
+	for(int j=0;j<6;j++)if(RS[j])RS[j]=NU->Cost[j]*100/RS[j];
 	WriteResources("",NI,RS);
 	WriteAI_Comment("",NI,"\n\n");
 };
@@ -6399,7 +6400,7 @@ void PrepareGameMedia(byte myid,bool SaveNR,bool DisableDLL){
 			GSets.CGame.PL_INFO[i].MapStyle=0;
 		};
 	};
-	for(i=0;i<7;i++)if(GSets.CGame.PL_INFO[i].name[0]||i<NPlayers||GSets.CGame.PL_INFO[i].MapStyle){
+	for(int i=0;i<7;i++)if(GSets.CGame.PL_INFO[i].name[0]||i<NPlayers||GSets.CGame.PL_INFO[i].MapStyle){
 		if(GSets.CGame.PL_INFO[i].GroupID==0)NATIONS[GSets.CGame.cgi_NatRefTBL[GSets.CGame.PL_INFO[i].ColorID]].NMask=1<<GSets.CGame.cgi_NatRefTBL[GSets.CGame.PL_INFO[i].ColorID];
 		else{
 			int gid=GSets.CGame.PL_INFO[i].GroupID;
@@ -6437,7 +6438,7 @@ void PrepareGameMedia(byte myid,bool SaveNR,bool DisableDLL){
 		TestMonNames();
 		_dbgPrintState("LoadStage","PrepareGameMedia: GetOptionsFromMap");
 		GetOptionsFromMap(GSets.CGame.cgi_CurrentMap);
-		for(i=0;i<8;i++)NATIONS[i].NMask=NMASKS[i];
+		for(int i=0;i<8;i++)NATIONS[i].NMask=NMASKS[i];
 		if(LoadAsIs)MOptions.RandomizePlayersPositions=false;
 		if(MapScenaryDLL[0]){
 			if(!DisableDLL){
@@ -6528,6 +6529,7 @@ void PrepareGameMedia(byte myid,bool SaveNR,bool DisableDLL){
 				void CenterScreen();
 				CenterScreen();
 			}
+
 			//realisation of [AutoTransferUnitsToNearestTeam], LockTeam required
 			for(int i=0;i<7;i++){
 				if(MOptions.Players.Player[i].AutoTransferUnitsToNearestTeam&&MOptions.Players.Player[i].LockTeam){
@@ -6656,7 +6658,7 @@ void PrepareGameMedia(byte myid,bool SaveNR,bool DisableDLL){
 
 			// start ai
 			_dbgPrintState("LoadStage","PrepareGameMedia: start ai");
-			for(i=1;i<7;i++){	//for(i=NPlayers;i<7;i++){
+			for(int i=1;i<7;i++){	//for(i=NPlayers;i<7;i++){
 				if(COMPSTART[i]){
 					int Diff=GSets.CGame.PL_INFO[i].MapStyle;
 					int c=GSets.CGame.PL_INFO[i].ColorID;
@@ -6742,7 +6744,7 @@ void PrepareGameMedia(byte myid,bool SaveNR,bool DisableDLL){
 	}else{
 		CurrentGameLogDir[0]=0;
 	};
-	for(i=0;i<7;i++)if(i<NPlayers){
+	for(int i=0;i<7;i++)if(i<NPlayers){
 		int nid=GSets.CGame.PL_INFO[i].NationID;
 		if(nid>=0&&nid<GlobalAI.NAi){
 			WriteAI_Comment("strart_conditions",0,"PLAYER: %3d %12.12s %12.12s\n",GSets.CGame.PL_INFO[i].ColorID,GSets.CGame.PL_INFO[i].name,GlobalAI.Ai[nid].NationID);
@@ -6811,14 +6813,14 @@ void RandomMapDialog(char* Result){
 	y+=40;
 	DSY.addTextButton(NULL,x0,y,GETS("@RMIMOUNTAINS"),&FONT2,&FONT2,&FONT2,0);
 	ComboBox* CBMOUNT=DSY.addComboBox(NULL,x,y,144,25,20,0,255,&FONT2,&FONT3,NULL);
-	for(p=0;p<RMP.NRelief;p++){
+	for(int p=0;p<RMP.NRelief;p++){
 		CBMOUNT->AddLine(RMP.Relief[p]);
 	};
 	y+=40;
 	int CurSty=0;
 	DSY.addTextButton(NULL,x0,y,GETS("@RMIPLAYERS"),&FONT2,&FONT2,&FONT2,0);
 	ComboBox* CBPLAY=DSY.addComboBox(NULL,x,y,144,25,20,0,255,&FONT2,&FONT3,NULL);
-	for(p=0;p<RMP.STY[CurSty].NPl;p++){
+	for(int p=0;p<RMP.STY[CurSty].NPl;p++){
 		char ccc[16];
 		sprintf(ccc," %d",RMP.STY[CurSty].Players[p].NPlayers);
 		CBPLAY->AddLine(ccc);
@@ -6826,13 +6828,13 @@ void RandomMapDialog(char* Result){
 	y+=40;
 	DSY.addTextButton(NULL,x0,y,GETS("@RMIRESSTART"),&FONT2,&FONT2,&FONT2,0);
 	ComboBox* CBRESST=DSY.addComboBox(NULL,x,y,144,25,20,0,255,&FONT2,&FONT3,NULL);
-	for(p=0;p<RMP.NRES;p++){
+	for(int p=0;p<RMP.NRES;p++){
 		CBRESST->AddLine(RMP.RES[p].Name);
 	};
 	y+=40;
 	DSY.addTextButton(NULL,x0,y,GETS("@RMIRESTOT"),&FONT2,&FONT2,&FONT2,0);
 	ComboBox* CBRESTOT=DSY.addComboBox(NULL,x,y,144,25,20,0,255,&FONT2,&FONT3,NULL);
-	for(p=0;p<RMP.NMINES;p++){
+	for(int p=0;p<RMP.NMINES;p++){
 		CBRESTOT->AddLine(RMP.MINES[p].Name);
 	};
 	y+=40;
@@ -6862,7 +6864,7 @@ void RandomMapDialog(char* Result){
 		if(CurSty!=CBSTYLE->CurLine){
 			CurSty=CBSTYLE->CurLine;
 			CBPLAY->Clear();
-			for(p=0;p<RMP.STY[CurSty].NPl;p++){
+			for(int p=0;p<RMP.STY[CurSty].NPl;p++){
 				char ccc[16];	
 				sprintf(ccc," %d",RMP.STY[CurSty].Players[p].NPlayers);
 				CBPLAY->AddLine(ccc);
@@ -6906,14 +6908,14 @@ void EnterRandomParams(){
 	y+=50;
 	DSY.addTextButton(NULL,x0,y,GETS("@RMIRESSTART"),&fntis,&fntis,&fntis,0);
 	ComboBox* CBRESST=DSY.addComboBox(NULL,x,y,164,25,20,0x3B,255,&fntisr,&fntis,NULL);
-	for(p=0;p<RMP.NRES;p++){
+	for(int p=0;p<RMP.NRES;p++){
 		CBRESST->AddLine(RMP.RES[p].Name);
 	};
 	CBRESST->CurLine=RM_Resstart;
 	y+=45;
 	DSY.addTextButton(NULL,x0,y,GETS("@RMIRESTOT"),&fntis,&fntis,&fntis,0);
 	ComboBox* CBRESTOT=DSY.addComboBox(NULL,x,y,164,25,20,0x3B,255,&fntisr,&fntis,NULL);
-	for(p=0;p<RMP.NMINES;p++){
+	for(int p=0;p<RMP.NMINES;p++){
 		CBRESTOT->AddLine(RMP.MINES[p].Name);
 	};
 	CBRESTOT->CurLine=RM_Restot;
@@ -7047,10 +7049,10 @@ void ShowPreview(){
 #ifndef _USE3D
 		WindX=0;
 		WindY=0;
-		WindLx=RealLx;
-		WindLy=RealLy;
-		WindX1=RealLx-1;
-		WindY1=RealLy-1;
+		WindLx=1024;
+		WindLy=768;
+		WindX1=1023;
+		WindY1=767;
 #else
 		GPS.SetClipArea( 0, 0, RealLx, RealLy );
 #endif
@@ -7355,7 +7357,7 @@ int ShowStatScreen(bool Next,bool Prev,byte Kind){
 				};
 			};
 			int X0,Y0,X1,Y1;
-			for(i=0;i<NNAT;i++){
+			for(int i=0;i<NNAT;i++){
 				Nation* NT=NATIONS+NATS[i];
 				byte c=NATS[i]*4+0xD0;
 				int N=NVal[NATS[i]];
@@ -7509,7 +7511,7 @@ int ShowUserStat(bool Prev,bool Next){
 		Hline(rx,ry,rx1+rxl*7,0xEC);
 		ry+=26;
 		Vline(rx,ry-26,ry+8*26,0xEC);
-		for(q=0;q<8;q++){
+		for(int q=0;q<8;q++){
 			Hline(rx,ry,rx1+rxl*7,0xEC);
 			ShowString(rx+15,ry+6,hdrs[q],Statfont);
 			for(int j=0;j<6;j++){
@@ -8678,7 +8680,7 @@ void ShowMultiplayerChat(){
 		};
 		ShowString(x0-GetRLCStrWidth(CHATHELP1,&SmallYellowFont)/2,y0+20+7+6+DDD/2,CHATHELP1,&SmallYellowFont);
 		ShowString(x0-GetRLCStrWidth(CHATHELP2,&SmallYellowFont)/2,y0+20+7+6+DDD/2+DDD,CHATHELP2,&SmallYellowFont);
-		for(i=0;i<NGSPlayers;i++){
+		for(int i=0;i<NGSPlayers;i++){
 			sprintf(cc3,CHATHELP3,i+1,GSPLAYERS[i]);
 			L2=GetRLCStrWidth(cc3,&SmallWhiteFont);
 			ShowString(x0-L2/2,y0+20+7+6+DDD/2+DDD*(i+2),cc3,&SmallYellowFont);
@@ -9020,7 +9022,7 @@ void PopupDipDialog(){
 	DIP_DSS_Vis=1;
 	InformMode=4;
 };
-extern InfDX0;
+extern int InfDX0;
 void FlipDipDialog(){
 	if(Inform||!OptHidden)DIP_DSS_Vis=0;
 	if(!DIP_DSS_Vis){
@@ -9152,7 +9154,7 @@ bool ShowTime(SimpleDialog* SD){
 	Lpressed=0;
 	return 0;
 };
-#include <typeinfo.h>
+#include <typeinfo>
 #define REGFUNC(x) RegisterOnClickFunction(#x,x)
 CEXPORT bool RegisterOnClickFunction(char* Identf, VCall*  Fun);
 DialogsSystem* STS_DS=NULL;
@@ -9166,9 +9168,9 @@ void ShowTimeSystem(){
 //	STS_DS->ProcessDialogs();
 };
 bool GetGlobalBrigProp(byte NI){
-	const MC=10;
-	const MO=40;
-	const MT=40;
+	const int MC=10;
+	const int MO=40;
+	const int MT=40;
 	word CID[MC];
 	word NIndex[MO*MT];
 	word Amount[MC*MO*MT];

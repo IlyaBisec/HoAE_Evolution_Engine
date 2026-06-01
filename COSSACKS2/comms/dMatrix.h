@@ -442,7 +442,7 @@ inline dVector dMatrix::operator * (const dVector &u) const {
 	dVector v(nDim, r);
 
 	if(nDim < m_Dim) {
-		for(row = 0; row < nDim; row++) {
+		for(int row = 0; row < nDim; row++) {
 			v[row] += m[row][m_Dim - 1];
 		}
 		double s = 1.0;

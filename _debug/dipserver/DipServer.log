@@ -1,0 +1,18 @@
+﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+  Settlement.cpp
+  Script.cpp
+  ParseRQ.cpp
+  Mind.cpp
+  DiplomacySystem.cpp
+  DipServer.cpp
+  DipMain.cpp
+  DipInit.cpp
+  DIP_SimpleBuilding.cpp
+  CityPopulation.cpp
+  BattleDialogs.cpp
+  BasicDiploRelation.cpp
+  Создание кода...
+  LINK : не найден или не выполнена сборка ..\..\data\DipServer.dll при последней инкрементной компоновке; выполняется полная компоновка
+AForm.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
+     Создается библиотека ..\lib\DipServer.lib и объект ..\lib\DipServer.exp
+  DipServer.vcxproj -> D:\SrcRep\data\DipServer.dll

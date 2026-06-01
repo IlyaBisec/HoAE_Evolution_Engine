@@ -21,9 +21,9 @@ IMPLEMENT_CLASS(BoolPropEditor);
 BoolPropEditor::BoolPropEditor()
 {
     m_bShowText = false;
-    sigTextChanged.Connect( this, OnChangeText );
-    sigChecked.Connect( this, ChangeText );
-    sigUnchecked.Connect( this, ChangeText );
+    sigTextChanged.Connect( this, &BoolPropEditor::OnChangeText );
+    sigChecked.Connect( this, &BoolPropEditor::ChangeText );
+    sigUnchecked.Connect( this, &BoolPropEditor::ChangeText );
 } // BoolPropEditor::BoolPropEditor
 
 void BoolPropEditor::OnChangeText()

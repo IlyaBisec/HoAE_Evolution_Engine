@@ -263,7 +263,7 @@ int FOGOFFS[1024];
 void LoadBlobs();
 CEXPORT
 int CurPalette=0;
-extern CurrentCursorGP;
+extern int CurrentCursorGP;
 byte graysc[256];
 void DoTransparent(byte* ptr){
 	ptr-=8192-256;
@@ -925,7 +925,7 @@ void Init3DFog(){
 		};
 	};
 	iidx=0;
-	for(iy=0;iy<Ny;iy++){
+	for(int iy=0;iy<Ny;iy++){
 		for(int ix=0;ix<Nx;ix++){
 			int vidx=ix+iy*(Nx+1);
 			IDX[iidx  ]=vidx;

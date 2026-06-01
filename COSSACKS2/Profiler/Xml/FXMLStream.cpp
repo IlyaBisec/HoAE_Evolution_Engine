@@ -61,7 +61,7 @@ void f_xmlQuote::xml_handlerStartElement(void *userData, const char *Name, const
 		Curr->SetName((char*)Name);
 		if(AttributesNumber)
 		{
-			for(i = 0; Attr[i*2]; i++) 
+			for(int i = 0; Attr[i*2]; i++)
 				Curr->AddAttribute(Attr[i*2], Attr[i*2+1]);
 		}
 		#ifdef FXML_DEBUG

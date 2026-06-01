@@ -6,7 +6,7 @@
 #include "UnitTypeGroup.h"
 
 #include "GameInterface.h"
-#include "mesh\unihash.h"
+#include "unichash.h"
 #include "FCompressor.h"
 #include "MassivePlayer.h"
 

@@ -139,7 +139,7 @@ void City::CreateCity(byte N){
 	MaxInTransport=80;
 
 	for(int i=0;i<MaxBrig;i++)Brigs[i].Init(this,i);
-	for(i=0;i<MaxArm;i++)ARMS[i].InitArmy(this);
+	for(int i=0;i<MaxArm;i++)ARMS[i].InitArmy(this);
 	OnField.Enabled=true;
 	OnStone.Enabled=true;
 	OnWood.Enabled=true;
@@ -201,7 +201,7 @@ void City::CreateCity(byte N){
 
 	LFarmIndex=0;
 	LFarmRadius=0;
-	for(i=0;i<8;i++)Nat->GENERAL.RESP[i]=100;
+	for(int i=0;i<8;i++)Nat->GENERAL.RESP[i]=100;
 	MAX_WORKERS=Nat->DEFAULT_MAX_WORKERS;
 	NDefn=0;
 	MaxDefn=0;
@@ -209,7 +209,7 @@ void City::CreateCity(byte N){
 	DefArms=NULL;
 	NDefArms=0;
 	MaxDefArms=0;
-	for(i=0;i<128;i++)WaterBrigs[i]=0xFFFF;
+	for(int i=0;i<128;i++)WaterBrigs[i]=0xFFFF;
 	Nat->MU1G_PERCENT[0]=80;
 	Nat->MU1G_PERCENT[1]=80;
 	Nat->MU1G_PERCENT[2]=80;
@@ -513,7 +513,7 @@ int CheckFreeArmy(OneObject* OB,City* CT){
 					return true;
 				};
 			};
-			for(j=0;j<5;j++){
+			for(int j=0;j<5;j++){
 				byte dir1=OB->RealDir+(rando()&127)-64;
 				int x1=rx+((int(TCos[dir1])*dr)>>8);
 				int y1=ry+((int(TCos[dir1])*dr)>>8);
@@ -523,7 +523,7 @@ int CheckFreeArmy(OneObject* OB,City* CT){
 					return true;
 				};
 			};
-			for(j=0;j<5;j++){
+			for(int j=0;j<5;j++){
 				byte dir1=rando()&255;
 				int x1=rx+((int(TCos[dir1])*dr)>>8);
 				int y1=ry+((int(TCos[dir1])*dr)>>8);
@@ -637,12 +637,12 @@ bool City::CheckTZone(int x,int y,int Lx,int Ly){
 };
 void City::CloseCity(){
 	for(int i=0;i<MaxBrig;i++)if(Brigs[i].Enabled)Brigs[i].DeleteAll();
-	for(i=0;i<MaxArm;i++)if(ARMS[i].Enabled)ARMS[i].ClearArmy();
+	for(int i=0;i<MaxArm;i++)if(ARMS[i].Enabled)ARMS[i].ClearArmy();
 	DelInform();
 	DelIdeas();
 	memset(this,0,sizeof City);
 	if(NDefn){
-		for(i=0;i<NDefn;i++){
+		for(int i=0;i<NDefn;i++){
 			if(DefInf[i].Def){
 				free(DefInf[i].Def);
 				free(DefInf[i].DefSN);
@@ -654,7 +654,7 @@ void City::CloseCity(){
 	NDefn=0;
 	MaxDefn=0;
 	NDivr=0;
-	for(i=0;i<NGroups;i++)free(GroupsSet[i]);
+	for(int i=0;i<NGroups;i++)free(GroupsSet[i]);
 	if(GroupsSet){
 		free(GroupsSet);
 		free(NGroupsInSet);
@@ -952,7 +952,7 @@ void City::StartEnumUnits(){
 	REGI=Nat->AI_Enabled;
 
 	for(int i=0;i<8;i++)Nat->ResSpeed[i]=0;
-	for(i=0;i<MaxArtDep;i++){
+	for(int i=0;i<MaxArtDep;i++){
 		Nat->NArtUnits[i]=0;
 		Nat->NArtdep[i]=0;
 	}
@@ -1080,7 +1080,7 @@ void City::EnumProp(){
 		GeneralObject* GO=GOA[i];
 		if(UnBusyAmount[i]) PC=GO->NUpgrades;
 		else PC=0;
-		for(j=0;j<PC;j++){
+		for(int j=0;j<PC;j++){
 			word s=GO->Upg[j];
 			//проверить возможность производства
 			NewUpgrade* NU=Nat->UPGRADE[s];
@@ -1217,7 +1217,7 @@ word City::FindNeedProject(){
 	sAI_Cmd* SCM=NT->AI_Cmd[MaxAI];
 	int NCM=NT->N_AI_Cmd[MaxAI];
 	MAX_WORKERS=NT->DEFAULT_MAX_WORKERS;
-	for(i=0;i<NCM;i++){
+	for(int i=0;i<NCM;i++){
 		switch(SCM->Kind){
 		case 1://SELO
 			memcpy(NT->SELO.RESP,SCM->Info,16);
@@ -1238,7 +1238,7 @@ word City::FindNeedProject(){
 	sAI_Devlp* SAD=NT->AI_Devlp[MaxAI];
 	word ndev=NT->N_AI_Devlp[MaxAI];
 	int npro=0;
-	for(i=0;i<ndev;i++){
+	for(int i=0;i<ndev;i++){
 		sAI_Devlp* sad=&SAD[i];
 		if(!sad->Kind){
 			//units
@@ -1330,7 +1330,7 @@ void City::RefreshAbility(){
 		};
 	};
 	//Let us check it now and enable all allowed monsters/upgrades
-	for(i=0;i<Nat->NCOND;i++){
+	for(int i=0;i<Nat->NCOND;i++){
 		word MID=Nat->CLRef[i][0];
 		word NC=Nat->CLSize[i];
 		bool enab=true;
@@ -1353,7 +1353,7 @@ void City::RefreshAbility(){
 			};
 		};
 	};
-	for(i=0;i<Nat->NMon;i++){
+	for(int i=0;i<Nat->NMon;i++){
 		GeneralObject* GO=Nat->Mon[i];
 		NewMonster* NM=GO->newMons;
 		if(GO->ManualDisable){
@@ -1750,7 +1750,8 @@ void City::MakeZasev(){
 	};
 	//search for the field GO
 	int N=Nat->NMon;
-	for(int i=0;i<N&&Nat->Mon[i]->newMons->Usage!=FieldID;i++);
+	int i;
+	for(i=0;i<N&&Nat->Mon[i]->newMons->Usage!=FieldID;i++);
 	if(i<N){
 		word FGID=i;
 		bool FDone=false;
@@ -1792,7 +1793,8 @@ void City::MakeSlowZasev(){
 	//search for the field GO
 	int N=Nat->NMon;
 	if(FIELDID==0xFFFF){
-		for(int i=0;i<N&&Nat->Mon[i]->newMons->Usage!=FieldID;i++);
+		int i;
+		for(i=0;i<N&&Nat->Mon[i]->newMons->Usage!=FieldID;i++);
 		if(i>=N)return;
 		FIELDID=i;
 	};
@@ -2058,7 +2060,7 @@ void City::ProcessCreation(){
 
 		word* id=NatList[NI];
 		int   n=NtNUnits[NI];
-		for(i=0;i<n;i++,id++){
+		for(int i=0;i<n;i++,id++){
 			OneObject* OB=Group[*id];
 			if( OB && OB->GetLiveState()==ls_LiveBody ){
 				if( GSets.CGame.InterfaceNatID==-1 && MyNI==NI /*&& !NationalOB*/ ){
@@ -2435,7 +2437,7 @@ void City::HelpMe(word ID){
 	for(int i=0;i<32;i++){
 		if(ID==EnemyList[i])return;
 	};
-	for(i=0;i<32;i++){
+	for(int i=0;i<32;i++){
 		if(EnemyList[i]==0xFFFF){
 			EnemyList[i]=ID;
 			return;
@@ -2890,7 +2892,7 @@ void City::ExecuteBrigades(){
 		};
 	};
 	rando();
-	for(i=0;i<MaxArm;i++){
+	for(int i=0;i<MaxArm;i++){
 		AI_Army* AR=ARMS+i;
 		if(AR->Enabled){
 			if(AR->AOrder&&AR->AOrder->ALink){
@@ -3004,7 +3006,8 @@ void TakeNewMineBrain(Idea* ID){
 BeginMine:
 	IDI=-1;
 	int MinDist=1000000;
-	for(int i=0;i<NMines;i++){
+	int i;
+	for(i=0;i<NMines;i++){
 		int SID=TD->Mines[i];
 		if(SID<MaxSprt){
 			OneSprite* OS=&Sprites[SID];
@@ -3281,7 +3284,8 @@ void City::UpgradeMines(){
 				if(Type[MIDX[j]]==CurRes){
 					if(Level[MIDX[j]]<=MaxULevel){
 						int Lev=Level[MIDX[j]];
-						for(int p=0;p<j;p++)if(Level[MIDX[p]]>=Lev)NU++;
+						int p;
+						for(p=0;p<j;p++)if(Level[MIDX[p]]>=Lev)NU++;
 						if(NU>2)NU=2;
 						p=GetMaxCostPercent(Nat->NNUM,Nat->UPGRADE[Nat->UGRP_MINEUP.UIDS[Lev]]->Cost);
 						if(Lev==1){
@@ -3649,7 +3653,7 @@ void City::HandleDefending(){
 		N=Guards.NMemb;
 		IDS=Guards.Memb;
 		MSN=Guards.MembSN;
-		for(i=0;i<N;i++){
+		for(int i=0;i<N;i++){
 			word MID=IDS[i];
 			if(MID!=0xFFFF){
 				OneObject* OB=Group[MID];
@@ -3805,7 +3809,7 @@ void CheckArmies(City* CT){
 	};
 	
 	N=CT->NDefn;
-	for(i=0;i<N;i++){
+	for(int i=0;i<N;i++){
 		DefendInfo* DI=CT->DefInf+i;
 		if(DI->NDefenders){
 			//assert(DI->NDefenders<=DI->MaxDefs);
@@ -3847,13 +3851,13 @@ int CheckMinArmyCreationAbility(Brigade* BR){
 		};
 	};
 	if(BR->CT->DefenceStage){
-		for(i=0;i<MaxBT;i++){
+		for(int i=0;i<MaxBT;i++){
 			if(NBMEM[i]>=DefBriMin[i]){
 				return i;
 			};
 		};
 	}else{
-		for(i=0;i<MaxBT;i++){
+		for(int i=0;i<MaxBT;i++){
 			if(NBMEM[i]>=BriMin[i]){
 				return i;
 			};
@@ -3876,7 +3880,7 @@ int CheckSuperMinArmyCreationAbility(Brigade* BR){
 			};
 		};
 	};
-	for(i=0;i<MaxBT;i++){
+	for(int i=0;i<MaxBT;i++){
 		if(NBMEM[i]>=1){
 			return i;
 			//if(i!=5)return i;
@@ -4656,7 +4660,7 @@ void ArmyMakeBattleLink(AI_Army* ARM){
 	int Endst=7;
 	if(ARM->Spec==2)Endst=3;
 	if(ARM->Spec==2)rmin=2;
-	for(i=0;i<Na;i++){
+	for(int i=0;i<Na;i++){
 		int rr=Norma(int(AINF->MaxX)-MyX,int(AINF->MaxY)-MyY);
 		int rr1=Norma(int(AINF->MaxX)-MyX,int(AINF->MinY)-MyY);
 		if(rr1<rr)rr=rr1;
@@ -5457,7 +5461,7 @@ void CheckDiversants(City* CT){
 	int Maxdvr=MaxDiver[CT->NDivr];
 	if(NDivers>=Maxdvr&&CT->NDivr<16){
 		int NDivArms=0;
-		for(i=0;i<MaxArm;i++){
+		for(int i=0;i<MaxArm;i++){
 			AI_Army* AIAR=CT->ARMS+i;
 			if(AIAR->Enabled){
 				if(AIAR->AOrder&&AIAR->AOrder->ALink==&A_DiversiaLink)NDivArms++;
@@ -6130,7 +6134,7 @@ void UnGroupSelectedUnits(byte NI){
 			};
 		};
 	};
-	for(i=0;i<NForms;i++)DeleteFromGroups(NI,FormsIDS[i]);
+	for(int i=0;i<NForms;i++)DeleteFromGroups(NI,FormsIDS[i]);
 };
 void GroupSelectedFormations(byte NI){
 	word FormsIDS[256];
@@ -6153,7 +6157,7 @@ void GroupSelectedFormations(byte NI){
 			};
 		};
 	};
-	for(i=0;i<NForms;i++)DeleteFromGroups(NI,FormsIDS[i]);
+	for(int i=0;i<NForms;i++)DeleteFromGroups(NI,FormsIDS[i]);
 	if(NForms){
 		CT->GroupsSet=(word**)realloc(CT->GroupsSet,CT->NGroups*4+4);
 		CT->NGroupsInSet=(word*)realloc(CT->NGroupsInSet,CT->NGroups*2+2);
@@ -6188,7 +6192,7 @@ void CorrectImSelectionInGroups(byte NI){
 		};
 	};
 	int N3=NForms;
-	for(i=0;i<N3;i++){
+	for(int i=0;i<N3;i++){
 		word ID=FormsIDS[i];
 		for(int j=0;j<CT->NGroups;j++){
 			int N1=CT->NGroupsInSet[j];
@@ -6205,7 +6209,7 @@ void CorrectImSelectionInGroups(byte NI){
 			};
 		};
 	};
-	for(i=0;i<NForms;i++)ImSelBrigade(NI,1,FNats[i],FormsIDS[i]);
+	for(int i=0;i<NForms;i++)ImSelBrigade(NI,1,FNats[i],FormsIDS[i]);
 };
 bool CheckGroupPossibility(byte NI){
 	word* SID=ImSelm[NI];
@@ -6243,7 +6247,7 @@ bool CheckUnGroupPossibility(byte NI){
 			};
 		};
 	};
-	for(i=0;i<CT->NGroups;i++)if(NForms==CT->NGroupsInSet[i]){
+	for(int i=0;i<CT->NGroups;i++)if(NForms==CT->NGroupsInSet[i]){
 		bool FOUND=1;
 		for(int j=0;j<NForms;j++){
 			word ID=FormsIDS[j];
@@ -6356,7 +6360,7 @@ int GetBestVictimForArchers(byte NI,int x,int y,int R,int MyTop){
 	int BESTENID=0xFFFF;
 	int tx0=x>>6;
 	int ty0=y>>6;
-	for(i=0;i<4096;i++){
+	for(int i=0;i<4096;i++){
 		int V;
 		if(BESTID[i]!=0xFFFF&&(V=ARRAY[i])>0){
 			int ix=(i&63)-32;
@@ -6431,7 +6435,7 @@ bool HandleArchers(AI_Army* ARM,int R){
 		YCT/=NCT;
 		word ID=GetBestVictimForArchers(ARM->NI,XCT,YCT,R,ARM->TopPos);
 		if(ID!=0xFFFF){
-			for(i=0;i<NARCH;i++){
+			for(int i=0;i<NARCH;i++){
 				Group[ARCHID[i]]->AttackObj(ID,16+128,0,0);
 			};
 			return true;

@@ -1,6 +1,9 @@
-#pragma once
+//#pragma once
+#ifndef GAMEXEXTENSION_H // square.h включен из main.cpp,
+#define GAMEXEXTENSION_H
 //////////////////////////////////////////////////////////////////////////
 #include "LoadSave.h"
+//#include "stdheader.h"
 
 class ActiveUnitAbility;
 
@@ -135,4 +138,45 @@ void ext_OnSaveBinaryDataFromMap(BinStream* bs);
 void ext_OnLoadBinaryDataFromMap(BinStream* bs);
 void ext_OnSaveGameBinaryData(BinStream* bs);
 void ext_OnLoadGameBinaryData(BinStream* bs);
+class Alert_HANDLER : public GameExtension {
+public:
+	virtual void OnClassRegistration();
+	virtual void OnEditorStart();
+	virtual void OnGameStart();
+	virtual bool OnMapUnLoading();
+	virtual void ProcessingGame();
+	virtual void OnDrawOnMiniMap(int x, int y, int Lx, int Ly);
+};
+// CBE_HANDLER ///////////////////////////////////////////////////////////
+class CBE_HANDLER : public GameExtension
+{
+public:
 
+	// Save current game (in missions)
+	virtual bool OnGameSaving(xmlQuote& xml);
+	virtual bool OnGameLoading(xmlQuote& xml);
+	virtual void OnInitAfterGameLoading();
+
+	virtual bool OnCheckingBuildPossibility(byte NI, int Type, int& x, int& y);
+
+	virtual	void OnInitAfterMapLoading();
+	virtual void OnClassRegistration();
+	virtual void OnUnloading();
+	virtual bool OnMapUnLoading();
+	virtual	void OnEditorStart();
+	virtual void ProcessingGame();
+	virtual bool OnAttemptToMove(OneObject* Unit, int x, int y);
+	virtual void OnDrawOnMapAfterFogOfWar();
+	virtual void OnDrawOnMapOverAll();
+	virtual void OnDrawOnMiniMap(int x, int y, int Lx, int Ly);
+	virtual bool OnCheatEntering(const char* Cheat);
+	virtual bool OnMouseHandling(int mx, int my,
+		bool& LeftPressed,
+		bool& RightPressed,
+		int MapCoordX, int MapCoordY,
+		bool OverMiniMap);
+	// For units
+	virtual bool OnUnitDamage(OneObject* DamagedUnit, OneObject* Damager, int& Damage, byte AttType);
+	virtual void OnUnitWasProduced(OneObject* Producer, OneObject* NewObject);
+};
+#endif

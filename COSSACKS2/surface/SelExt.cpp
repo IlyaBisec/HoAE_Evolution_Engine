@@ -4,7 +4,7 @@
 #include "IWater.h"
 #include "..\AllTools.h"
 
-#include "..\mesh\UniHash.h"
+#include "..\unichash.h"
 uni_hash<DWORD> baseV;
 void AddBaseV(DWORD v,DWORD v1){
 	baseV.add_uniq(v,v1);
@@ -636,7 +636,7 @@ void SurfSwatchCtrl::Sample::Gen(int x, int y, int L, int idTexture) {
 	const int l = 30;
 	float yInfoPos[4] = {y, y + l, y + l, y};
 	DWORD Diffuse[4] = {0xFF000000, 0x00000000, 0x00000000, 0xFF000000};
-	for(i = 0; i < 4; i++) {
+	for(int i = 0; i < 4; i++) {
 		pVerts->y = yInfoPos[i];
 		pVerts->diffuse = Diffuse[i];
 		pVerts++;
@@ -654,7 +654,7 @@ void SurfSwatchCtrl::Sample::Gen(int x, int y, int L, int idTexture) {
 	// Title:
 	const char *pStrPath = IRS->GetTextureName(idTexture);
 	if(pStrPath) {
-		char *pLastBS = strrchr(pStrPath, '\\');
+		const char *pLastBS = strrchr(pStrPath, '\\');
 		if(pLastBS) {
 			pLastBS++;
 			Info.Title = pLastBS;
@@ -795,7 +795,7 @@ void SelExt::GenArrows(BaseMesh &bm, const cList<cVec3> &Centers, const cList<cV
 //---------------------------------------------------------------------------------------------------------------------------------
 // SelExt::GenCubes
 //---------------------------------------------------------------------------------------------------------------------------------
-void SelExt::GenCubes(BaseMesh &bm, const cList<cVec3> &Centers, const cColor &Color, const float d, const int idTex, const idSh) {
+void SelExt::GenCubes(BaseMesh &bm, const cList<cVec3> &Centers, const cColor &Color, const float d, const int idTex, const int idSh) {
 	if(!Centers.Count()) {
 		return;
 	}

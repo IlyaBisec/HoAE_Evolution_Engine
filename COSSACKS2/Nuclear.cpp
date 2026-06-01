@@ -27,7 +27,8 @@ void HugeExplosion::HandleExpl(){
 //USAGE
 static HugeExplosion HUGEX[64];
 void AddHugExp(int ex,int ey,int er1,int er2,int time){
-	for(int i=0;HUGEX[i].Enabled&&i<64;i++);
+	int i;
+	for(i=0;HUGEX[i].Enabled&&i<64;i++);
 	if(i<64)
 		HUGEX[i].CreateExpl(ex,ey,er1,er2,time);
 };

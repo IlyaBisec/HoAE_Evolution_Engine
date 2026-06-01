@@ -1,8 +1,8 @@
 #include "stdheader.h"
 #include "Chamfer.h"
-#include "..\Mesh\UniHash.h"
-#include "..\Mesh\iVector.h"
-#include "..\Mesh\MeshOperations.h"
+#include "..\unichash.h"
+#include "..\iVector.h"
+#include "..\MeshOper.h"
 #include "..\QuadsRender.h"
 #include "Grass.h"
 

@@ -6,6 +6,11 @@
 	extern	CScriptDebugger	g_LUA_DBG;
 #endif//__LUA_DEBUGGER__
 
+#include "stdheader.h"
+
+#include "TestEditor.h"
+#include "GameExtension.h"
+#include "ClassEditorsRegistration.h"
 class	CBE_HANDLER;
 //CEXPORT int ItemChoose;
 
@@ -206,7 +211,7 @@ public:
 				REG_PARENT(BaseFunction);
 				REG_AUTO(scrName);
 				REG_AUTO(scrDescr);
-			ENDSAVE();
+			ENDSAVE;
 		}	fADD_FILM;
 
 		class CBE_DelFilm : public BaseFunction
@@ -216,7 +221,7 @@ public:
 
 			SAVE(CBE_DelFilm);
 				REG_PARENT(BaseFunction);
-			ENDSAVE();
+			ENDSAVE;
 		}	fDEL_FILM;
 	
 		class CBE_EditFilm : public BaseFunction
@@ -226,7 +231,7 @@ public:
 
 			SAVE(CBE_EditFilm);
 				REG_PARENT(BaseFunction);
-			ENDSAVE();
+			ENDSAVE;
 		}	fEDIT_FILM;
 		// ScriptGraph
 		class CBE_EditGraph : public BaseFunction
@@ -236,7 +241,7 @@ public:
 
 			SAVE(CBE_EditGraph);
 				REG_PARENT(BaseFunction);
-			ENDSAVE();
+			ENDSAVE;
 		}	fEDIT_GRAPH;
 		class CBE_SAVE_GRAPH_LUA : public BaseFunction {
 		public:
@@ -683,7 +688,7 @@ public:
 			void	EvaluateFunction();
 			SAVE(CBE_COLOR_SETINGS_SAVE);
 			REG_PARENT(BaseFunction);
-			ENDSAVE();
+			ENDSAVE;
 		}SaveSettings;
 		int		NodeStyle;
 		class CBE_MISS_SET : public BaseFunction
@@ -1143,38 +1148,7 @@ inline CBEDriveMode_ST* DriveMode(){
 
 //////////////////////////////////////////////////////////////////////////
 
-// CBE_HANDLER ///////////////////////////////////////////////////////////
-class CBE_HANDLER : public GameExtension
-{
-public:
-	
-	// Save current game (in missions)
-	virtual bool OnGameSaving(xmlQuote& xml);
-	virtual bool OnGameLoading(xmlQuote& xml);
-	virtual void OnInitAfterGameLoading();
 
-	virtual bool OnCheckingBuildPossibility(byte NI,int Type,int& x,int& y);
-
-	virtual	void OnInitAfterMapLoading();
-	virtual void OnClassRegistration();
-	virtual void OnUnloading();
-	virtual bool OnMapUnLoading();
-	virtual	void OnEditorStart();
-	virtual void ProcessingGame();
-	virtual bool OnAttemptToMove(OneObject* Unit,int x,int y);
-	virtual void OnDrawOnMapAfterFogOfWar();
-	virtual void OnDrawOnMapOverAll();
-	virtual void OnDrawOnMiniMap(int x,int y,int Lx,int Ly);
-	virtual bool OnCheatEntering(const char* Cheat);
-	virtual bool OnMouseHandling(	int mx,int my,
-									bool& LeftPressed,
-									bool& RightPressed,
-									int MapCoordX,int MapCoordY,
-									bool OverMiniMap);
-	// For units
-	virtual bool OnUnitDamage(OneObject* DamagedUnit,OneObject* Damager,int& Damage,byte AttType);
-	virtual void OnUnitWasProduced(OneObject* Producer,OneObject* NewObject);
-};
 void BE_InstallExtension();
 //////////////////////////////////////////////////////////////////////////
 

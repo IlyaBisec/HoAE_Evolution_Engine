@@ -2,7 +2,7 @@
 #define __Surface__
 
 #define SPLITMESH_MAXNFACTURES	160
-
+#include "..\stdheader.h"
 #include "..\comms\comms.h"
 #include "Shader.h"
 #include "MCubes.h"
@@ -40,7 +40,7 @@ public:
 		void EvaluateFunction();
 		SAVE(SurfCameraRemove);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} Remove;
 	
 	void EvaluateFunction();
@@ -57,7 +57,7 @@ public:
 	REG_MEMBER(_float, Elev);
 	REG_MEMBER(_float, toEye);
 	REG_MEMBER(_float, toEyeEx);
-	ENDSAVE();
+	ENDSAVE;
 };
 
 namespace Surface {
@@ -74,7 +74,7 @@ public:
 		void EvaluateFunction();
 		SAVE(SurfaceTool);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	private:
 		cStr m_ToolName;
 	} Colorize, Facturize, Deform, Archway, Scissors, LocalExporter;
@@ -110,7 +110,7 @@ public:
 		REG_MEMBER(_float01, AMOUNT);
 		REG_AUTO(DSPMAP);
 		REG_MEMBER(_float01, MAPAMOUNT);
-		ENDSAVE();
+		ENDSAVE;
 	} Smooth;
 
 	//*************************************************************************
@@ -141,7 +141,7 @@ public:
 
 			REG_FSLIDER(Threshold, 0.0f, 1.0f, SurfEditorChamferArgs_DefThreshold);
 			REG_FSLIDER(Width, 0.1f, 10.0f, SurfEditorChamferArgs_DefWidth);
-		ENDSAVE();
+		ENDSAVE;
 	} Chamfer;
 
 	class SurfRacist : public SurfaceTool {
@@ -162,7 +162,7 @@ public:
 		REG_ENUM(_index, Race, RACES);
 		REG_MEMBER(_int, pRace);
 		REG_MEMBER(_int, RACE);
-		ENDSAVE();
+		ENDSAVE;
 	} Racist;
 
 	class SurfLayer : public SurfaceTool {
@@ -187,7 +187,7 @@ public:
 		REG_ENUM(_index, Layer, SURFLAYERS);
 		REG_MEMBER(_int, pLayer);
 		REG_MEMBER(_int, LAYER);
-		ENDSAVE();
+		ENDSAVE;
 	} Layer;
 
 	class SurfTypify : public SurfaceTool {
@@ -207,19 +207,19 @@ public:
 		REG_ENUM(_index, Type, SURFTYPES);
 		REG_MEMBER(_int, pType);
 		REG_MEMBER(_int, TYPE);
-		ENDSAVE();
+		ENDSAVE;
 	} Typify;
 
 	class SurfLocalGenerator : public SurfaceTool {
 	public:
-		static const DefPasses = 10;
+		static const int DefPasses = 10;
 		void Defaults();
 		bool GetClassPresentationMask(_str &, void *, void *, const char *, DWORD);
 		int Passes;
 		SAVE(SurfLocalGenerator);
 		REG_PARENT(BaseFunction);
 		REG_ISLIDER(Passes, 1, 10, DefPasses);
-		ENDSAVE();
+		ENDSAVE;
 	} LocalGenerator;
 
 	// COMMANDS
@@ -240,7 +240,7 @@ public:
 		REG_PARENT(BaseFunction);
 		REG_ENUM(_index, Illumination, SURFACE_ILLUMINATIONTYPE_ENUM);
 		REG_MEMBER(_bool, LODs);
-		ENDSAVE();
+		ENDSAVE;
 	} Refresh;
 
 	class CmdSimplify : public BaseFunction {
@@ -249,7 +249,7 @@ public:
 
 		SAVE(CmdSimplify);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} Simplify;
 
 	class CmdFillGenerator : public BaseFunction {
@@ -258,7 +258,7 @@ public:
 
 		SAVE(CmdFillGenerator);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} FillGenerator;
 
 	class CmdCutRect : public BaseFunction {
@@ -290,7 +290,7 @@ public:
 		REG_MEMBER(_int, Y0);
 		REG_MEMBER(_int, X1);
 		REG_MEMBER(_int, Y1);
-		ENDSAVE();
+		ENDSAVE;
 	} CutRect;
 
 	// CmdCreateNewMap:
@@ -328,7 +328,7 @@ public:
 		REG_MEMBER(_int, D);
 		REG_MEMBER(_int, H);
 		REG_MEMBER(_bool, N);
-		ENDSAVE();
+		ENDSAVE;
 	} CreateNewMap;
 
 	// CmdUndo:
@@ -337,7 +337,7 @@ public:
 		void EvaluateFunction();
 		SAVE(CmdUndo);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} Undo;
 
 	// CmdInvertTris:
@@ -348,7 +348,7 @@ public:
 
 		SAVE(CmdInvertTris);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} InvertTris;
 
 	// CmdExport:
@@ -358,7 +358,7 @@ public:
 
 		SAVE(CmdExport);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} Export;
 
 
@@ -385,7 +385,7 @@ public:
 		REG_ISLIDER(Delta, - 100, 100, 0);
 //		REG_MEMBER(_float01, Delta);
 //		REG_MEMBER(_int, D);
-		ENDSAVE();
+		ENDSAVE;
 	} Shift;
 
 	// CmdSaveCamera:
@@ -398,7 +398,7 @@ public:
 		SAVE(CmdSaveCamera);
 		REG_PARENT(BaseFunction);
 		REG_AUTO(Cameras);
-		ENDSAVE();
+		ENDSAVE;
 	} SaveCamera;
 
 	// OPTIONS
@@ -452,7 +452,7 @@ public:
 		REG_MEMBER(_bool, ADAPTIVE);
 		REG_MEMBER(_float, DOT);
 		REG_MEMBER(_float, SCALE);
-		ENDSAVE();
+		ENDSAVE;
 	} Subdivision;
 
 	// ShaderOptions:
@@ -463,7 +463,7 @@ public:
 			void EvaluateFunction();
 			SAVE(ShaderReset);
 			REG_PARENT(BaseFunction);
-			ENDSAVE();
+			ENDSAVE;
 		} Reset;
 
 		void Defaults();
@@ -501,7 +501,7 @@ public:
 		REG_MEMBER(_int, aSeed);
 		REG_MEMBER(_int, aZBufferSide);
 
-		ENDSAVE();
+		ENDSAVE;
 	} Shader;
 
 	// LODSOptions:
@@ -524,7 +524,7 @@ public:
 		REG_MEMBER(_float01, lb);
 		// RegArgs:
 		REG_MEMBER(_float, LodBias);
-		ENDSAVE();
+		ENDSAVE;
 	} LODS;
 
 	void Load();
@@ -583,7 +583,7 @@ public:
 
 		SAVE(CmdTestHtml);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} TestHtml;
 	// CmdSite:
 	class CmdSite : public BaseFunction {
@@ -592,7 +592,7 @@ public:
 
 		SAVE(CmdSite);
 		REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} Site;
 
 //	ClonesArray<CameraTrack> CameraTracks; // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -656,7 +656,7 @@ public:
 	REG_AUTO(Site);
 //	REG_AUTO(CameraTracks); // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-	ENDSAVE();
+	ENDSAVE;
 	bool OnChangeMember(BaseClass *, void *, void *, const char *);
 	bool m_fActive;
 };
@@ -1268,7 +1268,7 @@ public:
 	REG_MEMBER(_int, cy);
 	REG_MEMBER(_int, h);
 	REG_MEMBER(_int, r);
-	ENDSAVE();
+	ENDSAVE;
 };
 
 #include "SurfSplit.h"

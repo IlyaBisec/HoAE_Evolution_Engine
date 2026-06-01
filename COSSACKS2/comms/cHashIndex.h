@@ -161,14 +161,14 @@ inline void cHashIndex::InsertIndex(const int key, const int index) {
 				if(m_pHash[i] > max) max = m_pHash[i];
 			}
 		}
-		for(i = 0; i < m_nIndexSize; i++) {
+		for(int i = 0; i < m_nIndexSize; i++) {
 			if(m_pIndexChain[i] >= index) {
 				m_pIndexChain[i]++;
 				if(m_pIndexChain[i] > max) max = m_pIndexChain[i];
 			}
 		}
 		if(max >= m_nIndexSize) ResizeIndex(max + 1);
-		for(i = max; i > index; i--) m_pIndexChain[i] = m_pIndexChain[i - 1];
+		for(int i = max; i > index; i--) m_pIndexChain[i] = m_pIndexChain[i - 1];
 		m_pIndexChain[index] = -1;
 	}
 	Add(key, index);
@@ -185,13 +185,13 @@ inline void cHashIndex::RemoveIndex(const int key, const int index) {
 				m_pHash[i]--;
 			}
 		}
-		for(i = 0; i < m_nIndexSize; i++) {
+		for(int i = 0; i < m_nIndexSize; i++) {
 			if(m_pIndexChain[i] >= index) {
 				if(m_pIndexChain[i] > max) max = m_pIndexChain[i];
 				m_pIndexChain[i]--;
 			}
 		}
-		for(i = index; i < max; i++) m_pIndexChain[i] = m_pIndexChain[i + 1];
+		for(int i = index; i < max; i++) m_pIndexChain[i] = m_pIndexChain[i + 1];
 		m_pIndexChain[max] = -1;
 	}
 }

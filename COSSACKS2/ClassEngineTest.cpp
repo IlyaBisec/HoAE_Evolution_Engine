@@ -11,10 +11,10 @@
 #include "AI_Scripts.h"
 #include "VisualSoundSystem.h"
 #include "BrigadeAINeuro.h"
-#include "ClassSolution.h"
-#include "ClassPresentation.hpp"
-#include "ClassEngine.hpp"
-#include "DString.hpp"
+#include "..\ClassEngine\ClassSolution.h"
+#include "..\ClassEngine\ClassPresentation.hpp"
+#include "..\ClassEngine\ClassEngine.hpp"
+#include "..\ClassEngine\DString.hpp"
 WholeClassPresentation CE_WCP;
 //
 void _UnitType::Save(xmlQuote& xml,void* ClassPtr,void* Extra){
@@ -226,8 +226,8 @@ char* _MoraleType[]={"Cossacks2","Rome",""};
 char* _PerspMode[]={"Perspective","Plane",""};
 char* _LANDTYPE[]={"Any","Land","Islands",""};
 char* _TeamList[]={"NoTeams","Team1","Team2","Team3","Team4","Team5","Team6","Team7",""};
-char* _DIFFICULTIES[]={"Any","Easy","Normal","Hard","Very Hard","Impossible",""};
-char* _GAMETYPES[]={"Any","RTS + RPG","RTS","RPG", ""};
+char* _DIFFICULTIES[]={"Any","Very Easy","Easy","Normal","Hard","Very Hard","Impossible", ""};
+char* _GAMETYPES[]={"Any","Standard","RTS","RPG","RTS + RPG", ""};
 
 // vital
 char* _InGameMainMenu[]={"SinGlobalMap","SinBattles","MulBattles",""};
@@ -297,7 +297,7 @@ char* _WeaponDst[]={"To_destination_points","To_current_weapon_position","To_sta
 
 char* _ModifyPt[]={"ModifySourcePoint","ModifyCurrentPoint","ModifyDestinationPoint",""};
 char* _AmpUsage[]={"AbsoluteValueInPixels","PercentsFromTraveledDistance","PercentsFromTotalDistance",""};
-const vClotheN=10;
+const int vClotheN=10;
 int vClotheSet[vClotheN] = {1,		1,			1,			1,			1,			4,		2,			1,			1,		1};
 char* _ItemClotheType[]={	"Helm",	"Cloak",	"Medalion",	"Armor",	"Gloves",	"Ring",	"Bracelet",	"Boots",	"Belt",	"Weapon",""};
 
@@ -312,7 +312,7 @@ int	  _InventaryHeroTabV[] = { 5,4,1,0,-1 };
 char* _WS_GRMODIF_TYPE_DUR[]={"Time","Length from","Length to","Relation passed-remained","Relation remained-passed",""};
 char* _SURFACETYPE[]={"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15",""};
 
-char* _GAMESPEED[]={"#mpopt_Normal","#mpopt_Fast","#mpopt_Slow","#mpopt_VeryFast","#mpopt_VeryVeryFast","#mpopt_MarvellousFast",""};
+char* _GAMESPEED[]={"#mpopt_Fast","#mpopt_Normal","#mpopt_Slow",""};
 char* _HEROLIVES[]={"#mpopt_Lives3","#mpopt_Lives1","#mpopt_Lives5","#mpopt_Lives7",""};
 char* _GAMETYPE[]={"#mpopt_UntilDie","#mpopt_ScoreGame_15","#mpopt_ScoreGame_30","#mpopt_ScoreGame_45","#mpopt_ScoreGame_60",""};
 char* _STARTRES[]={"#mpopt_res_1000","#mpopt_res_3000", "#mpopt_res_1000000",""};
@@ -662,7 +662,7 @@ public:
 	REG_AUTO(CR);
 	REG_AUTO(CA2);
 	REG_AUTO(CT1);
-    REG_METHOD(fn);
+    REG_METHOD_EX(&Class2::fn, fn);
 	ENDSAVE;
 };
 class Class3:public BaseClass{

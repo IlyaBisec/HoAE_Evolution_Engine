@@ -121,7 +121,6 @@ void RPG_AI::Process(){
 				//O->Process();
 				O->AI.Process(HVS);
 			}else
-				//O->Process();
 				O->AI.Process(HVS);
 		}
 	}
@@ -159,113 +158,35 @@ void RPG_AI::AddUnit(/*OneObject* OB*/pUnit& U){
 };
 
 void RPG_AI_Group::Process(){
-	int n=GetAmount();
-	RPG_AI_Object;	
+	//int n=GetAmount();
+	//RPG_AI_Object	
 }
 
 void RPG_AI_Object::Process(){
-	OneObject* Hero=Unit.object();
-	//Fighting();
-	itr_AA.Create(Hero);
-	while(ActiveUnitAbility* AA=itr_AA.Next()){
-	if(AA->TypeAbil==5){
-				bool click=false;
 
-				if( Hero->Life<50 ){
-					if(GameInterface::CheckInfluenceMask(AA,ABL_Life)){
-						click=true;
-					}
-				}
-				if( Hero->Life*2 <= Hero->MaxLife ){
-					if(GameInterface::CheckInfluenceMask(AA,ABL_LifeRegeneration)){
-						click=true;
-					}
-				}
-				if( Hero->Mana+150 <= Hero->MaxMana ){
-					if(GameInterface::CheckInfluenceMask(AA,ABL_Mana)){
-						click=true;
-					}
-					if(GameInterface::CheckInfluenceMask(AA,ABL_ManaRegeneration)){
-						click=true;
-					}
-				}
-				//if( hForce>eForce ){
-					// нападаем
-					/*if(eForce){
-						if(GameInterface::CheckInfluenceMask(AA,ABL_Damage)){
-							click=true;
-						}
-						if(GameInterface::CheckInfluenceMask(AA,ABL_Shield)){
-							click=true;
-						}
-						if(GameInterface::CheckInfluenceMask(AA,ABL_Protection)){
-							click=true;
-						}
-					}*/				
-				//}else{
-					// отступаем
-					if(Hero->Life*4 <= Hero->MaxLife){
-						if(GameInterface::CheckInfluenceMask(AA,ABL_MotionSpeed)){
-							click=true;
-						}
-						if(GameInterface::CheckInfluenceMask(AA,ABL_Invisibility)){
-							click=true;
-						}
-						if(GameInterface::CheckInfluenceMask(AA,ABL_Invulnerability)){
-							click=true;
-						}
-					}
-				//}
-				if(GameInterface::CheckInfluenceMask(AA,ABL_LifeMax)){
-					click=true;
-				}
-				if(GameInterface::CheckInfluenceMask(AA,ABL_ManaMax)){
-					click=true;
-				}
-
-				if(click){
-					Drinking(AA);
-					break;
-				}
-
-			}
-}
-	//GiveChest();
-	/*itr_AA.Create(Hero);
-	while(ActiveUnitAbility* AA=itr_AA.Next()){
-			//одеваем шмотки
-			if(AA->TypeAbil==4){
-				//OneItem* I=(OneItem*)AA;
-				ActiveUnitAbility* I=(ActiveUnitAbility*)AA;
-				UnitAbility* UA=AA->GetA();
-				if( !(UA&&UA->CanNotBeClothe) )
-					I->Clothed=true;
-	}*/
-	Dressing();
-/*
 	// not move
-	Dressing();
+	//Dressing();
 	//Drinking();
 
 	ScriptCards();
 	ScriptClothes();
 	ScriptBottles();
 
-	Reflexion();
+	//Reflexion();
 	//ActivateAbility();
 	//ActivateSkill();
 
 	// move
-	GiveBonus();		// - активация бонуса (move)
-	GiveChest();		// - поднятие предмета (move)
-	BuySettlement();	// - покупка сел (move)
+	//GiveBonus();		// - активация бонуса (move)
+	//GiveChest();		// - поднятие предмета (move)
+	//BuySettlement();	// - покупка сел (move)
 	//Casting();			// - применить карточку (move)
-	Creeping();			// - крипинг - атака нейтральных юнитов (move)
-	Fighting();			// - вступаем в бой с противником или нанятым отрядом из села (move)
-	Escaping();			// - отступаем или заманиваем противника (move)
-	Shopping();			// - покупка/продажа: бутылки, предмета, карточки (move)
+	//Creeping();			// - крипинг - атака нейтральных юнитов (move)
+	//Fighting();			// - вступаем в бой с противником или нанятым отрядом из села (move)
+	//Escaping();			// - отступаем или заманиваем противника (move)
+	//Shopping();			// - покупка/продажа: бутылки, предмета, карточки (move)
 
-	StateProcess();*/
+	StateProcess();
 }
 
 void RPG_AI_Object::StateProcess(){
@@ -289,7 +210,7 @@ void RPG_AI_Object::StateProcess(){
 			}
 		}
 		// отработка состояния
-		for(i=0;i<n;i++){
+		for(int i=0;i<n;i++){
 			if( State[i]->Process(this) )
 				break;
 		}
@@ -299,7 +220,8 @@ void RPG_AI_Object::StateProcess(){
 
 void RPG_AI_Object::AddStatePrio(ObjState OS,int Prio){
 	int n=State.GetAmount();
-	for(int i=0;i<n;i++){
+	int i;
+	for(i=0;i<n;i++){
 		RPG_AI_ObjectState* S=State[i];
 		if( S->State==OS ){
 			S->Priority+=Prio;
@@ -544,7 +466,7 @@ void RPG_AI_Object::ScriptClothes(){
 
 	Clothes.Clear();
 
-	Clothes.Change(Armor1,2);
+	//Clothes.Change(Armor1,5);
 	Clothes.Change(Armor2,5);
 	Clothes.Change(Armor3,10);
 	Clothes.Change(Armor4,15);
@@ -553,7 +475,7 @@ void RPG_AI_Object::ScriptClothes(){
 	Clothes.Change(Armor7,30);
 	Clothes.Change(Armor8,35);
 
-	Clothes.Sort;
+	//Clothes.Sort;
 
 	ClonesArray<ActiveSet> ClothesTypes;
 	ClothesTypes.Add(NULL,12);
@@ -611,276 +533,17 @@ void RPG_AI_Object::ScriptClothes(){
 
 void RPG_AI_Object::ScriptBottles(){
 };
-void RPG_AI_Object::BattleAI(){
-	/*HeroVariableStorage* HVS=Unit.DetectHero();
-	if(!HVS)
-		return;
 
-	int TrueTime=GameInterface::GetGlobalTime();
-
-	MultiplayerForCriping=1;
-	if( HVS->Level>10 ) MultiplayerForCriping=2;
-	//if( HVS->Level>20 && hForce>1000000 ) MultiplayerForCriping=2;
-	//if(HVS->Level>30) MultiplayerForCriping=4;
-
-	//int NZ=GetNAreas();
-	int NZ=GameInterface::GetTZonesAmount(0);
-	Danger.Check(NZ);
-	Danger.NValues=NZ;
-	TopList.Check(NZ);
-	TopList.NValues=NZ;
-
-	OneObject* Hero=HVS->OB;
-
-	int x=HVS->OB->RealX>>4;
-	int y=HVS->OB->RealY>>4;
-	int z=GameInterface::GetTZoneIndex(0,x,y);
-
-	MoveArea=z;
-
-	// поиск вражеских армий
-	if(DangerTime<=TrueTime){
-		DangerTime=TrueTime+3000+GetRND(2000);
-		CreateDangerMap(Hero);
-	}
-
-	// рассчитываем очки героя
-	hForce = Hero->Life*Hero->MoreCharacter->MaxDam;
-	//if(Hero->Life*4<Hero->MaxLife)
-	//	hForce/=4;
-	if( HVS->Level<5 && Hero->Mana>75 ){
-		hForce = hForce*5/2;
-	}
-
-	//eN=0;
-	int eForce=0;
-	OneObject* enemy=NULL;
-	int enemyR=10000;
-	OneObject* chest=NULL;
-
-	//Сканим юнитов в округе
-	itr_UnitsInRadius.Create(x,y,900);
-	while(OneObject* OB=itr_UnitsInRadius.Next()){
-		if( !OB->Sdoxlo && OB!=Hero){
-
-			int r=GetTopDist(x,y,OB->RealX>>4,OB->RealY>>4)*64;
-			if(r<1000){
-
-				pUnit U(OB);
-				// баночки и сундучки
-				if( !chest && U.DetectChestNotEmpty() ){
-					chest=OB;
-				}
-
-				// юниты
-				if(OB->NMask&Hero->NMask){
-					hForce += OB->Life*OB->MoreCharacter->MaxDam;
-				}else{
-					if( OB->newMons->KillMask&Hero->MathMask ){
-						for(int wp=0;wp<NAttTypes;wp++){
-							int dam=OB->MoreCharacter->MaxDamage[wp];
-							if( dam && OB->newMons->AttackMask[wp]&Hero->MathMask ){
-
-								if( !OB->AI_Guard||OB->Attack )
-									eForce += OB->Life*dam;
-
-								if(enemyR>r){
-									int z=GameInterface::GetTZoneIndex(0,OB->RealX>>4,OB->RealY>>4);
-									if(z<NZ){
-										int a=ArmyMap[z];
-										if(a!=0xFFFF){
-											int force=TopArmies[a].Force;
-											if( force>0 && force<hForce ){
-												enemy=OB;
-												enemyR=r;
-											}
-										}
-									}
-								}
-
-								break;
-							}
-						}
-					}
-				}
-
-			}
-
-		}
-	}
-
-	Retreat=false;
-	
-	//Проанализировали - выполняем
-	//Если враги есть
-	if( eForce==0 && !enemy ){
-
-		// подходим	
-		//if(!Hero->LocalOrder){
-		if( SendTime<=TrueTime || !Hero->LocalOrder ){
-			SendTime=TrueTime+4000+GetRND(1000);
-
-			if(chest){
-				pUnit Ch(chest);
-				pUnit Her(Hero);
-				// взять шмотку
-				//if( !Hero->LocalOrder|| Hero->LocalOrder->DoLink!=StartDialogLink ){
-				//	StartDialog(Hero,0,chest);
-				//}
-				Her.PickUpUnit(Ch,0);
-
-			}else{
-
-				// идем
-				int maxdang;
-				word DST=0xFFFF;
-				int dz=FindNextZoneOnTheSafeWayToObjectEx(z,Danger.Values,TopList.Values,&maxdang,3,&DST);
-				int dx,dy;
-				if( DST!=0xFFFF && GetTopZRealCoor(dz,&dx,&dy) ){
-					Hero->NewMonsterSendTo(dx<<4,dy<<4,128+16,0);
-
-					MoveArea=dz;
-				}
-
-			}
-		}
-
-	}else
-		//ВРАГ СЗАДИ ПО ЛЕВОМУ ФЛАНГУ
-		if( hForce>eForce && LifePrev<=Hero->Life ){
-			// деремся
-
-			// кастуем
-			bool Casting=false;
-
-			int x,y,z;
-			if(enemy){
-				x=enemy->RealX>>4;
-				y=enemy->RealY>>4;
-				z=GameInterface::GetHeight(x,y);
-				MoveArea=GameInterface::GetTZoneIndex(0,x,y);
-			}
-
-			if( CastTime<=TrueTime && (/*eForce>2000 || TrueTime-CastTime>12000) ){	// если враг в 2 раза слабее - не применять магию
-
-				ActiveUnitAbility* Spell=NULL;
-
-				itr_AA.Create(Hero);
-				while(ActiveUnitAbility* AA=itr_AA.Next()){
-					if(AA->Casting){
-						Casting=true;
-						break;
-					}
-					if( enemy && !Spell ){
-						UnitAbility* UA=AA->GetA();
-						if( AA->TypeAbil==1 && UA && !UA->Aura && UA->EnemyTarget ){
-							if(AA->CanTarget(enemy->Index,x,y,z)){
-								Spell=AA;
-							};
-						}
-					}
-				}
-				if( !Casting && Spell ){
-					CastTime=TrueTime+6000+GetRND(6000);
-					Spell->Execute(enemy->Index,x,y,z);
-					Casting=true;
-				}
-			}
-
-			// рукопрекладствуем
-			if( !(Casting||Hero->Attack) ){
-				if(enemy){
-					Hero->AttackObj(enemy->Index,128+16);
-				}			
-			}
-
-		}else{
-
-			if(LifePrev<=Hero->Life){
-				Retreat=true;
-			}
-
-			// отступаем
-			//if( !Hero->LocalOrder || Hero->Attack ){
-			if( SendTime<=TrueTime || Hero->Attack ){
-				SendTime=TrueTime+3000+GetRND(1000);
-				int maxdang;
-				word DST=0xFFFF;
-				int dz=FindNextZoneOnTheSafeWayEx(z,HomeArea,Danger.Values,&maxdang,3);
-				if(dz=0xFFFF){
-					dz=HomeArea;
-				}
-				int dx,dy;
-				if(GetTopZRealCoor(dz,&dx,&dy)){
-					Hero->NewMonsterSendTo(dx<<4,dy<<4,128+16,0);
-
-					MoveArea=dz;
-				}
-			}
-
-		}
-		}
-
-		LifePrev=Hero->Life;
-*/
-};
-void RPG_AI_Object::GiveBonus(){}; // - активация бонуса (move)(TBH: шта??????)
-void RPG_AI_Object::GiveChest(){
-//Сканим юнитов в округе
-	OneObject* Hero=Unit.object();
-	OneObject* chest=NULL;
-	int x=Hero->RealX>>4;
-	int y=Hero->RealY>>4;
-	int z=GameInterface::GetTZoneIndex(0,x,y);
-	itr_UnitsInRadius.Create(x,y,900);
-	while(OneObject* OB=itr_UnitsInRadius.Next()){
-		if( !OB->Sdoxlo && OB!=Hero){
-
-			int r=GetTopDist(x,y,OB->RealX>>4,OB->RealY>>4)*64;
-			if(r<1000){
-
-				pUnit U(OB);
-				// баночки и сундучки
-				if( !chest && U.DetectChestNotEmpty() ){
-					chest=OB;
-				}
-
-			}
-
-		}
-	}
-	
-			if(chest){
-				pUnit Ch(chest);
-				pUnit Her(Hero);
-				Her.PickUpUnit(Ch,0);
-	}
-}; // - поднятие предмета (move)
+void RPG_AI_Object::GiveBonus(){}; // - активация бонуса (move)
+void RPG_AI_Object::GiveChest(){}; // - поднятие предмета (move)
 
 void RPG_AI_Object::BuySettlement(){}; // - покупка сел (move)
 
-void RPG_AI_Object::Casting(ActiveUnitAbility* A){
-		OneObject* Hero=Unit.object();
-		itr_AA.Create(Hero);
-		while(ActiveUnitAbility* AA=itr_AA.Next()){
-			bool click=false;
-			if( AA==A ){
-				click=true;
-			}
-			if(click){
-					AA->OnClick();
-					break;
-				}
-
-			}
-}; // - применить карточку (move)
+void RPG_AI_Object::Casting(){}; // - применить карточку (move)
 void RPG_AI_Object::Creeping(){
 
 };
-void RPG_AI_Object::Fighting(){
-    HeroVariableStorage* HVS=Unit.DetectHero();
-	AI.Fight(HVS);
-}; // - вступаем в бой с противником или нанятым отрядом из села (move)
+void RPG_AI_Object::Fighting(){}; // - вступаем в бой с противником или нанятым отрядом из села (move)
 void RPG_AI_Object::Escaping(){}; // - отступаем или заманиваем противника (move)
 
 void RPG_AI_Object::Shopping(){};	// - покупка: бутылки, предмета, карточки (move)
@@ -891,60 +554,12 @@ void RPG_AI_Object::Dressing(){
 	ScriptClothes();
 	ScriptBottles();
 }; // - одеть/снять пердмет ()
-void RPG_AI_Object::Drinking(ActiveUnitAbility* A){
-		//Бухаем
-		OneObject* Hero=Unit.object();
-		itr_AA.Create(Hero);
-		while(ActiveUnitAbility* AA=itr_AA.Next()){
-			bool click=false;
-			if( AA==A ){
-				click=true;
-			}
-			if(click){
-					AA->OnClick();
-					break;
-				}
+void RPG_AI_Object::Drinking(){}; // - выпить бутылку ()
 
-			}
+void RPG_AI_Object::Reflexion(){}; // - включить/выключить ауру ()
 
-}
-
-
-void RPG_AI_Object::Reflexion(){
-
-}; // - включить/выключить ауру ()
-
-void RPG_AI_Object::ActivateAbility(ActiveUnitAbility* A){
-	OneObject* Hero=Unit.object();
-		itr_AA.Create(Hero);
-		while(ActiveUnitAbility* AA=itr_AA.Next()){
-			bool click=false;
-			if( AA==A ){
-				click=true;
-			}
-			if(click){
-					AA->OnClick();
-					break;
-				}
-
-			}
-
-} // - включить бег или уникальные способности ()
-void RPG_AI_Object::ActivateSkill(ActiveUnitAbility* A){
-		OneObject* Hero=Unit.object();
-		itr_AA.Create(Hero);
-		while(ActiveUnitAbility* AA=itr_AA.Next()){
-			bool click=false;
-			if( AA==A ){
-				click=true;
-			}
-			if(click){
-					AA->OnClick();
-					break;
-				}
-
-			}
-}; // - переключить тип атаки ()
+void RPG_AI_Object::ActivateAbility(){}; // - включить бег или уникальные способности ()
+void RPG_AI_Object::ActivateSkill(){}; // - переключить тип атаки ()
 
 //==================================================================================================================//
 
@@ -1131,154 +746,7 @@ void ai_Hero::CreateDangerMap(OneObject* Hero/*, int ItrAmount*/){
 //		};
 //	};
 //};
-void ai_Hero::Fight(HeroVariableStorage* HVS){
-	if(!HVS)
-		return;
-	int TrueTime=GameInterface::GetGlobalTime();
 
-	MultiplayerForCriping=1;
-	if( HVS->Level>10 ) MultiplayerForCriping=2;
-	//if( HVS->Level>20 && hForce>1000000 ) MultiplayerForCriping=2;
-	//if(HVS->Level>30) MultiplayerForCriping=4;
-
-	//int NZ=GetNAreas();
-	int NZ=GameInterface::GetTZonesAmount(0);
-	Danger.Check(NZ);
-	Danger.NValues=NZ;
-	TopList.Check(NZ);
-	TopList.NValues=NZ;
-
-	OneObject* Hero=HVS->OB;
-
-	int x=HVS->OB->RealX>>4;
-	int y=HVS->OB->RealY>>4;
-	int z=GameInterface::GetTZoneIndex(0,x,y);
-
-	MoveArea=z;
-
-	// поиск вражеских армий
-	if(DangerTime<=TrueTime){
-		DangerTime=TrueTime+3000+GetRND(2000);
-		CreateDangerMap(Hero);
-	}
-
-	// рассчитываем очки героя
-	hForce = Hero->Life*Hero->MoreCharacter->MaxDam;
-	//if(Hero->Life*4<Hero->MaxLife)
-	//	hForce/=4;
-	if( HVS->Level<5 && Hero->Mana>75 ){
-		hForce = hForce*5/2;
-	}
-
-	//eN=0;
-	int eForce=0;
-	OneObject* enemy=NULL;
-	int enemyR=10000;
-	OneObject* chest=NULL;
-	if( eForce==0 && !enemy ){
-	//Сканим юнитов в округе
-	itr_UnitsInRadius.Create(x,y,900);
-	while(OneObject* OB=itr_UnitsInRadius.Next()){
-		if( !OB->Sdoxlo && OB!=Hero){
-
-			int r=GetTopDist(x,y,OB->RealX>>4,OB->RealY>>4)*64;
-			if(r<1000){
-
-				pUnit U(OB);
-				// юниты
-				if(OB->NMask&Hero->NMask){
-					hForce += OB->Life*OB->MoreCharacter->MaxDam;
-				}else{
-					if( OB->newMons->KillMask&Hero->MathMask ){
-						for(int wp=0;wp<NAttTypes;wp++){
-							int dam=OB->MoreCharacter->MaxDamage[wp];
-							if( dam && OB->newMons->AttackMask[wp]&Hero->MathMask ){
-
-								if( !OB->AI_Guard||OB->Attack )
-									eForce += OB->Life*dam;
-
-								if(enemyR>r){
-									int z=GameInterface::GetTZoneIndex(0,OB->RealX>>4,OB->RealY>>4);
-									if(z<NZ){
-										int a=ArmyMap[z];
-										if(a!=0xFFFF){
-											int force=TopArmies[a].Force;
-											if( force>0 && force<hForce ){
-												enemy=OB;
-												enemyR=r;
-											}
-										}
-									}
-								}
-
-								break;
-							}
-						}
-					}
-				}
-
-			}
-
-		}
-	}
-	Retreat=false;
-	if( eForce==0 && !enemy ){
-		// подходим	
-		//if(!Hero->LocalOrder){
-		if( SendTime<=TrueTime || !Hero->LocalOrder ){
-			SendTime=TrueTime+4000+GetRND(1000);
-				// идем
-				int maxdang;
-				word DST=0xFFFF;
-				int dz=FindNextZoneOnTheSafeWayToObjectEx(z,Danger.Values,TopList.Values,&maxdang,3,&DST);
-				int dx,dy;
-				if( DST!=0xFFFF && GetTopZRealCoor(dz,&dx,&dy) ){
-					Hero->NewMonsterSendTo(dx<<4,dy<<4,128+16,0);
-
-					MoveArea=dz;
-				}
-
-		}
-
-	}else
-		//ВРАГ СЗАДИ ПО ЛЕВОМУ ФЛАНГУ
-		if( hForce>eForce && LifePrev<=Hero->Life ){
-			bool Casting=false;
-			// рукопрекладствуем
-			if( !(Casting||Hero->Attack) ){
-				if(enemy){
-					Hero->AttackObj(enemy->Index,128+16);
-				}			
-			}
-
-		}else{
-
-			if(LifePrev<=Hero->Life){
-				Retreat=true;
-			}
-
-			// отступаем
-			//if( !Hero->LocalOrder || Hero->Attack ){
-			if( SendTime<=TrueTime || Hero->Attack ){
-				SendTime=TrueTime+3000+GetRND(1000);
-				int maxdang;
-				word DST=0xFFFF;
-				int dz=FindNextZoneOnTheSafeWayEx(z,HomeArea,Danger.Values,&maxdang,3);
-				if(dz=0xFFFF){
-					dz=HomeArea;
-				}
-				int dx,dy;
-				if(GetTopZRealCoor(dz,&dx,&dy)){
-					Hero->NewMonsterSendTo(dx<<4,dy<<4,128+16,0);
-
-					MoveArea=dz;
-				}
-			}
-
-		}
-		}
-		LifePrev=Hero->Life;
-}
 void ai_Hero::Process(HeroVariableStorage* HVS){
 
 	if(!HVS)
@@ -1312,7 +780,7 @@ void ai_Hero::Process(HeroVariableStorage* HVS){
 		CreateDangerMap(Hero);
 	}
 
-	// рассчитываем очки героя
+	// ближний бой
 	hForce = Hero->Life*Hero->MoreCharacter->MaxDam;
 	//if(Hero->Life*4<Hero->MaxLife)
 	//	hForce/=4;
@@ -1326,7 +794,6 @@ void ai_Hero::Process(HeroVariableStorage* HVS){
 	int enemyR=10000;
 	OneObject* chest=NULL;
 
-	//Сканим юнитов в округе
 	itr_UnitsInRadius.Create(x,y,900);
 	while(OneObject* OB=itr_UnitsInRadius.Next()){
 		if( !OB->Sdoxlo && OB!=Hero){
@@ -1378,9 +845,7 @@ void ai_Hero::Process(HeroVariableStorage* HVS){
 	}
 
 	Retreat=false;
-	
-	//Проанализировали - выполняем
-	//Если враги есть
+
 	if( eForce==0 && !enemy ){
 
 		// подходим	
@@ -1389,13 +854,11 @@ void ai_Hero::Process(HeroVariableStorage* HVS){
 			SendTime=TrueTime+4000+GetRND(1000);
 
 			if(chest){
-				pUnit Ch(chest);
-				pUnit Her(Hero);
+
 				// взять шмотку
-				//if( !Hero->LocalOrder|| Hero->LocalOrder->DoLink!=StartDialogLink ){
+				//if( !Hero->LocalOrder || Hero->LocalOrder->DoLink!=StartDialogLink ){
 				//	StartDialog(Hero,0,chest);
 				//}
-				Her.PickUpUnit(Ch,0);
 
 			}else{
 
@@ -1414,7 +877,6 @@ void ai_Hero::Process(HeroVariableStorage* HVS){
 		}
 
 	}else
-		//ВРАГ СЗАДИ ПО ЛЕВОМУ ФЛАНГУ
 		if( hForce>eForce && LifePrev<=Hero->Life ){
 			// деремся
 
@@ -1487,7 +949,7 @@ void ai_Hero::Process(HeroVariableStorage* HVS){
 			}
 
 		}
-		//Считаем, а надо ли нам качать защиту и ренж
+
 		bool upShPirc=false;
 		int UpShPircType=0;
 		if( HVS->Level>10 && GetRND(100)<45 ){

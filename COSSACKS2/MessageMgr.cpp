@@ -193,7 +193,7 @@ bool		BaseMesMgrST::HANDLE(int mx,int my,
 		if (MLClikOnChild) CID=i;
 	};
     if (MLClikOnChild) {
-		for (i=0; i<N; i++){
+		for (int i=0; i<N; i++){
 			if (i!=CID) {
 				Messages[i]->HideAllMessages();
 			}else{
@@ -203,7 +203,7 @@ bool		BaseMesMgrST::HANDLE(int mx,int my,
 		RightPressed=false;
 		return true;
     };
-	for (i=0; (i<N)&&(!release); i++){
+	for (int i=0; (i<N)&&(!release); i++){
 		release = Messages[i]->HANDLE(mx,my,LeftPressed,RightPressed,MapCoordX,MapCoordY,OverMiniMap);
 	};
 	if (release){

@@ -1,7 +1,7 @@
 #ifndef __LANGUAGE_H__
 #define __LANGUAGE_H__
-#include <ClassEngine.h>
-#include <more_types.h>
+#include "..\ClassEngine\ClassEngine.h"
+#include "..\ClassEngine\more_types.h""
 #pragma pack( push )
 #pragma pack( 1 )
 #include "EngineSettings.h"

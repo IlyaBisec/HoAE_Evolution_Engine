@@ -3,7 +3,6 @@
 #define _WINSOCKAPI_
 #include <malloc.h>
 #include "resource.h"
-#include "ddini.h"
 #include "wintab\wintab.h"
 #include "ResFile.h"
 #include "FastDraw.h"
@@ -40,6 +39,7 @@
 #include "vital\vital_def.h"
 #include "theovorb\theovorb.h"
 #include "MassivePlayer.h"
+#include "ddini.h"
 bool UseSysMouse=0;
 #ifdef _USE3D
 #define TITLE "Heroes of Annihilated Empires"
@@ -142,7 +142,7 @@ void Reset3D();
 void Init3DMapSystem();
 void CreateRandomHMap();
 void SetLight(int Ldx,int Ldy,int Ldz);
-static Light=0;
+static int Light=0;
 int HiStyle;
 extern bool ChangeNation;
 extern bool MultiTvar;
@@ -263,7 +263,8 @@ int GetResID(char*);
 EventsTag Events[maxTask];
 void CmdSetSpeed(word Speed);
 int RegisterEventHandler(EventHandPro* pro,int Type,void* param){
-	for(int i=0;int(Events[i].Pro)&&i<maxTask;i++);
+	int i;
+	for(i=0;int(Events[i].Pro)&&i<maxTask;i++);
 	if(i>=maxTask)return -1;
 	Events[i].Pro=pro;
 	Events[i].Type=Type;
@@ -625,7 +626,7 @@ bool Loading()
 	IstalAllExtensions();
 	ext_OnClassRegistration();
 	void PrintAllLeaks();
-	//PrintAllLeaks();
+	PrintAllLeaks();
 	//	
 	LoadVideoSeqScript(&VideoSeqScript,"Video\\vseq.qpp.xml");
 	LoadVideoSeqScript(&VidOfSeqScript,"Video\\vofseq.qpp.xml");
@@ -695,7 +696,8 @@ void SaveBMP8(char* Name,int lx,int ly,byte* Data){
 	char ccc[128];
 	sprintf(ccc,"%d\\agew_1.pal",CurPalette);
 	ResFile f=RReset(ccc);
-	for(int i=0;i<256;i++){
+	int i;
+	for(i=0;i<256;i++){
 		int ofs=i<<2;
 		RBlockRead(f,PAL+ofs+2,1);
 		RBlockRead(f,PAL+ofs+1,1);
@@ -738,7 +740,8 @@ void SaveMiniScreenShot(char* Name){
 	byte PAL[1024];
 	memset(PAL,0,1024);
 	ResFile f=RReset("agew_1.pal");
-	for(int i=0;i<256;i++){
+	int i;
+	for(i=0;i<256;i++){
 		int ofs=i<<2;
 		RBlockRead(f,PAL+ofs+2,1);
 		RBlockRead(f,PAL+ofs+1,1);
@@ -2996,7 +2999,7 @@ void KeyTestMem();
 #ifdef MAYA_BOOLEANS
 // BEGIN: MAYA! MUST BE DELETED!
 #include "Surface\Maya\include\MStatus.h"
-#include "Surface\Maya\include\MLibrary.h"
+#include "Surface\Maya\include\MLibrary.h.h"
 MStatus g_MayaStatus;
 // END: MAYA! MUST BE DELETED!
 #endif // MAYA_BOOLEANS
@@ -3138,8 +3141,8 @@ static BOOL doInit( HINSTANCE hInstance, int nCmdShow )
 	}
 	
 	ScreenProp prop = IRS->GetScreenProp();
-	RealLx = GetSystemMetrics(SM_CXSCREEN); //1024
-	RealLy = GetSystemMetrics(SM_CYSCREEN); //768
+	RealLx = GetSystemMetrics(SM_CXSCREEN);; //1024
+	RealLy = GetSystemMetrics(SM_CYSCREEN);; //768
 	prop.m_Width = RealLx;
 	prop.m_Height = RealLy;
 	IRS->SetScreenProp( prop );
@@ -3537,26 +3540,17 @@ void PreDrawGameProcess(){
 				if(GSets.SVOpt.RequiredMsPerFrame==0) GSets.SVOpt.RequiredMsPerFrame=EngSettings.DefaultGameSpeedForCampaign;
 				int spd=GSets.SVOpt.RequiredMsPerFrame;				
 				if(vGameMode!=gmCamp/*NPlayers>1*/){
-				switch(GSets.RoomParams.GameSpeed){
-				case 1:
-					spd=30;//Fast
-					break;
-				case 2:
-					spd=60;//Slow
-					break;
-				case 3:
-					spd=20;//Very fast
-					break;
-				case 4:
-					spd=10;//Very very fast
-					break;
-				case 5:
-					spd=5;//Marvellous fast
-					break;
-				default:
-					spd=40;//Normal
-					break;
-				}
+					switch(GSets.RoomParams.GameSpeed){
+					case 1:
+						spd=40;
+						break;
+					case 2:
+						spd=60;
+						break;
+					default:
+						spd=30;
+						break;
+					}
 					if(EditMapMode && GSets.SVOpt.RequiredMsPerFrame==3 )spd=GSets.SVOpt.RequiredMsPerFrame;
 				}
 				int GSpeed=GSP*256/spd;
@@ -3612,7 +3606,7 @@ void PreDrawGameProcess(){
 				if(!CITY[g].AutoEraseTime){
 					int SCORES[8];
 					for(int i=0;i<8;i++)SCORES[i]=CITY[i].Account;
-					for(i=0;i<MAXOBJECT;i++){
+					for(int i=0;i<MAXOBJECT;i++){
 						OneObject* OB=Group[i];
 						if(OB&&(!OB->Sdoxlo)&&(OB->NNUM==g)){
 							//erasing
@@ -3623,7 +3617,7 @@ void PreDrawGameProcess(){
 							if(OB)OB->Sdoxlo=2500;
 						};
 					};
-					for(i=0;i<8;i++)CITY[i].Account=SCORES[i];
+					for(int i=0;i<8;i++)CITY[i].Account=SCORES[i];
 				};
 			};
 		};
@@ -3768,7 +3762,7 @@ void PreDrawGameProcess(){
 		CHECKIT();
 		//GNFO.Process();
 		CHECKIT();
-		for(i=0;i<8;i++){
+		for(int i=0;i<8;i++){
 			addrand(i);
 			Nation* NT=NATIONS+i;
 			NT->Harch+=NT->NGidot*ResPerUnit;
@@ -3798,7 +3792,7 @@ void PreDrawGameProcess(){
 			for(int j=0;j<8;j++){
 				addrand(j);
 				int R=NT->ResRem[j];
-				R+=NT->ResSpeed[j]*10*256/*GameSpeed*//25; //TBH food fix,
+				R+=NT->ResSpeed[j]*10*256/*GameSpeed*//25;
 				div_t dd=div(R,mult);
 				R=dd.rem;
 				addrand(XRESRC(i,j));
@@ -3835,7 +3829,7 @@ void PreDrawGameProcess(){
 	RunPF(1024+9,"ProcessExpl");
 	ProcessExpl();
 	StopPF(1024+9);
-	for(i=0;i<8;i++){
+	for(int i=0;i<8;i++){
 		addrand(i);
 		HandleShar(NATIONS+i);
 	};
@@ -4350,10 +4344,10 @@ bool RunSMD(){
 		HINSTANCE hLib=LoadLibrary("SelectMode.dll ");
 		if(hLib){
 			GFILE* fff=Gopen("mode.dat","rt");
-			RealLx=GetSystemMetrics(SM_CXSCREEN);
-			RealLy=GetSystemMetrics(SM_CYSCREEN);
-			GSets.SVOpt.ScreenSizeX=RealLx;
-			GSets.SVOpt.ScreenSizeY=RealLy;
+			RealLx= GetSystemMetrics(SM_CXSCREEN);;
+			RealLy= GetSystemMetrics(SM_CYSCREEN);;
+			GSets.SVOpt.ScreenSizeX= GetSystemMetrics(SM_CXSCREEN);;
+			GSets.SVOpt.ScreenSizeY= GetSystemMetrics(SM_CYSCREEN);;
 			GSets.SVOpt.SoundVolume=0;
 			WorkSound=0;
 			OrderSound=0;
@@ -4611,10 +4605,10 @@ int PASCAL WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	sfVersion=291;
 	strcpy(BuildVersion,"V 2.10");//"V 1.46"); //CDV ASK GEC 13.03
 	//Quality=2;
-	RealLx=GetSystemMetrics(SM_CXSCREEN);
-	RealLy=GetSystemMetrics(SM_CYSCREEN);
-	GSets.SVOpt.ScreenSizeX=RealLx;
-	GSets.SVOpt.ScreenSizeY=RealLy;
+	RealLx=1024;
+	RealLy=768;
+	GSets.SVOpt.ScreenSizeX = 1024; //GetSystemMetrics(SM_CXSCREEN);;
+	GSets.SVOpt.ScreenSizeY = 768; //GetSystemMetrics(SM_CYSCREEN);;
 	GSets.SVOpt.SoundVolume=0;
 	WorkSound=0;
 	OrderSound=0;
@@ -4647,8 +4641,8 @@ int PASCAL WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance,
 		if(ModeLX[i]==GSets.SVOpt.ScreenSizeX&&ModeLY[i]==GSets.SVOpt.ScreenSizeY)ExMode=1;
 	};
 	if(!ExMode){
-		GSets.SVOpt.ScreenSizeX=GetSystemMetrics(SM_CXSCREEN);
-		GSets.SVOpt.ScreenSizeY=GetSystemMetrics(SM_CYSCREEN);
+		GSets.SVOpt.ScreenSizeX= GetSystemMetrics(SM_CXSCREEN);;
+		GSets.SVOpt.ScreenSizeY= GetSystemMetrics(SM_CYSCREEN);;
 	};
 	HealthMode=true;				
 	tima=0;

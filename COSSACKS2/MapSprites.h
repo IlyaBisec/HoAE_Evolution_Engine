@@ -1,9 +1,9 @@
 #pragma once
 //#define sprNx  (64<<ADDSH)
 #include "MapTemplates.h"
-#include <gmDefines.h>
-#include <mMath2D.h>
-#include <mMath3D.h>
+#include "..\3dlib\gMotor\gmDefines.h"
+#include "..\3dlib\gMotor\mMath2D.h"
+#include "..\3dlib\gMotor\mMath3D.h"
 #pragma pack(1)
 #define SprShf (6+ADDSH)
 #define SprInCell 16
@@ -42,7 +42,7 @@ extern SprGroup ANMSPR;
 extern SprGroup SPECIAL;
 void ProcessSprites();
 byte DetermineResource(int x,int y);
-byte FindAnyResInCell(int x,int y,int cell,int* Dist,byte Res,float* Scale);
+byte FindAnyResInCell(int x,int y,int cell,int* Dist,byte Res);
 bool CheckDist(int x,int y,word r);
 void HideFlags();
 //-----------------------L3--------------------------

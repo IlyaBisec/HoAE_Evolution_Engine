@@ -92,8 +92,8 @@ public:
 		REG_ENUM(_index,Bump,opt_Shaders); //opt_Bump
 		REG_MEMBER(_bool,SpeedVariation);
 		REG_ENUM(_index,AutoSavePeriod,AUTOSAVEPERIOD);
-		REG_METHOD(Init);
-		REG_METHOD(Accept);
+		REG_METHOD_EX(&cvi_Options::Init, Init);
+		REG_METHOD_EX(&cvi_Options::Accept, Accept);
 	}ENDSAVE;
 
 	void Process();
@@ -143,15 +143,13 @@ public:
 	int IsGameModeForSaveCamp();
 
 	bool MainMenuStarted;
-	_str LoadingRace;
+	int LoadingRace;
 	int FirstLoadingType;
-	
-	/*int LoadingRace;
+
 	bool LoadingRace0(){ return LoadingRace==0; }
 	bool LoadingRace1(){ return LoadingRace==1; }
 	bool LoadingRace2(){ return LoadingRace==2; }
-	bool LoadingRace3(){ return LoadingRace==3; }*/
-	//Old Loading Screen System
+	bool LoadingRace3(){ return LoadingRace==3; }
 	bool FirstLoadingType0(){ return FirstLoadingType==0; }
 	bool FirstLoadingType1(){ return FirstLoadingType==1; }
 
@@ -206,41 +204,40 @@ public:
 		//REG_MEMBER(_DWORD,HeroLifeAlertColor);
 		REG_AUTO(HeroLifeAlert);
 
-		REG_METHOD(SetGameModeForSaveSin);
-		REG_METHOD(SetGameModeForSaveCamp);
-		REG_METHOD(SetGameModeForSave);
-		REG_FN_INT(IsGameModeForSaveSin);
-		REG_FN_INT(IsGameModeForSaveCamp);
+		REG_METHOD_EX(&cvi_InGamePanel::SetGameModeForSaveSin, SetGameModeForSaveSin);
+		REG_METHOD_EX(&cvi_InGamePanel::SetGameModeForSaveCamp, SetGameModeForSaveCamp);
+		REG_METHOD_EX(&cvi_InGamePanel::SetGameModeForSave, SetGameModeForSave);
+		REG_FN_INT_EX(&cvi_InGamePanel::IsGameModeForSaveSin, IsGameModeForSaveSin);
+		REG_FN_INT_EX(&cvi_InGamePanel::IsGameModeForSaveCamp, IsGameModeForSaveCamp);
 
 		REG_MEMBER(_bool,MainMenuStarted);
 
-		REG_MEMBER(_str,LoadingRace);
-		/*REG_FN_BOOL(LoadingRace0);
-		REG_FN_BOOL(LoadingRace1);
-		REG_FN_BOOL(LoadingRace2);
-		REG_FN_BOOL(LoadingRace3);*/
-		REG_FN_BOOL(FirstLoadingType0);
-		REG_FN_BOOL(FirstLoadingType1);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::LoadingRace0, LoadingRace0);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::LoadingRace1, LoadingRace1);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::LoadingRace2, LoadingRace2);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::LoadingRace3, LoadingRace3);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::FirstLoadingType0, FirstLoadingType0);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::FirstLoadingType1, FirstLoadingType1);
 
-		REG_METHOD(MapRestoreCamera);
-		REG_METHOD(MapSignal);
+		REG_METHOD_EX(&cvi_InGamePanel::MapRestoreCamera, MapRestoreCamera);
+		REG_METHOD_EX(&cvi_InGamePanel::MapSignal, MapSignal);
 		REG_MEMBER(_int,MapInterfaceState);
-		REG_METHOD(MapSetInterfaceState);
+		REG_METHOD_EX(&cvi_InGamePanel::MapSetInterfaceState, MapSetInterfaceState);
 		
-		REG_FN_BOOL(MapButtonsStateIsNormal);
-		REG_FN_BOOL(MapButtonsStateIsMini);
-		REG_FN_BOOL(MapButtonsStateIsHide);
-		REG_FN_BOOL(MapButtonsStateIsNotHide);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::MapButtonsStateIsNormal, MapButtonsStateIsNormal);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::MapButtonsStateIsMini, MapButtonsStateIsMini);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::MapButtonsStateIsHide, MapButtonsStateIsHide);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::MapButtonsStateIsNotHide, MapButtonsStateIsNotHide);
 
-		REG_METHOD(SetStartNextCampMission);
+		REG_METHOD_EX(&cvi_InGamePanel::SetStartNextCampMission, SetStartNextCampMission);
 
-		//REG_FN_BOOL(isMagicsButtonVisible);
-		//REG_FN_BOOL(isBottleButtonVisible);
+		//REG_FN_BOOL_EX(isMagicsButtonVisible);
+		//REG_FN_BOOL_EX(isBottleButtonVisible);
 
-		REG_FN_BOOL(isLocalization0);
-		REG_FN_BOOL(isLocalization1);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::isLocalization0, isLocalization0);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::isLocalization1, isLocalization1);
 
-		REG_FN_BOOL(isPlayingTrack);
+		REG_FN_BOOL_EX(&cvi_InGamePanel::isPlayingTrack, isPlayingTrack);
 		
 	}ENDSAVE;
 

@@ -15,6 +15,7 @@
 
 // Note: this header is a header template and must NOT have multiple-inclusion
 // protection.
+
 #include <boost/function/detail/prologue.hpp>
 
 #define BOOST_FUNCTION_TEMPLATE_PARMS BOOST_PP_ENUM_PARAMS(BOOST_FUNCTION_NUM_ARGS, typename T)
@@ -469,7 +470,7 @@ namespace boost {
     template<typename FunctionObj>
     void assign_to(FunctionObj f, detail::function::function_obj_tag)
     {
-      if (!detail::function::has_empty_target(addressof(f))) {
+      if (!detail::function::has_empty_target(addressofff(f))) {
         typedef
           typename detail::function::BOOST_FUNCTION_GET_FUNCTION_OBJ_INVOKER<
                                        FunctionObj,

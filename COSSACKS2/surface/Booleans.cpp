@@ -29,7 +29,7 @@ public:
 	static const float fEpsilon;
 	CVertex3D() { *this = CVertex3D::Null; }
 	CVertex3D(float x, float y, float z) { Set(x, y, z); }
-	Set(float x, float y, float z)
+	int Set(float x, float y, float z)
 	{ this->x = x, this->y = y, this->z = z; };
 //	bool operator == (const CVertex3D &r)
 //	{ return (x == r.x) && (y == r.y) && (z == r.z); }
@@ -399,7 +399,8 @@ void CMesh3D::Booleans_ExtractTriangles(CMesh3D &rR, const CMesh3D &rCutting, CI
 			r2 = CMesh3D::VertexIsInside2(rCutting, v2);
 		if((r0 != r1) || (r0 != r2) || (r1 != r2)) ITriNumbers.Add(nTriA);
 		CSection3D S;
-		for(int nTriB = 0; nTriB < NTriB; nTriB++)
+		int nTriB;
+		for(nTriB = 0; nTriB < NTriB; nTriB++)
 			if(TriTriIntersect(*this, nTriA, rCutting, nTriB, S, Crosses)) break;
 		if(nTriB < NTriB)
 		{
@@ -512,7 +513,8 @@ void CMesh3D::ExtractTriangles(const CMesh3D &rMesh, const CMesh3D &rClipper, co
 			r2 = CMesh3D::VertexIsInside(rClipper, v2);
 		bool fIntersected = false;
 		int NTriClipper = rClipper.Indices.NValues / 3;
-		for(int nTriClipper = 0; nTriClipper < NTriClipper; nTriClipper++)
+		int nTriClipper;
+		for(nTriClipper = 0; nTriClipper < NTriClipper; nTriClipper++)
 			if((pCrosses[rSections.NValues * nTriClipper + nS0] != CVertex3D::MaxValue) ||
 				(pCrosses[rSections.NValues * nTriClipper + nS1] != CVertex3D::MaxValue) ||
 				(pCrosses[rSections.NValues * nTriClipper + nS2] != CVertex3D::MaxValue)) break;
@@ -551,7 +553,8 @@ void CMesh3D::toCSections(const CMesh3D &rMeshA, const CMesh3D &rMeshB, const CI
 			bool r0 = VertexIsInside(rMeshB, rS.A), r1 = VertexIsInside(rMeshB, rS.B);
 			if((r0 == fCriterion) && (r1 == fCriterion))
 			{
-				for(int nTriB = 0; nTriB < NTriB; nTriB++)
+				int nTriB;
+				for(nTriB = 0; nTriB < NTriB; nTriB++)
 					if(pCrossesA[rSectionsA.NValues * nTriB + nS] != CVertex3D::MaxValue) break;
 				if(nTriB == NTriB) rCSectionsANumbers.Add(nS);
 				/*if(rCSectionsANumbers.find(nS) == -1)*/
@@ -974,7 +977,8 @@ bool CMesh3D::Difference(const CMesh3D &rMeshA, const CMesh3D &rMeshB, CMesh3D &
 	pCrossesA = new CVertex3D[SectionsA.NValues * NTriB];
 	pCrossesB = new CVertex3D[SectionsB.NValues * NTriA];
 	if(!pCrossesA || !pCrossesB) { fSuccess = false; goto Difference_unInit; }
-	for(int i = 0; i < SectionsA.NValues * NTriB; i++) pCrossesA[i] = CVertex3D::MaxValue;
+	int i;
+	for(i = 0; i < SectionsA.NValues * NTriB; i++) pCrossesA[i] = CVertex3D::MaxValue;
 	for(i = 0; i < SectionsB.NValues * NTriA; i++) pCrossesB[i] = CVertex3D::MaxValue;
 
 	CrossSectionsMesh(SectionsA, rMeshB, &pCrossesA);
@@ -1131,7 +1135,7 @@ bool CMesh3D::toBaseMesh(BaseMesh &rBaseMesh, char *strShader, char *strTexture,
 			pVertices->z = Vertices[i].z + v3dOrigin.z,
 			pVertices->diffuse = Color, pVertices++;
 	// Copying indices:
-	for(i = 0; i < Indices.NValues; i++)
+	for(int i = 0; i < Indices.NValues; i++)
 		*pIndices = Indices[i], pIndices++;
 	// unInitialization & Finalizing rBaseMesh:
 	pVertices = NULL, pIndices = NULL;
@@ -1233,7 +1237,7 @@ public:
 	static const xy_pair xy_min;
 	static const double fToleranceDistance;
 	static const double fToleranceDistance2;
-	Set(double x, double y) { this->x = x, this->y = y; }
+	void  Set(double x, double y) { this->x = x, this->y = y; }
 	bool operator == (const xy_pair &r) const { return (x == r.x) && (y == r.y); }
 	bool operator != (const xy_pair &r) const { return !(*this == r); }
 	bool operator %= (const xy_pair &r) const
@@ -1295,8 +1299,8 @@ public:
 	CSection2D() {A = xy_pair::null, B = xy_pair::null;}
 	CSection2D(const xy_pair &A, const xy_pair &B, DWORD Color) { Set(A, B, Color); }
 	CSection2D(const xy_pair &A, const xy_pair &B) { Set(A, B); }
-	Set(const xy_pair &A, const xy_pair &B) { this->A = A, this->B = B; }
-	Set(const xy_pair &A, const xy_pair &B, DWORD Color)
+	void Set(const xy_pair &A, const xy_pair &B) { this->A = A, this->B = B; }
+	void Set(const xy_pair &A, const xy_pair &B, DWORD Color)
 	{ this->A = A, this->B = B, this->Color = Color; }
 	bool operator == (const CSection2D &r) const
 	{ return (((A == r.A) && (B == r.B)) || ((B == r.A) && (A == r.B))); }
@@ -1558,7 +1562,7 @@ int PolygonVertexClassify2D(const CPolygon2D &rPolygon, const xy_pair &rVertex)
 	}
 	int NIntersections = 0;
 	xy_pair A, B, xyMaxY, xyMinY;
-	for(i = 0; i < rPolygon.NValues; i++)
+	for(int i = 0; i < rPolygon.NValues; i++)
 	{
 		A = rPolygon[i], B = rPolygon[(i + 1) % rPolygon.NValues];
 		// Skipping section if it is:
@@ -1610,12 +1614,12 @@ void SectionClip2D(const CSection2D &rSection, const CPolygon2D &rPolygon,
 	// Adding begin and end:
 	CrossPoints.Add(rSection.A), CrossPoints.Add(rSection.B);
 	// Synchronizing with rNodes:
-	for(i = 0; i < CrossPoints.NValues;)
+	for(int i = 0; i < CrossPoints.NValues;)
 	{
 		double fError = DOUBLE_MAX;
 		int n = 0;
 		double d = 0.0f;
-		for(j = 0; j < rNodes.NValues; j++)
+		for(int j = 0; j < rNodes.NValues; j++)
 		{
 			xy_pair v0 = CrossPoints[i], v1 = rNodes[j];
 			d = sqrt((v0.x - v1.x) * (v0.x - v1.x) + (v0.y - v1.y) * (v0.y - v1.y));
@@ -1632,9 +1636,10 @@ void SectionClip2D(const CSection2D &rSection, const CPolygon2D &rPolygon,
 	// Deleting multiple cross points:
 	DynArray<xy_pair> xyStorage;
 	xy_pair xy;
-	for(i = 0; i < CrossPoints.NValues; i++)
+	for(int i = 0; i < CrossPoints.NValues; i++)
 	{
 		xy = CrossPoints[i];
+		int j;
 		for(j = 0; j < xyStorage.NValues; j++) if(xy == xyStorage[j]) break; // %=
 		if(j == xyStorage.NValues) xyStorage.Add(xy);
 	}
@@ -1660,8 +1665,8 @@ void SectionClip2D(const CSection2D &rSection, const CPolygon2D &rPolygon,
 			(SectionClip2D_Criterion)SectionClip2D_yUpScendingCriterion;
 	}
 	// Essentially sorting:
-	for(i = 0; i < CrossPoints.NValues; i++)
-		for(j = 1; j < CrossPoints.NValues - i; j++)
+	for(int i = 0; i < CrossPoints.NValues; i++)
+		for(int j = 1; j < CrossPoints.NValues - i; j++)
 			if(pfnCriterion(CrossPoints[j - 1], CrossPoints[j]))
 			{
 				xy = CrossPoints[j];
@@ -1670,7 +1675,7 @@ void SectionClip2D(const CSection2D &rSection, const CPolygon2D &rPolygon,
 			}
 	// Splitting sections to inside and outside:
 	CSection2D S;
-	for(i = 0; i < CrossPoints.NValues - 1; i++)
+	for(int i = 0; i < CrossPoints.NValues - 1; i++)
 	{
 		S.Set(CrossPoints[i], CrossPoints[i + 1]);
 		xy.Set((CrossPoints[i].x + CrossPoints[i + 1].x) / 2,
@@ -1849,7 +1854,7 @@ void Booleans2D(const CPolygon2D &rPolygonA, const CPolygon2D &rPolygonB,
 		rPolygonB, ISectionsB, OSectionsB, IncludeBelongsB, rNodes);
 	// Clipper: rPolygonA
 	// Cutting: rPolygonB
-	for(i = 0; i < rPolygonB.NValues; i++)
+	for(int i = 0; i < rPolygonB.NValues; i++)
 		SectionClip2D(CSection2D(rPolygonB[i], rPolygonB[(i + 1) % rPolygonB.NValues]),
 		rPolygonA, ISectionsA, OSectionsA, IncludeBelongsA, rNodes);
 
@@ -1867,12 +1872,12 @@ void Booleans2D(const CPolygon2D &rPolygonA, const CPolygon2D &rPolygonB,
 		break;
 	case ADifferenceB:
 		Sections.AddValues(OSectionsB.GetValues(), OSectionsB.NValues);
-		for(i = 0; i < ISectionsA.NValues; i++)
+		for(int i = 0; i < ISectionsA.NValues; i++)
 			Sections.Add(CSection2D(ISectionsA[i].B, ISectionsA[i].A));
 		break;
 	case BDifferenceA:
 		Sections.AddValues(OSectionsA.GetValues(), OSectionsA.NValues);
-		for(i = 0; i < ISectionsB.NValues; i++)
+		for(int i = 0; i < ISectionsB.NValues; i++)
 			Sections.Add(CSection2D(ISectionsB[i].B, ISectionsB[i].A));
 		break;
 	default: break;
@@ -1880,9 +1885,10 @@ void Booleans2D(const CPolygon2D &rPolygonA, const CPolygon2D &rPolygonB,
 	// Deleting multiple sections:
 	CSections2D TSections;
 	CSection2D S;
-	for(i = 0; i < Sections.NValues; i++)
+	for(int i = 0; i < Sections.NValues; i++)
 	{
 		S = Sections[i];
+		int j;
 		for(j = 0; j < TSections.NValues; j++) if(TSections[j] == S) break;
 		if(j == TSections.NValues) TSections.Add(S);
 	}
@@ -1956,7 +1962,7 @@ void Booleans2D_SubSections_Glue(const CSection2D &rSection, CVertices2D &rCross
 		for(int l = 1; l < rCrosses.NValues - n; l++)
 			if(pfnCriterion(rCrosses[l - 1], rCrosses[l]))
 				swap(rCrosses[l - 1], rCrosses[l]);
-	for(n = 0; n < rCrosses.NValues - 1; n++)
+	for(int n = 0; n < rCrosses.NValues - 1; n++)
 		rSubSections.Add(CSection2D(rCrosses[n], rCrosses[n + 1]));
 }
 
@@ -1999,7 +2005,7 @@ void Booleans2D_SubSections(const CSections2D &rSectionsA,
 		Booleans2D_SubSections_Glue(S, Crosses, rSubSections);
 		Crosses.Clear();
 	}
-	for(i = 0; i < rSectionsB.NValues; i++)
+	for(int i = 0; i < rSectionsB.NValues; i++)
 	{
 		S = rSectionsB[i];
 		pSectionsBCrosses[i].Add(S.A), pSectionsBCrosses[i].Add(S.B);
@@ -2028,7 +2034,7 @@ void Booleans2D_Nodes(const CSections2D &rSubSections,
 	*ppNodes = new CBooleansNode2D[rNodesVertices.NValues];
 	if(!*ppNodes) return;
 	SBooleansNodeEntry2D Entry;
-	for(i = 0; i < rSubSections.NValues; i++)
+	for(int i = 0; i < rSubSections.NValues; i++)
 	{
 		S = rSubSections[i];
 		int t0 = rNodesVertices.find(S.A), t1 = rNodesVertices.find(S.B);
@@ -2073,7 +2079,7 @@ void Booleans2D_FixContour(CIndices &rCurContour, const CVertices2D &rVertices,
 				return;
 			}
 	// Deleting loops:
-	for(i = 1; i <= rCurContour.NValues; i++)
+	for(int i = 1; i <= rCurContour.NValues; i++)
 		if(rVertices[rCurContour[i - 1]] == rVertices[rCurContour[(i + 1) % rCurContour.NValues]])
 		{
 			rCurContour.Del(i - 1, 2);
@@ -2081,16 +2087,16 @@ void Booleans2D_FixContour(CIndices &rCurContour, const CVertices2D &rVertices,
 			return;
 		}
 	// Detecting multiple vertices:
-	for(i = 0; i < rCurContour.NValues - 1; i++)
-		for(j = i + 1; j < rCurContour.NValues; j++)
+	for(int i = 0; i < rCurContour.NValues - 1; i++)
+		for(int j = i + 1; j < rCurContour.NValues; j++)
 			if(rVertices[rCurContour[i]] %= rVertices[rCurContour[j]])
 			{
 				CIndices A, B;
 				// A
 				for(int n = i; n < j; n++) A.Add(rCurContour[n]);
 				// B
-				for(n = j; n < rCurContour.NValues; n++) B.Add(rCurContour[n]);
-				for(n = 0; n < i; n++) B.Add(rCurContour[n]);
+				for(int n = j; n < rCurContour.NValues; n++) B.Add(rCurContour[n]);
+				for(int n = 0; n < i; n++) B.Add(rCurContour[n]);
 				Booleans2D_FixContour(A, rVertices, rContours);
 				Booleans2D_FixContour(B, rVertices, rContours);
 				return;
@@ -2150,10 +2156,10 @@ void Booleans2D_Contours_Close(int nFirstNode, int t, CBooleansNode2D *pNodes,
 			// Sorting indices:
 			DWORD MinIndex = DWORD_MAX;
 			int posMinIndex = 0;
-			for(i = 0; i < CurContour.NValues; i++)
+			for(int i = 0; i < CurContour.NValues; i++)
 				if(CurContour[i] < MinIndex)
 					MinIndex = CurContour[i], posMinIndex = i;
-			for(i = 0; i < posMinIndex; i++)
+			for(int i = 0; i < posMinIndex; i++)
 			{
 				DWORD dw = CurContour[0];
 				CurContour.Del(0, 1);
@@ -2169,6 +2175,7 @@ void Booleans2D_Contours_Close(int nFirstNode, int t, CBooleansNode2D *pNodes,
 					(rContours[n] == CurContour[0])) StartComparing = true;
 				if(StartComparing)
 				{
+					int i;
 					for(i = 1; i < CurContour.NValues; i++)
 						if(rContours[n + i] != CurContour[i]) break;
 					if(i == CurContour.NValues)
@@ -2274,7 +2281,7 @@ void Booleans2D_Triangulate(CIndices &rCurContour, CMesh2D &rMesh)
 	// Splitting contour with diagonal Polygon[0] - Polygon[k]:
 	CIndices ContourA, ContourB;
 	for(int i = 0; i <= k; i++) ContourA.Add(rCurContour[i]);
-	for(i = k; i <= rCurContour.NValues; i++) ContourB.Add(rCurContour[i % rCurContour.NValues]);
+	for(int i = k; i <= rCurContour.NValues; i++) ContourB.Add(rCurContour[i % rCurContour.NValues]);
 	Booleans2D_Triangulate(ContourA, rMesh);
 	ContourA.Clear();
 	Booleans2D_Triangulate(ContourB, rMesh);
@@ -2367,7 +2374,7 @@ void Booleans2D(const CMesh2D &rMeshA, const CMesh2D &rMeshB,
 	}
 	// ADDITIONAL OWNER CHECK
 	int NTri = 0;
-	for(i = 0; i < Vertices.NValues; i++)
+	for(int i = 0; i < Vertices.NValues; i++)
 	{
 		if(Owner[i] == OWNER_A)
 			if(MeshVertexClassify2D(rMeshB, Vertices[i]) == VERTEX_INSIDE)
@@ -2381,7 +2388,7 @@ void Booleans2D(const CMesh2D &rMeshA, const CMesh2D &rMeshB,
 	CSections2D SubSections;
 	Booleans2D_SubSections(SectionsA, SectionsB, SubSections, Vertices, Owner);
 	SectionsA.Clear(), SectionsB.Clear();
-	for(i = 0; i < SubSections.NValues; i++)
+	for(int i = 0; i < SubSections.NValues; i++)
 	{
 		CSection2D S = SubSections[i];
 //		int iA = Vertices.find(S.A), iB = Vertices.find(S.B);
@@ -2401,7 +2408,7 @@ void Booleans2D(const CMesh2D &rMeshA, const CMesh2D &rMeshB,
 //		MidVertices.Add(xy_pair((SubSections[i].A.x + SubSections[i].B.x) / 2,
 //		(SubSections[i].A.y + SubSections[i].B.y) / 2));
 
-	for(i = 0; i < SubSections.NValues; i++)
+	for(int i = 0; i < SubSections.NValues; i++)
 	{
 		CSection2D S = SubSections[i];
 		S.Color = c_White;
@@ -2627,7 +2634,7 @@ bool CMesh2D2BaseMesh(const CMesh2D &rMesh2D, BaseMesh &rBaseMesh,
 		pMeshVertices->diffuse = Color;
 		pMeshVertices++;
 	}
-	for(i = 0; i < rMesh2D.Indices.NValues; i++)
+	for(int i = 0; i < rMesh2D.Indices.NValues; i++)
 	{
 		*pMeshIndices = rMesh2D.Indices[i];
 		pMeshIndices++;
@@ -2916,7 +2923,7 @@ void BooleansProcess(const CMesh3D &rMeshA, const CMesh3D &rMeshB, CMesh3D &rMes
 	}*/
 }
 
-#include "Surface.h"
+#include "..\surface\Surface.h"
 using namespace Surface;
 	
 bool testBooleans3D() {
@@ -2990,7 +2997,7 @@ bool testBooleans3D() {
 
 	ints l0, l1;
 	for(int i = 1; i <= 10; i++) l0.Add(i);
-	for(i = 100; i <= 106; i++) l1.Add(i);
+	for(int i = 100; i <= 106; i++) l1.Add(i);
 
 	int nUsed = l0.Count();
 	assert(l0.InsertAt(nUsed, -1) == nUsed);
@@ -3140,7 +3147,8 @@ bool probeBooleans(void)
 			xy_pair(SecondOrigin.x, 2000), c_Green));
 		// CREATING MESH A
 		CMesh2D MeshA;
-		for(int i = 0; i < ShapeA.Vertices.NValues; i++)
+		int i;
+		for(i = 0; i < ShapeA.Vertices.NValues; i++)
 			MeshA.Vertices.Add(xy_pair(XScaleA * ShapeA.Vertices[i].x + PosA.x,
 			YScaleA * ShapeA.Vertices[i].y + PosA.y));
 		for(i = 0; i < ShapeA.Indices.NValues; i++)

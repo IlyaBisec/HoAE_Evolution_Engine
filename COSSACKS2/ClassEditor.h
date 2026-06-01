@@ -794,11 +794,11 @@ public:
 		}
 		GPS.DrawRect(SD->x,SD->y,LX,2,0xFFA0A0A0);
 		GPS.DrawRect(SD->x+1,SD->y+1,LX-2,1,0xFFB0B0B0);
-		for(i=0;i<axe->NTicks;i++){
+		for(int i=0;i<axe->NTicks;i++){
 			int xx=SD->x+int(LX*axe->GetFunc(axe->Ticks[i]));
 			GPS.DrawLine(xx,SD->y,xx,SD->y+6+int(axe->Long[i])*2,0xFFA0A0A0);
 		}
-		for(i=0;i<axe->NTicks;i++)if(axe->Visible[i]){
+		for(int i=0;i<axe->NTicks;i++)if(axe->Visible[i]){
 			int xx=SD->x+int(LX*axe->GetFunc(axe->Ticks[i]));
 			char txt[32];
 			sprintf(txt,"%.1f",axe->Ticks[i]);
@@ -1443,11 +1443,11 @@ public:
 	};
 	virtual void  ClearPal(){
 	};
-	GreyMap(){
+	int GreyMap(){
 		Color=0xFFFFFFFF;
 		SetSize(512,512);
 	}
-	GreyMap(DWORD C){
+	int GreyMap(DWORD C){
 		Color=C;
 		SetSize(512,512);
 	}

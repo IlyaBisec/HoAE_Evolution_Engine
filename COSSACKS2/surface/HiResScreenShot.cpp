@@ -1,5 +1,5 @@
 #include "stdheader.h"
-#include "HiResScreenShot.h"
+#include "..\Surface\HiResScreenShot.h"
 
 Surface::HiResScreenShot g_HiResScreenShot;
 void SetGameDisplayModeAnyway(int SizeX, int SizeY);

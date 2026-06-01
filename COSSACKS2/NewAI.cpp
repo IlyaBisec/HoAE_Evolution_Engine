@@ -210,7 +210,7 @@ bool CheckStoneWoodSklad(int x,int y){
 		};
 	};
 	if(!tpresent)return false;
-	for(ix=0;ix<5;ix++){
+	for(int ix=0;ix<5;ix++){
 		for(int iy=0;iy<5;iy++){
 			if(InfoMap[ofst+ix+(iy<<SprShf)]&1)return true;
 		};

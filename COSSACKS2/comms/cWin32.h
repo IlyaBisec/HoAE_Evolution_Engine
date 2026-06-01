@@ -1,4 +1,5 @@
 #pragma once
+#include <commdlg.h>
 
 namespace cWin32 {
 	bool CopyToClipboard(const char *Text, HWND hWnd = NULL);

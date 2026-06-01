@@ -56,7 +56,7 @@ void Picture::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Picture", this );
     pm.f( "ID", m_ID, NULL, true );
-    pm.p ( "File", GetFile, SetFile, "file" );
+    pm.p ( "File", &Picture::GetFile, &Picture::SetFile, "file" );
     pm.f( "x",                m_Ext.x         );
     pm.f( "y",                m_Ext.y         );
     pm.f( "w",                m_Ext.w         );
@@ -66,15 +66,15 @@ void Picture::Expose( PropertyMap& pm )
     pm.f( "Color",            m_Color, "color");
     pm.f( "Filter",            m_bFilter        );
 
-    pm.p ( "InitWidth",        GetInitialWidth  );
-    pm.p ( "InitHeight",    GetInitialHeight );
-    pm.p ( "FileFormat",    GetFileFormat     );
-    pm.p ( "ColorFormat",    GetColorFormat     );
-    pm.p ( "Valid",            IsValid             );
-    pm.p ( "Loaded",        IsLoaded         );
+    pm.p ( "InitWidth", &Picture::GetInitialWidth  );
+    pm.p ( "InitHeight", &Picture::GetInitialHeight );
+    pm.p ( "FileFormat", &Picture::GetFileFormat     );
+    pm.p ( "ColorFormat", &Picture::GetColorFormat     );
+    pm.p ( "Valid", &Picture::IsValid             );
+    pm.p ( "Loaded", &Picture::IsLoaded         );
 
-    pm.m( "Load",        LoadImage        );
-    pm.m( "Unload",        UnloadImage        );
+    pm.m( "Load", &Picture::LoadImage        );
+    pm.m( "Unload", &Picture::UnloadImage        );
 } // Picture::Expose
 
 void Picture::UnloadImage()

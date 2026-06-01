@@ -832,7 +832,7 @@ int Brigade::SelectPeasants(byte NI){
 	};
 	if(NSL[NI]){
 		int N=NSL[NI];
-		for(i=0;i<N;i++){
+		for(int i=0;i<N;i++){
 			word MID=Selm[NI][i];
 			if(MID!=0xFFFF){
 				OneObject* OB=Group[MID];
@@ -849,7 +849,7 @@ int Brigade::SelectPeasants(byte NI){
 	Selm[NI]=znew(word,np);
 	SerN[NI]=znew(word,np);
 	np=0;
-	for(i=0;i<NMemb;i++){
+	for(int i=0;i<NMemb;i++){
 		OneObject* OB=Group[Memb[i]];
 		if(OB&&OB->Serial==MembSN[i]){
 			if(OB->newMons->Peasant&&!(OB->Sdoxlo||OB->Hidden)){
@@ -949,7 +949,7 @@ void B_LocalSendToLink(Brigade* BR){
 		return;
 	};
 	byte prio=BLS->Prio;
-	for(i=0;i<N;i++){
+	for(int i=0;i<N;i++){
 		int ti=i+i+i;
 		int ID=pos[ti+2];
 		word SN=ID>>13;
@@ -1114,7 +1114,7 @@ bool Brigade::LinearLocalSendTo(int x,int y,byte prio,byte OrdType){
 	int dy1=-DX*70/NR;
 	int dx0=(-dx1*na)>>1;
 	int dy0=(-dy1*na)>>1;
-	for(i=0;i<NMemb;i++){
+	for(int i=0;i<NMemb;i++){
 		int ti=i+i+i;
 		OR1->Position[ti  ]=x+dx0;
 		OR1->Position[ti+1]=y+dy0;
@@ -1126,7 +1126,7 @@ bool Brigade::LinearLocalSendTo(int x,int y,byte prio,byte OrdType){
 		DeleteBOrder();
 		return false;
 	};
-	for(i=0;i<NMemb;i++){
+	for(int i=0;i<NMemb;i++){
 		int ti=i+i+i;
 		OneObject* OB=Group[Memb[i]];
 		if(OB)OB->NewMonsterSendTo(OR1->Position[ti]<<4,OR1->Position[ti+1]<<4,prio,0);
@@ -1196,7 +1196,7 @@ bool Brigade::LocalSendTo(int x,int y,byte prio,byte OrdType){
 		DeleteBOrder();
 		return false;
 	};
-	for(i=0;i<NMemb;i++){
+	for(int i=0;i<NMemb;i++){
 		int ti=i+i+i;
 		OneObject* OB=Group[Memb[i]];
 		if(OB&&OB->Serial==MembSN[i])OB->NewMonsterSendTo(OR1->Position[ti]<<4,OR1->Position[ti+1]<<4,prio,0);
@@ -1273,7 +1273,7 @@ void B_WideLocalSendToLink(Brigade* BR){
 		CorrectPositions(pos,N);
 		int Nmx=BR->NMemb;
 		if(PosChanged){
-			for(i=0;i<N&&i<Nmx;i++){
+			for(int i=0;i<N&&i<Nmx;i++){
 				int ti=i+i+i;
 				OneObject* OB=Group[BR->Memb[i]];
 				if(OB&&OB->Serial==BR->MembSN[i])OB->NewMonsterSendTo(OR1->Position[ti]<<4,OR1->Position[ti+1]<<4,prio,0);
@@ -1323,7 +1323,7 @@ bool Brigade::WideLocalSendTo(int x,int y,byte prio,byte OrdType){
 		DeleteBOrder();
 		return false;
 	};
-	for(i=0;i<NMemb;i++){
+	for(int i=0;i<NMemb;i++){
 		int ti=i+i+i;
 		OneObject* OB=Group[Memb[i]];
 		if(OB&&OB->Serial==MembSN[i])OB->NewMonsterSendTo(OR1->Position[ti]<<4,OR1->Position[ti+1]<<4,prio,0);
@@ -1351,7 +1351,7 @@ int Brigade::AddInRadius(int x,int y,int r,BrigMemb* BMem,Brigade* Dest){
 		};
 	};
 	int nn=0;
-	for(i=0;i<NIDS;i++){
+	for(int i=0;i<NIDS;i++){
 		if(RemoveOne(IDIS[i]-nn,Dest)){
 			nn++;
 		};
@@ -3116,7 +3116,7 @@ void Brigade::CreateSimpleOrderedPositions(int x,int y,char dir){
 				};
 			}
 		};
-		for(i=N;i<NM;i++){
+		for(int i=N;i<NM;i++){
 			Memb[i+NBPERSONAL]=0xFFFF;
 			MembSN[i+NBPERSONAL]=0xFFFF;
 		};
@@ -3398,7 +3398,7 @@ void ApplySwap(Brigade* BR,word* swp){
 			tmsn1[i]=BR->MembSN[i];
 
 		};
-		for(i=NBPERSONAL;i<N;i++){
+		for(int i=NBPERSONAL;i<N;i++){
 			word MID=tm[i];
 			addrand(MID);
 			if(MID!=0xFFFF){
@@ -3508,7 +3508,7 @@ void HumanLocalSendToLink(Brigade* BR){
 			};
 		};
 	};
-	for(i=0;i<BR->NMemb;i++){
+	for(int i=0;i<BR->NMemb;i++){
 		word MID=BR->Memb[i];
 		if(MID!=0xFFFF){
 			OneObject* OB=Group[MID];
@@ -3983,7 +3983,7 @@ void B_KeepPositionsLink(Brigade* BR){
 
 		if(RS>0)
 		{
-			for(i=0;i<BR->NMemb;i++)
+			for(int i=0;i<BR->NMemb;i++)
 			{
 				word MID=BR->Memb[i];
 				if(MID!=0xFFFF)
@@ -4594,7 +4594,7 @@ void DrawBorder(Brigade* BR, byte cl)
 			xt/=Nt;
 			yt/=Nt;
 		}else return;
-		for(i=NBPERSONAL;i<N;i++){
+		for(int i=NBPERSONAL;i<N;i++){
 			word MID=BR->Memb[i];
 			if(MID!=0xFFFF){
 				OneObject* OB=Group[MID];
@@ -4772,7 +4772,7 @@ void OptimiseBrigadePosition(Brigade* BR){
 	};
 ChangePos:
 	if(BestDx||BestDy){
-		for(i=0;i<N;i++){
+		for(int i=0;i<N;i++){
 			if(Mem[i]!=0xFFFF){
 				px[i]+=BestDx;
 				py[i]+=BestDy;
@@ -4784,7 +4784,7 @@ ChangePos:
 		//need to shift some positions
 		int x0=((MinX+MaxX)>>1)+BestDx;
 		int y0=((MinY+MaxY)>>1)+BestDy;
-		for(i=0;i<N;i++){
+		for( int i=0;i<N;i++){
 			if(Mem[i]!=0xFFFF){
 				addrand(px[i]);
 				addrand(py[i]);
@@ -7506,7 +7506,7 @@ void CorrectBrigadesSelection(byte NT){
 			};
 		};
 	};
-	for(i=0;i<NBR;i++){
+	for(int i=0;i<NBR;i++){
 		SelBrigade(NT,1,BNats[i],BrigsID[i]);
 	};
 };
@@ -7541,7 +7541,7 @@ void ImCorrectBrigadesSelection(byte NT){
 			};
 		};
 	};
-	for(i=0;i<NBR;i++){
+	for(int i=0;i<NBR;i++){
 		ImSelBrigade(NT,1,BNats[i],BrigsID[i]);
 	};
 	CorrectImSelectionInGroups(NT);
@@ -7604,14 +7604,14 @@ void ResearchIslands(){
 		IslandY[i]=0;
 		NTIsl[i]=0;
 	};
-	for(i=0;i<NA;i++){
+	for(int i=0;i<NA;i++){
 		Area* Ar=GetTopMap(i);
 		int ISL=TopIslands[i];
 		IslandX[ISL]+=Ar->x;
 		IslandY[ISL]+=Ar->y;
 		NTIsl[ISL]++;
 	};
-	for(i=0;i<NIslands;i++){
+	for(int i=0;i<NIslands;i++){
 		IslandX[i]/=NTIsl[i];
 		IslandY[i]/=NTIsl[i];
 		IslPrs[i]=0;
@@ -7683,7 +7683,7 @@ void ResearchCurrentIsland(byte Nat){
 	int NMax=0;
 	int CISL=0xFF;
 	addrand(NIslands);
-	for(i=0;i<NIslands;i++){
+	for(int i=0;i<NIslands;i++){
 		addrand(NInIsl[i]);
 		addrand(NMax);
 		if(NInIsl[i]>NMax){
@@ -7878,7 +7878,7 @@ word SearchMineToDestroy(Brigade* BR){
 		};
 	};
 	if(BestMINE!=0xFFFF){
-		for(i=0;i<NGalley;i++){
+		for(int i=0;i<NGalley;i++){
 			Group[GalleyID[i]]->AttackObj(BestMINE,128+16,0,0);
 		};
 	};
@@ -7951,7 +7951,7 @@ word SearchEnemyToDestroy(Brigade* BR){
 		};
 		if(BestID==0xFFFF){
 			HumanShip* HS=EIN->SHIPS;		
-			for(i=0;i<EIN->NHSHIPS;i++){
+			for(int i=0;i<EIN->NHSHIPS;i++){
 				int DR=Norma(XC-HS->x,YC-HS->y);
 				if(DR<MAXR){
 					if(MAXF>DR){
@@ -7970,7 +7970,7 @@ word SearchEnemyToDestroy(Brigade* BR){
 		int MinTowR=100000;
 		BestID=0xFFFF;
 		if(CanAttBLD){
-			for(i=0;i<24;i++){
+			for(int i=0;i<24;i++){
 				if(EIN->TowsID[i]!=0xFFFF){
 					OneObject* OB=Group[EIN->TowsID[i]];
 					if(OB&&(!OB->Sdoxlo)&&OB->Serial==EIN->TowsSN[i]){
@@ -8787,7 +8787,8 @@ word DetermineWaterTopology(Brigade* BR){
 				yc+=ty;
 				Nu++;
 				int Top=tx>=0&&ty>=0&&tx<TopLx&&ty<=TopLy?GetTopRef(tx+(ty<<TopSH),1):0xFFFF;
-				for(int j=0;j<NTops&&Tops[j]!=Top;j++);
+				int j;
+				for(j=0;j<NTops&&Tops[j]!=Top;j++);
 				if(j>=NTops&&Top<0xFFFE){
 					Tops[NTops]=Top;
 					//NInTop[NTops]=1;
@@ -9059,7 +9060,7 @@ int FindCostPointEx(int x,int y,byte Mask){
 			ISLSET[isl>>3]|=1<<(isl&7);
 		};
 	};
-	for(i=0;i<NCost;i++){
+	for(int i=0;i<NCost;i++){
 		int R=Norma(x-COSTPL[i].xw,y-COSTPL[i].yw);
 		if(R>20&&R<MinR&&COSTPL[i].Access&&COSTPL[i].Transport==0xFFFF){
 			int ISL=COSTPL[i].Island;
@@ -9557,7 +9558,7 @@ void SearchArmyLink(OneObject* OBJ){
 							OTB->RemoveObjects(OTB->NMemb,FBR);
 						};
 						NTrue=0;
-						for(i=0;i<FBR->NMemb;i++){
+						for(int i=0;i<FBR->NMemb;i++){
 							word mid=FBR->Memb[i];
 							if(mid!=0xFFFF){
 								OneObject* OB=Group[mid];
@@ -9596,7 +9597,7 @@ void SearchArmyLink(OneObject* OBJ){
 						int ncr=0;
 						int xs=0;
 						int ys=0;
-						for(i=0;i<NTrue;i++){
+						for(int i=0;i<NTrue;i++){
 							OneObject* OB=Group[TrueMem[i]];
 							FBR->Memb[i]=TrueMem[i];
 							FBR->MembSN[i]=OB->Serial;
@@ -9630,10 +9631,10 @@ void SearchArmyLink(OneObject* OBJ){
 						FBR->KeepPositions(0,128+16);
 						OTB->DeleteAll();
 						OTB->Enabled=false;
-						for(i=0;i<ARM->NCom;i++){
+						for(int i=0;i<ARM->NCom;i++){
 							if(ARM->ComID[i]==OBJ->Index)ARM->ComSN[i]++;
 						};
-						for(i=0;i<ARM->NBar;i++){
+						for(int i=0;i<ARM->NBar;i++){
 							if(ARM->BarID[i]==Bar)ARM->BarSN[i]++;
 						};
 						CalculateFreeUnits(ARM);
@@ -9699,7 +9700,7 @@ void CalculateFreeUnits(AI_Army* AIR){
 	};
 	//handle officers
 	int id=AIR->ArmyID;
-	for(i=0;i<AIR->NCom;i++){
+	for(int i=0;i<AIR->NCom;i++){
 		OneObject* OB=Group[AIR->ComID[i]];
 		bool remove=false;
 		if(OB){
@@ -9725,7 +9726,7 @@ void CalculateFreeUnits(AI_Army* AIR){
 			AIR->NCom--;
 		};
 	};
-	for(i=0;i<AIR->NBar;i++){
+	for(int i=0;i<AIR->NBar;i++){
 		OneObject* OB=Group[AIR->BarID[i]];
 		bool remove=false;
 		if(OB){

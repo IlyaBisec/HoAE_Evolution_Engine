@@ -175,7 +175,7 @@ void SurfShader::OnePassOfDirectIllumination(const SurfMesh &Mesh, SCache &C, co
 
 	// Calcing extents:
 	cVec3 bbMin = C.pTVerts[0], bbMax = C.pTVerts[0];
-	for(nVert = 1; nVert < C.nVerts; nVert++) {
+	for(int nVert = 1; nVert < C.nVerts; nVert++) {
 		const cVec3 &t = C.pTVerts[nVert];
 		bbMin = cVec3::Min(bbMin, t);
 		bbMax = cVec3::Max(bbMax, t);
@@ -189,7 +189,7 @@ void SurfShader::OnePassOfDirectIllumination(const SurfMesh &Mesh, SCache &C, co
 	bbMax += cVec3(1, 1, 1);
 	cVec3 d = bbMax - bbMin;
 	cVec3 Scale = cVec3(C.cZBufferSide, C.cZBufferSide, 0xffffff) / d;
-	for(nVert = 0; nVert < C.nVerts; nVert++) {
+	for(int nVert = 0; nVert < C.nVerts; nVert++) {
 		cVec3 &t = C.pTVerts[nVert];
 		t.x = Scale.x * (t.x - bbMin.x - d.x / 2) + C.cZBufferSide / 2;
 		t.y = Scale.y * (t.y - bbMin.y - d.y / 2) + C.cZBufferSide / 2;
@@ -213,7 +213,7 @@ void SurfShader::OnePassOfDirectIllumination(const SurfMesh &Mesh, SCache &C, co
 	}
 
 	// Calcing shadow for each vert:
-	for(nVert = 0; nVert < C.nVerts; nVert++) {
+	for(int nVert = 0; nVert < C.nVerts; nVert++) {
 		const cVec3 &t = C.pTVerts[nVert];
 		int x = (int)t.x, y = (int)t.y, z = (int)t.z;
 //		assert(comms::RangeCheck(x, 0, C.cZBufferSide - 1));

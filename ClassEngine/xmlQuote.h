@@ -2,7 +2,7 @@
 #ifndef __xml_Quote_h__
 #define __xml_Quote_h__
 //----------------------------------------------------------------------------------------------------------------//
-#include <dynarray.h>
+#include "..\ClassEngine\dynarray.h"
 //#include <pool.hpp>
 //----------------------------------------------------------------------------------------------------------------//
 class DIALOGS_API CAttribute
@@ -68,13 +68,13 @@ private:
 	DString XMLSource;
 	DynArray<CAttribute*> m_attribute;
 };
-_inline xmlQuote* new_xmlQuote(){
+_inline xmlQuote* new_xmlQuota(){
 	xmlQuote* x=(xmlQuote*)POOL.Allocate(sizeof(xmlQuote));	
 	memset(x,0,sizeof xmlQuote);
 	return x;
 }
 _inline xmlQuote* new_xmlQuote(char* s){
-	xmlQuote* x=new_xmlQuote();
+	xmlQuote* x=new_xmlQuota();
 	x->SetQuoteName(s);
 	return x;
 }

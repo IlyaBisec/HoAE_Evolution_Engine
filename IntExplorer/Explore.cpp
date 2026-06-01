@@ -563,7 +563,8 @@ int OneSicWindow::ParseTheWholeText(){
 						memcpy(ss,Result+pos,p1-pos);
 						ss[p1-pos]=0;
 						pos=p1;
-						for(int j=0;j<NBoxes;j++)if(!strcmp(Boxes[j]->Name,ss)){
+						int j;
+						for(j=0;j<NBoxes;j++)if(!strcmp(Boxes[j]->Name,ss)){
 							CURBOX=Boxes[j];
 							X0=Boxes[j]->xi;
 							Y0=Boxes[j]->yi;
@@ -1453,7 +1454,8 @@ int OneSicWindow::ParseTheWholeText(){
 							memcpy(ss,Result+pos,p1-pos);
 							ss[p1-pos]=0;
 							pos=p1;
-							for(int j=0;j<NBoxes;j++)if(!strcmp(Boxes[j]->Name,ss)){
+							int j;
+							for(j=0;j<NBoxes;j++)if(!strcmp(Boxes[j]->Name,ss)){
 								CURBOX=Boxes[j];
 								DSS=&Boxes[j]->DSS;
 								IFS.x=Boxes[j]->xi;
@@ -1592,10 +1594,10 @@ void OneSicWindow::Erase(){
 		Boxes[i]->MaxISPOS=0;
 	};
 	//delete(Boxes);
-	for(i=0;i<NVARS;i++){
+	for(int i=0;i<NVARS;i++){
 		if(VARS[i].Value)free(VARS[i].Value);
 	};
-	for(i=0;i<NPRC;i++){
+	for(int i=0;i<NPRC;i++){
 		if(PRC[i].Close)PRC[i].Close(EXP,PRC[i].Data,PRC[i].size);
 		if(PRC[i].Data)free(PRC[i].Data);
 	};
@@ -1627,7 +1629,7 @@ void sicExplorer::EraseAllDialogs(){
 	Windows=NULL;
 	NWindows=0;
 	MaxWindow=0;
-	for(i=0;i<NGVars;i++){
+	for(int i=0;i<NGVars;i++){
 		if(GVARS[i].Value)free(GVARS[i].Value);
 	};
 	if(GVARS)free(GVARS);
@@ -1734,7 +1736,7 @@ void sicExplorer::ChangeOutput(int x,int y,int x1,int y1){
 		//for(i=0;i<OW->NVARS;i++){
 		//	if(OW->VARS[i].Value)free(OW->VARS[i].Value);
 		//};
-		for(i=0;i<OW->NPRC;i++){
+		for(int i=0;i<OW->NPRC;i++){
 			if(OW->PRC[i].Close)OW->PRC[i].Close(this,OW->PRC[i].Data,OW->PRC[i].size);
 			if(OW->PRC[i].Data)free(OW->PRC[i].Data);
 		};
@@ -2354,7 +2356,7 @@ void OneSicWindow::ReParse(){
 	Ready=1;
 	Parsed=1;
 
-	for(i=0;i<NBOX;i++){
+	for(int i=0;i<NBOX;i++){
 		for(int j=0;j<NBoxes;j++)if(!strcmp(Boxes[j]->Name,BOXES[i])){
 			if(Boxes[j]->VS){
 				Boxes[j]->VS->SPos=SCRS[i];
@@ -2483,7 +2485,7 @@ void OneInterfaceElement::ClearParams(){
 };
 void OneInterfaceElement::Clear(){
 	for(int i=0;i<NActiveRefs;i++)if(ActiveRefs[i])free(ActiveRefs[i]);
-	for(i=0;i<NParams;i++)if(Params[i])free(Params[i]);
+	for(int i=0;i<NParams;i++)if(Params[i])free(Params[i]);
 	if(ActiveRefs)free(ActiveRefs);
 	if(Params)free(Params);
 	memset(this,0,sizeof *this);

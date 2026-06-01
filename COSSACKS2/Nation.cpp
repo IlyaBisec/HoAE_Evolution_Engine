@@ -21,16 +21,16 @@ word MAXOBJECT;
 //+¸ûø ÿþ¸ªºÿðõª ÿ¨øúð÷ º¨þòý <16 ø ªòð¨¹, úþªþ¨º¦
 //ýºöýþ ðªðúþòðª¹ ¸ªþøª ôðû¹°õ ¤ªþóþ ¨ð¸¸ªþ ýø , ªþ
 //ÿ¨øúð÷ ýõ òvÿþûý õª¸ 
-static MaxReplyDistance=50;
+static int MaxReplyDistance=50;
 
 int PathAsks;
 const int drr[9]={7,6,5,0,0,4,1,2,3};
 const byte drrb[9]={7,6,5,0,0,4,1,2,3};
-const idrx[8]={0,1,1,1,0,-1,-1,-1};
-const idry[8]={-1,-1,0,1,1,1,0,-1};
+const int idrx[8]={0,1,1,1,0,-1,-1,-1};
+const int idry[8]={-1,-1,0,1,1,1,0,-1};
 //¦ð¸¸øò ôû  þÿªøüø÷ð¡øø ÿºªø
 static int OptA[256][256];
-static SIndex;
+static unsigned SIndex;
 int counter;
 static byte xi[256][256];
 static byte yi[256][256];
@@ -447,13 +447,13 @@ void ProcessDeathList(){
 		};
 	};
 	if((tmtmt&127)==17){
-		for(i=0;i<NDeath;i++){
+		for(int i=0;i<NDeath;i++){
 			OneObject* OB=Group[DeathList[i]];
 			if(OB&&OB->Serial==DeathSN[i]){
 				OB->Sdoxlo=3333;
 			};
 		};
-		for(i=0;i<MAXOBJECT;i++){
+		for(int i=0;i<MAXOBJECT;i++){
 			OneObject* OB=Group[i];
 			if(OB&&OB->Ready){
 				NewMonster* NM=OB->newMons;
@@ -462,7 +462,7 @@ void ProcessDeathList(){
 				};
 			};
 		}
-		for(i=0;i<NDeath;i++){
+		for(int i=0;i<NDeath;i++){
 			OneObject* OB=Group[DeathList[i]];
 			if(OB&&OB->Serial==DeathSN[i]){
 				OB->Sdoxlo=0;
@@ -1758,7 +1758,7 @@ void EnumPopulation(){
 			NMN[OB->NNUM]++;
 		};
 	};
-	for(i=0;i<7;i++){
+	for(int i=0;i<7;i++){
 		NATIONS[i].AddPopul(NMN[i]);
 	};
 };

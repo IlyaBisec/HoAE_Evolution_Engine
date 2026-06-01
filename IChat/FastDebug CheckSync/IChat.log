@@ -1,0 +1,106 @@
+﻿  ParseRQ.cpp
+D:\SrcRep\0000NEO\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\0000NEO\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\0000NEO\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\0000NEO\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+  GSC_ChatWindow.cpp
+D:\SrcRep\0000NEO\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\0000NEO\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\0000NEO\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\0000NEO\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+D:\SrcRep\0000NEO\IChat\GSC_ChatWindow.cpp(448,53): warning C4273: DrawStdBar2: несовместимое связывание dll
+D:\SrcRep\0000NEO\Cossacks2\DrawForm.h(46,6): message : см. предыдущее определение "DrawStdBar2"
+D:\SrcRep\0000NEO\IChat\GSC_ChatWindow.cpp(706,30): warning C4273: SetCurPtr: несовместимое связывание dll
+D:\SrcRep\0000NEO\Cossacks2\vui_Action.h(6,14): message : см. предыдущее определение "SetCurPtr"
+D:\SrcRep\0000NEO\IChat\GSC_ChatWindow.cpp(1902,7): warning C4101: DATA: неиспользованная локальная переменная
+  cs_chat.cpp
+D:\SrcRep\0000NEO\COSSACKS2\common.h(23,21): warning C4595: "operator new": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(27,21): warning C4595: "operator new[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(31,21): warning C4595: "operator delete": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\COSSACKS2\common.h(35,21): warning C4595: "operator delete[]": не допускается встроенное объявление функций Operator new или Operator delete, не являющихся членами
+D:\SrcRep\0000NEO\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): число извлечений из стека превышает число занесений
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10,18): warning C4251: std_OnePoolType::Pool: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(11,18): warning C4251: std_OnePoolType::FreeList: class "DynArray<BYTE *,15>" должен иметь dll-интерфейс для использования клиентами class "std_OnePoolType"
+D:\SrcRep\0000NEO\ClassEngine\pool.h(10): message : см. объявление "DynArray<BYTE *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66,22): warning C4251: xmlQuote::SubQuotes: class "DynArray<xmlQuote *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(66): message : см. объявление "DynArray<xmlQuote *,15>"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69,24): warning C4251: xmlQuote::m_attribute: class "DynArray<CAttribute *,15>" должен иметь dll-интерфейс для использования клиентами class "xmlQuote"
+D:\SrcRep\0000NEO\ClassEngine\xmlQuote.h(69): message : см. объявление "DynArray<CAttribute *,15>"
+D:\SrcRep\0000NEO\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): нет парной "#pragma warning(push)"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238,66): warning C4275: class "ReferableBaseClassWithSource", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ParentFrame"
+D:\SrcRep\0000NEO\ClassEngine\ClassEngine.h(796): message : см. объявление "ReferableBaseClassWithSource"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(238): message : см. объявление "ParentFrame"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1235,110): warning C4273: DrawFilledRect3: несовместимое связывание dll
+D:\SrcRep\0000NEO\Cossacks2\DrawForm.h(58,6): message : см. предыдущее определение "DrawFilledRect3"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989,45): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1989): message : см. объявление "TabDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2012): message : см. объявление "ListDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134,47): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2134): message : см. объявление "ClassDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217,46): warning C4275: class "DialogsDesk", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "ChatDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(1439): message : см. объявление "DialogsDesk"
+D:\SrcRep\0000NEO\Cossacks2\dialogs.h(2217): message : см. объявление "ChatDesk"
+  Создание кода...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1391,5): warning MSB8012: TargetPath(D:\SrcRep\0000NEO\IChat\FastDebug CheckSync\IChat.dll) не соответствует значению свойства выходного файла (D:\SrcRep\data\iChat.dll) для Linker. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Link.OutputFile).
+ParseRQ.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+     Создается библиотека .\../_debug/iChat.lib и объект .\../_debug/iChat.exp
+  IChat.vcxproj -> D:\SrcRep\0000NEO\IChat\FastDebug CheckSync\IChat.dll

@@ -519,7 +519,7 @@ be_CNodeArray::be_CNodeArray(){
 };
 be_CNodeArray::be_CNodeArray(char* _name){
 	init(_name);
-	GetObjectGlobalID();
+	//GetObjectGlobalID();
 };
 void	be_CNodeArray::clear(){
 	_arrayVList.Clear();
@@ -940,6 +940,9 @@ void	be_CNodeArrayDriver::GetObjectGlobalID(){
 };
 void	be_CNodeArrayDriver::setVisible(bool _state){
 	g_beNodeArrayEditor.setVisible(_state);
+};
+bool	be_CNodeArrayDriver::getVisible() {
+	return g_beNodeArrayEditor.getVisible();
 };
 void	be_CNodeArrayDriver::OnInit(){
 	g_beNodeArrayEditor._dialog.OnInit();

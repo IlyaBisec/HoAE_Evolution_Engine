@@ -18,8 +18,8 @@ class BaseMesh;
 #endif//DIALOGS_API
 
 //#define MAXDLG 1024
-#include <ClassEngine.h>
-#include <more_types.h>
+#include "..\ClassEngine\ClassEngine.h"
+#include "..\ClassEngine\more_types.h"
 #include "maptemplates.h"
 #include "DrawForm.h"
 #include "TypeExchange.h"
@@ -242,7 +242,7 @@ public:
 		((ParentFrame*)data)->BaseClass::reset_class(data);
 		((ParentFrame*)data)->Init();
 	}
-
+	bool Visible;
 	void AttachToClass(ReferableBaseClass* BC,const char* RootName="$root");
 
 	int	BaseX,BaseY;
@@ -254,7 +254,6 @@ public:
 	DWORD Diffuse;	
 	bool DeepColor:1;
 	bool CoorIsGlobal:1;
-	bool Visible;
 	int  globalX();
 	int  globalY();
 	int  globalX1();
@@ -348,8 +347,6 @@ public:
 	ClassArray<SimpleDialog> DSS;
 	void vm_ActionsAccept();
 	void vm_ActionsCancel();
-	void DynamicScale(int Lx, int Ly);
-	void DynamicScaleGlobal(int Lx, int Ly);
 	
 	void SetEditMode(bool Mode);
 
@@ -542,10 +539,8 @@ public:
 	//////////////////////////////////////////////////////////////////////////	
 	inline virtual int GetWidth();
 	inline virtual void SetWidth(int w);
-	inline virtual void SetWidthS(int w);
 	inline int GetHeight(){return y1-y+1;}
 	inline virtual void SetHeight(int h);
-	inline virtual void SetHeightS(int h);
 	INT_PROPERTY(ParentFrame,GetWidth,SetWidth);
 	INT_PROPERTY(ParentFrame,GetHeight,SetHeight);
 	inline int Getx(){return x;}
@@ -565,13 +560,11 @@ public:
 	SubSection AutoLoadSave;
 
 	SubSection Transform;
-    bool EnableTransform;
-    bool EnableDynScale;
-    bool EnableDynPos;
-    byte PivotPosition;
-    float ShiftX;
-    float ShiftY;
-    float PivotDx;
+	bool EnableTransform;
+	byte PivotPosition;
+	float ShiftX;
+	float ShiftY;
+	float PivotDx;
 	float PivotDy;
 	float ScaleX;
 	float ScaleY;
@@ -640,32 +633,30 @@ public:
 
 		SAVE_SECTION(0xFFFFFFFF);
 		//
-		REG_AUTO_EX(Position,Position&Width);
-        REG_MEMBER(_bool,EnableDynPos);
-        REG_INTPROP(_int,x,Getx,Setx);
-        REG_INTPROP(_int,y,Gety,Sety);
-        REG_INTPROP(_int,Width,GetWidth,SetWidth);
-        REG_INTPROP(_int,Height,GetHeight,SetHeight);
+		REG_AUTO_EX(Position,Position&Width);		
+		REG_INTPROP(_int,x,Getx,Setx);
+		REG_INTPROP(_int,y,Gety,Sety);
+		REG_INTPROP(_int,Width,GetWidth,SetWidth);
+		REG_INTPROP(_int,Height,GetHeight,SetHeight);
 
-        INVISIBLE NOSAVE REG_MEMBER_EX(_int,x,X);
-        INVISIBLE NOSAVE REG_MEMBER_EX(_int,y,Y);
+		INVISIBLE NOSAVE REG_MEMBER_EX(_int,x,X);
+		INVISIBLE NOSAVE REG_MEMBER_EX(_int,y,Y);
 
-        //
-        REG_AUTO(ColorParams);        
-        REG_BOOL_PROP(DeepColor);
-        REG_MEMBER_EX(_color,Diffuse,Color);
+		//
+		REG_AUTO(ColorParams);		
+		REG_BOOL_PROP(DeepColor);
+		REG_MEMBER_EX(_color,Diffuse,Color);
 
-        REG_AUTO(Transform);
-        REG_MEMBER(_bool,EnableTransform);
-        REG_MEMBER(_bool,EnableDynScale);
-        REG_ENUM(_byte_index,PivotPosition,TEXTALIGN);
-        REG_MEMBER(_float,PivotDx);
-        REG_MEMBER(_float,PivotDy);
-        REG_MEMBER(_float,ScaleX);
-        REG_MEMBER(_float,ScaleY);
-        REG_MEMBER(_float,Angle);
-        REG_MEMBER(_bool,FlipX);
-        REG_MEMBER(_bool,FlipY);
+		REG_AUTO(Transform);
+		REG_MEMBER(_bool,EnableTransform);
+		REG_ENUM(_byte_index,PivotPosition,TEXTALIGN);
+		REG_MEMBER(_float,PivotDx);
+		REG_MEMBER(_float,PivotDy);
+		REG_MEMBER(_float,ScaleX);
+		REG_MEMBER(_float,ScaleY);
+		REG_MEMBER(_float,Angle);
+		REG_MEMBER(_bool,FlipX);
+		REG_MEMBER(_bool,FlipY);
 
 		REG_AUTO(AutoLoadSave);
 		REG_FILEPATH(Source,"auto");
@@ -1353,9 +1344,9 @@ public:
 		REG_MEMBER(_int,FillerLeftMargin);
 		REG_MEMBER(_int,FillerRightMargin);
 
-		REG_METHOD(&StdBorder::TestBorder);
-		REG_METHOD(&StdBorder::AutoCreateXCYC_byOuterMargin);
-		REG_METHOD(&StdBorder::AutoCreateXCYC_byInnerMargin);
+		REG_METHOD_EX(&StdBorder::TestBorder, TestBorder);
+		REG_METHOD_EX(&StdBorder::AutoCreateXCYC_byOuterMargin, AutoCreateXCYC_byOuterMargin);
+		REG_METHOD_EX(&StdBorder::AutoCreateXCYC_byInnerMargin, AutoCreateXCYC_byInnerMargin);
 
 		REG_MEMBER(_int,TopMarginParam);
 		REG_MEMBER(_int,BottomMarginParam);

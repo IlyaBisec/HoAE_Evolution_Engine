@@ -773,7 +773,7 @@ public:
 		void EvaluateFunction();
 		SAVE(SORT_BY_TYPE);
 			REG_PARENT(BaseFunction);
-		ENDSAVE();
+		ENDSAVE;
 	} fSORT;
 
 	class CPRESENTATION	fShowPresentation;

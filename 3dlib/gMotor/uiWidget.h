@@ -82,7 +82,7 @@ class Widget :  public   IReflected,
                 public   IResource
 {
 public:
-    Signal                  sigMouseWheel;    
+    Signal sigMouseWheel;    
     Signal                  sigMouseMove;        
     Signal                  sigMouseLBDown;    
     Signal                  sigMouseMBDown;    

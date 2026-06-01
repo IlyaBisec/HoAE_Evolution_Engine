@@ -151,6 +151,7 @@ public:
 	static	void	clear();
 	static	void	GetObjectGlobalID();
 	static	void	setVisible(bool _state);
+	static	bool	getVisible();
 	static	void	OnInit();
 };
 

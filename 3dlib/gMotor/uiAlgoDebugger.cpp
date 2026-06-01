@@ -66,7 +66,7 @@ void AlgorithmDebugger::Expose( PropertyMap& pm )
     pm.f( "DebugStuff",     m_bShowDebugStuff );
     pm.f( "Color",          m_Color );
     pm.f( "LOD",            m_LOD   );
-    pm.m( "Reset",          Reset );
+    pm.m( "Reset", &AlgorithmDebugger::Reset );
 } // AlgorithmDebugger::Expose
 
 void AlgorithmDebugger::OnInit()

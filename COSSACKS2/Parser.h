@@ -23,7 +23,7 @@ public:
 		if(Command)free(Command);
 		if(ConditionID)free(ConditionID);
 		if(ConditionParam)free(ConditionParam);
-		for(i=0;i<NSubTriggers;i++)if(SubTrigger[i])delete(SubTrigger[i]);
+		for(int i=0;i<NSubTriggers;i++)if(SubTrigger[i])delete(SubTrigger[i]);
 		if(SubTrigger)free(SubTrigger);
 		memset(this,0,sizeof *this);
 	}
@@ -162,7 +162,7 @@ public:
 		}
 		if(OK){
 			if(N<MaxCom){
-				for(i=0;i<NSubTriggers;i++){
+				for(int i=0;i<NSubTriggers;i++){
 					byte exit1=0;
 					N+=SubTrigger[i]->GetCommand(Checker,Param,ComList,N+pos,MaxCom-N-pos,exit1);
 					if(exit1){

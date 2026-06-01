@@ -18,7 +18,8 @@ DWORD Scissors::OnLMB(SelExtArgs &Args) {
 		DWORDS TRIS;
 		int iTri = 0, i3[3], k;
 		int NTris = Args.Ref.pOrig->NTris();
-		for(int nTri = 0; nTri < NTris; nTri++) {
+		int nTri;
+		for(nTri = 0; nTri < NTris; nTri++) {
 			if(iTri >= Args.Ref.idTris.Count()) break;
 			if(nTri != Args.Ref.idTris[iTri]) {
 				Args.Ref.pOrig->GetTri(nTri, i3);

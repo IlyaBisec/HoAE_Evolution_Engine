@@ -394,7 +394,8 @@ void CreateSelInterface(){
 	BrigParam BP[200];
 
 	word LTID=N-1;
-	for(int i=0;i<OIS.NSelBr;i++){
+	int i;
+	for(i=0;i<OIS.NSelBr;i++){
 		word bid=OIS.SelBr[i];
 		Brigade* BR=CITY[NI].Brigs+bid;		
 		GetBrigadeParams(BR,BP+i);
@@ -470,7 +471,7 @@ void CreateSelInterface(){
 				UI_ShiftSel=true;
 				break;
 			};
-			for(i=0;i<N;i++){
+			for(int i=0;i<N;i++){
 				SimpleDialog* SD=DS_Sel[i].DSS[0];
 				if(UI_ShiftSel&&SD->Diffuse!=0xFFFFFFFF){
 					if(i<OIS.NSelBr) CmdChooseUnSelBrig(MyNation,OIS.SelBr[i]);
@@ -650,27 +651,28 @@ CEXPORT void SelBrigadeExp(byte NI, byte Type, int ID){
 };
 //
 extern OISelection OIS;
-void GetUnitsSelGroups(byte NI){
+void GetUnitsSelGroups(byte NI) {
 	OIS.Process(NI);
 
 	int i;
 	//return;
 
 	// крестьян в конец
-	GeneralObject** GO=NATIONS[NI].Mon;
-	for(i=OIS.NSelObj-2;i>=0;i--){
-		NewMonster* NM=GO[OIS.SelObj[i]]->newMons;
-		NewMonster* N2=GO[OIS.SelObj[i+1]]->newMons;
-		if(NM->Peasant&&!N2->Peasant){
-			for(int j=i+2;j<OIS.NSelObj;j++){
-				N2=GO[OIS.SelObj[j]]->newMons;
-				if(N2->Peasant){
+	GeneralObject** GO = NATIONS[NI].Mon;
+	for (i = OIS.NSelObj - 2; i >= 0; i--) {
+		NewMonster* NM = GO[OIS.SelObj[i]]->newMons;
+		NewMonster* N2 = GO[OIS.SelObj[i + 1]]->newMons;
+		if (NM->Peasant && !N2->Peasant) {
+			int j;
+			for (j = i + 2; j < OIS.NSelObj; j++) {
+				N2 = GO[OIS.SelObj[j]]->newMons;
+				if (N2->Peasant) {
 					break;
 				}
 			}
 			//if(j>OIS.NSelObj) j=OIS.NSelObj;			
-			swap(OIS.SelObj[i],OIS.SelObj[j-1]);
-			swap(OIS.SelObjA[i],OIS.SelObjA[j-1]);
+			swap(OIS.SelObj[i], OIS.SelObj[j - 1]);
+			swap(OIS.SelObjA[i], OIS.SelObjA[j - 1]);
 		}
 	}
 }
@@ -1571,7 +1573,7 @@ void OISelection::SetProduce(){
 		}
 	}
 	//
-	for(i=0;i<NBuild;i++,Build++,AIndex++){
+	for(int i=0;i<NBuild;i++,Build++,AIndex++){
 		GeneralObject* go=Nat->Mon[*Build];
 		NewMonster* nm=go->newMons;
 		bld|=nm->Building&&!nm->SelfTransform;
@@ -1643,7 +1645,7 @@ void OISelection::SetProduce(){
 		Produce.Add(PI);
 	}
 	if(SP->Type==ve_UT_building&&bld){
-		for(i=0;i<Produce.GetAmount();i++){
+		for(int i=0;i<Produce.GetAmount();i++){
 			word* NInd=&Produce[i].NIndex;
 			bool Bld=Produce[i].Building;
 			(*NInd)|=0xFFFF*word(!Bld);
@@ -1668,7 +1670,7 @@ void OISelection::CreateFromSelection(byte NI){
 	// Rome Unit Info
 	N=SelPoint.GetAmount();
 	extern bool m_U_Info;
-	if(N==1&&m_U_Info) for(i=0;i<N;i++){
+	if(N==1&&m_U_Info) for(int i=0;i<N;i++){
 		vui_SelPoint* SP=SelPoint+i;
 		if(SP){
 			switch(SP->Type){
@@ -1989,7 +1991,7 @@ ActiveUnitAbility* vui_SelPoint::GetActiveUnitAbility(int Index, int Type){
 	return NULL;
 }
 
-extern const vClotheN;
+extern const int vClotheN;
 extern int vClotheSet[];
 DLLEXPORT bool GetBuildingEntryPoint(int* x,int* y,word Index,int AddDistance);
 
@@ -2468,7 +2470,7 @@ bool vui_BrigInfo::SetFromBrig(vui_SelPoint* SP){
 		int FL=ODE->FirstActualLine;
 		int bp=NBPERSONAL;
 		int CP=0;		
-		for(p=0;p<NA;p++){		
+		for(int p=0;p<NA;p++){
 			int NU=ODE->LineNU[p+FL];
 			if(NU){
 				if(CP<3){
@@ -2866,6 +2868,7 @@ void cva_OIS_Inside::SetFrameState(SimpleDialog* SD){
 
                 int nUL=UL->DSS.GetAmount();
                 int n=NIndex.GetAmount();
+				int i;
                 for(i=0;i<n;i++){
 
                     SimpleDialog* SD=NULL;

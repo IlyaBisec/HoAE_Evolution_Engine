@@ -9,7 +9,6 @@
 #define __ddini_cpp_
 #define _WINSOCKAPI_
 #include <malloc.h>
-#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h" 
 #include "mode.h" 
@@ -20,6 +19,7 @@
 #include "GameSettings.h"
 #include "ITerrain.h"
 #include "IShadowManager.h"
+#include "ddini.h"
 
 inline bool ProcessMessages2()
 {    
@@ -77,8 +77,8 @@ void SERROR2();
 void PropCopy();
 void InitRLCWindows();
 //#define COPYSCR
-const int InitLx=GetSystemMetrics(SM_CXSCREEN);
-const int InitLy=GetSystemMetrics(SM_CYSCREEN);
+const int InitLx= GetSystemMetrics(SM_CXSCREEN);;
+const int InitLy= GetSystemMetrics(SM_CYSCREEN);;
 CEXPORT int RealLx;
 CEXPORT int RealLy;
 CEXPORT int SCRSizeX;
@@ -163,7 +163,7 @@ void ChangeColorFF(){
 			};
 		};
 		int sz=RSCRSizeX*RealLy;
-		for(i=0;i<sz;i++)((byte*)RealScreenPtr)[i]=0;//if(((byte*)RealScreenPtr)[i]==0xFF)((byte*)RealScreenPtr)[i]=c;
+		for(int i=0;i<sz;i++)((byte*)RealScreenPtr)[i]=0;//if(((byte*)RealScreenPtr)[i]==0xFF)((byte*)RealScreenPtr)[i]=c;
 	}catch(...){};
 };
 void Copy16(byte* Src,int SrcPitch,byte* Dst,int DstPitch,int Lx,int Ly){
@@ -254,7 +254,7 @@ CEXPORT void FlipPages(void){
 	if(rand()<100)POOL.pool_08.KillDirtyGarbage();
 	if(rand()<100)POOL.pool_16.KillDirtyGarbage();
 	if(rand()<100)POOL.pool_32.KillDirtyGarbage();
-	if(rand()<100)POOL.pool_64.KillDirtyGarbage();
+	//if(rand()<100)POOL.pool_64.KillDirtyGarbage();
 	if(rand()<100)POOL.pool_128.KillDirtyGarbage();
 
 	KeysAreFocusedOnInputBox=WasAtLeastOneTimeInInputBox;
@@ -273,13 +273,12 @@ CEXPORT void FlipPages(void){
 	    IL->SetAmbient(EngSettings.LightAmbient);
         IL->Render();
     }
-/*
+
 	if(!bActive){
 		Sleep(20);
         ProcessMessages2();
 		return;
 	}
-	*/ //Sleep Alt+Tab, вернуть на место
 	void ProcessTimers();
 	ProcessTimers();
 	extern bool IgnoreProcessMessages;
@@ -737,7 +736,7 @@ void LoadPalette(char const* lpFileName)
 				C0+=5; 
 			};
 			ResFile pf=RRewrite(lpFileName);
-			for(i=0;i<256;i++)RBlockWrite(pf,&GPal[i],3);
+			for(int i=0;i<256;i++)RBlockWrite(pf,&GPal[i],3);
 			RClose(pf);
 		};
 		if(!DDDebug){

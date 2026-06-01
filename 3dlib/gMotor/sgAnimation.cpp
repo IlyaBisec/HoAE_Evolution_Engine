@@ -109,14 +109,14 @@ void Animation::Unserialize( InStream& is )
 void Animation::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Animation", this );
-    pm.p( "TotalTime",          GetAnimationTime, SetAnimationTime );
-    pm.p( "StartTime",          GetStartTime, SetStartTime );
-    pm.f( "CurrentTime",        m_CurrentTime   );
-    pm.f( "Looped",             m_bLooped       );
-    pm.p( "Played",             IsPlaying       );
-    pm.m( "Play",               Play            );
-    pm.m( "Pause",              Pause           );
-    pm.m( "Stop",               Stop            );
+    pm.p( "TotalTime", &Animation::GetAnimationTime, &Animation::SetAnimationTime );
+    pm.p( "StartTime", &Animation::GetStartTime, &Animation::SetStartTime );
+    pm.f( "CurrentTime", m_CurrentTime   );
+    pm.f( "Looped", m_bLooped       );
+    pm.p( "Played", &Animation::IsPlaying       );
+    pm.m( "Play", &Animation::Play            );
+    pm.m( "Pause", &Animation::Pause           );
+    pm.m( "Stop", &Animation::Stop            );
 } // Animation::Expose
 
 void Animation::Render()

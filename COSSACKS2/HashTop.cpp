@@ -297,7 +297,8 @@ void HashTopTable::ReCreateAreas(int x0,int y0,int x1,int y1){//xi,yi-64x coordi
 	int GetKnotLink(int Index,int LinkIndex);
 	int GetNRoadsLink(int index);
 	if(TopType==0){
-		for(int i=0;i<NR;i++){
+		int i;
+		for(i=0;i<NR;i++){
 			int NL=GetNRoadsLink(i);
 			for(int j=0;j<NL;j++){
 				int L=GetKnotLink(i,j);
@@ -324,6 +325,7 @@ void HashTopTable::ReCreateAreas(int x0,int y0,int x1,int y1){//xi,yi-64x coordi
 			//}
 		}
 	}
+	int i;
 	for(i=1;i<14&&Change;i++){
 		Change=false;
 		char* xi=Rarr[i].xi;
@@ -705,7 +707,7 @@ void SaveNewTop(ResFile F,int type){
 
 	RBlockWrite(F,&sz,4);
 	RBlockWrite(F,&NA,4);
-	for(i=0;i<NA;i++){
+	for(int i=0;i<NA;i++){
 		Area* AR=HashTable[type].TopMap+i;
 		RBlockWrite(F,&AR->x,2);
 		RBlockWrite(F,&AR->y,2);
@@ -881,7 +883,7 @@ void SmoothFields(MotionField* MF,int idx){
 	    extern BlockBars LockBars;
 	    N=LockBars.NBars;
 	    BC=LockBars.BC;
-	    for(i=0;i<N;i++){
+	    for(int i=0;i<N;i++){
 		    MF->BSetBar(int(BC[i].x)<<2,int(BC[i].y)<<2,4);
 	    };
     }

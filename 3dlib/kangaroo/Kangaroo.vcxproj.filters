@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{966c12dd-c205-413a-9b92-577c32173681}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Source Files\cdt">
+      <UniqueIdentifier>{ad2be8aa-4dcc-4648-8573-c3594aefc8b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Debuggers">
+      <UniqueIdentifier>{bdabc3ee-cc7c-458e-a808-ee948924c2ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{1f2e7bcf-d232-4702-be63-4c349b074d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Editors">
+      <UniqueIdentifier>{2356a0fc-1a2a-4585-9cf0-68ccfab66ab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{45d45485-48bf-483b-8cfa-4f163bc1e4c6}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{895d23f0-7ff0-435f-817c-05cd6ee13313}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Debuggers">
+      <UniqueIdentifier>{ee334d42-8672-4bbf-85cd-68e3f92a4d28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{29f58d24-7d12-49e2-98c9-ce6010d2a778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Editors">
+      <UniqueIdentifier>{5b9f10be-fe98-4f04-821c-89ed15a9ca47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Widgets">
+      <UniqueIdentifier>{b15c526a-9fb8-4115-8e27-8f772915c626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wintab">
+      <UniqueIdentifier>{85d383ad-78ac-4275-a050-3704e3a68a47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="comms">
+      <UniqueIdentifier>{33a38034-fb31-48af-8163-30e5ae4521da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="comms\cpp">
+      <UniqueIdentifier>{688bc588-d8bc-4e5f-bda8-a18051b7106c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="comms\h">
+      <UniqueIdentifier>{f1e7f114-0904-4e2f-b3ec-2d96c62d9c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3dbrush">
+      <UniqueIdentifier>{7968cced-9fd0-4660-bc28-ac8a6e652a6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3dbrush\Tools">
+      <UniqueIdentifier>{b8f1a949-1362-4211-81ee-462cd4033c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3dbrush\Helpers">
+      <UniqueIdentifier>{11033493-b149-4da8-ab42-39bc28840c15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="edNodeMaker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbAnimation.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="dbCurrent.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="dbDebugger.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="dbGui.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="dbLodder.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="dbMath.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="dbReflection.cpp">
+      <Filter>Source Files\Debuggers</Filter>
+    </ClCompile>
+    <ClCompile Include="sgRagdoll.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="edGluer.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="edUtilities.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="sgTerraEdit.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawFrame.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleWidgets.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="wintab\WTSupport.cpp">
+      <Filter>wintab</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cAngles.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cBounds.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cColor.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cDIB24.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cHashIndex.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cHelpers.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cIO.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cMat2.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cMat3.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cMat4.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cMath.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cMatrix.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cQuat.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cRawMesh.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cRotation.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cSolver.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cSphere.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cStr.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cVec2.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cVec3.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cVec4.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cVector.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cVectors.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\cViewPort2.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\dMatrix.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="comms\dVector.cpp">
+      <Filter>comms\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicTexture.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="Layers.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="PenInterface.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="PenShape.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="PolyMesh.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterOp.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="TexturePattern.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoMaster.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>3dbrush</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ClothTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CurveTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FillTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FreezeTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="PickTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaneTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="SculptTool.cpp">
+      <Filter>3dbrush\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="bitset.cpp">
+      <Filter>3dbrush\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Expand.cpp">
+      <Filter>3dbrush\Helpers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Kangaroo.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\loading.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\MicroBuzator.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kDB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dbAnimation.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="dbCurrent.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="dbDebugger.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="dbGui.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="dbLodder.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="dbMath.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="dbReflection.h">
+      <Filter>Header Files\Debuggers</Filter>
+    </ClInclude>
+    <ClInclude Include="sgRagdoll.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="sgVehicle.h">
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="edGluer.h">
+      <Filter>Header Files\Editors</Filter>
+    </ClInclude>
+    <ClInclude Include="edUtilities.h">
+      <Filter>Header Files\Editors</Filter>
+    </ClInclude>
+    <ClInclude Include="sgTerraEdit.h">
+      <Filter>Header Files\Editors</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawFrame.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleWidgets.h">
+      <Filter>Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="wintab\Pktdef.h">
+      <Filter>wintab</Filter>
+    </ClInclude>
+    <ClInclude Include="Tablet.h">
+      <Filter>wintab</Filter>
+    </ClInclude>
+    <ClInclude Include="wintab\Wintab.h">
+      <Filter>wintab</Filter>
+    </ClInclude>
+    <ClInclude Include="wintab\Wintabx.h">
+      <Filter>wintab</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cAngles.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cBitMap.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cBounds.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cColor.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cDIB24.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cExtrapolate.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cHashIndex.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cHelpers.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cInterpolate.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cIO.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cList.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cMat2.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cMat3.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cMat4.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cMath.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cMatrix.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\comms.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cPlane.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cQuat.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cRawMesh.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cRotation.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cSegBezier.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cSolver.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cSphere.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cSplineBezier.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cStr.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cTimer.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cTrack.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cVec2.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cVec3.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cVec4.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cVector.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cVectors.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\cViewPort2.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\dMatrix.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="comms\dVector.h">
+      <Filter>comms\h</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicTexture.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="PenInterface.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="PenShape.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="PolyMesh.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="RasterOp.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="TexturePattern.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoMaster.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>3dbrush</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ClothTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CurveTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FillTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FreezeTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="PickTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaneTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="SculptTool.h">
+      <Filter>3dbrush\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="bitset.h">
+      <Filter>3dbrush\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Expand.h">
+      <Filter>3dbrush\Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="wintab\Wintab32.lib">
+      <Filter>wintab</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

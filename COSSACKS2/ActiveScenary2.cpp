@@ -84,7 +84,7 @@ void EraseAllNetralPeasantsAndPolicemen(){
 		NIndex.Add(DSB->PeasantNIndex);		
 	}
 	//
-	for(i=0;i<MAXOBJECT;i++){
+	for(int i=0;i<MAXOBJECT;i++){
 		OneObject* OB=Group[i];
 		if(OB&&!OB->Sdoxlo){
 			for(int j=0;j<NIndex.GetAmount();j++){

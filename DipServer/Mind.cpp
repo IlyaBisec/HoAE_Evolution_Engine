@@ -250,6 +250,7 @@ void Mind::Init(byte ni, int type){
 		SetPlayerName(ni,GetTextByID("@RMID_IMPOSIBLE"));
 		break;
 	}
+	
 
 	NI=ni;
 	//ENM.
@@ -635,7 +636,7 @@ void Mind::Process0(){
 		}
 
 		// раздача слонов
-		for(i=0;i<NTrgList;i++){
+		for(int i=0;i<NTrgList;i++){
 			word MinRndDist=1000;
 			word MaxDirDist=0;
 			word SqdID=0xFFFF;
@@ -1058,7 +1059,7 @@ void GetArmyMap(Enemy* ENM, word* DefTent, short* Dang){
 
 	ArmyTopInfo* ATI=&ENM->TopInf;
 	int* AM=ENM->ArmyMap;
-	for(i=0;i<NZ;i++){
+	for(int i=0;i<NZ;i++){
 		int arm=AM[i];
 		if(arm<NA){
 			ActiveArmy* a=ENM->AA+arm;
@@ -1067,7 +1068,7 @@ void GetArmyMap(Enemy* ENM, word* DefTent, short* Dang){
 	}
 
 	
-	for(i=0;i<NA;i++){
+	for(int i=0;i<NA;i++){
 		ActiveArmy* a=ENM->AA+i;
 		if(a->n){
 			a->xc/=a->n;
@@ -1211,7 +1212,7 @@ void Mind::Process2(){
 		memset(DD,0,sizeof(DD));
 
 		word IDS[4096];		
-		for(i=0;i<NZ;i++){
+		for(int i=0;i<NZ;i++){
 			if(ArmyMap[i]<0x1000){
 				IDS[i]=ArmyMap[i];
 			}else{
@@ -1221,7 +1222,7 @@ void Mind::Process2(){
 
 		int MaxDan;
 
-		for(i=0;i<NS;i++){		
+		for(int i=0;i<NS;i++){
 			word DST=0xFFFF;
 			FindNextZoneOnTheSafeWayToObject(ST[i],DD,IDS,&MaxDan,1000,&DST);
 			
@@ -1234,7 +1235,7 @@ void Mind::Process2(){
 		}
 
 		// mark army on map by rectangle
-		for(i=0;i<NAA;i++){
+		for(int i=0;i<NAA;i++){
 			ActiveArmy* aa=AA+i;
 			
 			int N=aa->NS;
@@ -1254,7 +1255,7 @@ void Mind::Process2(){
 
 		}
 
-		for(i=0;i<NZ;i++) DangerMap[i]=Dang[i];
+		for(int i=0;i<NZ;i++) DangerMap[i]=Dang[i];
 
 		ActivateArmy(AA,NAA);
 
@@ -1292,7 +1293,7 @@ void Mind::ProcessCannons(int TimeToStorm){
 	memset(SecdTop,0,NTop);
 
 	int MO=GetMaxObject();
-	for(i=0;i<MO;i++){
+	for(int i=0;i<MO;i++){
 		OneObject* OB=GetOBJ(i);
 		if(OB&&!OB->Sdoxlo){
 			if(OB->NNUM==NI){ // alies
@@ -1334,7 +1335,7 @@ void Mind::ProcessCannons(int TimeToStorm){
 	if(NCannon){
 
 		int n=0;
-		for(i=0;i<NCannon;i++){
+		for(int i=0;i<NCannon;i++){
 			OneObject* CO=GetOBJ(Cannon[i]);
 			if(CO&&CO->Serial==CannSN[i]&&!CO->Sdoxlo){
 				int cx=CO->RealX;
@@ -1366,7 +1367,7 @@ void Mind::ProcessCannons(int TimeToStorm){
 				//byte SecdDir;
 				int sx,sy;
 				byte SecdLockType;
-				for(j=0;j<NSecd;j++){
+				for(int j=0;j<NSecd;j++){
 					OneObject* SO=GetOBJ(Secd[j]);
 					sx=SO->RealX;
 					sy=SO->RealY;
@@ -1418,7 +1419,7 @@ void Mind::ProcessCannons(int TimeToStorm){
 	// sheeps
 	if(NSheep){
 
-		for(i=0;i<NSheep;i++){
+		for(int i=0;i<NSheep;i++){
 			OneObject* OB=GetOBJ(Sheep[i]);
 			if(OB&&OB->Serial==SheSN[i]&&!OB->Sdoxlo){
 				int cx=OB->RealX;
@@ -1443,7 +1444,7 @@ void Mind::ProcessCannons(int TimeToStorm){
 				int SecdDist=10000000;
 				word SecdID=0xFFFF;
 				//byte SecdDir;
-				for(j=0;j<NSecd;j++){
+				for(int j=0;j<NSecd;j++){
 					OneObject* SO=GetOBJ(Secd[j]);
 					int dx=SO->RealX-cx;
 					int dy=SO->RealY-cy;
@@ -1542,7 +1543,7 @@ void Mind::ProcessCannons(int TimeToStorm){
 				int SecdDist=10000000;
 				word SecdID=0xFFFF;
 				//byte SecdDir;
-				for(j=0;j<NSecd;j++){
+				for(int j=0;j<NSecd;j++){
 					OneObject* SO=GetOBJ(Secd[j]);
 					int dx=(SO->RealX>>4)-SQ->xc;
 					int dy=(SO->RealY>>4)-SQ->yc;
@@ -1687,7 +1688,7 @@ void Mind::SetLink0(){
 			CreateAZone("acti",AA->xc,AA->yc,64);			
 
 			// линкуем отряд с армией противника
-			s=0;
+			int s=0;
 			while(!SqdQ.empty()&&pow<AA->Power){
 				char txt[200];
 				sprintf(txt,"prio=%d, dist=%d",s,SqdQ.top()->ArmyDist);
@@ -1771,7 +1772,7 @@ int Mind::SetGameGoals(){
 			Dang[i]=ATI->Power[i]=(ATI->Life[i]*ATI->Damage[i])>>10;
 	}
 	
-	for(i=0;i<NZ;i++) DangerMap[i]=Dang[i];
+	for(int i=0;i<NZ;i++) DangerMap[i]=Dang[i];
 	//for(i=0;i<NZ;i++) DangerMap[i]=ATI->Power[i];
 	
 	// карты стрелковых юнитов
@@ -1955,7 +1956,7 @@ void Mind::ActivateArmy(ActiveArmy* AA, int NA){
 		sprintf(name,"REAR");
 		CreateAZone(name,xc,yc,128);
 
-		for(s=0;s<arm->NS;s++){
+		for(int s=0;s<arm->NS;s++){
 			word SID=arm->SID[s];
 			Squad* sqd=Sqd+SID;
 

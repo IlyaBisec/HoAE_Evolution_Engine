@@ -353,14 +353,14 @@ int BattleTopScore(){
 		sprintf(buf,"%d / %d",PDS[CurrentSinBattle]+PTS[CurrentSinBattle],MDB+MTB);
 		MMenu.addTextButton(NULL,rx+rdx*2,ry,buf,&fon16y3,&fon16y3,&fon16y3,1);
 
-		const lx=458;
-		const ly=521;
-		const lw=120;
-		const ldx=7;
+		const int lx=458;
+		const int ly=521;
+		const int lw=120;
+		const int ldx=7;
 
-		const nl=lw/ldx;
-		const n66=nl*66/100;
-		const n33=nl*33/100;
+		const float nl=lw/ldx;
+		const float n66=nl*66/100;
+		const float n33=nl*33/100;
 
 		int n;
 		int col;
@@ -375,13 +375,13 @@ int BattleTopScore(){
 		if(n>n66){ col=1;
 			}else if(n>n33){ col=3;
 				}else{ col=2; }
-		for(i=0;i<n;i++) MMenu.addGP_Button(NULL,lx+i*ldx+rdx,ly,Win.GPID,col,col);
+		for(int i=0;i<n;i++) MMenu.addGP_Button(NULL,lx+i*ldx+rdx,ly,Win.GPID,col,col);
 
 		if(MDB+MTB) n=(BatDifResult+BattleResult)*nl/(MDB+MTB); else n=0;
 		if(n>n66){ col=1;
 			}else if(n>n33){ col=3;
 				}else{ col=2; }
-		for(i=0;i<n;i++) MMenu.addGP_Button(NULL,lx+i*ldx+rdx*2,ly,Win.GPID,col,col);
+		for(int i=0;i<n;i++) MMenu.addGP_Button(NULL,lx+i*ldx+rdx*2,ly,Win.GPID,col,col);
 
 	}else{
 		WinTitle=GetTextByID("INTF_TOPSCOR1");

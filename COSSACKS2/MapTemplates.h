@@ -11,7 +11,7 @@ class BaseMesh;
 #endif //DIALOGS_USER
 #endif //DIALOGS_API
 #include "smart_assert.h"
-#include <kHash.hpp>
+#include "..\3dlib\gMotor\kHash.hpp"
 #ifndef NEW
 #define NEW(t,s) (t*)malloc((s)*sizeof(t)) 
 #endif
@@ -205,8 +205,8 @@ public:
 		}while(max>1&&r0<40);
 	}
 };
-#include "DynArray.h"
-#include <StrHash.h>
+#include "..\ClassEngine\dynarray.h"
+#include "..\ClassEngine\StrHash.h"
 #define STATHINT(x,y)\
 {\
 	static const char* y=GetTextByID(#y);\

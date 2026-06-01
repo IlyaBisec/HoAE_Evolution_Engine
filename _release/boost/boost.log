@@ -1,0 +1,22 @@
+﻿  convenience.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  exception.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  operations_posix_windows.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  path_posix_windows.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  connection.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  named_slot_map.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  signal_base.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  slot.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  trackable.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  Создание кода...
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1573,5): warning MSB8012: TargetPath(D:\SrcRep\NEW ENGINE — копия — копия\_release\boost\boost.lib) не соответствует значению свойства выходного файла (D:\SrcRep\NEW ENGINE — копия — копия\lib_release\boostr.lib) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1575,5): warning MSB8012: TargetName(boost) не соответствует значению свойства выходного файла (boostr) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
+  boost.vcxproj -> D:\SrcRep\NEW ENGINE — копия — копия\_release\boost\boost.lib

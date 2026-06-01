@@ -1,7 +1,7 @@
 #include "stdheader.h"
 #define MaxMX 32
 #define MsizeX 32
-extern CurrentCursorGP;
+extern int CurrentCursorGP;
 extern int SCRSizeX;
 extern int SCRSizeY;
 extern int RSCRSizeX;
@@ -312,7 +312,7 @@ void RedrawOffScreenMouse(){
 			memset(MousDX,0,sizeof MousDX);
 			memset(MousDY,0,sizeof MousDY);
 			for(int i=0;i<16;i++)MouseNext[i]=i;
-			for(i=0;i<16;i++)MouseNext[i+16]=i+17;
+			for(int i=0;i<16;i++)MouseNext[i+16]=i+17;
 			MouseNext[31]=16;
 		};
 		Loaded=1;

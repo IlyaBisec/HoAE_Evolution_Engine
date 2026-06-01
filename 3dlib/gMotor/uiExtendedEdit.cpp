@@ -21,9 +21,9 @@ ExtendedEdit::ExtendedEdit()
 {
     AddChild( m_btnBrowse );
     AddChild( m_edPath );
-    m_btnBrowse.sigPressed.Connect( this, Browse );
-    sigTextChanged.Connect( this, Text2Box );
-    m_edPath.sigUnfocus.Connect( this, Box2Text );
+    m_btnBrowse.sigPressed.Connect( this, &ExtendedEdit::Browse );
+    sigTextChanged.Connect( this, &ExtendedEdit::Text2Box );
+    m_edPath.sigUnfocus.Connect( this, &ExtendedEdit::Box2Text );
     m_btnBrowse.SetText( "..." );
     SetDraggable( false );
 } // ExtendedEdit::ExtendedEdit

@@ -48,7 +48,7 @@ void CreateRESSEND(){
 	RSN_USER->CurLine=RSN_CurPlayerTo;
 	if(RSN_USER->CurLine>=RSN_USER->NLines)RSN_USER->CurLine=0;
 	RSN_RESID=RESSEND.addGP_ComboBoxDLX(NULL,X0+150,Y0+FDY+26,180,CBB_GPFILE,0,9,0,&WhiteFont,&YellowFont,NULL);
-	for(i=0;i<6;i++){
+	for(int i=0;i<6;i++){
 		RSN_RESID->AddLine(RDS[i].Name);
 	};
 	RSN_RESID->CurLine=RSN_CurResType;

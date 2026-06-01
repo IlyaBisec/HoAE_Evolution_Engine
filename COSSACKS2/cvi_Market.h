@@ -11,8 +11,7 @@ class cvi_Market
 public:
 	cvi_Market(void);
 	~cvi_Market(void);
-
-	bool init[6];
+	bool init[6] = { 0,0,0,0,0,0};
 	int EcResID[6];
 	int EcResIcn[6];
 	int ChertaIcn;

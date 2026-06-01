@@ -27,7 +27,7 @@ public:
 		REG_MEMBER(_float01,y2);
 		REG_MEMBER(_float01,z2);
 
-        REG_METHOD(fn_test);
+        REG_METHOD_EX(&LTest::fn_test, fn_test);
 	ENDSAVE;
 };
 LTest LTEST;

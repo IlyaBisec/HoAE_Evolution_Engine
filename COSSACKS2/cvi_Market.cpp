@@ -371,6 +371,7 @@ bool cvi_M_SellSelect::LeftClick(SimpleDialog* SD){
 //
 void cvi_M_BuySelect::SetFrameState(SimpleDialog* SD){
 	//SD->Visible=false;
+	//SD->DeepColor=true;
 	if(vMarket->mDialog){
 		int ResID=GetResID(SD->Name.pchar());
 		if(ResID>=0){

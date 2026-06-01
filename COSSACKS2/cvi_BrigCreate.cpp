@@ -145,7 +145,7 @@ void cvi_IS_BC_Create::SynchroAction(){
 				NSL[NI]=0;
 			}
 			Brigade* BR=CITY[NI].Brigs+bid;
-			for(i=0;i<BR->NMemb;i++){
+			for(int i=0;i<BR->NMemb;i++){
 				if(BR->Memb[i]!=0xFFFF){
 					OneObject* ob=Group[BR->Memb[i]];
 					if(ob){

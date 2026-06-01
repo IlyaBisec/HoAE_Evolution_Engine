@@ -10503,59 +10503,6 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
 			</File>
 		</Filter>
 		<Filter
-			Name="mesh"
-			Filter="">
-			<File
-				RelativePath=".\mesh\iPlaneTriangulator.cpp">
-				<FileConfiguration
-					Name="FastDebug|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						Optimization="2"
-						ImproveFloatingPointConsistency="FALSE"
-						FavorSizeOrSpeed="1"
-						OmitFramePointers="TRUE"
-						UsePrecompiledHeader="0"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="FastDebug CheckSync|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="3"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath=".\mesh\iPlaneTriangulator.h">
-			</File>
-			<File
-				RelativePath=".\mesh\iVector.h">
-			</File>
-			<File
-				RelativePath=".\mesh\MeshOperations.cpp">
-				<FileConfiguration
-					Name="FastDebug|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						Optimization="2"
-						FavorSizeOrSpeed="1"
-						OmitFramePointers="TRUE"
-						UsePrecompiledHeader="0"/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="FastDebug CheckSync|Win32">
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="3"/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath=".\mesh\MeshOperations.h">
-			</File>
-			<File
-				RelativePath=".\mesh\UniHash.h">
-			</File>
-		</Filter>
-		<Filter
 			Name="Camera"
 			Filter="">
 			<File

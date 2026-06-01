@@ -5,6 +5,7 @@
 /*    Date:    10-15-2003
 /*****************************************************************************/
 #include "stdafx.h"
+#include "kTemplates.hpp"
 #include "sg.h"
 #include "sgNodePool.h"
 #include "kHash.hpp"
@@ -825,7 +826,7 @@ void MediaManager::GetModelBounds(DWORD idModel, std::vector<AABoundBox> &Bounds
 				Bounds.push_back(bb);
 			}
 		}
-		It++;
+        It.operator++();
 	}
 } // MediaManager::GetModelBounds
 
@@ -1087,7 +1088,7 @@ void SaveToVRML( DWORD mID, const char* path )
                 fprintf( fp, "\t\t\t\t]}\n" );
 
                 int nP = bm.getNPri();
-                fprintf( fp, "\t\t\t\tcoordIndex [", pGeom->GetName() );
+                fprintf( fp, "\t\t\t\tcoordIndex [%s", pGeom->GetName() );
                 int cI = 0;
                 WORD* pIdx = bm.getIndices();
                 for (int i = 0; i < nP; i++)
@@ -1099,7 +1100,7 @@ void SaveToVRML( DWORD mID, const char* path )
                 }
                 fprintf( fp, "\t\t\t\t]\n" );
 
-                fprintf( fp, "\t\t\t\ttexCoordIndex [", pGeom->GetName() );
+                fprintf( fp, "\t\t\t\ttexCoordIndex [%s", pGeom->GetName() );
                 cI = 0;
                 for (int i = 0; i < nP; i++)
                 {
@@ -1180,7 +1181,7 @@ void MediaManager::SaveMeshes( const char* fileName , BaseMesh** bms , int numMe
 }
 #define __STDAPPLICATION__
 #include "..\..\ClassEngine\dynarray.h"
-#include "..\..\COSSACKS2\mesh\UniHash.h"
+#include "..\..\COSSACKS2\unichash.h"
 
 struct pos_vertex{
 	Vector3D pos;
@@ -1284,7 +1285,7 @@ void MediaManager::ExportToObj( DWORD modelID,const char* Name ){
 			obj0 = uvs.size()+1;
 			objidx++;
 		}		
-		it++;
+		it.operator++();
 	}
 	int sz = Tris.size();
 	int prevobj=-1;

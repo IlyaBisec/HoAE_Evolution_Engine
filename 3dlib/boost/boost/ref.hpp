@@ -38,7 +38,7 @@ public:
 
 #else
 
-    explicit reference_wrapper(T& t): t_(addressof(t)) {}
+    explicit reference_wrapper(T& t): t_(addressofff(t)) {}
 
 #endif
 

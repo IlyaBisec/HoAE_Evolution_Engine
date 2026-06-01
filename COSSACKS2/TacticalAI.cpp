@@ -409,7 +409,7 @@ void NationalAI::SetPolkRegistration()
 	MaxPolk=32;
 	//
 	byte MaxNActivPolk=0;
-	for(i=0;i<n&&MaxNActivPolk<MaxPolk;i++)
+	for(int i=0;i<n&&MaxNActivPolk<MaxPolk;i++)
 	{
 		if(MainForceWeight[MainPointsOrder[i]])
 		{
@@ -488,7 +488,7 @@ void NationalAI::SetBrigade2Polk()
 	qsort(TempSet.GetValues(),TempSet.GetAmount(),sizeof(Polk2Point*),&NationalAI::comPolk2Point);
 	//
 	n=TempSet.GetAmount();
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		AutoForm* AF = WiselyFormations.AF[TempSet[i]->AFIndex];
 		int EnFor=GetMPInfo(TempSet[i]->PointIndex)->EnemyForce;
@@ -503,7 +503,7 @@ void NationalAI::SetBrigade2Polk()
 			}
 		}
 	}
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		AutoForm* AF = WiselyFormations.AF[TempSet[i]->AFIndex];
 		int EnFor=GetMPInfo(TempSet[i]->PointIndex)->EnemyForce;
@@ -691,7 +691,7 @@ void TacticalAI::ResearchMap()
 	DIP_SimpleBuilding** Sela;
 	int NSel;
 	GetDipSimpleBuildings(NSel, Sela);
-	for(i=0;i<NSel;i++)
+	for(int i=0;i<NSel;i++)
 	{
 		DIP_SimpleBuilding* Selo = Sela[i];
 		if(Selo)
@@ -707,7 +707,7 @@ void TacticalAI::ResearchMap()
 	}
 	int n=GetNRoads();
 	if(EngSettings.DontUseRoads)n=0;
-	for(i=0;i<n;i++)
+	for(int i=0;i<n;i++)
 	{
 		if(GetNRoadsLink(i)>2)
 		{
@@ -1030,7 +1030,7 @@ void TacticalAI::SetMPWeight(word NI)
 				}
 			}
 		}
-		for(j=0;j<b;j++)
+		for(int j=0;j<b;j++)
 		{
 			MainPoint* MP=MainPoints[j];
 			NationMainPointInfo* MPI=ActiveAI[NI]->GetMPInfo(j);
@@ -1041,7 +1041,7 @@ void TacticalAI::SetMPWeight(word NI)
 			}
 		}
 		if(!ManagetPoints)
-		for(j=0;j<b;j++)
+		for(int j=0;j<b;j++)
 		{
 			MainPoint* MP=MainPoints[j];
 			NationMainPointInfo* MPI=ActiveAI[NI]->GetMPInfo(j);

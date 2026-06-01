@@ -631,7 +631,7 @@ void CameraSpline::CameraSplineSetConstantSpeed::SetConstantSpeed(const eConstan
 	cSplineTCB3 SPos;
 	cSplineTCBA SRot;
 	float AccumTime = 0.0f;
-	for(i = 0; i < Keys.Count(); i++) {
+	for(int i = 0; i < Keys.Count(); i++) {
 		const CameraSplineKey &k = *Keys[i];
 		if(i > 0) {
 			AccumTime += k.TimeShift;
@@ -648,14 +648,14 @@ void CameraSpline::CameraSplineSetConstantSpeed::SetConstantSpeed(const eConstan
 	switch(By) {
 		case CSB_POS:
 			SPos.SetConstantSpeed(GetDurationSec(), pSpline->Closed);
-			for(i = 1; i < Keys.Count(); i++) {
+			for(int i = 1; i < Keys.Count(); i++) {
 				Keys[i]->TimeShift = SPos.GetTime(i) - SPos.GetTime(i - 1);
 			}
 			Keys[0]->TimeShift = GetDurationSec() - SPos.GetTime(SPos.GetValuesCount() - 1);
 			break;
 		case CSB_ROT:
 			SRot.SetConstantSpeed(GetDurationSec(), pSpline->Closed);
-			for(i = 1; i < Keys.Count(); i++) {
+			for(int i = 1; i < Keys.Count(); i++) {
 				Keys[i]->TimeShift = SRot.GetTime(i) - SRot.GetTime(i - 1);
 			}
 			Keys[0]->TimeShift = GetDurationSec() - SRot.GetTime(SRot.GetValuesCount() - 1);

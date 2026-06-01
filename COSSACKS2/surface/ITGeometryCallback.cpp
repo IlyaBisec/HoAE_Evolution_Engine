@@ -1,6 +1,6 @@
 #include "stdheader.h"
 #include "mLodder.h"
-#include "Surface.h"
+#include "..\Surface\Surface.h"
 #include "ITerrain.h"
 #include "SurfSplit.h"
 
@@ -169,13 +169,13 @@ void Degrade(SurfMesh &Dst, const SurfMesh &Src, int LOD) {
 
 	Dst.Free();
 	int NVerts = Lodder.GetNVerts();
-	for(nVert = 0; nVert < NVerts; nVert++) {
+	for(int nVert = 0; nVert < NVerts; nVert++) {
 		int index = Lodder.GetOldVIndex(nVert);
 		Dst.VERTS.Add(Src.VERTS[index]);
 	}
 
 	int NTris = Lodder.GetNFaces();
-	for(nTri = 0; nTri < NTris; nTri++) {
+	for(int nTri = 0; nTri < NTris; nTri++) {
 		Lodder.GetFace(nTri, i0, i1, i2);
 		Dst.TRIS.Add(i0);
 		Dst.TRIS.Add(i1);

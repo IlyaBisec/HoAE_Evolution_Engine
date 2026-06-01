@@ -547,7 +547,8 @@ void SplitModel1(int id,int& dst_model,int& dst_anim,int NClusters,float RotCoef
 			}
 		}
 		if(bestIdx!=-1){
-			for(int i=0;i<nv;i++)if(v[i]==clust){
+			int i;
+			for(i=0;i<nv;i++)if(v[i]==clust){
 				v[i]=bestIdx;
 			}
 			Vector3D& ccMin=AABB_min[bestIdx];

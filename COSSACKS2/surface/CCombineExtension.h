@@ -2,7 +2,7 @@
 #define __CCOMBINEEXTENSION__
 
 #include "..\GameExtension.h"
-#include "Surface.h"
+#include "..\surface\Surface.h"
 
 namespace Surface {
 

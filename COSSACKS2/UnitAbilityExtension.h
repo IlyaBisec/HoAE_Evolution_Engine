@@ -15,6 +15,7 @@ public:
 	//virtual bool OnAttemptToMove(OneObject* Unit,int x,int y)				{UnMask(56);return true;}
 	virtual bool OnUnitDamage(OneObject* DamagedUnit,OneObject* Damager,int& Damage,byte AttType);
 	virtual bool OnUnitDie(OneObject* Dead,OneObject* Killer);
+
 	virtual void OnUnitBirth(OneObject* NewUnit);
 	virtual void OnUnitWasProduced(OneObject* Producer,OneObject* NewObject);
 

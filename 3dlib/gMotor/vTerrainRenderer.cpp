@@ -1052,11 +1052,11 @@ void TerrainRenderer::Expose( PropertyMap& pm )
     pm.start( "TerrainRenderer", this );
     pm.f( "ShowNormals",        m_bShowNormals        );
     pm.f( "NormalLen",            m_ShowNormalLen        );
-    pm.p( "TilesPerSide",        GetPerSidePow, SetPerSidePow );
+    pm.p( "TilesPerSide", &TerrainRenderer::GetPerSidePow, &TerrainRenderer::SetPerSidePow );
     pm.f( "OneTileSide",        m_OneTileSide        );
     pm.f( "SegmentsPerTile",     m_SegmentsPerTile    );
     pm.f( "GroundHeight",         m_GroundHeight         );
-    pm.m( "Reset",                Reset                );
+    pm.m( "Reset", &TerrainRenderer::Reset                );
 
     pm.f( "LODTreshold",        m_LODBias            );
     pm.f( "ForceLOD",             m_MinLOD            );
@@ -1064,10 +1064,10 @@ void TerrainRenderer::Expose( PropertyMap& pm )
     pm.f( "DrawGeomCache",        m_bDrawGeomCache    );
     pm.f( "DrawTexCache",        m_bDrawTexCache        );
     pm.f( "DrawAABB",            m_bDrawAABB            );
-    pm.p( "QuadsDrawn",            GetDrawQueueSize    );
+    pm.p( "QuadsDrawn", &TerrainRenderer::GetDrawQueueSize    );
     pm.f( "TexturesCreated",    m_TexturesCreated    );
     pm.f( "GeomCreated",        m_GeomCreated        );
-    pm.p( "TextureCacheSize",    GetTextureCacheSize, SetTextureCacheSize );
+    pm.p( "TextureCacheSize", &TerrainRenderer::GetTextureCacheSize, &TerrainRenderer::SetTextureCacheSize );
     pm.f( "LeftBand",           m_LeftBand              );
     pm.f( "TopBand",            m_TopBand               );
     pm.f( "RightBand",          m_RightBand             );

@@ -675,7 +675,7 @@ public:
 class RandomMapDescription:public BaseClass{
 	bool IsInit;
 public:
-	RandomMapDesc(){
+	RandomMapDescription(){
 		IsInit=false;
 	}
 	void Init(){

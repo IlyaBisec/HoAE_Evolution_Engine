@@ -195,7 +195,6 @@ public:
 	}ENDSAVE;
 
 	virtual void Process(HeroVariableStorage* HVS);
-	virtual void Fight(HeroVariableStorage* HVS);
 	void CreateDangerMap(OneObject* Hero/*, int ItrAmount*/);
 
 	int CollectArmy(int BaseArea, word* ArmyMap, int ArmyID);
@@ -330,7 +329,7 @@ public:
 
 class RPG_AI_Object: public BaseClass/*public pUnit, public ai_Hero*/ {
 public:
-	pUnit Unit;//ЭТО ГЕРОЙ, ЗАПОМНИ
+	pUnit Unit;
 	ai_Hero AI;
 
 	bool RPG;
@@ -361,7 +360,7 @@ public:
 	SAVE(RPG_AI_Object){
 		REG_PARENT(pUnitsList);
 		REG_AUTO(Unit);
-		//REG_AUTO(AI);
+		REG_AUTO(AI);
 		REG_AUTO(Cards);
 		REG_AUTO(Clothes);
 		REG_AUTO(Bottles);
@@ -385,8 +384,7 @@ public:
 
 	void BuySettlement(); // - покупка сел (move)
 
-	void Casting(ActiveUnitAbility* A);		// - применить карточку (move)
-	void BattleAI();    // - военный AI, отвечающий за принятие решений относительно объектов в непосредственной близости от героя
+	void Casting();		// - применить карточку (move)
 	void Creeping();	// - крипинг - атака нейтральных юнитов (move)
 	void Fighting();	// - вступаем в бой с противником или нанятым отрядом из села (move)
 	void Escaping();	// - отступаем или заманиваем противника (move)
@@ -395,12 +393,12 @@ public:
 	// - продажа: бутылки, предмета, карточки (move)
 
 	void Dressing();	// - одеть/снять пердмет ()
-	void Drinking(ActiveUnitAbility* A);	// - выпить бутылку ()
+	void Drinking();	// - выпить бутылку ()
 
 	void Reflexion();	// - включить/выключить ауру ()
 
-	void ActivateAbility(ActiveUnitAbility* A); // - включить бег или уникальные способности ()
-	void ActivateSkill(ActiveUnitAbility* A); // - переключить тип атаки ()
+	void ActivateAbility(); // - включить бег или уникальные способности ()
+	void ActivateSkill(); // - переключить тип атаки ()
 
 	// - подставка - возбутить нейтральных крипов, чтобы уйти от преследования (move)
 	// - поймать на крипинге - атаковать вражеского героя во время его крипинга (move)

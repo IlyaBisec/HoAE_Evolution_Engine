@@ -328,7 +328,7 @@ inline void cSplineTCB<Type>::SetConstantSpeed(const float TotalTime, const bool
 	}
 	m_Times[0] = 0.0f;
 	float AccumLength = 0.0f;
-	for(i = 1; i < m_Times.Count(); i++) {
+	for(int i = 1; i < m_Times.Count(); i++) {
 		AccumLength += Ls[i - 1];
 		m_Times[i] = AccumLength / TotalLength * TotalTime;
 	}

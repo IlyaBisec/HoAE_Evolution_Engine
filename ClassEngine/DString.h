@@ -1,7 +1,7 @@
 #if !defined(DIP_SERVER_DSTRING_DEFFF)
 #define DIP_SERVER_DSTRING_DEFFF
-#include <dynarray.h>
-#include <pool.h>
+#include "..\ClassEngine\dynarray.h"
+#include "..\ClassEngine\pool.h"
 
 class DString;
 class DIALOGS_API DString{

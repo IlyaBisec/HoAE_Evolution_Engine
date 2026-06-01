@@ -167,7 +167,7 @@ cSphere cSphere::FromPoints(const cVec2 *pPoints, const int nCount) {
 	cVec2 c((bbMin + bbMax) * 0.5f);
 
 	float MaxRadius2 = 0.0f;
-	for(i = 0; i < nCount; i++) {
+	for(int i = 0; i < nCount; i++) {
 		MaxRadius2 = cMath::Max(MaxRadius2, cVec2::DistanceSq(c, pPoints[i]));
 	}
 
@@ -189,7 +189,7 @@ cSphere cSphere::FromPoints(const cVec3 *pPoints, const int nCount) {
 	cVec3 c((bbMin + bbMax) * 0.5f);
 
 	float MaxRadius2 = 0.0f;
-	for(i = 0; i < nCount; i++) {
+	for(int i = 0; i < nCount; i++) {
 		MaxRadius2 = cMath::Max(MaxRadius2, cVec3::DistanceSq(c, pPoints[i]));
 	}
 

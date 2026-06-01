@@ -1,5 +1,4 @@
 #include "stdheader.h"
-#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "mgraph.h"
@@ -28,6 +27,7 @@
 #include "Towers.h"
 #include "Safety.h"
 #include "EinfoClass.h"
+#include "ddini.h"
 #undef MinCUnits
 #define MinCUnits 3
 //#define NOSTRATINF
@@ -160,7 +160,7 @@ void GlobalArmyInfo::ResearchArmyDistribution(byte NI){
 		}while(change);
 		for(int j=0;j<2;j++){
 			CellInfo* CINFO=CIN;
-			for(i=0;i<NCIN;i++){
+			for(int i=0;i<NCIN;i++){
 				if(CINFO->NUnits>MINCU){
 					word AID=CINFO->ArmyID;
 					if(AID!=0xFFFF){
@@ -209,7 +209,7 @@ void GlobalArmyInfo::ResearchArmyDistribution(byte NI){
 
 		NArmy=0;
 		int CurArmy=0;
-		for(i=0;i<NCIN;i++){
+		for(int i=0;i<NCIN;i++){
 			word ARID=CIN[i].ArmyID;
 			if(ARID>=8192){
 				if(NArmy>=MaxArmy){

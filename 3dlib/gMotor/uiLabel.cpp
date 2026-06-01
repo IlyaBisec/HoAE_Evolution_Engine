@@ -35,5 +35,5 @@ void Label::Render()
 void Label::Expose( PropertyMap& pm )
 {
     pm.start<Widget>( "Label", this );
-    pm.p( "Caption", GetCaption, SetCaption );
+    pm.p( "Caption", &Label::GetCaption, &Label::SetCaption );
 } // Label::Expose

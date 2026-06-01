@@ -1,4 +1,4 @@
-#include "StdAfx.h" #include "common.h" 
+#include "common.h"
 #include "PenShape.h"
 #include "Tablet.h"
 #include "UndoMaster.h"

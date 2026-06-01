@@ -24,7 +24,7 @@ IMPLEMENT_CLASS(ColorBox);
 ColorBox::ColorBox()
 {
     SetColorValue( 0xFFFFFFFF );
-    sigTextChanged.Connect( this, OnChangeColor );
+    sigTextChanged.Connect( this, &ColorBox::OnChangeColor );
 }
 
 void ColorBox::OnChangeColor()
@@ -69,5 +69,5 @@ void ColorBox::Render()
 void   ColorBox::Expose( PropertyMap& pm )
 {
     pm.start<EditBox>( "ColorWditBox", this );
-    pm.p( "ColorValue", GetColorValue, SetColorValue );
+    pm.p( "ColorValue", &ColorBox::GetColorValue, &ColorBox::SetColorValue );
 }

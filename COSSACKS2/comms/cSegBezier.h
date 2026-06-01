@@ -200,7 +200,7 @@ inline float cSegBezier<Type>::CalcLength(const float tFrom, const float tTo, co
 	p[0] = GetValue(tFrom);
 	float Length = 0.0f;
 	int index = 1;
-
+	float t;
 	for(float t = tFrom + dt; t <= tTo; t += dt) {
 		p[index] = GetValue(t);
 		Length += Type::Distance(p[0], p[1]);

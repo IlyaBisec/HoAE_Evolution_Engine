@@ -27,10 +27,10 @@ bool mai_getAverageUnit(byte NI, AdvCharacter& ADC, int& N){
 		ADC.MaxDamage[i]=0;
 		ADC.WeaponKind[i]=i;
 	}
-	for(i=0;i<16;i++){
+	for(int i=0;i<16;i++){
 		ADC.Protection[i]=0;
 	}
-	for(i=0;i<n;i++){
+	for(int i=0;i<n;i++){
 		OneObject* OB=Group[id[i]];
 		if(OB&&OB->LockType==0&&!(OB->Sdoxlo||OB->NewBuilding||OB->newMons->Peasant)){
 			N++;
@@ -42,7 +42,7 @@ bool mai_getAverageUnit(byte NI, AdvCharacter& ADC, int& N){
 					ADC.MaxDamage[adv->WeaponKind[j]]+=adv->MaxDamage[j]/GetAttSpped(OB,j);
 				}
 			}
-			for(j=0;j<16;j++){
+			for(int j=0;j<16;j++){
 				ADC.Protection[j]+=adv->Protection[j];
 			}
 		}        
@@ -74,7 +74,7 @@ bool mai_getAverageUnit(byte NI, mai_Unit& Unit){
 					Unit.A[adv->WeaponKind[j]]+=adv->MaxDamage[j]/GetAttSpped(OB,j);
 				}
 			}
-			for(j=0;j<16;j++){
+			for(int j=0;j<16;j++){
 				Unit.P[j]+=adv->Protection[j];
 			}
 		}        
@@ -88,7 +88,7 @@ bool mai_getAverageUnit(byte NI, mai_Unit& Unit){
 		for(int i=0;i<NAttTypes;i++){
 			Unit.A[i]/=Unit.N;
 		}
-		for(i=0;i<16;i++){				
+		for(int i=0;i<16;i++){				
 			Unit.P[i]/=Unit.N;
 		}
 	}		

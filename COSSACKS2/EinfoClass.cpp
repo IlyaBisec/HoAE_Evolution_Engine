@@ -1,5 +1,4 @@
 #include "stdheader.h"
-#include "ddini.h"
 #include "ResFile.h"
 #include "FastDraw.h"
 #include "mgraph.h"
@@ -26,6 +25,7 @@
 #include "ConstStr.h"
 #include "EinfoClass.h"
 #include <vector>
+#include "ddini.h"
 extern int PeaceTimeLeft;
 extern int SafeMLx;
 extern int SafeMSH;
@@ -47,7 +47,7 @@ void ResearchIslands();
 void GlobalEnemyInfo::Setup(){
 	for(int i=0;i<MAXPLAY;i++)if(EINF[i])return;
 
-	for(i=0;i<MAXPLAY;i++)if(NATIONS[i].ThereWasUnit||NtNUnits[i]){
+	for(int i=0;i<MAXPLAY;i++)if(NATIONS[i].ThereWasUnit||NtNUnits[i]){
 		if(!EINF[i]){
 			byte ms=NATIONS[i].NMask;
 			EnemyInfo* EIN=new EnemyInfo;
@@ -107,7 +107,7 @@ void GlobalEnemyInfo::Process(){
 	};
 	CHECKIT();
 	tt&=63;
-	for(i=0;i<MAXPLAY;i++)if(EINF[i]){
+	for(int i=0;i<MAXPLAY;i++)if(EINF[i]){
 		int dd=(i<<3);
 		if(dd+3==tt)EINF[i]->CreateListOfDangerObjects();
 		if(dd+6==tt)EINF[i]->RefreshSafeMap();
@@ -490,7 +490,7 @@ void EnemyInfo::CreateProtectionMap(){
 			};
 		};
 	};
-	for(i=0;i<MAXCIOFS;i++){
+	for(int i=0;i<MAXCIOFS;i++){
 		int N=0;
 		if(i>0)N+=ProtectionMap[i-1]&127;
 		if(i<MAXCIOFS-1)N+=ProtectionMap[i+1]&127;
@@ -579,7 +579,7 @@ void EnemyInfo::AddTow(OneObject* OB){
 	for(int i=0;i<NTows;i++){
 		if(TowsID[i]==OB->Index)return;
 	};
-	for(i=0;i<NTows;i++){
+	for(int i=0;i<NTows;i++){
 		if(TowsID[i]==0xFFFF){
 			TowsID[i]=OB->Index;
 			TowsSN[i]=OB->Serial;
@@ -1022,7 +1022,8 @@ void EnemyInfo::ResearchShipsGroups(){
 			int xx=HS->x;
 			int yy=HS->y;
 			HShipsGroup* SGR=SGRP;
-			for(int j=0;j<NSGRP;j++){
+			int j;
+			for(j=0;j<NSGRP;j++){
 				int xb=-1;
 				int yb=-1;
 				if(xx<SGR->xL)xb=SGR->xL;
@@ -1058,7 +1059,7 @@ void EnemyInfo::ResearchShipsGroups(){
 		};
 	};
 	HShipsGroup* SGR=SGRP;
-	for(i=0;i<NSGRP;i++){
+	for(int i=0;i<NSGRP;i++){
 		SGR->xs/=SGR->Ns;
 		SGR->ys/=SGR->Ns;
 		SGR->CTop=GetWTopology(SGR->xs>>4,SGR->ys>>4,1);

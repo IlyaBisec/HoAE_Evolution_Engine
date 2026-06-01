@@ -146,7 +146,8 @@ void AddGPiece(int x,int y,word Type){
 				NInGPMAP[cell]=0;
 			}else GPMAP[cell]=(OneGPiece*)realloc(GPMAP[cell],(N+1)*sizeof(OneGPiece));
 			OneGPiece* GP0=GPMAP[cell];
-			for(int i=N-1;i>=0;i--){
+			int i;
+			for(i=N-1;i>=0;i--){
 				OneGPiece* GP1=GP0+i;
 				int yy=GP1->y;
 				//if(yy>yyy0||(yy==yyy0&&GP1->x>xxx0)){
@@ -392,7 +393,8 @@ void UnpackFromBuf(byte* Pix,byte* ptr){
 			ofs+=L;
 			FreeMode=0;
 		}else{
-			for(int i=0;i<L;i++){
+			int i;
+			for(i=0;i<L;i++){
 				byte B=ptr[i];
 				if(ofs<1024)Pix[ofs]=(B&15)<<4;
 				if(ofs<1023)Pix[ofs+1]=B&0xF0;
@@ -656,7 +658,7 @@ void PerformLightFiltering(byte* Data){
 	for(int i=0;i<65536;i++)L+=Data[i];
 	L>>=16;
 	if(!L)return;
-	for(i=0;i<65536;i++){
+	for(int i=0;i<65536;i++){
 		int v=Data[i];
 		v=v*112/L;
 		if(v>255)v=255;
@@ -1098,7 +1100,7 @@ void InitFlowTex(){
 		for(int iy=0;iy<64;iy++)
 			Temp[ix+(iy<<6)]=rand()%3;
 	//byte TempTex[16*16]
-	for(ix=0;ix<FLLX/4;ix++)
+	for(int ix=0;ix<FLLX/4;ix++)
 		for(int iy=0;iy<FLLX/4;iy++){
 			byte c;
 			int z1=Temp[ix+(iy<<6)];
@@ -1644,7 +1646,8 @@ void GetRivDir(int x,int y,int* dx,int* dy){
 };
 void DrawFlowInMicroCell(int x,int y,int cx,int cy,int z1,int z2,int z3,int z4){
 	if(z1<0&&z2<0&&z3<0&&z4<0)return;
-	int dx,int dy;
+	int dx;
+	int dy;
 	GetRivDir(cx,cy,&dx,&dy);
 	int t=GetTickCount();
 	if(dx||dy){
@@ -1836,7 +1839,7 @@ void WaterStreams::Process(){
 		//PP->x+=(dt*vx)/400;
 		//PP->y+=(dt*vy)/400;
 	};
-	for(i=0;i<0;i++)BornPiece();
+	for(int i=0;i<0;i++)BornPiece();
 };
 void WaterStreams::BornPiece(){
 	int rx=(mapx<<5)+((int(rand())*RealLx)>>15);
@@ -1854,7 +1857,7 @@ void WaterStreams::Draw(){
 	int x0=mapx<<5;
 	int y0=mapy<<4;
 	for(int i=0;i<NPieces;i++)Pena[i]->Drawn=0;
-	for(i=0;i<NPieces;i++){
+	for(int i=0;i<NPieces;i++){
 		int x=Pena[i]->x-x0;
 		int y=Pena[i]->y-y0;
 		int type=Pena[i]->Type;
@@ -1883,7 +1886,7 @@ void WaterStreams::Draw(){
 			Pena[i]->Drawn=1;
 		};
 	};
-	for(i=0;i<NPieces;i++){
+	for(int i=0;i<NPieces;i++){
 		if(!Pena[i]->Drawn){
 			free(Pena[i]);
 			if(i<NPieces-1){

@@ -1237,15 +1237,11 @@ class mod_Thorn: public UnitModificator{
 public:
 	//int LifeType;
 	int SourceType;
-	bool RangeThorn;
-	bool AnyDistanceThorn;
 	vOperand Operand;
 	SAVE(mod_Thorn){
 		REG_PARENT(UnitModificator);
 		//REG_ENUM(_index,LifeType,DamagerLifeType);
 		REG_ENUM(_index,SourceType,DamagerSourceType);
-		REG_MEMBER(_bool,RangeThorn);
-		REG_MEMBER(_bool,AnyDistanceThorn);
 		REG_AUTO(Operand);
 	}ENDSAVE;
 	mod_Thorn(){
@@ -1253,7 +1249,7 @@ public:
 	}
 	virtual bool GetClassPresentationMask(_str& dest,void* DataPtr,void* ExtraPtr,const char* options,DWORD Flags){
 		if(InAllEditors){
-			dest="Thorn (%$SourceType$%, Range:%$RangeThorn$%, AnyDistance:%$AnyDistanceThorn$%, %$Operand$%)";
+			dest="Thorn (%$SourceType$% %$Operand$%)";
 			//char txt[]=" %$Operand$%)";
 			//if(Operand.sign<2 && Operand.num==0){
 			//	txt[0]=')';

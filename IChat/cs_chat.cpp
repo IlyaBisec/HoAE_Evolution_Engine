@@ -100,7 +100,7 @@ void PrivateMessage(CHAT chat, const char * user, const char * message, int type
 			int c=CSYS.CurChannel;
 			for(int i=0;i<CSYS.CCH[c].NPlayers;i++)
 				if((!strcmp(CSYS.CCH[c].Players[i].Nick,user))&&CSYS.CCH[c].Players[i].Muted)mute=1;
-			for(i=0;i<CSYS.NAbsPlayers;i++)
+			for(int i=0;i<CSYS.NAbsPlayers;i++)
 				if((!strcmp(CSYS.AbsPlayers[i].Nick,user))&&CSYS.AbsPlayers[i].Muted)mute=1;
 			if(!mute){
 				CC->Private.Add((char*)user,(char*)message);
@@ -133,7 +133,7 @@ void ChannelMessage(CHAT chat, const char * channel, const char * user, const ch
 				bool mute=0;
 				for(int i=0;i<CSYS.CCH[q].NPlayers;i++)
 					if((!strcmp(CSYS.CCH[q].Players[i].Nick,user))&&CSYS.CCH[q].Players[i].Muted)mute=1;
-				for(i=0;i<CSYS.NAbsPlayers;i++)
+				for(int i=0;i<CSYS.NAbsPlayers;i++)
 					if((!strcmp(CSYS.AbsPlayers[i].Nick,user))&&CSYS.AbsPlayers[i].Muted)mute=1;
 				if(!mute)CC->Common[q].Add((char*)user,(char*)message);
 			};

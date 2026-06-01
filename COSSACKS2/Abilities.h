@@ -34,7 +34,6 @@ public:
 	bool NeedMatherial;
 	int Matherial;
 	//int CastingRadius;
-	void Init();
 	
 	SAVE(suAI_Ability){
 		REG_AUTO(UA);
@@ -42,16 +41,14 @@ public:
 		REG_MEMBER(_bool,TargetFriendly);
 		REG_MEMBER(_bool,TargetEnemy);
 		REG_MEMBER(_bool,TargetHero);
-		REG_MEMBER(_bool,TargetDead);
+		REG_MEMBER(_bool, TargetDead);
 		REG_MEMBER(_bool,Finite);
 		REG_MEMBER(_bool,NeedMatherial);
 		REG_ENUM(_index,Matherial,Matherials);
 		REG_MEMBER(_int,CastingDelay);
 		//REG_MEMBER(_int,CastingRadius);
 	}ENDSAVE;
-	suAI_Ability(){
-		Init(); //TBH 29.07.2023 suAI Init
-	}
+
 	virtual bool GetClassPresentationMask(_str& dest,void* DataPtr,void* ExtraPtr,const char* options,DWORD Flags){
 		dest="AI_Ability %$UA$%, MinTargetAmount=%$MinTargetAmount$%";
 		return true;

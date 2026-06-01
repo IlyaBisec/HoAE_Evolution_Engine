@@ -989,7 +989,8 @@ void CreateTOOL_PARAM_SPRITE(byte ID){
 				OC=CURSG->Sections[csect]->ObjectsList[i]->Get();
 				if(OC){
 					sprx=-1;
-					for(int q=0;q<CURSG->Objects.GetAmount();q++)if(CURSG->Objects[q]==OC)sprx=q;
+					int q;
+					for(q=0;q<CURSG->Objects.GetAmount();q++)if(CURSG->Objects[q]==OC)sprx=q;
 					if(q==-1){
 						sprx=0;
 						OC=NULL;
@@ -1057,7 +1058,8 @@ void CreateTOOL_PARAM_SPRITE(byte ID){
 						OCX=CURSG->Sections[csect]->ObjectsList[j]->Get();
 						if(OC){
 							sprx=-1;
-							for(int q=0;q<CURSG->Objects.GetAmount();q++)if(CURSG->Objects[q]==OCX)spr1x=q;
+							int q;
+							for(q=0;q<CURSG->Objects.GetAmount();q++)if(CURSG->Objects[q]==OCX)spr1x=q;
 							if(q==-1){
 								spr1x=0;
 								OCX=NULL;
@@ -1436,7 +1438,7 @@ void CreateTOOL_PARAM_TEXTURE(){
 	TP_GPB->CurLine=CurrTexSet;
 	char* IDX=GetTextByID("EDTX_S0");
 	
-	for(i=0;i<10;i++){
+	for(int i=0;i<10;i++){
 		sprintf(ccx,IDX,i+1);
 		TP_GPB->AddLine(ccx);
 	};
@@ -2638,13 +2640,13 @@ void SaveTerrainBitmap(char* Name){
 		ofs3+=3;
 	};
 	DATA24+=65536*3;
-	for(i=0;i<768;i++){
+	for(int i=0;i<768;i++){
 		if((i&3)==1)DATA24[0]=0xFF;
 		else DATA24[0]=0;
 		DATA24++;
 	};
 	ofs3=0;
-	for(i=0;i<65536;i++){
+	for(int i=0;i<65536;i++){
 		byte v=TerrHI[i];
 		DATA24[ofs3]=v;
 		DATA24[ofs3+1]=v;
@@ -2652,13 +2654,13 @@ void SaveTerrainBitmap(char* Name){
 		ofs3+=3;
 	};
 	DATA24+=65536*3;
-	for(i=0;i<768;i++){
+	for(int i=0;i<768;i++){
 		if((i&3)==1)DATA24[0]=0xFF;
 		else DATA24[0]=0;
 		DATA24++;
 	};
 	ofs3=0;
-	for(i=0;i<65536;i++){
+	for(int i=0;i<65536;i++){
 		byte v=SoftArea[i];
 		if(v){
 			DATA24[ofs3]=0;
@@ -2672,7 +2674,7 @@ void SaveTerrainBitmap(char* Name){
 		ofs3+=3;
 	};
 	DATA24+=65536*3;
-	for(i=0;i<768;i++){
+	for(int i=0;i<768;i++){
 		if((i&3)==1)DATA24[0]=0xFF;
 		else DATA24[0]=0;
 		DATA24++;
@@ -2703,13 +2705,13 @@ bool LoadTerrainBitmap(char* Name){
 		};
 		DATA24+=65536*3+256*3;
 		ofs3=0;
-		for(i=0;i<65536;i++){
+		for(int i=0;i<65536;i++){
 			TerrHI[i]=DATA24[ofs3+1];
 			ofs3+=3;
 		};
 		DATA24+=65536*3+256*3;
 		ofs3=0;
-		for(i=0;i<65536;i++){
+		for(int i=0;i<65536;i++){
 			if(DATA24[ofs3+2]>=128)SoftArea[i]=0xFF;
 			else SoftArea[i]=0;
 			ofs3+=3;
@@ -2984,7 +2986,7 @@ void ProcessTerrainEditor(){
 		};
 		SaveToBMP24("Data\\01.bmp",256,256,DATA24);
 		ofs3=0;
-		for(i=0;i<65536;i++){
+		for(int i=0;i<65536;i++){
 			byte v=TerrHI[i];
 			DATA24[ofs3]=v;
 			DATA24[ofs3+1]=v;
@@ -2993,7 +2995,7 @@ void ProcessTerrainEditor(){
 		};
 		SaveToBMP24("Data\\02.bmp",256,256,DATA24);
 		ofs3=0;
-		for(i=0;i<65536;i++){
+		for(int i=0;i<65536;i++){
 			byte v=SoftArea[i];
 			if(v){
 				DATA24[ofs3]=0;

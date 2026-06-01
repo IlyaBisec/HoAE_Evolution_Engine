@@ -1,4 +1,4 @@
-#include "StdAfx.h" #include "common.h" 
+#include "common.h"
 
 float ConePen::GetWeight(float r){
     return r<1 ? 1-r : 0 ;

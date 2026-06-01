@@ -1,0 +1,5 @@
+﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+  RPG.cpp
+Moderator.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
+     Создается библиотека ..\..\..\data\Plugins\VAI.lib и объект ..\..\..\data\Plugins\VAI.exp
+  VAI.vcxproj -> D:\SrcRep\data\Plugins\VAI.dll

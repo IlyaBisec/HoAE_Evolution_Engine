@@ -2493,7 +2493,7 @@ AutoForm* AutoForm::GetFriendInFront()
 			an=16-i;
 			rez=FriendAng[i].Sectors[0].AF;
 		}
-	for(i=0;i<3;i++)
+	for(int i=0;i<3;i++)
 		if(FriendAng[i].Dang&&i<an)
 		{
 			an=i;
@@ -3430,7 +3430,7 @@ int AutoForm::GetMeleeForceDiff()
 		{
 			b1=BSelf->Memb[i];
 		}
-		for(i=3;i<MainTarget->BSelf->NMemb&&b2==0xFFFF;i++)
+		for(int i=3;i<MainTarget->BSelf->NMemb&&b2==0xFFFF;i++)
 		{
 			b2=MainTarget->BSelf->Memb[i];
 		}
@@ -4911,7 +4911,7 @@ BrigadeAI::~BrigadeAI()
 		}
 	AllFormGarbage.Clear();
 
-	for(i=0;i<MaxReg;i++)
+	for(int i=0;i<MaxReg;i++)
 		if(Reg[i])
 		{
 			delete (Reg[i]);
@@ -4935,7 +4935,7 @@ int BrigadeAI::AddAutoBrigade(Brigade* B)
 	for(int i=0;i<MaxAF;i++)
 		if((AF[i])&&AF[i]->BSelf==B)
 			return AF[i]->Index;
-	for(i=0;i<(MaxAF+1);i++)
+	for(int i=0;i<(MaxAF+1);i++)
 	{
 		if(AF[i]==NULL||i==MaxAF)
 		{
@@ -5005,7 +5005,8 @@ int BrigadeAI::AddAutoCannon(OneObject *Ob)
 	int rez=-1;
 	if(Ob->newMons->Usage==PushkaID||Ob->newMons->Usage==LinkorID)
 	{
-		for(int i=0;i<MaxAF;i++)
+		int i;
+		for(i=0;i<MaxAF;i++)
 			if((AF[i])&&AF[i]->Type==3)
 			{
 				if(AF[i]->C==Ob)
@@ -5406,14 +5407,15 @@ int BrigadeAI::BirthCallback(int NewbornIndex)
 	if(NewbornIndex!=0xFFFF)
 	{
 		OneObject* OB=Group[NewbornIndex];
-		if(OB&&(OB->newMons->Usage==PushkaID||OB->newMons->Usage==TowerID||OB->newMons->Usage==LinkorID))
+/*
+		if (OB && (OB->newMons->Usage == PushkaID || OB->newMons->Usage == TowerID || OB->newMons->Usage == LinkorID))
 		{
 			//byte N=OB->NNUM;
 			AllForm.Add(new Atom(OB));
 			AllForm.End()->Serial=++LastSerial;
 			AllForm.End()->AtomIndex=AllForm.GetAmount()-1;
 			//AllFormAmo[N]++;
-		}
+		}*/
 	}
 	return 0;
 }
@@ -5623,7 +5625,7 @@ Rule::Rule()
 		Situations[i].FunctionID1=-1;
 		Situations[i].FunctionID2=-1;
 	}
-	for(i=0;i<16;i++)
+	for(int i=0;i<16;i++)
 	{
 		Actions[i].ActionID=-1;
 	}
@@ -6369,7 +6371,7 @@ void Regiment::FillTable()
 			if(AF->RegimentIndex==Index)
 				AddFillEn(AF);
 	}
-	for(i=0;i<MaxP;i++)
+	for(int i=0;i<MaxP;i++)
 	{
 		int md=99999999;
 		int ind=-1;
@@ -6381,7 +6383,7 @@ void Regiment::FillTable()
 			}
 		TNearestE[i][ind]=true;
 	}
-	for(i=0;i<MaxE;i++)
+	for(int i=0;i<MaxE;i++)
 	{
 		int md=99999999;
 		int ind=-1;
@@ -6607,7 +6609,7 @@ void Regiment::FillDestPoints()
 			}
 		}
 
-		for(i=0;i<MaxP;i++)
+		for(int i=0;i<MaxP;i++)
 		{
 			if(P[i])
 			{
@@ -6619,7 +6621,7 @@ void Regiment::FillDestPoints()
 		static word* T2=DestIndex;
 		memset(DestIndex,0,MaxP<<2);
 		FindShotWayPoint(MaxP,FromPoints,DestPoints,DestIndex);
-		for(i=0;i<MaxP;i++)
+		for(int i=0;i<MaxP;i++)
 		{
 			if(P[i])
 			{

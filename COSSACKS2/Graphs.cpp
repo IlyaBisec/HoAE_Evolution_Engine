@@ -52,7 +52,7 @@ void Graph::Add(int t,int v,byte c){
 		GRP[i].AddTV(t,v);
 		return;
 	};
-	for(i=0;i<16;i++)if(GRP[i].Color==-1){
+	for(int i=0;i<16;i++)if(GRP[i].Color==-1){
 		GRP[i].Color=c;
 		GRP[i].AddTV(t,v);
 		return;

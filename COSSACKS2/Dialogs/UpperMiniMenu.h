@@ -281,7 +281,7 @@ void CreateMiniMenu(){
 	//	TB->UserParam=32;
 	//	y0+=24;
 	//};
-	for(i=0;i<NInf;i++){
+	for(int i=0;i<NInf;i++){
 		GP_TextButton* TB=MINIMENU.addGP_TextButtonLimited(NULL,0,y0,MMITM[i],BordGP,74+(i%3),77+(i%3),MaxL,&WhiteFont,&YellowFont);
 		TB->OnUserClick=&MiniChoose;
 		TB->UserParam=MMID[i];
@@ -314,7 +314,7 @@ void REPLAY(){
 	};
 	ShowLoading();
 	PrepareGameMedia(0,0,1);
-	for(j=0;j<7;j++){
+	for(int j=0;j<7;j++){
 		CITY[j].LandType=LAND[j];
 		CITY[j].Difficulty=DIFF[j];
 		CITY[j].ResOnMap=RONM[j];

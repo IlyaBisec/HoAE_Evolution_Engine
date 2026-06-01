@@ -1,4 +1,3 @@
-#include "ddini.h"
 #include <Windows.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -6,6 +5,7 @@
 #pragma pack(1)
 #include "ResFile.h"
 #include "gFile.h"
+#include "ddini.h"
 void NLine(GFILE*);
 void ErrM(char*);
 void normstr(char* str);
@@ -91,7 +91,7 @@ bool GameConstants::CheckDef(char* Name){
 	for(int i=0;i<nnames;i++){
 		if(!strcmp(names[i],Name))return true;
 	};
-	for(i=0;i<nsnames;i++){
+	for(int i=0;i<nsnames;i++){
 		if(!strcmp(Snames[i],Name))return true;
 	};
 	return false;
@@ -108,7 +108,7 @@ char* GameConstants::GetString(char* Name){
 GameConstants::~GameConstants(){
 	for(int i=0;i<nnames;i++)free(names[i]);
 	nnames=0;
-	for(i=0;i<nsnames;i++){
+	for(int i=0;i<nsnames;i++){
 		free(Snames[i]);
 		free(Strings[i]);
 	};

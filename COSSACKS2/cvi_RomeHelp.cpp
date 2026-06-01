@@ -8,7 +8,8 @@
 void rhSetHelpDesk(ClassArray<cvi_MsgDialog>* HA, TabDesk* TD){
 	if(TD&&TD->DSS.GetAmount()>0&&TD->DSS[0]->DSS.GetAmount()>0){
 		int iy=TD->DSS[0]->Gety();
-		for(int i=0;i<HA->GetAmount();i++){
+		int i;
+		for(i=0;i<HA->GetAmount();i++){
 			cvi_MsgDialog* MD=(*HA)[i];
 			if(MD){
 				DialogsDesk* ddD;
@@ -45,7 +46,8 @@ void rhSetHelpDesk(ClassArray<cvi_MsgDialog>* HA, TabDesk* TD){
 				int jy=dd->Gety();
 				//iy+=jy;
 				bool Del=false;
-				for(int j=0;j<MD->Phrases.GetAmount();j++){
+				int j;
+				for(j=0;j<MD->Phrases.GetAmount();j++){
 					cvi_Phrase* P=MD->Phrases[j];
 					if(P){
 						int id=j;						

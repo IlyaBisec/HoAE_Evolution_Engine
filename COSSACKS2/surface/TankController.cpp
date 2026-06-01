@@ -1,11 +1,11 @@
 #include "stdheader.h"
-#include "TankController.h"
+#include "..\Surface\TankController.h"
 #include "vCamera.h"
 #include "..\ua_Ability.h"
 #include "..\ComplexShooter.h"
 #include "..\CurrentMapOptions.h"
 #include "..\GameInterface.h"
-#include "CollidingCamera.h"
+#include "..\Surface\CollidingCamera.h"
 #include "..\Camera\Navigator.h"
 
 Surface::TankController g_TankController;

@@ -81,11 +81,9 @@ int ConvertNationToSkirmish(int NatID){
 }
 bool GetHero(OneObject* OB);
 DLLEXPORT int GetRND(int Max);
-extern byte vmDifficulty[8];
 char* GetBestAI(int NI,char* mapname){
 	bool IsIsl=false;
-	//int diff = CITY[NI].NewDiffKostil+1;
-    int diff = GSets.CGame.PL_INFO[NI].MapStyle+1;
+	int diff = CITY[NI].Difficulty+1;
 	for(int i=0;i<7;i++)if(i!=NI&&CITY[i].MyIsland!=0xFF){
 		if(CITY[i].MyIsland!=CITY[NI].MyIsland)IsIsl=true;
 	}
@@ -126,7 +124,7 @@ char* GetBestAI(int NI,char* mapname){
 					yes&=AR->AIDifficulty==diff;
 				}
 				if(AR->AIGameType != 0){
-					yes&=AR->AIGameType==(GSets.RoomParams.RTS_mode+1);
+					yes&=AR->AIGameType==(GSets.RoomParams.RTS_mode + 1);
 				}
 				if(!AR->MapName.equal("")){
 					yes&=AR->MapName.equal(mapname);

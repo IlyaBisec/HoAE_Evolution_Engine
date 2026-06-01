@@ -207,7 +207,8 @@ void SaveNewSurface(ResFile F) {
     short *sbuf = new short[NVerts];
     float *fbuf = new float[NVerts];
     byte *bbuf = new byte[NVerts];
-    for(int i = 0; i < NVerts; i++, V++) {
+	int i;
+    for(i = 0; i < NVerts; i++, V++) {
         fbuf[i] = V->x;
     }
     RBlockWrite(F, fbuf, NVerts * sizeof(fbuf[0]));
@@ -358,7 +359,8 @@ void LoadNewSurface2(ResFile F) {
 	// x:
 	SurfVertex *V = &g_UniversalMap.VERTS[0];
 	RBlockRead(F, sbuf, NVerts * sizeof(sbuf[0]));
-	for(int i = 0; i < NVerts; i++, V++) {
+	int i;
+	for(i = 0; i < NVerts; i++, V++) {
 		V->x = sbuf[i];
         V->Rotation = 0;
 	}
@@ -482,25 +484,26 @@ void LoadNewSurface3(ResFile F) {
 	// x:
 	SurfVertex *V = &g_UniversalMap.VERTS[0];
 	RBlockRead(F, fbuf, NVerts * sizeof(fbuf[0]));
-	for(int i = 0; i < NVerts; i++, V++) {
+	int i;
+	for(i = 0; i < NVerts; i++, V++) {
 		V->x = fbuf[i];
 	}
 	// y:
 	V = &g_UniversalMap.VERTS[0];
 	RBlockRead(F, fbuf, NVerts * sizeof(fbuf[0]));
-	for(i = 0; i < NVerts; i++, V++) {
+	for( i = 0; i < NVerts; i++, V++) {
 		V->y = fbuf[i];
 	}
 	// z:
 	V = &g_UniversalMap.VERTS[0];
 	RBlockRead(F, fbuf, NVerts * sizeof(fbuf[0]));
-	for(i = 0; i < NVerts; i++, V++) {
+	for( i = 0; i < NVerts; i++, V++) {
 		V->z = fbuf[i];
 	}
 	// Color(b):
 	V = &g_UniversalMap.VERTS[0];
 	RBlockRead(F, bbuf, NVerts);
-	for(i = 0; i < NVerts; i++, V++) {
+	for( i = 0; i < NVerts; i++, V++) {
 		((BYTE*)(&V->Color))[0] = bbuf[i];
 	}
 	// Color(g):
@@ -578,7 +581,8 @@ void LoadNewSurface4(ResFile F) {
     // x:
     SurfVertex *V = &g_UniversalMap.VERTS[0];
     RBlockRead(F, fbuf, NVerts * sizeof(fbuf[0]));
-    for(int i = 0; i < NVerts; i++, V++) {
+	int i;
+    for(i = 0; i < NVerts; i++, V++) {
         V->x = fbuf[i];
     }
     // y:
@@ -684,7 +688,8 @@ void LoadNewSurface5(ResFile F) {
 		// x:
 		SurfVertex *V = &g_UniversalMap.VERTS[0];
 		RBlockRead(F, fbuf, NVerts * sizeof(fbuf[0]));
-		for(int i = 0; i < NVerts; i++, V++) {
+		int i;
+		for(i = 0; i < NVerts; i++, V++) {
 			V->x = fbuf[i];
 		}
 		// y:
@@ -808,7 +813,8 @@ void LoadNewSurface6(ResFile F,bool Conv) {
 		// x:
 		SurfVertex *V = &g_UniversalMap.VERTS[0];
 		RBlockRead(F, fbuf, NVerts * sizeof(fbuf[0]));
-		for(int i = 0; i < NVerts; i++, V++) {
+		int i;
+		for(i = 0; i < NVerts; i++, V++) {
 			V->x = fbuf[i];
 		}
 		// y:
@@ -2535,10 +2541,10 @@ namespace Surface {
 			bool FacturesInUse[SPLITMESH_MAXNFACTURES];
 			ZeroMemory(FacturesInUse, sizeof(FacturesInUse));
 			N = g_UniversalMap.VERTS.Count();
-			for(i = 0; i < N; i++) FacturesInUse[g_UniversalMap.VERTS[i].nFacture] = true;
+			for(int i = 0; i < N; i++) FacturesInUse[g_UniversalMap.VERTS[i].nFacture] = true;
 			maxNFacture = GetNFactures() - 1;
 			strcat(Str, "\r\nNumbers of factures in use: ");
-			for(i = 0; i <= maxNFacture; i++)
+			for(int i = 0; i <= maxNFacture; i++)
 				if(FacturesInUse[i] == true)
 				{
 					sprintf(Buffer, " %d", i);

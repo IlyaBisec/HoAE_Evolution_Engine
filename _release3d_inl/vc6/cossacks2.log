@@ -1,0 +1,360 @@
+﻿  3DBars.cpp
+  3DGraph.cpp
+  3DSurf.cpp
+  ActiveZone.cpp
+  AlexVisualSystem.cpp
+  AntiBug.cpp
+  Brigade.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Brigade.cpp(6701,49): warning C4804: <: небезопасное использование типа "bool" в операции
+D:\SrcRep\0000NEO\COSSACKS2\Brigade.cpp(6940,14): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+  BrigadeAI.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  Build.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  Cdirsnd.cpp
+  ClassEditorsRegistration.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\ClassEditorsRegistration.cpp(545,27): warning C4129: E: неизвестная escape-последовательность
+  Danger.cpp
+  DeviceCD.cpp
+  Dialogs.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  DialogsEditor.cpp
+  CQuest.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(244,19): warning C4091: extern : пропускается слева от "CHero", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(247,27): warning C4091: extern : пропускается слева от "CSectStatData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(288,24): warning C4091: extern : пропускается слева от "CStatusDRV", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(289,20): warning C4091: extern : пропускается слева от "CError", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(290,26): warning C4091: extern : пропускается слева от "CStorageData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(291,27): warning C4091: extern : пропускается слева от "CSectStatData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(292,27): warning C4091: extern : пропускается слева от "CSectDynmData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(293,23): warning C4091: extern : пропускается слева от "CSectData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(294,25): warning C4091: extern : пропускается слева от "CSectorMenu", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(295,27): warning C4091: extern : пропускается слева от "CHeroPersDesk", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(296,19): warning C4091: extern : пропускается слева от "CUnit", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(297,21): warning C4091: extern : пропускается слева от "CSquard", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(298,19): warning C4091: extern : пропускается слева от "CHero", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(299,26): warning C4091: extern : пропускается слева от "CResource_BM", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(300,26): warning C4091: extern : пропускается слева от "CResource_LV", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(301,25): warning C4091: extern : пропускается слева от "CStorage_LV", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(302,26): warning C4091: extern : пропускается слева от "SFOR_PLAYER", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(303,21): warning C4091: extern : пропускается слева от "CPlayer", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(304,24): warning C4091: extern : пропускается слева от "CPicesPict", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(305,25): warning C4091: extern : пропускается слева от "CScenarioLV", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(306,25): warning C4091: extern : пропускается слева от "CROOTDRIVER", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(307,28): warning C4091: extern : пропускается слева от "CDiplomacyData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(308,23): warning C4091: extern : пропускается слева от "CDiplMenu", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(309,30): warning C4091: extern : пропускается слева от "CDiplMenuButtons", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(310,31): warning C4091: extern : пропускается слева от "CDiplMenuButOnMap", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(311,32): warning C4091: extern : пропускается слева от "CDiplMenuCountries", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(312,27): warning C4091: extern : пропускается слева от "CDiplMenuInfo", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(313,30): warning C4091: extern : пропускается слева от "CDiplInfoButtons", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(314,31): warning C4091: extern : пропускается слева от "CDiplInfoMessages", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(315,30): warning C4091: extern : пропускается слева от "CDiplInfoMessBox", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(316,28): warning C4091: extern : пропускается слева от "CDiplInfoPanel", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(317,23): warning C4091: extern : пропускается слева от "CBriefing", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(318,26): warning C4091: extern : пропускается слева от "CMISSIONINIT", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(319,30): warning C4091: extern : пропускается слева от "CSAVE_MIS_STRUCT", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(320,25): warning C4091: extern : пропускается слева от "CResourceBM", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(321,29): warning C4091: extern : пропускается слева от "CEndMissionData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(322,26): warning C4091: extern : пропускается слева от "CBigMapQuest", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(323,26): warning C4091: extern : пропускается слева от "CResPanel_BM", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(324,25): warning C4091: extern : пропускается слева от "CMarketDesk", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(325,25): warning C4091: extern : пропускается слева от "CBigMapHelp", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(327,32): warning C4091: extern : пропускается слева от "CPlayerSAVE_STRUCT", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\ClasDeclaration.h(328,25): warning C4091: extern : пропускается слева от "CPlayerSAVE", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\BigMapQuest\CQuest.h(17,21): warning C4091: extern : пропускается слева от "CPlayer", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\BigMapQuest\CQuest.h(18,23): warning C4091: extern : пропускается слева от "CSectData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\BigMapQuest\CQuest.h(19,23): warning C4091: extern : пропускается слева от "CDiplMenu", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\BigMapQuest\CQuest.h(20,28): warning C4091: extern : пропускается слева от "CDiplomacyData", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs\BigMapQuest\CQuest.h(21,25): warning C4091: extern : пропускается слева от "CROOTDRIVER", когда ни одна переменная не объявлена
+  MissionScript.cpp
+  DrawForms.cpp
+  Economy.cpp
+  Factures3D.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(345,40): warning C4129: F: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(730,23): warning C4129: F: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(732,33): warning C4129: F: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(733,28): warning C4129: F: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(762,28): warning C4129: F: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(4070,32): warning C4806: &: небезопасная операция: значение типа "bool", приведенное к типу "int", не может равняться данной константе
+  Создание кода...
+D:\SrcRep\0000NEO\COSSACKS2\Factures3D.cpp(2451): warning C4715: SearchNearestRoadToPoint: значение возвращается не при всех путях выполнения
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs.cpp(5236): warning C4715: BikVideo_OnDraw: значение возвращается не при всех путях выполнения
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs.cpp(8808): warning C4700: использована неинициализированная локальная переменная "i"
+D:\SrcRep\0000NEO\COSSACKS2\Dialogs.cpp(8818): warning C4700: использована неинициализированная локальная переменная "i"
+D:\SrcRep\0000NEO\COSSACKS2\AlexVisualSystem.cpp(428): warning C4715: AlexResource::GetPropValueSize: значение возвращается не при всех путях выполнения
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(620): warning C4731: PrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(640): warning C4731: PrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(652): warning C4731: PrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(718): warning C4731: AbsolutePrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(671): warning C4731: PrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(738): warning C4731: AbsolutePrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(676): warning C4731: PrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(750): warning C4731: AbsolutePrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(769): warning C4731: AbsolutePrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+D:\SrcRep\0000NEO\COSSACKS2\3DGraph.cpp(774): warning C4731: AbsolutePrecPrepareToRender: регистр указателя фрейма "ebp" изменен встроенным кодом на языке ассемблера
+  Компиляция...
+  FastMemPool.cpp
+  Fastdraw.cpp
+  FilePreview.cpp
+  GVClass.cpp
+  GlobalActions.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  Graphs.cpp
+  GroupPurpose.cpp
+D:\SrcRep\0000NEO\COSSACKS2\GroupPurpose.cpp(688,18): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\GroupPurpose.cpp(689,18): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\GroupPurpose.cpp(689,24): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+  Groups.cpp
+  Hint.cpp
+  IconTool.cpp
+  Lines.cpp
+  LoadSave.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\LoadSave.cpp(552,25): warning C4091: extern : пропускается слева от "CPlayerSAVE", когда ни одна переменная не объявлена
+  MapGenerator.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  MapSprites.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  Masks.cpp
+  Megapolis.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Megapolis.cpp(1918,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\Megapolis.cpp(1946,14): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+  Mine.cpp
+  MousZone.cpp
+  Mouse_X.cpp
+  Multi.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  Создание кода...
+D:\SrcRep\0000NEO\COSSACKS2\MapGenerator.cpp(629): warning C4715: GetGradPoint: значение возвращается не при всех путях выполнения
+D:\SrcRep\0000NEO\COSSACKS2\MapGenerator.cpp(644): warning C4715: GetIsoPoint: значение возвращается не при всех путях выполнения
+D:\SrcRep\0000NEO\COSSACKS2\LoadSave.cpp(4029): warning C4715: ReadResFile: значение возвращается не при всех путях выполнения
+  Компиляция...
+  Nation.cpp
+  Nature.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Nature.cpp(275,18): warning C4473: "sprintf": передано недостаточно аргументов для строки формата
+D:\SrcRep\0000NEO\COSSACKS2\Nature.cpp(275,18): message : заполнители и их параметры ожидают переменное число аргументов в количестве 1, но было предоставлено 0
+D:\SrcRep\0000NEO\COSSACKS2\Nature.cpp(275,18): message : отсутствующий вариативный аргумент "1" требуется для строки форматирования "%s"
+  NewAI.cpp
+  NewILogin.cpp
+  NewUpgrade.cpp
+D:\SrcRep\0000NEO\COSSACKS2\NewUpgrade.cpp(330,16): warning C4477: "sprintf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "2" имеет тип "int"
+D:\SrcRep\0000NEO\COSSACKS2\NewUpgrade.cpp(343,15): warning C4477: "sprintf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "2" имеет тип "int"
+  OnWater.cpp
+  PiroObjects.cpp
+  RealWater.cpp
+  Recorder.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Recorder.cpp(179,12): warning C4805: !=: небезопасное смешение типа "int" и типа "bool" в операции
+  Report.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Report.cpp(48,20): warning C4129: :
+  River.cpp
+  SaveNewMap.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\SaveNewMap.cpp(2241,33): warning C4129: S: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\SaveNewMap.cpp(2301,19): warning C4129: S: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\SaveNewMap.cpp(2351,33): warning C4129: S: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\SaveNewMap.cpp(2359,21): warning C4129: S: неизвестная escape-последовательность
+D:\SrcRep\0000NEO\COSSACKS2\SaveNewMap.cpp(3249,14): warning C4553: "==": результат выражения не используется; вы хотели использовать "="?
+  Save_XML_ToMap.cpp
+  Select.cpp
+  ShipTrace.cpp
+  SpraySystem.cpp
+  SquareObject.cpp
+  UnSyncro.cpp
+  UnitsInterface.cpp
+  Upgrade.cpp
+  Создание кода...
+D:\SrcRep\0000NEO\COSSACKS2\Recorder.cpp(296): warning C4715: RecordGame::Extract: значение возвращается не при всех путях выполнения
+D:\SrcRep\0000NEO\COSSACKS2\Nation.cpp(555): warning C4715: OneObject::GetLiveState: значение возвращается не при всех путях выполнения
+  Компиляция...
+  VUI_Info.cpp
+  VictoryConditions.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  Waves.cpp
+  Weapon.cpp
+  ZBuffer.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  ai_scripts.cpp
+D:\SrcRep\0000NEO\COSSACKS2\ai_scripts.cpp(957,14): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ai_scripts.cpp(1096,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ai_scripts.cpp(1159,17): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ai_scripts.cpp(1165,18): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ai_scripts.cpp(1193,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+  bmptool.cpp
+  cvi_Academy.cpp
+  cvi_BrigCreate.cpp
+  cvi_MainMenu.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\cvi_MainMenu.cpp(81,30): warning C4805: !=: небезопасное смешение типа "bool" и типа "int" в операции
+D:\SrcRep\0000NEO\COSSACKS2\cvi_MainMenu.cpp(188,33): warning C4805: !=: небезопасное смешение типа "bool" и типа "int" в операции
+  cvi_Market.cpp
+  cvi_Oboz.cpp
+  fog.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  FPathFinder.cpp
+  mapa.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  PlayMP3.cpp
+  path.cpp
+D:\SrcRep\0000NEO\COSSACKS2\path.cpp(836,1): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  stRecog.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  testserver.cpp
+  vui_GlobalHotKey.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\vui_GlobalHotKey.cpp(42,38): warning C4805: ==: небезопасное смешение типа "bool" и типа "int" в операции
+  Создание кода...
+D:\SrcRep\0000NEO\COSSACKS2\path.cpp(402): warning C4715: MotionField::CheckVLine: значение возвращается не при всех путях выполнения
+  Компиляция...
+  vui_IS.cpp
+D:\SrcRep\0000NEO\COSSACKS2\vui_IS.cpp(501,52): warning C4805: !=: небезопасное смешение типа "bool" и типа "byte" в операции
+  vui_InterfSynchro.cpp
+  Создание кода...
+  3DGroundModels.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+  3DMapEd.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  3DRandMap.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  3DWalls.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+  Abilities.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+  ActiveScenary.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+  ActiveScenary2.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\ActiveScenary2.cpp(44,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ActiveScenary2.cpp(54,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ActiveScenary2.cpp(59,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+D:\SrcRep\0000NEO\COSSACKS2\ActiveScenary2.cpp(64,15): warning C4838: Преобразование из "int" в "word" требует сужающего преобразования.
+  FSMclass.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Ai_ex\FSMclass.cpp(1,10): fatal  error C1083: Не удается открыть файл включение: stdheader.h: No such file or directory,
+  FSMmsg.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Ai_ex\FSMmsg.cpp(1,10): fatal  error C1083: Не удается открыть файл включение: stdheader.h: No such file or directory,
+  FSMstate.cpp
+D:\SrcRep\0000NEO\COSSACKS2\Ai_ex\FSMstate.cpp(1,10): fatal  error C1083: Не удается открыть файл включение: stdheader.h: No such file or directory,
+  ai_router.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\Surface\MCubes.h(64,2): warning C4091: typedef : пропускается слева от "tagDWORD", когда ни одна переменная не объявлена
+D:\SrcRep\0000NEO\COSSACKS2\ai_router.cpp(58,60): warning C4477: "sprintf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "6" имеет тип "_str"
+  Alarm.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+  AlertOnMiniMap.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+  AllEditors.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\COSSACKS2\BE_Functions.h(2189,28): warning C4091: extern : пропускается слева от "cvs_BrigPanel", когда ни одна переменная не объявлена
+  AllTools.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования

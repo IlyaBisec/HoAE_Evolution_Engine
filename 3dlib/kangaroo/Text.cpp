@@ -1,4 +1,4 @@
-#include "StdAfx.h" #include "common.h" 
+#include "common.h"
 
 char GlobalTextCommand[256]="";
 char GlobalTextMouseOverCommand[256]="";

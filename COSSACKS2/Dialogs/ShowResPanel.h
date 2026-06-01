@@ -123,7 +123,7 @@ void ShowRMap(){
 #endif
 	int MON[8];	
 	GetCorrectMoney(GSets.CGame.cgi_NatRefTBL[MyNation],MON);
-	for(i=0;i<6;i++){
+	for(int i=0;i<6;i++){
 		char gg[100];
 		sprintf(gg,"%d",MON[i]);
 		int x;

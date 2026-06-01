@@ -1,0 +1,348 @@
+﻿  stdafx.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+  blocksort.cpp
+  bzlib.cpp
+D:\SrcRep\0000NEO\3dlib\gMotor\bz2\bzlib.cpp(1439,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\bz2\bzlib.cpp(1440,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\bz2\bzlib.cpp(1445,9): warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _setmode. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\bz2\bzlib.cpp(1447,14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\bz2\bzlib.cpp(1453,12): warning C4996: 'fdopen': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _fdopen. See online help for details.
+  compress.cpp
+  crctable.cpp
+  decompress.cpp
+  huffman.cpp
+  randtable.cpp
+  FCompressor.cpp
+D:\SrcRep\0000NEO\3dlib\gMotor\FStream.hpp(90,10): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\FStream.hpp(91,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\FStream.hpp(112,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\FStream.hpp(114,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  FG18G15.cpp
+D:\SrcRep\0000NEO\3dlib\gMotor\FBaseStream.h(93,10): warning C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\FBaseStream.h(94,19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\SrcRep\0000NEO\3dlib\gMotor\FBaseStream.h(150,20): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  FGANationMMX.cpp
+  FLZDecoder.cpp
+  kXMLGrammar.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+  uiModelEditor.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+  vSkin.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+  Создание кода...
+  FG16RealTime.cpp
+  FLzoDecompress.cpp
+  FUclDecompress.cpp
+  kAssert.cpp
+  kBmptool.cpp
+  kCache.cpp
+  kColorValue.cpp
+  kContext.cpp
+  kDirIterator.cpp
+  kFileMapping.cpp
+  kFilePath.cpp
+  kHistory.cpp
+  kIO.cpp
+  kIOHelpers.cpp
+  kLog.cpp
+  kMemorySpy.cpp
+  kObjectFactory.cpp
+  kPoolAllocator.cpp
+  kPropertyMap.cpp
+  kResfile.cpp
+  Создание кода...
+  Компиляция...
+  kResource.cpp
+  kResourceManager.cpp
+  kScriptManager.cpp
+  kStatistics.cpp
+  kString.cpp
+  kStrUtil.cpp
+  kSystemDialogs.cpp
+  kThread.cpp
+  kTypeTraits.cpp
+  kUtilities.cpp
+  kUuid.cpp
+  kXMLParser.cpp
+  mAlgo.cpp
+  mFilter.cpp
+  mFloatCurve.cpp
+  mGeom3D.cpp
+  mHeightmap.cpp
+  mIntersect.cpp
+  mLine.cpp
+  mLodder.cpp
+  Создание кода...
+  Компиляция...
+  mMath2D.cpp
+  mMonteCarlo.cpp
+  mNoise.cpp
+  mOctree.cpp
+  mPlane.cpp
+  mQuatCurve.cpp
+  mQuaternion.cpp
+  mRandom.cpp
+  mSegmentSet.cpp
+  mShapes.cpp
+  mSkin.cpp
+  mSkinSSE.cpp
+  mSpatial.cpp
+  mSphere.cpp
+  mSplines.cpp
+  mTransform.cpp
+  mTriangle.cpp
+  mUtil.cpp
+  mVector.cpp
+  rsRenderPool.cpp
+  Создание кода...
+  Компиляция...
+  rsRenderSystem.cpp
+  rsSettings.cpp
+  rsVertex.cpp
+  sgAnimation.cpp
+  sgAnimationBlock.cpp
+  sgAttachedEffect.cpp
+  sgConst.cpp
+  sgController.cpp
+  sgCursor.cpp
+  sgDummy.cpp
+  sgFog.cpp
+  sgG17.cpp
+  sgG18.cpp
+  sgG2D.cpp
+  sgGeometry.cpp
+  sgGizmo.cpp
+  sgGN16.cpp
+  sgGP2.cpp
+  sgGQuad.cpp
+  sgGU15.cpp
+  Создание кода...
+  Компиляция...
+  sgGU16.cpp
+  sgLensFlare.cpp
+  sgLight.cpp
+  sgModel.cpp
+  sgMorphedGeometry.cpp
+  sgNode.cpp
+  sgNodePool.cpp
+  sgPRSAnimation.cpp
+  sgReflection.cpp
+  sgRoot.cpp
+  sgShader.cpp
+  sgSprite.cpp
+  sgSpriteManager.cpp
+  sgStatistics.cpp
+  sgSurfaceCache.cpp
+  sgTexture.cpp
+  sgTextureMatrix.cpp
+  sgTransform.cpp
+  sgTransformNode.cpp
+  sgUVAnimation.cpp
+  Создание кода...
+  Компиляция...
+  uiAlgoDebugger.cpp
+  uiButton.cpp
+  uiCameraTrack.cpp
+  uiCheckBox.cpp
+  uiColorPicker.cpp
+  uiComboBox.cpp
+  uiControl.cpp
+  uiEditBox.cpp
+  uiEffectEditor.cpp
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(379,19): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(379,22): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(379,27): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(379,34): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(380,19): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(380,24): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(380,31): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+D:\SrcRep\0000NEO\3dlib\gMotor\uiEffectEditor.cpp(380,36): warning C4838: Преобразование из "int" в "float" требует сужающего преобразования.
+  uiExtendedEdit.cpp
+  uiFloatEditBox.cpp
+  uiFrameWindow.cpp
+  uiIntEditBox.cpp
+  uiKangaroo.cpp
+  uiLabel.cpp
+  uiListBox.cpp
+  uiMainFrame.cpp
+  uiManipulator.cpp
+  uiMayaController.cpp
+  uiModelView.cpp
+  Создание кода...
+  Компиляция...
+  uiNodeTree.cpp
+  uiNoisePanel.cpp
+  uiObjectInspector.cpp
+  uiPalette.cpp
+  uiPhysicsEditor.cpp
+  uiPicture.cpp
+  uiProgress.cpp
+  uiPropEditors.cpp
+  uiRampEdit.cpp
+  uiRatchet.cpp
+  uiRenderFarm.cpp
+  uiResourceBrowser.cpp
+  uiRTSController.cpp
+  uiSceneEditor.cpp
+  uiScrollBox.cpp
+  uiSlider.cpp
+  uiSystemExplorer.cpp
+  uiTrackEdit.cpp
+  uiTransformTools.cpp
+  uiWeightEdit.cpp
+  Создание кода...
+  Компиляция...
+  uiWidget.cpp
+  uiWidgetEditor.cpp
+  uiWindow.cpp
+  vBone.cpp
+  vCamera.cpp
+  vCollider.cpp
+  vField.cpp
+  vFontManager.cpp
+  vImpostorCache.cpp
+  vMediaManager.cpp
+D:\SrcRep\0000NEO\3dlib\gMotor\vMediaManager.cpp(1091,68): warning C4474: "fprintf" : для строки формата передано слишком много аргументов
+D:\SrcRep\0000NEO\3dlib\gMotor\vMediaManager.cpp(1091,68): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+D:\SrcRep\0000NEO\3dlib\gMotor\vMediaManager.cpp(1103,71): warning C4474: "fprintf" : для строки формата передано слишком много аргументов
+D:\SrcRep\0000NEO\3dlib\gMotor\vMediaManager.cpp(1103,71): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
+D:\SrcRep\0000NEO\COSSACKS2\unichash.h(444): warning C5037: "uni_hash<Class,KeyClass,TableSize,PoolSectionSize>::del": внешнее определение члена шаблона класса не может иметь аргументы по умолчанию
+  vMesh.cpp
+  vModelInstance.cpp
+  vShadowManager.cpp
+  vSkinCache.cpp
+  vSkyRenderer.cpp
+  vStaticTerrain.cpp
+  vTreesRenderer.cpp
+  vWater.cpp
+  Создание кода...
+  lzo1.c
+  lzo1a.c
+  lzo1a_99.c
+  lzo1b_1.c
+  lzo1b_2.c
+  lzo1b_3.c
+  lzo1b_4.c
+  lzo1b_5.c
+  lzo1b_6.c
+  lzo1b_7.c
+  lzo1b_8.c
+  lzo1b_9.c
+  lzo1b_99.c
+  lzo1b_9x.c
+  lzo1b_cc.c
+  lzo1b_d1.c
+  lzo1b_d2.c
+  lzo1b_rr.c
+  lzo1b_xx.c
+  lzo1c_1.c
+  Создание кода...
+  Компиляция...
+  lzo1c_2.c
+  lzo1c_3.c
+  lzo1c_4.c
+  lzo1c_5.c
+  lzo1c_6.c
+  lzo1c_7.c
+  lzo1c_8.c
+  lzo1c_9.c
+  lzo1c_99.c
+  lzo1c_9x.c
+  lzo1c_cc.c
+  lzo1c_d1.c
+  lzo1c_d2.c
+  lzo1c_rr.c
+  lzo1c_xx.c
+  lzo1f_1.c
+  lzo1f_9x.c
+  lzo1f_d1.c
+  lzo1f_d2.c
+  lzo1x_1.c
+  Создание кода...
+  Компиляция...
+  lzo1x_1k.c
+  lzo1x_1l.c
+  lzo1x_1o.c
+  lzo1x_9x.c
+  lzo1x_d1.c
+  lzo1x_d2.c
+  lzo1x_d3.c
+  lzo1x_o.c
+  lzo1y_1.c
+  lzo1y_9x.c
+  lzo1y_d1.c
+  lzo1y_d2.c
+  lzo1y_d3.c
+  lzo1y_o.c
+  lzo1z_9x.c
+  lzo1z_d1.c
+  lzo1z_d2.c
+  lzo1z_d3.c
+  lzo1_99.c
+  lzo2a_9x.c
+  Создание кода...
+  Компиляция...
+  lzo2a_d1.c
+  lzo2a_d2.c
+  lzo_crc.c
+  lzo_init.c
+  lzo_ptr.c
+  lzo_str.c
+  lzo_util.c
+  Создание кода...
+  sgEffect.cpp
+  sgNodeMaker.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+  vTerrainRenderer.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\0000NEO\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1573,5): warning MSB8012: TargetPath(D:\SrcRep\0000NEO\lib_release\gMotor.lib) не соответствует значению свойства выходного файла (D:\SrcRep\0000NEO\lib_release\gMotorR.lib) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1575,5): warning MSB8012: TargetName(gMotor) не соответствует значению свойства выходного файла (gMotorR) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
+  gMotor.vcxproj -> D:\SrcRep\0000NEO\lib_release\gMotor.lib

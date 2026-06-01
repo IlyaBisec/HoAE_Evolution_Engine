@@ -1,7 +1,7 @@
 #include "stdheader.h"
 #include "LoadSave.h"
 #include "Extensions.h"
-#include "Surface\surface.h"
+#include "Surface\Surface.h"
 #include "RoadsAndFactures.h"
 #include "IResourceManager.h"
 #include "CurrentMapOptions.h"
@@ -342,7 +342,7 @@ ClonesArray<RoadDescription> RoadTypes;
 bool ProcessRoadsEd(ClassEditor* CE,BaseClass* BC,int Options);
 void RegFactEditor(){
 	REG_CLASS(RoadDescription);
-	AddStdEditor("Factures",&FacturesList,"Surface\\FacturesList.xml",
+	AddStdEditor("Factures",&FacturesList,"\FacturesList.xml",
 		RCE_RIGHT_POSITION|RCE_SHOW_GAME_BACKGROUND|
 		RCE_ALLOW_GAME_PROCESSING|RCE_AUTOSAVE|
 		RCE_EXITONESCAPE|RCE_HIDEHEADER,NULL,NULL,'F');
@@ -696,7 +696,7 @@ void Ground3D::ClearFactureRound(int x,int y,int r,int dr){
 void Ground3D::Setup(){
 	//loading textures
 	for(int i=0;i<40;i++)LoadTexture(i+1,i,0);
-	for(i=9;i<19;i++)GTex[i].Usage=1;
+	for(int i=9;i<19;i++)GTex[i].Usage=1;
 	GTex[34].Usage=1;
 	GTex[35].Usage=1;
 	NGTex=40;
@@ -1152,6 +1152,7 @@ void DelLightHashItem(int V){
 }
 void SaveLightHash(ResFile F){
 	int N=0;
+	int i;
 	for(int i=0;i<LightHash.numElem();i++){
 		LHashItem* L=&LightHash.elem(i);
 		if(L->H>-10000)N++;
@@ -1574,7 +1575,7 @@ void SetNewFactureInRound(int x,int y,int r,int dr,int Facture,int Weight,bool U
 	int MaxDirtyX=0;
 	int MaxDirtyY=0;
 
-	for(iy=VY0;iy<=VY1;iy++){
+	for(int iy=VY0;iy<=VY1;iy++){
 		for(int ix=VX0;ix<=VX1;ix++){
 			int ofs=ix+iy*VertInLine;
 			if(GetMostTextureEx(ofs,CTexID)==CTexID||!UseCentralTexture){
@@ -1981,7 +1982,7 @@ void RoadsSystem::DrawVisibleRoads(){
 					float Upos=0;
 					float Upos0;
 					N=(N/step)*step;
-					for(int i=0,int p=0;i<N;i+=step,p++){
+					for(int i=0,p=0;i<N;i+=step,p++){
 
 						int p6=p*6;
 						int ii2=p*2;
@@ -2565,7 +2566,7 @@ void AttractRoad(int idx,int x,int y){
 				};
 			};
 		};
-		for(i=1;i<NP-1;i++){
+		for(int i=1;i<NP-1;i++){
 			float X=OR->XY[i+i  ];
 			float Y=OR->XY[i+i+1];
 			float Xp=OR->XY[i+i-2];
@@ -2577,7 +2578,7 @@ void AttractRoad(int idx,int x,int y){
 				OR->XY[i+i+1]=(Yn+Yp)/2.0;
 			};
 		};
-		for(i=0;i<NP;i++){
+		for(int i=0;i<NP;i++){
 			int X=OR->XY[i+i  ];
 			int Y=OR->XY[i+i+1];
 			int H=GetTotalHeight(X,Y);
@@ -2606,7 +2607,7 @@ void SaveRoadData(ResFile SB){
 	};
 	RBlockWrite(SB,&sz,4);
 	RBlockWrite(SB,&N,4);
-	for(i=0;i<N;i++){
+	for(int i=0;i<N;i++){
 		RBlockWrite(SB,&ROADSSYS.Roads[i],sizeof ROADSSYS.Roads[i]);
 		RBlockWrite(SB,ROADSSYS.Roads[i].XY,ROADSSYS.Roads[i].Np*8);
 	};
@@ -3040,7 +3041,8 @@ bool OneNetWayPointToPoint::FillWay(int StartK, int EndK, OneNetKnot* Net)
 		}
 
 	}
-	for(int i=0;i<(Pi-2);i++)
+	int i;
+	for(i=0;i<(Pi-2);i++)
 	{
 		P[i].dir=GetDir(P[i+2].x-P[i].x,P[i+2].y-P[i].y);
 	}
@@ -3635,7 +3637,7 @@ public:
 						};
 						RMinDA=char(RMinDA);
 						LMinDA=char(LMinDA);
-						for(j=0;j<NL;j++)if(s==0 || RoadTypes[QS[j].RType]->AdditionalLayer.Get()){							
+						for(int j=0;j<NL;j++)if(s==0 || RoadTypes[QS[j].RType]->AdditionalLayer.Get()){
 							//int W1=ROADSSYS.RDesc->Roads[QS[j].RType].RWidth;
 							int W1=RoadTypes[QS[j].RType]->RoadWidth;
 							//int W2=ROADSSYS.RDesc->Roads[QS[p].RType].RWidth;
@@ -3755,7 +3757,7 @@ void RoadsNet::FillWayPointToPoint()
 	WayPointToPoint=(OneNetWayPointToPoint**)malloc(MaxWayPoints<<2);
 	memset(WayPointToPoint,0,MaxWayPoints<<2);
 	if(NKnots>1)
-	for(i=0;i<NKnots;i++)
+	for(int i=0;i<NKnots;i++)
 	{
 		OneNetKnot* NK=&(Net[i]);
 		if(NK&&(!NK->Hidden))

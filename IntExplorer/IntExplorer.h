@@ -348,7 +348,7 @@ public:
 	short mtext_dx,mtext_dy,mtext_align;
 	//----------------------END-BLOCK-------------------------//
 	//void Open(char* ref);
-	ParseTheWholeText();
+	int ParseTheWholeText();
 	void DownloadRefs();
 	OneSicWindow(sicExplorer* EXPL);
 	void Process();

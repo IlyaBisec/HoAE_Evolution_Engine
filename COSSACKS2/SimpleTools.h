@@ -1,11 +1,11 @@
-__inline int lrintf (float flt){
+/*__inline int lrintf(float flt) {
 	int intgr;
 	_asm{
 		fld flt
 		fistp intgr
 	};
 	return intgr;
-}
+}*/
 __inline DWORD V4D2DW(Vector4D& v){
 	int temp;
 	int temp1;

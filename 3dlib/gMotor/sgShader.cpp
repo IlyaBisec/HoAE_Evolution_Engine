@@ -109,7 +109,7 @@ void Shader::Update()
 void Shader::Expose( PropertyMap& pm )
 {
     pm.start<Parent>( "Shader", this );
-    pm.p( "Script", GetScriptFile, SetScriptFile, "#shaderscript" );
+    pm.p( "Script", &Shader::GetScriptFile, &Shader::SetScriptFile, "#shaderscript" );
 } // Shader::Expose
 
 void Shader::SetScriptFile( const char* file )

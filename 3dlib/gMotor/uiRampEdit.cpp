@@ -21,7 +21,7 @@ ColorRampEdit::ColorRampEdit() : m_SelectedKey(-1), m_bDragKey(false)
     SetClippedToExt( false );
     m_Extents.h = 50.0f;
     SetLockHeight();
-    sigTextChanged.Connect( this, UpdateFromText );
+    sigTextChanged.Connect( this, &ColorRampEdit::UpdateFromText );
 }
 
 void ColorRampEdit::UpdateFromText()
@@ -191,7 +191,7 @@ AlphaRampEdit::AlphaRampEdit() : m_SelectedKey(-1), m_bDragKey(false)
     SetClippedToExt( false );
     m_Extents.h = 50.0f;
     SetLockHeight();
-    sigTextChanged.Connect( this, UpdateFromText );
+    sigTextChanged.Connect( this, &AlphaRampEdit::UpdateFromText );
 }
 
 void AlphaRampEdit::UpdateFromText()

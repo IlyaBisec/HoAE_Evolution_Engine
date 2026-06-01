@@ -520,8 +520,8 @@ extern word LVIS[MaxP+160];
 int GetLAngle(int dx,int dy,int Angle);
 int GetRAngle(int dx,int dy,int Angle);
 const int ndrr[9]={7,6,5,0,0,4,1,2,3};
-const nidrx[8]={0,1,1,1,0,-1,-1,-1};
-const nidry[8]={-1,-1,0,1,1,1,0,-1};
+const int nidrx[8]={0,1,1,1,0,-1,-1,-1};
+const int nidry[8]={-1,-1,0,1,1,1,0,-1};
 
 extern MotionField MFIELDS[NMFIELDS];//0-Land,1-Water
 
@@ -650,7 +650,7 @@ bool FindBestPositionOLD(OneObject* OB,int* xd,int* yd,int R0){
 				bdist=dstn;
 			};
 		};
-		for(i=0;i<=LL;i++)if(!MFI->CheckRound(xxx+i-Otstup,yyy+LL-Otstup,Lx)){
+		for(int i=0;i<=LL;i++)if(!MFI->CheckRound(xxx+i-Otstup,yyy+LL-Otstup,Lx)){
 			bx1=xxx+i;
 			by1=yyy+LL;
 			dstn=Norma(bx1-x,by1-y);
@@ -660,7 +660,7 @@ bool FindBestPositionOLD(OneObject* OB,int* xd,int* yd,int R0){
 				bdist=dstn;
 			};
 		};
-		for(i=0;i<LL-1;i++)if(!MFI->CheckRound(xxx-Otstup,yyy+i-Otstup,Lx)){
+		for(int i=0;i<LL-1;i++)if(!MFI->CheckRound(xxx-Otstup,yyy+i-Otstup,Lx)){
 			bx1=xxx;
 			by1=yyy+i;
 			dstn=Norma(bx1-x,by1-y);
@@ -670,7 +670,7 @@ bool FindBestPositionOLD(OneObject* OB,int* xd,int* yd,int R0){
 				bdist=dstn;
 			};
 		};
-		for(i=0;i<LL-1;i++)if(!MFI->CheckRound(xxx+LL-Otstup,yyy+i-Otstup,Lx)){
+		for(int i=0;i<LL-1;i++)if(!MFI->CheckRound(xxx+LL-Otstup,yyy+i-Otstup,Lx)){
 			bx1=xxx+LL;
 			by1=yyy+i;
 			dstn=Norma(bx1-x,by1-y);

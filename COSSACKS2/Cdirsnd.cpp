@@ -563,7 +563,7 @@ void CDirSound::ProcessSoundSystem(){
 			}
 		}
 	}
-	for(i=0;i<256;i++){
+	for(int i=0;i<256;i++){
 		int fr=SoundCtgFreq[i]/11;
 		if(fr>maxfr)maxfr=fr;
 	};

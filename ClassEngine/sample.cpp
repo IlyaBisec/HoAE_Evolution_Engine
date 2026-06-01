@@ -19,7 +19,7 @@ typedef unsigned short  word;
 #include <DynArray.h>
 #include <ClassEngine.h>
 #include <more_types.h>
-#include <typeinfo.h>
+#include <typeinfo>
 
 //----------------END: THERE ARE REQUIRED HEADERS AND DEFINES------------------//
 

@@ -851,8 +851,7 @@ void ActiveUnitAbility::modifyAlteration		(int Basic, int& Current, OneObject* T
 	 M->Operand.Calculate(Basic,Current);
 	}
 }
-//Не ломайте голову, что это, просто примите факт того, что это нужно, для вызова виртуальной функции
-void ActiveUnitAbility::modifyThorn				(word Basic, word& Current,int Damage,OneObject* Damager,OneObject* Victim, byte AttType){
+void ActiveUnitAbility::modifyThorn				(word Basic, word& Current,int Damage,OneObject* Damager,OneObject* Victim){
 	SetUM(Thorn){
 		switch(M->SourceType){
 		case 0: //Damage
@@ -871,8 +870,6 @@ void ActiveUnitAbility::modifyThorn				(word Basic, word& Current,int Damage,One
 		if ((Victim->ActiveAbility->ActiveAbilities.InfluenceMask.check_bit(ABL_Alteration))){
 		Victim->ActiveAbility->ActiveAbilities.modifyAlteration(Damage,Damage,Victim);
 		}
-		int AttRadius=Damager->GetMaxAttackRadius(AttType);
-		if((M->RangeThorn&&AttRadius>150)||(!M->RangeThorn&&AttRadius<150)||(M->AnyDistanceThorn)){
 		if(Damage<1){
 			Damage=1;
 		}
@@ -888,9 +885,7 @@ void ActiveUnitAbility::modifyThorn				(word Basic, word& Current,int Damage,One
 			//if(Caster){
 				void OnDie(int Killer,int Victim);
 				OnDie(Victim->Index,Damager->Index);
-				if (!ext_OnUnitDie(Damager,Victim)) return;
 			//}
-			//OnUnitDie(Damager,Victim);
 			Damager->Die();
 			break;
 		}else{
@@ -900,7 +895,6 @@ void ActiveUnitAbility::modifyThorn				(word Basic, word& Current,int Damage,One
 		}
 		void ViewDamage(OneObject* OBJ,int value);
 		ViewDamage(Damager,-Damage);
-		}
 	}
 }
 
@@ -1346,12 +1340,6 @@ void ActiveUnitAbility::modifyLockType		(byte Basic, byte& Current){
 		Current=M->Type;
 	}
 }
-void ActiveUnitAbility::modifyNMask		(byte Basic, byte& Current){
-	SetUM(NMask){
-		Current=M->NMask;
-		//M->Operand.Calculate(Basic,Current);
-	}
-};
 
 inline bool ActiveUnitAbility::isSilence(){
 	SetUM(Silence){

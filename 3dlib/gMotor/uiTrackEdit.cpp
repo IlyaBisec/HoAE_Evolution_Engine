@@ -319,7 +319,7 @@ void FloatTrackEdit::Render()
     DrawGrid();
     DrawTimeLabels();
 
-    DrawCurve( this, GetCurveValue, m_CurveColor );
+    DrawCurve( this, &FloatTrackEdit::GetCurveValue, m_CurveColor );
 
     
     int nKeys = m_pCurve->GetNKeys();
@@ -412,9 +412,9 @@ void QuatTrackEdit::Render()
     if (m_EditMode == qemEuler) 
     {
 
-        DrawCurve( this, GetEulerX, m_XCurveColor );
-        DrawCurve( this, GetEulerY, m_YCurveColor );
-        DrawCurve( this, GetEulerZ, m_ZCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetEulerX, m_XCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetEulerY, m_YCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetEulerZ, m_ZCurveColor );
 
         if (nKeys > 0)
         {
@@ -443,10 +443,10 @@ void QuatTrackEdit::Render()
     }
     else if (m_EditMode == qemQuaternion) 
     {
-        DrawCurve( this, GetQuatX, m_XCurveColor );
-        DrawCurve( this, GetQuatY, m_YCurveColor );
-        DrawCurve( this, GetQuatZ, m_ZCurveColor );
-        DrawCurve( this, GetQuatS, m_SCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetQuatX, m_XCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetQuatY, m_YCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetQuatZ, m_ZCurveColor );
+        DrawCurve( this, &QuatTrackEdit::GetQuatS, m_SCurveColor );
 
         if (nKeys > 0)
         {
@@ -608,10 +608,10 @@ void ColorTrackEdit::Render()
 
     int nKeys = m_pCurve->GetNKeys();
 
-    DrawCurve( this, GetAlpha,    m_ACurveColor );
-    DrawCurve( this, GetRed,    m_RCurveColor );
-    DrawCurve( this, GetGreen,    m_GCurveColor );
-    DrawCurve( this, GetBlue,    m_BCurveColor );
+    DrawCurve( this, &ColorTrackEdit::GetAlpha,    m_ACurveColor );
+    DrawCurve( this, &ColorTrackEdit::GetRed,    m_RCurveColor );
+    DrawCurve( this, &ColorTrackEdit::GetGreen,    m_GCurveColor );
+    DrawCurve( this, &ColorTrackEdit::GetBlue,    m_BCurveColor );
 
     DWORD prevClr    = 0;
     float prevX        = 0.0f;

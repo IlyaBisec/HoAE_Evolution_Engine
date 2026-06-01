@@ -34,10 +34,10 @@ extern "C" {            // Assume C declarations for C++
 // HMONITOR is already declared if WINVER >= 0x0500 in windef.h
 // This is for components built with an older version number.
 //
-#if !defined(HMONITOR_DECLARED) && (WINVER < 0x0500)
+/*#if !defined(HMONITOR_DECLARED) && (WINVER < 0x0500)
 DECLARE_HANDLE(HMONITOR);
 #define HMONITOR_DECLARED
-#endif
+#endif*/
 
 #define MONITOR_DEFAULTTONULL       0x00000000
 #define MONITOR_DEFAULTTOPRIMARY    0x00000001

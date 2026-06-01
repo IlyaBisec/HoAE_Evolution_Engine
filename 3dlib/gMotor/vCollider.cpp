@@ -20,8 +20,8 @@ Collider::Collider()
 void Collider::Expose( PropertyMap& pm )
 {
     pm.start( "Collider", this );
-    pm.p( "NodeType", ClassName );
-    pm.p( "Name", GetName, SetName );
+    pm.p( "NodeType", &Collider::ClassName );
+    pm.p( "Name", &Collider::GetName, &Collider::SetName );
 } // Collider::Expose
 
 /*****************************************************************************/
@@ -30,6 +30,6 @@ void Collider::Expose( PropertyMap& pm )
 void ColliderList::Expose( PropertyMap& pm )
 {
     pm.start( "ColliderList", this );
-    pm.p( "NodeType", ClassName );
-    pm.p( "NumColliders", GetNColliders );
+    pm.p( "NodeType", &ColliderList::ClassName );
+    pm.p( "NumColliders", &ColliderList::GetNColliders );
 } // ColliderList::Expose

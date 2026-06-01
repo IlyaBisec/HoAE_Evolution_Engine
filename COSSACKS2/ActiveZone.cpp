@@ -370,7 +370,7 @@ void DrawMinAZones(int x,int y){
 		GPS.DrawLine(dx-R,dy,dx+R,dy,0xFFFFFFFF);
 		GPS.DrawLine(dx,dy-R,dx,dy+R,0xFFFFFFFF);
 	};
-	for(i=0;i<AGroups.GetAmount();i++){
+	for(int i=0;i<AGroups.GetAmount();i++){
 		ActiveGroup* AG=AGroups[i];
 		if(AG->Visible){
 			GPS.DrawFillRect(x+AG->AminX-1,y+AG->AminY-1,AG->AmaxX-AG->AminX+4,AG->AmaxY-AG->AminY+4,0x80FFFF00);

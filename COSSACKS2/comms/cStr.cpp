@@ -50,7 +50,8 @@ cStr & cStr::Copy(const char *pStr) {
 	if(pStr >= m_pStr && pStr <= m_pStr + m_nLen) {
 		int d = int(pStr - m_pStr);
 		cAssert(strlen(pStr) < (unsigned)m_nLen);
-		for(int i = 0; pStr[i]; i++) {
+		int i;
+		for(i = 0; pStr[i]; i++) {
 			m_pStr[i] = pStr[i];
 		}
 		m_pStr[i] = '\0';
@@ -404,6 +405,7 @@ int cStr::Replace(const char *Fm, const char *To) {
 	if(Count) {
 		EnsureAllocated(m_nLen + (ToLen - FmLen) * Count + 2, false);
 		int j = 0;
+		int i;
 		for(i = 0, j = 0; i < S.Length(); i++) {
 			if(Equals(&S[i], Fm, FmLen)) {
 				CopyMemory(m_pStr + j, To, ToLen);

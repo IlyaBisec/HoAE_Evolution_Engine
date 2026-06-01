@@ -50,12 +50,12 @@ struct {
 		}
 		size_t v = 0;
 //		v = sizeof(VERTS);
-		for(f = 0; f < SPLITMESH_MAXNFACTURES; f++) {
+		for(int f = 0; f < SPLITMESH_MAXNFACTURES; f++) {
 			v += VERTS[f].Size();
 		}
 		size_t t = 0;
 //		t = sizeof(TRIS);
-		for(f = 0; f < SPLITMESH_MAXNFACTURES; f++) {
+		for(int f = 0; f < SPLITMESH_MAXNFACTURES; f++) {
 			t += TRIS[f].Size();
 		}
 		return (h + v + t/* + sizeof(iTRIS) + sizeof(iVERTS)*/) / 1024;
@@ -65,7 +65,7 @@ struct {
 	cList<SurfSplitVertex> VERTS[SPLITMESH_MAXNFACTURES];
 	cList<WORD> TRIS[SPLITMESH_MAXNFACTURES];
 
-	SurfSplitCache() {
+	void SurfSplitCache() {
 	}
 
 	void Clear(int f) {
@@ -101,7 +101,8 @@ inline void SurfSplitOneVertex(int f, SurfSplitVertex& s_orig, SurfSplitVertex s
 	s.DistToSrc = dist;	
 
 	int key = SurfSplitCache.hTables[f].GenerateKey(s.oi, 0);
-	for(int index = SurfSplitCache.hTables[f].First(key); index != -1; index = SurfSplitCache.hTables[f].Next(index)) {
+	int index;
+	for(index = SurfSplitCache.hTables[f].First(key); index != -1; index = SurfSplitCache.hTables[f].Next(index)) {
 		SurfSplitVertex& sc = SurfSplitCache.VERTS[f][index];
 		if( sc.Equals(s) ){// && sc.src_vindex==s.src_vindex){
 			static float Diff=0.1;

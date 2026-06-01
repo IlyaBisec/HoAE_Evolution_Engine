@@ -26,7 +26,7 @@
 //Если эти юниты кому-то подконтрольны и ближе к нему, то по описанному выше
 //правилу они вскоре обновятся от близкого к ним игрока.
 #include "GameInterface.h"
-#include "mesh\unihash.h"
+#include "unichash.h"
 
 
 class MassivePlayer:public BaseClass{

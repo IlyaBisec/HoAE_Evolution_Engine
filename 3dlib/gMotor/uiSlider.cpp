@@ -27,7 +27,7 @@ void Slider::Expose( PropertyMap& pm )
     pm.start<Widget>( "Slider", this );
     pm.f( "MinPos", m_MinPos );
     pm.f( "MaxPos", m_MaxPos );
-    pm.p( "Position", GetPosition, SetPosition );
+    pm.p( "Position", &Slider::GetPosition, &Slider::SetPosition );
     pm.f( "ThumbWidth", m_ThumbWidth );
     pm.f( "DrawBorder", m_bDrawBorder );
 } // Button::Expose

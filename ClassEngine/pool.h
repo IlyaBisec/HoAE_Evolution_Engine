@@ -30,7 +30,7 @@ public:
 	std_OnePoolType pool_08;//pool for 8-byte blocks 
 	std_OnePoolType pool_16;//---//--- 16 byte blocks
 	std_OnePoolType pool_32;
-	std_OnePoolType pool_64;
+	//std_OnePoolType pool_64;
 	std_OnePoolType pool_128;
 
 

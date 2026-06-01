@@ -1,8 +1,8 @@
 #include "stdheader.h"
 #include "Chamfer.h"
-#include "..\Mesh\UniHash.h"
-#include "..\Mesh\iVector.h"
-#include "..\Mesh\MeshOperations.h"
+#include "..\unichash.h"
+#include "..\iVector.h"
+#include "..\MeshOper.h"
 
 namespace Surface {
 	
@@ -40,7 +40,7 @@ DWORD Chamfer::OnLMB(SelExtArgs &Args) {
 			// <- VERTS
 			SurfVertex u;
 			cList<bool> IsFilled;
-			for(nVert = 0; nVert < C->Verts.size(); nVert++) {
+			for(int nVert = 0; nVert < C->Verts.size(); nVert++) {
 				if(nVert < Mesh.VERTS.Count()) {
 					u = Mesh.VERTS[nVert]; // Copying attribs from Src Surf Mesh
 				}
@@ -53,7 +53,7 @@ DWORD Chamfer::OnLMB(SelExtArgs &Args) {
 			}
 			// <- TRIS
 			int Inds[3];
-			for(nTri = 0; nTri < C->Triangles.size(); nTri++) {
+			for(int nTri = 0; nTri < C->Triangles.size(); nTri++) {
 				const BasicTriangle *T = C->Triangles[nTri];
 				Inds[0] = T->nIndA, Inds[1] = T->nIndB, Inds[2] = T->nIndC;
 				CMesh.AddTri(Inds[0], Inds[1], Inds[2]);

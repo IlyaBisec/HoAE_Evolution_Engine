@@ -1,0 +1,14 @@
+﻿  gPhysics_pch.cpp
+  Unknown compiler version - please run the configure tests and report the results
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(136,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<WORD>::T *"
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(136,29): message : рекомендуется использовать "%hX" в строке форматирования
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(161,29): warning C4477: "sscanf": в строке форматирования "%X" требуется аргумент типа "unsigned int *", но вариативный аргумент "1" имеет тип "TypeTraits<BYTE>::T *"
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(161,29): message : рекомендуется использовать "%hhX" в строке форматирования
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(250,31): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(250,31): message : рекомендуется использовать "%lf" в строке форматирования
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(256,29): warning C4477: "sscanf": в строке форматирования "%f" требуется аргумент типа "float *", но вариативный аргумент "1" имеет тип "TypeTraits<double>::T *"
+D:\SrcRep\NEW ENGINE — копия — копия\3dlib\gMotor\kTypeTraits.h(256,29): message : рекомендуется использовать "%lf" в строке форматирования
+  sgPhysics.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1573,5): warning MSB8012: TargetPath(D:\SrcRep\NEW ENGINE — копия — копия\_release\gPhysics\gPhysics.lib) не соответствует значению свойства выходного файла (D:\SrcRep\NEW ENGINE — копия — копия\lib_release\gPhysicsR.lib) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1575,5): warning MSB8012: TargetName(gPhysics) не соответствует значению свойства выходного файла (gPhysicsR) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
+  gPhysics.vcxproj -> D:\SrcRep\NEW ENGINE — копия — копия\_release\gPhysics\gPhysics.lib

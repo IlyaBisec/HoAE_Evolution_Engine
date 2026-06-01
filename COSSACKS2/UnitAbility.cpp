@@ -11,7 +11,7 @@
 #include "ua_Modificators.h"
 #include ".\cvi_MainMenu.h"
 #include "MonsterAbility.h"
-#include "mesh\unihash.h"
+#include ".\unichash.h"
 #include "GameInterface.h"
 #include "Abilities.h"
 
@@ -1639,9 +1639,6 @@ void UnitActiveAbilityList::Init(){
 	BaseClass::reset_class(this);
 	OB=NULL;
 
-	NewNMask=0;
-	MaskWasEdited=0;
-
 	BornNIndex=0xFFFF;
 	BornNNUM=0xFF;
 	BornNMask=0;
@@ -1862,8 +1859,9 @@ bool UnitActiveAbilityList::PostProcess() {
 		//word OldLife;
 		//OldLife=OB->Life;
 		if(OB->MaxLife){
-			OB->Life=((int(OB->Life)<<3)/OB->MaxLife*MaxLife)>>3;
-			//OB->Life=((int(OB->Life)<<7)/OB->MaxLife*MaxLife)>>7;
+			OB->Life=((int(OB->Life)<<7)/OB->MaxLife*MaxLife)>>7;
+			//if((OB->Life<MaxLife/2)&&(MaxLife<OB->MaxLife))OB->Life=OB->Life+(OB->Life-OldLife)*0.5;
+			//if (OB->Life>MaxLife) OB->Life=MaxLife; TheBlackHunter, 27.08.22 Test Version of giving effects
 			OB->MaxLife=MaxLife;
 		}else{
 			OB->Life=MaxLife;
@@ -1885,8 +1883,7 @@ bool UnitActiveAbilityList::PostProcess() {
 		}
 		if( OB->MaxMana!=MaxMana ){
 			if(OB->MaxMana){
-				OB->Mana=((int(OB->Mana)<<3)/OB->MaxMana*MaxMana)>>3;
-				//OB->Mana=((int(OB->Mana)<<7)/OB->MaxMana*MaxMana)>>7;
+				OB->Mana=((int(OB->Mana)<<7)/OB->MaxMana*MaxMana)>>7;
 			}else{
 				OB->Mana=MaxMana;
 			}				
@@ -1908,7 +1905,7 @@ bool UnitActiveAbilityList::PostProcess() {
 	}
 	
 	// NMask
-	/*if(NMask==-1){
+	if(NMask==-1){
 		if(BornNMask==0)
 			BornNMask=OB->NMask;
 		if(OB->NMask!=BornNMask)
@@ -1917,23 +1914,7 @@ bool UnitActiveAbilityList::PostProcess() {
 		if(OB->NMask!=NMask)
 			OB->NMask=NMask;
 	}
-*/
-	
-	/*if(!NMaskBeginProcess){
-	 NMaskBeginProcess=1;
-	 NMask=-1;
-	}*/
-	if (NMask!=-1){
-		if(!MaskWasEdited){
-			NewNMask=OB->NMask;
-		}
-		ActiveAbilities.modifyNMask(OB->NMask,OB->NMask);
-		MaskWasEdited=1;
-	}
-	if ((MaskWasEdited)&&(NMask==-1)){
-		MaskWasEdited=0;
-		OB->NMask=NewNMask;
-	}
+
 	// KillMask
 	if( CurKillMask==0xFF ){
 		if( BornKillMask==0xFF )
@@ -2330,7 +2311,6 @@ bool UnitActiveAbilityList::Process() {
 				NMask=M->NMask;
 			}
 		}
-		if(!( aa.check_bit(ABL_NMask)) ) NMask=-1;
 		if( aa.check_bit(ABL_OverEarth) ){
 			itr_UM.Create(AA,ABL_OverEarth);
 			while(mod_OverEarth* M=(mod_OverEarth*)itr_UM.Next()){
@@ -6413,17 +6393,7 @@ bool vOperand::GetClassPresentationMask(_str& dest,void* DataPtr,void* ExtraPtr,
 			int a=num.Get();
 			dest+=a;
 			if(numType==1){
-				dest+="%";//TBH 29.07.2023 Hint Fix Basa/Actual
-				switch (percentType){
-				case 0:
-					dest+=" ";
-					dest+=GetTextByID("#FromCurrent");
-					break;
-				case 1:
-					dest+=" ";
-					dest+=GetTextByID("#FromBase");
-					break;
-				}
+				dest+=" %";
 			}
 
 		}

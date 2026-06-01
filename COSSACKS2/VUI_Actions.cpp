@@ -1,5 +1,5 @@
 #include "stdheader.h"
-#include <more_types.h>
+#include "..\ClassEngine\more_types.h"
 #include "MapTemplates.h"
 #include "vui_Action.h"
 #include "vui_Actions.h"
@@ -33,17 +33,33 @@
 #include ".\vui_GlobalHotKey.h"
 #include ".\cvi_Missions.h"
 #include "DrawFeatures.h"
-#include "ClassPresentation.h"
+#include "..\ClassEngine\ClassPresentation.h"
 #include "ua_Item.h"
 #include "ua_Orders.h"
 #include "GameInterface.h"
 
 void ACT(int x);
-
 // cva_BR_RoSList
 char* mMP_DirRos="RiseofSols\\Maps\\";
 // cva_BR_MapList
 char* mMP_Dir="Maps\\";
+
+//for folders to lobby (reborn)
+// cva_BR_RankedMapList
+char* mMP_RankedDir="Maps\\Ranked\\";
+bool vRankedMapListInit = false;
+_str vRankedMapMask;
+
+// cva_BR_CommonMapList
+char* mMP_CommonDir="Maps\\Common\\";
+bool vCommonMapListInit = false;
+_str vCommonMapMask;
+
+
+// cva_BR_CustomMapList
+char* mMP_CustomDir="Maps\\Custom\\";
+bool vCustomMapListInit = false;
+_str vCustomMapMask;
 
 bool vMapListInit = false,
      vMapRoSInit = false;
@@ -51,7 +67,6 @@ _str vMapMask, vMapMaskRoS;
 
 bool vmBattles = false,
      vmRoSMission = false;
-
 
 //////////////////////////////////////////////////////////////////////////
 void vui_CreateActionEnum(){
@@ -300,7 +315,6 @@ void vui_CreateActionEnum(){
 	REG_CLASS_EX(cva_M_ModalDesk,		"ModalDesk");
 	REG_CLASS_EX(cva_M_ModalDeskSet,	"ModalDesk");
 	REG_CLASS_EX(cva_M_ModalDeskBack,	"ModalDesk");
-	REG_CLASS_EX(cva_M_DynScale,	"ModalDesk");
 	//
 	reg_v_Action<cva_Mess_CenterQuest>(	"Mess: center quest");
 	reg_v_Action<cva_Mess_Quests>(		"Mess: quests list");
@@ -389,6 +403,9 @@ void vui_CreateActionEnum(){
 	reg_v_Action<cva_BR_SetSkirBatl>(	"Room: map mask select");
 	reg_v_Action<cva_BR_TabMap>(		"Room: map tab buttons");	
 	reg_v_Action<cva_BR_MapList>(		"Room: map list");
+	reg_v_Action<cva_BR_RankedMapList>(	"Room: Ranked map list");
+	reg_v_Action<cva_BR_CommonMapList>(	"Room: Common map list");
+	reg_v_Action<cva_BR_CustomMapList>(	"Room: Custom map list");
 	reg_v_Action<cva_BR_RoSList>(		"Room: Internet list");
 	reg_v_Action<cva_BR_MapPict>(		"Room: map picture");
 	reg_v_Action<cva_BR_SavList>(		"Room: save list");
@@ -4715,7 +4732,7 @@ void SetStartEnabled(SimpleDialog* SD){
 				col[COMPSTART[i]&15]=true;
 			}
 	}	
-	for(i=0;i<8;i++){
+	for(int i=0;i<8;i++){
 		if(col[i]){
 			nColor++;
 		}
@@ -8044,7 +8061,7 @@ byte* GetPlayerLockColors(PlayerInfo* I){
 	}
 	// lock disabled colors
 	if(!MOptions.RandomizePlayersPositions){
-		for(i=0;i<7;i++){
+		for(int i=0;i<7;i++){
 			MapPlayerInfo* P=MOptions.Players.Player+i;
 			if(vGameMode==gmMul&&P->DisableInMultiplayer||vGameMode==gmSin&&P->DisableInSingle){
 				LockColor[i]++;
@@ -8062,7 +8079,7 @@ byte* GetPlayerLockColors(PlayerInfo* I){
 			}
 		}
 		if(id!=-1){
-			for(i=NPlayers;i<8&&i<COMPSTART[i];i++){
+			for(int i=NPlayers;i<8&&i<COMPSTART[i];i++){
 				if(COMPSTART[i]){
 					PlayerInfo* cI=g->PL_INFO+i;
 					LockColor[cI->ColorID]++;
@@ -8365,7 +8382,8 @@ bool vf_CreateFileList(ListDesk* LD,bool addmode=false){
 					_str* N=new _str;
 					N->Assign(DD.cFileName);
 					int n=Names.GetAmount();
-					for(int i=0;i<n;i++){
+					int i;
+					for(i=0;i<n;i++){
 						if( THigh>TimesHigh[i] || THigh==TimesHigh[i]&&TLow>TimesLow[i] ){
 							break;
 						}
@@ -9118,6 +9136,351 @@ void cva_BR_RoSList::Init(SimpleDialog* SD)
 		LD->CurrentElement=-1;
 	}
 }
+
+//cva_BR_RankedMapList
+void cva_BR_RankedMapList::SetFrameState(SimpleDialog* SD)
+{	
+	Init(SD);
+	va_ListDesk::SetFrameState(SD);
+	SD->Enabled=false;
+	ListDesk* LD = dynamic_cast<ListDesk*>(SD);
+	CurrentGameInfo* g = &GSets.CGame;
+	PlayerInfo* I = g->GetCurrentPlayerInfo();
+	if(LD && I)
+	{		
+		if(v_MM_Host || NPlayers==1)
+		{
+			vCurMiss=-1;
+			SD->Enabled=(I->Ready == 0);
+			if(LD->CurrentElement == -1 && LD->DSS.GetAmount() > 0) LD->CurrentElement=0;
+			else I->MapName[0]=0;
+			int rnd = 0;
+			char* NAME = GetSpecMap(rnd);
+			if(NAME&&strcmp(NAME, "RANDOM") == 0) NAME=NULL;
+			if(NAME)
+			{
+				strcpy(I->MapName, NAME); 
+				LD->Visible = false;
+			}
+			else
+			{				
+				if(LD->CurrentElement != -1)
+				{
+					_str n;				
+					n = vRankedMapMask;
+					n.Replace("*.m3d", LD->GetElement(LD->CurrentElement));
+					char* Name = n.pchar();
+					if(strcmp(Name, I->MapName))
+					{										
+						strcpy(I->MapName, Name);
+						strcpy(GSets.CGame.cgi_CurrentMap, Name);
+						mInitRNDMapName = false;
+						DWORD GetMapHash(char* Name);
+						I->MapHashValue = GetMapHash(I->MapName);					
+						CreateNationalMaskForMap(Name);
+					}
+				}			
+			}
+			mMapPreview = I->MapName[0];
+			if(CheckHideMap())
+			{
+				mMapPreview = false;
+				LD->Visible = false;
+			}
+		}
+		else
+		{
+			LD->CurrentElement = -1;
+			mMapPreview = false;
+			PlayerInfo* SI = g->GetHostPlayerInfo();
+			if(SI)
+			{
+				static _str name;
+				name = SI->MapName;
+				name.Replace(mMP_RankedDir, "");
+				LD->CurrentElement = LD->GetElement(name.pchar());
+				if(LD->CurrentElement >= 0)
+				{
+					CreateNationalMaskForMap(SI->MapName);
+					mMapPreview = true;
+				}
+			}
+			static int t = GetTickCount() + 3000;
+			if(GetTickCount() > t)
+			{				
+				t = GetTickCount() + 3000;
+				vRankedMapListInit = false;
+			}	
+			if(CheckHideMap())
+			{
+				mMapPreview = false;
+				LD->Visible = false;
+			}
+		}
+		vls_Active=(LD->CurrentElement < 0);
+	}
+}
+void cva_BR_RankedMapList::Init(SimpleDialog* SD)
+{
+	ListDesk* LD = dynamic_cast<ListDesk*>(SD);
+	if(LD && (!SD->vm_Init || !vRankedMapListInit))
+	{
+		vRankedMapListInit = true;
+		SD->vm_Init = true;		
+		LD->DSS.Clear();
+		CreateDirectory(mMP_RankedDir, 0);
+		if(vRankedMapMask.pchar()[0] == 0)
+		{
+			vRankedMapMask = mMP_RankedDir;
+			vRankedMapMask += "*.m3d";
+		}
+		TGSCFindInfo* FD=GSFILES.gFindFirst(vRankedMapMask.pchar());
+		if(FD)
+		{			
+			_str name;
+			do
+			{				
+				name = FD->m_FileName;
+				LD->AddElement(name);
+			}
+			while(GSFILES.gFindNext(FD));
+		};
+		LD->CurrentElement=-1;
+	}
+}
+
+
+
+
+
+//cva_BR_CommonMapList
+void cva_BR_CommonMapList::SetFrameState(SimpleDialog* SD)
+{	
+	Init(SD);
+	va_ListDesk::SetFrameState(SD);
+	SD->Enabled=false;
+	ListDesk* LD = dynamic_cast<ListDesk*>(SD);
+	CurrentGameInfo* g = &GSets.CGame;
+	PlayerInfo* I = g->GetCurrentPlayerInfo();
+	if(LD && I)
+	{		
+		if(v_MM_Host || NPlayers==1)
+		{
+			vCurMiss=-1;
+			SD->Enabled=(I->Ready == 0);
+			if(LD->CurrentElement == -1 && LD->DSS.GetAmount() > 0) LD->CurrentElement=0;
+			else I->MapName[0]=0;
+			int rnd = 0;
+			char* NAME = GetSpecMap(rnd);
+			if(NAME&&strcmp(NAME, "RANDOM") == 0) NAME=NULL;
+			if(NAME)
+			{
+				strcpy(I->MapName, NAME); 
+				LD->Visible = false;
+			}
+			else
+			{				
+				if(LD->CurrentElement != -1)
+				{
+					_str n;				
+					n = vCommonMapMask;
+					n.Replace("*.m3d", LD->GetElement(LD->CurrentElement));
+					char* Name = n.pchar();
+					if(strcmp(Name, I->MapName))
+					{										
+						strcpy(I->MapName, Name);
+						strcpy(GSets.CGame.cgi_CurrentMap, Name);
+						mInitRNDMapName = false;
+						DWORD GetMapHash(char* Name);
+						I->MapHashValue = GetMapHash(I->MapName);					
+						CreateNationalMaskForMap(Name);
+					}
+				}			
+			}
+			mMapPreview = I->MapName[0];
+			if(CheckHideMap())
+			{
+				mMapPreview = false;
+				LD->Visible = false;
+			}
+		}
+		else
+		{
+			LD->CurrentElement = -1;
+			mMapPreview = false;
+			PlayerInfo* SI = g->GetHostPlayerInfo();
+			if(SI)
+			{
+				static _str name;
+				name = SI->MapName;
+				name.Replace(mMP_CommonDir, "");
+				LD->CurrentElement = LD->GetElement(name.pchar());
+				if(LD->CurrentElement >= 0)
+				{
+					CreateNationalMaskForMap(SI->MapName);
+					mMapPreview = true;
+				}
+			}
+			static int t = GetTickCount() + 3000;
+			if(GetTickCount() > t)
+			{				
+				t = GetTickCount() + 3000;
+				vCommonMapListInit = false;
+			}	
+			if(CheckHideMap())
+			{
+				mMapPreview = false;
+				LD->Visible = false;
+			}
+		}
+		vls_Active=(LD->CurrentElement < 0);
+	}
+}
+void cva_BR_CommonMapList::Init(SimpleDialog* SD)
+{
+	ListDesk* LD = dynamic_cast<ListDesk*>(SD);
+	if(LD && (!SD->vm_Init || !vCommonMapListInit))
+	{
+		vCommonMapListInit = true;
+		SD->vm_Init = true;		
+		LD->DSS.Clear();
+		CreateDirectory(mMP_CommonDir, 0);
+		if(vCommonMapMask.pchar()[0] == 0)
+		{
+			vCommonMapMask = mMP_CommonDir;
+			vCommonMapMask += "*.m3d";
+		}
+		TGSCFindInfo* FD=GSFILES.gFindFirst(vCommonMapMask.pchar());
+		if(FD)
+		{			
+			_str name;
+			do
+			{				
+				name = FD->m_FileName;
+				LD->AddElement(name);
+			}
+			while(GSFILES.gFindNext(FD));
+		};
+		LD->CurrentElement=-1;
+	}
+}
+
+
+
+
+
+//cva_BR_CustomMapList
+void cva_BR_CustomMapList::SetFrameState(SimpleDialog* SD)
+{	
+	Init(SD);
+	va_ListDesk::SetFrameState(SD);
+	SD->Enabled=false;
+	ListDesk* LD = dynamic_cast<ListDesk*>(SD);
+	CurrentGameInfo* g = &GSets.CGame;
+	PlayerInfo* I = g->GetCurrentPlayerInfo();
+	if(LD && I)
+	{		
+		if(v_MM_Host || NPlayers==1)
+		{
+			vCurMiss=-1;
+			SD->Enabled=(I->Ready == 0);
+			if(LD->CurrentElement == -1 && LD->DSS.GetAmount() > 0) LD->CurrentElement=0;
+			else I->MapName[0]=0;
+			int rnd = 0;
+			char* NAME = GetSpecMap(rnd);
+			if(NAME&&strcmp(NAME, "RANDOM") == 0) NAME=NULL;
+			if(NAME)
+			{
+				strcpy(I->MapName, NAME); 
+				LD->Visible = false;
+			}
+			else
+			{				
+				if(LD->CurrentElement != -1)
+				{
+					_str n;				
+					n = vCustomMapMask;
+					n.Replace("*.m3d", LD->GetElement(LD->CurrentElement));
+					char* Name = n.pchar();
+					if(strcmp(Name, I->MapName))
+					{										
+						strcpy(I->MapName, Name);
+						strcpy(GSets.CGame.cgi_CurrentMap, Name);
+						mInitRNDMapName = false;
+						DWORD GetMapHash(char* Name);
+						I->MapHashValue = GetMapHash(I->MapName);					
+						CreateNationalMaskForMap(Name);
+					}
+				}			
+			}
+			mMapPreview = I->MapName[0];
+			if(CheckHideMap())
+			{
+				mMapPreview = false;
+				LD->Visible = false;
+			}
+		}
+		else
+		{
+			LD->CurrentElement = -1;
+			mMapPreview = false;
+			PlayerInfo* SI = g->GetHostPlayerInfo();
+			if(SI)
+			{
+				static _str name;
+				name = SI->MapName;
+				name.Replace(mMP_CustomDir, "");
+				LD->CurrentElement = LD->GetElement(name.pchar());
+				if(LD->CurrentElement >= 0)
+				{
+					CreateNationalMaskForMap(SI->MapName);
+					mMapPreview = true;
+				}
+			}
+			static int t = GetTickCount() + 3000;
+			if(GetTickCount() > t)
+			{				
+				t = GetTickCount() + 3000;
+				vCustomMapListInit = false;
+			}	
+			if(CheckHideMap())
+			{
+				mMapPreview = false;
+				LD->Visible = false;
+			}
+		}
+		vls_Active=(LD->CurrentElement < 0);
+	}
+}
+void cva_BR_CustomMapList::Init(SimpleDialog* SD)
+{
+	ListDesk* LD = dynamic_cast<ListDesk*>(SD);
+	if(LD && (!SD->vm_Init || !vCustomMapListInit))
+	{
+		vCustomMapListInit = true;
+		SD->vm_Init = true;		
+		LD->DSS.Clear();
+		CreateDirectory(mMP_CustomDir, 0);
+		if(vCustomMapMask.pchar()[0] == 0)
+		{
+			vCustomMapMask = mMP_CustomDir;
+			vCustomMapMask += "*.m3d";
+		}
+		TGSCFindInfo* FD=GSFILES.gFindFirst(vCustomMapMask.pchar());
+		if(FD)
+		{			
+			_str name;
+			do
+			{				
+				name = FD->m_FileName;
+				LD->AddElement(name);
+			}
+			while(GSFILES.gFindNext(FD));
+		};
+		LD->CurrentElement=-1;
+	}
+}
+
 // cva_BR_ChatDesk
 void cva_BR_ChatDesk::Init(SimpleDialog* SD){
 	ChatDesk* CD=dynamic_cast<ChatDesk*>(SD);
@@ -10706,31 +11069,13 @@ bool cva_M_ModDesSetRetChang::LeftClick(SimpleDialog* SD){
 // cva_M_AcceptSettings
 bool cva_M_AcceptSettings::LeftClick(SimpleDialog* SD){
 	if(v_MainMenu.Enable){
-		int OldRealLx=RealLx;
-		int OldRealLy=RealLy;
 		ParentFrame* pf=SD;
 		while(pf->ParentDS) pf=(ParentFrame*)pf->ParentDS;
 		pf->vm_ActionsAccept();
 		GSets.Save();
-		SetGameDisplayModeAnyway(GSets.SVOpt.ScreenSizeX,GSets.SVOpt.ScreenSizeY);
-		pf=SD;
-		while(pf->ParentDS) {
-			pf=(ParentFrame*)pf->ParentDS;
-			pf->DynamicScaleGlobal(OldRealLx,OldRealLy);
-		}
 		v_MainMenu.ModalDesk="Main";
-		/*SetGameDisplayModeAnyway(GSets.SVOpt.ScreenSizeX,GSets.SVOpt.ScreenSizeY);
-		pf.SetHeight(GSets.SVOpt.ScreenSizeX);
-		pf.SetHeight(GSets.SVOpt.ScreenSizeX);*/
 	}
 	return true;
-}
-void cva_M_DynScale::SetFrameState(SimpleDialog* SD){
-		int OldRealLx=RealLx;
-		int OldRealLy=RealLy;
-		ParentFrame* pf=SD;
-		while(pf->ParentDS) pf=(ParentFrame*)pf->ParentDS;
-		pf->DynamicScaleGlobal(OldRealLx,OldRealLy);
 }
 // cva_TutButtonVisibleAdd
 void cva_TutButtonVisibleAdd::SetFrameState(SimpleDialog* SD){
@@ -11020,7 +11365,7 @@ bool ui_AbilityShow(vui_UnitInfo *pUI, GPPicture *pP, int n)
 			Hint[0] = '\0';
 			L = strlen(TStr);
 			pc = NULL;
-			for(i = 0; i < L; i++)
+			for(int i = 0; i < L; i++)
 				if(TStr[i] == '%')
 				{
 					pc = &TStr[i + 1];
@@ -11804,16 +12149,11 @@ extern int NIdlePeasant;
 bool vPeasant_Idle=false;
 void cva_Peasant_Idle::SetFrameState(SimpleDialog* SD){
 	SD->Visible=false;
-	if(NIdlePeasant>0){
+	if(vPeasant_Idle&&NIdlePeasant>0&&OIS.SelPoint.GetAmount()==1){
 		SD->Visible=true;
+		vPeasant_Idle=false;
 		VitButton* VB=dynamic_cast<VitButton*>(SD);
 		if(VB){			
-		}
-		char* NumberOfPeasants=new char[32];
-		sprintf(NumberOfPeasants,"%d",NIdlePeasant);
-		TextButton* TB=dynamic_cast<TextButton*>(SD);
-		if(TB){
-			TB->SetMessage(NumberOfPeasants);
 		}
 	}
 }
