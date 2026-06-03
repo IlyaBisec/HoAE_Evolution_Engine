@@ -10391,10 +10391,10 @@ public:
 
 	SAVE(TestConnClass);
 
-        REG_FN_CHAR  (&TestConnClass::_charFN, _charFN);
-        REG_FN_FLOAT (&TestConnClass::_floatFN,_floatFN);
-        REG_FN_BOOL_EX  (&TestConnClass::_boolFN, _boolFN);
-        REG_FN_INT_EX(&TestConnClass::_intFN, _intFN);
+        REG_FN_CHAR  (&TestConnClass::_charFN  );
+        REG_FN_FLOAT (&TestConnClass::_floatFN );
+        REG_FN_BOOL  (&TestConnClass::_boolFN  );
+        REG_FN_INT   (&TestConnClass::_intFN   );
         
 		REG_CLASS(TestConnClass1);
 		REG_AUTO(cc);

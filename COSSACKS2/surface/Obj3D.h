@@ -143,7 +143,7 @@ public:
 		REG_AUTO(Name);
         REG_AUTO(States);
 		REG_MEMBER(_int,CurrStateIndex);
-		REG_METHOD_EX(&SceneObject::DeleteObject, DeleteObject);
+		REG_METHOD(&SceneObject::DeleteObject);
 	}ENDSAVE;
 };
 class ObjectsList : public BaseClass{

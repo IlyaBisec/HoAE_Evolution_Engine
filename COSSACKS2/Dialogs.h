@@ -1344,9 +1344,9 @@ public:
 		REG_MEMBER(_int,FillerLeftMargin);
 		REG_MEMBER(_int,FillerRightMargin);
 
-		REG_METHOD_EX(&StdBorder::TestBorder, TestBorder);
-		REG_METHOD_EX(&StdBorder::AutoCreateXCYC_byOuterMargin, AutoCreateXCYC_byOuterMargin);
-		REG_METHOD_EX(&StdBorder::AutoCreateXCYC_byInnerMargin, AutoCreateXCYC_byInnerMargin);
+		REG_METHOD(&StdBorder::TestBorder);
+		REG_METHOD(&StdBorder::AutoCreateXCYC_byOuterMargin);
+		REG_METHOD(&StdBorder::AutoCreateXCYC_byInnerMargin);
 
 		REG_MEMBER(_int,TopMarginParam);
 		REG_MEMBER(_int,BottomMarginParam);

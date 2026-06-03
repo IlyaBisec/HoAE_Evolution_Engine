@@ -11,7 +11,7 @@ int GetUnitModifiedBySprite(int _MineID,OneSprite* OS);
 void UnLockComplexObject(OneObject* OB);
 void LockComplexObject(OneObject* OB);
 bool FindBestPositionOLD(OneObject* OB,int* xd,int* yd,int R0);
-bool NationEcoUnderstand(GFILE* f, NewMonster* newMons);
+
 void KeyTestMem();
 void ErrMS(char* s);
 bool CheckShooterAbilityToRecharge(OneObject* OBJ);
@@ -3059,15 +3059,6 @@ bool NewMonster::CreateFromFile(char* name){
 							NLine(f1);
 							Line++;
 						}else
-						if (!strcmp(gx, "ECONOMY")) {
-								char cc[128];
-								if (!NationEcoUnderstand(f1,this)) {
-									sprintf(gy, "Incorrect economy.");
-								};
-								NLine(f1);
-								Line++;
-							}
-						else
 						if(!strcmp(gx,"EXTRALOCK")){
                             //adding extra lockpoints on the edge of the building
 							bool ExtraLock(word& NLockPt,char*& LockX,char*& LockY);
@@ -5012,15 +5003,6 @@ bool NewMonster::CreateFromFile(char* name){
 							NLine(f1);
 							Line++;
 						}else
-							if (!strcmp(gx, "SCALE")) {
-								float fl1;
-								z = Gscanf(f1, "%g", &fl1);
-								if (z != 1)IncPar(name, Line, gx);
-								StartScale = floorf(fl1 * 256.0f + 0.5);
-								NLine(f1);
-								Line++;
-							}
-							else
 						if(!strcmp(gx,"SELFTRANSFORM")){
 							SelfTransform=true;
 							NLine(f1);

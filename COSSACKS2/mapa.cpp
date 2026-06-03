@@ -1521,7 +1521,7 @@ void ShowBuildingPreview(int BuildingID,int xscr,int yscr){
         if(!NM->Building){
             NewAnimation* NA=NM->GetAnimation(anm_Stand);
             if(NA){
-                NA->DrawAt(0,MyNation,xxx,yyy,tmax(GetHeight(xxx,yyy),0)+(NM->MotionStyle==8?NM->StartFlyHeight:3),GetTickCount()/8, ((GO->newMons->StartScale-0.5)/256.0f),0xFF808080,0,0,NULL);
+                NA->DrawAt(0,MyNation,xxx,yyy,tmax(GetHeight(xxx,yyy),0)+(NM->MotionStyle==8?NM->StartFlyHeight:3),GetTickCount()/8,1,0xFF808080,0,0,NULL);
             }
             return;
         }

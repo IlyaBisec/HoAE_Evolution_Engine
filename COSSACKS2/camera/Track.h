@@ -74,7 +74,7 @@ public:
 #define CameraSplineKey_DefBlur		0.0f
 		
 		REG_FSLIDER(Blur, 0.0f, 1.0f, CameraSplineKey_DefBlur);
-		REG_METHOD_EX(&CameraSplineKey::CopyPostFXArgsFromGameSettings, CopyPostFXArgsFromGameSettings);
+		REG_METHOD(&CameraSplineKey::CopyPostFXArgsFromGameSettings);
 		REG_AUTO(Separator);
 		REG_MEMBER(_str, VarName);
 		REG_MEMBER(_bool, VarValue);
@@ -343,7 +343,7 @@ public:
 		REG_MEMBER(_int, FrameFm);
 		REG_MEMBER(_int, FrameTo);
 		REG_AUTO(Separator);
-		REG_METHOD_EX(&CameraTrackUnitAnimation::CalcFrameRangeFromAnimation, CalcFrameRangeFromAnimation);
+		REG_METHOD(&CameraTrackUnitAnimation::CalcFrameRangeFromAnimation);
 	ENDSAVE;
 
 	__constructor(CameraTrackUnitAnimation);
@@ -370,13 +370,13 @@ public:
 	
 	SAVE(CameraTrackUnitModel);
 		REG_MEMBER(_ModelID, idModel);
-		REG_METHOD_EX(&CameraTrackUnitModel::ReloadModel, ReloadModel);
+		REG_METHOD(&CameraTrackUnitModel::ReloadModel);
 		REG_AUTO(Separator);
 		REG_MEMBER(_float, Position.x);
 		REG_MEMBER(_float, Position.y);
 		REG_MEMBER(_float, Position.z);
 		REG_MEMBER(_bool, OnGround);
-		REG_METHOD_EX(&CameraTrackUnitModel::MoveToScreenCenter, MoveToScreenCenter);
+		REG_METHOD(&CameraTrackUnitModel::MoveToScreenCenter);
 		REG_FSLIDER(Scale, 0.1f, 3.0f, 1.0f);
 		REG_FSLIDER(Angle, 0.0f, 360.0f, 0.0f);
 		REG_AUTO(Separator);
@@ -483,8 +483,8 @@ public:
 		REG_AUTO(Separator);
 		REG_AUTO(Splines);
 		REG_AUTO(Separator);
-		REG_METHOD_EX(&CameraTrack::SetSkip, SetSkip);
-		REG_METHOD_EX(&CameraTrack::ClearSkip, ClearSkip);
+		REG_METHOD(&CameraTrack::SetSkip);
+		REG_METHOD(&CameraTrack::ClearSkip);
 		REG_AUTO(Separator);
         REG_AUTO(Animations);
 		REG_AUTO(Separator);
@@ -494,10 +494,10 @@ public:
 		READONLY REG_MEMBER(_int, CurFrame);
 		READONLY REG_MEMBER(_float, CurTime);
 		REG_MEMBER(_bool, FitWithCamera);
-		REG_METHOD_EX(&CameraTrack::AddSpline, AddSpline);
-		REG_METHOD_EX(&CameraTrack::AddKey, AddKey);
+		REG_METHOD(&CameraTrack::AddSpline);
+		REG_METHOD(&CameraTrack::AddKey);
 		REG_AUTO(Separator);
-		REG_METHOD_EX(&CameraTrack::RetimeSpline, RetimeSpline);
+		REG_METHOD(&CameraTrack::RetimeSpline);
 		REG_AUTO(Separator);
 		REG_ISLIDER(AnimationsFPS, 1, 50, CameraTrack_AnimationsFPSDef);
 		REG_AUTO(Separator);

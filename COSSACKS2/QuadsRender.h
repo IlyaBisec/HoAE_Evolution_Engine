@@ -58,7 +58,7 @@ public:
 		REG_MEMBER(_TextureID,ShadowTextureID);
 		REG_MEMBER(_float,Scale);
 		REG_FSLIDER(Frequency,0,1,1);
-		REG_METHOD_EX(&OneGrassType::Refresh, Refresh);
+		REG_METHOD(&OneGrassType::Refresh);
 	}ENDSAVE;
 
 	bool ForceSimplification(){

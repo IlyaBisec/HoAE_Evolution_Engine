@@ -11,7 +11,7 @@ class cvi_Market
 public:
 	cvi_Market(void);
 	~cvi_Market(void);
-	bool init[6] = { 0,0,0,0,0,0};
+
 	int EcResID[6];
 	int EcResIcn[6];
 	int ChertaIcn;
@@ -25,20 +25,20 @@ public:
 	int M100Icn;
 	int M1000Icn;
 	int M10000Icn;
-	double ResCostBuy  [6];
-	double ResCostSell [6];
-	double ResCostBuy0 [6];
-	double ResCostSell0[6];
-	double ResCostBuy1 [6];
-	double ResCostSell1[6];
-	double ResCostBuy2 [6];
-	double ResCostSell2[6];
+	//was double, changet to int
+	int ResCostBuy  [6];
+	int ResCostSell [6];
+	int ResCostBuy0 [6];
+	int ResCostSell0[6];
+	int ResCostBuy1 [6];
+	int ResCostSell1[6];
+	int ResCostBuy2 [6];
+	int ResCostSell2[6];
 	double ExpBUY[6];
 	double ExpSELL[6];
-	double TimeBUY[6];
-	double TimeSELL[6];
-	double Nalog[6];
-	int NalogResID[6];
+	int TimeBUY[6];
+	int TimeSELL[6];
+	//--end of change--//
 	int NeedToBuy;
 	int NeedToSell;
 	int ResSell;

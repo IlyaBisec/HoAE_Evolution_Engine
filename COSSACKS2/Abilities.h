@@ -26,7 +26,6 @@ public:
 	bool TargetFriendly;
 	bool TargetEnemy;
 	bool TargetHero;
-	bool TargetDead;
 	int CastingDelay;
 	bool Finite;
 	bool Continuous;
@@ -41,7 +40,6 @@ public:
 		REG_MEMBER(_bool,TargetFriendly);
 		REG_MEMBER(_bool,TargetEnemy);
 		REG_MEMBER(_bool,TargetHero);
-		REG_MEMBER(_bool, TargetDead);
 		REG_MEMBER(_bool,Finite);
 		REG_MEMBER(_bool,NeedMatherial);
 		REG_ENUM(_index,Matherial,Matherials);

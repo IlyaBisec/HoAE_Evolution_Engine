@@ -77,7 +77,7 @@ bool aa_SingleUnitAI::Process(){
 			int n=UA->Abilities.GetAmount();
 			int id=GetRND(n);
 			suAI_Ability* suAI=UA->Abilities[id];
-			if ((tOB->GetLiveState() == ls_LiveBody) && (suAI->TargetDead && (tOB->GetLiveState() == ls_DeadBody || tOB->GetLiveState() == ls_Bones))) {
+			if( tOB->GetLiveState()==ls_LiveBody){
 				byte suAIMask=1<<suAI->Matherial;
 				if (DetectHero(tOB)&&suAI->TargetHero){
 					if(suAI->TargetEnemy&&!(tOB->NMask&OB->NMask)&&OB->Ready&&OB->Attack&&((tOB->NNUM!=7)||((tOB->NNUM==7)&&tOB->Attack))&&(!(suAI->NeedMatherial)||(suAI->NeedMatherial&&(tOB->MathMask&suAIMask)))){//Matherial addition, 2.10.2022 TBH

@@ -1823,7 +1823,7 @@ int mmc_Resurrect::Collect(OneObject* From){
 void mmd_TakeResource::Distribute(WeaponParams* WP, OneObject* To, int Amount){
 	if(To){
 		Operand.Calculate(Amount,Amount);
-		AddXRESRC(To->NNUM,ResType,Amount);
+		AddXRESRC(To->NNUM,GoldID,Amount);
 	}
 };
 void mmd_TakeLife::Distribute(WeaponParams* WP, OneObject* To, int Amount){
@@ -2273,30 +2273,32 @@ bool pm_ApplyStandartChasm::MakeOneStep(WeaponParams* WP){
 	ApplyStandartChasm(x,y,R,Duration);
 	return true;
 }
-pm_StealResourceFromBuildings::pm_StealResourceFromBuildings() {
-	R = 200;
-	AmountFromEachBuilding = 150;
+pm_StealResourceFromBuildings::pm_StealResourceFromBuildings(){
+	R=200;
+	AmountFromEachBuilding=150;
 }
-bool pm_StealResourceFromBuildings::MakeOneStep(WeaponParams* WP) {
-	OneObject* Caster = Group[WP->From.UnitIndex];
-	if (WP->From.UnitIndex == 0xFFFF) {
+bool pm_StealResourceFromBuildings::MakeOneStep(WeaponParams* WP){
+	OneObject* Caster=Group[WP->From.UnitIndex];
+	if (WP->From.UnitIndex==0xFFFF) {
 		return false;
 	}
-	int Amount = 0;
-	int A = AmountFromEachBuilding;
-	int x = WP->x >> ToPixelCoord;
-	int y = WP->y >> ToPixelCoord;
-	int r = R;
-	itr_GetBuildingsInRadius.Create(x, y, r);
-	while (OneObject* OB = itr_GetBuildingsInRadius.Next()) {
-		if (!OB->Sdoxlo) {
-			Amount += A;
-			AddXRESRC(OB->NNUM, ResType, -A);
-			if (XRESRC(OB->NNUM, ResType) < 0)SetXRESRC(OB->NNUM, ResType, 0);
+	
+	int Amount=0;
+	int A=AmountFromEachBuilding;
+
+	int x=WP->x>>ToPixelCoord;
+	int y=WP->y>>ToPixelCoord;
+	int r=R;
+	itr_GetBuildingsInRadius.Create(x,y,r);
+	while(OneObject* OB=itr_GetBuildingsInRadius.Next()){
+		if(!OB->Sdoxlo){
+			Amount+=A;
+			AddXRESRC(OB->NNUM,MoneyID,-A);
+			if(XRESRC(OB->NNUM,MoneyID)<0)SetXRESRC(OB->NNUM,MoneyID,0);
 		}
 	}
 
-	AddXRESRC(Caster->NNUM, ResType, Amount);
+	AddXRESRC(Caster->NNUM,MoneyID,Amount);
 }
 //==================================================================================================================//
 void ApplyLandType(char* From,char* To,int xc,int yc,int R1,int R2);

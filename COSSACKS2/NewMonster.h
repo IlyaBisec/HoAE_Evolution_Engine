@@ -305,24 +305,7 @@ public:
 //#else //NEWMORALE
 //	word FearFactor[NFEARSUBJ];
 //#endif //NEWMORALE
-	//----Market economy control-------
-	int EcResID[6];
-	int EcResIcn[6];
-	double ResCostBuy[6];
-	double ResCostSell[6];
-	double ResCostBuy0[6];
-	double ResCostSell0[6];
-	double ResCostBuy1[6];
-	double ResCostSell1[6];
-	double ResCostBuy2[6];
-	double ResCostSell2[6];
-	double ExpBUY[6];
-	double ExpSELL[6];
-	double TimeBUY[6];
-	double TimeSELL[6];
-	double Nalog[6];
-	int NalogResID[6];
-	//---------------------
+
 	byte FearType  [NAttTypes];
 	byte FearRadius[NFEARSUBJ];
 

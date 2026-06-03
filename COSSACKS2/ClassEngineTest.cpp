@@ -662,7 +662,7 @@ public:
 	REG_AUTO(CR);
 	REG_AUTO(CA2);
 	REG_AUTO(CT1);
-    REG_METHOD_EX(&Class2::fn, fn);
+    REG_METHOD(&Class2::fn);
 	ENDSAVE;
 };
 class Class3:public BaseClass{

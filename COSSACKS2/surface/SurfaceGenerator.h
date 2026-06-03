@@ -589,15 +589,15 @@ public:
 
 	SAVE(SurfaceGenerator);
 		REG_AUTO2(Maps,"-grid 2000 -maxLx 450 -maxLy 450");	
-		REG_METHOD_EX(&SurfaceGenerator::SaveCurrentLayer, SaveCurrentLayer);
-		REG_METHOD_EX(&SurfaceGenerator::LoadCurrentLayer, LoadCurrentLayer);
-		REG_METHOD_EX(&SurfaceGenerator::ClearCurrentLayer, ClearCurrentLayer);
+		REG_METHOD(&SurfaceGenerator::SaveCurrentLayer);
+		REG_METHOD(&SurfaceGenerator::LoadCurrentLayer);
+		REG_METHOD(&SurfaceGenerator::ClearCurrentLayer);
 		REG_AUTO(Separator);
-		REG_METHOD_EX(&SurfaceGenerator::RotateLeft, RotateLeft);
-		REG_METHOD_EX(&SurfaceGenerator::RotateRight, RotateRight);
+		REG_METHOD(&SurfaceGenerator::RotateLeft);
+		REG_METHOD(&SurfaceGenerator::RotateRight);
 		REG_AUTO(Separator);
-		REG_METHOD_EX(&SurfaceGenerator::ShiftHorizontal, ShiftHorizontal);
-		REG_METHOD_EX(&SurfaceGenerator::ShiftVertical, ShiftVertical);
+		REG_METHOD(&SurfaceGenerator::ShiftHorizontal);
+		REG_METHOD(&SurfaceGenerator::ShiftVertical);
 		REG_ISLIDER(CurShift, -200, 200, 0);
 		REG_AUTO(Separator);
 		REG_MEMBER(_int,Size);

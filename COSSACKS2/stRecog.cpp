@@ -135,7 +135,8 @@ void InitModes(){
 	MODS.AddString("[EXPARAMS]");
 	MODS.AddString("[CHANGECOST]");//90
 	MODS.AddString("[SETTLFARMS]");//91	
-	MODS.AddString("[FLAGBEARERS]");//92
+	MODS.AddString("[FLAGBEARERS]");//92	
+
 };
 void GetMode(char* s,int* mode,int line){
 	if(!MODS.LastIndex)InitModes();

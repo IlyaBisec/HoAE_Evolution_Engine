@@ -1589,7 +1589,7 @@ void CmdMoney(byte NI){
 	ECMD;
 };
 void DoCmdMoney(byte NI){
-	for(int i=0;i<7;i++)AddXRESRC(NI,i,150000);
+	for(int i=0;i<6;i++)AddXRESRC(NI,i,50000);
 };
 void DoCmdAddMoney(byte NI,int Value){
 	int MAX=0;
@@ -2462,7 +2462,7 @@ void CreateGoodSelection(byte NI,int xx,int yy,int xx1,int yy1,CHOBJ* FN,int NN,
 
 	word nnm=GoodSelectNewMonsters(NI,xx,yy,xx1,yy1,NULL,NULL,false,FN,NN,ULIMIT,InForm,NotInForm);
 
-	if( nnm==0 && Nsel!=0 && (!InfoMode) )
+	if( nnm==0 && Nsel!=0 && (!EditMapMode||!InfoMode) )
 		Addon=true;
 
 	if(!Addon&&Nsel){
@@ -2499,9 +2499,10 @@ void CreateGoodSelection(byte NI,int xx,int yy,int xx1,int yy1,CHOBJ* FN,int NN,
 	word* SR=ImSerN[NI];
 	word ns1=ns;
 	ns=Olds;
-
 	if(nnm) GoodSelectNewMonsters(NI,xx,yy,xx1,yy1,&SM[ns],&SR[ns],true,FN,NN,nnm,InForm,NotInForm);
+	
 	ImNSL[NI]=ns+nnm;
+
 	if(Addon&&Nsel){
 		free(SMon);
 		free(ser);
