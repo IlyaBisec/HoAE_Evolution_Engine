@@ -437,6 +437,8 @@ void	CKillEnemy00SPROC::PROCESS(int NATION, int indx, char* pName )
 
 		// сброс подсветки
 		int ttime = -1;
+		int i;
+		CZone00 *pZ00 = nullptr;
 		if( Pulse ) 
 			ttime = pulseTime + QZ_PulseTime - GetTickCount();
 		if( Pulse && ttime < 0 ) { 
@@ -454,13 +456,22 @@ void	CKillEnemy00SPROC::PROCESS(int NATION, int indx, char* pName )
 			SetActiveMessCampCII(-1);
 		}
 		if( Pulse && pulseTime > 0 ) {
-			for(int i=0; i<pZONES->GetAmountOfElements(); i++) //выбрать первую зону квеста
-				if((*pZONES)[i]->InfID == _CZone00_) { break; }
-			CZone00* pZ00 = reinterpret_cast<CZone00*>((*pZONES)[i]);
-			if( pZ00 && pZ00->ZoneName.str ) {
+			//выбрать первую зону квеста
+			// Fix i scope, ilya_bisec 04.06.2026
+			for (i = 0; i < pZONES->GetAmountOfElements(); i++)
+			{
+				if ((*pZONES)[i]->InfID == _CZone00_)
+				{
+					pZ00 = reinterpret_cast<CZone00 *>((*pZONES)[i]);
+					break;
+				}
+			}
+			if( pZ00 && pZ00->ZoneName.str ) 
+			{
 				int x = GetZoneXbyName(pZ00->ZoneName.str) ;
 				int y = GetZoneYbyName(pZ00->ZoneName.str) ;
-				AddPulseBox(x, y);   }
+				AddPulseBox(x, y);   
+			}
 		}
 	}
 }
