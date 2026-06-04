@@ -1,0 +1,2 @@
+﻿  StdAfx.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IntExplorer\StdAfx.cpp(1,1): error C1041: cannot open program database 'D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\_debug\vc143.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
