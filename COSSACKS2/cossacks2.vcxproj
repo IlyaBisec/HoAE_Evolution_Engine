@@ -352,6 +352,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <PrecompiledHeaderFile>stdheader.h</PrecompiledHeaderFile>
       <LanguageStandard_C>Default</LanguageStandard_C>
       <RemoveUnreferencedCodeData>false</RemoveUnreferencedCodeData>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 /FIXED:NO ..\lib\diaguids.lib ..\lib\diaguidsd.lib %(AdditionalOptions)</AdditionalOptions>
