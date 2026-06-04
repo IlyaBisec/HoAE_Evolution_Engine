@@ -5,8 +5,11 @@
 
 class DString;
 class DIALOGS_API DString{
-protected:
+public:
 	char* str;
+	// for  access protected member DString::str, ilya_bisec 04.06.2026
+	// const char* GetStr() const;
+	// char *GetStr();
 public:		
 	int L;
 	int MaxL;
