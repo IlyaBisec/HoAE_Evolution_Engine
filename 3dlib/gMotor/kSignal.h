@@ -7,7 +7,7 @@
 #ifndef __KSIGNAL_H__
 #define __KSIGNAL_H__
 
-#include "..\boost\boost\signal.hpp"
+#include <vector>
 #include <functional>
 
 class BaseFunctor
@@ -32,23 +32,50 @@ public:
     }
 }; // class Functor
 
-class Signal : public boost::signal0<void>
+// Replace boost::signal with std::function based implementation
+// ilya_bisec 04.06.2026
+class Signal
 {
 public:
+    // typedef std::function<void()> Func; 2006 version
+    using Func = std::function<void()>;
+
+    // Connect object member function
     template <class T> void Connect( T* obj, void (T::*call)() )
     {
-        connect( Functor<T>( obj, call ) );
+        m_slots.push_back([=]() {
+            (obj->*call)();
+            });
     }
 
+    // Connect std::function
+    void Connect(Func f)
+    {
+        m_slots.push_back(f);
+    }
+
+    // Connect generic functor
     template <class T> void Connect( const T& functor )
     {
-        connect( functor ); 
+        m_slots.push_back(functor);
     }
 
+    // Emit signal
+    void operator()()
+    {
+        for (auto &f : m_slots)
+            f();
+    }
+
+    // Remove all connections
     void DisconnectAll()
     {
-        disconnect_all_slots();
+        m_slots.clear();
     }
+
+private:
+    // Registered callbacks
+    std::vector<Func> m_slots;
 }; // class Signal
 
 #endif // __KSIGNAL_H__
