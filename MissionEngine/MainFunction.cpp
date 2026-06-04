@@ -286,7 +286,7 @@ void	createDefenderArmy(byte NI,SARMY_DESCRIPTION* pAA,SARMY_DESCRIPTION* pDA,Cl
 			addTNbyRATE(&Pehota,	&curUnits,curRate);
 			addTNbyRATE(&Kavaleriya,&curUnits,curRate);
 		}
-		for ( r=0; r<pP->GetAmount(); r++ ){
+		for (int r=0; r<pP->GetAmount(); r++){
 			if (r == pP->GetAmount()-1){
 				addTNbyRATE(&Pehota,	&curUnits,100);
 				addTNbyRATE(&Kavaleriya,&curUnits,100);
@@ -359,7 +359,7 @@ void	createDefenderArmy(byte NI,SARMY_DESCRIPTION* pAA,SARMY_DESCRIPTION* pDA,Cl
 			addTNbyRATE(&Pehota,	&curUnits,curRate);
 			addTNbyRATE(&Kavaleriya,&curUnits,curRate);
 		}
-		for ( r=0; r<pP->GetAmount(); r++ ){
+		for (int r=0; r<pP->GetAmount(); r++){
 			if (r == pP->GetAmount()-1){
 				addTNbyRATE(&Pehota,	&curUnits,100);
 				addTNbyRATE(&Kavaleriya,&curUnits,100);
