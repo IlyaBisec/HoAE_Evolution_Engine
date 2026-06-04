@@ -1,0 +1,925 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  KillEnemy00.cpp
+  MissionInit.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'Quests/KillEnemy00.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'Quests/KillEnemy00.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'Quests/KillEnemy00.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'Quests/KillEnemy00.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'Quests/KillEnemy00.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
+  (compiling source file 'Quests/KillEnemy00.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
+      see previous definition of 'AddMessageMM'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(112,44): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(113,44): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(143,44): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(144,44): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(169,45): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(170,45): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(191,57): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(192,42): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(204,57): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(205,45): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(206,45): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(247,59): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(248,47): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(249,47): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(264,50): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(265,50): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(268,49): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(272,39): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(332,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(333,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(345,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(346,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(353,47): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(354,47): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(361,67): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(362,45): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(363,45): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(369,39): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(394,49): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(395,49): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(397,48): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(401,22): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(459,57): error C2065: 'i': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(460,30): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(461,42): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(462,42): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(413,44): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(416,34): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(417,21): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(418,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(419,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(420,10): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\Quests\KillEnemy00.cpp(422,8): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'MissionInit.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'MissionInit.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'MissionInit.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'MissionInit.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MissionInit.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
+  (compiling source file 'MissionInit.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
+      see previous definition of 'AddMessageMM'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MissionInit.cpp(139,35): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MissionInit.cpp(204,37): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MissionInit.cpp(234,37): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MissionInit.cpp(274,68): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MissionInit.cpp(323,34): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MissionInit.cpp(436,27): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+  MainFunction.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'MainFunction.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'MainFunction.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'MainFunction.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'MainFunction.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainFunction.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
+  (compiling source file 'MainFunction.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
+      see previous definition of 'AddMessageMM'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(36,53): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(49,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(172,53): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(186,66): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(238,51): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(241,42): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(289,9): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(289,14): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(289,33): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(290,8): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(295,38): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(295,4): error C2661: 'CreateHeroArmy': no overloaded function takes 2 arguments
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(295,4):
+      while trying to match the argument list '(byte, ClassArray<CTYPENUM> *)'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(362,9): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(362,14): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(362,33): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(363,8): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(368,38): error C2065: 'r': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(368,4): error C2661: 'CreateHeroArmy': no overloaded function takes 2 arguments
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(368,4):
+      while trying to match the argument list '(byte, ClassArray<CTYPENUM> *)'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(393,51): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(396,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(397,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(398,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(448,59): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(511,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(512,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(513,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(515,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(517,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(518,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(552,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(554,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(559,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(560,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(720,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainFunction.cpp(735,57): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+  MainEngine.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'MainEngine.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'MainEngine.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'MainEngine.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'MainEngine.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file 'MainEngine.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
+  (compiling source file 'MainEngine.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
+      see previous definition of 'AddMessageMM'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(255,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(259,43): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(358,67): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(362,67): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(468,59): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(485,59): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(668,36): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(219,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(237,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(268,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(594,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(595,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(596,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(607,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(608,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(609,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(623,39): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(626,30): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(627,17): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(628,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(629,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(630,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(632,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(755,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(859,16): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(860,13): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(896,51): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(897,51): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(898,35): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(899,18): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(921,7): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(976,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(1096,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(1120,8): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(1140,8): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(1162,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  MainClass.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
+  (compiling source file '../../MissionEngine/MainClass.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
+      see previous definition of 'AddMessageMM'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainClass.cpp(33,48): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainClass.cpp(34,48): error C2248: 'DString::str': cannot access protected member declared in class 'DString'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(9,8):
+      see declaration of 'DString::str'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\DString.h(7,19):
+      see declaration of 'DString'
+  
+  Generating Code...

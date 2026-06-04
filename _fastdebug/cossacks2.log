@@ -1,3 +1,2 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(534,5): warning MSB8028: промежуточный каталог (.\../_fastdebug\) содержит файлы, которые используются совместно с другим проектом (cossacks2.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  PeerClass.cpp
-  cossacks2.vcxproj -> D:\SrcRep\data\engine.exe
+﻿D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (.\../_fastdebug\) contains files shared from another project (cossacks2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  cossacks2.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\data\engine.exe

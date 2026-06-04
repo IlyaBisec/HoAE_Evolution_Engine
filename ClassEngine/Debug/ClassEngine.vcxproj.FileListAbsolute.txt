@@ -1,1 +1,2 @@
 D:\SrcRep\0000NEO\ClassEngine\Debug\ClassEngine.exe
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\Debug\ClassEngine.exe

@@ -1,5 +1,5 @@
 ﻿  gPhysics_pch.cpp
   Unknown compiler version - please run the configure tests and report the results
   sgPhysics.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1573,5): warning MSB8012: TargetPath(D:\SrcRep\0000NEO\_debug\gPhysics\gPhysics.lib) не соответствует значению свойства выходного файла (D:\SrcRep\0000NEO\lib\gPhysics.lib) для Library. Это может привести к неправильной сборке проекта. Чтобы исправить это, убедитесь, что значения свойств $(OutDir), $(TargetName) и $(TargetExt) соответствуют значению, указанному в %(Lib.OutputFile).
-  gPhysics.vcxproj -> D:\SrcRep\0000NEO\_debug\gPhysics\gPhysics.lib
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1554,5): warning MSB8012: TargetPath(D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\_debug\gPhysics\gPhysics.lib) does not match the Library's OutputFile property value (D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\lib\gPhysics.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  gPhysics.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\_debug\gPhysics\gPhysics.lib

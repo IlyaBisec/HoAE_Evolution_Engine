@@ -1,0 +1,18 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  stdafx.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1234,18): warning C4273: 'DrawFilledRect3': inconsistent dll linkage
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\DrawForm.h(58,6):
+      see previous definition of 'DrawFilledRect3'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\SquareObject.h(1,23): warning C4273: 'IRS': inconsistent dll linkage
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\IRenderSystem.h(562,35):
+      see previous definition of 'IRS'
+  
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  VAI.cpp
+  RPG.cpp
+  Moderator.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file '..\..\lib\engine.lib'

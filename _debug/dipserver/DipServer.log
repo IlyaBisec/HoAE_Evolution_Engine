@@ -1,18 +1,420 @@
-﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
-  Settlement.cpp
-  Script.cpp
-  ParseRQ.cpp
-  Mind.cpp
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   DiplomacySystem.cpp
-  DipServer.cpp
-  DipMain.cpp
-  DipInit.cpp
-  DIP_SimpleBuilding.cpp
-  CityPopulation.cpp
-  BattleDialogs.cpp
-  BasicDiploRelation.cpp
-  Создание кода...
-  LINK : не найден или не выполнена сборка ..\..\data\DipServer.dll при последней инкрементной компоновке; выполняется полная компоновка
-AForm.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/SAFESEH"
-     Создается библиотека ..\lib\DipServer.lib и объект ..\lib\DipServer.exp
-  DipServer.vcxproj -> D:\SrcRep\data\DipServer.dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(240,16): error C2011: 'sockaddr': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(482,8):
+      see declaration of 'sockaddr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(442,5): error C2143: syntax error: missing '}' before 'constant'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(442,5): error C2059: syntax error: 'constant'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(496,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2def.h(638,16): error C2011: 'sockaddr_in': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(309,8):
+      see declaration of 'sockaddr_in'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(136,16): error C2011: 'fd_set': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(65,16):
+      see declaration of 'fd_set'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(180,8): error C2011: 'timeval': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(108,8):
+      see declaration of 'timeval'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(236,9): error C2011: 'hostent': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(164,9):
+      see declaration of 'hostent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(249,9): error C2011: 'netent': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(177,9):
+      see declaration of 'netent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(256,9): error C2011: 'servent': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(184,9):
+      see declaration of 'servent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(268,9): error C2011: 'protoent': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(196,9):
+      see declaration of 'protoent'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(364,16): error C2011: 'WSAData': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(319,16):
+      see declaration of 'WSAData'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(462,8): error C2011: 'sockproto': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(491,8):
+      see declaration of 'sockproto'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(504,9): error C2011: 'linger': 'struct' type redefinition
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(528,9):
+      see declaration of 'linger'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1631,1): error C2375: 'accept': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(739,19):
+      see declaration of 'accept'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1653,1): error C2375: 'bind': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(744,16):
+      see declaration of 'bind'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1674,1): error C2375: 'closesocket': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(749,16):
+      see declaration of 'closesocket'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1691,1): error C2375: 'connect': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(751,16):
+      see declaration of 'connect'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1712,1): error C2375: 'ioctlsocket': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(756,16):
+      see declaration of 'ioctlsocket'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1735,1): error C2375: 'getpeername': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(761,16):
+      see declaration of 'getpeername'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1756,1): error C2375: 'getsockname': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(766,16):
+      see declaration of 'getsockname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1777,1): error C2375: 'getsockopt': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(771,16):
+      see declaration of 'getsockopt'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1802,1): error C2375: 'htonl': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(778,19):
+      see declaration of 'htonl'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1819,1): error C2375: 'htons': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(780,20):
+      see declaration of 'htons'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1837,1): error C2375: 'inet_addr': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(782,26):
+      see declaration of 'inet_addr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1855,1): error C2375: 'inet_ntoa': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(784,23):
+      see declaration of 'inet_ntoa'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1955,1): error C2375: 'listen': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(786,16):
+      see declaration of 'listen'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1974,1): error C2375: 'ntohl': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(790,19):
+      see declaration of 'ntohl'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(1991,1): error C2375: 'ntohs': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(792,20):
+      see declaration of 'ntohs'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2008,1): error C2375: 'recv': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(794,16):
+      see declaration of 'recv'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2031,1): error C2375: 'recvfrom': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(800,16):
+      see declaration of 'recvfrom'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2058,1): error C2375: 'select': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(808,16):
+      see declaration of 'select'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2083,1): error C2375: 'send': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(815,16):
+      see declaration of 'send'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2106,1): error C2375: 'sendto': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(821,16):
+      see declaration of 'sendto'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2133,1): error C2375: 'setsockopt': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(829,16):
+      see declaration of 'setsockopt'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2158,1): error C2375: 'shutdown': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(836,16):
+      see declaration of 'shutdown'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2178,1): error C2375: 'socket': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(840,19):
+      see declaration of 'socket'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2203,1): error C2375: 'gethostbyaddr': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(847,33):
+      see declaration of 'gethostbyaddr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2225,1): error C2375: 'gethostbyname': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(852,33):
+      see declaration of 'gethostbyname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2242,1): error C2375: 'gethostname': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(854,16):
+      see declaration of 'gethostname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2282,1): error C2375: 'getservbyport': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(858,33):
+      see declaration of 'getservbyport'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2301,1): error C2375: 'getservbyname': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(862,33):
+      see declaration of 'getservbyname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2320,1): error C2375: 'getprotobynumber': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(866,34):
+      see declaration of 'getprotobynumber'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2337,1): error C2375: 'getprotobyname': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(868,34):
+      see declaration of 'getprotobyname'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2357,1): error C2375: 'WSAStartup': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(872,16):
+      see declaration of 'WSAStartup'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2377,1): error C2375: 'WSACleanup': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(876,16):
+      see declaration of 'WSACleanup'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2394,1): error C2375: 'WSASetLastError': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(878,17):
+      see declaration of 'WSASetLastError'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2411,1): error C2375: 'WSAGetLastError': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(880,16):
+      see declaration of 'WSAGetLastError'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2432,1): error C2375: 'WSAIsBlocking': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(882,17):
+      see declaration of 'WSAIsBlocking'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2450,1): error C2375: 'WSAUnhookBlockingHook': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(884,16):
+      see declaration of 'WSAUnhookBlockingHook'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2468,1): error C2375: 'WSASetBlockingHook': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(886,20):
+      see declaration of 'WSASetBlockingHook'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2486,1): error C2375: 'WSACancelBlockingCall': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(888,16):
+      see declaration of 'WSACancelBlockingCall'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2504,1): error C2375: 'WSAAsyncGetServByName': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(890,19):
+      see declaration of 'WSAAsyncGetServByName'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2532,1): error C2375: 'WSAAsyncGetServByPort': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(898,19):
+      see declaration of 'WSAAsyncGetServByPort'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2560,1): error C2375: 'WSAAsyncGetProtoByName': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(906,19):
+      see declaration of 'WSAAsyncGetProtoByName'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2586,1): error C2375: 'WSAAsyncGetProtoByNumber': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(913,19):
+      see declaration of 'WSAAsyncGetProtoByNumber'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2612,1): error C2375: 'WSAAsyncGetHostByName': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(920,19):
+      see declaration of 'WSAAsyncGetHostByName'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2638,1): error C2375: 'WSAAsyncGetHostByAddr': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(927,19):
+      see declaration of 'WSAAsyncGetHostByAddr'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2668,1): error C2375: 'WSACancelAsyncRequest': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(936,16):
+      see declaration of 'WSACancelAsyncRequest'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(2686,1): error C2375: 'WSAAsyncSelect': redefinition; different linkage
+  (compiling source file 'DiplomacySystem.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winsock.h(938,16):
+      see declaration of 'WSAAsyncSelect'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(4318,1): error C2059: syntax error: '}'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WinSock2.h(4318,1): error C2143: syntax error: missing ';' before '}'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2ipdef.h(42,12): error C2143: syntax error: missing ';' before '{'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\shared\ws2ipdef.h(42,12): error C2447: '{': missing function header (old-style formal list?)
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(733,10): error C2061: syntax error: identifier 'MULTICAST_MODE_TYPE'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(740,5): error C2065: 'PIP_MSFILTER': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(740,18): error C2146: syntax error: missing ';' before identifier 'Filter'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(740,18): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(742,9): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(743,40): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(743,60): error C2065: 'SourceList': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(748,12): error C2065: 'IP_MSFILTER': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(748,12): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(749,5): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(749,15): error C2065: 'PIP_MSFILTER': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(749,29): error C2146: syntax error: missing ';' before identifier 'HeapAlloc'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(750,9): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(755,5): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(756,5): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(757,5): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(757,26): error C2065: 'FilterMode': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(758,5): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(758,27): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(759,9): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(760,9): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(760,9): error C2065: 'SourceList': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(760,9): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(760,9): error C2660: 'memcpy': function does not take 2 arguments
+  (compiling source file 'DiplomacySystem.cpp')
+      D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.42.34433\include\vcruntime_string.h(43,15):
+      see declaration of 'memcpy'
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(760,9):
+      while trying to match the argument list '()'
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(764,47): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(767,35): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(779,11): error C2061: syntax error: identifier 'MULTICAST_MODE_TYPE'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(786,5): error C2065: 'PIP_MSFILTER': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(786,18): error C2146: syntax error: missing ';' before identifier 'Filter'
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(786,18): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(788,10): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(789,40): error C2065: 'Filter': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(789,60): error C2065: 'SourceList': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(794,12): error C2065: 'IP_MSFILTER': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(794,12): error C2065: 'SourceCount': undeclared identifier
+  (compiling source file 'DiplomacySystem.cpp')
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\WS2tcpip.h(794,12): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file 'DiplomacySystem.cpp')
+  
