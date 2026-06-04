@@ -3,9 +3,9 @@
 
 #include "StdAfx.h"
 
-#define free _ExFree
-#define malloc _ExMalloc
-#define realloc _ExRealloc
+//#define free _ExFree
+//#define malloc _ExMalloc
+//#define realloc _ExRealloc
 
 #define DLLEXPORT extern "C" __declspec(dllexport)
 #define DLLIMPORT extern "C" __declspec(dllimport)
@@ -764,11 +764,12 @@ CIMPORT Polk* GetPolkByIndex(int PIndex);//
 CIMPORT
 void LineRGB(int x,int y,int x1,int y1,DWORD Color); // RGB(r,g,b)+0xFF000000
 
-typedef tpDrawOnMiniMapCallback(int x,int y,int Lx,int Ly,int mx0,int my0);
+
+typedef void (*tpDrawOnMiniMapCallback)(int x, int y,int Lx,int Ly,int mx0,int my0);
 CIMPORT 
 tpDrawOnMiniMapCallback* SetDrawOnMiniMapCallback(tpDrawOnMiniMapCallback* dc);
 
-typedef tpDrawOnMapCallback();
+typedef void (*tpDrawOnMapCallback)();
 CIMPORT
 tpDrawOnMapCallback* SetDrawOnMapCallback(tpDrawOnMapCallback* dc);
 
@@ -791,7 +792,7 @@ int	gDrawOnMiniMap(int x,int y,int Lx,int Ly,int mx0,int my0);
 //***********************************************************************************
 
 
-#define REG(x)   RegisterVar(&##x,sizeof x)
+#define REG(x) RegisterVar(&(x), sizeof(x))
 #define WOOD	0
 #define GOLD	1
 #define STONE	2
