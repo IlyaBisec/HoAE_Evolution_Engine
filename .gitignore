@@ -52,3 +52,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/.vs
+/_debug
+/_debug
+/_debug/dipserver
+/_fastdebug
+/_release
