@@ -8,10 +8,12 @@
 #include "IResourceManager.h"
 #include "kFilePath.h"
 #include "kStaticArray.hpp"
-#define  BOOST_WINDOWS
-#include "boost/filesystem/operations.hpp"
-#include "boost/filesystem/path.hpp"
 
+// Erase boost requirements, ilya_bisec 04.06.2026
+#include <windows.h>
+#include <string>
+#include <vector>
+#include <algorithm>
 
 /*****************************************************************/
 /*  Struct:  MountEntry
@@ -125,7 +127,7 @@ DIALOGS_API IResourceManager*   IRM = GetResourceManager();
 ResourceManager::ResourceManager()
 {
     char cwd[_MAX_PATH];
-    m_HomeDir = _getcwd( cwd, _MAX_PATH );
+    m_HomeDir = _getcwd(cwd, _MAX_PATH);
 
 } // ResourceManager::ResourceManager
 
@@ -156,100 +158,206 @@ bool ResourceManager::MountDataSource(  const char* sourcePath,
     return false;
 } // ResourceManager::MountDataSource
 
-typedef boost::filesystem::path bpath;
-typedef boost::filesystem::directory_iterator BDirIter;
-
-bool find_file( const bpath& dir_path, const std::string& file_name, bpath& path_found )        
+// Check if file exists in filesystem
+// ilya_bisec 04.06.2026
+static bool FileExists(const std::string &path)
 {
-    if (!boost::filesystem::exists( dir_path )) return false;
-    BDirIter end_itr; 
-    for (BDirIter itr( dir_path ); itr != end_itr; ++itr)
+    DWORD attr = GetFileAttributesA(path.c_str());
+    return (attr != INVALID_FILE_ATTRIBUTES);
+}
+
+
+// Case-insensitive string compare (replacement for stricmp)
+// used for resource name matching independent of case
+// ilya_bisec 04.06.2026
+static bool Iequals(const std::string &a, const std::string &b)
+{
+    if (a.size() != b.size())
+        return false;
+
+    for (size_t i = 0; i < a.size(); i++)
     {
-        if (boost::filesystem::is_directory( *itr ))
-        {
-            if (find_file( *itr, file_name, path_found )) return true;
-        }
-        else if (!stricmp( itr->leaf().c_str(), file_name.c_str() ))
-        {
-            path_found = *itr;
-            return true;
-        }
+        if (tolower(a[i]) != tolower(b[i]))
+            return false;
     }
+    return true;
+}
+
+// Recursive file search in directory tree
+// NOTE: replaces boost::filesystem directory_iterator
+// ilya_bisec 04.06.2026
+bool find_file(const std::string &dir_path, const std::string &file_name, std::string &path_found)
+{
+    WIN32_FIND_DATA data;
+    std::string search_path = dir_path;
+
+    // Add wildcard mask for directory scan
+    if (!search_path.empty() && search_path.back() != '\\')
+    {
+        search_path += "\\";
+    }
+
+    search_path += "*";
+
+    HANDLE hFind = FindFirstFileA(search_path.c_str(), &data);
+    if (hFind == INVALID_HANDLE_VALUE)
+        return false;
+
+    do
+    {
+        std::string name = data.cFileName;
+
+        // Skip system entries "." and ".."
+        if (name == "." || name == "..")
+            continue;
+
+        // Build full path for current entry
+        std::string full_path = dir_path;
+        if (!full_path.empty() && full_path.back() != '\\')
+            full_path += "\\";
+
+        full_path += name;
+
+        // Directory -> go deeper (recursive scan)
+        if (data.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+        {
+            if (find_file(full_path, file_name, path_found))
+            {
+                FindClose(hFind);
+                return true;
+            }
+        }
+        else
+        {
+            // File match (case-insensitive)
+            if (Iequals(name, file_name))
+            {
+                path_found = full_path;
+                FindClose(hFind);
+                return true;
+            }
+        }
+    } while (FindNextFileA(hFind, &data));
+
+    FindClose(hFind);
     return false;
+
 } // find_file
 
+// Replace boost methods on std + WinAPI
+// ilya_bisec 04.06.2026
 int ResourceManager::FindResource( const char* resName )
 {
     char cwd[_MAX_PATH];
-    _getcwd( cwd, _MAX_PATH );
+    _getcwd(cwd, _MAX_PATH);
 
-    //  search whether there already is such resource
+    std::string p_cur = cwd;
+    std::string p_res = resName;
+    std::string p_home = m_HomeDir;
+
+    //  Search whether there already is such resource
     for (int i = 0; i < m_Resources.size(); i++)
     {
-        if (!strcmp( resName, m_Resources[i].m_Name.c_str() )) return i;
+        if (!strcmp( resName, m_Resources[i].m_Name.c_str() )) 
+            return i;
     }
-    //  search through mount entries
+
+    // Helper: checking file existence
+    auto FileExists = [](const std::string &path) -> bool
+    {
+            DWORD attr = GetFileAttributesA(path.c_str());
+            return (attr != INVALID_FILE_ATTRIBUTES &&
+                !(attr & FILE_ATTRIBUTE_DIRECTORY));
+    };
+
+    // Helper: path join
+    auto MakePath = [](const std::string &base, const std::string &file) -> std::string
+    {
+            if (file.size() > 2 && file[1] == ':')
+                return file; // Absolute path
+
+            std::string result = base;
+            if (!result.empty() && result.back() != '\\')
+                result += "\\";
+
+            result += file;
+            return result;
+    };
+
+    //  Search through mount entries
     for (int i = 0; i < m_MountEntries.size(); i++)
     {
         const MountEntry& me = m_MountEntries[i];
-        if (me.m_SourceType == dstDirectory)
+
+        if (me.m_SourceType != dstDirectory)
+            continue;
+
+        try
         {
-            bool bExists = false;            
-            try{
-                bpath p_cur ( cwd,               boost::filesystem::native );
-                bpath p_res ( resName,           boost::filesystem::native );
-                bpath p_home( m_HomeDir.c_str(), boost::filesystem::native );
+            bool bExists = false;
+            std::string p_root;
 
-                bpath p_root = boost::filesystem::complete( p_res, p_cur );
+            // Current directory
+            p_root = MakePath(p_cur, resName);
+            if (FileExists(p_root))
+            {
+                bExists = true;
+            }
 
-                //  look in current directory
-                if (boost::filesystem::exists( p_root ))
+            // Home 
+            if(!bExists)
+            {
+                p_root = MakePath(p_home, resName);
+                if (FileExists(p_root))
                 {
                     bExists = true;
                 }
-                //  look at full path from home directory
-                else 
-                {
-                    p_root = boost::filesystem::complete( p_res, p_home );
-                    if (boost::filesystem::exists( p_root )) 
-                    {
-                        bExists = true;
-                    }
-                    else
-                    {
-                        bpath p_mdir = boost::filesystem::complete( me.m_SourcePath, p_home );
-                        p_root = boost::filesystem::complete( p_res, p_mdir );
-                        if (boost::filesystem::exists( p_root )) 
-                        {
-                            bExists = true;
-                        }
-                    }
-                }
-            
-                if (bExists)
-                {
-                    ResourceInstance res;
-                    FilePath srcPath( p_root.native_file_string().c_str() );
-                    res.m_FullPath      = srcPath.GetFullPath();
-                    srcPath.SetFileName ( "" );
-                    srcPath.SetExt      ( "" );
-                    res.m_ID            = m_Resources.size();
-                    res.m_Name          = resName;
-                    res.m_MountEntry    = i;
-                    res.m_SourcePath    = srcPath.GetFullPath();
-                    m_Resources.push_back( res );
-					_chdir( GetHomeDirectory() );
-                    return res.m_ID;
-                }
             }
-            catch (...) 
+
+            // Mount directory
+            if (!bExists)
             {
-                _chdir( GetHomeDirectory() );
-                return -1;
+                std::string p_mdir = MakePath(m_HomeDir, me.m_SourcePath);
+                p_root = MakePath(p_mdir, resName);
+
+                if (FileExists(p_root))
+                {
+                    bExists = true;
+                }
             }
+            // Skip if not found in any location
+            if (!bExists)
+                continue;
+
+            // Create resource entry
+            ResourceInstance res;
+
+            FilePath srcPath( p_root.c_str());
+
+            res.m_FullPath      = srcPath.GetFullPath();
+
+            srcPath.SetFileName ( "" );
+            srcPath.SetExt      ( "" );
+
+            res.m_ID            = m_Resources.size();
+            res.m_Name          = resName;
+            res.m_MountEntry    = i;
+            res.m_SourcePath    = srcPath.GetFullPath();
+
+            m_Resources.push_back( res );
+
+			_chdir(GetHomeDirectory());
+            return res.m_ID;
+            
         }
+        catch (...) 
+        {
+            _chdir(GetHomeDirectory());
+            return -1;
+        }
+        
     }
-    _chdir( GetHomeDirectory() );
+    _chdir(GetHomeDirectory());
     return -1;
 } // ResourceManager::FindResource
 
