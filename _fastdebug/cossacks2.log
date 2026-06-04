@@ -1,6 +1,4 @@
-﻿D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (.\../_fastdebug\) contains files shared from another project (cossacks2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  stdheader.cpp
-  Unknown compiler version - please run the configure tests and report the results
+﻿  stdheader.cpp
   3DBars.cpp
   3DGraph.cpp
   3DGroundModels.cpp
@@ -11,6 +9,8 @@
   ActiveScenary.cpp
   ActiveScenary2.cpp
   ActiveZone.cpp
+  ai_router.cpp
+  ai_scripts.cpp
   Alarm.cpp
   AlertOnMiniMap.cpp
   AlexVisualSystem.cpp
@@ -18,187 +18,31 @@
   AntiBug.cpp
   AttackList.cpp
   AutoActions.cpp
+  BattlePainter.cpp
   BE_Block.cpp
   BE_Global.cpp
+  be_HashTop.cpp
+  be_Import.cpp
   BE_ToolsManager.cpp
   BE_Value.cpp
-  BattlePainter.cpp
-  BrigAITools.cpp
+  bmptool.cpp
   Brigade.cpp
-  BrigadeAI.cpp
   BrigadeAbilityExtension.cpp
+  BrigadeAI.cpp
   BrigadeOrders.cpp
   BrigadeVariables.cpp
+  BrigAITools.cpp
   Build.cpp
-  CPlayerSAVE.cpp
   Navigator.cpp
   Track.cpp
   Cdirsnd.cpp
+  cext_VisualInterface.cpp
   CheckFileEnumerator.cpp
   ClassEditor.cpp
   ClassEditorsRegistration.cpp
   ComplexShooter.cpp
+  CPlayerSAVE.cpp
   CurrentMapOptions.cpp
-  Danger.cpp
-  Ddini.cpp
-  Debuger.cpp
-  DeviceCD.cpp
-  DialogsEditor.cpp
-  CQuest.cpp
-  MissionScript.cpp
-  DrawForms.cpp
-  DrawSomethingOverBrigade.cpp
-  Economy.cpp
-  EinfoClass.cpp
-  EndGameExt.cpp
-  EngineSettings.cpp
-  ExMapGenerator.cpp
-  Factures3D.cpp
-  FantasyAI.cpp
-  FastMemPool.cpp
-  Fastdraw.cpp
-  FileDialog.cpp
-  FilePreview.cpp
-  FireSmokeEditor.cpp
-  FlexBisonParser.cpp
-  Fractal.cpp
-  FunctionStorage.cpp
-  GP_Draw.cpp
-  GVClass.cpp
-  GameExtension.cpp
-  GameInterface.cpp
-  GameSettings.cpp
-  GameSound.cpp
-  GlobalActions.cpp
-  Globals.cpp
-  Graphs.cpp
-  GroundPieces.cpp
-  GroupPurpose.cpp
-  GroupeOperations.cpp
-  Groups.cpp
-  HeroFunctions.cpp
-  Hint.cpp
-  Html.cpp
-  IconTool.cpp
-  IR_Main.cpp
-  Interface.cpp
-  LUA_Manager.cpp
-  LinearTest.cpp
-  Lines.cpp
-  ListUnit.cpp
-  LoadSave.cpp
-  binde_class.cpp
-  binde_class2.cpp
-  binde_function.cpp
-  MPlayer.cpp
-  MainInterface.cpp
-  MapDownload.cpp
-  MapGenerator.cpp
-  MapSprites.cpp
-  Masks.cpp
-  Megapolis.cpp
-  MessageMgr.cpp
-  Mine.cpp
-  MiniMap4X.cpp
-  MissGraphObjects.cpp
-  Morale.cpp
-  MousZone.cpp
-  Mouse_X.cpp
-  Multi.cpp
-  Musorozbornik.cpp
-  Nation.cpp
-  Nature.cpp
-  Navorots.cpp
-  NewAI.cpp
-  NewILogin.cpp
-  NewInternetReport.cpp
-  NewMon.cpp
-  NewUpgrade.cpp
-  Nuclear.cpp
-  OnWater.cpp
-  ParamFunction.cpp
-  Particles.cpp
-  PeerClass.cpp
-  PiroObjects.cpp
-  PlaceInAJob.cpp
-  SampProfiler.cpp
-  ProfilingInstrument.cpp
-  QParser.cpp
-  QuadsRenderer.cpp
-  RealWater.cpp
-  Recorder.cpp
-  RegisterSuperEditorClasses.cpp
-  Report.cpp
-  River.cpp
-  SafeNet.cpp
-  SaveNewMap.cpp
-  Save_XML_ToMap.cpp
-  Scape3D.cpp
-  SelProp.cpp
-  Select.cpp
-  ShipTrace.cpp
-  Silomer.cpp
-  SpraySystem.cpp
-  SquareObject.cpp
-  StrategyResearch.cpp
-  Subtitles.cpp
-  SuperEditor.cpp
-  Archway.cpp
-  Booleans.cpp
-  Chamfer.cpp
-  CmdCallbacks.cpp
-  CmdExt.cpp
-  CollidingCamera.cpp
-  Colorize.cpp
-  Deform.cpp
-  Facturize.cpp
-  HiResScreenShot.cpp
-  ITGeometryCallback.cpp
-  Layer.cpp
-  LocalExporter.cpp
-  LocalGenerator.cpp
-  MCubes.cpp
-  Manipulators.cpp
-  Messager.cpp
-  Racist.cpp
-  Scissors.cpp
-  Shader.cpp
-  Smooth.cpp
-  SurfExporter.cpp
-  SurfPiece.cpp
-  SurfProcess.cpp
-  SurfSplit.cpp
-  Surface.cpp
-  SurfaceGenerator.cpp
-  Typify.cpp
-  TacticalAI.cpp
-  TextVisualElements.cpp
-  Timing.cpp
-  Transport.cpp
-  TypeExchange.cpp
-  UnSyncro.cpp
-  UnitAI.cpp
-  UnitAbility.cpp
-  UnitAbilityExtension.cpp
-  UnitChar.cpp
-  UnitTypeGroup.cpp
-  UnitsInterface.cpp
-  Upgrade.cpp
-  VUI_Info.cpp
-  VictoryConditions.cpp
-  VideoLayer.cpp
-  VideoScriptCommands.cpp
-  ViewProfile.cpp
-  VisualSoundSystem.cpp
-  Waves.cpp
-  Weapon.cpp
-  ZBuffer.cpp
-  ai_router.cpp
-  ai_scripts.cpp
-  be_HashTop.cpp
-  be_Import.cpp
-  bmptool.cpp
-  cext_VisualInterface.cpp
   cva_DeskArray.cpp
   cvi_Academy.cpp
   cvi_Alert.cpp
@@ -215,8 +59,60 @@
   cvi_RomeHelp.cpp
   cvi_SinglePlayerData.cpp
   cvi_UnitAbility.cpp
+  Danger.cpp
+  Ddini.cpp
+  Debuger.cpp
+  DeviceCD.cpp
+  DialogsEditor.cpp
+  CQuest.cpp
+  MissionScript.cpp
+  DrawForms.cpp
+  DrawSomethingOverBrigade.cpp
+  Economy.cpp
+  EinfoClass.cpp
+  EndGameExt.cpp
+  EngineSettings.cpp
+  ExMapGenerator.cpp
+  Factures3D.cpp
+  FantasyAI.cpp
+  Fastdraw.cpp
+  FastMemPool.cpp
+  FileDialog.cpp
+  FilePreview.cpp
+  FireSmokeEditor.cpp
+  FlexBisonParser.cpp
   fog.cpp
+  Fractal.cpp
+  FunctionStorage.cpp
+  GameExtension.cpp
+  GameInterface.cpp
+  GameSettings.cpp
+  GameSound.cpp
+  GlobalActions.cpp
+  Globals.cpp
+  GP_Draw.cpp
+  Graphs.cpp
+  GroundPieces.cpp
+  GroupeOperations.cpp
+  GroupPurpose.cpp
+  Groups.cpp
   gText.cpp
+  GVClass.cpp
+  HeroFunctions.cpp
+  Hint.cpp
+  Html.cpp
+  IconTool.cpp
+  IR_Main.cpp
+  Interface.cpp
+  LinearTest.cpp
+  Lines.cpp
+  ListUnit.cpp
+  LoadSave.cpp
+  binde_class.cpp
+  binde_class2.cpp
+  binde_function.cpp
+  LUA_Manager.cpp
+  MainInterface.cpp
   mai_Extension.cpp
   mai_Functions.cpp
   mai_Monitor.cpp
@@ -224,57 +120,237 @@
   mai_VanGuard.cpp
   mai_VanTroop.cpp
   mapa.cpp
+  MapDownload.cpp
+  MapGenerator.cpp
+  MapSprites.cpp
+  Masks.cpp
+  Megapolis.cpp
+  MessageMgr.cpp
+  Mine.cpp
+  MiniMap4X.cpp
+  MissGraphObjects.cpp
+  Morale.cpp
+  Mouse_X.cpp
+  MousZone.cpp
   PlayMP3.cpp
+  MPlayer.cpp
+  Multi.cpp
+  Musorozbornik.cpp
+  Nation.cpp
+  Nature.cpp
+  Navorots.cpp
+  NewAI.cpp
+  NewILogin.cpp
+  NewInternetReport.cpp
+  NewMon.cpp
+  NewUpgrade.cpp
+  Nuclear.cpp
+  OnWater.cpp
+  ParamFunction.cpp
+  Particles.cpp
   path.cpp
-  qStr.cpp
-  qUnitType.cpp
+  PeerClass.cpp
+  PiroObjects.cpp
+  PlaceInAJob.cpp
+  SampProfiler.cpp
+  ProfilingInstrument.cpp
   qfCondRandom.cpp
+  QParser.cpp
   qpChatHint.cpp
+  qStr.cpp
+  QuadsRenderer.cpp
+  qUnitType.cpp
+  RealWater.cpp
+  Recorder.cpp
+  RegisterSuperEditorClasses.cpp
+  Report.cpp
+  River.cpp
+  SafeNet.cpp
+  SaveNewMap.cpp
+  Save_XML_ToMap.cpp
+  Scape3D.cpp
+  Select.cpp
+  SelProp.cpp
+  ShipTrace.cpp
+  Silomer.cpp
+  SpraySystem.cpp
+  SquareObject.cpp
+  StrategyResearch.cpp
   stRecog.cpp
+  Subtitles.cpp
+  SuperEditor.cpp
+  Archway.cpp
+  Booleans.cpp
   CCombineExtension.cpp
+  Chamfer.cpp
+  CmdCallbacks.cpp
+  CmdExt.cpp
+  CollidingCamera.cpp
+  Colorize.cpp
+  Deform.cpp
+  Facturize.cpp
   Grass.cpp
+  HiResScreenShot.cpp
+  ITGeometryCallback.cpp
+  Layer.cpp
+  LocalExporter.cpp
+  LocalGenerator.cpp
+  Manipulators.cpp
+  MCubes.cpp
+  Messager.cpp
   Obj3D.cpp
   PropertyPanel.cpp
+  Racist.cpp
+  Scissors.cpp
   SelExt.cpp
+  Shader.cpp
+  Smooth.cpp
+  Surface.cpp
+  SurfaceGenerator.cpp
+  SurfExporter.cpp
+  SurfPiece.cpp
+  SurfProcess.cpp
+  SurfSplit.cpp
   TankController.cpp
+  Typify.cpp
   uv_Split.cpp
+  TacticalAI.cpp
   testserver.cpp
+  TextVisualElements.cpp
+  Timing.cpp
+  Transport.cpp
+  TypeExchange.cpp
   ua_Modificators.cpp
+  UnitAbility.cpp
+  UnitAbilityExtension.cpp
+  UnitAI.cpp
+  UnitChar.cpp
+  UnitsInterface.cpp
+  UnitTypeGroup.cpp
+  UnSyncro.cpp
+  Upgrade.cpp
+  VictoryConditions.cpp
+  VideoLayer.cpp
+  VideoScriptCommands.cpp
+  ViewProfile.cpp
+  VisualSoundSystem.cpp
   vi_MainMenu.cpp
   vui_Action.cpp
   vui_Effects.cpp
   vui_GlobalHotKey.cpp
-  vui_IS.cpp
+  VUI_Info.cpp
   vui_InterfSynchro.cpp
+  vui_IS.cpp
+  Waves.cpp
+  Weapon.cpp
+  ZBuffer.cpp
   Abilities.cpp
   AllTools.cpp
   AmbientMusicScript.cpp
+  ArchTool.cpp
+  GSCarch.cpp
+  GSCset.cpp
+  isiMasks.cpp
   BattleShipAI.cpp
-  Unknown compiler version - please run the configure tests and report the results
-  Unknown compiler version - please run the configure tests and report the results
-  Unknown compiler version - please run the configure tests and report the results
-  Unknown compiler version - please run the configure tests and report the results
+  BE_ExtarFunctions.cpp
+  PlayBink.cpp
+  c2_memory.cpp
+  ChkInet.cpp
+  cAngles.cpp
+  cAssert.cpp
+  cBounds.cpp
+  cColor.cpp
+  cData.cpp
+  cGrid.cpp
+  cHashIndex.cpp
+  cImage.cpp
+  cImageBmp.cpp
+  cImageDds.cpp
+  cImageTga.cpp
+  cInput.cpp
+  cIO.cpp
+  cIsoSurface.cpp
+  cLog.cpp
+  cMat2.cpp
+  cMat3.cpp
+  cMat4.cpp
+  cMaterial.cpp
+  cMath.cpp
+  cMatrix.cpp
+  cMesh.cpp
+  cMeshObj.cpp
+  cMoveTool.cpp
+  cQuat.cpp
+  cRawMesh.cpp
+  cRender.cpp
+  cRotateTool.cpp
+  cRotation.cpp
+  cScaleTool.cpp
+  cSeg.cpp
+  cSolver.cpp
+  cSphere.cpp
+  cStr.cpp
+  cVec.cpp
+  cVec2.cpp
+  cVec3.cpp
+  cVec4.cpp
+  cVectors.cpp
+  cViewer.cpp
+  cViewPort2.cpp
+  cWidget.cpp
+  dMatrix.cpp
+  dVector.cpp
+  ConstStr.cpp
+  Cwave.cpp
   Ddex1.cpp
   DrawFeatures.cpp
-  Unknown compiler version - please run the configure tests and report the results
-  Unknown compiler version - please run the configure tests and report the results
-  Language.cpp
-  MassivePlayer.cpp
-  Unknown compiler version - please run the configure tests and report the results
-  Unknown compiler version - please run the configure tests and report the results
-  MeshOperations.cpp
-  Unknown compiler version - please run the configure tests and report the results
-  SelectionRect.cpp
-  UndoMaster.cpp
-  Unknown compiler version - please run the configure tests and report the results
-  Unknown compiler version - please run the configure tests and report the results
+  DrawModels.cpp
+  ExConst.cpp
+  ExtDial.cpp
+  FallSimulator.cpp
+  FBI.cpp
+  FEXHelpers.cpp
+  FEXModule.cpp
+  FEXSysInfo.cpp
+  FMManager.cpp
+  D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gRenderDX9\dx9_sdk\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GenerateMesh.cpp
+  HiBars.cpp
+  HttpComm.cpp
   iPlaneTriangulator.cpp
-  Unknown compiler version - please run the configure tests and report the results
+  Language.cpp
+  script_callStack.cpp
+  script_debugger.cpp
+  script_debugger_threads.cpp
+  script_debugger_utils.cpp
+  script_file.cpp
+  script_lua_helper.cpp
+  MassivePlayer.cpp
+  mdParser.cpp
+  menu.cpp
+  MeshOperations.cpp
+  MoveToXY.cpp
+  oggvor.cpp
+  FPerformance.cpp
+  FSampProfilerHelpers.cpp
+  FSampProfilerOut.cpp
+  FXMLMessages.cpp
+  FXMLStream.cpp
+  Resfile.cpp
+  SelectionRect.cpp
+  StringsHash.cpp
+  bitset.cpp
+  TMixer.cpp
+  TreesMesh.cpp
+  UndoMaster.cpp
+  UnRar.cpp
+  Video.cpp
+  WTSupport.cpp
   FSMclass.cpp
   FSMmsg.cpp
   FSMstate.cpp
-  BE_Functions.cpp
   BaseVariables.cpp
+  BE_Functions.cpp
   ComplexFunction.cpp
   ComplexFunctionMode.cpp
   DataStorageXML.cpp
@@ -290,28 +366,195 @@
   BrigadeAbility.cpp
   HeroAbility.cpp
   Iterators.cpp
-  UnitAbility2.cpp
-  UnitAbilityIcon.cpp
-  WeaponSystem.cpp
-  WeaponSystemExtension.cpp
   ua_Ability.cpp
   ua_Item.cpp
   ua_Orders.cpp
   ua_Settlement.cpp
   ua_State.cpp
+  UnitAbility2.cpp
+  UnitAbilityIcon.cpp
+  WeaponSystem.cpp
+  WeaponSystemExtension.cpp
   ClassEngineTest.cpp
-  Unknown compiler version - please run the configure tests and report the results
+  cDib24.cpp
+  cWin32.cpp
+  SoftCollision.cpp
   Dialogs.cpp
-  Unknown compiler version - please run the configure tests and report the results
+  FSampProfiler.cpp
+  Relink.cpp
   FPathFinder.cpp
   HashTop.cpp
   HexagonalNet.cpp
   TopoGraf.cpp
   VUI_Actions.cpp
+  darray.c
+  hashtable.c
+  md5c.c
   nonport.c
   gbucket.c
   gstats.c
 cl : command line  warning D9002: ignoring unknown option '/Op'
   Mechanics.cpp
   SimplifyMesh.cpp
+     Creating library ..\lib\engine.lib and object ..\lib\engine.exp
+LINK : warning LNK4217: symbol '?SendDipCommand@@YAXPADH@Z (void __cdecl SendDipCommand(char *,int))' defined in 'Interface.obj' is imported by 'ActiveScenary.obj' in function '__catch$_CleanGroup$0'
+LINK : warning LNK4217: symbol '?IRM@@3PAVIResourceManager@@A (class IResourceManager * IRM)' defined in 'gMotorR.lib(kResourceManager.obj)' is imported by 'GSCset.obj' in function '"public: struct TGSCfile * __thiscall CGSCset::gWriteOpen(char const *)" (?gWriteOpen@CGSCset@@QAEPAUTGSCfile@@PBD@Z)'
+LINK : warning LNK4217: symbol '?SetCDVolume@@YAXH@Z (void __cdecl SetCDVolume(int))' defined in 'DeviceCD.obj' is imported by 'cvi_MainMenu.obj' in function '"public: bool __thiscall cvi_MainMenu::StartDS(char *,bool)" (?StartDS@cvi_MainMenu@@QAE_NPAD_N@Z)'
+LINK : warning LNK4286: symbol '?SetCDVolume@@YAXH@Z (void __cdecl SetCDVolume(int))' defined in 'DeviceCD.obj' is imported by 'VUI_Actions.obj'
+LINK : warning LNK4217: symbol '?GetCDVolume@@YAHXZ (int __cdecl GetCDVolume(void))' defined in 'DeviceCD.obj' is imported by 'cvi_MainMenu.obj' in function '"public: bool __thiscall cvi_MainMenu::StartDS(char *,bool)" (?StartDS@cvi_MainMenu@@QAE_NPAD_N@Z)'
+LINK : warning LNK4286: symbol '?GetCDVolume@@YAHXZ (int __cdecl GetCDVolume(void))' defined in 'DeviceCD.obj' is imported by 'DataStorageXML.obj'
+LINK : warning LNK4217: symbol '?GetXOnMiniMapEx@@YAHHH@Z (int __cdecl GetXOnMiniMapEx(int,int))' defined in 'ActiveScenary.obj' is imported by 'GroupPurpose.obj' in function '"void __cdecl DrawLastWayOnMinimap(void)" (?DrawLastWayOnMinimap@@YAXXZ)'
+LINK : warning LNK4217: symbol '?GetYOnMiniMapEx@@YAHHH@Z (int __cdecl GetYOnMiniMapEx(int,int))' defined in 'ActiveScenary.obj' is imported by 'GroupPurpose.obj' in function '"void __cdecl DrawLastWayOnMinimap(void)" (?DrawLastWayOnMinimap@@YAXXZ)'
+LINK : warning LNK4217: symbol '?GetFormationIndexBySizeIndex@@YAHEGE@Z (int __cdecl GetFormationIndexBySizeIndex(unsigned char,unsigned short,unsigned char))' defined in 'ActiveScenary.obj' is imported by 'Interface.obj' in function '__catch$?DrawSprThumbnail@@YA_NPAVSimpleDialog@@@Z$0'
+LINK : warning LNK4217: symbol '?PutNewFormationBySizeIndex@@YAHEGEHHE@Z (int __cdecl PutNewFormationBySizeIndex(unsigned char,unsigned short,unsigned char,int,int,unsigned char))' defined in 'ActiveScenary.obj' is imported by 'Interface.obj' in function '__catch$?DrawSprThumbnail@@YA_NPAVSimpleDialog@@@Z$0'
+LINK : warning LNK4217: symbol '?AddBrigadeToGroup@@YAXEPAUGAMEOBJ@@H@Z (void __cdecl AddBrigadeToGroup(unsigned char,struct GAMEOBJ *,int))' defined in 'ActiveScenary.obj' is imported by 'Interface.obj' in function '__catch$?DrawSprThumbnail@@YA_NPAVSimpleDialog@@@Z$0'
+LINK : warning LNK4217: symbol '?GetObjectBranch@@YAGG@Z (unsigned short __cdecl GetObjectBranch(unsigned short))' defined in 'ActiveScenary.obj' is imported by 'Interface.obj' in function '__catch$?DrawSprThumbnail@@YA_NPAVSimpleDialog@@@Z$0'
+LINK : warning LNK4217: symbol '?GetUnitsGroup@@YAPAVUnitsGroup@@PAUGAMEOBJ@@@Z (class UnitsGroup * __cdecl GetUnitsGroup(struct GAMEOBJ *))' defined in 'ActiveScenary.obj' is imported by 'Iterators.obj' in function '"int __cdecl AddUnlimitedUnitsInZone(unsigned char,unsigned short,int,int,int,struct GAMEOBJ *)" (?AddUnlimitedUnitsInZone@@YAHEGHHHPAUGAMEOBJ@@@Z)'
+LINK : warning LNK4217: symbol '?ExplorerOpenRef@@YAXHPAD@Z (void __cdecl ExplorerOpenRef(int,char *))' defined in 'testserver.obj' is imported by 'LoadSave.obj' in function '__catch$?SetupArrays@@YAXXZ$0'
+LINK : warning LNK4286: symbol '?ExplorerOpenRef@@YAXHPAD@Z (void __cdecl ExplorerOpenRef(int,char *))' defined in 'testserver.obj' is imported by 'MPlayer.obj'
+LINK : warning LNK4217: symbol '?StopPlayCD@@YAXXZ (void __cdecl StopPlayCD(void))' defined in 'DeviceCD.obj' is imported by 'VUI_Actions.obj' in function '__catch$?SetFrameState@cva_U_InfoDesk@@UAEXPAVSimpleDialog@@@Z$0'
+LINK : warning LNK4217: symbol '?PlName@@3PADA (char * PlName)' defined in 'Interface.obj' is imported by 'VUI_Actions.obj' in function '"public: virtual bool __thiscall cva_MM_MultiCreate::LeftClick(class SimpleDialog *)" (?LeftClick@cva_MM_MultiCreate@@UAE_NPAVSimpleDialog@@@Z)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiCallback.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiPeer.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiSearch.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiInfo.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiBuddy.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiOperation.obj)'
+LINK : warning LNK4217: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gp.obj)' in function '_gpDenyBuddyRequest'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpi.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiConnect.obj)'
+LINK : warning LNK4286: symbol '_free' defined in 'libucrt.lib(free.obj)' is imported by 'GP.lib(gpiProfile.obj)'
+LINK : warning LNK4217: symbol '_srand' defined in 'libucrt.lib(rand.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiInitialize'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiCallback.obj)' in function '_gpiAddCallback'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiPeer.obj)' in function '_gpiProcessPeerInitiatingConnection'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiInfo.obj)' in function '_gpiDateToInt'
+LINK : warning LNK4286: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiBuffer.obj)'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiBuddy.obj)' in function '_gpiSendAuthBuddyRequest'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiOperation.obj)' in function '_gpiFailedOpCallback'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiInitialize'
+LINK : warning LNK4217: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiConnect.obj)' in function '_gpiStartConnect'
+LINK : warning LNK4286: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiProfile.obj)'
+LINK : warning LNK4286: symbol '_malloc' defined in 'libucrt.lib(malloc.obj)' is imported by 'GP.lib(gpiSearch.obj)'
+LINK : warning LNK4217: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpiInfo.obj)' in function '_gpiProcessGetInfo'
+LINK : warning LNK4286: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpiBuffer.obj)'
+LINK : warning LNK4286: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpiPeer.obj)'
+LINK : warning LNK4217: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiProcessConnectionManager'
+LINK : warning LNK4286: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpiUtility.obj)'
+LINK : warning LNK4217: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpiConnect.obj)' in function '_gpiConnect'
+LINK : warning LNK4286: symbol '_strncmp' defined in 'libucrt.lib(strncmp.obj)' is imported by 'GP.lib(gpiProfile.obj)'
+LINK : warning LNK4217: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiPeer.obj)' in function '_gpiProcessPeerConnected'
+LINK : warning LNK4286: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiSearch.obj)'
+LINK : warning LNK4286: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiInfo.obj)'
+LINK : warning LNK4286: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiBuffer.obj)'
+LINK : warning LNK4217: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiBuddy.obj)' in function '_gpiProcessRecvBuddyMessage'
+LINK : warning LNK4217: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiProcessConnectionManager'
+LINK : warning LNK4286: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiUtility.obj)'
+LINK : warning LNK4217: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiConnect.obj)' in function '_gpiConnect'
+LINK : warning LNK4286: symbol '_atoi' defined in 'libucrt.lib(atox.obj)' is imported by 'GP.lib(gpiProfile.obj)'
+LINK : warning LNK4217: symbol '_memmove' defined in 'libvcruntime.lib(memmove.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiProcessConnectionManager'
+LINK : warning LNK4217: symbol '_memmove' defined in 'libvcruntime.lib(memmove.obj)' is imported by 'GP.lib(gpiBuffer.obj)' in function '_gpiReadMessageFromBuffer'
+LINK : warning LNK4217: symbol '_realloc' defined in 'libucrt.lib(realloc.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiProcessConnectionManager'
+LINK : warning LNK4286: symbol '_realloc' defined in 'libucrt.lib(realloc.obj)' is imported by 'GP.lib(gpiSearch.obj)'
+LINK : warning LNK4217: symbol '_realloc' defined in 'libucrt.lib(realloc.obj)' is imported by 'GP.lib(gpiBuffer.obj)' in function '_gpiReadMessageFromBuffer'
+LINK : warning LNK4217: symbol '_strstr' defined in 'libvcruntime.lib(strstr.obj)' is imported by 'GP.lib(gpiBuddy.obj)' in function '_gpiProcessRecvBuddyMessage'
+LINK : warning LNK4286: symbol '_strstr' defined in 'libvcruntime.lib(strstr.obj)' is imported by 'GP.lib(gpiPeer.obj)'
+LINK : warning LNK4217: symbol '_strstr' defined in 'libvcruntime.lib(strstr.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiProcessConnectionManager'
+LINK : warning LNK4286: symbol '_strstr' defined in 'libvcruntime.lib(strstr.obj)' is imported by 'GP.lib(gpiUtility.obj)'
+LINK : warning LNK4286: symbol '_strstr' defined in 'libvcruntime.lib(strstr.obj)' is imported by 'GP.lib(gpiConnect.obj)'
+LINK : warning LNK4286: symbol '_strstr' defined in 'libvcruntime.lib(strstr.obj)' is imported by 'GP.lib(gpiSearch.obj)'
+LINK : warning LNK4217: symbol '_strdup' defined in 'libucrt.lib(strdup.obj)' is imported by 'GP.lib(gpi.obj)' in function '_gpiProcess'
+LINK : warning LNK4286: symbol '_strdup' defined in 'libucrt.lib(strdup.obj)' is imported by 'GP.lib(gpiInfo.obj)'
+LINK : warning LNK4286: symbol '_strdup' defined in 'libucrt.lib(strdup.obj)' is imported by 'GP.lib(gpiBuddy.obj)'
+LINK : warning LNK4286: symbol '_strdup' defined in 'libucrt.lib(strdup.obj)' is imported by 'oldnames.lib(strdup.obi)'
+LINK : warning LNK4217: symbol '_strncpy' defined in 'libucrt.lib(strncpy.obj)' is imported by 'GP.lib(gpiUtility.obj)' in function '_strzcpy'
+LINK : warning LNK4217: symbol '_rand' defined in 'libucrt.lib(rand.obj)' is imported by 'GP.lib(gpiConnect.obj)' in function '_randomString'
+LINK : warning LNK4217: symbol '__strlwr' defined in 'libucrt.lib(strlwr.obj)' is imported by 'GP.lib(gpiConnect.obj)' in function '_gpiConnect'
+LINK : warning LNK4286: symbol '__strlwr' defined in 'libucrt.lib(strlwr.obj)' is imported by 'GP.lib(gpiSearch.obj)'
+LINK : warning LNK4217: symbol '__strlwr' defined in 'libucrt.lib(strlwr.obj)' is imported by 'GP.lib(gpiInfo.obj)' in function '_gpiProcessGetInfo'
+LINK : warning LNK4217: symbol '_sprintf' defined in '3DGraph.obj' is imported by 'GP.lib(gpiConnect.obj)' in function '_gpiSendLogin'
+LINK : warning LNK4286: symbol '_sprintf' defined in '3DGraph.obj' is imported by 'GP.lib(gpiInfo.obj)'
+LINK : warning LNK4286: symbol '_sprintf' defined in '3DGraph.obj' is imported by 'GP.lib(gpiBuffer.obj)'
+LINK : warning LNK4286: symbol '_sprintf' defined in '3DGraph.obj' is imported by 'GP.lib(gpiPeer.obj)'
+LINK : warning LNK4217: symbol '_fopen' defined in 'libucrt.lib(fopen.obj)' is imported by 'GP.lib(gpiProfile.obj)' in function '_gpiOpenDiskProfiles'
+LINK : warning LNK4217: symbol '_fclose' defined in 'libucrt.lib(fclose.obj)' is imported by 'GP.lib(gpiProfile.obj)' in function '_gpiCloseDiskProfiles'
+LINK : warning LNK4217: symbol '_fprintf' defined in '3DRandMap.obj' is imported by 'GP.lib(gpiProfile.obj)' in function '_gpiSaveDiskProfile'
+LINK : warning LNK4217: symbol '_toupper' defined in 'libucrt.lib(tolower_toupper.obj)' is imported by 'GP.lib(gpiInfo.obj)' in function '_gpiSetInfos'
+LINK : warning LNK4217: symbol '_strchr' defined in 'libvcruntime.lib(strchr.obj)' is imported by 'GP.lib(gpiBuffer.obj)' in function '_gpiReadMessageFromBuffer'
+LINK : warning LNK4217: symbol '_time' defined in 'libucrt.lib(time.obj)' is imported by 'GP.lib(gpiBuddy.obj)' in function '_gpiProcessRecvBuddyMessage'
+LINK : warning LNK4286: symbol '_time' defined in 'libucrt.lib(time.obj)' is imported by 'GP.lib(gpiPeer.obj)'
+LINK : warning LNK4286: symbol '__strdup' defined in 'libucrt.lib(strdup.obj)' is imported by 'oldnames.lib(strdup.obi)'
+boostr.lib(exception.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(exception.obj)' or at ''; linking object as if no debug info
+boostr.lib(operations_posix_windows.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(operations_posix_windows.obj)' or at ''; linking object as if no debug info
+boostr.lib(path_posix_windows.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(path_posix_windows.obj)' or at ''; linking object as if no debug info
+boostr.lib(connection.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(connection.obj)' or at ''; linking object as if no debug info
+boostr.lib(signal_base.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(signal_base.obj)' or at ''; linking object as if no debug info
+boostr.lib(slot.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(slot.obj)' or at ''; linking object as if no debug info
+boostr.lib(trackable.obj) : warning LNK4099: PDB '' was not found with 'boostr.lib(trackable.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommBroadcast.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommBroadcast.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommCore.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommCore.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommInet.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommInet.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommInit.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommInit.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommPeers.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommPeers.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommQueue.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommQueue.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommRaw.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommRaw.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommRecv.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommRecv.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommServerList.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommServerList.obj)' or at ''; linking object as if no debug info
+gPhysicsR.lib(gPhysics_pch.obj) : warning LNK4099: PDB '' was not found with 'gPhysicsR.lib(gPhysics_pch.obj)' or at ''; linking object as if no debug info
+gPhysicsR.lib(sgPhysics.obj) : warning LNK4099: PDB '' was not found with 'gPhysicsR.lib(sgPhysics.obj)' or at ''; linking object as if no debug info
+ode.lib(array.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(array.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_kernel.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_kernel.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_quadtreespace.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_quadtreespace.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_space.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_space.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_std.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_std.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_transform.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_transform.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh_box.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh_box.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh_ccylinder.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh_ccylinder.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh_ray.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh_ray.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh_sphere.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh_sphere.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh_trimesh.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh_trimesh.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_util.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_util.obj)' or at ''; linking object as if no debug info
+ode.lib(error.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(error.obj)' or at ''; linking object as if no debug info
+ode.lib(fastdot.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(fastdot.obj)' or at ''; linking object as if no debug info
+ode.lib(fastldlt.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(fastldlt.obj)' or at ''; linking object as if no debug info
+ode.lib(fastlsolve.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(fastlsolve.obj)' or at ''; linking object as if no debug info
+ode.lib(fastltsolve.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(fastltsolve.obj)' or at ''; linking object as if no debug info
+ode.lib(joint.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(joint.obj)' or at ''; linking object as if no debug info
+ode.lib(lcp.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(lcp.obj)' or at ''; linking object as if no debug info
+ode.lib(mass.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(mass.obj)' or at ''; linking object as if no debug info
+ode.lib(matrix.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(matrix.obj)' or at ''; linking object as if no debug info
+ode.lib(memory.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(memory.obj)' or at ''; linking object as if no debug info
+ode.lib(misc.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(misc.obj)' or at ''; linking object as if no debug info
+ode.lib(obstack.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(obstack.obj)' or at ''; linking object as if no debug info
+ode.lib(ode.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(ode.obj)' or at ''; linking object as if no debug info
+ode.lib(odemath.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(odemath.obj)' or at ''; linking object as if no debug info
+ode.lib(quickstep.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(quickstep.obj)' or at ''; linking object as if no debug info
+ode.lib(rotation.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(rotation.obj)' or at ''; linking object as if no debug info
+ode.lib(step.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(step.obj)' or at ''; linking object as if no debug info
+ode.lib(stepfast.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(stepfast.obj)' or at ''; linking object as if no debug info
+ode.lib(timer.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(timer.obj)' or at ''; linking object as if no debug info
+ode.lib(util.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(util.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceAABB.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceAABB.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceContainer.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceContainer.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceHPoint.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceHPoint.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceMatrix3x3.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceMatrix3x3.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceMatrix4x4.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceMatrix4x4.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceOBB.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceOBB.obj)' or at ''; linking object as if no debug info
+opcode.lib(IcePoint.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IcePoint.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceRandom.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceRandom.obj)' or at ''; linking object as if no debug info
+opcode.lib(IceSegment.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceSegment.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_AABBTree.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_AABBTree.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_BaseModel.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_BaseModel.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_Collider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_Collider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_LSSCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_LSSCollider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_MeshInterface.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_MeshInterface.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_Model.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_Model.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_OBBCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_OBBCollider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_OptimizedTree.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_OptimizedTree.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_PlanesCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_PlanesCollider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_RayCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_RayCollider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_SphereCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_SphereCollider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_TreeBuilders.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_TreeBuilders.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_TreeCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_TreeCollider.obj)' or at ''; linking object as if no debug info
+opcode.lib(OPC_VolumeCollider.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(OPC_VolumeCollider.obj)' or at ''; linking object as if no debug info
   cossacks2.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\data\engine.exe
