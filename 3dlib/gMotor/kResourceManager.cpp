@@ -135,7 +135,7 @@ bool ResourceManager::MountDataSource(  const char* sourcePath,
                                         const char* mountName,  
                                         DataSourceType type )
 {
-    if (type = dstDirectory)
+    if (type == dstDirectory)
     {
         MountEntry entry;
         entry.m_MountPath   = mountName ? mountName : sourcePath;
