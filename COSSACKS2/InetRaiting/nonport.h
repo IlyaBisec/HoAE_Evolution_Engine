@@ -21,8 +21,9 @@ Fax(714)549-0757
 
 #ifdef _WIN32
 #define WIN32_LEAN_AND_MEAN
+	#include <winsock2.h> // Change override, ilya_bisec 04.06.26
+	#include <ws2tcpip.h>
 	#include <windows.h>
-	#include <winsock2.h>
 #else
 #ifdef _MACOS
 	#include <events.h>
