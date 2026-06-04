@@ -1,6 +1,7 @@
 #include "stdheader.h"
 #include "BE_HEADERS.h"
 #include "GameInterface.h"
+#include <functional>
 
 // be_CParamFunction /////////////////////////////////////////////////////
 be_CParamFunction::be_CParamFunction(){
@@ -226,7 +227,7 @@ int				be_CRefParamFunction::CallFunction(){
 								try{
 									retValue = luabind::call_function<int>(	BattleHandler()->LUA_MISS.LUA_STATE, 
 																			pBFnLUA->Name.pchar(),
-																			boost::ref(pBFnLUA->InArgList)
+																			std::ref(pBFnLUA->InArgList)
 																		);
 								}catch (...) {
 									DriveMode()->PROCESS=false;
