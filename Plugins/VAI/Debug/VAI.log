@@ -1,3 +1,1 @@
-﻿Moderator.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-     Creating library ..\..\..\data\Plugins\VAI.lib and object ..\..\..\data\Plugins\VAI.exp
-  VAI.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\data\Plugins\VAI.dll
+﻿  VAI.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\data\Plugins\VAI.dll

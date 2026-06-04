@@ -1,5 +1,5 @@
 
-#include <winsock2.h> 
+#include <winsock2.h> // Change on Win 10 SDK, ilya_bisec 04.06.26
 #include <stdio.h> 
 #include <stdlib.h> 
 #include "..\COSSACKS2\common.h" 

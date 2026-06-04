@@ -27,7 +27,9 @@ devsupport@gamespy.com
 #else
 #ifdef _MACOS
 	#include <events.h>
-	#include "mwinsock.h"
+	#include <winsock2.h>
+	#include <ws2tcpip.h>
+	//#include "mwinsock.h"
 #else
 #ifdef __KATANA__
 	#ifdef KGTRN_PLANET_WEB

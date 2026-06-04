@@ -1,6 +1,254 @@
-﻿  chatCallbacks.c
+﻿  StdAfx.cpp
+  ParseRQ.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(23,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(27,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(31,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(35,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): more pops than pushes
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): no matching '#pragma warning(push)'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,38): warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(796,7):
+      see declaration of 'ReferableBaseClassWithSource'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,19):
+      see declaration of 'ParentFrame'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1234,18): warning C4273: 'DrawFilledRect3': inconsistent dll linkage
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\DrawForm.h(58,6):
+      see previous definition of 'DrawFilledRect3'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,34): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,19):
+      see declaration of 'TabDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,19):
+      see declaration of 'ListDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,36): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,19):
+      see declaration of 'ClassDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+  (compiling source file '../IntExplorer/ParseRQ.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,19):
+      see declaration of 'ChatDesk'
+  
+  GSC_ChatWindow.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(23,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(27,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(31,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(35,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): more pops than pushes
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): no matching '#pragma warning(push)'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,38): warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(796,7):
+      see declaration of 'ReferableBaseClassWithSource'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,19):
+      see declaration of 'ParentFrame'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1234,18): warning C4273: 'DrawFilledRect3': inconsistent dll linkage
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\DrawForm.h(58,6):
+      see previous definition of 'DrawFilledRect3'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,34): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,19):
+      see declaration of 'TabDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,19):
+      see declaration of 'ListDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,36): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,19):
+      see declaration of 'ClassDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+  (compiling source file '../IChat/GSC_ChatWindow.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,19):
+      see declaration of 'ChatDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\GSC_ChatWindow.cpp(448,6): warning C4273: 'DrawStdBar2': inconsistent dll linkage
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\DrawForm.h(46,6):
+      see previous definition of 'DrawStdBar2'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\GSC_ChatWindow.cpp(706,14): warning C4273: 'SetCurPtr': inconsistent dll linkage
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\vui_Action.h(6,14):
+      see previous definition of 'SetCurPtr'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\GSC_ChatWindow.cpp(1902,7): warning C4101: 'DATA': unreferenced local variable
+  IChat.cpp
+  cs_chat.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(23,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/cs_chat.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(27,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/cs_chat.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(31,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/cs_chat.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(35,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file '../IChat/cs_chat.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): more pops than pushes
+  (compiling source file '../IChat/cs_chat.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): no matching '#pragma warning(push)'
+  (compiling source file '../IChat/cs_chat.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,38): warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(796,7):
+      see declaration of 'ReferableBaseClassWithSource'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,19):
+      see declaration of 'ParentFrame'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1234,18): warning C4273: 'DrawFilledRect3': inconsistent dll linkage
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\DrawForm.h(58,6):
+      see previous definition of 'DrawFilledRect3'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,34): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,19):
+      see declaration of 'TabDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,19):
+      see declaration of 'ListDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,36): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,19):
+      see declaration of 'ClassDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+  (compiling source file '../IChat/cs_chat.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,19):
+      see declaration of 'ChatDesk'
+  
+  Generating Code...
+  chatCallbacks.c
   chatChannel.c
-  chatHandlers.c
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatChannel.c(145,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatChannel.c(274,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatChannel.c(323,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
@@ -21,6 +269,7 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\ch
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatChannel.c(1024,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatChannel.c(1038,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatChannel.c(1096,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  chatHandlers.c
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatHandlers.c(851,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatHandlers.c(1645,3): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatHandlers.c(2328,9): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
@@ -65,6 +314,8 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\ch
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\Chat\chatSocket.c(744,9): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   darray.c
   hashtable.c
+  md5c.c
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\md5c.c(345,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   nonport.c
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\nonport.c(246,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\nonport.c(591,51): warning C4244: 'function': conversion from 'time_t' to 'unsigned long', possible loss of data

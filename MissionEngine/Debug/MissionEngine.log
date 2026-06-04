@@ -451,99 +451,99 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine
   
   MainFunction.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<BYTE *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<BYTE *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<xmlQuote *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<CAttribute *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
-  (compiling source file 'MainFunction.cpp')
+  (compiling source file '../MissionEngine/MainFunction.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
       see previous definition of 'AddMessageMM'
   
@@ -645,99 +645,99 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine
   
   MainEngine.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<BYTE *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<BYTE *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<xmlQuote *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<CAttribute *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
-  (compiling source file 'MainEngine.cpp')
+  (compiling source file '../MissionEngine/MainEngine.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
       see previous definition of 'AddMessageMM'
   
@@ -814,99 +814,99 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.cpp(1162,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   MainClass.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(20,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(24,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(29,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(33,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(47,15): warning C4091: 'extern ': ignored on left of 'GAMEOBJ' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4518: '__declspec(dllimport)': storage-class or type specifier(s) unexpected here; ignored
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(719,1): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(767,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(771,9): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<BYTE *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<BYTE *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<xmlQuote *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
       see declaration of 'DynArray<CAttribute *,15>'
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(27,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\StrHash.h(106,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1032,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(1072,31): warning C4244: '=': conversion from 'DWORD' to 'WORD', possible loss of data
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\MissionScript.h(289,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(6,14): warning C4091: 'extern ': ignored on left of 'SARMY_DESCRIPTION' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(10,15): warning C4091: 'extern ': ignored on left of 'SXYF' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(11,14): warning C4091: 'extern ': ignored on left of 'CTYPENUM' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(12,14): warning C4091: 'extern ': ignored on left of 'CSAVE_MIS_STRUCT' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(40,14): warning C4091: 'extern ': ignored on left of 'CRestArmy' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\ExternDeclaration.h(41,14): warning C4091: 'extern ': ignored on left of 'CEndMissionData' when no variable is declared
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MISSIONSCRIPT\EndMissionData.h(160,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(83,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(121,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(183,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
   
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\MissionEngine\MainEngine.h(977,14): warning C4273: 'AddMessageMM': inconsistent dll linkage
-  (compiling source file '../../MissionEngine/MainClass.cpp')
+  (compiling source file '../MissionEngine/MainClass.cpp')
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\MessageMgr.h(11,14):
       see previous definition of 'AddMessageMM'
   
