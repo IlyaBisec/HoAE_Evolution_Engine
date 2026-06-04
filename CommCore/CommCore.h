@@ -31,7 +31,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include <WinSock2.h>
+#include <WinSock2.h> // Change on Win 10 SDK, ilya_bisec 04.06.26
 #include <WS2tcpip.h>
 #include <Windows.h>
 #include <assert.h>

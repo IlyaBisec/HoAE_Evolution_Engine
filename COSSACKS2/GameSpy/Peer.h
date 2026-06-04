@@ -29,9 +29,9 @@ extern "C" {
 	#include "::CEngine:goaceng.h"
 #else
 	#include "nonport.h"
-	#include "Chat/chat.h"
-	#include "queryreporting/gqueryreporting.h"
-	#include "CEngine/goaceng.h"
+	#include "../Chat/chat.h"
+	#include "../queryreporting/gqueryreporting.h"
+	#include "../CEngine/goaceng.h"
 #endif
 
 

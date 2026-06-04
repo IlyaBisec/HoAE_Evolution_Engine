@@ -13,7 +13,7 @@
 
 // Insert your headers here
 #define WIN32_LEAN_AND_MEAN		// Exclude rarely-used stuff from Windows headers
-#include <winsock2.h>
+#include <winsock2.h> // Change on Win 10 SDK, ilya_bisec 04.06.26
 #include <ws2tcpip.h>
 #include <windows.h>
 
