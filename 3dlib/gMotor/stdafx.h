@@ -20,6 +20,8 @@
 
 #include "windows.h"
 
+#include "algorithm"
+
 #include <math.h> 
 #include <direct.h>
 #include <malloc.h>
