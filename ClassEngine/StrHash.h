@@ -1,6 +1,6 @@
 #ifndef __STRHASH_H__
 #define __STRHASH_H__
-#include <kHash.hpp>
+#include "../3dlib/gMotor/kHash.hpp"
 #ifndef NEW
 #define NEW(t,s) (t*)malloc((s)*sizeof(t)) 
 #endif
