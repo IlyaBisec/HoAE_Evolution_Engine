@@ -58,3 +58,4 @@ dkms.conf
 /_debug/dipserver
 /_fastdebug
 /_release
+/_debug
