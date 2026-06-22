@@ -105,7 +105,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>User32.lib;psapi.lib;atls.lib;../lib/engine.lib;../lib/ichat.lib;../lib/dipserver.lib;../lib_release/gMotorR.lib;ddraw.lib;libcpmt.lib;libcmt.lib;commcore.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;oldnames.lib;dsound.lib;dxguid.lib;dplayx.lib;strmiids.lib;d3d8.lib;d3dx8.lib;dxerr8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>User32.lib;psapi.lib;atls.lib;../lib/engine.lib;../lib/ichat.lib;../lib/dipserver.lib;../lib_release/gMotorR.lib;ddraw.lib;libcpmt.lib;libcmt.lib;commcore.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;oldnames.lib;dsound.lib;dxguid.lib;dplayx.lib;strmiids.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\data\Missions\MissionEngin\MissionEngine.dll</OutputFile>
       <SuppressStartupBanner>false</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../lib;../lib_release;../_debug;../_release;../_release3d;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
