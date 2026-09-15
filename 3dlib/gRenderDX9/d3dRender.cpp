@@ -5,7 +5,7 @@
 /*	Date:	02.11.2004
 /*****************************************************************************/
 #include "gRenderPch.h"
-#include <DxErr.h>
+#include <dxerr9.h>
 #include "resource.h"
 
 #include "IMediaManager.h"
@@ -350,7 +350,7 @@ bool RenderSystemDX9::SetScreenProp( const ScreenProp& prop )
 //-----------------------------------------------------------------------------------
 // RenderSystemDX9::AddScreenResolution
 //-----------------------------------------------------------------------------------
-void RenderSystemDX9::AddScreenResolution(const int XRes, const int YRes, const int RR) {
+void RenderSystemDX9::AddScreenResolution(const int XRes, const YRes, const int RR) {
 	D3DAdapterInfo *pAdapter = m_d3dSettings.PAdapterInfo();
 	D3DDISPLAYMODE dm;
 	dm.Width = XRes;
@@ -792,8 +792,7 @@ int RenderSystemDX9::CreateNormalMap( int texID, float amplitude )
 
 // RenderSystemDX9::RegCallbackOnGetTextureID
 void RenderSystemDX9::RegCallbackOnGetTextureID(IRenderSystem::OnGetTextureID *Fn) {
-    int c;
-    for(c = 0; c < m_OnGetTextureIDCallbacks.size(); c++) {
+	for(int c = 0; c < m_OnGetTextureIDCallbacks.size(); c++) {
 		if(m_OnGetTextureIDCallbacks[c] == Fn) {
 			break;
 		}
@@ -805,8 +804,7 @@ void RenderSystemDX9::RegCallbackOnGetTextureID(IRenderSystem::OnGetTextureID *F
 
 // RenderSystemDX9::RegCallbackOnLoadTexture
 void RenderSystemDX9::RegCallbackOnLoadTexture(IRenderSystem::OnLoadTexture *Fn) {
-    int c;
-    for(c = 0; c < m_OnLoadTextureCallbacks.size(); c++) {
+	for(int c = 0; c < m_OnLoadTextureCallbacks.size(); c++) {
 		if(m_OnLoadTextureCallbacks[c] == Fn) {
 			break;
 		}
@@ -1793,8 +1791,7 @@ bool RenderSystemDX9::DeleteIB( int ibID )
 int RenderSystemDX9::RegisterVType( const VertexDeclaration& vdecl )
 {
     int nVT = m_VertexTypes.size();
-    int i;
-    for (i = 0; i < nVT; i++)
+    for (int i = 0; i < nVT; i++)
     {
         if (m_VertexTypes[i].m_VDecl == vdecl) return i;
     }
