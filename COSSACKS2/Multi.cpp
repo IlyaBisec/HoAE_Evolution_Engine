@@ -1047,18 +1047,21 @@ void CmdThrowGrenade(byte NI,int i){
 	EBPos+=4;
 	ECMD;
 };
-__forceinline int decch(char& c,char v){
-	if(c>-120)c-=v;
-#ifdef _INLINES
+__forceinline int decch(char &c, char v) {
+	int ci = static_cast<signed char>(c);
+	int vi = static_cast<signed char>(v);
+	if (ci > -120) ci -= vi;
+	c = static_cast<char>(ci);
 	return 0;
-#endif
-};
-__forceinline int incch(char& c,char v){
-	if(c<120)c+=v;
-#ifdef _INLINES
+}
+
+__forceinline int incch(char &c, char v) {
+	int ci = static_cast<signed char>(c);
+	int vi = static_cast<signed char>(v);
+	if (ci < 120) ci += vi;
+	c = static_cast<char>(ci);
 	return 0;
-#endif
-};
+}
 int DIntCmpFunc(const void* v1,const void* v2){
 	int V1=*((int*)v1);
 	int V2=*((int*)v2);
