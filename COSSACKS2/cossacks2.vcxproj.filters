@@ -2979,6 +2979,7 @@
     <None Include="BE_Tex_Doc.doc">
       <Filter>DOC</Filter>
     </None>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Exports.txt">

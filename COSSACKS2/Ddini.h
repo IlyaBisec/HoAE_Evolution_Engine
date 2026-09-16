@@ -16,12 +16,7 @@
 #include "lines.h"
 #include "protest.h"
 
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-#define HMONITOR_DEFINED
-
-#include <ddraw.h>
-//#include "..\3dlib\ddraw.h"
+#include "..\3dlib\ddraw.h"
 #define CEXPORT __declspec(dllexport)
 #define CIMPORT __declspec(dllimport)
 //#define STARFORCE

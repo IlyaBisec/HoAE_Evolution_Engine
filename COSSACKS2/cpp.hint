@@ -1,0 +1,5 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define REG_AUTO(x) reg_auto(this,x,#x,NULL,CurrMask);reg_class_auto(&x);x.SetParent(this);
+#define REG_AUTO(x) reg_auto(this,x);reg_class(&x)

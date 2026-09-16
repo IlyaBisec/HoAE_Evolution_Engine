@@ -3424,6 +3424,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
   <ItemGroup>
     <None Include="..\Bat\all.bat" />
     <None Include="BE_Tex_Doc.doc" />
+    <None Include="cpp.hint" />
     <None Include="mode.dat" />
     <None Include="Q\Q structure.vsd" />
   </ItemGroup>

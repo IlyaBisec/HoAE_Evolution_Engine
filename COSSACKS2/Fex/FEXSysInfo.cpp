@@ -1,7 +1,3 @@
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-#define HMONITOR_DEFINED
-
 //#include "stdafx.h"
 #include <windowsx.h>
 #include <dinput.h>
@@ -11,7 +7,7 @@
 #include "Include\\multimon.h"
 #include "Include\\basetsd.h"
 #include "FEXModule.h"
-//#include <ddraw.h>
+
 #include "..\..\3dlib\ddraw.h"
 extern char FEX_SystemVersionString[1024];
 
