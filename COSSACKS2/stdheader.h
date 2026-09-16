@@ -1,11 +1,9 @@
 #ifndef __STDHEADER_H__
 #define __STDHEADER_H__
 
-//////////////////////////////////////////////////////////////////////////
-// Windows.h must be included FIRST to prevent HMONITOR redefinition
+
 #define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-#define HMONITOR_DEFINED
+
 //////////////////////////////////////////////////////////////////////////
 
 //#define _DEMO_
@@ -18,7 +16,14 @@
 #include "..\CommCore\CommCore.h"
 #include <Shellapi.h>
 #include <malloc.h>
-#include <direct.h>				// Vitya
+#include <direct.h>
+
+// Include WinSock2 AFTER windows.h but BEFORE other includes
+// This prevents double definitions
+#include <windows.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+
 #include "Limitations.h"
 #include "ddini.h"
 #include "ResFile.h"
@@ -90,9 +95,9 @@
 #include "ZonesAndGroupsExtraInfo.h"	//Vitya
 #include "diplomacy.h"
 #include "Dialogs\AllDialogs.h"
-#define IDIRECTPLAY2_OR_GREATER
-#include "dplay.h"
-#include "dplobby.h"
+//#define IDIRECTPLAY2_OR_GREATER
+//#include "dplay.h"
+//#include "dplobby.h"
 #pragma pack(4)
 #include "InetRaiting\stats\gstats.h"
 #include "InetRaiting\stats\gpersist.h"
@@ -129,10 +134,10 @@
 extern CEXPORT int RealLx;
 extern CEXPORT int RealLy;
 
-#include "..\DipServer\BasicDiploRelation.h"
-#include "..\DipServer\DIP_SimpleBuilding.h"
-#include "..\DipServer\DiplomacySystem.h"
-CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding **&Dips);
+//#include "..\DipServer\BasicDiploRelation.h"
+//#include "..\DipServer\DIP_SimpleBuilding.h"
+//#include "..\DipServer\DiplomacySystem.h"
+//CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding **&Dips);
 
 extern DIALOGS_API bool KeyPressed;
 extern DIALOGS_API int LastKey;
