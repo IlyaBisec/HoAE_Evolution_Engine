@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "../stdheader.h"
 #include "Manipulators.h"
 #include "Surface.h"
 #include "../CurrentMapOptions.h"

@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "SurfProcess.h"
 #include <richedit.h>
 #include "SurfExporter.h"

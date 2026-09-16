@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "..\Surface\HiResScreenShot.h"
 
 Surface::HiResScreenShot g_HiResScreenShot;

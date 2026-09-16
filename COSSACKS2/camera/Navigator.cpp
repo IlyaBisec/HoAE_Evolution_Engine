@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "vCamera.h"
 #include "..\ua_Ability.h"
 #include "..\ComplexShooter.h"

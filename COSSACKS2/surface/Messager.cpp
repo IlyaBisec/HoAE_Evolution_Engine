@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "Messager.h"
 
 Surface::Messager g_Messager;

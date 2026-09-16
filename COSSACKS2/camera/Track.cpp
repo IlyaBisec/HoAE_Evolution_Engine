@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "..\Surface\Surface.h"
 #include "Navigator.h"
 #include "SelExt.h"

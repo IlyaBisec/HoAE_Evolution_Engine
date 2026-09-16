@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "PropertyPanel.h"
 
 DialogsDesk* PropertyPanel::EditDesk=NULL;

@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "Smooth.h"
 #include "Deform.h"
 #include "..\RoadsAndFactures.h"

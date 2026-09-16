@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "SurfPiece.h"
 
 namespace Surface {

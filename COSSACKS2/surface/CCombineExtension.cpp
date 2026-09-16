@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "../stdheader.h"
 #include "CCombineExtension.h"
 #include "..\Camera\Navigator.h"
 #include "SurfaceGenerator.h"

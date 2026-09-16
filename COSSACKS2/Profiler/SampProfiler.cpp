@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "FSampProfiler.h"
 FSampProfiler FProf;
 static bool isInit=0;

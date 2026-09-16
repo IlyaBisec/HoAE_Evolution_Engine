@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "Surface.h"
 #include "SurfSplit.h"
 #include "SurfaceGenerator.h"

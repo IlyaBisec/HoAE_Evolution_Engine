@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "../stdheader.h"
 #include "Typify.h"
 #include "SurfaceGenerator.h"
 #include "CmdExt.h"

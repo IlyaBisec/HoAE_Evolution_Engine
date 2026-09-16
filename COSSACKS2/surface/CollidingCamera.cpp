@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "..\surface\CollidingCamera.h"
 #include "vCamera.h"
 #include "..\surface\TankController.h"

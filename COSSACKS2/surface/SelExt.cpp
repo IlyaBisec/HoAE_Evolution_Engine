@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "SelExt.h"
 #include "..\Camera\Navigator.h"
 #include "IWater.h"

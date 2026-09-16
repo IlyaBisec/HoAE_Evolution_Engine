@@ -1,8 +1,11 @@
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#define HMONITOR_DEFINED
+
+#include <ddraw.h>
 
 #include "rad.h"
 #include "bink.h"
-#include <ddraw.h>
 //#include "..\3dlib\ddraw.h"
 static void Clear_to_black( HWND window )
 {

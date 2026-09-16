@@ -1,6 +1,4 @@
 //#include ".\cossacks2\stdheader.h"
-#include "..\stdheader.h"
-#include "stdheader.h"
 #define _WINSOCKAPI_
 #include <malloc.h>
 #include "..\stdheader.h"

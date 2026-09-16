@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "../stdheader.h"
 
 const DWORD c_Red = 0xFFFF0000, c_Green = 0xFF00FF00, c_DarkBlue = 0xFF0000FF,
 	c_White = 0xFFFFFFFF, c_Yellow = 0xFFFFFF00, c_Blue = 0xFF00FFFF,
@@ -30,7 +30,9 @@ public:
 	CVertex3D() { *this = CVertex3D::Null; }
 	CVertex3D(float x, float y, float z) { Set(x, y, z); }
 	int Set(float x, float y, float z)
-	{ this->x = x, this->y = y, this->z = z; };
+	{
+		this->x = x; this->y = y; this->z = z; return 0;
+	};
 //	bool operator == (const CVertex3D &r)
 //	{ return (x == r.x) && (y == r.y) && (z == r.z); }
 	bool operator == (const CVertex3D &r)

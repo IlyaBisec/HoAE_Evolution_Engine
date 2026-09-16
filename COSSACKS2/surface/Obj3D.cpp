@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "Obj3D.h"
 #include "kSystemDialogs.h"
 #include "kContext.h"

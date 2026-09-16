@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "Racist.h"
 #include "SurfaceGenerator.h"
 #include "CmdExt.h"

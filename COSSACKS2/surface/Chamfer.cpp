@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "Chamfer.h"
 #include "..\unichash.h"
 #include "..\iVector.h"

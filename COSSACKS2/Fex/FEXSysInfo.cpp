@@ -1,5 +1,8 @@
-//#include "stdafx.h"
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
+#define HMONITOR_DEFINED
+
+//#include "stdafx.h"
 #include <windowsx.h>
 #include <dinput.h>
 #include <stdio.h>

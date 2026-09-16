@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "SurfaceGenerator.h"
 #include "ITerrain.h"
 #include "IWater.h"
