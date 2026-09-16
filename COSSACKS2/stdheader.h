@@ -2,6 +2,12 @@
 #define __STDHEADER_H__
 
 //////////////////////////////////////////////////////////////////////////
+// Windows.h must be included FIRST to prevent HMONITOR redefinition
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#define HMONITOR_DEFINED
+//////////////////////////////////////////////////////////////////////////
+
 //#define _DEMO_
 //#define _PRESSMAN_
 //////////////////////////////////////////////////////////////////////////
@@ -126,28 +132,28 @@ extern CEXPORT int RealLy;
 #include "..\DipServer\BasicDiploRelation.h"
 #include "..\DipServer\DIP_SimpleBuilding.h"
 #include "..\DipServer\DiplomacySystem.h"
-CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding** &Dips);
+CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding **&Dips);
 
 extern DIALOGS_API bool KeyPressed;
 extern DIALOGS_API int LastKey;
 void PrintAllLeaks();
 void SetLeakMode(bool Mode);
-int GetTotalHeight(int x,int y);
+int GetTotalHeight(int x, int y);
 
-class EditDialog:public BaseClass{
+class EditDialog :public BaseClass {
 public:
-	DialogsSystem Dialog;
-	SAVE(EditDialog)
-		REG_AUTO(Dialog);
-	ENDSAVE;
+    DialogsSystem Dialog;
+    SAVE(EditDialog)
+        REG_AUTO(Dialog);
+    ENDSAVE;
 };
 
 extern	void	CREATE_SCRIPT();	//Vitya	//  [11/4/2003]
 #define MaxNatColors 7
 #define KeyNatColor 7
-DIALOGS_API void VitalError(char* Mess);
-_inline float sqrt(int x){return sqrt(float(x));}
-_inline float atan2(int x,int y){return atan2(float(x),float(y));}
+DIALOGS_API void VitalError(char *Mess);
+_inline float sqrt(int x) { return sqrt(float(x)); }
+_inline float atan2(int x, int y) { return atan2(float(x), float(y)); }
 
 #include "Instrument.h"
 extern City CITY[8];
@@ -169,12 +175,12 @@ extern int TrueTime;
 
 #ifdef ALLOW_TIMING
 
-__forceinline void __ptime(LARGE_INTEGER* LI){
-    __asm{
+__forceinline void __ptime(LARGE_INTEGER *LI) {
+    __asm {
         rdtsc;
-        mov     ebx,DWORD PTR[LI]
-        mov     DWORD PTR[ebx],eax;
-        mov     DWORD PTR[ebx+4],edx;
+        mov     ebx, DWORD PTR[LI]
+            mov     DWORD PTR[ebx], eax;
+        mov     DWORD PTR[ebx + 4], edx;
     }
 }
 extern int NDX_calls;

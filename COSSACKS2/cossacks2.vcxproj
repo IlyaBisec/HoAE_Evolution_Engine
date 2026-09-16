@@ -110,16 +110,19 @@
     <OutDir>.\../_release3d_inl/vc6\</OutDir>
     <IntDir>.\../_release3d_inl/vc6\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>q:\</OutDir>
+    <OutDir>..\..\data\</OutDir>
     <IntDir>.\../_debug/cossacks2/\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RemoteDebug|Win32'">
     <OutDir>RemoteDebugger\</OutDir>
     <IntDir>RemoteDebugger\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">
     <OutDir>..\..\data\</OutDir>
@@ -128,16 +131,19 @@
     <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
     <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
     <GenerateManifest>false</GenerateManifest>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
     <OutDir>q:\</OutDir>
     <IntDir>.\../_fastdebug_checksync\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">
     <OutDir>q:\</OutDir>
@@ -145,6 +151,7 @@
     <LinkIncremental>true</LinkIncremental>
     <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
     <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
+    <IncludePath>$(ProjectDir)COSSACKS2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -154,7 +161,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/boost;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/boost;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOBOIDS;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;_INLINES;_NOSTAT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -210,9 +217,9 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>TEST_3D;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -242,12 +249,12 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <AdditionalOptions>/MACHINE:I386 /FIXED:NO  ..\lib\diaguids.lib ..\lib\diaguidsd.lib %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>atls.lib;gMotor.lib;gRenderDX9.lib;boost.lib;ddraw.lib;libcpmt.lib;libcmt.lib;libc.lib;commcore.lib;ws2_32.lib;oldnames.lib;dsound.lib;dxguid.lib;dplayx.lib;strmiids.lib;d3d9.lib;d3dx9.lib;dxerr9.lib;ichat.lib;dipserver.lib;LUA\LUA_LIB\lua.lib;LUA\LUA_LIB\luabind.lib;gPhysics.lib;ode.lib;opcode.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
-      <OutputFile>q:\engine.exe</OutputFile>
+      <OutputFile>..\..\data\engine.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../3dlib\gRenderDX9\dx9_sdk;../lib_release;../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>q:\cossacks2.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\cossacks2.pdb</ProgramDatabaseFile>
       <GenerateMapFile>false</GenerateMapFile>
       <MapFileName>..\bin\cossacks2.map</MapFileName>
       <MapExports>false</MapExports>
@@ -273,7 +280,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RemoteDebug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -331,7 +338,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOBOIDS;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;_INLINES;_NOSTAT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -356,7 +363,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     </ClCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 /FIXED:NO ..\lib\diaguids.lib ..\lib\diaguidsd.lib %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>libcpmt.lib;libvcruntime.lib;libcmt.lib;libucrt.lib;boostr.lib;psapi.lib;gMotorR.lib;gRenderDX9R.lib;atls.lib;../lib/ichat.lib;../lib/dipserver.lib;../lib_release/gMotorR.lib;ddraw.lib;commcore.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;oldnames.lib;dsound.lib;dxguid.lib;dplayx.lib;strmiids.lib;d3d9.lib;d3dx9.lib;DxErr.lib;luaR.lib;luabindR.lib;gPhysicsR.lib;ode.lib;opcode.lib;comctl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcpmt.lib;libvcruntime.lib;libcmt.lib;libucrt.lib;boostr.lib;psapi.lib;gMotorR.lib;gRenderDX9R.lib;atls.lib;../lib/ichat.lib;../lib/dipserver.lib;../lib_release/gMotorR.lib;ddraw.lib;commcore.lib;odbc32.lib;odbccp32.lib;ws2_32.lib;oldnames.lib;dsound.lib;dxguid.lib;dplayx.lib;strmiids.lib;d3d9.lib;d3dx9.lib;DxErr.lib;luaR.lib;luabindR.lib;gPhysicsR.lib;ode.lib;opcode.lib;comctl32.lib;legacy_stdio_definitions.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\data\engine.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../3dlib\gRenderDX9\dx9_sdk;../lib_release;../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -402,7 +409,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEMO_;NOBOIDS;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;_INLINES;_NOSTAT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -462,7 +469,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>CHECK_SYNC_FAILURE;NOBOIDS;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;_INLINES;_NOSTAT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>
@@ -532,7 +539,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>CHECK_SYNC_FAILURE;NOBOIDS;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;_INLINES;_NOSTAT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <MinimalRebuild>false</MinimalRebuild>

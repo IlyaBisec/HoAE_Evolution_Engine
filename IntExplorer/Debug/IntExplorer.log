@@ -1,2 +1,4 @@
-﻿  StdAfx.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IntExplorer\StdAfx.cpp(1,1): error C1041: cannot open program database 'D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\_debug\vc143.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+﻿D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1392,5): warning MSB8012: TargetPath(D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IntExplorer\Debug\IntExplorer.dll) does not match the Linker's OutputFile property value (D:\ilya\projects\games\HoAE\Evolution\Engine\data\intExplorer.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+Bmptool.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library .\../_debug/intExplorer.lib and object .\../_debug/intExplorer.exp
+  IntExplorer.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IntExplorer\Debug\IntExplorer.dll
