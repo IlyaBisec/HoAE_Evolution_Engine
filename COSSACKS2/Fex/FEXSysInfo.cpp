@@ -8,7 +8,7 @@
 #include "Include\\basetsd.h"
 #include "FEXModule.h"
 
-#include "..\..\3dlib\ddraw.h"
+#include <ddraw.h>
 extern char FEX_SystemVersionString[1024];
 
 typedef HRESULT(WINAPI * DIRECTDRAWCREATE)( GUID*, LPDIRECTDRAW*, IUnknown* );
