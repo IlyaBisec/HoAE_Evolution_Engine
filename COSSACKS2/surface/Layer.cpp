@@ -1,4 +1,3 @@
-#include "..\stdheader.h"
 #include "Layer.h"
 #include "SurfaceGenerator.h"
 #include "CmdExt.h"

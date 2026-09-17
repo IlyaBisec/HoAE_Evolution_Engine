@@ -12,33 +12,6 @@
   ai_router.cpp
   ai_scripts.cpp
   Alarm.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(74,48): error C2061: syntax error: identifier 'DIP_SimpleBuilding'
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(79,2): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(79,23): error C2065: 'Dips': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(80,30): error C2065: 'Dips': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(82,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(82,23): error C2065: 'DSB': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(82,27): error C2065: 'Dips': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(83,14): error C2065: 'DSB': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(84,14): error C2065: 'DSB': undeclared identifier
-  (compiling source file '/ActiveScenary2.cpp')
-  
   AlertOnMiniMap.cpp
   AlexVisualSystem.cpp
   AllEditors.cpp
@@ -62,12 +35,12 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Act
   Build.cpp
   Navigator.cpp
   Track.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Camera\Navigator.cpp(2038,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Camera\Track.cpp(1462,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Cdirsnd.cpp
   cext_VisualInterface.cpp
   CheckFileEnumerator.cpp
   ClassEditor.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Camera\Navigator.cpp(2038,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Camera\Track.cpp(1462,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   ClassEditorsRegistration.cpp
   ComplexShooter.cpp
   CPlayerSAVE.cpp
@@ -142,10 +115,10 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Ine
   binde_class.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_class.cpp(480,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   binde_class2.cpp
-  binde_function.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_class2.cpp(43,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  LUA_Manager.cpp
+  binde_function.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_function.cpp(281,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  LUA_Manager.cpp
   MainInterface.cpp
   mai_Extension.cpp
   mai_Functions.cpp
@@ -155,110 +128,6 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua
   mai_VanTroop.cpp
   mapa.cpp
   MapDownload.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(127,2): error C2065: 'ServerDPID': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(972,11): error C2065: 'ServerDPID': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1577,6): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1577,13): error C2146: syntax error: missing ';' before identifier 'dpName'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1577,13): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1578,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1578,6): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1579,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1579,29): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1580,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1581,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1582,16): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1583,33): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1583,47): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1583,18): error C3861: 'SETPLAYERNAME': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1584,22): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1584,7): error C2660: 'strcpy': function does not take 1 arguments
-  (compiling source file '/Interface.cpp')
-      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\string.h(130,1):
-      see declaration of 'strcpy'
-      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1584,7):
-      while trying to match the argument list '(char [64])'
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(561,6): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(561,13): error C2146: syntax error: missing ';' before identifier 'dpName'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(561,13): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(562,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(562,6): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(563,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(563,29): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(564,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(565,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(566,16): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(567,22): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(567,36): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(567,7): error C3861: 'SETPLAYERNAME': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(568,22): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(568,7): error C2660: 'strcpy': function does not take 1 arguments
-  (compiling source file '/Interface.cpp')
-      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\string.h(130,1):
-      see declaration of 'strcpy'
-      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(568,7):
-      while trying to match the argument list '(char [64])'
-  
   MapGenerator.cpp
   MapSprites.cpp
   Masks.cpp
@@ -291,8 +160,8 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dia
   PiroObjects.cpp
   PlaceInAJob.cpp
   SampProfiler.cpp
-  ProfilingInstrument.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Profiler\SampProfiler.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  ProfilingInstrument.cpp
   qfCondRandom.cpp
   QParser.cpp
   qpChatHint.cpp
@@ -319,53 +188,53 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Pro
   Subtitles.cpp
   SuperEditor.cpp
   Archway.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Archway.cpp(98,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Booleans.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Booleans.cpp(3248,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Archway.cpp(98,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   CCombineExtension.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\CCombineExtension.cpp(401,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Booleans.cpp(3248,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Chamfer.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Chamfer.cpp(108,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\CCombineExtension.cpp(401,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   CmdCallbacks.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Chamfer.cpp(108,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   CmdExt.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdExt.cpp(227,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdCallbacks.cpp(136,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   CollidingCamera.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdExt.cpp(227,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Colorize.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CollidingCamera.cpp(737,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Deform.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Colorize.cpp(197,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  Deform.cpp
   Facturize.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Deform.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Facturize.cpp(110,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Grass.cpp
   HiResScreenShot.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Grass.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\HiResScreenShot.cpp(67,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   ITGeometryCallback.cpp
   Layer.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\HiResScreenShot.cpp(67,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   LocalExporter.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Layer.cpp(208,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Layer.cpp(207,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(265,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   LocalGenerator.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(266,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalExporter.cpp(68,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Manipulators.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalExporter.cpp(68,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   MCubes.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Manipulators.cpp(301,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalGenerator.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Messager.cpp
   Obj3D.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Obj3D.cpp(385,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Messager.cpp(48,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   PropertyPanel.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Obj3D.cpp(385,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Racist.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\PropertyPanel.cpp(57,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Scissors.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Racist.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  Scissors.cpp
   SelExt.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Scissors.cpp(76,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Shader.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\SelExt.cpp(1054,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  Shader.cpp
   Smooth.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Shader.cpp(316,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Surface.cpp
@@ -377,16 +246,16 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Sur
   SurfPiece.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfPiece.cpp(165,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   SurfProcess.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(956,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   SurfSplit.cpp
   TankController.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfSplit.cpp(377,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Typify.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(956,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  uv_Split.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\TankController.cpp(444,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  uv_Split.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Typify.cpp(130,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\uv_Split.cpp(41,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   TacticalAI.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\uv_Split.cpp(41,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   testserver.cpp
   TextVisualElements.cpp
   Timing.cpp

@@ -124,7 +124,7 @@ bool MPL_WaitingGame(bool Host,bool SINGLE){
 	ROOMOPT[0]=0;
 
 	ClearLPACK();
-	ServerDPID=0;
+	//ServerDPID=0;
 	int r0=GetTickCount();
 	PPTIME=r0;
 	memset(CurrentMaxPing,0xFF,4*8);
@@ -969,7 +969,7 @@ ffe2:;
 			OkBtn->PassiveFrame=2;
 		}
 
-		if(Host)ServerDPID=MyDPID;
+		//if(Host)ServerDPID=MyDPID;
 
 		if(SINGLE){
 			ADD_OPT->Visible=1;
@@ -1574,7 +1574,7 @@ ffe2:;
 						PREVSD=GetTickCount();
 					};
 					if(ch&&Host&&!SINGLE)PSUMM.ClearPingInfo();
-					DPNAME dpName;
+					/*DPNAME dpName;
 					ZeroMemory(&dpName, sizeof(DPNAME));
 					dpName.dwSize = sizeof(DPNAME);
 					dpName.lpszShortNameA = MNAME[i]->Str;
@@ -1583,7 +1583,7 @@ ffe2:;
 						if(!SINGLE)SETPLAYERNAME(&dpName,strcmp(dpName.lpszShortNameA,oldname)!=0);
 						strcpy(oldname,dpName.lpszShortNameA);
 						PREVCNAME=GetTickCount();
-					};
+					};*/
 					MNATION[i]->Enabled=P2E;
 					MNATION[i]->Visible=P2E;
 					AliasBack[i]->Visible=1;

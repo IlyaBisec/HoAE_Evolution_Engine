@@ -71,29 +71,29 @@ CEXPORT bool isAttBuild(OneObject* OB){
 	}
 	return false;	
 }
-CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding** &Dips);
-void EraseAllNetralPeasantsAndPolicemen(){
-	DynArray<word> NIndex;
-	//
-	int NDips=0;
-	DIP_SimpleBuilding** Dips=NULL;
-	GetDipSimpleBuildings(NDips,Dips);
-	for(int i=0;i<NDips;i++){
-		DIP_SimpleBuilding* DSB=Dips[i];
-		NIndex.Add(DSB->CopNIndex);
-		NIndex.Add(DSB->PeasantNIndex);		
-	}
-	//
-	for(int i=0;i<MAXOBJECT;i++){
-		OneObject* OB=Group[i];
-		if(OB&&!OB->Sdoxlo){
-			for(int j=0;j<NIndex.GetAmount();j++){
-				if(NIndex[j]==OB->NIndex){
-					void EraseObject(OneObject* OB);
-					EraseObject(OB);
-					break;
-				}
-			}
-		}		
-	}
-}
+//CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding** &Dips);
+//void EraseAllNetralPeasantsAndPolicemen(){
+//	DynArray<word> NIndex;
+//	//
+//	int NDips=0;
+//	DIP_SimpleBuilding** Dips=NULL;
+//	GetDipSimpleBuildings(NDips,Dips);
+//	for(int i=0;i<NDips;i++){
+//		DIP_SimpleBuilding* DSB=Dips[i];
+//		NIndex.Add(DSB->CopNIndex);
+//		NIndex.Add(DSB->PeasantNIndex);		
+//	}
+//	//
+//	for(int i=0;i<MAXOBJECT;i++){
+//		OneObject* OB=Group[i];
+//		if(OB&&!OB->Sdoxlo){
+//			for(int j=0;j<NIndex.GetAmount();j++){
+//				if(NIndex[j]==OB->NIndex){
+//					void EraseObject(OneObject* OB);
+//					EraseObject(OB);
+//					break;
+//				}
+//			}
+//		}		
+//	}
+//}

@@ -1,4 +1,4 @@
-#include "..\stdheader.h"
+//#include "..\stdheader.h"
 #include "..\comms\comms.h"
 #include "Html.h"
 
@@ -39,7 +39,7 @@ void ShowURL(const char *URL, int x, int y, int w, int h) {
 // ShowRelativePath
 //------------------------------------------------------------------------------
 void ShowRelativePath(const char *RelativePath, int x, int y, int w, int h) {
-	assert(RelativePath);
+	//assert(RelativePath);
 	char Path[MAX_PATH];
 	if(GetCurrentDirectory(MAX_PATH, Path)) {
 		if(Path[strlen(Path) - 1] != '\\') strcat(Path, "\\");

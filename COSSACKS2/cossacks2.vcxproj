@@ -217,7 +217,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;../3dlib/gMotor;../3dlib/boost;../3dlib\boost\boost;../ClassEngine;GameSpy;../3DLIB\lua;../3dlib\lua\include;../3DLIB\lua\src;../3dlib\luabind;../3dlib\luabind\luabind;../3DLIB\luabind\src;lua\LUA_DEBUGGER;lua\binde_to_lua;lua;AI_EX;../3dlib/gPhysics;Surface;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>TEST_3D;WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>

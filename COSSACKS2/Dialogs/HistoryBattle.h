@@ -558,7 +558,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 						memcpy(&MYPINF,GSets.CGame.PL_INFO+i,sizeof MYPINF);
 						PREVSD=GetTickCount();
 					};
-					DPNAME dpName;
+					/*DPNAME dpName;
 					ZeroMemory(&dpName, sizeof(DPNAME));
 					dpName.dwSize = sizeof(DPNAME);
 					dpName.lpszShortNameA = MNAME[i]->Str;
@@ -566,7 +566,7 @@ bool MPL_WaitingBattleGame(bool Host,int BattleID){
 					if(strcmp(dpName.lpszShortNameA,oldname)){
 						SETPLAYERNAME(&dpName,strcmp(dpName.lpszShortNameA,oldname)!=0);
 						strcpy(oldname,dpName.lpszShortNameA);
-					};
+					};*/
 					//MNATION[i]->Enabled=true;
 					//MGRP[i]->Enabled=true;
 						//NameBack[i]->Visible=1;

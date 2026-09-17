@@ -1,4 +1,3 @@
-#include "..\stdheader.h"
 #include "mLodder.h"
 #include "..\Surface\Surface.h"
 #include "ITerrain.h"
