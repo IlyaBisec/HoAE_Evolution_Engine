@@ -1,3 +1,4 @@
+#include "../stdheader.h"
 #define PREVIEWLX 400
 #define PREVIEWLY 224
 char ROOMOPT[512]="";

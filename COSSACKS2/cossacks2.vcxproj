@@ -167,7 +167,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdheader.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>.\../_release3d_inl/vc6/stdheader.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_release3d_inl/vc6/</AssemblerListingLocation>
@@ -223,7 +223,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdheader.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>.\../_debug/cossacks2/stdheader.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_debug/cossacks2/</AssemblerListingLocation>
@@ -283,7 +283,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <AdditionalIncludeDirectories>../3dlib\gRenderDX9\dx9_sdk;D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\stdheader.h;../3dlib/gMotor;../3dlib/boost;../ClassEngine;GameSpy;lua;../3dlib/lua/include;../3dlib/luabind/luabind;lua\binde_to_lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USE3D;COSSACKS2;_COSSACKS2;NEWMORALE;SIMPLEMANAGE;GETTIRED;HASH_TOP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>.\../_release3d/vc6/cossacks2.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_release3d/vc6/</AssemblerListingLocation>
       <ObjectFileName>.\../_release3d/vc6/</ObjectFileName>
@@ -415,7 +415,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdheader.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>.\../_release3d_inl/vc6/stdheader.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_release3d_inl/vc6/</AssemblerListingLocation>
@@ -477,7 +477,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdheader.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>./../_fastdebug_checksync/stdheader.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_fastdebug_checksync/</AssemblerListingLocation>
@@ -547,7 +547,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader />
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdheader.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>./../_fastdebug/stdheader.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_fastdebug/</AssemblerListingLocation>
