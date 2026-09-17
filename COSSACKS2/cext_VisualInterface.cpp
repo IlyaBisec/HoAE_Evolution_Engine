@@ -16,7 +16,7 @@
 #include "GameInterface.h"
 
 //////////////////////////////////////////////////////////////////////////
-CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding** &Dips);
+//CIMPORT void GetDipSimpleBuildings(int &NDips, DIP_SimpleBuilding** &Dips);
 bool GetObjectVisibilityInFog(int x,int y,int z,OneObject* OB);
 CEXPORT UnitsGroup* GetUnitsGroup(GAMEOBJ* Group);
 DLLEXPORT OneObject* GetOBJ(int Index);
@@ -62,181 +62,181 @@ void VoiceQueueProcess(){
 bool SetlRadiusVisible=false;
 int SetlRadiusID;
 //
-bool ShowSetlRadius(){
-	if(SetlRadiusVisible){
-		SetlRadiusVisible=false;
-		DIP_SimpleBuilding** DSB;
-		int NDips;
-		GetDipSimpleBuildings(NDips,DSB);
-		DIP_SimpleBuilding* CDSB=DSB[SetlRadiusID];
-		UnitsGroup* UG=GetUnitsGroup(&CDSB->CentralGroup);
-		OneObject* OB=GetOBJ(UG->IDS[0]);
-		if(OB){	//&&(OB->Selected||(GetKeyState(VK_MENU)&0x8000))
-			int r0,r1;
-			GetZoneR(&CDSB->BigZone,&r0);
-			GetZoneR(&CDSB->VeryBigZone,&r1);
-			DrawColoredCircle(OB->RealX>>4,OB->RealY>>4,r0,0,0xFFFF2020,0xFFFFFFFF,0x2FFF2020,0x2FFFFFFF);
-		}
-	}	
-	return false;
-}
+//bool ShowSetlRadius(){
+//	if(SetlRadiusVisible){
+//		SetlRadiusVisible=false;
+//		//DIP_SimpleBuilding** DSB;
+//		int NDips;
+//		//GetDipSimpleBuildings(NDips,DSB);
+//		//DIP_SimpleBuilding* CDSB=DSB[SetlRadiusID];
+//		//UnitsGroup* UG=GetUnitsGroup(&CDSB->CentralGroup);
+//		OneObject* OB=GetOBJ(UG->IDS[0]);
+//		if(OB){	//&&(OB->Selected||(GetKeyState(VK_MENU)&0x8000))
+//			int r0,r1;
+//			GetZoneR(&CDSB->BigZone,&r0);
+//			GetZoneR(&CDSB->VeryBigZone,&r1);
+//			DrawColoredCircle(OB->RealX>>4,OB->RealY>>4,r0,0,0xFFFF2020,0xFFFFFFFF,0x2FFF2020,0x2FFFFFFF);
+//		}
+//	}	
+//	return false;
+//}
+////
+//bool cva_VI_Setl::LeftClick(SimpleDialog* SD){
+//	DIP_SimpleBuilding** SBs;
+//	int NDips;
+//	GetDipSimpleBuildings(NDips,SBs);
+//	if(NDips&&SD->ID<NDips){
+//		DIP_SimpleBuilding* SB=SBs[SD->ID];
+//		if(SB){
+//			OneObject* OB=SB->GetMainObj();
+//			if(OB){
+//				void CmdSelObject(OneObject* OB);
+//				CmdSelObject(OB);
+//			}
+//		}
+//	}
+//	return true;
+//}
+//void cva_VI_Setl::SetFrameState(SimpleDialog* SD){
+//	if(!SD->Visible){
+//		return;
+//	}
+//	if(SD->MouseOver){
+//		SetlRadiusVisible=true;
+//		SetlRadiusID=SD->ID;
+//	}
+//	GPPicture* GP=dynamic_cast<GPPicture*>(SD);
+//	if(GP){
+//		if(EngSettings.vInterf.sprSettlementAni){
+//			int N=GPS.GPNFrames(GP->FileID);
+//			if(N){
+//				static int t=GetTickCount();
+//				int T=GetTickCount();
+//				int spr=((T-t)/80)%N;
+//				GP->SetSpriteID(spr);
+//			}
+//			GPPicture* gP=NULL;
+//			if(GP->DSS.GetAmount()==0){
+//				DialogsDesk* DD=new DialogsDesk;
+//				GP->AddDialog(DD);
+//				DD->SetWidth(1000);
+//				DD->SetHeight(1000);
+//				gP=DD->addGPPicture(NULL,0,0,EngSettings.Resource.File,0);				
+//			}else{
+//				gP=dynamic_cast<GPPicture*>(GP->DSS[0]->DSS[0]);
+//			}
+//			if(gP){
+//				gP->Setx(EngSettings.vInterf.sprSettlementAniX);
+//				gP->Sety(EngSettings.vInterf.sprSettlementAniY);
+//				DIP_SimpleBuilding** SBs;
+//				int NDips;
+//				GetDipSimpleBuildings(NDips,SBs);
+//				if(NDips&&GP->ID<NDips){
+//					DIP_SimpleBuilding* SB=SBs[GP->ID];
+//					if(SB){
+//						GP->Nation=SB->Owner;
+//						byte res=0xFF;
+//						for(int i=0;i<6;i++){
+//							if(SB->Produce[i]){
+//								res=i;
+//								break;
+//							}
+//						}
+//						if(res!=0xFF){
+//							gP->SetSpriteID(EngSettings.Resource.Sprite[res]);						
+//						}
+//					}
+//				}
+//			}
+//		}
+//	}
+//}
 //
-bool cva_VI_Setl::LeftClick(SimpleDialog* SD){
-	DIP_SimpleBuilding** SBs;
-	int NDips;
-	GetDipSimpleBuildings(NDips,SBs);
-	if(NDips&&SD->ID<NDips){
-		DIP_SimpleBuilding* SB=SBs[SD->ID];
-		if(SB){
-			OneObject* OB=SB->GetMainObj();
-			if(OB){
-				void CmdSelObject(OneObject* OB);
-				CmdSelObject(OB);
-			}
-		}
-	}
-	return true;
-}
-void cva_VI_Setl::SetFrameState(SimpleDialog* SD){
-	if(!SD->Visible){
-		return;
-	}
-	if(SD->MouseOver){
-		SetlRadiusVisible=true;
-		SetlRadiusID=SD->ID;
-	}
-	GPPicture* GP=dynamic_cast<GPPicture*>(SD);
-	if(GP){
-		if(EngSettings.vInterf.sprSettlementAni){
-			int N=GPS.GPNFrames(GP->FileID);
-			if(N){
-				static int t=GetTickCount();
-				int T=GetTickCount();
-				int spr=((T-t)/80)%N;
-				GP->SetSpriteID(spr);
-			}
-			GPPicture* gP=NULL;
-			if(GP->DSS.GetAmount()==0){
-				DialogsDesk* DD=new DialogsDesk;
-				GP->AddDialog(DD);
-				DD->SetWidth(1000);
-				DD->SetHeight(1000);
-				gP=DD->addGPPicture(NULL,0,0,EngSettings.Resource.File,0);				
-			}else{
-				gP=dynamic_cast<GPPicture*>(GP->DSS[0]->DSS[0]);
-			}
-			if(gP){
-				gP->Setx(EngSettings.vInterf.sprSettlementAniX);
-				gP->Sety(EngSettings.vInterf.sprSettlementAniY);
-				DIP_SimpleBuilding** SBs;
-				int NDips;
-				GetDipSimpleBuildings(NDips,SBs);
-				if(NDips&&GP->ID<NDips){
-					DIP_SimpleBuilding* SB=SBs[GP->ID];
-					if(SB){
-						GP->Nation=SB->Owner;
-						byte res=0xFF;
-						for(int i=0;i<6;i++){
-							if(SB->Produce[i]){
-								res=i;
-								break;
-							}
-						}
-						if(res!=0xFF){
-							gP->SetSpriteID(EngSettings.Resource.Sprite[res]);						
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-void TakeResLink(OneObject* OBJ);
-
+//void TakeResLink(OneObject* OBJ);
 //
-void cext_VisualInterface::OnDrawOnMapAfterTransparentEffects(){
-	// settlement picture with hint
-	if(EngSettings.vInterf.fSettlement==-1){
-		EngSettings.vInterf.fSettlement=GPS.PreLoadGPImage("interf3\\f_icons");
-		EngSettings.vInterf.sprSettlement=19;
-	}
-	DIP_SimpleBuilding** SBs;
-	int NDips;
-	GetDipSimpleBuildings(NDips,SBs);
-	if(NDips){
-		static DialogsSystem* dsSettl=new DialogsSystem;	
-		int i = 0;
-		for(i;i<NDips;i++){
-			GPPicture* GP=NULL;
-			if(i>=dsSettl->DSS.GetAmount()){
-				GP=new GPPicture;
-				GP->FileID=EngSettings.vInterf.fSettlement;
-				GP->SetSpriteID(EngSettings.vInterf.sprSettlement);
-				dsSettl->DSS.Add(GP);
-				vui_Action* A=new cva_VI_Setl;
-				GP->v_Actions.Add(A);
-			}else{
-				GP=(GPPicture*)dsSettl->DSS[i];
-			}
-			GP->Visible=false;
-			DIP_SimpleBuilding* SB=SBs[i];
-			if(SB){
-				int x,y;
-				SB->GetCenter(x,y);
-				int z=GetTotalHeight(x,y);			
-				if(x>0&&GetObjectVisibilityInFog(x,y,z,NULL)){
-					int dH=EngSettings.vInterf.SettlementSpriteHeight;
-					OneObject* MainOB=SB->GetMainObj();
-					if(MainOB){
-						short N=MainOB->newMons->NBars;
-						short* B=MainOB->newMons->Bars3D;
-						dH=0;
-						for(int i=0;i<N;i++){
-							int H=B[i*5+4];
-							if(H>dH){
-								dH=H;
-							}
-						}
-						//dH-=GPS.GetGPHeight(EngSettings.vInterf.fSettlement,EngSettings.vInterf.sprSettlement);					
-					}
-					Vector3D v = SkewPt(x,y,z+dH);
-					WorldToScreenSpace(v);
-					//!IMM->IsPointVisible(v)
-					if(v.x>-200&&v.y>-200&&v.x<RealLx+200&&v.y<RealLy+200){
-						//GPS.ShowGP(v.x,v.y,EngSettings.vInterf.fSettlement,EngSettings.vInterf.sprSettlement,SB->Owner);
-						GP->Visible=true;
-						GP->Setx(v.x);
-						GP->Sety(v.y);
-						//
-						GP->ID=i;
-						//GP->UserParam=y;
-						//
-						GP->Nation=SB->Owner;
-						_str hint;
-						static char* tidSettl=GetTextByID("#SettlHint");
-						for(int i=0;i<6;i++){
-							if(SB->Produce[i]){
-								int r=SB->Resource[i];
-								/*
-								if(r>SB->CaravanCapacity[i]){
-								r=SB->CaravanCapacity[i];
-								}
-								*/
-								hint.print(tidSettl,RDS[i].Name,r,SB->CaravanCapacity[i]);
-								break;
-							}						
-						}					
-						GP->SetHint(hint.pchar());
-					}
-				}			
-			}
-		}
-		for(;i<dsSettl->DSS.GetAmount();i++){
-			dsSettl->DSS[i]->Visible=false;
-		}
-		dsSettl->ProcessDialogs();
-	}
+////
+//void cext_VisualInterface::OnDrawOnMapAfterTransparentEffects(){
+//	// settlement picture with hint
+//	if(EngSettings.vInterf.fSettlement==-1){
+//		EngSettings.vInterf.fSettlement=GPS.PreLoadGPImage("interf3\\f_icons");
+//		EngSettings.vInterf.sprSettlement=19;
+//	}
+//	DIP_SimpleBuilding** SBs;
+//	int NDips;
+//	GetDipSimpleBuildings(NDips,SBs);
+//	if(NDips){
+//		static DialogsSystem* dsSettl=new DialogsSystem;	
+//		int i = 0;
+//		for(i;i<NDips;i++){
+//			GPPicture* GP=NULL;
+//			if(i>=dsSettl->DSS.GetAmount()){
+//				GP=new GPPicture;
+//				GP->FileID=EngSettings.vInterf.fSettlement;
+//				GP->SetSpriteID(EngSettings.vInterf.sprSettlement);
+//				dsSettl->DSS.Add(GP);
+//				vui_Action* A=new cva_VI_Setl;
+//				GP->v_Actions.Add(A);
+//			}else{
+//				GP=(GPPicture*)dsSettl->DSS[i];
+//			}
+//			GP->Visible=false;
+//			DIP_SimpleBuilding* SB=SBs[i];
+//			if(SB){
+//				int x,y;
+//				SB->GetCenter(x,y);
+//				int z=GetTotalHeight(x,y);			
+//				if(x>0&&GetObjectVisibilityInFog(x,y,z,NULL)){
+//					int dH=EngSettings.vInterf.SettlementSpriteHeight;
+//					OneObject* MainOB=SB->GetMainObj();
+//					if(MainOB){
+//						short N=MainOB->newMons->NBars;
+//						short* B=MainOB->newMons->Bars3D;
+//						dH=0;
+//						for(int i=0;i<N;i++){
+//							int H=B[i*5+4];
+//							if(H>dH){
+//								dH=H;
+//							}
+//						}
+//						//dH-=GPS.GetGPHeight(EngSettings.vInterf.fSettlement,EngSettings.vInterf.sprSettlement);					
+//					}
+//					Vector3D v = SkewPt(x,y,z+dH);
+//					WorldToScreenSpace(v);
+//					//!IMM->IsPointVisible(v)
+//					if(v.x>-200&&v.y>-200&&v.x<RealLx+200&&v.y<RealLy+200){
+//						//GPS.ShowGP(v.x,v.y,EngSettings.vInterf.fSettlement,EngSettings.vInterf.sprSettlement,SB->Owner);
+//						GP->Visible=true;
+//						GP->Setx(v.x);
+//						GP->Sety(v.y);
+//						//
+//						GP->ID=i;
+//						//GP->UserParam=y;
+//						//
+//						GP->Nation=SB->Owner;
+//						_str hint;
+//						static char* tidSettl=GetTextByID("#SettlHint");
+//						for(int i=0;i<6;i++){
+//							if(SB->Produce[i]){
+//								int r=SB->Resource[i];
+//								/*
+//								if(r>SB->CaravanCapacity[i]){
+//								r=SB->CaravanCapacity[i];
+//								}
+//								*/
+//								hint.print(tidSettl,RDS[i].Name,r,SB->CaravanCapacity[i]);
+//								break;
+//							}						
+//						}					
+//						GP->SetHint(hint.pchar());
+//					}
+//				}			
+//			}
+//		}
+//		for(;i<dsSettl->DSS.GetAmount();i++){
+//			dsSettl->DSS[i]->Visible=false;
+//		}
+//		dsSettl->ProcessDialogs();
+//	}
 
 	// peasant resource visualization
 	//for(int i=0;i<MAXOBJECT;i++){
@@ -272,7 +272,7 @@ void cext_VisualInterface::OnDrawOnMapAfterTransparentEffects(){
 	//		}
 	//	}
 	//}
-};
+//};
 DialogsSystem cext_VisualInterface::Credits;
 DialogsSystem* GetShowAboutDS(){
 	return &cext_VisualInterface::Credits;

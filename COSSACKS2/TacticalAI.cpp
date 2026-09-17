@@ -206,11 +206,11 @@ int MainPoint::GetOwner()
 	int rez=-1;
 	if(Type==2)
 	{
-		DIP_SimpleBuilding** Sela;
+		//DIP_SimpleBuilding** Sela;
 		int NSel;
-		GetDipSimpleBuildings(NSel, Sela);
-		DIP_SimpleBuilding* Selo = Sela[SeloIndex];
-		rez=NATIONS[Selo->Owner].NMask;
+		//GetDipSimpleBuildings(NSel, Sela);
+		//DIP_SimpleBuilding* Selo = Sela[SeloIndex];
+		//rez=NATIONS[Selo->Owner].NMask;
 	}
 	if(Type==3)
 	{
@@ -688,13 +688,13 @@ void TacticalAI::ResearchMap()
 			}
 		}
 	}
-	DIP_SimpleBuilding** Sela;
+	//DIP_SimpleBuilding** Sela;
 	int NSel;
-	GetDipSimpleBuildings(NSel, Sela);
+	//GetDipSimpleBuildings(NSel, Sela);
 	for(int i=0;i<NSel;i++)
 	{
-		DIP_SimpleBuilding* Selo = Sela[i];
-		if(Selo)
+		//DIP_SimpleBuilding* Selo = Sela[i];
+		/*if(Selo)
 		{
 			MainPoint* MP = new MainPoint();
 			Selo->GetCenter(MP->x,MP->y);
@@ -703,7 +703,7 @@ void TacticalAI::ResearchMap()
 			MP->Type=2;
 			MP->SeloIndex=i;
 			MainPoints.Add(MP);
-		}
+		}*/
 	}
 	int n=GetNRoads();
 	if(EngSettings.DontUseRoads)n=0;
@@ -955,11 +955,11 @@ void TacticalAI::SetMPWeight(word NI)
 				if(MP->Type==2)
 				{
 					Amo=0;
-					DIP_SimpleBuilding** Sela;
+					//DIP_SimpleBuilding** Sela;
 					int NSel;
-					GetDipSimpleBuildings(NSel, Sela);
-					DIP_SimpleBuilding* Selo = Sela[MP->SeloIndex];
-					if(Selo)
+					//GetDipSimpleBuildings(NSel, Sela);
+					//DIP_SimpleBuilding* Selo = Sela[MP->SeloIndex];
+					/*if(Selo)
 					{
 						for(byte i=0;i<6;i++)
 						{
@@ -970,7 +970,7 @@ void TacticalAI::SetMPWeight(word NI)
 								Amo+=(MP->Amount*pr)/100;
 							}
 						}
-					}
+					}*/
 				}
 				if(MP->Type==3)
 				{

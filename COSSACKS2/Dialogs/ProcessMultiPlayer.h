@@ -100,28 +100,28 @@ REINCONN:;
 	DoNewInet=1;
 	CurProtocol=2;
 	if(!DoNewInet){
-		if(!lpDirectPlay3A){
-			CreateMultiplaterInterface();
-			if(!lpDirectPlay3A)return 0;
-		};
-		LPDIRECTPLAYLOBBYA	lpDPlayLobbyA = NULL;
-		LPDIRECTPLAYLOBBY2A	lpDPlayLobby2A = NULL;
-		if FAILED(DirectPlayLobbyCreate(NULL, &lpDPlayLobbyA, NULL, NULL, 0)) return 0;
-			// get ANSI DirectPlayLobby2 interface
-		HRESULT hr = lpDPlayLobbyA->QueryInterface(IID_IDirectPlayLobby2A, (LPVOID *) &lpDPlayLobby2A);
-		if FAILED(hr)return 0;
-				// don't need DirectPlayLobby interface anymore
-		lpDPlayLobbyA->Release();
-		lpDPlayLobbyA = NULL;
-		DPCOMPOUNDADDRESSELEMENT	addressElements[3];
+		//if(!lpDirectPlay3A){
+		//	CreateMultiplaterInterface();
+		//	if(!lpDirectPlay3A)return 0;
+		//};
+		//LPDIRECTPLAYLOBBYA	lpDPlayLobbyA = NULL;
+		//LPDIRECTPLAYLOBBY2A	lpDPlayLobby2A = NULL;
+		//if FAILED(DirectPlayLobbyCreate(NULL, &lpDPlayLobbyA, NULL, NULL, 0)) return 0;
+		//	// get ANSI DirectPlayLobby2 interface
+		//HRESULT hr = lpDPlayLobbyA->QueryInterface(IID_IDirectPlayLobby2A, (LPVOID *) &lpDPlayLobby2A);
+		//if FAILED(hr)return 0;
+		//		// don't need DirectPlayLobby interface anymore
+		//lpDPlayLobbyA->Release();
+		//lpDPlayLobbyA = NULL;
+		//DPCOMPOUNDADDRESSELEMENT	addressElements[3];
 			DWORD sz=128;
 		char* cc="";
 		switch(CurProtocol){
 		case 0://IPX
-			addressElements[0].guidDataType = DPAID_ServiceProvider;
+			/*addressElements[0].guidDataType = DPAID_ServiceProvider;
 			addressElements[0].dwDataSize = sizeof(GUID);
 			addressElements[0].lpData = (LPVOID) &DPSPGUID_IPX;
-			lpDPlayLobby2A->CreateCompoundAddress(addressElements,1,AddrBuf,&sz);
+			lpDPlayLobby2A->CreateCompoundAddress(addressElements,1,AddrBuf,&sz);*/
 			/*
 			memcpy(AddrBuf,&DPAID_TotalSize,16);
 			AddrBuf[16]=56;
@@ -134,13 +134,13 @@ REINCONN:;
 			IPADDR[0]=0;
 		case 3:
 		case 2:
-			addressElements[0].guidDataType = DPAID_ServiceProvider;
+			/*addressElements[0].guidDataType = DPAID_ServiceProvider;
 			addressElements[0].dwDataSize = sizeof(GUID);
 			addressElements[0].lpData = (LPVOID) &DPSPGUID_TCPIP;
 			addressElements[1].guidDataType = DPAID_INet;
 			addressElements[1].dwDataSize = strlen(IPADDR)+1;
 			addressElements[1].lpData = (LPVOID) IPADDR;
-			lpDPlayLobby2A->CreateCompoundAddress(addressElements,2,AddrBuf,&sz);
+			lpDPlayLobby2A->CreateCompoundAddress(addressElements,2,AddrBuf,&sz);*/
 			/*
 			memcpy(AddrBuf,&DPAID_ServiceProvider,16);
 			AddrBuf[16]=16;
@@ -151,14 +151,14 @@ REINCONN:;
 			*/
 			break;
 		};
-		lpDPlayLobby2A->Release();
+		//lpDPlayLobby2A->Release();
 		CloseMPL();
 		CreateMultiplaterInterface();
-		HRESULT HR=lpDirectPlay3A->InitializeConnection(AddrBuf,0);
-		if(FAILED(HR))goto RetryConn;
+		//HRESULT HR=lpDirectPlay3A->InitializeConnection(AddrBuf,0);
+		/*if(FAILED(HR))goto RetryConn;
 	}else{
 		CloseMPL();
-		CreateMultiplaterInterface();
+		CreateMultiplaterInterface();*/
 	};
 	switch(crs){
 	case mcmHost:
@@ -442,51 +442,51 @@ TryConnection:;
 	//};
 
 	if(BTLID==-1)goto TryConnection;
-	if(!lpDirectPlay3A){
+	/*if(!lpDirectPlay3A){
 		DoNewInet=0;
 		CreateMultiplaterInterface();
 		if(!lpDirectPlay3A)return;
-	};
+	};*/
 
-	LPDIRECTPLAYLOBBYA	lpDPlayLobbyA = NULL;
-	LPDIRECTPLAYLOBBY2A	lpDPlayLobby2A = NULL;
-	if FAILED(DirectPlayLobbyCreate(NULL, &lpDPlayLobbyA, NULL, NULL, 0)) return;
-	// get ANSI DirectPlayLobby2 interface
-	HRESULT hr = lpDPlayLobbyA->QueryInterface(IID_IDirectPlayLobby2A, (LPVOID *) &lpDPlayLobby2A);
-	if FAILED(hr)return;
+	//LPDIRECTPLAYLOBBYA	lpDPlayLobbyA = NULL;
+	//LPDIRECTPLAYLOBBY2A	lpDPlayLobby2A = NULL;
+	//if FAILED(DirectPlayLobbyCreate(NULL, &lpDPlayLobbyA, NULL, NULL, 0)) return;
+	//// get ANSI DirectPlayLobby2 interface
+	//HRESULT hr = lpDPlayLobbyA->QueryInterface(IID_IDirectPlayLobby2A, (LPVOID *) &lpDPlayLobby2A);
+	//if FAILED(hr)return;
 
 	// don't need DirectPlayLobby interface anymore
-	lpDPlayLobbyA->Release();
+	/*lpDPlayLobbyA->Release();
 	lpDPlayLobbyA = NULL;
-	DPCOMPOUNDADDRESSELEMENT	addressElements[3];
+	DPCOMPOUNDADDRESSELEMENT	addressElements[3];*/
 	DWORD sz=128;
 	char* cc="";
 	switch(CurProtocol){
 	case 0://IPX
-		addressElements[0].guidDataType = DPAID_ServiceProvider;
+		/*addressElements[0].guidDataType = DPAID_ServiceProvider;
 		addressElements[0].dwDataSize = sizeof(GUID);
 		addressElements[0].lpData = (LPVOID) &DPSPGUID_IPX;
-		lpDPlayLobby2A->CreateCompoundAddress(addressElements,1,AddrBuf,&sz);
+		lpDPlayLobby2A->CreateCompoundAddress(addressElements,1,AddrBuf,&sz);*/
 		break;
 	case 1://TCP/IP
 		IPADDR[0]=0;
 	case 3:
 	case 2:
-		addressElements[0].guidDataType = DPAID_ServiceProvider;
+		/*addressElements[0].guidDataType = DPAID_ServiceProvider;
 		addressElements[0].dwDataSize = sizeof(GUID);
 		addressElements[0].lpData = (LPVOID) &DPSPGUID_TCPIP;
 		addressElements[1].guidDataType = DPAID_INet;
 		addressElements[1].dwDataSize = strlen(IPADDR)+1;
 		addressElements[1].lpData = (LPVOID) IPADDR;
-		lpDPlayLobby2A->CreateCompoundAddress(addressElements,2,AddrBuf,&sz);
+		lpDPlayLobby2A->CreateCompoundAddress(addressElements,2,AddrBuf,&sz);*/
 		break;
 
 	};
-	lpDPlayLobby2A->Release();
+	//lpDPlayLobby2A->Release();
 	CloseMPL();
 	CreateMultiplaterInterface();
-	if FAILED(lpDirectPlay3A->InitializeConnection(AddrBuf
-		/*lplpConnectionBuffer[CurProtocol]*/,0)) return;
+	//if FAILED(lpDirectPlay3A->InitializeConnection(AddrBuf
+	//	/*lplpConnectionBuffer[CurProtocol]*/,0)) return;
 	switch(crs){
 	case mcmHost:
 		if(CreateNamedSession(PlName,BTLID+1,2))WaitingHostGame(BTLID+1);

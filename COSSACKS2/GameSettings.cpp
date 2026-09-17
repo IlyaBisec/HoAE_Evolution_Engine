@@ -301,10 +301,10 @@ int GetReadyPercent();
 int CurrentGameInfo::GetReadyPercent(){
 	return ::GetReadyPercent();
 };
-int GetPing(DPID pid);
-int CurrentGameInfo::GetPing(DWORD PlayerID){
-	return ::GetPing(PlayerID);
-};
+//int GetPing(DPID pid);
+//int CurrentGameInfo::GetPing(DWORD PlayerID){
+//	return ::GetPing(PlayerID);
+//};
 bool CurrentGameInfo::Kick(DWORD PlayerID){
 	PlayerInfo* I=GetCurrentPlayerInfo();
 	if(I&&I->Host){

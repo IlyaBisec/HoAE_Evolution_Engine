@@ -8,6 +8,10 @@
   3DWalls.cpp
   ActiveScenary.cpp
   ActiveScenary2.cpp
+  ActiveZone.cpp
+  ai_router.cpp
+  ai_scripts.cpp
+  Alarm.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(74,48): error C2061: syntax error: identifier 'DIP_SimpleBuilding'
   (compiling source file '/ActiveScenary2.cpp')
   
@@ -35,10 +39,6 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Act
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\ActiveScenary2.cpp(84,14): error C2065: 'DSB': undeclared identifier
   (compiling source file '/ActiveScenary2.cpp')
   
-  ActiveZone.cpp
-  ai_router.cpp
-  ai_scripts.cpp
-  Alarm.cpp
   AlertOnMiniMap.cpp
   AlexVisualSystem.cpp
   AllEditors.cpp
@@ -70,126 +70,6 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Cam
   ClassEditor.cpp
   ClassEditorsRegistration.cpp
   ComplexShooter.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(19,48): error C2061: syntax error: identifier 'DIP_SimpleBuilding'
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(68,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(68,24): error C2065: 'DSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(70,31): error C2065: 'DSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(71,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(71,23): error C2065: 'CDSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(71,28): error C2065: 'DSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(72,33): error C2065: 'CDSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(76,14): error C2065: 'CDSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(77,14): error C2065: 'CDSB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(85,2): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(85,23): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(87,30): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(89,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(89,23): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(89,26): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(90,6): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(91,18): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(131,5): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(131,26): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(133,33): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(135,6): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(135,26): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(135,29): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(136,9): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(137,18): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(140,11): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(164,2): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(164,23): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(166,30): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(183,4): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(183,24): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(183,27): error C2065: 'SBs': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(184,7): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(186,5): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(190,24): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(215,18): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(219,11): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(220,15): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cext_VisualInterface.cpp(226,43): error C2065: 'SB': undeclared identifier
-  (compiling source file '/cext_VisualInterface.cpp')
-  
   CPlayerSAVE.cpp
   CurrentMapOptions.cpp
   cva_DeskArray.cpp
@@ -236,15 +116,6 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\cex
   GameExtension.cpp
   GameInterface.cpp
   GameSettings.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\GameSettings.cpp(304,13): error C2065: 'DPID': undeclared identifier
-  (compiling source file '/GameSettings.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\GameSettings.cpp(304,18): error C2146: syntax error: missing ')' before identifier 'pid'
-  (compiling source file '/GameSettings.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\GameSettings.cpp(306,11): error C2039: 'GetPing': is not a member of '`global namespace''
-  (compiling source file '/GameSettings.cpp')
-  
   GameSound.cpp
   GlobalActions.cpp
   Globals.cpp
@@ -259,8 +130,8 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Gam
   HeroFunctions.cpp
   Hint.cpp
   Html.cpp
-  IconTool.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Html\Html.cpp(101,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  IconTool.cpp
   IR_Main.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\InetRaiting\IR_Main.cpp(3756,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Interface.cpp
@@ -269,8 +140,8 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Ine
   ListUnit.cpp
   LoadSave.cpp
   binde_class.cpp
-  binde_class2.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_class.cpp(480,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  binde_class2.cpp
   binde_function.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_class2.cpp(43,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   LUA_Manager.cpp
@@ -283,325 +154,110 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua
   mai_VanGuard.cpp
   mai_VanTroop.cpp
   mapa.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(205,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  MapDownload.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(127,2): error C2065: 'ServerDPID': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(205,24): error C2146: syntax error: missing ';' before identifier 'lpDirectPlay3A'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(972,11): error C2065: 'ServerDPID': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(1061,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1577,6): error C2065: 'DPNAME': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(1061,13): error C2146: syntax error: missing ';' before identifier 'MyDPID'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1577,13): error C2146: syntax error: missing ';' before identifier 'dpName'
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(1136,45): error C2146: syntax error: missing ')' before identifier 'lpDirectPlay3A'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1577,13): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(3102,20): error C2065: 'DPNAME': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1578,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(3102,28): error C2065: 'lpdpName': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1578,6): error C2065: 'DPNAME': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(3102,37): error C2062: type 'bool' unexpected
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1579,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(3103,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1579,29): error C2065: 'DPNAME': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(3103,13): error C2146: syntax error: missing ';' before identifier 'ServerDPID'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1580,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4843,29): error C2065: 'DPAID_INet': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1581,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4971,38): error C2146: syntax error: missing ')' before identifier 'lpDirectPlay3A'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1582,16): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4987,2): error C2065: 'LPDIRECTPLAYLOBBYA': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1583,33): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4987,21): error C2146: syntax error: missing ';' before identifier 'lpDPlayLobbyA'
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1583,47): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4987,21): error C2065: 'lpDPlayLobbyA': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1583,18): error C3861: 'SETPLAYERNAME': identifier not found
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4988,2): error C2065: 'LPDIRECTPLAYLOBBY2A': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1584,22): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4988,22): error C2146: syntax error: missing ';' before identifier 'lpDPlayLobby2A'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4988,22): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4989,5): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4989,5): error C3861: 'DirectPlayLobbyCreate': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4991,15): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4991,45): error C2065: 'IID_IDirectPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4991,81): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4994,16): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4996,3): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4999,2): error C2065: 'LPDPLCONNECTION': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4999,18): error C2146: syntax error: missing ';' before identifier 'cset'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4999,18): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4999,24): error C2065: 'LPDPLCONNECTION': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(4999,40): error C2146: syntax error: missing ';' before identifier '_ExMalloc'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5000,8): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5000,48): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5001,12): error C2065: 'DP_OK': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5002,3): error C2065: 'LPDIRECTPLAY2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5002,18): error C2146: syntax error: missing ';' before identifier 'lpd2A'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5002,18): error C2065: 'lpd2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5004,6): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5010,7): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5011,15): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5011,5): error C2660: 'strcpy': function does not take 1 arguments
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1584,7): error C2660: 'strcpy': function does not take 1 arguments
   (compiling source file '/Interface.cpp')
       C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\string.h(130,1):
       see declaration of 'strcpy'
-      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5011,5):
-      while trying to match the argument list '(char [128])'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\MultiplayerRoom.h(1584,7):
+      while trying to match the argument list '(char [64])'
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5015,5): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(561,6): error C2065: 'DPNAME': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5016,5): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(561,13): error C2146: syntax error: missing ';' before identifier 'dpName'
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5018,5): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(561,13): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5019,5): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(562,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5021,10): error C2065: 'lpDPlayLobby2A': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(562,6): error C2065: 'DPNAME': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5021,37): error C2065: 'lpd2A': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(563,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5022,4): error C2065: 'lpDPlayLobby2A': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(563,29): error C2065: 'DPNAME': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5022,54): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(564,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5022,70): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(565,6): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5024,14): error C2065: 'DP_OK': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(566,16): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5026,9): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(567,22): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5026,39): error C2065: 'DPLCONNECTION_CREATESESSION': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(567,36): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5030,18): error C2065: 'cset': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(567,7): error C3861: 'SETPLAYERNAME': identifier not found
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5030,48): error C2065: 'DPLCONNECTION_CREATESESSION': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(568,22): error C2065: 'dpName': undeclared identifier
   (compiling source file '/Interface.cpp')
   
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5032,5): error C2065: 'lpDPlayLobby2A': undeclared identifier
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(568,7): error C2660: 'strcpy': function does not take 1 arguments
   (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5035,4): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5036,11): error C2065: 'lpd2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5036,33): error C2065: 'IID_IDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5036,62): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5037,14): error C2065: 'DP_OK': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5041,14): error C2065: 'DP_OK': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5042,8): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5042,23): error C2065: 'DPLCONNECTION_CREATESESSION': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5043,23): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5043,39): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5043,52): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5043,6): error C3861: 'DPL_CreatePlayer': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5050,30): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5050,6): error C3861: 'StopConnectionToSession': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5053,23): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5053,39): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5053,52): error C2065: 'cset': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(5053,6): error C3861: 'DPL_CreatePlayer': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-  MapDownload.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6037,6): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6037,85): error C2065: 'DPSET_REMOTE': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6038,6): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6038,13): error C2146: syntax error: missing ';' before identifier 'dpName'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6038,13): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6039,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6039,6): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6040,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6040,29): error C2065: 'DPNAME': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6041,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6042,6): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6043,6): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6043,44): error C2065: 'dpName': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6043,51): error C2065: 'DPSET_REMOTE': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6105,28): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Interface.cpp(6105,4): error C3861: 'StopConnectionToSession': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(103,7): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(105,8): error C2065: 'lpDirectPlay3A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(107,3): error C2065: 'LPDIRECTPLAYLOBBYA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(107,22): error C2146: syntax error: missing ';' before identifier 'lpDPlayLobbyA'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(107,22): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(108,3): error C2065: 'LPDIRECTPLAYLOBBY2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(108,23): error C2146: syntax error: missing ';' before identifier 'lpDPlayLobby2A'
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(108,23): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(109,6): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(109,6): error C3861: 'DirectPlayLobbyCreate': identifier not found
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(111,16): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(111,46): error C2065: 'IID_IDirectPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(111,82): error C2065: 'lpDPlayLobby2A': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(114,3): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(115,3): error C2065: 'lpDPlayLobbyA': undeclared identifier
-  (compiling source file '/Interface.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\ProcessMultiplayer.h(115,3): error C1003: error count exceeds 100; stopping compilation
-  (compiling source file '/Interface.cpp')
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\string.h(130,1):
+      see declaration of 'strcpy'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dialogs\HistoryBattle.h(568,7):
+      while trying to match the argument list '(char [64])'
   
   MapGenerator.cpp
   MapSprites.cpp
@@ -635,8 +291,8 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Dia
   PiroObjects.cpp
   PlaceInAJob.cpp
   SampProfiler.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Profiler\SampProfiler.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   ProfilingInstrument.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Profiler\SampProfiler.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   qfCondRandom.cpp
   QParser.cpp
   qpChatHint.cpp
@@ -665,43 +321,43 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Pro
   Archway.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Archway.cpp(98,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Booleans.cpp
-  CCombineExtension.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Booleans.cpp(3248,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Chamfer.cpp
+  CCombineExtension.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\CCombineExtension.cpp(401,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  CmdCallbacks.cpp
+  Chamfer.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Chamfer.cpp(108,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  CmdCallbacks.cpp
   CmdExt.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdExt.cpp(227,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdCallbacks.cpp(136,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   CollidingCamera.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdExt.cpp(227,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Colorize.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CollidingCamera.cpp(737,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Deform.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Colorize.cpp(197,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Facturize.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Deform.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Grass.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Facturize.cpp(110,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Grass.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  Grass.cpp
   HiResScreenShot.cpp
-  ITGeometryCallback.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Grass.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\HiResScreenShot.cpp(67,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(266,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  ITGeometryCallback.cpp
   Layer.cpp
   LocalExporter.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Layer.cpp(208,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalExporter.cpp(68,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   LocalGenerator.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(266,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalExporter.cpp(68,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Manipulators.cpp
   MCubes.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Manipulators.cpp(301,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Messager.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalGenerator.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  Messager.cpp
   Obj3D.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Obj3D.cpp(385,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Messager.cpp(48,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   PropertyPanel.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Obj3D.cpp(385,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Racist.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\PropertyPanel.cpp(57,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Scissors.cpp
@@ -710,110 +366,29 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Sur
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Scissors.cpp(76,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Shader.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\SelExt.cpp(1054,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Shader.cpp(316,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Smooth.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Shader.cpp(316,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Surface.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Smooth.cpp(280,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   SurfaceGenerator.cpp
-  SurfExporter.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfaceGenerator.cpp(3631,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  SurfPiece.cpp
+  SurfExporter.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfExporter.cpp(97,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  SurfProcess.cpp
+  SurfPiece.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfPiece.cpp(165,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  SurfProcess.cpp
   SurfSplit.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(956,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   TankController.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfSplit.cpp(377,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Typify.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\TankController.cpp(444,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(956,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   uv_Split.cpp
-  TacticalAI.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\uv_Split.cpp(41,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\TankController.cpp(444,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Typify.cpp(130,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\uv_Split.cpp(41,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
+  TacticalAI.cpp
   testserver.cpp
   TextVisualElements.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(209,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(209,24): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(211,31): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(211,3): error C3861: 'GetDipSimpleBuildings': identifier not found
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(212,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(212,23): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(212,30): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(213,15): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(213,26): error C7732: expected an expression before ']'
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(691,2): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(691,23): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(693,30): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(693,2): error C3861: 'GetDipSimpleBuildings': identifier not found
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(696,3): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(696,23): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(696,30): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(697,6): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(700,4): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(958,6): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(958,27): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(960,34): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(960,6): error C3861: 'GetDipSimpleBuildings': identifier not found
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(961,6): error C2065: 'DIP_SimpleBuilding': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(961,26): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(961,33): error C2065: 'Sela': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(962,9): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\TacticalAI.cpp(966,11): error C2065: 'Selo': undeclared identifier
-  (compiling source file '/TacticalAI.cpp')
-  
   Timing.cpp
   Transport.cpp
   TypeExchange.cpp

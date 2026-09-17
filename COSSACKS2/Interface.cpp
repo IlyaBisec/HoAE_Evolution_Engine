@@ -202,7 +202,7 @@ void FreeDDObjects( void );
 bool StartIGame(bool);
 extern bool GameInProgress;
 byte MyRace;
-extern LPDIRECTPLAY3A		lpDirectPlay3A;
+//extern LPDIRECTPLAY3A		lpDirectPlay3A;
 extern word PlayerMenuMode;
 extern LPVOID lplpConnectionBuffer[16];
 extern bool SHOWSLIDE;
@@ -1058,7 +1058,7 @@ bool CommEnterName(){
 CEXPORT char IPADDR[128]="";
 CEXPORT bool TOTALEXIT=0;
 
-extern DPID MyDPID;
+//extern DPID MyDPID;
 bool PIEnumeratePlayers(PlayerInfo* PIN,bool DoMsg);
 //PlayerInfo GSets.CGame.PL_INFO[8];
 char Names[32][8];
@@ -1133,7 +1133,7 @@ void ControlLingvo(char* str){
 		c1[3]='?';
 	};
 };
-void StopConnectionToSession(LPDIRECTPLAY3A lpDirectPlay3A);
+//void StopConnectionToSession(LPDIRECTPLAY3A lpDirectPlay3A);
 extern int GLOBALTIME;
 extern int PGLOBALTIME;
 extern int CurrentStartTime[8];
@@ -3099,8 +3099,8 @@ void SetStdTBL(){
 };
 int GetLogRank();
 void SETPLAYERDATA(DWORD ID,void* Data,int size,bool);
-void SETPLAYERNAME(DPNAME* lpdpName,bool);
-extern DPID ServerDPID;
+//void SETPLAYERNAME(DPNAME* lpdpName,bool);
+//extern DPID ServerDPID;
 void ClearLPACK();
 bool GetPreviewName(char* Name,char* ccc);
 void DeepDeletePeer(DWORD ID);
@@ -4840,10 +4840,10 @@ BOOL FAR PASCAL EnumAddressCallback1(
 									 LPCVOID lpData,
 									 LPVOID lpContext
 									 ){
-										 if(guidDataType==DPAID_INet){
+										 /*if(guidDataType==DPAID_INet){
 											 strcpy(IPADDR,(char*)lpData);
 											 return false;
-										 };
+										 };*/
 										 return true;
 									 };
 
@@ -4968,8 +4968,8 @@ bool NotifyFirewallState(){
 	RClose(F);
 	return AskQuestion2(GetTextByID("FRW_0"),"tmp.txt",GetTextByID("FRW_YES"),GetTextByID("FRW_IGN"));
 };
-bool DPL_CreatePlayer(LPDIRECTPLAY3A lpDirectPlay3A,
-					  LPGUID lpguidSessionInstance, LPDPNAME lpszPlayerName,bool Host);
+//bool DPL_CreatePlayer(LPDIRECTPLAY3A lpDirectPlay3A,
+//					  LPGUID lpguidSessionInstance, LPDPNAME lpszPlayerName,bool Host);
 #ifdef MAKE_PTC
 int CheckLobby(){
 	return false;
@@ -4984,89 +4984,89 @@ int CheckLobby(){
 	GPS.SetClipArea( 0, 0, 1024, 768 );
 #endif
 
-	LPDIRECTPLAYLOBBYA	lpDPlayLobbyA = NULL;
-	LPDIRECTPLAYLOBBY2A	lpDPlayLobby2A = NULL;
-	if FAILED(DirectPlayLobbyCreate(NULL, &lpDPlayLobbyA, NULL, NULL, 0)) return false;
-	// get ANSI DirectPlayLobby2 interface
-	HRESULT hr = lpDPlayLobbyA->QueryInterface(IID_IDirectPlayLobby2A, (LPVOID *) &lpDPlayLobby2A);
-	if FAILED(hr)return false;
+	//LPDIRECTPLAYLOBBYA	lpDPlayLobbyA = NULL;
+	//LPDIRECTPLAYLOBBY2A	lpDPlayLobby2A = NULL;
+	//if FAILED(DirectPlayLobbyCreate(NULL, &lpDPlayLobbyA, NULL, NULL, 0)) return false;
+	//// get ANSI DirectPlayLobby2 interface
+	//HRESULT hr = lpDPlayLobbyA->QueryInterface(IID_IDirectPlayLobby2A, (LPVOID *) &lpDPlayLobby2A);
+	/*if FAILED(hr)return false;
 	DWORD Size=0;
 	HRESULT dpres=lpDPlayLobby2A->GetConnectionSettings(0,NULL,&Size);
 	if(!Size){
 		lpDPlayLobby2A->Release();
 		return false;
-	};
-	LPDPLCONNECTION cset=(LPDPLCONNECTION)malloc(Size);
-	dpres=lpDPlayLobby2A->GetConnectionSettings(0,cset,&Size);
-	if(dpres==DP_OK){
-		LPDIRECTPLAY2A lpd2A;
-		CreateMultiplaterInterface();
-		if(lpDirectPlay3A){
-			LoadFog(2);
-			LoadPalette("2\\agew_1.pal");
-			ShowLoading();
-			//assert(0);
-			char cc[128]="";
-			if(cset->lpSessionDesc->lpszSessionNameA)
-				strcpy(cc,cset->lpSessionDesc->lpszSessionNameA);
-			cc[8]=0;
-			bool BATTL=!strcmp(cc,"[BATTLE]");
-			if(BATTL){
-				cset->lpSessionDesc->dwMaxPlayers=2;
-				cset->lpSessionDesc->dwUser2=1;
-			}else{
-				cset->lpSessionDesc->dwMaxPlayers=7;
-				cset->lpSessionDesc->dwUser2=0;
-			};
-			dpres=lpDPlayLobby2A->Connect(0,&lpd2A,NULL);
-			lpDPlayLobby2A->EnumAddress(&EnumAddressCallback1,cset->lpAddress,cset->dwAddressSize,NULL);
+	};*/
+	//LPDPLCONNECTION cset=(LPDPLCONNECTION)malloc(Size);
+	//dpres=lpDPlayLobby2A->GetConnectionSettings(0,cset,&Size);
+	//if(dpres==DP_OK){
+	//	LPDIRECTPLAY2A lpd2A;
+	//	CreateMultiplaterInterface();
+	//	if(lpDirectPlay3A){
+	//		LoadFog(2);
+	//		LoadPalette("2\\agew_1.pal");
+	//		ShowLoading();
+	//		//assert(0);
+	//		char cc[128]="";
+	//		if(cset->lpSessionDesc->lpszSessionNameA)
+	//			strcpy(cc,cset->lpSessionDesc->lpszSessionNameA);
+	//		cc[8]=0;
+	//		bool BATTL=!strcmp(cc,"[BATTLE]");
+	//		if(BATTL){
+	//			cset->lpSessionDesc->dwMaxPlayers=2;
+	//			cset->lpSessionDesc->dwUser2=1;
+	//		}else{
+	//			cset->lpSessionDesc->dwMaxPlayers=7;
+	//			cset->lpSessionDesc->dwUser2=0;
+	//		};
+	//		dpres=lpDPlayLobby2A->Connect(0,&lpd2A,NULL);
+	//		lpDPlayLobby2A->EnumAddress(&EnumAddressCallback1,cset->lpAddress,cset->dwAddressSize,NULL);
 
-			if(dpres!=DP_OK){
-				if(BATTL){
-					if(cset->lpSessionDesc->dwFlags==DPLCONNECTION_CREATESESSION)ShowFailure(1);
-					else ShowFailure(2);
-				}else{
-					//lpDPlayLobby2A->EnumAddress(&EnumAddressCallback1,cset->lpAddress,cset->dwAddressSize,NULL);
-					ShowFailure(cset->lpSessionDesc->dwFlags==DPLCONNECTION_CREATESESSION);
-				};
-				lpDPlayLobby2A->Release();
-				return false;
-			};
-			lpDPlayLobby2A->Release();
-			dpres= lpd2A->QueryInterface(IID_IDirectPlay3A, (LPVOID*)&lpDirectPlay3A);
-			if(dpres!=DP_OK)return false;
-			ClearScreen();
-			LoadFog(2);
-			LoadPalette("2\\agew_1.pal");
-			if(dpres==DP_OK){
-				if(cset->dwFlags==DPLCONNECTION_CREATESESSION){
-					DPL_CreatePlayer(lpDirectPlay3A,&cset->guidSP,cset->lpPlayerName,1);
-					if(!BATTL){
-						if(!MPL_WaitingGame(true,0))return false;
-					}else{
-						int BTLID=1;//ProcessWars();
-						if(!MPL_WaitingBattleGame(true,1))return false;
-					};
-					StopConnectionToSession(lpDirectPlay3A);
-					StartIGame(0);
-				}else{
-					DPL_CreatePlayer(lpDirectPlay3A,&cset->guidSP,cset->lpPlayerName,1);
-					if(!BATTL){
-						if(!MPL_WaitingGame(false,0))return false;
-					}else{
-						if(!MPL_WaitingBattleGame(false,1))return false;
-					};
-				};
-				return 1;
-			}else{
-				return false;
-			};
-		}else{
-			return false;
-		};
-	}else{
-		return false;
-	};
+	//		if(dpres!=DP_OK){
+	//			if(BATTL){
+	//				if(cset->lpSessionDesc->dwFlags==DPLCONNECTION_CREATESESSION)ShowFailure(1);
+	//				else ShowFailure(2);
+	//			}else{
+	//				//lpDPlayLobby2A->EnumAddress(&EnumAddressCallback1,cset->lpAddress,cset->dwAddressSize,NULL);
+	//				ShowFailure(cset->lpSessionDesc->dwFlags==DPLCONNECTION_CREATESESSION);
+	//			};
+	//			lpDPlayLobby2A->Release();
+	//			return false;
+	//		};
+	//		lpDPlayLobby2A->Release();
+	//		dpres= lpd2A->QueryInterface(IID_IDirectPlay3A, (LPVOID*)&lpDirectPlay3A);
+	//		if(dpres!=DP_OK)return false;
+	//		ClearScreen();
+	//		LoadFog(2);
+	//		LoadPalette("2\\agew_1.pal");
+	//		if(dpres==DP_OK){
+	//			if(cset->dwFlags==DPLCONNECTION_CREATESESSION){
+	//				DPL_CreatePlayer(lpDirectPlay3A,&cset->guidSP,cset->lpPlayerName,1);
+	//				if(!BATTL){
+	//					if(!MPL_WaitingGame(true,0))return false;
+	//				}else{
+	//					int BTLID=1;//ProcessWars();
+	//					if(!MPL_WaitingBattleGame(true,1))return false;
+	//				};
+	//				StopConnectionToSession(lpDirectPlay3A);
+	//				StartIGame(0);
+	//			}else{
+	//				DPL_CreatePlayer(lpDirectPlay3A,&cset->guidSP,cset->lpPlayerName,1);
+	//				if(!BATTL){
+	//					if(!MPL_WaitingGame(false,0))return false;
+	//				}else{
+	//					if(!MPL_WaitingBattleGame(false,1))return false;
+	//				};
+	//			};
+	//			return 1;
+	//		}else{
+	//			return false;
+	//		};
+	//	}else{
+	//		return false;
+	//	};
+	//}else{
+	//	return false;
+	//};
 };
 #endif
 int prevVid=-1;
@@ -6034,13 +6034,13 @@ bool WaitingGame(bool Host){
 				if(GSets.CGame.PL_INFO[i].PlayerID==MyDPID){
 					GSets.CGame.PL_INFO[i].NationID=MNATION[i]->CurLine;
 					GSets.CGame.PL_INFO[i].ColorID=MCOLOR[i]->color-0x80;
-					lpDirectPlay3A->SetPlayerData(MyDPID,(void*)&GSets.CGame.PL_INFO[i].NationID,4,DPSET_REMOTE);
-					DPNAME dpName;
-					ZeroMemory(&dpName, sizeof(DPNAME));
-					dpName.dwSize = sizeof(DPNAME);
-					dpName.lpszShortNameA = MNAME[i]->Str;
-					dpName.lpszLongNameA = NULL;
-					lpDirectPlay3A->SetPlayerName(MyDPID,&dpName,DPSET_REMOTE);
+					//lpDirectPlay3A->SetPlayerData(MyDPID,(void*)&GSets.CGame.PL_INFO[i].NationID,4,DPSET_REMOTE);
+					//DPNAME dpName;
+					//ZeroMemory(&dpName, sizeof(DPNAME));
+					//dpName.dwSize = sizeof(DPNAME);
+					//dpName.lpszShortNameA = MNAME[i]->Str;
+					//dpName.lpszLongNameA = NULL;
+					//lpDirectPlay3A->SetPlayerName(MyDPID,&dpName,DPSET_REMOTE);
 					MNATION[i]->Enabled=true;
 					MCOLOR[i]->Enabled=true;
 					MGRP[i]->Enabled=true;
@@ -6102,7 +6102,7 @@ bool WaitingHostGame(int ID){
 	}else{
 		if(ItemChoose==mcmOk){
 			//ShowLoading();
-			StopConnectionToSession(lpDirectPlay3A);
+			//StopConnectionToSession(lpDirectPlay3A);
 			StartIGame(0);
 			return true;
 		};
