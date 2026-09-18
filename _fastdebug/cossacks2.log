@@ -244,6 +244,8 @@
   cMat3.cpp
   cMat4.cpp
   cMaterial.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\comms\cLog.cpp(26,3): error C3861: '_beginthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\comms\cLog.cpp(53,2): error C3861: '_endthread': identifier not found
   cMath.cpp
   cMatrix.cpp
   cMesh.cpp
@@ -280,6 +282,9 @@
   FEXModule.cpp
   FEXSysInfo.cpp
   FMManager.cpp
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\include\atlbase.h(5101,19): error C3861: '_beginthreadex': identifier not found
+  (compiling source file 'Fex/FEXHelpers.cpp')
+  
   C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
   GenerateMesh.cpp
   HiBars.cpp
@@ -304,15 +309,30 @@
   FPerformance.cpp
   FSampProfiler.cpp
   FSampProfilerHelpers.cpp
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\include\atlbase.h(5101,19): error C3861: '_beginthreadex': identifier not found
+  (compiling source file 'Profiler/FPerformance.cpp')
+  
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\include\atlbase.h(5101,19): error C3861: '_beginthreadex': identifier not found
+  (compiling source file 'Profiler/FSampProfiler.cpp')
+  
   FSampProfilerOut.cpp
   SampProfiler.cpp
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\include\atlbase.h(5101,19): error C3861: '_beginthreadex': identifier not found
+  (compiling source file 'Profiler/FSampProfilerHelpers.cpp')
+  
   FXMLMessages.cpp
   FXMLStream.cpp
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\include\atlbase.h(5101,19): error C3861: '_beginthreadex': identifier not found
+  (compiling source file 'Profiler/FSampProfilerOut.cpp')
+  
   Resfile.cpp
   StringsHash.cpp
   Archway.cpp
   bitset.cpp
   Booleans.cpp
+D:\ilya\apps\VisualStudios\vs2022\2022\Professional\VC\Tools\MSVC\14.44.35207\atlmfc\include\atlbase.h(5101,19): error C3861: '_beginthreadex': identifier not found
+  (compiling source file 'Profiler/SampProfiler.cpp')
+  
   CCombineExtension.cpp
   Chamfer.cpp
   CmdCallbacks.cpp
@@ -381,13 +401,13 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\
   
   Layer.cpp
   LocalExporter.cpp
+  LocalGenerator.cpp
 D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(157,10): error C2660: 'VIPMLodder::AddVertex': function does not take 2 arguments
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(115,21):
       see declaration of 'VIPMLodder::AddVertex'
       D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(157,10):
       while trying to match the argument list '(Vector3D, Vector3D)'
   
-  LocalGenerator.cpp
   Manipulators.cpp
   Messager.cpp
   Obj3D.cpp
@@ -398,7 +418,6 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Sur
   Shader.cpp
   Smooth.cpp
   Surface.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Surface.cpp(1,10): error C1083: Cannot open include file: 'stdheader.h': No such file or directory
   SurfaceGenerator.cpp
   SurfExporter.cpp
   SurfPiece.cpp
@@ -406,6 +425,13 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Sur
   SurfSplit.cpp
   TankController.cpp
   Typify.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(457,2): error C3861: '_endthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(512,2): error C3861: '_endthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(573,2): error C3861: '_endthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(595,2): error C3861: '_endthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(720,2): error C3861: '_endthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(729,2): error C3861: '_endthread': identifier not found
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(898,6): error C3861: '_beginthread': identifier not found
   uv_Split.cpp
   TMixer.cpp
   TreesMesh.cpp

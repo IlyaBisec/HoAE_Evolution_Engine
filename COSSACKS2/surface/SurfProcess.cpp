@@ -1,9 +1,10 @@
-#include "..\stdheader.h"
+#include "stdheader.h"
 #include "SurfProcess.h"
 #include <richedit.h>
 #include "SurfExporter.h"
 #include "..\fmm\fmmanager.h"
 #include "IResourceManager.h"
+#include <process.h>
 
 Surface::SurfProcess g_SurfProcess;
 extern FMManager MManager;
