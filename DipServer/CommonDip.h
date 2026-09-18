@@ -1,3 +1,5 @@
+typedef unsigned char byte;
+
 #include "..\COSSACKS2\common.h"
 #include "..\IntExplorer\ParseRQ.h"
 #include <DString.h>
