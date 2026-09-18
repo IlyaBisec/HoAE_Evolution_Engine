@@ -6,6 +6,7 @@
   3DRandMap.cpp
   3DSurf.cpp
   3DWalls.cpp
+  Abilities.cpp
   ActiveScenary.cpp
   ActiveScenary2.cpp
   ActiveZone.cpp
@@ -15,10 +16,13 @@
   AlertOnMiniMap.cpp
   AlexVisualSystem.cpp
   AllEditors.cpp
+  AllTools.cpp
+  AmbientMusicScript.cpp
   AntiBug.cpp
   AttackList.cpp
   AutoActions.cpp
   BattlePainter.cpp
+  BattleShipAI.cpp
   BE_Block.cpp
   BE_Global.cpp
   be_HashTop.cpp
@@ -33,10 +37,6 @@
   BrigadeVariables.cpp
   BrigAITools.cpp
   Build.cpp
-  Navigator.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Camera\Navigator.cpp(2038,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Track.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Camera\Track.cpp(1462,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Cdirsnd.cpp
   cext_VisualInterface.cpp
   CheckFileEnumerator.cpp
@@ -62,12 +62,14 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Cam
   cvi_SinglePlayerData.cpp
   cvi_UnitAbility.cpp
   Danger.cpp
+  Ddex1.cpp
   Ddini.cpp
   Debuger.cpp
   DeviceCD.cpp
   DialogsEditor.cpp
   CQuest.cpp
   MissionScript.cpp
+  DrawFeatures.cpp
   DrawForms.cpp
   DrawSomethingOverBrigade.cpp
   Economy.cpp
@@ -102,22 +104,13 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Cam
   GVClass.cpp
   HeroFunctions.cpp
   Hint.cpp
-  Html.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Html\Html.cpp(101,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   IconTool.cpp
-  IR_Main.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\InetRaiting\IR_Main.cpp(3756,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   Interface.cpp
+  Language.cpp
   LinearTest.cpp
   Lines.cpp
   ListUnit.cpp
   LoadSave.cpp
-  binde_class.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_class.cpp(480,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  binde_class2.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_class2.cpp(43,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  binde_function.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua\Binde_to_lua\binde_function.cpp(281,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   LUA_Manager.cpp
   MainInterface.cpp
   mai_Extension.cpp
@@ -131,6 +124,7 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua
   MapGenerator.cpp
   MapSprites.cpp
   Masks.cpp
+  MassivePlayer.cpp
   Megapolis.cpp
   MessageMgr.cpp
   Mine.cpp
@@ -159,8 +153,6 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Lua
   PeerClass.cpp
   PiroObjects.cpp
   PlaceInAJob.cpp
-  SampProfiler.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Profiler\SampProfiler.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   ProfilingInstrument.cpp
   qfCondRandom.cpp
   QParser.cpp
@@ -178,6 +170,7 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Pro
   Save_XML_ToMap.cpp
   Scape3D.cpp
   Select.cpp
+  SelectionRect.cpp
   SelProp.cpp
   ShipTrace.cpp
   Silomer.cpp
@@ -187,81 +180,15 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Pro
   stRecog.cpp
   Subtitles.cpp
   SuperEditor.cpp
-  Archway.cpp
-  Booleans.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Archway.cpp(98,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  CCombineExtension.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Booleans.cpp(3248,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Chamfer.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\CCombineExtension.cpp(401,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  CmdCallbacks.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Chamfer.cpp(108,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  CmdExt.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdCallbacks.cpp(136,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  CollidingCamera.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CmdExt.cpp(227,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\CollidingCamera.cpp(737,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Colorize.cpp
-  Deform.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Deform.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Facturize.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Colorize.cpp(197,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Grass.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Facturize.cpp(110,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  HiResScreenShot.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Grass.cpp(37,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  ITGeometryCallback.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\HiResScreenShot.cpp(67,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(265,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Layer.cpp
-  LocalExporter.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Layer.cpp(207,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  LocalGenerator.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalExporter.cpp(68,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Manipulators.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\LocalGenerator.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Manipulators.cpp(301,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   MCubes.cpp
-  Messager.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Messager.cpp(48,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Obj3D.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\Obj3D.cpp(385,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  PropertyPanel.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\PropertyPanel.cpp(57,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Racist.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Racist.cpp(106,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Scissors.cpp
-  SelExt.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Scissors.cpp(76,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Shader.cpp
-  Smooth.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\SelExt.cpp(1054,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Surface.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Shader.cpp(316,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  SurfaceGenerator.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Smooth.cpp(280,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  SurfExporter.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfaceGenerator.cpp(3631,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfExporter.cpp(97,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  SurfPiece.cpp
-  SurfProcess.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfPiece.cpp(165,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfProcess.cpp(956,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  SurfSplit.cpp
-  TankController.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\SurfSplit.cpp(377,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\TankController.cpp(444,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
-  Typify.cpp
-  uv_Split.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\surface\uv_Split.cpp(41,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   TacticalAI.cpp
-D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Typify.cpp(130,1): error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdheader.h"' to your source?
   testserver.cpp
   TextVisualElements.cpp
   Timing.cpp
   Transport.cpp
   TypeExchange.cpp
   ua_Modificators.cpp
+  UndoMaster.cpp
   UnitAbility.cpp
   UnitAbilityExtension.cpp
   UnitAI.cpp
@@ -285,3 +212,203 @@ D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Sur
   Waves.cpp
   Weapon.cpp
   ZBuffer.cpp
+  FSMclass.cpp
+  FSMmsg.cpp
+  FSMstate.cpp
+  ArchTool.cpp
+  GSCarch.cpp
+  GSCset.cpp
+  isiMasks.cpp
+  BE_ExtarFunctions.cpp
+  PlayBink.cpp
+  c2_memory.cpp
+  Navigator.cpp
+  Track.cpp
+  ChkInet.cpp
+  cAngles.cpp
+  cAssert.cpp
+  cBounds.cpp
+  cColor.cpp
+  cData.cpp
+  cGrid.cpp
+  cHashIndex.cpp
+  cImage.cpp
+  cImageBmp.cpp
+  cImageDds.cpp
+  cImageTga.cpp
+  cInput.cpp
+  cIO.cpp
+  cIsoSurface.cpp
+  cLog.cpp
+  cMat2.cpp
+  cMat3.cpp
+  cMat4.cpp
+  cMaterial.cpp
+  cMath.cpp
+  cMatrix.cpp
+  cMesh.cpp
+  cMeshObj.cpp
+  cMoveTool.cpp
+  cQuat.cpp
+  cRawMesh.cpp
+  cRender.cpp
+  cRotateTool.cpp
+  cRotation.cpp
+  cScaleTool.cpp
+  cSeg.cpp
+  cSolver.cpp
+  cSphere.cpp
+  cStr.cpp
+  cVec.cpp
+  cVec2.cpp
+  cVec3.cpp
+  cVec4.cpp
+  cVectors.cpp
+  cViewer.cpp
+  cViewPort2.cpp
+  cWidget.cpp
+  dMatrix.cpp
+  dVector.cpp
+  ConstStr.cpp
+  Cwave.cpp
+  DrawModels.cpp
+  ExConst.cpp
+  ExtDial.cpp
+  FallSimulator.cpp
+  FBI.cpp
+  FEXHelpers.cpp
+  FEXModule.cpp
+  FEXSysInfo.cpp
+  FMManager.cpp
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GenerateMesh.cpp
+  HiBars.cpp
+  Html.cpp
+  HttpComm.cpp
+  IR_Main.cpp
+  iPlaneTriangulator.cpp
+  binde_class.cpp
+  binde_class2.cpp
+  binde_function.cpp
+  script_callStack.cpp
+  script_debugger.cpp
+  script_debugger_threads.cpp
+  script_debugger_utils.cpp
+  script_file.cpp
+  script_lua_helper.cpp
+  mdParser.cpp
+  menu.cpp
+  MeshOperations.cpp
+  MoveToXY.cpp
+  oggvor.cpp
+  FPerformance.cpp
+  FSampProfiler.cpp
+  FSampProfilerHelpers.cpp
+  FSampProfilerOut.cpp
+  SampProfiler.cpp
+  FXMLMessages.cpp
+  FXMLStream.cpp
+  Resfile.cpp
+  StringsHash.cpp
+  Archway.cpp
+  bitset.cpp
+  Booleans.cpp
+  CCombineExtension.cpp
+  Chamfer.cpp
+  CmdCallbacks.cpp
+  CmdExt.cpp
+  CollidingCamera.cpp
+  Colorize.cpp
+  Deform.cpp
+  Facturize.cpp
+  Grass.cpp
+  HiResScreenShot.cpp
+  ITGeometryCallback.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mQuadric.h(40,9): error C3861: 'assert': identifier not found
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(28,21): error C3646: 'normal': unknown override specifier
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(28,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(37,9): error C2065: 'normal': undeclared identifier
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(37,20): error C2039: 'normal': is not a member of 'LODFace'
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(22,8):
+      see declaration of 'LODFace'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(59,21): error C3646: 'pos': unknown override specifier
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(59,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(60,21): error C3646: 'normal': unknown override specifier
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(60,5): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(115,44): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(115,58): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(116,44): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(116,58): error C2143: syntax error: missing ',' before '&'
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(116,21): error C2535: 'bool VIPMLodder::AddVertex(const int)': member function already defined or declared
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(115,21):
+      see declaration of 'VIPMLodder::AddVertex'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(136,21): error C3646: 'GetVertex': unknown override specifier
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(136,41): error C2059: syntax error: '('
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(136,59): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+  (compiling source file 'Surface/ITGeometryCallback.cpp')
+  
+  Layer.cpp
+  LocalExporter.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(157,10): error C2660: 'VIPMLodder::AddVertex': function does not take 2 arguments
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gMotor\mLodder.h(115,21):
+      see declaration of 'VIPMLodder::AddVertex'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\ITGeometryCallback.cpp(157,10):
+      while trying to match the argument list '(Vector3D, Vector3D)'
+  
+  LocalGenerator.cpp
+  Manipulators.cpp
+  Messager.cpp
+  Obj3D.cpp
+  PropertyPanel.cpp
+  Racist.cpp
+  Scissors.cpp
+  SelExt.cpp
+  Shader.cpp
+  Smooth.cpp
+  Surface.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\Surface\Surface.cpp(1,10): error C1083: Cannot open include file: 'stdheader.h': No such file or directory
+  SurfaceGenerator.cpp
+  SurfExporter.cpp
+  SurfPiece.cpp
+  SurfProcess.cpp
+  SurfSplit.cpp
+  TankController.cpp
+  Typify.cpp
+  uv_Split.cpp
+  TMixer.cpp
+  TreesMesh.cpp
+  UnRar.cpp
+  Video.cpp
+  WTSupport.cpp

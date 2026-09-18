@@ -346,8 +346,9 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>./../_fastdebug/stdheader.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../_fastdebug/</AssemblerListingLocation>
       <ObjectFileName>.\../_fastdebug/</ObjectFileName>
       <ProgramDataBaseFileName>.\../_fastdebug/</ProgramDataBaseFileName>
@@ -1191,7 +1192,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Full</Optimization>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">true</IntrinsicFunctions>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Speed</FavorSizeOrSpeed>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Ai_ex\FSMmsg.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Full</Optimization>
@@ -1201,7 +1202,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Full</Optimization>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">true</IntrinsicFunctions>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Speed</FavorSizeOrSpeed>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Ai_ex\FSMstate.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Full</Optimization>
@@ -1211,7 +1212,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Full</Optimization>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">true</IntrinsicFunctions>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Speed</FavorSizeOrSpeed>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ai_router.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -1260,18 +1261,22 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="ArchTool.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Arc\GSCarch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Arc\GSCset.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Arc\isiMasks.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="AttackList.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -1302,7 +1307,9 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="BE_ExtarFunctions.cpp" />
+    <ClCompile Include="BE_ExtarFunctions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="BE_Functions.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Full</Optimization>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">true</IntrinsicFunctions>
@@ -1337,6 +1344,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="Bink\PlayBink.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="bmptool.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">Disabled</Optimization>
@@ -1417,14 +1425,15 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="c2_memory.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Camera\Navigator.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Camera\Track.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Cdirsnd.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">Use</PrecompiledHeader>
@@ -1445,6 +1454,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="ChkInet.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ClassEditor.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -1487,58 +1497,146 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="comms\cAngles.cpp" />
-    <ClCompile Include="comms\cAssert.cpp" />
-    <ClCompile Include="comms\cBounds.cpp" />
-    <ClCompile Include="comms\cColor.cpp" />
-    <ClCompile Include="comms\cData.cpp" />
+    <ClCompile Include="comms\cAngles.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cAssert.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cBounds.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cColor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cData.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="comms\cDib24.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">MaxSpeed</Optimization>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Speed</FavorSizeOrSpeed>
     </ClCompile>
-    <ClCompile Include="comms\cGrid.cpp" />
-    <ClCompile Include="comms\cHashIndex.cpp" />
-    <ClCompile Include="comms\cImage.cpp" />
-    <ClCompile Include="comms\cImageBmp.cpp" />
-    <ClCompile Include="comms\cImageDds.cpp" />
-    <ClCompile Include="comms\cImageTga.cpp" />
-    <ClCompile Include="comms\cInput.cpp" />
-    <ClCompile Include="comms\cIO.cpp" />
-    <ClCompile Include="comms\cIsoSurface.cpp" />
-    <ClCompile Include="comms\cLog.cpp" />
-    <ClCompile Include="comms\cMat2.cpp" />
-    <ClCompile Include="comms\cMat3.cpp" />
-    <ClCompile Include="comms\cMat4.cpp" />
-    <ClCompile Include="comms\cMaterial.cpp" />
-    <ClCompile Include="comms\cMath.cpp" />
-    <ClCompile Include="comms\cMatrix.cpp" />
-    <ClCompile Include="comms\cMesh.cpp" />
-    <ClCompile Include="comms\cMeshObj.cpp" />
-    <ClCompile Include="comms\cMoveTool.cpp" />
-    <ClCompile Include="comms\cQuat.cpp" />
-    <ClCompile Include="comms\cRawMesh.cpp" />
-    <ClCompile Include="comms\cRender.cpp" />
-    <ClCompile Include="comms\cRotateTool.cpp" />
-    <ClCompile Include="comms\cRotation.cpp" />
-    <ClCompile Include="comms\cScaleTool.cpp" />
-    <ClCompile Include="comms\cSeg.cpp" />
-    <ClCompile Include="comms\cSolver.cpp" />
-    <ClCompile Include="comms\cSphere.cpp" />
-    <ClCompile Include="comms\cStr.cpp" />
-    <ClCompile Include="comms\cVec.cpp" />
-    <ClCompile Include="comms\cVec2.cpp" />
-    <ClCompile Include="comms\cVec3.cpp" />
-    <ClCompile Include="comms\cVec4.cpp" />
-    <ClCompile Include="comms\cVectors.cpp" />
-    <ClCompile Include="comms\cViewer.cpp" />
-    <ClCompile Include="comms\cViewPort2.cpp" />
-    <ClCompile Include="comms\cWidget.cpp" />
+    <ClCompile Include="comms\cGrid.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cHashIndex.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cImage.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cImageBmp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cImageDds.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cImageTga.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cInput.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cIO.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cIsoSurface.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cLog.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMat2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMat3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMat4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMaterial.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMath.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMatrix.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMesh.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMeshObj.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cMoveTool.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cQuat.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cRawMesh.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cRender.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cRotateTool.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cRotation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cScaleTool.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cSeg.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cSolver.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cSphere.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cStr.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cVec.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cVec2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cVec3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cVec4.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cVectors.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cViewer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cViewPort2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\cWidget.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="comms\cWin32.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">MaxSpeed</Optimization>
       <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Speed</FavorSizeOrSpeed>
     </ClCompile>
-    <ClCompile Include="comms\dMatrix.cpp" />
-    <ClCompile Include="comms\dVector.cpp" />
+    <ClCompile Include="comms\dMatrix.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="comms\dVector.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="ComplexFunction.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Full</Optimization>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">true</IntrinsicFunctions>
@@ -1568,6 +1666,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="ConstStr.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="CPlayerSAVE.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -1670,6 +1769,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="Cwave.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Danger.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -1756,6 +1856,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="DrawModels.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="DrawSomethingOverBrigade.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -1797,6 +1898,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="ExConst.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ExMapGenerator.cpp">
       <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">AnySuitable</InlineFunctionExpansion>
@@ -1812,6 +1914,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="ExtDial.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Factures3D.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -1829,6 +1932,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="FallSimulator.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="FantasyAI.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -1854,18 +1958,22 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="FBI.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Fex\FEXHelpers.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Fex\FEXModule.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Fex\FEXSysInfo.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="FileDialog.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -1891,6 +1999,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="FMM\FMManager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="fog.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">Use</PrecompiledHeader>
@@ -1952,6 +2061,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="GenerateMesh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="GlobalActions.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -2104,6 +2214,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="HiBars.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Hint.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -2115,11 +2226,12 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     </ClCompile>
     <ClCompile Include="Html\Html.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Http\HttpComm.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="IconTool.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -2147,7 +2259,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     </ClCompile>
     <ClCompile Include="InetRaiting\IR_Main.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="InetRaiting\md5c.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
@@ -2185,7 +2297,9 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="iPlaneTriangulator.cpp" />
+    <ClCompile Include="iPlaneTriangulator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Iterators.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">MaxSpeed</Optimization>
       <IntrinsicFunctions Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">true</IntrinsicFunctions>
@@ -2228,39 +2342,45 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     </ClCompile>
     <ClCompile Include="Lua\Binde_to_lua\binde_class.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Binde_to_lua\binde_class2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Binde_to_lua\binde_function.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Lua_debugger\script_callStack.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Lua_debugger\script_debugger.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Lua_debugger\script_debugger_threads.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Lua_debugger\script_debugger_utils.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Lua_debugger\script_file.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Lua\Lua_debugger\script_lua_helper.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="LUA_Manager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -2350,6 +2470,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="mdParser.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Mechanics.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -2377,8 +2498,11 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="menu.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="MeshOperations.cpp" />
+    <ClCompile Include="MeshOperations.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="MessageMgr.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
@@ -2459,10 +2583,12 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="MoveToXY.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="mp3\oggvor.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="mp3\PlayMP3.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -2652,6 +2778,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="Profiler\FPerformance.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Profiler\FSampProfiler.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">
@@ -2660,18 +2787,19 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       </PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">
-      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Profiler\FSampProfilerHelpers.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Profiler\FSampProfilerOut.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Profiler\SampProfiler.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">Disabled</Optimization>
@@ -2679,16 +2807,18 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">Disabled</Optimization>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Disabled</Optimization>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
     </ClCompile>
     <ClCompile Include="Profiler\Xml\FXMLMessages.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Profiler\Xml\FXMLStream.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ProfilingInstrument.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">
@@ -2775,6 +2905,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="Resfile.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="River.cpp">
       <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
@@ -2915,6 +3046,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="StringsHash.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Subtitles.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -2929,69 +3061,71 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     </ClCompile>
     <ClCompile Include="Surface\Archway.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="surface\bitset.cpp" />
+    <ClCompile Include="surface\bitset.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Surface\Booleans.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\CCombineExtension.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Chamfer.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\CmdCallbacks.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\CmdExt.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\CollidingCamera.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Colorize.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Deform.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Facturize.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\Grass.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\HiResScreenShot.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\ITGeometryCallback.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Layer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\LocalExporter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\LocalGenerator.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Manipulators.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\MCubes.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -3001,70 +3135,70 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     </ClCompile>
     <ClCompile Include="Surface\Messager.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\Obj3D.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\PropertyPanel.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Racist.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Scissors.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\SelExt.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Shader.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Smooth.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Surface.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\SurfaceGenerator.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\SurfExporter.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\SurfPiece.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\SurfProcess.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\SurfSplit.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\TankController.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Surface\Typify.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="surface\uv_Split.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TacticalAI.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -3092,6 +3226,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="TMixer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TopoGraf.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -3129,6 +3264,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="TreesMesh.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TypeExchange.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug CheckSync|Win32'">Use</PrecompiledHeader>
@@ -3237,6 +3373,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="UnRar.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="UnSyncro.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -3274,6 +3411,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="Video.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="VideoLayer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
@@ -3402,6 +3540,7 @@ xcopy /Y q:\IntExplorer.dll ..\bin\
     <ClCompile Include="wintab\WTSupport.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug_CheckSync|Win32'">
       </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='FastDebug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ZBuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DemoRelease|Win32'">Use</PrecompiledHeader>

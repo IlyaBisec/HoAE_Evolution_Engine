@@ -3,7 +3,7 @@
 #define GAMEXEXTENSION_H
 //////////////////////////////////////////////////////////////////////////
 #include "LoadSave.h"
-//#include "stdheader.h"
+#include "stdheader.h"
 
 class ActiveUnitAbility;
 

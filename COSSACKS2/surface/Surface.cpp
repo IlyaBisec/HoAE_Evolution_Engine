@@ -1,4 +1,4 @@
-#include "stdheader.h"
+#include "..\stdheader.h"
 #include "..\Surface\Surface.h"
 #include "ITerrain.h"
 #include "..\Camera\Navigator.h"
