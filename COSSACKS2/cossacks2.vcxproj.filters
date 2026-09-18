@@ -2939,6 +2939,7 @@
     <ClCompile Include="iPlaneTriangulator.cpp">
       <Filter>mesh</Filter>
     </ClCompile>
+    <ClCompile Include="CRT_Compat.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="Peer.lib">
