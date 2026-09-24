@@ -3,6 +3,7 @@
 #include "..\COSSACKS2\common.h"
 #include "IntExplorer.h"
 #include "ParseRQ.h"
+
 extern int IBOR2;
 extern int IBOR0;
 /* communication with server
@@ -73,7 +74,7 @@ void OneSicWindow::Process(){
 			   TimeLimitRequest[V][3]=='n'&&
 			   TimeLimitRequest[V][4]==':'){
 				TimeLimit[V]=0;
-				ShellExecute(NULL,"open",TimeLimitRequest[V]+5,NULL,NULL,SW_MAXIMIZE);			
+				//ShellExecute(NULL,"open",TimeLimitRequest[V]+5,NULL,NULL,SW_MAXIMIZE);			
 			}else{
 				TimeLimit[V]=0;
 				char CC[256];
