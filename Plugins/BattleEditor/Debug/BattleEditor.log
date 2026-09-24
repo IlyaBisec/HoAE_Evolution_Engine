@@ -1,3 +1,105 @@
-﻿BattleEditor.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-     Creating library ..\..\..\data\Plugins\BattleEditor.lib and object ..\..\..\data\Plugins\BattleEditor.exp
-  BattleEditor.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\data\Plugins\BattleEditor.dll
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  stdafx.cpp
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(31,21): warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'stdafx.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(35,21): warning C4595: 'operator new[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'stdafx.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(39,21): warning C4595: 'operator delete': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'stdafx.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\COSSACKS2\common.h(43,21): warning C4595: 'operator delete[]': non-member operator new or delete functions may not be declared inline
+  (compiling source file 'stdafx.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\gp_draw.h(251,9): warning C4161: #pragma pack(pop...): more pops than pushes
+  (compiling source file 'stdafx.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(10,18): warning C4251: 'std_OnePoolType::Pool': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\pool.h(11,18): warning C4251: 'std_OnePoolType::FreeList': 'DynArray<BYTE *,15>' needs to have dll-interface to be used by clients of 'std_OnePoolType'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<BYTE *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(66,22): warning C4251: 'xmlQuote::SubQuotes': 'DynArray<xmlQuote *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<xmlQuote *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\xmlQuote.h(69,24): warning C4251: 'xmlQuote::m_attribute': 'DynArray<CAttribute *,15>' needs to have dll-interface to be used by clients of 'xmlQuote'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\dynarray.h(12,7):
+      see declaration of 'DynArray<CAttribute *,15>'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\vui_Action.h(55,19): warning C4193: #pragma warning(pop): no matching '#pragma warning(push)'
+  (compiling source file 'stdafx.cpp')
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,38): warning C4275: non dll-interface class 'ReferableBaseClassWithSource' used as base for dll-interface class 'ParentFrame'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(796,7):
+      see declaration of 'ReferableBaseClassWithSource'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(238,19):
+      see declaration of 'ParentFrame'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1234,18): warning C4273: 'DrawFilledRect3': inconsistent dll linkage
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\DrawForm.h(58,6):
+      see previous definition of 'DrawFilledRect3'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,34): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'TabDesk'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1988,19):
+      see declaration of 'TabDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ListDesk'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2011,19):
+      see declaration of 'ListDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,36): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ClassDesk'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2133,19):
+      see declaration of 'ClassDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,35): warning C4275: non dll-interface class 'DialogsDesk' used as base for dll-interface class 'ChatDesk'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(1438,7):
+      see declaration of 'DialogsDesk'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\dialogs.h(2216,19):
+      see declaration of 'ChatDesk'
+  
+D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\GameInterface.h(1097,35): warning C4275: non dll-interface class 'BaseFunction' used as base for dll-interface class 'AnswerFn'
+  (compiling source file 'stdafx.cpp')
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\ClassEngine.h(2130,7):
+      see declaration of 'BaseFunction'
+      D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\Cossacks2\GameInterface.h(1097,19):
+      see declaration of 'AnswerFn'
+  
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  fsm_States.cpp
+  fsm_Saboteur.cpp
+  fsm_Produce.cpp
+  fsm_Guard.cpp
+  fsm_Dialog.cpp
+  fsm_Attack.cpp
+  expFN_Text.cpp
+  expFN_Set.cpp
+  expFN_Node.cpp
+  expFN_Mission.cpp
+  expFN_Group.cpp
+  expFN_Get.cpp
+  expFN_Ability.cpp
+  Helper.cpp
+  BattleEditor.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file '..\..\lib\engine.lib'

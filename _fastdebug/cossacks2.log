@@ -1,403 +1,4 @@
-﻿  stdheader.cpp
-  3DBars.cpp
-  3DGraph.cpp
-  3DGroundModels.cpp
-  3DMapEd.cpp
-  3DRandMap.cpp
-  3DSurf.cpp
-  3DWalls.cpp
-  ActiveScenary.cpp
-  ActiveScenary2.cpp
-  ActiveZone.cpp
-  ai_router.cpp
-  ai_scripts.cpp
-  Alarm.cpp
-  AlertOnMiniMap.cpp
-  AlexVisualSystem.cpp
-  AllEditors.cpp
-  AntiBug.cpp
-  AttackList.cpp
-  AutoActions.cpp
-  BattlePainter.cpp
-  BE_Block.cpp
-  BE_Global.cpp
-  be_HashTop.cpp
-  be_Import.cpp
-  BE_ToolsManager.cpp
-  BE_Value.cpp
-  bmptool.cpp
-  Brigade.cpp
-  BrigadeAbilityExtension.cpp
-  BrigadeAI.cpp
-  BrigadeOrders.cpp
-  BrigadeVariables.cpp
-  BrigAITools.cpp
-  Build.cpp
-  Navigator.cpp
-  Track.cpp
-  Cdirsnd.cpp
-  cext_VisualInterface.cpp
-  CheckFileEnumerator.cpp
-  ClassEditor.cpp
-  ClassEditorsRegistration.cpp
-  ComplexShooter.cpp
-  CPlayerSAVE.cpp
-  CurrentMapOptions.cpp
-  cva_DeskArray.cpp
-  cvi_Academy.cpp
-  cvi_Alert.cpp
-  cvi_BrigCreate.cpp
-  cvi_Campaign.cpp
-  cvi_HeroButtons.cpp
-  cvi_HotKeys.cpp
-  cvi_InGamePanel.cpp
-  cvi_MainMenu.cpp
-  cvi_Market.cpp
-  cvi_Missions.cpp
-  cvi_Oboz.cpp
-  cvi_PostGameStatistic.cpp
-  cvi_RomeHelp.cpp
-  cvi_SinglePlayerData.cpp
-  cvi_UnitAbility.cpp
-  Danger.cpp
-  Ddini.cpp
-  Debuger.cpp
-  DeviceCD.cpp
-  DialogsEditor.cpp
-  CQuest.cpp
-  MissionScript.cpp
-  DrawForms.cpp
-  DrawSomethingOverBrigade.cpp
-  Economy.cpp
-  EinfoClass.cpp
-  EndGameExt.cpp
-  EngineSettings.cpp
-  ExMapGenerator.cpp
-  Factures3D.cpp
-  FantasyAI.cpp
-  Fastdraw.cpp
-  FastMemPool.cpp
-  FileDialog.cpp
-  FilePreview.cpp
-  FireSmokeEditor.cpp
-  FlexBisonParser.cpp
-  fog.cpp
-  Fractal.cpp
-  FunctionStorage.cpp
-  GameExtension.cpp
-  GameInterface.cpp
-  GameSettings.cpp
-  GameSound.cpp
-  GlobalActions.cpp
-  Globals.cpp
-  GP_Draw.cpp
-  Graphs.cpp
-  GroundPieces.cpp
-  GroupeOperations.cpp
-  GroupPurpose.cpp
-  Groups.cpp
-  gText.cpp
-  GVClass.cpp
-  HeroFunctions.cpp
-  Hint.cpp
-  Html.cpp
-  IconTool.cpp
-  IR_Main.cpp
-  Interface.cpp
-  LinearTest.cpp
-  Lines.cpp
-  ListUnit.cpp
-  LoadSave.cpp
-  binde_class.cpp
-  binde_class2.cpp
-  binde_function.cpp
-  LUA_Manager.cpp
-  MainInterface.cpp
-  mai_Extension.cpp
-  mai_Functions.cpp
-  mai_Monitor.cpp
-  mai_Script.cpp
-  mai_VanGuard.cpp
-  mai_VanTroop.cpp
-  mapa.cpp
-  MapDownload.cpp
-  MapGenerator.cpp
-  MapSprites.cpp
-  Masks.cpp
-  Megapolis.cpp
-  MessageMgr.cpp
-  Mine.cpp
-  MiniMap4X.cpp
-  MissGraphObjects.cpp
-  Morale.cpp
-  Mouse_X.cpp
-  MousZone.cpp
-  PlayMP3.cpp
-  MPlayer.cpp
-  Multi.cpp
-  Musorozbornik.cpp
-  Nation.cpp
-  Nature.cpp
-  Navorots.cpp
-  NewAI.cpp
-  NewILogin.cpp
-  NewInternetReport.cpp
-  NewMon.cpp
-  NewUpgrade.cpp
-  Nuclear.cpp
-  OnWater.cpp
-  ParamFunction.cpp
-  Particles.cpp
-  path.cpp
-  PeerClass.cpp
-  PiroObjects.cpp
-  PlaceInAJob.cpp
-  SampProfiler.cpp
-  ProfilingInstrument.cpp
-  qfCondRandom.cpp
-  QParser.cpp
-  qpChatHint.cpp
-  qStr.cpp
-  QuadsRenderer.cpp
-  qUnitType.cpp
-  RealWater.cpp
-  Recorder.cpp
-  RegisterSuperEditorClasses.cpp
-  Report.cpp
-  River.cpp
-  SafeNet.cpp
-  SaveNewMap.cpp
-  Save_XML_ToMap.cpp
-  Scape3D.cpp
-  Select.cpp
-  SelProp.cpp
-  ShipTrace.cpp
-  Silomer.cpp
-  SpraySystem.cpp
-  SquareObject.cpp
-  StrategyResearch.cpp
-  stRecog.cpp
-  Subtitles.cpp
-  SuperEditor.cpp
-  Archway.cpp
-  Booleans.cpp
-  CCombineExtension.cpp
-  Chamfer.cpp
-  CmdCallbacks.cpp
-  CmdExt.cpp
-  CollidingCamera.cpp
-  Colorize.cpp
-  Deform.cpp
-  Facturize.cpp
-  Grass.cpp
-  HiResScreenShot.cpp
-  ITGeometryCallback.cpp
-  Layer.cpp
-  LocalExporter.cpp
-  LocalGenerator.cpp
-  Manipulators.cpp
-  MCubes.cpp
-  Messager.cpp
-  Obj3D.cpp
-  PropertyPanel.cpp
-  Racist.cpp
-  Scissors.cpp
-  SelExt.cpp
-  Shader.cpp
-  Smooth.cpp
-  Surface.cpp
-  SurfaceGenerator.cpp
-  SurfExporter.cpp
-  SurfPiece.cpp
-  SurfProcess.cpp
-  SurfSplit.cpp
-  TankController.cpp
-  Typify.cpp
-  uv_Split.cpp
-  TacticalAI.cpp
-  testserver.cpp
-  TextVisualElements.cpp
-  Timing.cpp
-  Transport.cpp
-  TypeExchange.cpp
-  ua_Modificators.cpp
-  UnitAbility.cpp
-  UnitAbilityExtension.cpp
-  UnitAI.cpp
-  UnitChar.cpp
-  UnitsInterface.cpp
-  UnitTypeGroup.cpp
-  UnSyncro.cpp
-  Upgrade.cpp
-  VictoryConditions.cpp
-  VideoLayer.cpp
-  VideoScriptCommands.cpp
-  ViewProfile.cpp
-  VisualSoundSystem.cpp
-  vi_MainMenu.cpp
-  vui_Action.cpp
-  vui_Effects.cpp
-  vui_GlobalHotKey.cpp
-  VUI_Info.cpp
-  vui_InterfSynchro.cpp
-  vui_IS.cpp
-  Waves.cpp
-  Weapon.cpp
-  ZBuffer.cpp
-  Abilities.cpp
-  AllTools.cpp
-  AmbientMusicScript.cpp
-  ArchTool.cpp
-  GSCarch.cpp
-  GSCset.cpp
-  isiMasks.cpp
-  BattleShipAI.cpp
-  BE_ExtarFunctions.cpp
-  PlayBink.cpp
-  c2_memory.cpp
-  ChkInet.cpp
-  cAngles.cpp
-  cAssert.cpp
-  cBounds.cpp
-  cColor.cpp
-  cData.cpp
-  cGrid.cpp
-  cHashIndex.cpp
-  cImage.cpp
-  cImageBmp.cpp
-  cImageDds.cpp
-  cImageTga.cpp
-  cInput.cpp
-  cIO.cpp
-  cIsoSurface.cpp
-  cLog.cpp
-  cMat2.cpp
-  cMat3.cpp
-  cMat4.cpp
-  cMaterial.cpp
-  cMath.cpp
-  cMatrix.cpp
-  cMesh.cpp
-  cMeshObj.cpp
-  cMoveTool.cpp
-  cQuat.cpp
-  cRawMesh.cpp
-  cRender.cpp
-  cRotateTool.cpp
-  cRotation.cpp
-  cScaleTool.cpp
-  cSeg.cpp
-  cSolver.cpp
-  cSphere.cpp
-  cStr.cpp
-  cVec.cpp
-  cVec2.cpp
-  cVec3.cpp
-  cVec4.cpp
-  cVectors.cpp
-  cViewer.cpp
-  cViewPort2.cpp
-  cWidget.cpp
-  dMatrix.cpp
-  dVector.cpp
-  ConstStr.cpp
-  CRT_Compat.cpp
-  Cwave.cpp
-  Ddex1.cpp
-  DrawFeatures.cpp
-  DrawModels.cpp
-  ExConst.cpp
-  ExtDial.cpp
-  FallSimulator.cpp
-  FBI.cpp
-  FEXHelpers.cpp
-  FEXModule.cpp
-  FEXSysInfo.cpp
-  FMManager.cpp
-  D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\3dlib\gRenderDX9\dx9_sdk\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-  GenerateMesh.cpp
-  HiBars.cpp
-  HttpComm.cpp
-  iPlaneTriangulator.cpp
-  Language.cpp
-  script_callStack.cpp
-  script_debugger.cpp
-  script_debugger_threads.cpp
-  script_debugger_utils.cpp
-  script_file.cpp
-  script_lua_helper.cpp
-  MassivePlayer.cpp
-  mdParser.cpp
-  menu.cpp
-  MeshOperations.cpp
-  MoveToXY.cpp
-  oggvor.cpp
-  FPerformance.cpp
-  FSampProfilerHelpers.cpp
-  FSampProfilerOut.cpp
-  FXMLMessages.cpp
-  FXMLStream.cpp
-  Resfile.cpp
-  SelectionRect.cpp
-  StringsHash.cpp
-  bitset.cpp
-  TMixer.cpp
-  TreesMesh.cpp
-  UndoMaster.cpp
-  UnRar.cpp
-  Video.cpp
-  WTSupport.cpp
-  FSMclass.cpp
-  FSMmsg.cpp
-  FSMstate.cpp
-  BaseVariables.cpp
-  BE_Functions.cpp
-  ComplexFunction.cpp
-  ComplexFunctionMode.cpp
-  DataStorageXML.cpp
-  ENUM_Storage.cpp
-  Function.cpp
-  Helper_var.cpp
-  Motion.cpp
-  Parameter.cpp
-  ProcessBattleEditor.cpp
-  ScriptStorage.cpp
-  ValueStorage.cpp
-  BoidsExtension.cpp
-  BrigadeAbility.cpp
-  HeroAbility.cpp
-  Iterators.cpp
-  ua_Ability.cpp
-  ua_Item.cpp
-  ua_Orders.cpp
-  ua_Settlement.cpp
-  ua_State.cpp
-  UnitAbility2.cpp
-  UnitAbilityIcon.cpp
-  WeaponSystem.cpp
-  WeaponSystemExtension.cpp
-  ClassEngineTest.cpp
-  cDib24.cpp
-  cWin32.cpp
-  SoftCollision.cpp
-  Dialogs.cpp
-  FSampProfiler.cpp
-  Relink.cpp
-  FPathFinder.cpp
-  HashTop.cpp
-  HexagonalNet.cpp
-  TopoGraf.cpp
-  VUI_Actions.cpp
-  darray.c
-  hashtable.c
-  md5c.c
-  nonport.c
-  gbucket.c
-  gstats.c
-cl : command line  warning D9002: ignoring unknown option '/Op'
-  Mechanics.cpp
-  SimplifyMesh.cpp
-     Creating library ..\lib\engine.lib and object ..\lib\engine.exp
+﻿     Creating library ..\lib\engine.lib and object ..\lib\engine.exp
 LINK : warning LNK4217: symbol '?SendDipCommand@@YAXPADH@Z (void __cdecl SendDipCommand(char *,int))' defined in 'Interface.obj' is imported by 'ActiveScenary.obj' in function '__catch$_CleanGroup$0'
 LINK : warning LNK4217: symbol '?IRM@@3PAVIResourceManager@@A (class IResourceManager * IRM)' defined in 'gMotorR.lib(kResourceManager.obj)' is imported by 'GSCset.obj' in function '"public: struct TGSCfile * __thiscall CGSCset::gWriteOpen(char const *)" (?gWriteOpen@CGSCset@@QAEPAUTGSCfile@@PBD@Z)'
 LINK : warning LNK4217: symbol '?SetCDVolume@@YAXH@Z (void __cdecl SetCDVolume(int))' defined in 'DeviceCD.obj' is imported by 'cvi_MainMenu.obj' in function '"public: bool __thiscall cvi_MainMenu::StartDS(char *,bool)" (?StartDS@cvi_MainMenu@@QAE_NPAD_N@Z)'
@@ -479,21 +80,178 @@ LINK : warning LNK4217: symbol '_strchr' defined in 'libvcruntime.lib(strchr.obj
 LINK : warning LNK4217: symbol '_time' defined in 'libucrt.lib(time.obj)' is imported by 'GP.lib(gpiBuddy.obj)' in function '_gpiProcessRecvBuddyMessage'
 LINK : warning LNK4286: symbol '_time' defined in 'libucrt.lib(time.obj)' is imported by 'GP.lib(gpiPeer.obj)'
 LINK : warning LNK4286: symbol '__strdup' defined in 'libucrt.lib(strdup.obj)' is imported by 'oldnames.lib(strdup.obi)'
+gMotorR.lib(blocksort.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(blocksort.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(bzlib.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(bzlib.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(compress.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(compress.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(crctable.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(crctable.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(decompress.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(decompress.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(huffman.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(huffman.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(randtable.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(randtable.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(FCompressor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(FCompressor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(FG16RealTime.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(FG16RealTime.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(FGANationMMX.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(FGANationMMX.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(FLZDecoder.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(FLZDecoder.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(FLzoDecompress.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(FLzoDecompress.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(FUclDecompress.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(FUclDecompress.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kAssert.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kAssert.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kColorValue.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kColorValue.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kContext.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kContext.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kDirIterator.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kDirIterator.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kFileMapping.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kFileMapping.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kFilePath.obj) : warning LNK4099: PDB '' was not found with 'gMotorR.lib(kFilePath.obj)' or at ''; linking object as if no debug info
+gMotorR.lib(kIO.obj) : warning LNK4099: PDB '' was not found with 'gMotorR.lib(kIO.obj)' or at ''; linking object as if no debug info
+gMotorR.lib(kIOHelpers.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kIOHelpers.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kLog.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kLog.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kObjectFactory.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kObjectFactory.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kPropertyMap.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kPropertyMap.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kResourceManager.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kResourceManager.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kStatistics.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kStatistics.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kStrUtil.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kStrUtil.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kSystemDialogs.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kSystemDialogs.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kTypeTraits.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kTypeTraits.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kUtilities.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kUtilities.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kXMLGrammar.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kXMLGrammar.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(kXMLParser.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(kXMLParser.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(lzo1x_1o.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(lzo1x_1o.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(lzo_init.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(lzo_init.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mFloatCurve.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mFloatCurve.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mGeom3D.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mGeom3D.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mIntersect.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mIntersect.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mLine.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mLine.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mLodder.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mLodder.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mMath2D.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mMath2D.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mPlane.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mPlane.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mQuatCurve.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mQuatCurve.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mQuaternion.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mQuaternion.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mRandom.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mRandom.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mShapes.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mShapes.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mSkin.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mSkin.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mSkinSSE.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mSkinSSE.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mTransform.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mTransform.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mTriangle.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mTriangle.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(mVector.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(mVector.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(rsRenderSystem.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(rsRenderSystem.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(rsVertex.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(rsVertex.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgAnimation.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgAnimation.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgAnimationBlock.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgAnimationBlock.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgAttachedEffect.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgAttachedEffect.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgConst.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgConst.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgController.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgController.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgCursor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgCursor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgDummy.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgDummy.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgEffect.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgEffect.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgFog.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgFog.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgG17.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgG17.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgG18.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgG18.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgG2D.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgG2D.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGeometry.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGeometry.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGizmo.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGizmo.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGN16.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGN16.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGP2.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGP2.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGQuad.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGQuad.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGU15.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGU15.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgGU16.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgGU16.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgLensFlare.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgLensFlare.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgLight.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgLight.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgModel.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgModel.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgMorphedGeometry.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgMorphedGeometry.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgNode.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgNode.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgNodeMaker.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgNodeMaker.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgNodePool.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgNodePool.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgPRSAnimation.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgPRSAnimation.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgReflection.obj) : warning LNK4099: PDB '' was not found with 'gMotorR.lib(sgReflection.obj)' or at ''; linking object as if no debug info
+gMotorR.lib(sgRoot.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgRoot.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgShader.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgShader.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgSprite.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgSprite.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgSpriteManager.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgSpriteManager.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgStatistics.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgStatistics.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgSurfaceCache.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgSurfaceCache.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgTexture.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgTexture.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgTextureMatrix.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgTextureMatrix.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgTransformNode.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgTransformNode.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(sgUVAnimation.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(sgUVAnimation.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(stdafx.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(stdafx.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiAlgoDebugger.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiAlgoDebugger.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiButton.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiButton.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiCheckBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiCheckBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiColorPicker.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiColorPicker.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiComboBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiComboBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiControl.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiControl.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiEditBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiEditBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiEffectEditor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiEffectEditor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiExtendedEdit.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiExtendedEdit.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiFloatEditBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiFloatEditBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiFrameWindow.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiFrameWindow.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiIntEditBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiIntEditBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiKangaroo.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiKangaroo.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiLabel.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiLabel.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiListBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiListBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiMainFrame.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiMainFrame.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiManipulator.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiManipulator.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiMayaController.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiMayaController.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiModelEditor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiModelEditor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiModelView.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiModelView.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiNodeTree.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiNodeTree.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiObjectInspector.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiObjectInspector.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiPalette.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiPalette.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiPhysicsEditor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiPhysicsEditor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiProgress.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiProgress.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiPropEditors.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiPropEditors.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiRampEdit.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiRampEdit.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiRatchet.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiRatchet.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiResourceBrowser.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiResourceBrowser.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiRTSController.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiRTSController.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiSceneEditor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiSceneEditor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiScrollBox.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiScrollBox.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiSlider.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiSlider.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiSystemExplorer.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiSystemExplorer.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiTrackEdit.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiTrackEdit.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiTransformTools.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiTransformTools.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiWeightEdit.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiWeightEdit.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiWidget.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiWidget.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiWidgetEditor.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiWidgetEditor.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(uiWindow.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(uiWindow.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vCamera.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vCamera.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vField.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vField.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vFontManager.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vFontManager.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vMediaManager.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vMediaManager.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vMesh.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vMesh.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vModelInstance.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vModelInstance.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vShadowManager.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vShadowManager.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vSkin.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vSkin.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vSkyRenderer.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vSkyRenderer.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vStaticTerrain.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vStaticTerrain.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vTerrainRenderer.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vTerrainRenderer.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gMotorR.lib(vWater.obj) : warning LNK4099: PDB 'gMotor.pdb' was not found with 'gMotorR.lib(vWater.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gMotor.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dAdapt.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dAdapt.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dApp.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dApp.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dEnumeration.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dEnumeration.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dFont.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dFont.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dIndexBuffer.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dIndexBuffer.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dPicture.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dPicture.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dRender.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dRender.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dSettings.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dSettings.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dShaderFX.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dShaderFX.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dTexture.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dTexture.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dUtil.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dUtil.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(d3dVertexBuffer.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(d3dVertexBuffer.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(dxUtil.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(dxUtil.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
+gRenderDX9R.lib(gRenderPch.obj) : warning LNK4099: PDB 'gRender.pdb' was not found with 'gRenderDX9R.lib(gRenderPch.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gRender.pdb'; linking object as if no debug info
 commcore.lib(CommBroadcast.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommBroadcast.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-commcore.lib(CommCore.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommCore.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommCore.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommCore.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 commcore.lib(CommInet.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommInet.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 commcore.lib(CommInit.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommInit.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-commcore.lib(CommPeers.obj) : warning LNK4099: PDB '' was not found with 'commcore.lib(CommPeers.obj)' or at ''; linking object as if no debug info
+commcore.lib(CommPeers.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommPeers.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 commcore.lib(CommQueue.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommQueue.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 commcore.lib(CommRaw.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommRaw.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 commcore.lib(CommRecv.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommRecv.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 commcore.lib(CommServerList.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'commcore.lib(CommServerList.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-gPhysicsR.lib(gPhysics_pch.obj) : warning LNK4099: PDB 'gPhysics.pdb' was not found with 'gPhysicsR.lib(gPhysics_pch.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gPhysics.pdb'; linking object as if no debug info
+gPhysicsR.lib(gPhysics_pch.obj) : warning LNK4099: PDB '' was not found with 'gPhysicsR.lib(gPhysics_pch.obj)' or at ''; linking object as if no debug info
 gPhysicsR.lib(sgPhysics.obj) : warning LNK4099: PDB 'gPhysics.pdb' was not found with 'gPhysicsR.lib(sgPhysics.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\gPhysics.pdb'; linking object as if no debug info
 ode.lib(array.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(array.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_kernel.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_kernel.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_quadtreespace.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_quadtreespace.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-ode.lib(collision_space.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_space.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_space.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_space.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_std.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_std.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_transform.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_transform.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_trimesh.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_trimesh.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
@@ -501,7 +259,7 @@ ode.lib(collision_trimesh_box.obj) : warning LNK4099: PDB 'vc70.pdb' was not fou
 ode.lib(collision_trimesh_ccylinder.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_trimesh_ccylinder.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_trimesh_ray.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_trimesh_ray.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_trimesh_sphere.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_trimesh_sphere.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-ode.lib(collision_trimesh_trimesh.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(collision_trimesh_trimesh.obj)' or at ''; linking object as if no debug info
+ode.lib(collision_trimesh_trimesh.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_trimesh_trimesh.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(collision_util.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(collision_util.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(error.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(error.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(fastdot.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(fastdot.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
@@ -513,7 +271,7 @@ ode.lib(lcp.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(l
 ode.lib(mass.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(mass.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(matrix.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(matrix.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(memory.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(memory.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-ode.lib(misc.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(misc.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
+ode.lib(misc.obj) : warning LNK4099: PDB '' was not found with 'ode.lib(misc.obj)' or at ''; linking object as if no debug info
 ode.lib(obstack.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(obstack.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(ode.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(ode.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 ode.lib(odemath.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'ode.lib(odemath.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
@@ -530,7 +288,7 @@ opcode.lib(IceMatrix3x3.obj) : warning LNK4099: PDB 'vc70.pdb' was not found wit
 opcode.lib(IceMatrix4x4.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(IceMatrix4x4.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 opcode.lib(IceOBB.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(IceOBB.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 opcode.lib(IcePoint.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(IcePoint.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
-opcode.lib(IceRandom.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(IceRandom.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
+opcode.lib(IceRandom.obj) : warning LNK4099: PDB '' was not found with 'opcode.lib(IceRandom.obj)' or at ''; linking object as if no debug info
 opcode.lib(IceSegment.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(IceSegment.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 opcode.lib(OPC_AABBTree.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(OPC_AABBTree.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
 opcode.lib(OPC_BaseModel.obj) : warning LNK4099: PDB 'vc70.pdb' was not found with 'opcode.lib(OPC_BaseModel.obj)' or at 'D:\ilya\projects\games\HoAE\Evolution\Engine\data\vc70.pdb'; linking object as if no debug info
