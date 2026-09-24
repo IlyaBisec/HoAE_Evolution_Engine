@@ -1,3 +1,6 @@
-﻿cl : командная строка  warning D9035: использование параметра "Gm" нежелательно, он будет удален в следующих выпусках
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   sample.cpp
-  ClassEngine.vcxproj -> D:\SrcRep\0000NEO\ClassEngine\Debug\ClassEngine.exe
+  Resfile.cpp
+  Generating Code...
+Resfile.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  ClassEngine.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\ClassEngine\Debug\ClassEngine.exe

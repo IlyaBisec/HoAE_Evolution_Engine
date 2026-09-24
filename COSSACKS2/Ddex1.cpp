@@ -3006,6 +3006,12 @@ MStatus g_MayaStatus;
 
 static BOOL doInit( HINSTANCE hInstance, int nCmdShow )
 {
+	MessageBoxA(
+		NULL,
+		"NEW EVOLUTION ENGINE BUILD",
+		"TEST",
+		MB_OK
+	);
 
     WNDCLASS            wc;
     char                buf[256];
@@ -3126,6 +3132,24 @@ static BOOL doInit( HINSTANCE hInstance, int nCmdShow )
 	GSets.SVOpt.RequiredMsPerFrame=30;
 
 	extern IRenderSystem* IRS;
+
+	/*if (!IRS)
+	{
+		MessageBoxA(NULL, "IRS == NULL", "ENGINE ERROR", MB_OK | MB_ICONERROR);
+		return;
+	}*/
+
+	/*char buf2[256];
+
+	sprintf_s(
+		buf2,
+		"IRS=%p\nvtable=%p\nTrueColor=%p",
+		IRS,
+		*(void **)IRS,
+		(*(void ***)IRS)[167]
+	);
+
+	MessageBoxA(NULL, buf2, "DEBUG", MB_OK);*/
 
 	// Antialiasing:
 	if(GSets.SVOpt.Antialiasing.Enabled) IRS->AntialiasingEnable();

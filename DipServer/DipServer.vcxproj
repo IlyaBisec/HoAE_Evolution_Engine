@@ -107,7 +107,7 @@
     </ClCompile>
     <Link>
       <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>..\lib\engine.lib;..\lib\intexplorer.lib;..\lib\ichat.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\lib\intexplorer.lib;..\lib\ichat.lib;..\lib\engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\data\DipServer.dll</OutputFile>
       <AdditionalLibraryDirectories>../lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile />
