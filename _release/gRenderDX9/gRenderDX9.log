@@ -1,18 +1,4 @@
-﻿  gRenderPch.cpp
-  d3dAdapt.cpp
-  d3dEnumeration.cpp
-  d3dFont.cpp
-  d3dIndexBuffer.cpp
-  d3dPicture.cpp
-  d3dSettings.cpp
-  d3dShaderFX.cpp
-  d3dUtil.cpp
-  d3dVertexBuffer.cpp
-  dxUtil.cpp
-  Generating Code...
-  d3dApp.cpp
-  d3dRender.cpp
-  d3dTexture.cpp
+﻿  d3dRender.cpp
 D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1564,5): warning MSB8012: TargetPath(D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\_release\gRenderDX9\gRender.lib) does not match the Library's OutputFile property value (D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\lib_release\gRenderDX9R.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
 D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1566,5): warning MSB8012: TargetName(gRender) does not match the Library's OutputFile property value (gRenderDX9R). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
   gRenderDX9.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\_release\gRenderDX9\gRender.lib

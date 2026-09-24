@@ -1,2 +1,4 @@
 ﻿D:\ilya\apps\VisualStudios\vs2022\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1402,5): warning MSB8012: TargetPath(D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\FastDebug CheckSync\IChat.dll) does not match the Linker's OutputFile property value (D:\ilya\projects\games\HoAE\Evolution\Engine\data\iChat.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-LINK : fatal error LNK1181: cannot open input file '..\lib\engine.lib'
+ParseRQ.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library .\../_debug/iChat.lib and object .\../_debug/iChat.exp
+  IChat.vcxproj -> D:\ilya\projects\games\HoAE\Evolution\Engine\HoAE_Evolution_Engine\IChat\FastDebug CheckSync\IChat.dll
