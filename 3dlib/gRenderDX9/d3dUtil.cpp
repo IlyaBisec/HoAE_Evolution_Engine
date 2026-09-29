@@ -11,141 +11,141 @@
 #define WM_MOUSEWHEEL                   0x020A
 #endif
 
-D3DCOLORVALUE ToD3DCOLORVALUE( DWORD col )
+D3DCOLORVALUE ToD3DCOLORVALUE(DWORD col)
 {
     D3DCOLORVALUE res;
-    res.a = float( (col & 0xFF000000)>>24 ) / 255.0f;
-    res.r = float( (col & 0x00FF0000)>>16 ) / 255.0f;
-    res.g = float( (col & 0x0000FF00)>>8  ) / 255.0f;
-    res.b = float( (col & 0x000000FF)     ) / 255.0f;
+    res.a = float((col & 0xFF000000) >> 24) / 255.0f;
+    res.r = float((col & 0x00FF0000) >> 16) / 255.0f;
+    res.g = float((col & 0x0000FF00) >> 8) / 255.0f;
+    res.b = float((col & 0x000000FF)) / 255.0f;
     return res;
 }
 
-const char* GetD3DErrorDesc( HRESULT hresult )
+const char *GetD3DErrorDesc(HRESULT hresult)
 {
     switch (hresult)
     {
-    case D3DERR_CONFLICTINGRENDERSTATE: 
-        return "The currently set render states cannot be used together."; 
-    case D3DERR_CONFLICTINGTEXTUREFILTER: 
+    case D3DERR_CONFLICTINGRENDERSTATE:
+        return "The currently set render states cannot be used together.";
+    case D3DERR_CONFLICTINGTEXTUREFILTER:
         return "The current texture filters cannot be used together.";
-    case D3DERR_CONFLICTINGTEXTUREPALETTE: 
+    case D3DERR_CONFLICTINGTEXTUREPALETTE:
         return "The current textures cannot be used simultaneously.";
-    case D3DERR_DEVICELOST: 
+    case D3DERR_DEVICELOST:
         return "The device is lost and cannot be restored at the current time."
-            "Rendering is not possible."; 
-    case D3DERR_DEVICENOTRESET: 
-        return "The device cannot be reset."; 
-    case D3DERR_DRIVERINTERNALERROR: 
-        return "Internal driver error."; 
-    case D3DERR_INVALIDCALL: 
-        return "The method call is invalid. " 
-            "Method's parameter may have an invalid value."; 
-    case D3DERR_INVALIDDEVICE: 
-        return "The requested device type is not valid."; 
-    case D3DERR_MOREDATA: 
-        return "There is more data available than the specified buffer size can hold."; 
-    case D3DERR_NOTAVAILABLE: 
-        return "This device does not support the queried technique."; 
-    case D3DERR_NOTFOUND: 
+            "Rendering is not possible.";
+    case D3DERR_DEVICENOTRESET:
+        return "The device cannot be reset.";
+    case D3DERR_DRIVERINTERNALERROR:
+        return "Internal driver error.";
+    case D3DERR_INVALIDCALL:
+        return "The method call is invalid. "
+            "Method's parameter may have an invalid value.";
+    case D3DERR_INVALIDDEVICE:
+        return "The requested device type is not valid.";
+    case D3DERR_MOREDATA:
+        return "There is more data available than the specified buffer size can hold.";
+    case D3DERR_NOTAVAILABLE:
+        return "This device does not support the queried technique.";
+    case D3DERR_NOTFOUND:
         return "The requested item was not found.";
-    case D3DERR_OUTOFVIDEOMEMORY: 
-        return "Direct3D does not have enough display memory to perform the operation."; 
-    case D3DERR_TOOMANYOPERATIONS: 
+    case D3DERR_OUTOFVIDEOMEMORY:
+        return "Direct3D does not have enough display memory to perform the operation.";
+    case D3DERR_TOOMANYOPERATIONS:
         return "The application is requesting more texture-filtering operations "
-            "than the device supports."; 
-    case D3DERR_UNSUPPORTEDALPHAARG: 
+            "than the device supports.";
+    case D3DERR_UNSUPPORTEDALPHAARG:
         return "The device does not support a specified texture-blending argument "
             "for the alpha channel.";
-    case D3DERR_UNSUPPORTEDALPHAOPERATION: 
-        return "The device does not support a specified texture-blending operation " 
-            "for the alpha channel."; 
-    case D3DERR_UNSUPPORTEDCOLORARG: 
-        return "The device does not support a specified texture-blending argument "
-            "for color values."; 
-    case D3DERR_UNSUPPORTEDCOLOROPERATION: 
+    case D3DERR_UNSUPPORTEDALPHAOPERATION:
         return "The device does not support a specified texture-blending operation "
-            "for color values."; 
-    case D3DERR_UNSUPPORTEDFACTORVALUE: 
-        return "The device does not support the specified texture factor value."; 
-    case D3DERR_UNSUPPORTEDTEXTUREFILTER: 
-        return "The device does not support the specified texture filter."; 
-    case D3DERR_WRONGTEXTUREFORMAT: 
-        return "The pixel format of the texture surface is not valid."; 
-    case E_FAIL: 
-        return "An undetermined error occurred inside the Direct3D subsystem."; 
-    case E_INVALIDARG: 
-        return "An invalid parameter was passed to the returning function."; 
-    case E_OUTOFMEMORY: 
+            "for the alpha channel.";
+    case D3DERR_UNSUPPORTEDCOLORARG:
+        return "The device does not support a specified texture-blending argument "
+            "for color values.";
+    case D3DERR_UNSUPPORTEDCOLOROPERATION:
+        return "The device does not support a specified texture-blending operation "
+            "for color values.";
+    case D3DERR_UNSUPPORTEDFACTORVALUE:
+        return "The device does not support the specified texture factor value.";
+    case D3DERR_UNSUPPORTEDTEXTUREFILTER:
+        return "The device does not support the specified texture filter.";
+    case D3DERR_WRONGTEXTUREFORMAT:
+        return "The pixel format of the texture surface is not valid.";
+    case E_FAIL:
+        return "An undetermined error occurred inside the Direct3D subsystem.";
+    case E_INVALIDARG:
+        return "An invalid parameter was passed to the returning function.";
+    case E_OUTOFMEMORY:
         return "Direct3D could not allocate sufficient memory to complete the call.";
     default: return "";
     }
     return "";
 } // GetD3DErrorDesc
 
-const char* GetDispChangeErrorDesc( LONG result )
+const char *GetDispChangeErrorDesc(LONG result)
 {
     switch (result)
     {
     case DISP_CHANGE_SUCCESSFUL:
         return "The display settings change was successful.";
     case DISP_CHANGE_RESTART:
-        return "The computer must be restarted in order for the graphics mode to work."; 
+        return "The computer must be restarted in order for the graphics mode to work.";
     case DISP_CHANGE_BADFLAGS:
-        return "An invalid set of flags was passed in ChangeDisplayMode."; 
+        return "An invalid set of flags was passed in ChangeDisplayMode.";
     case DISP_CHANGE_BADPARAM:
-        return "An invalid flag, combination of flags, or parameter passed in ChangeDisplayMode."; 
+        return "An invalid flag, combination of flags, or parameter passed in ChangeDisplayMode.";
     case DISP_CHANGE_FAILED:
-        return "The display driver failed the specified graphics mode."; 
+        return "The display driver failed the specified graphics mode.";
     case DISP_CHANGE_BADMODE:
-        return "The graphics mode is not supported."; 
+        return "The graphics mode is not supported.";
     case DISP_CHANGE_NOTUPDATED:
-        return "Unable to write settings to the registry."; 
+        return "Unable to write settings to the registry.";
     default: return "Unexpected error while ChangeDisplaySettings.";
-    } 
+    }
 } // GetDispChangeErrorDesc
 
 //-----------------------------------------------------------------------------
 // Name: D3DUtil_GetCubeMapViewMatrix()
 // Desc: Returns a view matrix for rendering to a face of a cubemap.
 //-----------------------------------------------------------------------------
-D3DXMATRIX D3DUtil_GetCubeMapViewMatrix( DWORD dwFace )
+D3DXMATRIX D3DUtil_GetCubeMapViewMatrix(DWORD dwFace)
 {
-    D3DXVECTOR3 vEyePt   = D3DXVECTOR3( 0.0f, 0.0f, 0.0f );
+    D3DXVECTOR3 vEyePt = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
     D3DXVECTOR3 vLookDir;
     D3DXVECTOR3 vUpDir;
 
-    switch( dwFace )
+    switch (dwFace)
     {
-        case D3DCUBEMAP_FACE_POSITIVE_X:
-            vLookDir = D3DXVECTOR3( 1.0f, 0.0f, 0.0f );
-            vUpDir   = D3DXVECTOR3( 0.0f, 1.0f, 0.0f );
-            break;
-        case D3DCUBEMAP_FACE_NEGATIVE_X:
-            vLookDir = D3DXVECTOR3(-1.0f, 0.0f, 0.0f );
-            vUpDir   = D3DXVECTOR3( 0.0f, 1.0f, 0.0f );
-            break;
-        case D3DCUBEMAP_FACE_POSITIVE_Y:
-            vLookDir = D3DXVECTOR3( 0.0f, 1.0f, 0.0f );
-            vUpDir   = D3DXVECTOR3( 0.0f, 0.0f,-1.0f );
-            break;
-        case D3DCUBEMAP_FACE_NEGATIVE_Y:
-            vLookDir = D3DXVECTOR3( 0.0f,-1.0f, 0.0f );
-            vUpDir   = D3DXVECTOR3( 0.0f, 0.0f, 1.0f );
-            break;
-        case D3DCUBEMAP_FACE_POSITIVE_Z:
-            vLookDir = D3DXVECTOR3( 0.0f, 0.0f, 1.0f );
-            vUpDir   = D3DXVECTOR3( 0.0f, 1.0f, 0.0f );
-            break;
-        case D3DCUBEMAP_FACE_NEGATIVE_Z:
-            vLookDir = D3DXVECTOR3( 0.0f, 0.0f,-1.0f );
-            vUpDir   = D3DXVECTOR3( 0.0f, 1.0f, 0.0f );
-            break;
+    case D3DCUBEMAP_FACE_POSITIVE_X:
+        vLookDir = D3DXVECTOR3(1.0f, 0.0f, 0.0f);
+        vUpDir = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
+        break;
+    case D3DCUBEMAP_FACE_NEGATIVE_X:
+        vLookDir = D3DXVECTOR3(-1.0f, 0.0f, 0.0f);
+        vUpDir = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
+        break;
+    case D3DCUBEMAP_FACE_POSITIVE_Y:
+        vLookDir = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
+        vUpDir = D3DXVECTOR3(0.0f, 0.0f, -1.0f);
+        break;
+    case D3DCUBEMAP_FACE_NEGATIVE_Y:
+        vLookDir = D3DXVECTOR3(0.0f, -1.0f, 0.0f);
+        vUpDir = D3DXVECTOR3(0.0f, 0.0f, 1.0f);
+        break;
+    case D3DCUBEMAP_FACE_POSITIVE_Z:
+        vLookDir = D3DXVECTOR3(0.0f, 0.0f, 1.0f);
+        vUpDir = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
+        break;
+    case D3DCUBEMAP_FACE_NEGATIVE_Z:
+        vLookDir = D3DXVECTOR3(0.0f, 0.0f, -1.0f);
+        vUpDir = D3DXVECTOR3(0.0f, 1.0f, 0.0f);
+        break;
     }
 
     // Set the view transform for this cubemap surface
     D3DXMATRIXA16 mView;
-    D3DXMatrixLookAtLH( &mView, &vEyePt, &vLookDir, &vUpDir );
+    D3DXMatrixLookAtLH(&mView, &vEyePt, &vLookDir, &vUpDir);
     return mView;
 }
 
@@ -157,46 +157,46 @@ D3DXMATRIX D3DUtil_GetCubeMapViewMatrix( DWORD dwFace )
 // Desc: Returns a quaternion for the rotation implied by the window's cursor
 //       position.
 //-----------------------------------------------------------------------------
-D3DXQUATERNION D3DUtil_GetRotationFromCursor( HWND hWnd,
-                                              FLOAT fTrackBallRadius )
+D3DXQUATERNION D3DUtil_GetRotationFromCursor(HWND hWnd,
+    FLOAT fTrackBallRadius)
 {
     POINT pt;
     RECT  rc;
-    GetCursorPos( &pt );
-    GetClientRect( hWnd, &rc );
-    ScreenToClient( hWnd, &pt );
-    FLOAT sx = ( ( ( 2.0f * pt.x ) / (rc.right-rc.left) ) - 1 );
-    FLOAT sy = ( ( ( 2.0f * pt.y ) / (rc.bottom-rc.top) ) - 1 );
+    GetCursorPos(&pt);
+    GetClientRect(hWnd, &rc);
+    ScreenToClient(hWnd, &pt);
+    FLOAT sx = (((2.0f * pt.x) / (rc.right - rc.left)) - 1);
+    FLOAT sy = (((2.0f * pt.y) / (rc.bottom - rc.top)) - 1);
     FLOAT sz;
 
-    if( sx == 0.0f && sy == 0.0f )
-        return D3DXQUATERNION( 0.0f, 0.0f, 0.0f, 1.0f );
+    if (sx == 0.0f && sy == 0.0f)
+        return D3DXQUATERNION(0.0f, 0.0f, 0.0f, 1.0f);
 
-    FLOAT d2 = sqrtf( sx*sx + sy*sy );
+    FLOAT d2 = sqrtf(sx * sx + sy * sy);
 
-    if( d2 < fTrackBallRadius * 0.70710678118654752440 ) // Inside sphere
-        sz = sqrtf( fTrackBallRadius*fTrackBallRadius - d2*d2 );
+    if (d2 < fTrackBallRadius * 0.70710678118654752440) // Inside sphere
+        sz = sqrtf(fTrackBallRadius * fTrackBallRadius - d2 * d2);
     else                                                 // On hyperbola
-        sz = (fTrackBallRadius*fTrackBallRadius) / (2.0f*d2);
+        sz = (fTrackBallRadius * fTrackBallRadius) / (2.0f * d2);
 
     // Get two points on trackball's sphere
-    D3DXVECTOR3 p1( sx, sy, sz );
-    D3DXVECTOR3 p2( 0.0f, 0.0f, fTrackBallRadius );
+    D3DXVECTOR3 p1(sx, sy, sz);
+    D3DXVECTOR3 p2(0.0f, 0.0f, fTrackBallRadius);
 
     // Get axis of rotation, which is cross product of p1 and p2
     D3DXVECTOR3 vAxis;
-    D3DXVec3Cross( &vAxis, &p1, &p2);
+    D3DXVec3Cross(&vAxis, &p1, &p2);
 
     // Calculate angle for the rotation about that axis
-    D3DXVECTOR3 vecDiff = p2-p1;
-    FLOAT t = D3DXVec3Length( &vecDiff ) / ( 2.0f*fTrackBallRadius );
-    if( t > +1.0f) t = +1.0f;
-    if( t < -1.0f) t = -1.0f;
-    FLOAT fAngle = 2.0f * asinf( t );
+    D3DXVECTOR3 vecDiff = p2 - p1;
+    FLOAT t = D3DXVec3Length(&vecDiff) / (2.0f * fTrackBallRadius);
+    if (t > +1.0f) t = +1.0f;
+    if (t < -1.0f) t = -1.0f;
+    FLOAT fAngle = 2.0f * asinf(t);
 
     // Convert axis to quaternion
     D3DXQUATERNION quat;
-    D3DXQuaternionRotationAxis( &quat, &vAxis, fAngle );
+    D3DXQuaternionRotationAxis(&quat, &vAxis, fAngle);
     return quat;
 }
 
@@ -207,8 +207,8 @@ D3DXQUATERNION D3DUtil_GetRotationFromCursor( HWND hWnd,
 // Name: D3DUtil_SetDeviceCursor
 // Desc: Gives the D3D device a cursor with image and hotspot from hCursor.
 //-----------------------------------------------------------------------------
-HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
-                                 BOOL bAddWatermark )
+HRESULT D3DUtil_SetDeviceCursor(LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
+    BOOL bAddWatermark)
 {
     HRESULT hr = E_FAIL;
     ICONINFO iconinfo;
@@ -226,13 +226,13 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
     UINT x;
     UINT y;
     BITMAPINFO bmi;
-    COLORREF* pcrArrayColor = NULL;
-    COLORREF* pcrArrayMask = NULL;
-    DWORD* pBitmap;
+    COLORREF *pcrArrayColor = NULL;
+    COLORREF *pcrArrayMask = NULL;
+    DWORD *pBitmap;
     HGDIOBJ hgdiobjOld;
 
-    ZeroMemory( &iconinfo, sizeof(iconinfo) );
-    if( !GetIconInfo( hCursor, &iconinfo ) )
+    ZeroMemory(&iconinfo, sizeof(iconinfo));
+    if (!GetIconInfo(hCursor, &iconinfo))
         goto End;
 
     if (0 == GetObject((HGDIOBJ)iconinfo.hbmMask, sizeof(BITMAP), (LPVOID)&bm))
@@ -240,20 +240,20 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
     dwWidth = bm.bmWidth;
     dwHeightSrc = bm.bmHeight;
 
-    if( iconinfo.hbmColor == NULL )
+    if (iconinfo.hbmColor == NULL)
     {
         bBWCursor = TRUE;
         dwHeightDest = dwHeightSrc / 2;
     }
-    else 
+    else
     {
         bBWCursor = FALSE;
         dwHeightDest = dwHeightSrc;
     }
 
     // Create a surface for the fullscreen cursor
-    if( FAILED( hr = pd3dDevice->CreateOffscreenPlainSurface( dwWidth, dwHeightDest, 
-        D3DFMT_A8R8G8B8, D3DPOOL_SCRATCH, &pCursorSurface, NULL ) ) )
+    if (FAILED(hr = pd3dDevice->CreateOffscreenPlainSurface(dwWidth, dwHeightDest,
+        D3DFMT_A8R8G8B8, D3DPOOL_SCRATCH, &pCursorSurface, NULL)))
     {
         goto End;
     }
@@ -268,54 +268,54 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
     bmi.bmiHeader.biBitCount = 32;
     bmi.bmiHeader.biCompression = BI_RGB;
 
-    hdcScreen = GetDC( NULL );
-    hdcMask = CreateCompatibleDC( hdcScreen );
-    if( hdcMask == NULL )
+    hdcScreen = GetDC(NULL);
+    hdcMask = CreateCompatibleDC(hdcScreen);
+    if (hdcMask == NULL)
     {
         hr = E_FAIL;
         goto End;
     }
     hgdiobjOld = SelectObject(hdcMask, iconinfo.hbmMask);
-    GetDIBits(hdcMask, iconinfo.hbmMask, 0, dwHeightSrc, 
+    GetDIBits(hdcMask, iconinfo.hbmMask, 0, dwHeightSrc,
         pcrArrayMask, &bmi, DIB_RGB_COLORS);
     SelectObject(hdcMask, hgdiobjOld);
 
     if (!bBWCursor)
     {
         pcrArrayColor = new DWORD[dwWidth * dwHeightDest];
-        hdcColor = CreateCompatibleDC( hdcScreen );
-        if( hdcColor == NULL )
+        hdcColor = CreateCompatibleDC(hdcScreen);
+        if (hdcColor == NULL)
         {
             hr = E_FAIL;
             goto End;
         }
         SelectObject(hdcColor, iconinfo.hbmColor);
-        GetDIBits(hdcColor, iconinfo.hbmColor, 0, dwHeightDest, 
+        GetDIBits(hdcColor, iconinfo.hbmColor, 0, dwHeightDest,
             pcrArrayColor, &bmi, DIB_RGB_COLORS);
     }
 
     // Transfer cursor image into the surface
     D3DLOCKED_RECT lr;
-    pCursorSurface->LockRect( &lr, NULL, 0 );
-    pBitmap = (DWORD*)lr.pBits;
-    for( y = 0; y < dwHeightDest; y++ )
+    pCursorSurface->LockRect(&lr, NULL, 0);
+    pBitmap = (DWORD *)lr.pBits;
+    for (y = 0; y < dwHeightDest; y++)
     {
-        for( x = 0; x < dwWidth; x++ )
+        for (x = 0; x < dwWidth; x++)
         {
             if (bBWCursor)
             {
-                crColor = pcrArrayMask[dwWidth*(dwHeightDest-1-y) + x];
-                crMask = pcrArrayMask[dwWidth*(dwHeightSrc-1-y) + x];
+                crColor = pcrArrayMask[dwWidth * (dwHeightDest - 1 - y) + x];
+                crMask = pcrArrayMask[dwWidth * (dwHeightSrc - 1 - y) + x];
             }
             else
             {
-                crColor = pcrArrayColor[dwWidth*(dwHeightDest-1-y) + x];
-                crMask = pcrArrayMask[dwWidth*(dwHeightDest-1-y) + x];
+                crColor = pcrArrayColor[dwWidth * (dwHeightDest - 1 - y) + x];
+                crMask = pcrArrayMask[dwWidth * (dwHeightDest - 1 - y) + x];
             }
             if (crMask == 0)
-                pBitmap[dwWidth*y + x] = 0xff000000 | crColor;
+                pBitmap[dwWidth * y + x] = 0xff000000 | crColor;
             else
-                pBitmap[dwWidth*y + x] = 0x00000000;
+                pBitmap[dwWidth * y + x] = 0x00000000;
 
             // It may be helpful to make the D3D cursor look slightly 
             // different from the Windows cursor so you can distinguish 
@@ -323,7 +323,7 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
             // bAddWatermark is TRUE, the following code adds some
             // small grey "D3D" characters to the upper-left corner of
             // the D3D cursor image.
-            if( bAddWatermark && x < 12 && y < 5 )
+            if (bAddWatermark && x < 12 && y < 5)
             {
                 // 11.. 11.. 11.. .... CCC0
                 // 1.1. ..1. 1.1. .... A2A0
@@ -332,9 +332,9 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
                 // 11.. 11.. 11.. .... CCC0
 
                 const WORD wMask[5] = { 0xccc0, 0xa2a0, 0xa4a0, 0xa2a0, 0xccc0 };
-                if( wMask[y] & (1 << (15 - x)) )
+                if (wMask[y] & (1 << (15 - x)))
                 {
-                    pBitmap[dwWidth*y + x] |= 0xff808080;
+                    pBitmap[dwWidth * y + x] |= 0xff808080;
                 }
             }
         }
@@ -342,8 +342,8 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
     pCursorSurface->UnlockRect();
 
     // Set the device cursor
-    if( FAILED( hr = pd3dDevice->SetCursorProperties( iconinfo.xHotspot, 
-        iconinfo.yHotspot, pCursorSurface ) ) )
+    if (FAILED(hr = pd3dDevice->SetCursorProperties(iconinfo.xHotspot,
+        iconinfo.yHotspot, pCursorSurface)))
     {
         goto End;
     }
@@ -351,19 +351,19 @@ HRESULT D3DUtil_SetDeviceCursor( LPDIRECT3DDEVICE9 pd3dDevice, HCURSOR hCursor,
     hr = S_OK;
 
 End:
-    if( iconinfo.hbmMask != NULL )
-        DeleteObject( iconinfo.hbmMask );
-    if( iconinfo.hbmColor != NULL )
-        DeleteObject( iconinfo.hbmColor );
-    if( hdcScreen != NULL )
-        ReleaseDC( NULL, hdcScreen );
-    if( hdcColor != NULL )
-        DeleteDC( hdcColor );
-    if( hdcMask != NULL )
-        DeleteDC( hdcMask );
-    SAFE_DELETE_ARRAY( pcrArrayColor );
-    SAFE_DELETE_ARRAY( pcrArrayMask );
-    SAFE_RELEASE( pCursorSurface );
+    if (iconinfo.hbmMask != NULL)
+        DeleteObject(iconinfo.hbmMask);
+    if (iconinfo.hbmColor != NULL)
+        DeleteObject(iconinfo.hbmColor);
+    if (hdcScreen != NULL)
+        ReleaseDC(NULL, hdcScreen);
+    if (hdcColor != NULL)
+        DeleteDC(hdcColor);
+    if (hdcMask != NULL)
+        DeleteDC(hdcMask);
+    SAFE_DELETE_ARRAY(pcrArrayColor);
+    SAFE_DELETE_ARRAY(pcrArrayMask);
+    SAFE_RELEASE(pCursorSurface);
     return hr;
 }
 
@@ -373,10 +373,10 @@ End:
 // Name: D3DFormatToString
 // Desc: Returns the string for the given D3DFORMAT.
 //-----------------------------------------------------------------------------
-LPCTSTR D3DUtil_D3DFormatToString( D3DFORMAT format, bool bWithPrefix )
+LPCTSTR D3DUtil_D3DFormatToString(D3DFORMAT format, bool bWithPrefix)
 {
-    TCHAR* pstr = NULL;
-    switch( format )
+    TCHAR *pstr = NULL;
+    switch (format)
     {
     case D3DFMT_UNKNOWN:         pstr = TEXT("D3DFMT_UNKNOWN"); break;
     case D3DFMT_R8G8B8:          pstr = TEXT("D3DFMT_R8G8B8"); break;
@@ -436,10 +436,10 @@ LPCTSTR D3DUtil_D3DFormatToString( D3DFORMAT format, bool bWithPrefix )
     case D3DFMT_CxV8U8:          pstr = TEXT("D3DFMT_CxV8U8"); break;
     default:                     pstr = TEXT("Unknown format"); break;
     }
-    if( bWithPrefix || _tcsstr( pstr, TEXT("D3DFMT_") )== NULL )
+    if (bWithPrefix || _tcsstr(pstr, TEXT("D3DFMT_")) == NULL)
         return pstr;
     else
-        return pstr + lstrlen( TEXT("D3DFMT_") );
+        return pstr + lstrlen(TEXT("D3DFMT_"));
 }
 
 
@@ -449,16 +449,16 @@ LPCTSTR D3DUtil_D3DFormatToString( D3DFORMAT format, bool bWithPrefix )
 //       Takes two points on unit sphere an angle THETA apart, returns
 //       quaternion that represents a rotation around cross product by 2*THETA.
 //-----------------------------------------------------------------------------
-inline D3DXQUATERNION* WINAPI D3DUtil_QuaternionUnitAxisToUnitAxis2( D3DXQUATERNION *pOut, 
-                                                                     const D3DXVECTOR3 *pvFrom, 
-                                                                     const D3DXVECTOR3 *pvTo )
+inline D3DXQUATERNION *WINAPI D3DUtil_QuaternionUnitAxisToUnitAxis2(D3DXQUATERNION *pOut,
+    const D3DXVECTOR3 *pvFrom,
+    const D3DXVECTOR3 *pvTo)
 {
     D3DXVECTOR3 vAxis;
     D3DXVec3Cross(&vAxis, pvFrom, pvTo);    // proportional to sin(theta)
     pOut->x = vAxis.x;
     pOut->y = vAxis.y;
     pOut->z = vAxis.z;
-    pOut->w = D3DXVec3Dot( pvFrom, pvTo );
+    pOut->w = D3DXVec3Dot(pvFrom, pvTo);
     return pOut;
 }
 
@@ -471,9 +471,9 @@ inline D3DXQUATERNION* WINAPI D3DUtil_QuaternionUnitAxisToUnitAxis2( D3DXQUATERN
 //       Takes two points on unit sphere an angle THETA apart, returns
 //       quaternion that represents a rotation around cross product by theta.
 //-----------------------------------------------------------------------------
-inline D3DXQUATERNION* WINAPI D3DUtil_QuaternionAxisToAxis( D3DXQUATERNION *pOut, 
-                                                            const D3DXVECTOR3 *pvFrom, 
-                                                            const D3DXVECTOR3 *pvTo)
+inline D3DXQUATERNION *WINAPI D3DUtil_QuaternionAxisToAxis(D3DXQUATERNION *pOut,
+    const D3DXVECTOR3 *pvFrom,
+    const D3DXVECTOR3 *pvTo)
 {
     D3DXVECTOR3 vA, vB;
     D3DXVec3Normalize(&vA, pvFrom);
@@ -493,12 +493,12 @@ inline D3DXQUATERNION* WINAPI D3DUtil_QuaternionAxisToAxis( D3DXQUATERNION *pOut
 CD3DArcBall::CD3DArcBall()
 {
     Reset();
-	m_vDownPt = D3DXVECTOR3(0,0,0);
-	m_vCurrentPt = D3DXVECTOR3(0,0,0);
+    m_vDownPt = D3DXVECTOR3(0, 0, 0);
+    m_vCurrentPt = D3DXVECTOR3(0, 0, 0);
 
     RECT rc;
-    GetClientRect( GetForegroundWindow(), &rc );
-    SetWindow( rc.right, rc.bottom );
+    GetClientRect(GetForegroundWindow(), &rc);
+    SetWindow(rc.right, rc.bottom);
 }
 
 
@@ -511,11 +511,11 @@ CD3DArcBall::CD3DArcBall()
 //-----------------------------------------------------------------------------
 void CD3DArcBall::Reset()
 {
-    D3DXQuaternionIdentity( &m_qDown );
-    D3DXQuaternionIdentity( &m_qNow );
-    D3DXMatrixIdentity( &m_mRotation );
-    D3DXMatrixIdentity( &m_mTranslation );
-    D3DXMatrixIdentity( &m_mTranslationDelta );
+    D3DXQuaternionIdentity(&m_qDown);
+    D3DXQuaternionIdentity(&m_qNow);
+    D3DXMatrixIdentity(&m_mRotation);
+    D3DXMatrixIdentity(&m_mTranslation);
+    D3DXMatrixIdentity(&m_mTranslationDelta);
     m_bDrag = FALSE;
     m_fRadiusTranslation = 1.0f;
     m_fRadius = 1.0f;
@@ -528,26 +528,26 @@ void CD3DArcBall::Reset()
 // Name:
 // Desc:
 //-----------------------------------------------------------------------------
-D3DXVECTOR3 CD3DArcBall::ScreenToVector( float fScreenPtX, float fScreenPtY )
+D3DXVECTOR3 CD3DArcBall::ScreenToVector(float fScreenPtX, float fScreenPtY)
 {
     // Scale to screen
-    FLOAT x   = -(fScreenPtX - m_nWidth/2)  / (m_fRadius*m_nWidth/2);
-    FLOAT y   =  (fScreenPtY - m_nHeight/2) / (m_fRadius*m_nHeight/2);
+    FLOAT x = -(fScreenPtX - m_nWidth / 2) / (m_fRadius * m_nWidth / 2);
+    FLOAT y = (fScreenPtY - m_nHeight / 2) / (m_fRadius * m_nHeight / 2);
 
-    FLOAT z   = 0.0f;
-    FLOAT mag = x*x + y*y;
+    FLOAT z = 0.0f;
+    FLOAT mag = x * x + y * y;
 
-    if( mag > 1.0f )
+    if (mag > 1.0f)
     {
-        FLOAT scale = 1.0f/sqrtf(mag);
+        FLOAT scale = 1.0f / sqrtf(mag);
         x *= scale;
         y *= scale;
     }
     else
-        z = sqrtf( 1.0f - mag );
+        z = sqrtf(1.0f - mag);
 
     // Return vector
-    return D3DXVECTOR3( x, y, z );
+    return D3DXVECTOR3(x, y, z);
 }
 
 
@@ -559,11 +559,11 @@ D3DXVECTOR3 CD3DArcBall::ScreenToVector( float fScreenPtX, float fScreenPtY )
 //-----------------------------------------------------------------------------
 D3DXQUATERNION CD3DArcBall::QuatFromBallPoints(const D3DXVECTOR3 &vFrom, const D3DXVECTOR3 &vTo)
 {
-	D3DXVECTOR3 vPart;
-	float fDot = D3DXVec3Dot(&vFrom, &vTo);
+    D3DXVECTOR3 vPart;
+    float fDot = D3DXVec3Dot(&vFrom, &vTo);
     D3DXVec3Cross(&vPart, &vFrom, &vTo);
 
-	return D3DXQUATERNION(vPart.x, vPart.y, vPart.z, fDot);
+    return D3DXQUATERNION(vPart.x, vPart.y, vPart.z, fDot);
 }
 
 
@@ -573,10 +573,10 @@ D3DXQUATERNION CD3DArcBall::QuatFromBallPoints(const D3DXVECTOR3 &vFrom, const D
 // Name:
 // Desc:
 //-----------------------------------------------------------------------------
-void CD3DArcBall::OnBegin( int nX, int nY )
+void CD3DArcBall::OnBegin(int nX, int nY)
 {
-	m_bDrag = true;
-	m_vDownPt = ScreenToVector( (float)nX, (float)nY );
+    m_bDrag = true;
+    m_vDownPt = ScreenToVector((float)nX, (float)nY);
 }
 
 
@@ -586,12 +586,12 @@ void CD3DArcBall::OnBegin( int nX, int nY )
 // Name:
 // Desc:
 //-----------------------------------------------------------------------------
-void CD3DArcBall::OnMove( int nX, int nY )
+void CD3DArcBall::OnMove(int nX, int nY)
 {
-	if (m_bDrag) 
-    { 
-		m_vCurrentPt = ScreenToVector( (float)nX, (float)nY );
-        m_qNow = m_qDown * QuatFromBallPoints( m_vDownPt, m_vCurrentPt );
+    if (m_bDrag)
+    {
+        m_vCurrentPt = ScreenToVector((float)nX, (float)nY);
+        m_qNow = m_qDown * QuatFromBallPoints(m_vDownPt, m_vCurrentPt);
     }
 }
 
@@ -604,8 +604,8 @@ void CD3DArcBall::OnMove( int nX, int nY )
 //-----------------------------------------------------------------------------
 void CD3DArcBall::OnEnd()
 {
-	m_bDrag = false;
-	m_qDown = m_qNow;
+    m_bDrag = false;
+    m_qDown = m_qNow;
 }
 
 
@@ -615,58 +615,58 @@ void CD3DArcBall::OnEnd()
 // Name: HandleMessages
 // Desc:
 //-----------------------------------------------------------------------------
-LRESULT CD3DArcBall::HandleMessages( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam )
+LRESULT CD3DArcBall::HandleMessages(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    UNREFERENCED_PARAMETER( hWnd );
+    UNREFERENCED_PARAMETER(hWnd);
 
     // Current mouse position
     int iMouseX = GET_X_LPARAM(lParam);
     int iMouseY = GET_Y_LPARAM(lParam);
 
-    switch( uMsg )
+    switch (uMsg)
     {
-        case WM_LBUTTONDOWN:
-            OnBegin( iMouseX, iMouseY );
-            return TRUE;
+    case WM_LBUTTONDOWN:
+        OnBegin(iMouseX, iMouseY);
+        return TRUE;
 
-        case WM_LBUTTONUP:
-            OnEnd();
-            return TRUE;
+    case WM_LBUTTONUP:
+        OnEnd();
+        return TRUE;
 
-        case WM_RBUTTONDOWN:
-        case WM_MBUTTONDOWN:
-            // Store off the position of the cursor when the button is pressed
+    case WM_RBUTTONDOWN:
+    case WM_MBUTTONDOWN:
+        // Store off the position of the cursor when the button is pressed
+        m_ptLastMouse.x = iMouseX;
+        m_ptLastMouse.y = iMouseY;
+        return TRUE;
+
+    case WM_MOUSEMOVE:
+        if (MK_LBUTTON & wParam)
+        {
+            OnMove(iMouseX, iMouseY);
+        }
+        else if ((MK_RBUTTON & wParam) || (MK_MBUTTON & wParam))
+        {
+            // Normalize based on size of window and bounding sphere radius
+            FLOAT fDeltaX = (m_ptLastMouse.x - iMouseX) * m_fRadiusTranslation / m_nWidth;
+            FLOAT fDeltaY = (m_ptLastMouse.y - iMouseY) * m_fRadiusTranslation / m_nHeight;
+
+            if (wParam & MK_RBUTTON)
+            {
+                D3DXMatrixTranslation(&m_mTranslationDelta, -2 * fDeltaX, 2 * fDeltaY, 0.0f);
+                D3DXMatrixMultiply(&m_mTranslation, &m_mTranslation, &m_mTranslationDelta);
+            }
+            else  // wParam & MK_MBUTTON
+            {
+                D3DXMatrixTranslation(&m_mTranslationDelta, 0.0f, 0.0f, 5 * fDeltaY);
+                D3DXMatrixMultiply(&m_mTranslation, &m_mTranslation, &m_mTranslationDelta);
+            }
+
+            // Store mouse coordinate
             m_ptLastMouse.x = iMouseX;
             m_ptLastMouse.y = iMouseY;
-            return TRUE;
-
-        case WM_MOUSEMOVE:
-            if( MK_LBUTTON&wParam )
-            {
-                OnMove( iMouseX, iMouseY );
-            }
-            else if( (MK_RBUTTON&wParam) || (MK_MBUTTON&wParam) )
-            {
-                // Normalize based on size of window and bounding sphere radius
-                FLOAT fDeltaX = ( m_ptLastMouse.x-iMouseX ) * m_fRadiusTranslation / m_nWidth;
-                FLOAT fDeltaY = ( m_ptLastMouse.y-iMouseY ) * m_fRadiusTranslation / m_nHeight;
-
-                if( wParam & MK_RBUTTON )
-                {
-                    D3DXMatrixTranslation( &m_mTranslationDelta, -2*fDeltaX, 2*fDeltaY, 0.0f );
-                    D3DXMatrixMultiply( &m_mTranslation, &m_mTranslation, &m_mTranslationDelta );
-                }
-                else  // wParam & MK_MBUTTON
-                {
-                    D3DXMatrixTranslation( &m_mTranslationDelta, 0.0f, 0.0f, 5*fDeltaY );
-                    D3DXMatrixMultiply( &m_mTranslation, &m_mTranslation, &m_mTranslationDelta );
-                }
-
-                // Store mouse coordinate
-                m_ptLastMouse.x = iMouseX;
-                m_ptLastMouse.y = iMouseY;
-            }
-            return TRUE;
+        }
+        return TRUE;
     }
 
     return FALSE;
@@ -681,19 +681,19 @@ LRESULT CD3DArcBall::HandleMessages( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM
 //-----------------------------------------------------------------------------
 CBaseCamera::CBaseCamera()
 {
-    ZeroMemory( m_aKeys, sizeof(BYTE)*CAM_MAX_KEYS );
+    ZeroMemory(m_aKeys, sizeof(BYTE) * CAM_MAX_KEYS);
 
     // Set attributes for the view matrix
-    D3DXVECTOR3 vEyePt    = D3DXVECTOR3(0.0f,0.0f,0.0f);
-    D3DXVECTOR3 vLookatPt = D3DXVECTOR3(0.0f,0.0f,1.0f);
+    D3DXVECTOR3 vEyePt = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+    D3DXVECTOR3 vLookatPt = D3DXVECTOR3(0.0f, 0.0f, 1.0f);
 
     // Setup the view matrix
-    SetViewParams( &vEyePt, &vLookatPt );
+    SetViewParams(&vEyePt, &vLookatPt);
 
     // Setup the projection matrix
-    SetProjParams( D3DX_PI/4, 1.0f, 1.0f, 1000.0f );
+    SetProjParams(D3DX_PI / 4, 1.0f, 1.0f, 1000.0f);
 
-    GetCursorPos( &m_ptLastMousePosition );
+    GetCursorPos(&m_ptLastMousePosition);
     m_bMouseLButtonDown = false;
     m_bMouseMButtonDown = false;
     m_bMouseRButtonDown = false;
@@ -703,26 +703,26 @@ CBaseCamera::CBaseCamera()
     m_fCameraYawAngle = 0.0f;
     m_fCameraPitchAngle = 0.0f;
 
-    m_vVelocity     = D3DXVECTOR3(0,0,0);
+    m_vVelocity = D3DXVECTOR3(0, 0, 0);
     m_bMovementDrag = false;
-    m_vVelocityDrag = D3DXVECTOR3(0,0,0);
-    m_fDragTimer    = 0.0f;
+    m_vVelocityDrag = D3DXVECTOR3(0, 0, 0);
+    m_fDragTimer = 0.0f;
     m_fTotalDragTimeToZero = 0.25;
-    m_vRotVelocity = D3DXVECTOR2(0,0);
+    m_vRotVelocity = D3DXVECTOR2(0, 0);
 
-    m_fRotationScaler = 0.01f;           
-    m_fMoveScaler = 5.0f;           
+    m_fRotationScaler = 0.01f;
+    m_fMoveScaler = 5.0f;
 
     m_bInvertPitch = false;
     m_bEnableYAxisMovement = true;
     m_bEnablePositionMovement = true;
 
-    m_vMouseDelta   = D3DXVECTOR2(0,0);
+    m_vMouseDelta = D3DXVECTOR2(0, 0);
     m_fFramesToSmoothMouseData = 2.0f;
 
     m_bClipToBoundary = false;
-    m_vMinBoundary = D3DXVECTOR3(-1,-1,-1);
-    m_vMaxBoundary = D3DXVECTOR3(1,1,1);
+    m_vMinBoundary = D3DXVECTOR3(-1, -1, -1);
+    m_vMaxBoundary = D3DXVECTOR3(1, 1, 1);
 
     m_bResetCursorAfterMove = false;
 }
@@ -732,29 +732,29 @@ CBaseCamera::CBaseCamera()
 // Name: SetViewParams
 // Desc: Client can call this to change the position and direction of camrea
 //-----------------------------------------------------------------------------
-VOID CBaseCamera::SetViewParams( D3DXVECTOR3* pvEyePt, D3DXVECTOR3* pvLookatPt )
+VOID CBaseCamera::SetViewParams(D3DXVECTOR3 *pvEyePt, D3DXVECTOR3 *pvLookatPt)
 {
-    if( NULL == pvEyePt || NULL == pvLookatPt )
+    if (NULL == pvEyePt || NULL == pvLookatPt)
         return;
 
     m_vDefaultEye = m_vEye = *pvEyePt;
     m_vDefaultLookAt = m_vLookAt = *pvLookatPt;
 
     // Calc the view matrix
-    D3DXVECTOR3 vUp(0,1,0);
-    D3DXMatrixLookAtLH( &m_mView, pvEyePt, pvLookatPt, &vUp );
+    D3DXVECTOR3 vUp(0, 1, 0);
+    D3DXMatrixLookAtLH(&m_mView, pvEyePt, pvLookatPt, &vUp);
 
     D3DXMATRIX mInvView;
-    D3DXMatrixInverse( &mInvView, NULL, &m_mView );
+    D3DXMatrixInverse(&mInvView, NULL, &m_mView);
 
     // The axis basis vectors and camera position are stored inside the 
     // position matrix in the 4 rows of the camera's world matrix.
     // To figuire out the yaw/pitch of the camera, we just need the Z basis vector
-    D3DXVECTOR3* pZBasis = (D3DXVECTOR3*) &mInvView._31;
+    D3DXVECTOR3 *pZBasis = (D3DXVECTOR3 *)&mInvView._31;
 
-    m_fCameraYawAngle   = atan2f( pZBasis->x, pZBasis->z );
-    float fLen = sqrtf(pZBasis->z*pZBasis->z + pZBasis->x*pZBasis->x);
-    m_fCameraPitchAngle = -atan2f( pZBasis->y, fLen );
+    m_fCameraYawAngle = atan2f(pZBasis->x, pZBasis->z);
+    float fLen = sqrtf(pZBasis->z * pZBasis->z + pZBasis->x * pZBasis->x);
+    m_fCameraPitchAngle = -atan2f(pZBasis->y, fLen);
 }
 
 
@@ -764,16 +764,16 @@ VOID CBaseCamera::SetViewParams( D3DXVECTOR3* pvEyePt, D3DXVECTOR3* pvLookatPt )
 // Name: SetProjParams
 // Desc: Calculates the projection matrix based on input params
 //-----------------------------------------------------------------------------
-VOID CBaseCamera::SetProjParams( FLOAT fFOV, FLOAT fAspect, FLOAT fNearPlane,
-                                   FLOAT fFarPlane )
+VOID CBaseCamera::SetProjParams(FLOAT fFOV, FLOAT fAspect, FLOAT fNearPlane,
+    FLOAT fFarPlane)
 {
     // Set attributes for the projection matrix
-    m_fFOV        = fFOV;
-    m_fAspect     = fAspect;
-    m_fNearPlane  = fNearPlane;
-    m_fFarPlane   = fFarPlane;
+    m_fFOV = fFOV;
+    m_fAspect = fAspect;
+    m_fNearPlane = fNearPlane;
+    m_fFarPlane = fFarPlane;
 
-    D3DXMatrixPerspectiveFovLH( &m_mProj, fFOV, fAspect, fNearPlane, fFarPlane );
+    D3DXMatrixPerspectiveFovLH(&m_mProj, fFOV, fAspect, fNearPlane, fFarPlane);
 }
 
 
@@ -783,76 +783,76 @@ VOID CBaseCamera::SetProjParams( FLOAT fFOV, FLOAT fAspect, FLOAT fNearPlane,
 // Name: HandleMessages
 // Desc: Call this from your message proc so this class can handle window messages
 //-----------------------------------------------------------------------------
-LRESULT CBaseCamera::HandleMessages( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam )
+LRESULT CBaseCamera::HandleMessages(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    UNREFERENCED_PARAMETER( hWnd );
-    UNREFERENCED_PARAMETER( lParam );
+    UNREFERENCED_PARAMETER(hWnd);
+    UNREFERENCED_PARAMETER(lParam);
 
-    switch( uMsg )
+    switch (uMsg)
     {
-        case WM_KEYDOWN:
+    case WM_KEYDOWN:
+    {
+        // Map this key to a D3DUtil_CameraKeys enum and update the
+        // state of m_aKeys[] by adding the KEY_WAS_DOWN_MASK|KEY_IS_DOWN_MASK mask
+        // only if the key is not down
+        D3DUtil_CameraKeys mappedKey = MapKey((UINT)wParam);
+        if (mappedKey != CAM_UNKNOWN)
         {
-            // Map this key to a D3DUtil_CameraKeys enum and update the
-            // state of m_aKeys[] by adding the KEY_WAS_DOWN_MASK|KEY_IS_DOWN_MASK mask
-            // only if the key is not down
-            D3DUtil_CameraKeys mappedKey = MapKey( (UINT)wParam );
-            if( mappedKey != CAM_UNKNOWN )
-            {
-                if( FALSE == IsKeyDown(m_aKeys[mappedKey]) )
-                    m_aKeys[ mappedKey ] = KEY_WAS_DOWN_MASK | KEY_IS_DOWN_MASK;
-            }
-            break;
+            if (FALSE == IsKeyDown(m_aKeys[mappedKey]))
+                m_aKeys[mappedKey] = KEY_WAS_DOWN_MASK | KEY_IS_DOWN_MASK;
         }
+        break;
+    }
 
-        case WM_KEYUP:
+    case WM_KEYUP:
+    {
+        // Map this key to a D3DUtil_CameraKeys enum and update the
+        // state of m_aKeys[] by removing the KEY_IS_DOWN_MASK mask.
+        D3DUtil_CameraKeys mappedKey = MapKey((UINT)wParam);
+        if (mappedKey != CAM_UNKNOWN)
+            m_aKeys[mappedKey] &= ~KEY_IS_DOWN_MASK;
+        break;
+    }
+
+    case WM_RBUTTONDOWN:
+    case WM_MBUTTONDOWN:
+    case WM_LBUTTONDOWN:
+    {
+        // Update member var state
+        if (uMsg == WM_LBUTTONDOWN) { m_bMouseLButtonDown = true; m_nCurrentButtonMask |= MOUSE_LEFT_BUTTON; }
+        if (uMsg == WM_MBUTTONDOWN) { m_bMouseMButtonDown = true; m_nCurrentButtonMask |= MOUSE_MIDDLE_BUTTON; }
+        if (uMsg == WM_RBUTTONDOWN) { m_bMouseRButtonDown = true; m_nCurrentButtonMask |= MOUSE_RIGHT_BUTTON; }
+
+        // Capture the mouse, so if the mouse button is 
+        // released outside the window, we'll get the WM_LBUTTONUP message
+        SetCapture(hWnd);
+        GetCursorPos(&m_ptLastMousePosition);
+        return TRUE;
+    }
+
+    case WM_RBUTTONUP:
+    case WM_MBUTTONUP:
+    case WM_LBUTTONUP:
+    {
+        // Update member var state
+        if (uMsg == WM_LBUTTONUP) { m_bMouseLButtonDown = false; m_nCurrentButtonMask &= ~MOUSE_LEFT_BUTTON; }
+        if (uMsg == WM_MBUTTONUP) { m_bMouseMButtonDown = false; m_nCurrentButtonMask &= ~MOUSE_MIDDLE_BUTTON; }
+        if (uMsg == WM_RBUTTONUP) { m_bMouseRButtonDown = false; m_nCurrentButtonMask &= ~MOUSE_RIGHT_BUTTON; }
+
+        // Release the capture if no mouse buttons down
+        if (!m_bMouseLButtonDown &&
+            !m_bMouseRButtonDown &&
+            !m_bMouseMButtonDown)
         {
-            // Map this key to a D3DUtil_CameraKeys enum and update the
-            // state of m_aKeys[] by removing the KEY_IS_DOWN_MASK mask.
-            D3DUtil_CameraKeys mappedKey = MapKey( (UINT)wParam );
-            if( mappedKey != CAM_UNKNOWN )
-                m_aKeys[ mappedKey ] &= ~KEY_IS_DOWN_MASK;
-            break;
+            ReleaseCapture();
         }
+        break;
+    }
 
-        case WM_RBUTTONDOWN: 
-        case WM_MBUTTONDOWN: 
-        case WM_LBUTTONDOWN: 
-        {
-            // Update member var state
-            if( uMsg == WM_LBUTTONDOWN ) { m_bMouseLButtonDown = true; m_nCurrentButtonMask |= MOUSE_LEFT_BUTTON; }
-            if( uMsg == WM_MBUTTONDOWN ) { m_bMouseMButtonDown = true; m_nCurrentButtonMask |= MOUSE_MIDDLE_BUTTON; }
-            if( uMsg == WM_RBUTTONDOWN ) { m_bMouseRButtonDown = true; m_nCurrentButtonMask |= MOUSE_RIGHT_BUTTON; }
-
-            // Capture the mouse, so if the mouse button is 
-            // released outside the window, we'll get the WM_LBUTTONUP message
-            SetCapture(hWnd);
-            GetCursorPos( &m_ptLastMousePosition ); 
-            return TRUE;
-        }
-
-        case WM_RBUTTONUP: 
-        case WM_MBUTTONUP: 
-        case WM_LBUTTONUP:   
-        {
-            // Update member var state
-            if( uMsg == WM_LBUTTONUP ) { m_bMouseLButtonDown = false; m_nCurrentButtonMask &= ~MOUSE_LEFT_BUTTON; }
-            if( uMsg == WM_MBUTTONUP ) { m_bMouseMButtonDown = false; m_nCurrentButtonMask &= ~MOUSE_MIDDLE_BUTTON; }
-            if( uMsg == WM_RBUTTONUP ) { m_bMouseRButtonDown = false; m_nCurrentButtonMask &= ~MOUSE_RIGHT_BUTTON; }
-
-            // Release the capture if no mouse buttons down
-            if( !m_bMouseLButtonDown  && 
-                !m_bMouseRButtonDown &&
-                !m_bMouseMButtonDown )
-            {
-                ReleaseCapture();
-            }
-            break;
-        }
-
-        case WM_MOUSEWHEEL:
-            // Update member var state
-            m_nMouseWheelDelta = (short)HIWORD(wParam) / 120;
-            break;
+    case WM_MOUSEWHEEL:
+        // Update member var state
+        m_nMouseWheelDelta = (short)HIWORD(wParam) / 120;
+        break;
     }
 
     return FALSE;
@@ -865,15 +865,15 @@ LRESULT CBaseCamera::HandleMessages( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM
 // Name: UpdateMouseDelta
 // Desc: Figure out the mouse delta based on mouse movement
 //-----------------------------------------------------------------------------
-void CBaseCamera::UpdateMouseDelta( float fElapsedTime )
+void CBaseCamera::UpdateMouseDelta(float fElapsedTime)
 {
-    UNREFERENCED_PARAMETER( fElapsedTime );
+    UNREFERENCED_PARAMETER(fElapsedTime);
 
     POINT ptCurMouseDelta;
     POINT ptCurMousePos;
-    
+
     // Get current position of mouse
-    GetCursorPos( &ptCurMousePos );
+    GetCursorPos(&ptCurMousePos);
 
     // Calc how far it's moved since last frame
     ptCurMouseDelta.x = ptCurMousePos.x - m_ptLastMousePosition.x;
@@ -882,7 +882,7 @@ void CBaseCamera::UpdateMouseDelta( float fElapsedTime )
     // Record current position for next time
     m_ptLastMousePosition = ptCurMousePos;
 
-    if( m_bResetCursorAfterMove )
+    if (m_bResetCursorAfterMove)
     {
         // Set position of camera to center of desktop, 
         // so it always has room to move.  This is very useful
@@ -891,19 +891,19 @@ void CBaseCamera::UpdateMouseDelta( float fElapsedTime )
         // and the user can't tell what happened
         POINT ptCenter;
         RECT rcDesktop;
-        GetWindowRect( GetDesktopWindow(), &rcDesktop );
+        GetWindowRect(GetDesktopWindow(), &rcDesktop);
         ptCenter.x = (rcDesktop.right - rcDesktop.left) / 2;
-        ptCenter.y = (rcDesktop.bottom - rcDesktop.top) / 2;   
-        SetCursorPos( ptCenter.x, ptCenter.y );
+        ptCenter.y = (rcDesktop.bottom - rcDesktop.top) / 2;
+        SetCursorPos(ptCenter.x, ptCenter.y);
         m_ptLastMousePosition = ptCenter;
     }
 
     // Smooth the relative mouse data over a few frames so it isn't 
     // jerky when moving slowly at low frame rates.
-    float fPercentOfNew =  1.0f / m_fFramesToSmoothMouseData;
-    float fPercentOfOld =  1.0f - fPercentOfNew;
-    m_vMouseDelta.x = m_vMouseDelta.x*fPercentOfOld + ptCurMouseDelta.x*fPercentOfNew;
-    m_vMouseDelta.y = m_vMouseDelta.y*fPercentOfOld + ptCurMouseDelta.y*fPercentOfNew;
+    float fPercentOfNew = 1.0f / m_fFramesToSmoothMouseData;
+    float fPercentOfOld = 1.0f - fPercentOfNew;
+    m_vMouseDelta.x = m_vMouseDelta.x * fPercentOfOld + ptCurMouseDelta.x * fPercentOfNew;
+    m_vMouseDelta.y = m_vMouseDelta.y * fPercentOfOld + ptCurMouseDelta.y * fPercentOfNew;
 
     m_vRotVelocity = m_vMouseDelta * m_fRotationScaler;
 }
@@ -915,42 +915,42 @@ void CBaseCamera::UpdateMouseDelta( float fElapsedTime )
 // Name: UpdateVelocity
 // Desc: Figure out the velocity based on keyboard input & drag if any
 //-----------------------------------------------------------------------------
-void CBaseCamera::UpdateVelocity( float fElapsedTime )
+void CBaseCamera::UpdateVelocity(float fElapsedTime)
 {
     D3DXMATRIX mRotDelta;
-    D3DXVECTOR3 vAccel = D3DXVECTOR3(0,0,0);
+    D3DXVECTOR3 vAccel = D3DXVECTOR3(0, 0, 0);
 
-    if( m_bEnablePositionMovement )
+    if (m_bEnablePositionMovement)
     {
         // Update acceleration vector based on keyboard state
-        if( IsKeyDown(m_aKeys[CAM_MOVE_FORWARD]) )
+        if (IsKeyDown(m_aKeys[CAM_MOVE_FORWARD]))
             vAccel.z += 1.0f;
-        if( IsKeyDown(m_aKeys[CAM_MOVE_BACKWARD]) )
+        if (IsKeyDown(m_aKeys[CAM_MOVE_BACKWARD]))
             vAccel.z -= 1.0f;
-        if( m_bEnableYAxisMovement )
+        if (m_bEnableYAxisMovement)
         {
-            if( IsKeyDown(m_aKeys[CAM_MOVE_UP]) )
+            if (IsKeyDown(m_aKeys[CAM_MOVE_UP]))
                 vAccel.y += 1.0f;
-            if( IsKeyDown(m_aKeys[CAM_MOVE_DOWN]) )
+            if (IsKeyDown(m_aKeys[CAM_MOVE_DOWN]))
                 vAccel.y -= 1.0f;
         }
-        if( IsKeyDown(m_aKeys[CAM_STRAFE_RIGHT]) )
+        if (IsKeyDown(m_aKeys[CAM_STRAFE_RIGHT]))
             vAccel.x += 1.0f;
-        if( IsKeyDown(m_aKeys[CAM_STRAFE_LEFT]) )
+        if (IsKeyDown(m_aKeys[CAM_STRAFE_LEFT]))
             vAccel.x -= 1.0f;
     }
 
     // Normalize vector so if moving 2 dirs (left & forward), 
     // the camera doesn't move faster than if moving in 1 dir
-    D3DXVec3Normalize( &vAccel, &vAccel );
+    D3DXVec3Normalize(&vAccel, &vAccel);
 
     // Scale the acceleration vector
     vAccel *= m_fMoveScaler;
 
-    if( m_bMovementDrag )
+    if (m_bMovementDrag)
     {
         // Is there any acceleration this frame?
-        if( D3DXVec3LengthSq( &vAccel ) > 0 )
+        if (D3DXVec3LengthSq(&vAccel) > 0)
         {
             // If so, then this means the user has pressed a movement key\
             // so change the velocity immediately to acceleration 
@@ -960,10 +960,10 @@ void CBaseCamera::UpdateVelocity( float fElapsedTime )
             m_fDragTimer = m_fTotalDragTimeToZero;
             m_vVelocityDrag = vAccel / m_fDragTimer;
         }
-        else 
+        else
         {
             // If no key being pressed, then slowly decrease velocity to 0
-            if( m_fDragTimer > 0 )
+            if (m_fDragTimer > 0)
             {
                 // Drag until timer is <= 0
                 m_vVelocity -= m_vVelocityDrag * fElapsedTime;
@@ -972,7 +972,7 @@ void CBaseCamera::UpdateVelocity( float fElapsedTime )
             else
             {
                 // Zero velocity
-                m_vVelocity = D3DXVECTOR3(0,0,0);
+                m_vVelocity = D3DXVECTOR3(0, 0, 0);
             }
         }
     }
@@ -990,9 +990,9 @@ void CBaseCamera::UpdateVelocity( float fElapsedTime )
 // Name: ConstrainToBoundary
 // Desc: Clamps pV to lie inside m_vMinBoundary & m_vMaxBoundary
 //-----------------------------------------------------------------------------
-void CBaseCamera::ConstrainToBoundary( D3DXVECTOR3* pV )
+void CBaseCamera::ConstrainToBoundary(D3DXVECTOR3 *pV)
 {
-    assert( false );
+    assert(false);
     // Constrain vector to a bounding box 
    /* pV->x = max(pV->x, m_vMinBoundary.x);
     pV->y = max(pV->y, m_vMinBoundary.y);
@@ -1010,34 +1010,34 @@ void CBaseCamera::ConstrainToBoundary( D3DXVECTOR3* pV )
 // Name: MapKey
 // Desc: Maps a windows virtual key to an enum
 //-----------------------------------------------------------------------------
-D3DUtil_CameraKeys CBaseCamera::MapKey( UINT nKey )
+D3DUtil_CameraKeys CBaseCamera::MapKey(UINT nKey)
 {
     // This could be upgraded to a method that's user-definable but for 
     // simplisity, we'll use a hardcoded mapping.
-    switch( nKey )
+    switch (nKey)
     {
-        case VK_LEFT:  return CAM_STRAFE_LEFT;
-        case VK_RIGHT: return CAM_STRAFE_RIGHT;
-        case VK_UP:    return CAM_MOVE_FORWARD;
-        case VK_DOWN:  return CAM_MOVE_BACKWARD;
-        case VK_PRIOR: return CAM_MOVE_UP;        // pgup
-        case VK_NEXT:  return CAM_MOVE_DOWN;      // pgdn
+    case VK_LEFT:  return CAM_STRAFE_LEFT;
+    case VK_RIGHT: return CAM_STRAFE_RIGHT;
+    case VK_UP:    return CAM_MOVE_FORWARD;
+    case VK_DOWN:  return CAM_MOVE_BACKWARD;
+    case VK_PRIOR: return CAM_MOVE_UP;        // pgup
+    case VK_NEXT:  return CAM_MOVE_DOWN;      // pgdn
 
-        case 'A':      return CAM_STRAFE_LEFT;
-        case 'D':      return CAM_STRAFE_RIGHT;
-        case 'W':      return CAM_MOVE_FORWARD;
-        case 'S':      return CAM_MOVE_BACKWARD;
-        case 'Q':      return CAM_MOVE_DOWN;
-        case 'E':      return CAM_MOVE_UP;
+    case 'A':      return CAM_STRAFE_LEFT;
+    case 'D':      return CAM_STRAFE_RIGHT;
+    case 'W':      return CAM_MOVE_FORWARD;
+    case 'S':      return CAM_MOVE_BACKWARD;
+    case 'Q':      return CAM_MOVE_DOWN;
+    case 'E':      return CAM_MOVE_UP;
 
-        case VK_NUMPAD4: return CAM_STRAFE_LEFT;
-        case VK_NUMPAD6: return CAM_STRAFE_RIGHT;
-        case VK_NUMPAD8: return CAM_MOVE_FORWARD;
-        case VK_NUMPAD2: return CAM_MOVE_BACKWARD;
-        case VK_NUMPAD9: return CAM_MOVE_UP;        
-        case VK_NUMPAD3: return CAM_MOVE_DOWN;      
+    case VK_NUMPAD4: return CAM_STRAFE_LEFT;
+    case VK_NUMPAD6: return CAM_STRAFE_RIGHT;
+    case VK_NUMPAD8: return CAM_MOVE_FORWARD;
+    case VK_NUMPAD2: return CAM_MOVE_BACKWARD;
+    case VK_NUMPAD9: return CAM_MOVE_UP;
+    case VK_NUMPAD3: return CAM_MOVE_DOWN;
 
-        case VK_HOME:   return CAM_RESET;
+    case VK_HOME:   return CAM_RESET;
     }
 
     return CAM_UNKNOWN;
@@ -1052,7 +1052,7 @@ D3DUtil_CameraKeys CBaseCamera::MapKey( UINT nKey )
 //-----------------------------------------------------------------------------
 VOID CBaseCamera::Reset()
 {
-    SetViewParams( &m_vDefaultEye, &m_vDefaultLookAt );
+    SetViewParams(&m_vDefaultEye, &m_vDefaultLookAt);
 }
 
 
@@ -1073,34 +1073,34 @@ CFirstPersonCamera::CFirstPersonCamera()
 // Name: FrameMove
 // Desc: Update the view matrix based on user input & elapsed time
 //-----------------------------------------------------------------------------
-VOID CFirstPersonCamera::FrameMove( FLOAT fElapsedTime )
+VOID CFirstPersonCamera::FrameMove(FLOAT fElapsedTime)
 {
-    if( IsKeyDown(m_aKeys[CAM_RESET]) )
+    if (IsKeyDown(m_aKeys[CAM_RESET]))
         Reset();
 
     // Get the mouse movement (if any) if the mouse button are down
-    if( m_bMouseLButtonDown || m_bMouseMButtonDown || m_bMouseRButtonDown ) 
-        UpdateMouseDelta( fElapsedTime );
+    if (m_bMouseLButtonDown || m_bMouseMButtonDown || m_bMouseRButtonDown)
+        UpdateMouseDelta(fElapsedTime);
 
     // Get amount of velocity based on the keyboard input and drag (if any)
-    UpdateVelocity( fElapsedTime );
+    UpdateVelocity(fElapsedTime);
 
     // Simple euler method to calculate position delta
     D3DXVECTOR3 vPosDelta = m_vVelocity * fElapsedTime;
 
     // If rotating the camera 
-    if( m_bMouseLButtonDown ||  m_bMouseMButtonDown || m_bMouseRButtonDown )
+    if (m_bMouseLButtonDown || m_bMouseMButtonDown || m_bMouseRButtonDown)
     {
         // Update the pitch & yaw angle based on mouse movement
-        float fYawDelta   = m_vRotVelocity.x;
+        float fYawDelta = m_vRotVelocity.x;
         float fPitchDelta = m_vRotVelocity.y;
 
         // Invert pitch if requested
-        if( m_bInvertPitch )
+        if (m_bInvertPitch)
             fPitchDelta = -fPitchDelta;
 
         m_fCameraPitchAngle += fPitchDelta;
-        m_fCameraYawAngle   += fYawDelta;
+        m_fCameraYawAngle += fYawDelta;
 
         // Limit pitch to straight up or straight down
         /*m_fCameraPitchAngle = max( -D3DX_PI/2.0f,  m_fCameraPitchAngle );
@@ -1109,33 +1109,33 @@ VOID CFirstPersonCamera::FrameMove( FLOAT fElapsedTime )
 
     // Make a rotation matrix based on the camera's yaw & pitch
     D3DXMATRIX mCameraRot;
-    D3DXMatrixRotationYawPitchRoll( &mCameraRot, m_fCameraYawAngle, m_fCameraPitchAngle, 0 );
+    D3DXMatrixRotationYawPitchRoll(&mCameraRot, m_fCameraYawAngle, m_fCameraPitchAngle, 0);
 
     // Transform vectors based on camera's rotation matrix
     D3DXVECTOR3 vWorldUp, vWorldAhead;
-    D3DXVECTOR3 vLocalUp    = D3DXVECTOR3(0,1,0);
-    D3DXVECTOR3 vLocalAhead = D3DXVECTOR3(0,0,1);
-    D3DXVec3TransformCoord( &vWorldUp, &vLocalUp, &mCameraRot );
-    D3DXVec3TransformCoord( &vWorldAhead, &vLocalAhead, &mCameraRot );
+    D3DXVECTOR3 vLocalUp = D3DXVECTOR3(0, 1, 0);
+    D3DXVECTOR3 vLocalAhead = D3DXVECTOR3(0, 0, 1);
+    D3DXVec3TransformCoord(&vWorldUp, &vLocalUp, &mCameraRot);
+    D3DXVec3TransformCoord(&vWorldAhead, &vLocalAhead, &mCameraRot);
 
     // Transform the position delta by the camera's rotation 
     D3DXVECTOR3 vPosDeltaWorld;
-    D3DXVec3TransformCoord( &vPosDeltaWorld, &vPosDelta, &mCameraRot );
-    if( !m_bEnableYAxisMovement )
+    D3DXVec3TransformCoord(&vPosDeltaWorld, &vPosDelta, &mCameraRot);
+    if (!m_bEnableYAxisMovement)
         vPosDeltaWorld.y = 0.0f;
 
     // Move the eye position 
     m_vEye += vPosDeltaWorld;
-    if( m_bClipToBoundary )
-        ConstrainToBoundary( &m_vEye );
+    if (m_bClipToBoundary)
+        ConstrainToBoundary(&m_vEye);
 
     // Update the lookAt position based on the eye position 
     m_vLookAt = m_vEye + vWorldAhead;
 
     // Update the view matrix
-    D3DXMatrixLookAtLH( &m_mView, &m_vEye, &m_vLookAt, &vWorldUp );
+    D3DXMatrixLookAtLH(&m_mView, &m_vEye, &m_vLookAt, &vWorldUp);
 
-    D3DXMatrixInverse( &m_mCameraWorld, NULL, &m_mView );
+    D3DXMatrixInverse(&m_mCameraWorld, NULL, &m_mView);
 }
 
 
@@ -1147,19 +1147,19 @@ VOID CFirstPersonCamera::FrameMove( FLOAT fElapsedTime )
 //-----------------------------------------------------------------------------
 CModelViewerCamera::CModelViewerCamera()
 {
-    D3DXMatrixIdentity( &m_mWorld );
-    D3DXMatrixIdentity( &m_mModelRot );
-    D3DXMatrixIdentity( &m_mModelLastRot );    
-    m_vModelCenter = D3DXVECTOR3(0,0,0);
-    m_fRadius    = 5.0f;
+    D3DXMatrixIdentity(&m_mWorld);
+    D3DXMatrixIdentity(&m_mModelRot);
+    D3DXMatrixIdentity(&m_mModelLastRot);
+    m_vModelCenter = D3DXVECTOR3(0, 0, 0);
+    m_fRadius = 5.0f;
     m_fDefaultRadius = 5.0f;
     m_fMinRadius = 1.0f;
     m_fMaxRadius = FLT_MAX;
     m_bLimitPitch = false;
     m_bEnablePositionMovement = false;
 
-    m_nRotateModelButtonMask  = MOUSE_LEFT_BUTTON;
-    m_nZoomButtonMask         = MOUSE_WHEEL;
+    m_nRotateModelButtonMask = MOUSE_LEFT_BUTTON;
+    m_nZoomButtonMask = MOUSE_WHEEL;
     m_nRotateCameraButtonMask = MOUSE_RIGHT_BUTTON;
 }
 
@@ -1171,23 +1171,23 @@ CModelViewerCamera::CModelViewerCamera()
 // Desc: Update the view matrix & the model's world matrix based 
 //       on user input & elapsed time
 //-----------------------------------------------------------------------------
-VOID CModelViewerCamera::FrameMove( FLOAT fElapsedTime )
+VOID CModelViewerCamera::FrameMove(FLOAT fElapsedTime)
 {
-    if( IsKeyDown(m_aKeys[CAM_RESET]) )
+    if (IsKeyDown(m_aKeys[CAM_RESET]))
         Reset();
 
     // Get the mouse movement (if any) if the mouse button are down
-    if( m_nCurrentButtonMask != 0 ) 
-        UpdateMouseDelta( fElapsedTime );
+    if (m_nCurrentButtonMask != 0)
+        UpdateMouseDelta(fElapsedTime);
 
     // Get amount of velocity based on the keyboard input and drag (if any)
-    UpdateVelocity( fElapsedTime );
+    UpdateVelocity(fElapsedTime);
 
     // Simple euler method to calculate position delta
     D3DXVECTOR3 vPosDelta = m_vVelocity * fElapsedTime;
 
     // Change the radius from the camera to the model based on wheel scrolling
-    if( m_nMouseWheelDelta && m_nZoomButtonMask == MOUSE_WHEEL )
+    if (m_nMouseWheelDelta && m_nZoomButtonMask == MOUSE_WHEEL)
         m_fRadius -= m_nMouseWheelDelta * m_fRadius * 0.1f;
     if (m_fRadius < m_fMaxRadius) m_fRadius = m_fMaxRadius;
     if (m_fRadius > m_fMinRadius) m_fRadius = m_fMinRadius;
@@ -1195,32 +1195,32 @@ VOID CModelViewerCamera::FrameMove( FLOAT fElapsedTime )
 
     // Get the inverse of the arcball's rotation matrix
     D3DXMATRIX mCameraRot;
-    D3DXMatrixInverse( &mCameraRot, NULL, m_ViewArcBall.GetRotationMatrix() );
+    D3DXMatrixInverse(&mCameraRot, NULL, m_ViewArcBall.GetRotationMatrix());
 
     // Transform vectors based on camera's rotation matrix
     D3DXVECTOR3 vWorldUp, vWorldAhead;
-    D3DXVECTOR3 vLocalUp    = D3DXVECTOR3(0,1,0);
-    D3DXVECTOR3 vLocalAhead = D3DXVECTOR3(0,0,1);
-    D3DXVec3TransformCoord( &vWorldUp, &vLocalUp, &mCameraRot );
-    D3DXVec3TransformCoord( &vWorldAhead, &vLocalAhead, &mCameraRot );
+    D3DXVECTOR3 vLocalUp = D3DXVECTOR3(0, 1, 0);
+    D3DXVECTOR3 vLocalAhead = D3DXVECTOR3(0, 0, 1);
+    D3DXVec3TransformCoord(&vWorldUp, &vLocalUp, &mCameraRot);
+    D3DXVec3TransformCoord(&vWorldAhead, &vLocalAhead, &mCameraRot);
 
     // Transform the position delta by the camera's rotation 
     D3DXVECTOR3 vPosDeltaWorld;
-    D3DXVec3TransformCoord( &vPosDeltaWorld, &vPosDelta, &mCameraRot );
+    D3DXVec3TransformCoord(&vPosDeltaWorld, &vPosDelta, &mCameraRot);
 
     // Move the lookAt position 
     m_vLookAt += vPosDeltaWorld;
-    if( m_bClipToBoundary )
-        ConstrainToBoundary( &m_vLookAt );
+    if (m_bClipToBoundary)
+        ConstrainToBoundary(&m_vLookAt);
 
     // Update the eye point based on a radius away from the lookAt position
     m_vEye = m_vLookAt - vWorldAhead * m_fRadius;
 
     // Update the view matrix
-    D3DXMatrixLookAtLH( &m_mView, &m_vEye, &m_vLookAt, &vWorldUp );
+    D3DXMatrixLookAtLH(&m_mView, &m_vEye, &m_vLookAt, &vWorldUp);
 
     D3DXMATRIX mInvView;
-    D3DXMatrixInverse( &mInvView, NULL, &m_mView );
+    D3DXMatrixInverse(&mInvView, NULL, &m_mView);
     mInvView._41 = mInvView._42 = mInvView._43 = 0;
 
     D3DXMATRIX mModelLastRotInv;
@@ -1235,13 +1235,13 @@ VOID CModelViewerCamera::FrameMove( FLOAT fElapsedTime )
 
     // Since we're accumulating delta rotations, we need to orthonormalize 
     // the matrix to prevent eventual matrix skew
-    D3DXVECTOR3* pXBasis = (D3DXVECTOR3*) &m_mWorld._11;
-    D3DXVECTOR3* pYBasis = (D3DXVECTOR3*) &m_mWorld._21;
-    D3DXVECTOR3* pZBasis = (D3DXVECTOR3*) &m_mWorld._31;
-    D3DXVec3Normalize( pXBasis, pXBasis );
-    D3DXVec3Cross( pYBasis, pZBasis, pXBasis );
-    D3DXVec3Normalize( pYBasis, pYBasis );
-    D3DXVec3Cross( pZBasis, pXBasis, pYBasis );
+    D3DXVECTOR3 *pXBasis = (D3DXVECTOR3 *)&m_mWorld._11;
+    D3DXVECTOR3 *pYBasis = (D3DXVECTOR3 *)&m_mWorld._21;
+    D3DXVECTOR3 *pZBasis = (D3DXVECTOR3 *)&m_mWorld._31;
+    D3DXVec3Normalize(pXBasis, pXBasis);
+    D3DXVec3Cross(pYBasis, pZBasis, pXBasis);
+    D3DXVec3Normalize(pYBasis, pYBasis);
+    D3DXVec3Cross(pZBasis, pXBasis, pYBasis);
 
     // Translate the rotation matrix to the same position as the lookAt position
     m_mModelRot._41 = m_vLookAt.x;
@@ -1250,7 +1250,7 @@ VOID CModelViewerCamera::FrameMove( FLOAT fElapsedTime )
 
     // Translate world matrix so its at the center of the model
     D3DXMATRIX mTrans;
-    D3DXMatrixTranslation( &mTrans, -m_vModelCenter.x, -m_vModelCenter.y, -m_vModelCenter.z );
+    D3DXMatrixTranslation(&mTrans, -m_vModelCenter.x, -m_vModelCenter.y, -m_vModelCenter.z);
     m_mWorld = mTrans * m_mModelRot;
 }
 
@@ -1265,7 +1265,7 @@ VOID CModelViewerCamera::Reset()
 {
     CBaseCamera::Reset();
 
-    D3DXMatrixIdentity( &m_mWorld );
+    D3DXMatrixIdentity(&m_mWorld);
     m_fRadius = m_fDefaultRadius;
     m_WorldArcBall.Reset();
     m_ViewArcBall.Reset();
@@ -1277,46 +1277,46 @@ VOID CModelViewerCamera::Reset()
 // Name: HandleMessages
 // Desc: Call this from your message proc so this class can handle window messages
 //-----------------------------------------------------------------------------
-LRESULT CModelViewerCamera::HandleMessages( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam )
+LRESULT CModelViewerCamera::HandleMessages(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    CBaseCamera::HandleMessages( hWnd, uMsg, wParam, lParam );
+    CBaseCamera::HandleMessages(hWnd, uMsg, wParam, lParam);
 
-    if( (uMsg == WM_LBUTTONDOWN && m_nRotateModelButtonMask == MOUSE_LEFT_BUTTON) ||
+    if ((uMsg == WM_LBUTTONDOWN && m_nRotateModelButtonMask == MOUSE_LEFT_BUTTON) ||
         (uMsg == WM_MBUTTONDOWN && m_nRotateModelButtonMask == MOUSE_MIDDLE_BUTTON) ||
-        (uMsg == WM_RBUTTONDOWN && m_nRotateModelButtonMask == MOUSE_RIGHT_BUTTON) )
+        (uMsg == WM_RBUTTONDOWN && m_nRotateModelButtonMask == MOUSE_RIGHT_BUTTON))
     {
         int iMouseX = GET_X_LPARAM(lParam);
         int iMouseY = GET_Y_LPARAM(lParam);
-        m_WorldArcBall.OnBegin( iMouseX, iMouseY );            
+        m_WorldArcBall.OnBegin(iMouseX, iMouseY);
     }
 
-    if( (uMsg == WM_LBUTTONDOWN && m_nRotateCameraButtonMask == MOUSE_LEFT_BUTTON) ||
+    if ((uMsg == WM_LBUTTONDOWN && m_nRotateCameraButtonMask == MOUSE_LEFT_BUTTON) ||
         (uMsg == WM_MBUTTONDOWN && m_nRotateCameraButtonMask == MOUSE_MIDDLE_BUTTON) ||
-        (uMsg == WM_RBUTTONDOWN && m_nRotateCameraButtonMask == MOUSE_RIGHT_BUTTON) )
+        (uMsg == WM_RBUTTONDOWN && m_nRotateCameraButtonMask == MOUSE_RIGHT_BUTTON))
     {
         int iMouseX = GET_X_LPARAM(lParam);
         int iMouseY = GET_Y_LPARAM(lParam);
-        m_ViewArcBall.OnBegin( iMouseX, iMouseY );            
+        m_ViewArcBall.OnBegin(iMouseX, iMouseY);
     }
 
-    if( uMsg == WM_MOUSEMOVE )
+    if (uMsg == WM_MOUSEMOVE)
     {
         int iMouseX = GET_X_LPARAM(lParam);
         int iMouseY = GET_Y_LPARAM(lParam);
-        m_WorldArcBall.OnMove( iMouseX, iMouseY );
-        m_ViewArcBall.OnMove( iMouseX, iMouseY );
+        m_WorldArcBall.OnMove(iMouseX, iMouseY);
+        m_ViewArcBall.OnMove(iMouseX, iMouseY);
     }
 
-    if( (uMsg == WM_LBUTTONUP && m_nRotateModelButtonMask == MOUSE_LEFT_BUTTON) ||
+    if ((uMsg == WM_LBUTTONUP && m_nRotateModelButtonMask == MOUSE_LEFT_BUTTON) ||
         (uMsg == WM_MBUTTONUP && m_nRotateModelButtonMask == MOUSE_MIDDLE_BUTTON) ||
-        (uMsg == WM_RBUTTONUP && m_nRotateModelButtonMask == MOUSE_RIGHT_BUTTON) )
+        (uMsg == WM_RBUTTONUP && m_nRotateModelButtonMask == MOUSE_RIGHT_BUTTON))
     {
         m_WorldArcBall.OnEnd();
     }
 
-    if( (uMsg == WM_LBUTTONUP && m_nRotateCameraButtonMask == MOUSE_LEFT_BUTTON) ||
+    if ((uMsg == WM_LBUTTONUP && m_nRotateCameraButtonMask == MOUSE_LEFT_BUTTON) ||
         (uMsg == WM_MBUTTONUP && m_nRotateCameraButtonMask == MOUSE_MIDDLE_BUTTON) ||
-        (uMsg == WM_RBUTTONUP && m_nRotateCameraButtonMask == MOUSE_RIGHT_BUTTON) )
+        (uMsg == WM_RBUTTONUP && m_nRotateCameraButtonMask == MOUSE_RIGHT_BUTTON))
     {
         m_ViewArcBall.OnEnd();
     }

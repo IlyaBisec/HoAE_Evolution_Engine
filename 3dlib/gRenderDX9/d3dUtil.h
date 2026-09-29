@@ -296,10 +296,14 @@ protected:
     float        m_fMaxRadius;           // Max radius
 };
 
-#define DX_CHK(A)		{	HRESULT __hRes = (HRESULT)(A);\
-                            if(__hRes != S_OK) {\
-                                Log.ErrorFL( (__FILE__), (__LINE__), GetD3DErrorDesc( __hRes ) );\
-                        };};		
+#define DX_CHK(A)                                                        \
+    do {                                                                \
+        const HRESULT __hRes = (HRESULT)(A);                            \
+        if (FAILED(__hRes)) {                                           \
+            Log.ErrorFL(__FILE__, __LINE__, GetD3DErrorDesc(__hRes));   \
+        }                                                               \
+    } while (0)
+
 
 #define SAFE_RELEASE(A)     { if(A) {	int __nRef = (A)->Release(); \
                                 (A)=NULL; \

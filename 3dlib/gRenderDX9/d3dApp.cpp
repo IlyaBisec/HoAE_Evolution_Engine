@@ -800,10 +800,26 @@ HRESULT D3DApplication::Initialize3DEnvironment()
         } 
     }
 #endif 
-    if (FAILED(m_pD3D->CreateDevice( AdapterToUse, DeviceType,
-        m_hWndFocus, D3DCREATE_HARDWARE_VERTEXPROCESSING, &m_d3dpp, &m_pDevice) ) ) 
-    { 
-        return E_FAIL; 
+    hr = m_pD3D->CreateDevice(
+        AdapterToUse,
+        DeviceType,
+        m_hWndFocus,
+        behaviorFlags,
+        &m_d3dpp,
+        &m_pDevice
+    );
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "CreateDevice FAILED: HRESULT=0x%08X Adapter=%u DeviceType=%d Flags=0x%08X",
+            (unsigned)hr,
+            AdapterToUse,
+            (int)DeviceType,
+            (unsigned)behaviorFlags
+        );
+
+        return hr;
     }
 
     //hr = m_pD3D->CreateDevice( m_d3dSettings.Ordinal(), pDeviceInfo->m_DevType,
@@ -831,6 +847,15 @@ HRESULT D3DApplication::Initialize3DEnvironment()
         // Store device Caps
         m_pDevice->GetDeviceCaps( &m_Caps );
         m_dwCreateFlags = behaviorFlags;
+
+        Log.Error(
+            "D3D DEVICE CREATED: %p, flags=0x%08X, backbuffer=%dx%d, format=%d",
+            m_pDevice,
+            (unsigned)behaviorFlags,
+            m_d3dpp.BackBufferWidth,
+            m_d3dpp.BackBufferHeight,
+            (int)m_d3dpp.BackBufferFormat
+        );
 
         // Store device description
         if( pDeviceInfo->m_DevType == D3DDEVTYPE_REF )

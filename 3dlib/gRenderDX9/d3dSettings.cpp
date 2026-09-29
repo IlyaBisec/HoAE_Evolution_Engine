@@ -94,9 +94,16 @@ TCHAR* PresentIntervalToString( UINT pi )
 // Name: DialogProcHelper
 // Desc: 
 //-----------------------------------------------------------------------------
-INT_PTR CALLBACK DialogProcHelper( HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam )
+INT_PTR CALLBACK DialogProcHelper(
+    HWND hDlg,
+    UINT msg,
+    WPARAM wParam,
+    LPARAM lParam)
 {
-    return s_pSettingsDialog->DialogProc( hDlg, msg, wParam, lParam );
+    if (s_pSettingsDialog)
+        return s_pSettingsDialog->DialogProc(hDlg, msg, wParam, lParam);
+
+    return FALSE;
 }
 
 
@@ -106,12 +113,23 @@ INT_PTR CALLBACK DialogProcHelper( HWND hDlg, UINT msg, WPARAM wParam, LPARAM lP
 // Name: CD3DSettingsDialog constructor
 // Desc: 
 //-----------------------------------------------------------------------------
-CD3DSettingsDialog::CD3DSettingsDialog( D3DEnumeration* pEnumeration, 
-                                        D3DSettings* pSettings)
+CD3DSettingsDialog::CD3DSettingsDialog(
+    D3DEnumeration *pEnumeration,
+    D3DSettings *pSettings)
 {
     s_pSettingsDialog = this;
+
+    m_hDlg = NULL;
     m_pEnumeration = pEnumeration;
-    m_d3dSettings = *pSettings;
+
+    if (pSettings)
+        m_d3dSettings = *pSettings;
+}
+
+CD3DSettingsDialog::~CD3DSettingsDialog()
+{
+    if (s_pSettingsDialog == this)
+        s_pSettingsDialog = NULL;
 }
 
 
@@ -246,10 +264,17 @@ bool CD3DSettingsDialog::ComboBoxContainsText( int id, LPCTSTR pstrText )
 // Name: ShowDialog
 // Desc: Show the D3D settings dialog.
 //-----------------------------------------------------------------------------
-INT_PTR CD3DSettingsDialog::ShowDialog( HWND hwndParent )
+INT_PTR CD3DSettingsDialog::ShowDialog(HWND hwndParent)
 {
-    return DialogBox( NULL, MAKEINTRESOURCE( IDD_SELECTDEVICE ), 
-        hwndParent, DialogProcHelper );
+    if (!m_pEnumeration)
+        return IDCANCEL;
+
+    return DialogBox(
+        NULL,
+        MAKEINTRESOURCE(IDD_SELECTDEVICE),
+        hwndParent,
+        DialogProcHelper
+    );
 }
 
 
@@ -424,7 +449,7 @@ void CD3DSettingsDialog::DeviceChanged( void )
     // Update fullscreen/windowed radio buttons
     bool HasWindowedDeviceCombo = false;
     bool HasFullscreenDeviceCombo = false;
-    for (int i = 0; i < pDeviceInfo->m_DevCombos.size(); i++)
+    for (UINT i = 0; i < pDeviceInfo->m_DevCombos.size(); i++)
     {
         const D3DDeviceCombo& devCombo = pDeviceInfo->m_DevCombos[i];
         if (devCombo.m_bIsWindowed ) HasWindowedDeviceCombo = true; else HasFullscreenDeviceCombo = true;
@@ -840,7 +865,7 @@ void CD3DSettingsDialog::MultisampleTypeChanged( void )
     D3DDeviceCombo* pDeviceCombo = m_d3dSettings.PDeviceCombo();
     DWORD maxQuality = 0;
 
-    for (int ims = 0; ims < pDeviceCombo->m_MSampleTypes.size(); ims++)
+    for (UINT ims = 0; ims < pDeviceCombo->m_MSampleTypes.size(); ims++)
     {
         D3DMULTISAMPLE_TYPE msType = *(D3DMULTISAMPLE_TYPE*)pDeviceCombo->m_MSampleTypes[ims];
         if( msType == mst )
