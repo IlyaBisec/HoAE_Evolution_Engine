@@ -3532,40 +3532,73 @@ void BasePaintMap::SetSmoothInRadius(int x,int y,int r,int dr){
 	CreateTexturePart(x-r-dr,y-r-dr,(r+dr+2)*2,(r+dr+2)*2);
 }
 extern bool ReducedLoadMode;
-void BasePaintMap::CreateTexturePart(int x,int y,int Lx,int Ly){
-    if(ReducedLoadMode)return;
-	if(TextureIndex==-1){
-		TextureIndex=DynTexManager::GetTexture();
-	}
-	if(TextureIndex!=-1){
-		int tlx,tly;
-		GetSize(tlx,tly);
-		if(tlx&&tly){
-			int pitch;
-			BYTE* data=IRS->LockTexBits(TextureIndex,pitch);
-			// If TestCooperativeLevel FAILED!
-			if(!data) {
-				return;
-			}
+void BasePaintMap::CreateTexturePart(int x, int y, int Lx, int Ly)
+{
+	if (ReducedLoadMode)
+		return;
 
-			for(int iy=0;iy<Ly;iy++){
-				for(int ix=0;ix<Lx;ix++){
-					int xx=x+ix;  	             
-					int yy=y+iy;
-					if(xx>=0&&yy>=0&&xx<tlx&&yy<tly){
-						DWORD C=GetPixelColor(xx,yy);
-						//WORD CW=((C&255)>>3)+((((C>>8)&255)>>2)<<5)+((((C>>16)&255)>>3)<<11);
-						xx=xx*256/tlx;
-						yy=yy*256/tlx;
-						//*((WORD*)(data+xx+xx+yy*pitch))=CW;
-						WORD DWORD2WORD(DWORD C);
-						*((WORD*)(data+xx*TEXPIXSIZE+yy*pitch))=DWORD2WORD(C);
-					}
+	if (TextureIndex == -1)
+	{
+		TextureIndex = DynTexManager::GetTexture();
+	}
+
+	if (TextureIndex != -1)
+	{
+		int tlx, tly;
+		GetSize(tlx, tly);
+
+		if (tlx && tly)
+		{
+			int pitch = 0;
+
+			BYTE *data = IRS->LockTexBits(TextureIndex, pitch);
+
+			if (!data)
+				return;
+
+			for (int iy = 0; iy < Ly; iy++)
+			{
+				for (int ix = 0; ix < Lx; ix++)
+				{
+					int xx = x + ix;
+					int yy = y + iy;
+
+					if (xx < 0 || yy < 0 ||
+						xx >= tlx || yy >= tly)
+						continue;
+
+					DWORD C = GetPixelColor(xx, yy);
+
+					int tx = xx * 256 / tlx;
+					int ty = yy * 256 / tly;
+
+					if (tx < 0 || tx >= 256 ||
+						ty < 0 || ty >= 256)
+						continue;
+
+					// ARGB4444
+					WORD color =
+						(WORD)(
+							((C >> 28) & 0x0F) << 12 |
+							((C >> 20) & 0x0F) << 8 |
+							((C >> 12) & 0x0F) << 4 |
+							((C >> 4) & 0x0F)
+							);
+
+					BYTE *dst =
+						data +
+						ty * pitch +
+						tx * 2; // TEXPIXSIZE == 2
+
+					*((WORD *)dst) = color;
 				}
 			}
+
+			IRS->UnlockTexBits(TextureIndex);
 		}
-		IRS->UnlockTexBits(TextureIndex);
-		IRS->SaveTexture(TextureIndex,"test.dds");
+
+		// TEMPORARILY DISABLED
+		// IRS->SaveTexture(TextureIndex, "test.dds");
 	}
 }
 //////////////////////////////////////////////////////////////////////////
