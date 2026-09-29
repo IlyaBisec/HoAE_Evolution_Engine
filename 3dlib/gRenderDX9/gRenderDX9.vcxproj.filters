@@ -9,12 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="dx9_sdk">
-      <UniqueIdentifier>{125ae9b6-35a5-46e3-b86a-fb83b8db3e19}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="dx9_sdk\lib">
-      <UniqueIdentifier>{af335171-981d-407d-9518-306370e2726c}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="d3dAdapt.cpp">
@@ -106,69 +100,11 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dx9_sdk\d3d9.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3d9caps.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3d9types.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9anim.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9core.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9effect.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9math.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9mesh.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9shader.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9shape.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9tex.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\d3dx9xof.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-    <ClInclude Include="dx9_sdk\dxerr9.h">
-      <Filter>dx9_sdk</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dx9_sdk\d3dx9math.inl">
-      <Filter>dx9_sdk</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="gRenderDX9.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="MicroBuzator.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="dx9_sdk\d3d9.lib">
-      <Filter>dx9_sdk\lib</Filter>
-    </CustomBuild>
-    <CustomBuild Include="dx9_sdk\d3dx9.lib">
-      <Filter>dx9_sdk\lib</Filter>
-    </CustomBuild>
-    <CustomBuild Include="dx9_sdk\DxErr9.lib">
-      <Filter>dx9_sdk\lib</Filter>
-    </CustomBuild>
   </ItemGroup>
 </Project>

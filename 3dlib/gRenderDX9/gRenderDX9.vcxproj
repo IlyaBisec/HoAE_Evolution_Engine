@@ -78,7 +78,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
       <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
-      <AdditionalIncludeDirectories>..\boost;../gMotor;./dx9_sdk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\boost;../gMotor;./dx9_sdk;../DirectXSDK/Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_INLINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -142,40 +142,9 @@
     <ClInclude Include="d3dTexture.h" />
     <ClInclude Include="d3dUtil.h" />
     <ClInclude Include="d3dVertexBuffer.h" />
-    <ClInclude Include="dx9_sdk\d3d9.h" />
-    <ClInclude Include="dx9_sdk\d3d9caps.h" />
-    <ClInclude Include="dx9_sdk\d3d9types.h" />
-    <ClInclude Include="dx9_sdk\d3dx9.h" />
-    <ClInclude Include="dx9_sdk\d3dx9anim.h" />
-    <ClInclude Include="dx9_sdk\d3dx9core.h" />
-    <ClInclude Include="dx9_sdk\d3dx9effect.h" />
-    <ClInclude Include="dx9_sdk\d3dx9math.h" />
-    <ClInclude Include="dx9_sdk\d3dx9mesh.h" />
-    <ClInclude Include="dx9_sdk\d3dx9shader.h" />
-    <ClInclude Include="dx9_sdk\d3dx9shape.h" />
-    <ClInclude Include="dx9_sdk\d3dx9tex.h" />
-    <ClInclude Include="dx9_sdk\d3dx9xof.h" />
-    <ClInclude Include="dx9_sdk\dxerr9.h" />
     <ClInclude Include="dxUtil.h" />
     <ClInclude Include="gRenderPch.h" />
     <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dx9_sdk\d3dx9math.inl" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="dx9_sdk\d3d9.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="dx9_sdk\d3dx9.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="dx9_sdk\DxErr9.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="gRenderDX9.rc" />
