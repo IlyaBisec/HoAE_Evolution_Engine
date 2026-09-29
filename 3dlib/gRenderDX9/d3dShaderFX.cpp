@@ -261,7 +261,7 @@ bool ShaderFX::SetShaderVar( int cID, bool val )
 {
     if (!m_pEffect || cID < 0 || cID >= m_Variables.size()) return false;
     HRESULT hRes = m_pEffect->SetBool( m_Variables[cID].m_Handle, (BOOL)val );
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
     return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -269,7 +269,7 @@ bool ShaderFX::SetShaderVar( int cID, float val )
 {
     if (!m_pEffect || cID < 0 || cID >= m_Variables.size()) return false;
     HRESULT hRes = m_pEffect->SetFloat( m_Variables[cID].m_Handle, val );
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
     return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -277,7 +277,7 @@ bool ShaderFX::SetShaderVar( int cID, int val )
 {
     if (!m_pEffect || cID < 0 || cID >= m_Variables.size()) return false;
     HRESULT hRes = m_pEffect->SetInt( m_Variables[cID].m_Handle, val );
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
     return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -287,7 +287,7 @@ bool ShaderFX::SetShaderVar( int cID, const Matrix4D& val )
     Matrix4D tVal;
     tVal.transpose( val );
     HRESULT hRes = m_pEffect->SetMatrix( m_Variables[cID].m_Handle, (const D3DXMATRIX*)&tVal );
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
     return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -295,7 +295,7 @@ bool ShaderFX::SetShaderVar( int cID, const Vector4D& val )
 {
     if (!m_pEffect || cID < 0 || cID >= m_Variables.size()) return false;
     HRESULT hRes = m_pEffect->SetVector( m_Variables[cID].m_Handle, (const D3DXVECTOR4*)&val );
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
     return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -303,7 +303,7 @@ bool ShaderFX::SetShaderVar( int cID, const Vector4D* val ,int count)
 {
 	if (!m_pEffect || cID < 0 || cID >= m_Variables.size()) return false;
 	HRESULT hRes = m_pEffect->SetVectorArray( m_Variables[cID].m_Handle, (const D3DXVECTOR4*)val , count);
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
 	return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -311,7 +311,7 @@ bool ShaderFX::SetShaderVar( int cID, const Vector3D& val )
 {
     if (!m_pEffect || cID < 0 || cID >= m_Variables.size()) return false;
     HRESULT hRes = m_pEffect->SetVector( m_Variables[cID].m_Handle, (const D3DXVECTOR4*)&val );
-	DX_CHK( m_pEffect->CommitChanges() );
+	//DX_CHK( m_pEffect->CommitChanges() );
     return (hRes == S_OK);
 } // ShaderFX::SetShaderVar
 
@@ -323,7 +323,30 @@ void ShaderFX::SetAutoVars()
     for (int i = 0; i < nV; i++)
     {
         const ShaderFXAutoVar& av = m_AutoVars[i];
+
+        if (av.m_Idx < 0 || av.m_Idx >= m_Variables.size())
+        {
+            Log.Error(
+                "ShaderFX: INVALID AutoVar index=%d, Variables=%d",
+                av.m_Idx,
+                m_Variables.size()
+            );
+
+            continue;
+        }
+
         D3DXHANDLE h = m_Variables[av.m_Idx].m_Handle;
+
+        if (!h)
+        {
+            Log.Error(
+                "ShaderFX: NULL handle: AutoVar=%d VariableIndex=%d",
+                i,
+                av.m_Idx
+            );
+
+            continue;
+        }
         switch (av.m_Type)
         {
             case acWorldTM: 
@@ -389,7 +412,12 @@ void ShaderFX::SetAutoVars()
             case acLightDiffuse:
                 {
                     static int LightID=IMM->GetNodeID( "GameLight" );
-                    ILight* IL=IMM->GetLight(LightID);                    
+                    ILight* IL=IMM->GetLight(LightID);
+                    if (!IL)
+                    {
+                        Log.Error("ShaderFX: GameLight not found, LightID=%d", LightID);
+                        break;
+                    }
                     ColorValue cv( IL->GetDiffuse() );
                     DX_CHK( m_pEffect->SetVector( h, &D3DXVECTOR4( cv.r, cv.g, cv.b, cv.a ) ) );
                 }
@@ -397,7 +425,12 @@ void ShaderFX::SetAutoVars()
             case acLightSpecular:
                 {
                     static int LightID=IMM->GetNodeID( "GameLight" );
-                    ILight* IL=IMM->GetLight(LightID);                    
+                    ILight* IL=IMM->GetLight(LightID);
+                    if (!IL)
+                    {
+                        Log.Error("ShaderFX: GameLight not found, LightID=%d", LightID);
+                        break;
+                    }
                     ColorValue cv( IL->GetSpecular() );
                     DX_CHK( m_pEffect->SetVector( h, &D3DXVECTOR4( cv.r, cv.g, cv.b, cv.a ) ) );
                 }
@@ -405,7 +438,12 @@ void ShaderFX::SetAutoVars()
             case acLightAmbient:
                 {
                     static int LightID=IMM->GetNodeID( "GameLight" );
-                    ILight* IL=IMM->GetLight(LightID);                    
+                    ILight* IL=IMM->GetLight(LightID);
+                    if (!IL)
+                    {
+                        Log.Error("ShaderFX: GameLight not found, LightID=%d", LightID);
+                        break;
+                    }
                     ColorValue cv( IL->GetAmbient() );
                     DX_CHK( m_pEffect->SetVector( h, &D3DXVECTOR4( cv.r, cv.g, cv.b, cv.a ) ) );
                 }
@@ -416,7 +454,12 @@ void ShaderFX::SetAutoVars()
             case acMaterialDiffuse:
                 {
                     static int LightID=IMM->GetNodeID( "GameLight" );
-                    ILight* IL=IMM->GetLight(LightID);                    
+                    ILight* IL=IMM->GetLight(LightID);
+                    if (!IL)
+                    {
+                        Log.Error("ShaderFX: GameLight not found, LightID=%d", LightID);
+                        break;
+                    }
                     ColorValue cv( IL->GetDiffuse() );
                     DX_CHK( m_pEffect->SetVector( h, &D3DXVECTOR4( cv.r, cv.g, cv.b, cv.a ) ) );
                 }
@@ -424,7 +467,12 @@ void ShaderFX::SetAutoVars()
             case acMaterialSpecular:
                 {
                     static int LightID=IMM->GetNodeID( "GameLight" );
-                    ILight* IL=IMM->GetLight(LightID);                    
+                    ILight* IL=IMM->GetLight(LightID);
+                    if (!IL)
+                    {
+                        Log.Error("ShaderFX: GameLight not found, LightID=%d", LightID);
+                        break;
+                    }
                     ColorValue cv( IL->GetSpecular() );
                     DX_CHK( m_pEffect->SetVector( h, &D3DXVECTOR4( cv.r, cv.g, cv.b, cv.a ) ) );
                 }
@@ -432,7 +480,12 @@ void ShaderFX::SetAutoVars()
             case acMaterialAmbient:
                 {
                     static int LightID=IMM->GetNodeID( "GameLight" );
-                    ILight* IL=IMM->GetLight(LightID);                    
+                    ILight* IL=IMM->GetLight(LightID);
+                    if (!IL)
+                    {
+                        Log.Error("ShaderFX: GameLight not found, LightID=%d", LightID);
+                        break;
+                    }
                     ColorValue cv( IL->GetAmbient() );
                     DX_CHK( m_pEffect->SetVector( h, &D3DXVECTOR4( cv.r, cv.g, cv.b, cv.a ) ) );
                 }
@@ -501,7 +554,46 @@ void ShaderFX::SetAutoVars()
         }
     }
 
-    DX_CHK( m_pEffect->CommitChanges() );
+    //DX_CHK( m_pEffect->CommitChanges() );
+    if (!m_pEffect)
+    {
+        Log.Error("ShaderFX::SetAutoVars: m_pEffect == NULL");
+        return;
+    }
+
+    D3DXEFFECT_DESC desc;
+    HRESULT hrDesc = m_pEffect->GetDesc(&desc);
+
+    if (FAILED(hrDesc))
+    {
+        Log.Error(
+            "ShaderFX::SetAutoVars: INVALID EFFECT %p, GetDesc HRESULT=0x%08X",
+            m_pEffect,
+            (unsigned)hrDesc
+        );
+
+        return;
+    }
+
+    Log.Error(
+        "ShaderFX::SetAutoVars: effect=%p techniques=%u parameters=%u",
+        m_pEffect,
+        desc.Techniques,
+        desc.Parameters
+    );
+
+    HRESULT hr = m_pEffect->CommitChanges();
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "ShaderFX::SetAutoVars: CommitChanges FAILED effect=%p HRESULT=0x%08X",
+            m_pEffect,
+            (unsigned)hr
+        );
+
+        return;
+    }
 } // ShaderFX::SetAutoVars
 
 bool ShaderFX::Load( const char* fName )
@@ -551,43 +643,95 @@ bool ShaderFX::LoadFromFile( const char* fName )
     return (hr == S_OK);
 } // ShaderFX::LoadFromFile
 
-bool ShaderFX::LoadFromMemory( const BYTE* pBuf, int bufSize )
+bool ShaderFX::LoadFromMemory(const BYTE *pBuf, int bufSize)
 {
-    if (!pBuf || bufSize == 0) return false;
+    if (!pBuf || bufSize == 0)
+        return false;
+
     HRESULT hr = S_OK;
+
     DWORD dwShaderFlags = 0;
+
 #ifdef DEBUG_VS
     dwShaderFlags |= D3DXSHADER_FORCE_VS_SOFTWARE_NOOPT;
 #endif
+
 #ifdef DEBUG_PS
     dwShaderFlags |= D3DXSHADER_FORCE_PS_SOFTWARE_NOOPT;
 #endif
-    ID3DXBuffer* pErrBuffer = NULL;
-    IDirect3DDevice9* pDevice = GetDirect3DDevice();
-    s_FXIncluder.SetCurShader( this );
-    hr = D3DXCreateEffect( pDevice, pBuf, bufSize, NULL, &s_FXIncluder, dwShaderFlags, NULL, &m_pEffect, &pErrBuffer );
-    
-    if (hr != S_OK)
+
+    ID3DXBuffer *pErrBuffer = NULL;
+
+    IDirect3DDevice9 *pDevice = GetDirect3DDevice();
+
+    if (!pDevice)
     {
-        DWORD err = GetLastError();
+        Log.Error(
+            "ShaderFX::LoadFromMemory: GetDirect3DDevice() == NULL, shader=%s",
+            m_FileName.c_str()
+        );
+        return false;
+    }
+
+    s_FXIncluder.SetCurShader(this);
+
+    hr = D3DXCreateEffect(
+        pDevice,
+        pBuf,
+        bufSize,
+        NULL,
+        &s_FXIncluder,
+        dwShaderFlags,
+        NULL,
+        &m_pEffect,
+        &pErrBuffer
+    );
+
+    if (FAILED(hr))
+    {
         if (pErrBuffer)
         {
-            const char* pErrText = (const char*)pErrBuffer->GetBufferPointer();
-            Log.Warning( "Error in shader %s: %s", m_FileName.c_str(), pErrText );
+            const char *pErrText =
+                (const char *)pErrBuffer->GetBufferPointer();
+
+            Log.Warning(
+                "Could not compile shader %s: %s",
+                m_FileName.c_str(),
+                pErrText
+            );
+
+            pErrBuffer->Release();
         }
-        else if (hr == E_OUTOFMEMORY)
+        else
         {
-            Log.Warning( "Not enough memory to compile shader %s", m_FileName.c_str() );
+            Log.Warning(
+                "Could not compile shader %s: %s",
+                m_FileName.c_str(),
+                GetD3DErrorDesc(hr)
+            );
         }
-        else 
-        {
-            Log.Warning( "Could not compile shader %s:  %s", m_FileName.c_str(), GetD3DErrorDesc( hr ) );
-        }
+
+        m_pEffect = NULL;
+        return false;
     }
-    
+
+    if (!m_pEffect)
+    {
+        Log.Error(
+            "ShaderFX::LoadFromMemory: D3DXCreateEffect returned S_OK but m_pEffect == NULL: %s",
+            m_FileName.c_str()
+        );
+
+        return false;
+    }
+
     EnumerateVariables();
     EnumerateTechniques();
-    return (hr == S_OK);
+
+    if (pErrBuffer)
+        pErrBuffer->Release();
+
+    return true;
 } // ShaderFX::LoadFromMemory
 bool ShaderFX::Begin()
 {
@@ -631,7 +775,30 @@ void ShaderFX::DeleteDeviceObjects()
 
 void ShaderFX::InvalidateDeviceObjects()
 {
-    if (m_pEffect) m_pEffect->OnLostDevice();
+    if (!m_pEffect)
+        return;
+
+    OutputDebugStringA("ShaderFX::InvalidateDeviceObjects BEGIN\n");
+
+    ID3DXEffect *pEffect = m_pEffect;
+
+    char buf[256];
+    sprintf(
+        buf,
+        "ShaderFX effect=%p file=%s\n",
+        pEffect,
+        m_FileName.c_str()
+    );
+    OutputDebugStringA(buf);
+
+    HRESULT hr = pEffect->OnLostDevice();
+
+    sprintf(
+        buf,
+        "ShaderFX::OnLostDevice result=0x%08X\n",
+        hr
+    );
+    OutputDebugStringA(buf);
 } // ShaderFX::InvalidateDeviceObjects
 
 void ShaderFX::RestoreDeviceObjects() 
