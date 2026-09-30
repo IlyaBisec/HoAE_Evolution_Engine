@@ -555,45 +555,6 @@ void ShaderFX::SetAutoVars()
     }
 
     //DX_CHK( m_pEffect->CommitChanges() );
-    if (!m_pEffect)
-    {
-        Log.Error("ShaderFX::SetAutoVars: m_pEffect == NULL");
-        return;
-    }
-
-    D3DXEFFECT_DESC desc;
-    HRESULT hrDesc = m_pEffect->GetDesc(&desc);
-
-    if (FAILED(hrDesc))
-    {
-        Log.Error(
-            "ShaderFX::SetAutoVars: INVALID EFFECT %p, GetDesc HRESULT=0x%08X",
-            m_pEffect,
-            (unsigned)hrDesc
-        );
-
-        return;
-    }
-
-    Log.Error(
-        "ShaderFX::SetAutoVars: effect=%p techniques=%u parameters=%u",
-        m_pEffect,
-        desc.Techniques,
-        desc.Parameters
-    );
-
-    HRESULT hr = m_pEffect->CommitChanges();
-
-    if (FAILED(hr))
-    {
-        Log.Error(
-            "ShaderFX::SetAutoVars: CommitChanges FAILED effect=%p HRESULT=0x%08X",
-            m_pEffect,
-            (unsigned)hr
-        );
-
-        return;
-    }
 } // ShaderFX::SetAutoVars
 
 bool ShaderFX::Load( const char* fName )
