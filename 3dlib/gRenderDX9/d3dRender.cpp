@@ -98,6 +98,10 @@ RenderSystemDX9::RenderSystemDX9()
 
     m_pBackBufferSurface = NULL;
     m_pDepthStencilSurface = NULL;
+    m_pDevice = NULL;
+    m_pD3D = NULL;
+    m_bDeviceLost = false;
+    m_bActive = false;
 
     m_FogDensity = 0.00002f;
     m_TFactor = 0xFFFFFFFF;
@@ -197,8 +201,21 @@ HRESULT RenderSystemDX9::RestoreDeviceObjects()
 
     SAFE_RELEASE(m_pBackBufferSurface);
     SAFE_RELEASE(m_pDepthStencilSurface);
-    DX_CHK(m_pDevice->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &m_pBackBufferSurface));
-    DX_CHK(m_pDevice->GetDepthStencilSurface(&m_pDepthStencilSurface));
+
+    hr = m_pDevice->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &m_pBackBufferSurface);
+    if (FAILED(hr))
+    {
+        Log.Error("RestoreDeviceObjects: GetBackBuffer FAILED: HRESULT=0x%08X", (unsigned)hr);
+        return hr;
+    }
+
+    hr = m_pDevice->GetDepthStencilSurface(&m_pDepthStencilSurface);
+    if (FAILED(hr))
+    {
+        Log.Error("RestoreDeviceObjects: GetDepthStencilSurface FAILED: HRESULT=0x%08X", (unsigned)hr);
+        SAFE_RELEASE(m_pBackBufferSurface);
+        return hr;
+    }
 
     FillQuadIndexBuffer();
 
@@ -594,8 +611,7 @@ void RenderSystemDX9::ClearDevice(DWORD color, bool bColor, bool bDepth, bool bS
     if (bDepth) flags |= D3DCLEAR_ZBUFFER;
     if (bStencil) flags |= D3DCLEAR_STENCIL;
 
-    // D3D9 Clear requires at least one clear flag and a valid device.
-    if (flags == 0 || m_pDevice == NULL) return;
+    if (!m_pDevice || flags == 0) return;
 
     __beginT();
     DX_CHK(m_pDevice->Clear(0, NULL, flags, color, 1.0f, 0));
@@ -665,7 +681,17 @@ bool RenderSystemDX9::StartFrame()
     m_ViewPort.w = m_d3dpp.BackBufferWidth;
     m_ViewPort.h = m_d3dpp.BackBufferHeight;
 
-    // DX_CHK( m_pDevice->BeginScene() );
+    // A Direct3D 9 frame has exactly one BeginScene/EndScene pair.
+    // The old code opened a scene inside every Draw() call, which left all
+    // state setup (transforms, render states, textures, viewport, etc.)
+    // outside the scene and made the device lifecycle inconsistent.
+    hr = m_pDevice->BeginScene();
+    if (FAILED(hr))
+    {
+        Log.Error("BeginScene FAILED: HRESULT=0x%08X", (unsigned)hr);
+        if (hr == D3DERR_DEVICELOST) m_bDeviceLost = true;
+        return false;
+    }
     //static int s_shID = IRS->GetShaderID( "lines.fx" );
     //SetShader( s_shID );
 
@@ -695,10 +721,17 @@ void RenderSystemDX9::EndFrame()
     m_FPS = 1.0f / dt;
     s_Time = s_FPSTimer.seconds();
 
-    //DX_CHK( m_pDevice->EndScene() );
+    // Finish the single scene opened by StartFrame().
+    HRESULT hr = m_pDevice->EndScene();
+    if (FAILED(hr))
+    {
+        Log.Error("EndScene FAILED: HRESULT=0x%08X", (unsigned)hr);
+        if (hr == D3DERR_DEVICELOST) m_bDeviceLost = true;
+        return;
+    }
 
     // Show the frame on the primary surface.
-    HRESULT hr = m_pDevice->Present(NULL, NULL, NULL, NULL);
+    hr = m_pDevice->Present(NULL, NULL, NULL, NULL);
     if (D3DERR_DEVICELOST == hr) m_bDeviceLost = true;
 } // RenderSystemDX9::EndFrame
 
@@ -1192,6 +1225,16 @@ void RenderSystemDX9::SetViewPort(const Rct &vp, float zn, float zf, bool bClip)
     //  Defensive clamp: guarantee the viewport is always non-negative,
     //  non-zero sized and fully inside the back buffer, regardless of
     //  bClip, so SetViewport() never receives invalid parameters.
+    // Reject NaN/Inf before converting floats to integer viewport fields.
+    // (x != x) is the C++03-compatible NaN test used by this old codebase.
+    if (m_ViewPort.x != m_ViewPort.x || m_ViewPort.y != m_ViewPort.y ||
+        m_ViewPort.w != m_ViewPort.w || m_ViewPort.h != m_ViewPort.h ||
+        m_ViewPortZNear != m_ViewPortZNear || m_ViewPortZFar != m_ViewPortZFar)
+    {
+        Log.Error("SetViewPort: invalid NaN viewport");
+        return;
+    }
+
     int vpX = (int)m_ViewPort.x;
     int vpY = (int)m_ViewPort.y;
     int vpW = (int)m_ViewPort.w;
@@ -1216,10 +1259,8 @@ void RenderSystemDX9::SetViewPort(const Rct &vp, float zn, float zf, bool bClip)
     m_ViewPort.w = (float)vpW;
     m_ViewPort.h = (float)vpH;
 
-    // D3DVIEWPORT9 requires 0 <= MinZ <= MaxZ <= 1.
+    //  MinZ/MaxZ must lie within [0, 1] and MinZ <= MaxZ.
     if (m_ViewPortZNear < 0.0f) m_ViewPortZNear = 0.0f;
-    if (m_ViewPortZNear > 1.0f) m_ViewPortZNear = 1.0f;
-    if (m_ViewPortZFar < 0.0f) m_ViewPortZFar = 0.0f;
     if (m_ViewPortZFar > 1.0f) m_ViewPortZFar = 1.0f;
     if (m_ViewPortZNear > m_ViewPortZFar) m_ViewPortZNear = m_ViewPortZFar;
 
@@ -1231,10 +1272,10 @@ void RenderSystemDX9::SetViewPort(const Rct &vp, float zn, float zf, bool bClip)
     dvp.MinZ = m_ViewPortZNear;
     dvp.MaxZ = m_ViewPortZFar;
 
-    if (m_pDevice == NULL || dvp.Width == 0 || dvp.Height == 0) return;
-
     __beginT();
-    DX_CHK(m_pDevice->SetViewport(&dvp));
+
+    DX_CHK(m_pDevice->SetViewport((D3DVIEWPORT9 *)&dvp));
+
     __endT(TimeInSVP);
 
 } // RenderSystemDX9::SetViewPort
@@ -1632,9 +1673,14 @@ bool RenderSystemDX9::SetVB(int vbID, int vType, int stream, int frequency)
 {
     if (vbID < 0 || vbID >= m_VBuffers.size()) return false;
     IVertexBuffer *ivb = m_VBuffers[vbID];
+    if (!ivb) return false;
     if (vType < 0) vType = ivb->GetVType();
-    if (vType < 0 || vType >= (int)m_VertexTypes.size()) return false;
-    if (m_pDevice == NULL) return false;
+    if (vType < 0 || vType >= m_VertexTypes.size())
+    {
+        Log.Error("SetVB: invalid vertex type %d (VB=%d, types=%d)",
+            vType, vbID, m_VertexTypes.size());
+        return false;
+    }
     const VertexTypeEntry &vt = m_VertexTypes[vType];
     int vSize = vt.m_VDecl.m_VertexSize;
     if (vSize == 0) return false;
@@ -1645,7 +1691,6 @@ bool RenderSystemDX9::SetVB(int vbID, int vType, int stream, int frequency)
         DX_CHK(m_pDevice->SetFVF(vt.m_FVF));
     }
     else {
-        if (vt.m_pVDeclD3D == NULL) return false;
         DX_CHK(m_pDevice->SetVertexDeclaration(vt.m_pVDeclD3D));
     }
     __endT(OtherTime);
@@ -1963,9 +2008,11 @@ void RenderSystemDX9::Draw(int firstVert, int nVert, int firstIdx, int nIdx, Pri
         }
     }
 
+    // Draw() is called while StartFrame() owns the scene.
+    // Do NOT call BeginScene/EndScene here: nested/per-draw scenes are invalid
+    // for the frame lifecycle used by this renderer.
     __beginT();
 
-    DX_CHK(m_pDevice->BeginScene());
     if (bIndexed)
     {
         DX_CHK(m_pDevice->DrawIndexedPrimitive(ConvertPrimitiveType(priType),
@@ -1979,7 +2026,6 @@ void RenderSystemDX9::Draw(int firstVert, int nVert, int firstIdx, int nIdx, Pri
     {
         DX_CHK(m_pDevice->DrawPrimitive(ConvertPrimitiveType(priType), firstVert, numPri));
     }
-    DX_CHK(m_pDevice->EndScene());
 
     __endT(TimeInDrawPrim);
 
