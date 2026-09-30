@@ -7,7 +7,7 @@
 /*	Date:	02.11.2004
 /*****************************************************************************/
 #include "gRenderPch.h"
-#include <DxErr.h>
+//#include <DxErr.h>
 #include "resource.h"
 
 #include "IMediaManager.h"
@@ -89,7 +89,11 @@ RenderSystemDX9::RenderSystemDX9()
     m_dwCreationHeight = drct.bottom - drct.top;
     m_CurrentFrame = 0;
     IRS = this;
+
     m_bInited = false;
+    m_bActive = false;
+    m_bDeviceLost = false;
+
     m_CurShader = -1;
     m_CurPass = 0;
     m_ViewPortZNear = 0.0f;
@@ -158,21 +162,51 @@ HRESULT RenderSystemDX9::OneTimeSceneInit()
 HRESULT RenderSystemDX9::InitDeviceObjects()
 {
     CreateVTypeTable();
+
     CreateIB("SharedDynamic", c_DynIBufferBytes, isWORD, true);
     CreateIB("SharedStatic", c_StaticIBufferBytes, isWORD, false);
     CreateIB("Quads", c_QuadIBufferBytes, isWORD, false);
+
     CreateVB("SharedDynamic", c_DynVBufferBytes, -1, true);
     CreateVB("SharedStatic", c_StaticVBufferBytes, -1, false);
 
     m_ViewPort.x = 0.0f;
     m_ViewPort.y = 0.0f;
-    m_ViewPort.w = m_d3dpp.BackBufferWidth;
-    m_ViewPort.h = m_d3dpp.BackBufferHeight;
+    m_ViewPort.w = (float)m_d3dpp.BackBufferWidth;
+    m_ViewPort.h = (float)m_d3dpp.BackBufferHeight;
 
     SAFE_RELEASE(m_pBackBufferSurface);
     SAFE_RELEASE(m_pDepthStencilSurface);
-    DX_CHK(m_pDevice->GetBackBuffer(0, 0, D3DBACKBUFFER_TYPE_MONO, &m_pBackBufferSurface));
-    DX_CHK(m_pDevice->GetDepthStencilSurface(&m_pDepthStencilSurface));
+
+    HRESULT hr = m_pDevice->GetBackBuffer(
+        0,
+        0,
+        D3DBACKBUFFER_TYPE_MONO,
+        &m_pBackBufferSurface
+    );
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "GetBackBuffer FAILED: 0x%08X",
+            (unsigned)hr
+        );
+        return hr;
+    }
+
+    hr = m_pDevice->GetDepthStencilSurface(
+        &m_pDepthStencilSurface
+    );
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "GetDepthStencilSurface FAILED: 0x%08X",
+            (unsigned)hr
+        );
+        return hr;
+    }
+
     return S_OK;
 } // RenderSystemDX9::InitDeviceObjects
 
@@ -525,34 +559,110 @@ ScreenProp RenderSystemDX9::GetScreenProp()
     return sp;
 }
 
+static bool IsFiniteMatrix(const Matrix4D &m)
+{
+    const float *p = (const float *)&m;
+
+    for (int i = 0; i < 16; ++i)
+    {
+        if (!_finite(p[i]))
+            return false;
+    }
+
+    return true;
+}
+
 void RenderSystemDX9::SetViewTM(const Matrix4D &vmatr)
 {
     m_ViewTM = vmatr;
-    __beginT()
-        DX_CHK(m_pDevice->SetTransform(D3DTS_VIEW, (D3DMATRIX *)&vmatr));
-    __endT(OtherTime);
+
+    if (!m_pDevice)
+    {
+        Log.Error("SetViewTM: m_pDevice == NULL");
+        return;
+    }
+
+    if (!IsFiniteMatrix(vmatr))
+    {
+        Log.Error("SetViewTM: INVALID MATRIX (NaN/INF)");
+        return;
+    }
+
+    HRESULT hr = m_pDevice->SetTransform(
+        D3DTS_VIEW,
+        (const D3DMATRIX *)&vmatr
+    );
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "SetViewTM FAILED: hr=0x%08X",
+            (unsigned)hr
+        );
+    }
 }
 
 void RenderSystemDX9::SetProjTM(const Matrix4D &pmatr)
 {
     m_ProjTM = pmatr;
-    __beginT();
-    DX_CHK(m_pDevice->SetTransform(D3DTS_PROJECTION, (D3DMATRIX *)&pmatr));
-    __endT(OtherTime);
-} // RenderSystemDX9::SetProjTM
+
+    if (!m_pDevice)
+    {
+        Log.Error("SetProjTM: m_pDevice == NULL");
+        return;
+    }
+
+    if (!IsFiniteMatrix(pmatr))
+    {
+        Log.Error("SetProjTM: INVALID MATRIX (NaN/INF)");
+        return;
+    }
+
+    HRESULT hr = m_pDevice->SetTransform(
+        D3DTS_PROJECTION,
+        (const D3DMATRIX *)&pmatr
+    );
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "SetProjTM FAILED: hr=0x%08X",
+            (unsigned)hr
+        );
+    }
+}
 int TimeInSWTM = 0;
 void RenderSystemDX9::SetWorldTM(const Matrix4D &wmatr)
 {
     m_WorldTM = wmatr;
 
-    __beginT();
+    if (!m_pDevice)
+    {
+        Log.Error("SetWorldTM: m_pDevice == NULL");
+        return;
+    }
 
-    DX_CHK(m_pDevice->SetTransform(D3DTS_WORLD, (D3DMATRIX *)&wmatr));
+    if (!IsFiniteMatrix(wmatr))
+    {
+        Log.Error("SetWorldTM: INVALID MATRIX (NaN/INF)");
+        return;
+    }
 
-    __endT(TimeInSWTM);
+    HRESULT hr = m_pDevice->SetTransform(
+        D3DTS_WORLD,
+        (const D3DMATRIX *)&wmatr
+    );
+
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "SetWorldTM FAILED: hr=0x%08X",
+            (unsigned)hr
+        );
+    }
 
     m_WTM_is1 = false;
-} // RenderSystemDX9::SetWorldTM
+}
 
 void RenderSystemDX9::SetWorldViewProjTM(const Matrix4D &wmatr)
 {
@@ -1199,6 +1309,33 @@ bool RenderSystemDX9::PopRenderTarget()
 int TimeInSVP = 0;
 void RenderSystemDX9::SetViewPort(const Rct &vp, float zn, float zf, bool bClip)
 {
+    if (!m_pDevice)
+    {
+        Log.Error("SetViewPort: DEVICE == NULL");
+        return;
+    }
+
+    HRESULT coop = m_pDevice->TestCooperativeLevel();
+
+    Log.Error(
+        "D3D DEVICE STATE: device=%p TestCooperativeLevel=0x%08X",
+        m_pDevice,
+        (unsigned)coop
+    );
+
+    if (coop == D3DERR_DEVICELOST)
+    {
+        Log.Error("D3D DEVICE IS LOST");
+        return;
+    }
+
+    if (coop == D3DERR_DEVICENOTRESET)
+    {
+        Log.Error("D3D DEVICE NEEDS RESET");
+        return;
+    }
+
+
     m_ViewPort = vp;
     m_ViewPortZNear = zn;
     m_ViewPortZFar = zf;
@@ -1272,11 +1409,25 @@ void RenderSystemDX9::SetViewPort(const Rct &vp, float zn, float zf, bool bClip)
     dvp.MinZ = m_ViewPortZNear;
     dvp.MaxZ = m_ViewPortZFar;
 
-    __beginT();
+    HRESULT hr = m_pDevice->SetViewport(&dvp);
 
-    DX_CHK(m_pDevice->SetViewport((D3DVIEWPORT9 *)&dvp));
-
-    __endT(TimeInSVP);
+    if (FAILED(hr))
+    {
+        Log.Error(
+            "SetViewport FAILED: hr=0x%08X "
+            "X=%u Y=%u W=%u H=%u MinZ=%f MaxZ=%f "
+            "BackBuffer=%dx%d",
+            (unsigned)hr,
+            dvp.X,
+            dvp.Y,
+            dvp.Width,
+            dvp.Height,
+            dvp.MinZ,
+            dvp.MaxZ,
+            GetBackBufferW(),
+            GetBackBufferH()
+        );
+    }
 
 } // RenderSystemDX9::SetViewPort
 
