@@ -997,6 +997,8 @@ HRESULT D3DApplication::Initialize3DEnvironment()
 //-----------------------------------------------------------------------------
 void D3DApplication::BuildPresentParamsFromSettings()
 {
+    ZeroMemory(&m_d3dpp, sizeof(m_d3dpp));
+
     m_d3dpp.Windowed               = m_d3dSettings.m_bIsWindowed;
     m_d3dpp.BackBufferCount        = 1;
     m_d3dpp.MultiSampleType        = m_d3dSettings.MultisampleType();
