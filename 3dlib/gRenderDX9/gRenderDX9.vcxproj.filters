@@ -107,4 +107,7 @@
   <ItemGroup>
     <Image Include="MicroBuzator.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
