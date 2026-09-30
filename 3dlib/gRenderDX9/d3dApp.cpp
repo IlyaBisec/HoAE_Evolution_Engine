@@ -822,6 +822,23 @@ HRESULT D3DApplication::Initialize3DEnvironment()
         return hr;
     }
 
+    Log.Error(
+        "D3D CreateDevice OK: device=%p Windowed=%d BB=%ux%u Format=%d",
+        m_pDevice,
+        m_d3dpp.Windowed,
+        m_d3dpp.BackBufferWidth,
+        m_d3dpp.BackBufferHeight,
+        (int)m_d3dpp.BackBufferFormat
+    );
+
+    HRESULT coop = m_pDevice->TestCooperativeLevel();
+
+    Log.Error(
+        "D3D AFTER CREATE: TestCooperativeLevel=0x%08X",
+        (unsigned)coop
+    );
+
+
     //hr = m_pD3D->CreateDevice( m_d3dSettings.Ordinal(), pDeviceInfo->m_DevType,
     //                           m_hWndFocus, behaviorFlags, &m_d3dpp, &m_pDevice );
     //
